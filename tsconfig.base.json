@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cccsharonparish.org/angular": ["libs/angular/src/index.ts"],
+      "@cccsharonparish.org/common/date-time": [
+        "libs/common/date-time/src/index.ts"
+      ],
+      "@cccsharonparish.org/common/logger": ["libs/common/logger/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
