@@ -51,6 +51,11 @@
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "headers": {
+          "Content-Security-Policy": "trusted-types angular; require-trusted-types-for 'script';"
+        }
+      },
       "configurations": {
         "production": {
           "browserTarget": "admin.mydailydigest.me:build:production"
@@ -81,6 +86,9 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
+        "headers": {
+          "Content-Security-Policy": "trusted-types angular; require-trusted-types-for 'script';"
+        },
         "jestConfig": "apps/admin.mydailydigest.me/jest.config.ts",
         "passWithNoTests": true
       },
