@@ -32,6 +32,9 @@ importers:
       '@angular/router':
         specifier: ~16.1.0
         version: 16.1.0(@angular/common@16.1.0)(@angular/core@16.1.0)(@angular/platform-browser@16.1.0)(rxjs@7.8.0)
+      '@ngneat/transloco':
+        specifier: ^5.0.7
+        version: 5.0.7(@angular/core@16.1.0)
       '@nx/angular':
         specifier: 16.6.0
         version: 16.6.0(@angular-devkit/build-angular@16.1.0)(@angular-devkit/core@16.1.0)(@angular-devkit/schematics@16.1.0)(@schematics/angular@16.1.0)(@types/node@18.7.1)(cypress@12.16.0)(esbuild@0.17.19)(eslint@8.15.0)(nx@16.6.0)(rxjs@7.8.0)(ts-node@10.9.1)(typescript@5.1.3)
@@ -146,7 +149,7 @@ importers:
         version: 16.6.0
       nx-cloud:
         specifier: latest
-        version: 16.4.0-beta.1
+        version: 16.3.0
       prettier:
         specifier: ^2.6.2
         version: 2.6.2
@@ -3603,6 +3606,30 @@ packages:
   /@leichtgewicht/ip-codec@2.0.4:
     resolution: {integrity: sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==}
 
+  /@ngneat/transloco-utils@5.0.0:
+    resolution: {integrity: sha512-e0S+GWyBTmLix9KfYWW/rScYdqQz3z3znNSb+foaA5T3jWs4CPLVo+PV0No7kGjqom8Wy8H3lLvztfhHxYSLyA==}
+    engines: {node: '>=16'}
+    dependencies:
+      cosmiconfig: 8.2.0
+      tslib: 2.6.1
+    dev: false
+
+  /@ngneat/transloco@5.0.7(@angular/core@16.1.0):
+    resolution: {integrity: sha512-x1c2e+7cOYPPVFPgqGcN3R6d7f18a4sMHzxsCamcxS2w7vWXcEzWKZ8JcI1TdpxrM+RKuj2NRfEEcr1HjAI/4w==}
+    peerDependencies:
+      '@angular/core': '>=16.0.0'
+    dependencies:
+      '@angular/core': 16.1.0(rxjs@7.8.0)(zone.js@0.13.0)
+      '@ngneat/transloco-utils': 5.0.0
+      flat: 5.0.2
+      fs-extra: 11.1.1
+      glob: 10.3.3
+      lodash.kebabcase: 4.1.1
+      ora: 5.4.1
+      replace-in-file: 7.0.1
+      tslib: 2.6.1
+    dev: false
+
   /@ngtools/webpack@16.1.0(@angular/compiler-cli@16.1.0)(typescript@5.1.3)(webpack@5.86.0):
     resolution: {integrity: sha512-rKPDqzaSsdXIuJAdldiOzDgDvCe4MHPjsBzrRmev+B0UcllIjSOwciREPDks9LyopppsDVTvn7EtUyhjfv1LBg==}
     engines: {node: ^16.14.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
@@ -3830,10 +3857,10 @@ packages:
       - typescript
       - verdaccio
 
-  /@nrwl/nx-cloud@16.4.0-beta.1:
-    resolution: {integrity: sha512-XQFmpVtGJghvR+JJWgp2so0eeJSG7U1W0/WcyAskTnCSMt8M5FFotJmF4upFfRK1rexlECZ7xbcZzUXuIEqzsw==}
+  /@nrwl/nx-cloud@16.3.0:
+    resolution: {integrity: sha512-nJrGsVufhY74KcP7kM7BqFOGAoO5OEF6+wfiM295DgmEG9c1yW+x5QiQaC42K9SWYn/eKQa1X7466ZA5lynXoQ==}
     dependencies:
-      nx-cloud: 16.4.0-beta.1
+      nx-cloud: 16.3.0
     transitivePeerDependencies:
       - debug
     dev: true
@@ -4484,12 +4511,6 @@ packages:
     resolution: {integrity: sha512-OAPJUAtgeINhh/TAlUID4QTs53Njm7xzddaVlEs/SXwgtiD1tW22zAB/W1wdqfrpmikgaWQ9Fw6Ws+hsiRm5Vg==}
     dependencies:
       '@sinonjs/commons': 1.8.6
-    dev: true
-
-  /@swc/helpers@0.5.1:
-    resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
-    dependencies:
-      tslib: 2.6.1
     dev: true
 
   /@testing-library/cypress@9.0.0(cypress@12.16.0):
@@ -7728,7 +7749,7 @@ packages:
       foreground-child: 3.1.1
       jackspeak: 2.2.3
       minimatch: 9.0.3
-      minipass: 5.0.0
+      minipass: 7.0.3
       path-scurry: 1.10.1
 
   /glob@7.1.4:
@@ -7750,6 +7771,17 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+
+  /glob@8.1.0:
+    resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 5.1.6
+      once: 1.4.0
+    dev: false
 
   /global-dirs@3.0.1:
     resolution: {integrity: sha512-NBcGGFbBA9s1VzD41QXDG+3++t9Mn5t1FpLdhESY6oKY4gYTFpX4wO3sqGUa0Srjtbfj3szX0RnemmrVRUdULA==}
@@ -9732,6 +9764,10 @@ packages:
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
 
+  /lodash.kebabcase@4.1.1:
+    resolution: {integrity: sha512-N8XRTIMMqqDgSy4VLKPnJ/+hpGZN+PHQiJnSenYqPaVV/NCqEogTnAdZLQiGKhxX+JCs8waWq2t1XHWKOmlY8g==}
+    dev: false
+
   /lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
 
@@ -10303,12 +10339,11 @@ packages:
   /nwsapi@2.2.7:
     resolution: {integrity: sha512-ub5E4+FBPKwAZx0UwIQOjYWGHTEq5sPqHQNRN8Z9e4A7u3Tj1weLJsL59yH9vmvqEtBHaOmT6cYQKIZOxp35FQ==}
 
-  /nx-cloud@16.4.0-beta.1:
-    resolution: {integrity: sha512-I62IBQDjbA3h+P8JVFrannVllj8O9/3YYfyg8sPLVYxFKwnqqsgR6kG2zHxB9Q2k0hoSU7JZ02d9oPJsRzL5rg==}
+  /nx-cloud@16.3.0:
+    resolution: {integrity: sha512-hmNgpeLO4v4WDSWa8YhwX+q+9ohIyY8iqxlWyIKixWzQH2XfRgYFjOLH4IDLGOlKa3hg7MB6+4+75cK9CfSmKw==}
     hasBin: true
     dependencies:
-      '@nrwl/nx-cloud': 16.4.0-beta.1
-      '@swc/helpers': 0.5.1
+      '@nrwl/nx-cloud': 16.3.0
       axios: 1.1.3
       chalk: 4.1.2
       dotenv: 10.0.0
@@ -10632,7 +10667,7 @@ packages:
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       lru-cache: 10.0.1
-      minipass: 5.0.0
+      minipass: 7.0.3
 
   /path-to-regexp@0.1.7:
     resolution: {integrity: sha512-5DFkuoqlv1uYQKxy8omFBeJPQcdoE07Kv2sferDCrAq1ohOU+MSDswDIbnx3YAM60qIOnYa53wBhXW0EbMonrQ==}
@@ -11349,6 +11384,16 @@ packages:
     hasBin: true
     dependencies:
       jsesc: 0.5.0
+
+  /replace-in-file@7.0.1:
+    resolution: {integrity: sha512-KbhgPq04eA+TxXuUxpgWIH9k/TjF+28ofon2PXP7vq6izAILhxOtksCVcLuuQLtyjouBaPdlH6RJYYcSPVxCOA==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      chalk: 4.1.2
+      glob: 8.1.0
+      yargs: 17.7.2
+    dev: false
 
   /request-progress@3.0.0:
     resolution: {integrity: sha512-MnWzEHHaxHO2iWiQuHrUPBi/1WeBf5PkxQqNyNvLl9VAYSdXkP8tQ3pBSeCPD+yw0v0Aq1zosWLz0BdeXpWwZg==}
