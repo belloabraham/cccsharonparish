@@ -4,19 +4,19 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 50%;
+  font-size: 90%;
   font-family: $primary-font, sans-serif;
 
   @include breakpoint(min, medium) {
-    font-size: 60%;
-  }
-  @include breakpoint(min, large) {
-    font-size: 80%;
-  }
-  @include breakpoint(min, xlarge) {
     font-size: 100%;
   }
+  @include breakpoint(min, large) {
+    font-size: 120%;
+  }
+  @include breakpoint(min, xlarge) {
+    font-size: 140%;
+  }
   @include DisplaySize4k{
-    font-size: 110%;
+    font-size: 150%;
   }
 }
