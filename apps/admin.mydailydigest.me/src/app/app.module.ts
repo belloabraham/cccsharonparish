@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { appRoutes } from './app.routes';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
+import { TranslocoRootModule } from '@cccsharonparish.org/angular';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
+    HttpClientModule,
+    CommonModule,
+    TranslocoRootModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

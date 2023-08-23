@@ -1,1 +1,2 @@
-export * from './lib/angular.module';
+export { TranslocoRootModule } from './lib/transloco/transloco-root.module';
+export { Providers } from './lib/providers';
