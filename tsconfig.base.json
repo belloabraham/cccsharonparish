@@ -19,7 +19,10 @@
       "@cccsharonparish.org/common/date-time": [
         "libs/common/date-time/src/index.ts"
       ],
-      "@cccsharonparish.org/common/logger": ["libs/common/logger/src/index.ts"]
+      "@cccsharonparish.org/common/logger": ["libs/common/logger/src/index.ts"],
+      "@cccsharonparish.org/mydailydigest/app/page-not-found": [
+        "libs/mydailydigest/app/page-not-found/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
