@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { TranslocoRootModule } from '@cccsharonparish.org/angular';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     TranslocoRootModule,
     AppRoutingModule,
+    
+    //* Instrumentation must be imported after importing StoreModule
+    environment.imports,
   ],
   providers: [],
   bootstrap: [AppComponent],

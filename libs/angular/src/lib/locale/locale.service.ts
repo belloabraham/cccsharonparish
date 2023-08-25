@@ -6,7 +6,7 @@ import { Providers } from '../providers';
 @Injectable({
   providedIn:  Providers.ROOT,
 })
-export class LocaleServiceService {
+export class LocaleService {
 
   private readonly NUMBER_OF_CACHED_DATA = 1
   private isLangLoadSuccessfully = new ReplaySubject<boolean>(

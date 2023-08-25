@@ -8,24 +8,18 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/admin.mydailydigest.me",
         "index": "apps/admin.mydailydigest.me/src/index.html",
         "main": "apps/admin.mydailydigest.me/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/admin.mydailydigest.me/tsconfig.app.json",
         "assets": [
           "apps/admin.mydailydigest.me/src/favicon.ico",
           "apps/admin.mydailydigest.me/src/assets"
         ],
-        "styles": [
-          "apps/admin.mydailydigest.me/src/styles.scss"
-        ],
+        "styles": ["apps/admin.mydailydigest.me/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -86,9 +80,7 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
           "apps/admin.mydailydigest.me/**/*.ts",
@@ -98,12 +90,10 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "headers": {
-          "Content-Security-Policy": "trusted-types angular; require-trusted-types-for 'script';"
+          "Content-Security-Policy": "trusted-types angular angular#bundler; require-trusted-types-for 'script';"
         },
         "jestConfig": "apps/admin.mydailydigest.me/jest.config.ts",
         "passWithNoTests": true
