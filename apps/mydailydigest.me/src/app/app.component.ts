@@ -1,10 +1,15 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  Inject,
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { Language, LocaleService } from '@cccsharonparish.org/angular';
+import {
+  ILanguageResourceService,
+  LANGUAGE_RESOURCE_TOKEN,
+  Language,
+} from '@cccsharonparish.org/angular';
 import { SubSink } from 'subsink';
 
 @Component({
@@ -15,18 +20,30 @@ import { SubSink } from 'subsink';
 })
 export class AppComponent implements OnInit, OnDestroy {
   private subscriptions = new SubSink();
-  constructor(private localeService: LocaleService) {}
+  constructor(
+    @Inject(LANGUAGE_RESOURCE_TOKEN)
+    private languageResourceService: ILanguageResourceService
+  ) {}
 
   ngOnInit(): void {
-    this.loadDefaultLanguageResource();
+    this.loadLanguageResource(Language.ENGLISH, () => {
+      this.onLanguageLoaded();
+    });
   }
 
-  private loadDefaultLanguageResource() {
-    this.subscriptions.sink = this.localeService
-      .loadLanguage(Language.ENGLISH)
+  private loadLanguageResource(
+    language: string,
+    onLanguageResourceLoaded: () => void
+  ) {
+    this.subscriptions.sink = this.languageResourceService
+      .loadLanguageResource(language)
       .subscribe(() => {
-        this.localeService.setIsLangLoadSuccessfully(true);
+        onLanguageResourceLoaded();
       });
+  }
+
+  onLanguageLoaded() {
+    this.languageResourceService.setLanguageResourceLoadedSuccessfully(true);
   }
 
   ngOnDestroy(): void {

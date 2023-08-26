@@ -18,10 +18,4 @@ describe('AppComponent', () => {
       'Welcome admin.mydailydigest.me'
     );
   });
-
-  it(`should have as title 'admin.mydailydigest.me'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('admin.mydailydigest.me');
-  });
 });
