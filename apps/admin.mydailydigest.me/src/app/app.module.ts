@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { TranslocoRootModule } from '@cccsharonparish.org/angular';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
+import { StoreModule } from '@ngrx/store';
+import { languageLoadedFeature } from '../store/selectors/language-resource.selector';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,8 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     TranslocoRootModule,
     AppRoutingModule,
+    StoreModule.forRoot({}),
+    StoreModule.forFeature(languageLoadedFeature),
+    environment.imports,
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

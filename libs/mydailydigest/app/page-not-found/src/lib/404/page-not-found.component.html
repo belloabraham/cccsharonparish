@@ -1,0 +1,33 @@
+<div *transloco="let t" class="top-row d-flex flex-column bg-accent-300 vh-100 vw-100">
+  <div class="p-3">
+    <a [routerLink]="root" ><img class="scale" width="50" alt="{{ t('logo') }}" height="50" ngSrc="assets/images/logo.png" priority>
+    </a>
+  </div>
+
+  <div class="d-flex align-items-baseline gap-5">
+    <div class="flex-grow-1 text-end">
+      <h1 class="title">4</h1>
+    </div>
+
+    <div class="holder">
+      <h1 class="title-0">0</h1>
+      <div class="candle">
+        <div class="blinking-glow"></div>
+        <div class="thread"></div>
+        <div class="glow"></div>
+        <div class="flame"></div>
+      </div>
+    </div>
+
+    <div class="flex-grow-1 text-start">
+      <h1 class="title">4</h1>
+    </div>
+  </div>
+
+  <div class="text-center">
+
+    <h4 class="mb-4 p-3 subtitle">{{ t('page_not_found_message') }}</h4>
+    <a [routerLink]="root" class="btn btn-primary home-btn btn-lg">{{ t('go_home') }}</a>
+  </div>
+
+</div>
