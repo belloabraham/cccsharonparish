@@ -1,5 +1,5 @@
 {
-  "name": "mydailydigest-page-not-found",
+  "name": "mydailydigest",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/mydailydigest/app/page-not-found/src",
   "prefix": "mydailydigest",

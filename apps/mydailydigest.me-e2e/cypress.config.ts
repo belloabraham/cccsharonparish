@@ -5,6 +5,6 @@ const nxConfig = nxE2EPreset(__dirname);
 export default defineConfig({
   e2e: {
     ...nxConfig,
-    baseUrl: 'http://localhost:4200',
+    baseUrl: 'http://localhost:4400',
   },
 });

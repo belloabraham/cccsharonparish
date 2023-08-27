@@ -6,7 +6,10 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
-import { MyDailyDigestPageNotFoundComponent } from '@cccsharonparish.org/mydailydigest/app/page-not-found';
+import {
+  LanguageResourceKey,
+  MyDailyDigestPageNotFoundComponent,
+} from '@cccsharonparish.org/mydailydigest/app/page-not-found';
 import { SubSink } from 'subsink';
 import {
   ILanguageResourceService,
@@ -14,7 +17,6 @@ import {
   SharedModule,
 } from '@cccsharonparish.org/angular';
 import { Title } from '@angular/platform-browser';
-import { LanguageResourceKey } from './i18n/language-res-key';
 
 @Component({
   selector: 'app-page-not-found',
@@ -39,7 +41,7 @@ export class PageNotFoundComponent implements OnInit, OnDestroy {
 
   onLanguageResourceLoaded() {
     this.subscriptions.sink = this.languageResourceService
-    .getLanguageLoadSuccessfully$()
+      .getLanguageLoadSuccessfully$()
       .subscribe(() => {
         const pageTitle = this.languageResourceService.getString(
           LanguageResourceKey.PAGE_TITLE

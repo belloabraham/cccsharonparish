@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MyDailyDigestPageNotFoundComponent } from './page-not-found.component';
+import { TranslocoRootModule } from '@cccsharonparish.org/angular';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MyDailyDigestPageNotFoundComponent', () => {
   let component: MyDailyDigestPageNotFoundComponent;
@@ -7,7 +9,11 @@ describe('MyDailyDigestPageNotFoundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MyDailyDigestPageNotFoundComponent],
+      imports: [
+        MyDailyDigestPageNotFoundComponent,
+        TranslocoRootModule,
+        HttpClientModule,
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MyDailyDigestPageNotFoundComponent);

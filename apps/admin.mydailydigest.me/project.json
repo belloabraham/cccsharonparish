@@ -58,6 +58,7 @@
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
       "options": {
+        "port": 4300,
         "headers": {
           "Content-Security-Policy": "trusted-types angular angular#bundler angular#devtools; require-trusted-types-for 'script';"
         }

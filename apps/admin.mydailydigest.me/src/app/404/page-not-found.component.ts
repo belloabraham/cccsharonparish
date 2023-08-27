@@ -6,7 +6,10 @@ import {
   OnInit,
   ViewEncapsulation,
 } from '@angular/core';
-import { MyDailyDigestPageNotFoundComponent } from '@cccsharonparish.org/mydailydigest/app/page-not-found';
+import {
+  LanguageResourceKey,
+  MyDailyDigestPageNotFoundComponent,
+} from '@cccsharonparish.org/mydailydigest/app/page-not-found';
 import { Store } from '@ngrx/store';
 import { getLanguageLoadedSelector } from '../../store/selectors/language-resource.selector';
 import {
@@ -15,7 +18,6 @@ import {
   SharedModule,
 } from '@cccsharonparish.org/angular';
 import { Title } from '@angular/platform-browser';
-import { LanguageResourceKey } from './i18n/language-res-key';
 import { SubSink } from 'subsink';
 
 @Component({
