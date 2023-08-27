@@ -20,7 +20,15 @@
           "apps/admin.mydailydigest.me/src/assets"
         ],
         "styles": ["apps/admin.mydailydigest.me/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "stylePreprocessorOptions": {
+          "includePaths": [
+            "libs/mydailydigest/scss",
+            "libs/mydailydigest/scss/mixins",
+            "libs/mydailydigest/scss/transitions",
+            "libs/mydailydigest/scss/variables"
+          ]
+        }
       },
       "configurations": {
         "production": {
