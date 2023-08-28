@@ -1,6 +1,7 @@
-@import './variables/font';
 @import 'gerillass';
 @import './mixins/breakpoint';
+
+$primary-font: 'Nunito Sans';
 
 html {
   font-size: 85%;

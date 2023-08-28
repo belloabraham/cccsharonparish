@@ -26,7 +26,8 @@
             "libs/mydailydigest/scss",
             "libs/mydailydigest/scss/mixins",
             "libs/mydailydigest/scss/transitions",
-            "libs/mydailydigest/scss/variables"
+            "libs/mydailydigest/scss/variables",
+            "libs/mydailydigest/scss/animations"
           ]
         }
       },

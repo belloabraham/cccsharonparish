@@ -1,6 +1,7 @@
 <div *transloco="let t" class="top-row d-flex flex-column bg-accent-300 vh-100 vw-100">
   <div class="p-3">
-    <a [routerLink]="root" ><img class="scale" width="50" alt="{{ t('logo') }}" height="50" ngSrc="assets/images/logo.png" priority>
+    <a [routerLink]="root"><img class="scale" width="50" alt="{{ t(languageResourceKey.LOGO) }}" height="50"
+        ngSrc="assets/images/logo.png" priority>
     </a>
   </div>
 
@@ -25,9 +26,8 @@
   </div>
 
   <div class="text-center">
-
-    <h4 class="mb-4 p-3 subtitle">{{ t('page_not_found_message') }}</h4>
-    <a [routerLink]="root" class="btn btn-primary home-btn btn-lg">{{ t('go_home') }}</a>
+    <h4 class="mb-4 p-1 subtitle">{{ t(languageResourceKey.PAGE_NOT_FOUND_MESSAGE) }}</h4>
+    <a [routerLink]="root" class="btn btn-primary home-btn btn-lg">{{ t(languageResourceKey.GO_HOME) }}</a>
   </div>
 
 </div>
