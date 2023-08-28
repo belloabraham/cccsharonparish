@@ -1,1 +1,37 @@
+<div *ngIf="routerIsNavigating$ | async" class="fixed-top">
+  <p class="indeterminate-progress-bar"></p>
+</div>
+
 <router-outlet></router-outlet>
+
+<div *ngIf="shouldShowPreloader$ | async" class="preloader bg-accent-400-tinted">
+
+  <div class="book">
+    <div class="inner">
+      <div class="left"></div>
+      <div class="middle"></div>
+      <div class="right"></div>
+    </div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+</div>

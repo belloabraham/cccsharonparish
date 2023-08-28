@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslocoModule } from '@ngneat/transloco';
+import { LanguageResourceKey } from './i18n/language-resource-key';
 
 @Component({
   selector: 'mydailydigest-page-not-found',
@@ -13,4 +14,5 @@ import { TranslocoModule } from '@ngneat/transloco';
 })
 export class MyDailyDigestPageNotFoundComponent {
   root = '';
+  languageResourceKey = LanguageResourceKey;
 }

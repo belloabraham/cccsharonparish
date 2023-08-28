@@ -1,1 +1,35 @@
+<p>{{shouldShowPreloader$ | async}}</p>
+
 <router-outlet></router-outlet>
+
+<div *ngIf="(shouldShowPreloader$ | async)" class="preloader bg-primary-800">
+
+  <div class="book">
+    <div class="inner">
+      <div class="left"></div>
+      <div class="middle"></div>
+      <div class="right"></div>
+    </div>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+</div>

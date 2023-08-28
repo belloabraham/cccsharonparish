@@ -23,6 +23,8 @@
         "scripts": [],
         "stylePreprocessorOptions": {
           "includePaths": [
+            "apps/admin.mydailydigest.me/src/scss/animations",
+            "libs/mydailydigest/scss/animations",
             "libs/mydailydigest/scss",
             "libs/mydailydigest/scss/mixins",
             "libs/mydailydigest/scss/transitions",

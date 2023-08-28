@@ -25,9 +25,7 @@ import { SubSink } from 'subsink';
   standalone: true,
   imports: [SharedModule, MyDailyDigestPageNotFoundComponent],
   templateUrl: './page-not-found.component.html',
-  styleUrls: ['./page-not-found.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
 })
 export class PageNotFoundComponent implements OnInit, OnDestroy {
   private subscriptions = new SubSink();
