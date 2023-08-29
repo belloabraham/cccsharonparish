@@ -14,10 +14,10 @@ html {
     font-size: 100%;
   }
   @include breakpoint(min, xlarge) {
-    font-size: 110%;
+    font-size: 105%;
   }
   @include DisplaySize4k {
-    font-size: 115%;
+    font-size: 140%;
   }
 }
 body {
