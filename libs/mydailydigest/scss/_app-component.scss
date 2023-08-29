@@ -1,5 +1,7 @@
 @import '../scss/variables/colors';
 @import './utils/colors';
+@import './components/custom-scroll-bar';
+
 .preloader {
   position: fixed;
   z-index: 1000;

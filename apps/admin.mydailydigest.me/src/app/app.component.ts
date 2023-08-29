@@ -9,7 +9,7 @@ import { Store } from '@ngrx/store';
 import { SubSink } from 'subsink';
 import {
   LoadLanguageResourceActionState,
-  getLoadLanguageResourceActionGroup as getLoadLanguageResourceActionGroup,
+  getLoadLanguageResourceActionGroup,
 } from '../store/actions/language-resource.actions';
 import {
   ILanguageResourceService,
@@ -24,6 +24,9 @@ import {
   NavigationStart,
   Router,
 } from '@angular/router';
+import { IConnectionUtil } from '@cccsharonparish.org/common/utils';
+import { CONNECTION_UTIL_TOKEN } from '../core/di/connection-service.token';
+import { LanguageResourceKey } from './i18n/language-resource-key';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -35,11 +38,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
   routerIsNavigating$!: Observable<boolean>;
   shouldShowPreloader$!: Observable<boolean>;
-
+  deviceIsConnectedToTheInternet$!: Observable<boolean>;
+  languageResourceKey = LanguageResourceKey;
+  appNameKey = Language.APP_NAME;
   constructor(
     private ngrxStore: Store,
     @Inject(LANGUAGE_RESOURCE_TOKEN)
     private languageResourceService: ILanguageResourceService,
+    @Inject(CONNECTION_UTIL_TOKEN)
+    private connectionUtil: IConnectionUtil,
     private router: Router
   ) {}
 
@@ -47,6 +54,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.loadLanguageResource(Language.ENGLISH, () => {
       this.onLanguageResourceLoaded();
     });
+
+    this.deviceIsConnectedToTheInternet$ =
+      this.connectionUtil.observeDeviceInternetConnectionState();
 
     const routerNavigationStartEvent$ = this.router.events.pipe(
       filter((e) => e instanceof NavigationStart),

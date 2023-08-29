@@ -1,0 +1,10 @@
+@import '../variables/colors';
+@import '../animations/bounce-in';
+
+.warning-panel {
+  z-index: 100;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: $warn-400;
+  @include bounce-in();
+}

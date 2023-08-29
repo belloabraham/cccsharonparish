@@ -3,5 +3,6 @@
   "page_not_found_message": "Oops the page you are looking for does not exist.",
   "go_home": "Go Home",
   "logo": "Logo",
-  "page_not_found_title": "Error 404 - Page Not Found"
+  "page_not_found_title": "Error 404 - Page Not Found",
+  "no_internet_connection_notice": "Can not connect to {{value}} because there is no internet connection"
 }
