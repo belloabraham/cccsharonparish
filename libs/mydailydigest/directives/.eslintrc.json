@@ -1,5 +1,5 @@
 {
-  "extends": ["../../.eslintrc.json"],
+  "extends": ["../../../.eslintrc.json"],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
@@ -9,15 +9,15 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "ng",
-            "style": "camelCase"
+            "prefix": "mdd",
+            "style": "kebab-case"
           }
         ],
         "@angular-eslint/component-selector": [
           "error",
           {
             "type": "element",
-            "prefix": "ng",
+            "prefix": "mdd",
             "style": "kebab-case"
           }
         ]
