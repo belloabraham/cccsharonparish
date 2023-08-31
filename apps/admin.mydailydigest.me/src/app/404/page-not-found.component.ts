@@ -5,10 +5,6 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import {
-  LanguageResourceKey,
-  MyDailyDigestPageNotFoundComponent,
-} from '@cccsharonparish.org/mydailydigest/app/page-not-found';
 import { Store } from '@ngrx/store';
 import { getLanguageLoadedSelector } from '../../store/selectors/language-resource.selector';
 import {
@@ -18,6 +14,7 @@ import {
 } from '@cccsharonparish.org/angular';
 import { Title } from '@angular/platform-browser';
 import { SubSink } from 'subsink';
+import { LanguageResourceKey, MyDailyDigestPageNotFoundComponent } from '@cccsharonparish.org/mydailydigest/app';
 
 @Component({
   selector: 'app-page-not-found',

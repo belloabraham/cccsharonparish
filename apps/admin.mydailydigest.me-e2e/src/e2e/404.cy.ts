@@ -31,7 +31,7 @@ describe('MyComponent E2E Test', () => {
     );
 
     // Check if the "go_home" button is present and has the correct text
-    cy.get('.btn.btn-primary.home-btn.btn-lg')
+    cy.get('.home-btn.btn.btn-primary.btn-lg')
       .should('have.text', 'Go Home')
       .should('have.attr', 'href', '/'); // Replace with the correct href value
 

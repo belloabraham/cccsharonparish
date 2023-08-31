@@ -4,12 +4,7 @@ import {
   Inject,
   OnDestroy,
   OnInit,
-  ViewEncapsulation,
 } from '@angular/core';
-import {
-  LanguageResourceKey,
-  MyDailyDigestPageNotFoundComponent,
-} from '@cccsharonparish.org/mydailydigest/app/page-not-found';
 import { SubSink } from 'subsink';
 import {
   ILanguageResourceService,
@@ -17,6 +12,7 @@ import {
   SharedModule,
 } from '@cccsharonparish.org/angular';
 import { Title } from '@angular/platform-browser';
+import { LanguageResourceKey, MyDailyDigestPageNotFoundComponent } from '@cccsharonparish.org/mydailydigest/app';
 
 @Component({
   selector: 'app-page-not-found',
