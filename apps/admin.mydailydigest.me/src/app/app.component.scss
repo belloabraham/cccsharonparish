@@ -1,4 +1,4 @@
-@import 'preloader';
-@import 'indeterminate-progress-bar';
-@import 'app-component';
-@import 'warning-panel';
+@forward 'preloader';
+@forward 'indeterminate-progress-bar';
+@forward 'app-component';
+@forward 'warning-panel';
