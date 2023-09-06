@@ -35,6 +35,18 @@ importers:
       '@material/button':
         specifier: ^14.0.0
         version: 14.0.0
+      '@material/elevation':
+        specifier: ^14.0.0
+        version: 14.0.0
+      '@material/icon-button':
+        specifier: ^14.0.0
+        version: 14.0.0
+      '@material/ripple':
+        specifier: ^14.0.0
+        version: 14.0.0
+      '@material/theme':
+        specifier: ^14.0.0
+        version: 14.0.0
       '@ngneat/transloco':
         specifier: ^5.0.7
         version: 5.0.7(@angular/core@16.1.0)
@@ -3808,6 +3820,22 @@ packages:
       '@material/dom': 14.0.0
       '@material/feature-targeting': 14.0.0
       '@material/rtl': 14.0.0
+    dev: false
+
+  /@material/icon-button@14.0.0:
+    resolution: {integrity: sha512-wHMqzm7Q/UwbWLoWv32Li1r2iVYxadIrwTNxT0+p+7NdfI3lEwMN3NoB0CvoJnHTljjXDzce0KJ3nZloa0P0gA==}
+    dependencies:
+      '@material/base': 14.0.0
+      '@material/density': 14.0.0
+      '@material/dom': 14.0.0
+      '@material/elevation': 14.0.0
+      '@material/feature-targeting': 14.0.0
+      '@material/focus-ring': 14.0.0
+      '@material/ripple': 14.0.0
+      '@material/rtl': 14.0.0
+      '@material/theme': 14.0.0
+      '@material/touch-target': 14.0.0
+      tslib: 2.6.1
     dev: false
 
   /@material/ripple@14.0.0:

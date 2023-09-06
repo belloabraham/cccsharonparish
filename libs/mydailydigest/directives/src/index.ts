@@ -1,1 +1,1 @@
-export { ButtonDirective } from './button/button.directive';
+export { MDDCommonModule } from './lib/mdd-common.module';
