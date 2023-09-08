@@ -27,7 +27,9 @@
 
   <div class="text-center">
     <h4 class="mb-4 p-1 subtitle">{{ t(languageResourceKey.PAGE_NOT_FOUND_MESSAGE) }}</h4>
-    <a [routerLink]="root" class="home-btn" mdd-button >{{ t(languageResourceKey.GO_HOME) }}</a>
+    <a [routerLink]="root" class="home-btn" ng-mat-raised-button [ng-mat-elevation]=1>{{
+      t(languageResourceKey.GO_HOME)
+      }}</a>
   </div>
 
 </div>
