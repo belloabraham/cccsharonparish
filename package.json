@@ -20,6 +20,7 @@
     "@material/icon-button": "^14.0.0",
     "@material/ripple": "^14.0.0",
     "@material/theme": "^14.0.0",
+    "@material/tooltip": "^14.0.0",
     "@ngneat/transloco": "^5.0.7",
     "@ngrx/store": "^16.2.0",
     "@ngrx/store-devtools": "^16.2.0",

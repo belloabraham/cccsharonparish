@@ -11,6 +11,7 @@ import {
     button[ng-mat-stroked-button], a[ng-mat-button], a[ng-mat-raised-button],
     a[ng-mat-stroked-button]
   `,
+  exportAs:'ngMatButton',
   standalone: true,
   templateUrl: './button.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

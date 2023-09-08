@@ -7,14 +7,12 @@ import {
 @Component({
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: `
-    button[ng-mat-icon-button], button[ng-mat-icon-button],
-    button[ng-mat-icon-button], a[ng-mat-icon-button], a[ng-mat-icon-button],
-    a[ng-mat-icon-button]
+    div[ng-mat-tooltip]
   `,
+  exportAs: 'ngMatToolTip',
   standalone: true,
-  exportAs: 'ngMatIconButton',
-  templateUrl: './icon-button.html',
+  templateUrl: './tooltip.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })
-export class NgMaterialIconButtonComponent {}
+export class NgMaterialTooltipComponent {}

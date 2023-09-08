@@ -1,5 +1,5 @@
 import {
-  AfterViewInit,
+  AfterViewChecked,
   Directive,
   ElementRef,
   OnInit,
@@ -8,13 +8,12 @@ import {
 import { MDCRipple } from '@material/ripple';
 
 @Directive({
-  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: '[ng-mat-icon-button]',
   standalone: true,
 })
-export class NgMaterialIconButtonDirective implements OnInit, AfterViewInit {
+export class NgMaterialIconButtonDirective implements OnInit, AfterViewChecked {
   constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
-  ngAfterViewInit(): void {
+  ngAfterViewChecked(): void {
     const iconButtonRipple = new MDCRipple(this.elementRef.nativeElement);
     iconButtonRipple.unbounded = true;
   }

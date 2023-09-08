@@ -3,7 +3,10 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslocoModule } from '@ngneat/transloco';
 import { LanguageResourceKey } from './i18n/language-resource-key';
-import { NgMaterialButtonModule, NgMaterialElevationDirective } from '@cccsharonparish.org/angular';
+import {
+  NgMaterialButtonModule,
+  NgMaterialElevationDirective,
+} from '@cccsharonparish.org/angular';
 
 @Component({
   selector: 'mydailydigest-page-not-found',

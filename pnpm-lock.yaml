@@ -47,6 +47,9 @@ importers:
       '@material/theme':
         specifier: ^14.0.0
         version: 14.0.0
+      '@material/tooltip':
+        specifier: ^14.0.0
+        version: 14.0.0
       '@ngneat/transloco':
         specifier: ^5.0.7
         version: 5.0.7(@angular/core@16.1.0)
@@ -3877,6 +3880,21 @@ packages:
     resolution: {integrity: sha512-SXgB9VwsKW4DFkHmJfDIS0x0cGdMWC1D06m6z/WQQ5P5j6/m0pKrbHVlrLzXcRjau+mFhXGvj/KyPo9Pp/Rc8Q==}
     dependencies:
       '@material/elevation': 14.0.0
+    dev: false
+
+  /@material/tooltip@14.0.0:
+    resolution: {integrity: sha512-rp7sOuVE1hmg4VgBJMnSvtDbSzctL42X7y1yv8ukuu40Sli+H5FT0Zbn351EfjJgQWg/AlXA6+reVXkXje8JzQ==}
+    dependencies:
+      '@material/animation': 14.0.0
+      '@material/base': 14.0.0
+      '@material/dom': 14.0.0
+      '@material/elevation': 14.0.0
+      '@material/feature-targeting': 14.0.0
+      '@material/rtl': 14.0.0
+      '@material/shape': 14.0.0
+      '@material/theme': 14.0.0
+      '@material/typography': 14.0.0
+      tslib: 2.6.1
     dev: false
 
   /@material/touch-target@14.0.0:
