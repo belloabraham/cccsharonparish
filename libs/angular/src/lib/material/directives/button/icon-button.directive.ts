@@ -1,5 +1,5 @@
 import {
-  AfterViewChecked,
+  AfterViewInit,
   Directive,
   ElementRef,
   OnInit,
@@ -11,9 +11,9 @@ import { MDCRipple } from '@material/ripple';
   selector: '[ng-mat-icon-button]',
   standalone: true,
 })
-export class NgMaterialIconButtonDirective implements OnInit, AfterViewChecked {
+export class NgMaterialIconButtonDirective implements OnInit, AfterViewInit {
   constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
-  ngAfterViewChecked(): void {
+  ngAfterViewInit(): void {
     const iconButtonRipple = new MDCRipple(this.elementRef.nativeElement);
     iconButtonRipple.unbounded = true;
   }

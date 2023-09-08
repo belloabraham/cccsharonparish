@@ -1,5 +1,5 @@
 import {
-  AfterViewChecked,
+  AfterViewInit,
   Directive,
   ElementRef,
   HostBinding,
@@ -12,11 +12,10 @@ import {
 import { MDCRipple } from '@material/ripple';
 
 @Directive()
-export class NgMaterialBaseButtonDirective
-  implements AfterViewChecked, OnChanges
-{
+export class NgMaterialBaseButtonDirective implements AfterViewInit, OnChanges {
   constructor(private el: ElementRef) {}
-  ngAfterViewChecked(): void {
+
+  ngAfterViewInit(): void {
     new MDCRipple(this.el.nativeElement);
   }
   ngOnChanges(changes: SimpleChanges): void {
