@@ -1,8 +1,8 @@
 {
-  "name": "mydailydigest-directives",
+  "name": "mydailydigest-ui",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/mydailydigest/directives/src",
-  "prefix": "mdd",
+  "sourceRoot": "libs/mydailydigest/ui/src",
+  "prefix": "cccsharonparish.org",
   "tags": [],
   "projectType": "library",
   "targets": {
@@ -10,14 +10,14 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/mydailydigest/directives/ng-package.json"
+        "project": "libs/mydailydigest/ui/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/mydailydigest/directives/tsconfig.lib.prod.json"
+          "tsConfig": "libs/mydailydigest/ui/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/mydailydigest/directives/tsconfig.lib.json"
+          "tsConfig": "libs/mydailydigest/ui/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
@@ -26,7 +26,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/mydailydigest/directives/jest.config.ts",
+        "jestConfig": "libs/mydailydigest/ui/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -41,9 +41,9 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/mydailydigest/directives/**/*.ts",
-          "libs/mydailydigest/directives/**/*.html",
-          "libs/mydailydigest/directives/package.json"
+          "libs/mydailydigest/ui/**/*.ts",
+          "libs/mydailydigest/ui/**/*.html",
+          "libs/mydailydigest/ui/package.json"
         ]
       }
     }
