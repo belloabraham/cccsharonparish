@@ -46,6 +46,65 @@
           "libs/mydailydigest/ui-stories/package.json"
         ]
       }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "libs/mydailydigest/ui-stories/.storybook",
+        "browserTarget": "mydailydigest-ui-stories:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/mydailydigest-ui-stories",
+        "configDir": "libs/mydailydigest/ui-stories/.storybook",
+        "browserTarget": "mydailydigest-ui-stories:build-storybook",
+        "compodoc": false,
+        "styles": ["libs/mydailydigest/ui-stories/src/styles.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": [
+            "libs/mydailydigest/scss/animations",
+            "libs/mydailydigest/scss",
+            "libs/mydailydigest/scss/mixins",
+            "libs/mydailydigest/scss/transitions",
+            "libs/mydailydigest/scss/variables",
+            "libs/mydailydigest/scss/components",
+            "libs/angular/scss"
+          ]
+        }
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c libs/mydailydigest/ui-stories/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "mydailydigest-ui-stories:build-storybook",
+        "staticFilePath": "dist/storybook/mydailydigest-ui-stories"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "mydailydigest-ui-stories:build-storybook:ci"
+        }
+      }
     }
   }
 }
