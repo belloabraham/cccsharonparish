@@ -25,6 +25,7 @@
     "@ngrx/store": "^16.2.0",
     "@ngrx/store-devtools": "^16.2.0",
     "@nx/angular": "16.6.0",
+    "@storybook/addon-storysource": "^7.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rxjs": "~7.8.0",

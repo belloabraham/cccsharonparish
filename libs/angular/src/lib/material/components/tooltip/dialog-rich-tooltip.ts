@@ -10,14 +10,15 @@ import {
 import { MDCTooltip, XPosition, YPosition } from '@material/tooltip';
 
 @Component({
-  selector: 'ng-mat-rich-tooltip',
+  selector: 'ng-mat-dialog-rich-tooltip',
   standalone: true,
-  templateUrl: './rich-tooltip.html',
+  templateUrl: './dialog-rich-tooltip.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })
-export class NgMaterialRichTooltipComponent implements AfterViewInit {
+export class NgMaterialDialogRichTooltipComponent implements AfterViewInit {
   @ViewChild('mdcTooltip') tooltip!: ElementRef;
+  @Input() persistent = false;
   @Input({ required: true }) id!: string;
   @Input() hideDelay = 100;
   @Input() showDelay = 100;
