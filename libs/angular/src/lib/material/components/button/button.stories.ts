@@ -32,7 +32,6 @@ export const Flat: Story = {
   }),
   args: {
     label: 'Button',
-    child: 'Icon',
   },
 };
 
@@ -60,6 +59,7 @@ export const Raised: Story = {
       options: ['primary', 'secondary'],
       control: { type: 'select' },
     },
+    elevation: { control: { type: 'range', min: 1, max: 10, step: 1 } },
   },
 };
 

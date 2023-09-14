@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { IconButtonComponent } from './icon-button.component';
+import { MDDRoundedBadgeComponent } from './rounded-badge.component';
 
-describe('IconButtonComponent', () => {
-  let component: IconButtonComponent;
-  let fixture: ComponentFixture<IconButtonComponent>;
+describe('BadgeComponent', () => {
+  let component: MDDRoundedBadgeComponent;
+  let fixture: ComponentFixture<MDDRoundedBadgeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IconButtonComponent],
+      imports: [MDDRoundedBadgeComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(IconButtonComponent);
+    fixture = TestBed.createComponent(MDDRoundedBadgeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

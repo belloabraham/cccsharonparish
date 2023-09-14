@@ -1,1 +1,1 @@
-export * from './lib/directives/mdd-common.module';
+export * from './lib/mdd-badged.module';
