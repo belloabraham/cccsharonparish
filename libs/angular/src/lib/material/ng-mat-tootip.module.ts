@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import {
   NgMatTooltipDirective,
   NgMatTooltipButtonDirective,
-  NgMatRichTooltipButtonDirective,
+  NgMatDialogRichTooltipButtonDirective,
   NgMatTooltipContentLinkDirective,
 } from './directives';
 import {
+  NgMaterialDialogRichTooltipComponent,
   NgMaterialRichTooltipComponent,
   NgMaterialTooltipComponent,
 } from './components';
@@ -15,8 +16,9 @@ const TOOLTIP = [
   NgMatTooltipDirective,
   NgMaterialTooltipComponent,
   NgMaterialRichTooltipComponent,
-  NgMatRichTooltipButtonDirective,
+  NgMatDialogRichTooltipButtonDirective,
   NgMatTooltipContentLinkDirective,
+  NgMaterialDialogRichTooltipComponent,
 ];
 
 @NgModule({

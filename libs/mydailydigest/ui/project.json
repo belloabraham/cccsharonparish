@@ -1,8 +1,8 @@
 {
-  "name": "angular",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/angular/src",
-  "prefix": "ng",
+  "name": "mydailydigest-ui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/mydailydigest/ui/src",
+  "prefix": "cccsharonparish.org",
   "tags": [],
   "projectType": "library",
   "targets": {
@@ -10,14 +10,14 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/angular/ng-package.json"
+        "project": "libs/mydailydigest/ui/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/angular/tsconfig.lib.prod.json"
+          "tsConfig": "libs/mydailydigest/ui/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/angular/tsconfig.lib.json"
+          "tsConfig": "libs/mydailydigest/ui/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
@@ -26,7 +26,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/angular/jest.config.ts",
+        "jestConfig": "libs/mydailydigest/ui/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {
@@ -41,9 +41,9 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "libs/angular/**/*.ts",
-          "libs/angular/**/*.html",
-          "libs/angular/package.json"
+          "libs/mydailydigest/ui/**/*.ts",
+          "libs/mydailydigest/ui/**/*.html",
+          "libs/mydailydigest/ui/package.json"
         ]
       }
     },
@@ -51,8 +51,8 @@
       "executor": "@storybook/angular:start-storybook",
       "options": {
         "port": 4400,
-        "configDir": "libs/angular/.storybook",
-        "browserTarget": "angular:build-storybook",
+        "configDir": "libs/mydailydigest/ui/.storybook",
+        "browserTarget": "mydailydigest-ui:build-storybook",
         "compodoc": false
       },
       "configurations": {
@@ -65,14 +65,20 @@
       "executor": "@storybook/angular:build-storybook",
       "outputs": ["{options.outputDir}"],
       "options": {
-        "outputDir": "dist/storybook/angular",
-        "configDir": "libs/angular/.storybook",
-        "browserTarget": "angular:build-storybook",
+        "outputDir": "dist/storybook/mydailydigest-ui",
+        "configDir": "libs/mydailydigest/ui/.storybook",
+        "browserTarget": "mydailydigest-ui:build-storybook",
         "compodoc": false,
-        "styles": ["libs/angular/src/styles.scss"],
+        "styles": ["libs/mydailydigest/ui/src/styles.scss"],
         "stylePreprocessorOptions": {
           "includePaths": [
-            "libs/mydailydigest/scss"
+            "libs/mydailydigest/scss/animations",
+            "libs/mydailydigest/scss",
+            "libs/mydailydigest/scss/mixins",
+            "libs/mydailydigest/scss/transitions",
+            "libs/mydailydigest/scss/variables",
+            "libs/mydailydigest/scss/components",
+            "libs/angular/scss"
           ]
         }
       },
@@ -85,18 +91,18 @@
     "test-storybook": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "test-storybook -c libs/angular/.storybook --url=http://localhost:4400"
+        "command": "test-storybook -c libs/mydailydigest/ui/.storybook --url=http://localhost:4400"
       }
     },
     "static-storybook": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "angular:build-storybook",
-        "staticFilePath": "dist/storybook/angular"
+        "buildTarget": "mydailydigest-ui:build-storybook",
+        "staticFilePath": "dist/storybook/mydailydigest-ui"
       },
       "configurations": {
         "ci": {
-          "buildTarget": "angular:build-storybook:ci"
+          "buildTarget": "mydailydigest-ui:build-storybook:ci"
         }
       }
     }

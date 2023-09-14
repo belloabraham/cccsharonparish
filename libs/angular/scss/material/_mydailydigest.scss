@@ -1,14 +1,14 @@
-@use 'colors';
-@forward 'material/theme' with (
+@use '../../../mydailydigest/scss/variables/colors';
+@forward './theme' with (
   $primary: colors.$accent-500,
   $secondary: colors.$primary-500,
   $on-primary: white,
   $on-secondary: colors.$text-light
 );
-@forward 'material/button';
-@forward 'material/icon-button';
-@forward 'material/elevation';
-@forward 'material/tooltip';
+@forward './button';
+@forward './icon-button';
+@forward './elevation';
+@forward './tooltip';
 
 .button-secondary {
   --mdc-theme-primary: white;
