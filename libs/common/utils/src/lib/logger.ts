@@ -1,7 +1,5 @@
 export class LoggerUtil {
-  static error(context: any, methodName: string, error: any) {
-    console.error(
-      `Context: ${context}, Action: ${methodName}, Error: ${error}`
-    );
+  static error(context: any, method: any, error: any) {
+    console.error(`${context.name} -> method: ${method.name} -> ${error}`);
   }
 }

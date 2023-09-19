@@ -65,6 +65,9 @@ importers:
       '@storybook/addon-storysource':
         specifier: ^7.4.1
         version: 7.4.1(react-dom@18.2.0)(react@18.2.0)
+      libphonenumber-js:
+        specifier: ^1.10.44
+        version: 1.10.44
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -14365,6 +14368,10 @@ packages:
     dependencies:
       prelude-ls: 1.2.1
       type-check: 0.4.0
+
+  /libphonenumber-js@1.10.44:
+    resolution: {integrity: sha512-svlRdNBI5WgBjRC20GrCfbFiclbF0Cx+sCcQob/C1r57nsoq0xg8r65QbTyVyweQIlB33P+Uahyho6EMYgcOyQ==}
+    dev: false
 
   /license-webpack-plugin@4.0.2(webpack@5.86.0):
     resolution: {integrity: sha512-771TFWFD70G1wLTC4oU2Cw4qvtmNrIw+wRvBtn+okgHl7slJVi7zfNcdmqDL72BojM30VNJ2UHylr1o77U37Jw==}
