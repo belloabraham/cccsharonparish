@@ -152,7 +152,7 @@ export class PhoneNumberComponent
     if (phoneInputFieldIsNotEmpty) {
       this.formattedPhoneNumber =
         this.phoneNumberValidator.getFormattedPhoneNumber(
-          this.value!.countryCode!,
+          this.countryCode!,
           this.phoneNumber!
         );
     }
@@ -228,7 +228,7 @@ export class PhoneNumberComponent
     if (this.value?.countryCode && this.value?.phoneNumber) {
       this.formattedPhoneNumber =
         this.phoneNumberValidator.getFormattedPhoneNumber(
-          this.value.countryCode,
+          this.countryCode!,
           this.value.phoneNumber
         );
     }
@@ -238,6 +238,10 @@ export class PhoneNumberComponent
   }
   registerOnTouched(fn: any): void {
     this.onTouched = fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {
+      this.disabled = isDisabled || this.disabled
   }
 
   @HostListener('focusout')
