@@ -1,6 +1,6 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { NgMaterialTooltipComponent } from './tooltip';
-import { NgMatTooltipModule } from '../../ng-mat-tootip.module';
+import { NgMatTooltipModule } from '../../ng-mat-tooltip.module';
 import { NgMaterialButtonModule } from '../../ng-mat-button.module';
 
 const meta: Meta<NgMaterialTooltipComponent> = {
