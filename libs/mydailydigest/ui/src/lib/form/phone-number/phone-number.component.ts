@@ -76,11 +76,6 @@ export class PhoneNumberComponent
   }
 
   onCountryCodeSelect() {
-    if (this.countryCode?.length !== 2) {
-      throw new Error(
-        `Select options value can only be a two character country code e.g NG and not ${this.countryCode}`
-      );
-    }
     const thisComponentFormControlWasInitializedWithData = this.value !== null;
 
     this.updateControlValueWithCountryCode(
@@ -111,7 +106,6 @@ export class PhoneNumberComponent
   private updateControlValueWithDiallingCode(
     thisComponentFormControlWasInitializedWithData: boolean
   ) {
-
     const diallingCode = this.phoneNumberValidator.getDiallingCode(
       this.countryCode!
     );
@@ -152,9 +146,13 @@ export class PhoneNumberComponent
     if (phoneInputFieldIsNotEmpty) {
       this.formattedPhoneNumber =
         this.phoneNumberValidator.getFormattedPhoneNumber(
-          this.value!.countryCode!,
+          this.countryCode!,
           this.phoneNumber!
         );
+    }
+
+    if (!phoneInputFieldIsNotEmpty) {
+      this.formattedPhoneNumber = '';
     }
 
     const indexOfSpacesInJustFormattedNumber: number[] = [];
@@ -228,7 +226,7 @@ export class PhoneNumberComponent
     if (this.value?.countryCode && this.value?.phoneNumber) {
       this.formattedPhoneNumber =
         this.phoneNumberValidator.getFormattedPhoneNumber(
-          this.value.countryCode,
+          this.countryCode!,
           this.value.phoneNumber
         );
     }
@@ -238,6 +236,10 @@ export class PhoneNumberComponent
   }
   registerOnTouched(fn: any): void {
     this.onTouched = fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {
+    this.disabled = isDisabled || this.disabled;
   }
 
   @HostListener('focusout')
