@@ -1,9 +1,9 @@
 <div class="input-group" [class]="hostElementClasses">
-  <select #countryCodeSelect (change)="onCountryCodeSelect()" [(ngModel)]="countryCode" class="form-select form-control"
+  <select (change)="onCountryCodeSelect()" [(ngModel)]="countryCode" class="form-select form-control"
     [disabled]="disabled" style="width: 40%;">
     <ng-content></ng-content>
   </select>
-  <input type="text" [disabled]="countryCodeSelect.value === '' || !(countryCodeSelect.value) || disabled"
+  <input type="text" [disabled]="countryCode === '' || !(countryCode) || disabled"
     [placeholder]="placeholder" (keyup)="onPhoneNumberChanged($event)" [(ngModel)]="formattedPhoneNumber"
     class="form-control" style="width: 60%;">
 </div>
