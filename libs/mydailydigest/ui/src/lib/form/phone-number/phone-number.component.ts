@@ -6,7 +6,6 @@ import {
   Input,
   OnChanges,
   SimpleChanges,
-  ViewEncapsulation,
   forwardRef,
 } from '@angular/core';
 import {
@@ -29,7 +28,6 @@ import { PhoneNgValidator } from './phone-ng.validator';
   imports: [FormsModule],
   templateUrl: './phone-number.component.html',
   styleUrls: ['./phone-number.component.scss'],
-  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
@@ -199,7 +197,7 @@ export class PhoneNumberComponent
 
     this.value = {
       ...this.value,
-      phoneNumber: this.phoneNumber,
+      phoneNumber: this.formattedPhoneNumber!,
     };
 
     this.indexOfSpacesInPreviouslyFormattedNumber = [
@@ -215,7 +213,21 @@ export class PhoneNumberComponent
   private notifyParentFormThatThisControlValueWasUpdated(
     value: PhoneNumberValueInterface
   ) {
-    this.onChange(value);
+    if (value.phoneNumber) {
+      const e164PhoneNumber = this.phoneNumberValidator.getE164Format(
+        value.phoneNumber,
+        this.countryCode!
+      );
+      const valueWithE164 = {
+        ...value,
+        e164: e164PhoneNumber,
+      };
+      this.onChange(valueWithE164);
+    }
+
+    if (!this.phoneNumber) {
+      this.onChange(value);
+    }
     this.onTouched();
   }
 

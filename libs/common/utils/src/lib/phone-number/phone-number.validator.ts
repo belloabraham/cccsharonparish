@@ -5,30 +5,35 @@ import {
   CountryCode,
   AsYouType,
   getCountryCallingCode,
+  NumberFormat,
 } from 'libphonenumber-js';
 import { PhoneValidatorInterface } from './phone-number.interface';
 import { LoggerUtil } from '../logger';
 
-export const DIALING_CODE_PREFIX = "+"
+export const DIALING_CODE_PREFIX = '+';
 
 @Injectable()
 export class PhoneNumberValidator implements PhoneValidatorInterface {
-  isValidPhone(
-    phoneNumber: string,
-    countryCode: string,
-    diallingCode: string
-  ): boolean {
+  isValidPhone(phoneNumber: string, countryCode: string): boolean {
     try {
-      const number = parsePhoneNumber(`${diallingCode}${phoneNumber}`);
-      const internationalNumberFormat = number.formatInternational();
       return isValidPhoneNumber(
-        internationalNumberFormat,
+        phoneNumber,
         countryCode.toUpperCase() as CountryCode
       );
     } catch (error) {
       LoggerUtil.error(PhoneNumberValidator, this.isValidPhone, error);
       return false;
     }
+  }
+
+  getE164Format(phoneNumber: string, countryCode: string): string {
+    const e164Format: NumberFormat = 'E.164';
+    const number = parsePhoneNumber(
+      phoneNumber,
+      countryCode.toUpperCase() as CountryCode
+    );
+    const formatE164 = number.format(e164Format);
+    return formatE164;
   }
 
   getFormattedPhoneNumber(

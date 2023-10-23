@@ -8,11 +8,7 @@ export interface PhoneValidatorInterface {
    * @returns `true` if the phone number is valid for the specified country; otherwise, `false`.
    * @throws Error if the `twoLetterCountryCode` is not a two-letter code.
    */
-  isValidPhone: (
-    phoneNumber: string,
-    countryCode: string,
-    diallingCode: string
-  ) => boolean;
+  isValidPhone: (phoneNumber: string, countryCode: string) => boolean;
 
   /**
    * Formats an unformatted phone number based on the provided country code.
@@ -25,6 +21,8 @@ export interface PhoneValidatorInterface {
     countryCode: string,
     unformattedPhoneNumber: string
   ) => string;
+
+  getE164Format: (phoneNumber: string, countryCode: string) => string;
 
   /**
    * Retrieves the phone code for a given country code.

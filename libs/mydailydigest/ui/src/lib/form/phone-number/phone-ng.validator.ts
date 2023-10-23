@@ -41,14 +41,9 @@ export class PhoneNgValidator implements Validator {
      * irrespective of if phone number input value from the user is required or not
      */
     if (control?.value.countryCode && control?.value.phoneNumber) {
-      const phoneCode = this.baseValidator.getDiallingCode(
-        control.value.countryCode
-      );
-      const phoneCodePrefix = '+';
       const phoneNumberIsNotValid = !this.baseValidator.isValidPhone(
         control.value.phoneNumber,
         control.value.countryCode,
-        `${phoneCodePrefix}${phoneCode}`
       );
       if (phoneNumberIsNotValid) {
         return {
