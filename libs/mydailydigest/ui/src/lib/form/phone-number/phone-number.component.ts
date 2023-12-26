@@ -176,7 +176,6 @@ export class PhoneNumberComponent
       ...this.indexOfSpacesInPreviouslyFormattedNumber,
     ];
 
-    const TIMEOUT_DURATION = 0;
     setTimeout(() => {
       const indexOfSpacesBeforeTheCurrentCursorPosition =
         indexOfSpacesInPreviouslyFormattedNumber.filter(
@@ -193,7 +192,7 @@ export class PhoneNumberComponent
 
       this.indexOfSpacesInPreviouslyFormattedNumber =
         indexOfSpacesInJustFormattedNumber;
-    }, TIMEOUT_DURATION);
+    });
 
     this.value = {
       ...this.value,
