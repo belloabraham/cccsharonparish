@@ -1,6 +1,7 @@
-@import '../../../../scss/animations/burning-candle';
 @forward '../../../../scss/utils/colors';
 @forward '../../../../scss/transitions/scale';
+@import '../../../../scss/animations/burning-candle';
+
 
 .title {
   font-size: 15rem;

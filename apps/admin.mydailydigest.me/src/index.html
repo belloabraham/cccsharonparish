@@ -7,8 +7,9 @@
   <base href="/" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
-</head>
+  <!-- Approved domains where script can be loaded from irrespective of what domain is marked safe by the browser default CSP policy -->
+  <meta http-equiv="Content-Security-Policy"
+    content="script-src 'self' apis.google.com www.google.com www.gstatic.com firebaseappcheck.googleapis.com;"></head>
 
 <body>
   <app-root></app-root>

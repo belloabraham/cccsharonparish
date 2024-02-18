@@ -23,13 +23,8 @@
         "scripts": [],
         "stylePreprocessorOptions": {
           "includePaths": [
-            "apps/admin.mydailydigest.me/src/scss/animations",
-            "libs/mydailydigest/scss/animations",
+            "apps/admin.mydailydigest.me/src/",
             "libs/mydailydigest/scss",
-            "libs/mydailydigest/scss/mixins",
-            "libs/mydailydigest/scss/transitions",
-            "libs/mydailydigest/scss/variables",
-            "libs/mydailydigest/scss/components",
             "libs/angular/scss"
           ]
         }
@@ -72,7 +67,7 @@
       "options": {
         "port": 4300,
         "headers": {
-          "Content-Security-Policy": "trusted-types default angular angular#bundler angular#devtools; require-trusted-types-for 'script';"
+          "Content-Security-Policy": "trusted-types default gapi#gapi goog#html dompurify angular angular#bundler angular#devtools; require-trusted-types-for 'script';"
         }
       },
       "configurations": {
@@ -106,7 +101,7 @@
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "headers": {
-          "Content-Security-Policy": "trusted-types default angular angular#bundler; require-trusted-types-for 'script';"
+          "Content-Security-Policy": "trusted-types default gapi#gapi goog#html dompurify angular angular#bundler; require-trusted-types-for 'script';"
         },
         "jestConfig": "apps/admin.mydailydigest.me/jest.config.ts",
         "passWithNoTests": true

@@ -26,7 +26,7 @@
     "@ngrx/store-devtools": "^16.2.0",
     "@nx/angular": "16.6.0",
     "@storybook/addon-storysource": "^7.4.1",
-    "dompurify": "^3.0.6",
+    "dompurify": "^3.0.8",
     "libphonenumber-js": "^1.10.44",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
