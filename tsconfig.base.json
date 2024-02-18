@@ -17,22 +17,9 @@
     "baseUrl": ".",
     "paths": {
       "@cccsharonparish.org/angular": ["libs/angular/src/index.ts"],
-      "@cccsharonparish.org/common/utils": ["libs/common/utils/src/index.ts"],
-      "@cccsharonparish.org/mydailydigest/app": [
-        "libs/mydailydigest/app/src/index.ts"
-      ],
-      "@cccsharonparish.org/mydailydigest/directives": [
-        "libs/mydailydigest/directives/src/index.ts"
-      ],
-      "@cccsharonparish.org/mydailydigest/ui": [
-        "libs/mydailydigest/ui/src/index.ts"
-      ],
-      "@cccsharonparish.org/mydailydigest/ui-stories": [
-        "libs/mydailydigest/ui-stories/src/index.ts"
-      ],
-      "@cccsharonparish.org/mydailydigest/ui-story": [
-        "libs/mydailydigest/ui-story/src/index.ts"
-      ]
+      "@cccsharonparish.org/core": ["libs/core/src/index.ts"],
+      "@cccsharonparish.org/common": ["libs/mydailydigest/common/src/index.ts"],
+      "@cccsharonparish.org/ui": ["libs/mydailydigest/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

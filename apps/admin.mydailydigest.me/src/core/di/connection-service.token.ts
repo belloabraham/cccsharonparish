@@ -3,7 +3,7 @@ import { Providers } from '@cccsharonparish.org/angular';
 import {
   ConnectionUtil,
   IConnectionUtil,
-} from '@cccsharonparish.org/common/utils';
+} from '@cccsharonparish.org/core';
 
 export const CONNECTION_UTIL_TOKEN = new InjectionToken<IConnectionUtil>(
   'connection-util',

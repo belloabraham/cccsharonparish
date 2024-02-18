@@ -14,7 +14,7 @@ import {
 } from '@cccsharonparish.org/angular';
 import { Title } from '@angular/platform-browser';
 import { SubSink } from 'subsink';
-import { LanguageResourceKey, MyDailyDigestPageNotFoundComponent } from '@cccsharonparish.org/mydailydigest/app';
+import { LanguageResourceKey, MyDailyDigestPageNotFoundComponent } from '@cccsharonparish.org/common';
 
 @Component({
   selector: 'app-page-not-found',

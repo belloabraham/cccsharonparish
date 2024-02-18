@@ -8,7 +8,7 @@ import {
   NumberFormat,
 } from 'libphonenumber-js';
 import { PhoneValidatorInterface } from './phone-number.interface';
-import { LoggerUtil } from '../logger';
+import { LoggerUtil } from '@cccsharonparish.org/core';
 
 export const DIALING_CODE_PREFIX = '+';
 

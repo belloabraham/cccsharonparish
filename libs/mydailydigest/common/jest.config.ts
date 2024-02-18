@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'mydailydigest-app',
+  displayName: 'common',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../coverage/libs/mydailydigest/app',
+  coverageDirectory: '../../../coverage/libs/mydailydigest/common',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

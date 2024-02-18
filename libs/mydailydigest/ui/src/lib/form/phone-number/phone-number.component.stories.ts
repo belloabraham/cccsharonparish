@@ -1,10 +1,8 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { PhoneNumberComponent } from './phone-number.component';
-import {
-  PHONE_NUMBER_VALIDATOR_TOKEN,
-  PhoneNumberValidator,
-} from '@cccsharonparish.org/common/utils';
 import { CountriesDiallingCode } from '../../mock';
+import { PHONE_NUMBER_VALIDATOR_TOKEN } from './phone-number.token';
+import { PhoneNumberValidator } from './phone-number.validator';
 
 const meta: Meta<PhoneNumberComponent> = {
   component: PhoneNumberComponent,
@@ -55,7 +53,7 @@ export const Phone: Story = {
         <option *ngFor="let i of diallingCodes" [value]="i.alpha2Code">{{i.diallingCode}} ({{i.name}})</option>
       </mdd-phone-number>
 
-      //Require the import of PhoneNumberComponent from from libs/mydailydigest-ui
+      //Require the import of PhoneNumberComponent from from @mydailydigest/ui
       `,
     },
   },

@@ -24,7 +24,7 @@ import {
   NavigationStart,
   Router,
 } from '@angular/router';
-import { IConnectionUtil } from '@cccsharonparish.org/common/utils';
+import { IConnectionUtil } from '@cccsharonparish.org/core';
 import { CONNECTION_UTIL_TOKEN } from '../core/di/connection-service.token';
 import { LanguageResourceKey } from './i18n/language-resource-key';
 @Component({

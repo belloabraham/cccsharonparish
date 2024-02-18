@@ -36,7 +36,7 @@ export const Pill: Story = {
     storySource: {
       source: `
           <button ng-mat-button >Button <span mdd-badge [posTopRight]="true" [background]="'primary'">1</span></button>
-        //Require the import of MDDBadgedModule from libs/mydailydigest-ui
+        //Require the import of MDDBadgedModule from @mydailydigest/ui
       `,
     },
   },
@@ -61,7 +61,7 @@ export const RoundedPill: Story = {
     storySource: {
       source: `
        <button ng-mat-raised-button color="secondary" >Button <span mdd-badge mdd-badge-rounded [background]="'primary'"></span></button>
-        //Require the import of MDDBadgedModule from libs/mydailydigest-ui
+        //Require the import of MDDBadgedModule from @mydailydigest/ui
       `,
     },
   },

@@ -14,13 +14,11 @@ import {
   NG_VALIDATORS,
   NG_VALUE_ACCESSOR,
 } from '@angular/forms';
-import {
-  DIALING_CODE_PREFIX,
-  PHONE_NUMBER_VALIDATOR_TOKEN,
-  PhoneValidatorInterface,
-} from '@cccsharonparish.org/common/utils';
 import { PhoneNumberValueInterface } from './phone-number-value.interface';
 import { PhoneNgValidator } from './phone-ng.validator';
+import { PHONE_NUMBER_VALIDATOR_TOKEN } from './phone-number.token';
+import { PhoneValidatorInterface } from './phone-number.interface';
+import { DIALING_CODE_PREFIX } from './phone-number.validator';
 
 @Component({
   selector: 'mdd-phone-number',

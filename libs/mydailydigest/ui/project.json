@@ -1,5 +1,5 @@
 {
-  "name": "mydailydigest-ui",
+  "name": "ui",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/mydailydigest/ui/src",
   "prefix": "cccsharonparish.org",
@@ -52,7 +52,7 @@
       "options": {
         "port": 4400,
         "configDir": "libs/mydailydigest/ui/.storybook",
-        "browserTarget": "mydailydigest-ui:build-storybook",
+        "browserTarget": "ui:build-storybook",
         "compodoc": false
       },
       "configurations": {
@@ -65,9 +65,9 @@
       "executor": "@storybook/angular:build-storybook",
       "outputs": ["{options.outputDir}"],
       "options": {
-        "outputDir": "dist/storybook/mydailydigest-ui",
+        "outputDir": "dist/storybook/ui",
         "configDir": "libs/mydailydigest/ui/.storybook",
-        "browserTarget": "mydailydigest-ui:build-storybook",
+        "browserTarget": "ui:build-storybook",
         "compodoc": false,
         "styles": ["libs/mydailydigest/ui/src/styles.scss"],
         "stylePreprocessorOptions": {
@@ -97,12 +97,12 @@
     "static-storybook": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "mydailydigest-ui:build-storybook",
-        "staticFilePath": "dist/storybook/mydailydigest-ui"
+        "buildTarget": "ui:build-storybook",
+        "staticFilePath": "dist/storybook/ui"
       },
       "configurations": {
         "ci": {
-          "buildTarget": "mydailydigest-ui:build-storybook:ci"
+          "buildTarget": "ui:build-storybook:ci"
         }
       }
     }

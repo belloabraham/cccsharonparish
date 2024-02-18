@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'mydailydigest-ui',
+  displayName: 'ui',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../../coverage/libs/mydailydigest/ui',

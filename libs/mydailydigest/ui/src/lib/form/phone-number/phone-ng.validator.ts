@@ -5,11 +5,9 @@ import {
   Validators,
 } from '@angular/forms';
 import { Inject } from '@angular/core';
-import {
-  PHONE_NUMBER_VALIDATOR_TOKEN,
-  PhoneValidatorInterface,
-} from '@cccsharonparish.org/common/utils';
 import { PhoneNumberValueInterface } from './phone-number-value.interface';
+import { PHONE_NUMBER_VALIDATOR_TOKEN } from './phone-number.token';
+import { PhoneValidatorInterface } from './phone-number.interface';
 
 export class PhoneNgValidator implements Validator {
   constructor(
