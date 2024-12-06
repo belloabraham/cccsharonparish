@@ -1,33 +1,10 @@
 {
   "name": "mydailydigest.me-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/mydailydigest.me-e2e/src",
   "projectType": "application",
-  "targets": {
-    "e2e": {
-      "executor": "@nx/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/mydailydigest.me-e2e/cypress.config.ts",
-        "devServerTarget": "mydailydigest.me:serve:development",
-        "testingType": "e2e"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "mydailydigest.me:serve:production"
-        },
-        "ci": {
-          "devServerTarget": "mydailydigest.me:serve-static"
-        }
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/mydailydigest.me-e2e/**/*.{js,ts}"]
-      }
-    }
-  },
+  "sourceRoot": "apps/mydailydigest.me-e2e/src",
   "tags": [],
-  "implicitDependencies": ["mydailydigest.me"]
+  "implicitDependencies": ["mydailydigest.me"],
+  "// targets": "to see all targets run: nx show project mydailydigest.me-e2e --web",
+  "targets": {}
 }

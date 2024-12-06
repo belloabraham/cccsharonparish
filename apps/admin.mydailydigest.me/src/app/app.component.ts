@@ -1,114 +1,54 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Inject,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
-import { Store } from '@ngrx/store';
-import { SubSink } from 'subsink';
-import {
-  LoadLanguageResourceActionState,
-  getLoadLanguageResourceActionGroup,
-} from '../store/actions/language-resource.actions';
-import {
-  ILanguageResourceService,
-  LANGUAGE_RESOURCE_TOKEN,
-  Language,
-} from '@cccsharonparish.org/angular';
-import { Observable, filter, map, merge, of } from 'rxjs';
-import {
-  NavigationCancel,
-  NavigationEnd,
-  NavigationError,
-  NavigationStart,
-  Router,
-} from '@angular/router';
-import { IConnectionUtil } from '@cccsharonparish.org/core';
-import { CONNECTION_UTIL_TOKEN } from '../core/di/connection-service.token';
-import { LanguageResourceKey } from './i18n/language-resource-key';
+import { Component, inject, OnDestroy, OnInit, Signal } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ThemeService } from '@cccsharonparish/angular';
+import { Subscription } from 'rxjs';
+import { NgIf } from '@angular/common';
+import { TranslocoModule } from '@jsverse/transloco';
+import { BaseAppComponent, ROUTE } from '@cccsharonparish/mydailydigest';
+import { ConnectionStateUtil } from '@cccsharonparish/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { APP_STRING_RESOURCE_KEY } from './i18n/app-string-res-keys';
+
 @Component({
+  standalone: true,
+  imports: [RouterModule, NgIf, TranslocoModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrl: './app.component.scss',
+  providers: [ConnectionStateUtil],
 })
-export class AppComponent implements OnInit, OnDestroy {
-  private subscriptions = new SubSink();
+export class AppComponent
+  extends BaseAppComponent
+  implements OnDestroy, OnInit
+{
+  private readonly themeService = inject(ThemeService);
+  themeChangeSubscription = Subscription.EMPTY;
+  private connectionStateUtil = inject(ConnectionStateUtil);
+  deviceConnected: Signal<boolean | undefined>;
+  KEY = APP_STRING_RESOURCE_KEY;
 
-  routerIsNavigating$!: Observable<boolean>;
-  shouldShowPreloader$!: Observable<boolean>;
-  deviceIsConnectedToTheInternet$!: Observable<boolean>;
-  languageResourceKey = LanguageResourceKey;
-  appNameKey = Language.APP_NAME;
-  constructor(
-    private ngrxStore: Store,
-    @Inject(LANGUAGE_RESOURCE_TOKEN)
-    private languageResourceService: ILanguageResourceService,
-    @Inject(CONNECTION_UTIL_TOKEN)
-    private connectionUtil: IConnectionUtil,
-    private router: Router
-  ) {}
-
-  ngOnInit(): void {
-    this.loadLanguageResource(Language.ENGLISH, () => {
-      this.onLanguageResourceLoaded();
-    });
-
-    this.deviceIsConnectedToTheInternet$ =
-      this.connectionUtil.observeDeviceInternetConnectionState();
-
-    const routerNavigationStartEvent$ = this.router.events.pipe(
-      filter((e) => e instanceof NavigationStart),
-      map(() => true)
-    );
-
-    const routerNavigationStoppedEvent$ = this.router.events.pipe(
-      filter(
-        (e) =>
-          e instanceof NavigationEnd ||
-          e instanceof NavigationCancel ||
-          e instanceof NavigationError
-      ),
-      map(() => false)
-    );
-
-    const isInitialAppStart$ = of(true);
-
-    this.shouldShowPreloader$ = merge(
-      routerNavigationStoppedEvent$,
-      isInitialAppStart$
-    );
-
-    this.routerIsNavigating$ = merge(
-      routerNavigationStoppedEvent$,
-      routerNavigationStartEvent$
+  constructor() {
+    super();
+    this.loadAppTheme();
+    this.deviceConnected = toSignal(
+      this.connectionStateUtil.observeDeviceInternetConnectionState(ROUTE.ROOT)
     );
   }
 
-  private loadLanguageResource(
-    language: string,
-    onLanguageResourceLoaded: () => void
-  ) {
-    this.subscriptions.sink = this.languageResourceService
-      .loadLanguageResource(language)
-      .subscribe(() => {
-        onLanguageResourceLoaded();
+  loadAppTheme() {
+    const theme = this.themeService.getDeviceTheme();
+    this.themeService.setTheme(theme);
+
+    this.themeChangeSubscription = this.themeService
+      .onDeviceThemeChanged()
+      .subscribe({
+        next: (theme) => {
+          this.themeService.setTheme(theme);
+        },
       });
   }
 
-  onLanguageResourceLoaded() {
-    const loadLanguageResourceActionState: LoadLanguageResourceActionState = {
-      loaded: true,
-    };
-    const loadLanguageResourceAction =
-      getLoadLanguageResourceActionGroup().loadLanguageResourceAction(
-        loadLanguageResourceActionState
-      );
-    this.ngrxStore.dispatch(loadLanguageResourceAction);
-  }
-
   ngOnDestroy(): void {
-    this.subscriptions.unsubscribe();
+    this.themeChangeSubscription.unsubscribe();
   }
 }

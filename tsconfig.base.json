@@ -13,13 +13,11 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@cccsharonparish.org/angular": ["libs/angular/src/index.ts"],
-      "@cccsharonparish.org/core": ["libs/core/src/index.ts"],
-      "@cccsharonparish.org/common": ["libs/mydailydigest/common/src/index.ts"],
-      "@cccsharonparish.org/ui": ["libs/mydailydigest/ui/src/index.ts"]
+      "@cccsharonparish/angular": ["common/angular/src/index.ts"],
+      "@cccsharonparish/core": ["common/core/src/index.ts"],
+      "@cccsharonparish/mydailydigest": ["common/mydailydigest/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

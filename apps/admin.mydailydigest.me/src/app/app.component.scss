@@ -1,4 +1,3 @@
-@forward 'animations/preloader';
-@forward 'scss/animations/indeterminate-progress-bar';
-@forward 'app-component';
-@forward 'components/warning-panel';
+@use 'common/animations/book-preloader';
+@use 'common/utils/colors';
+@use 'common/components/warning-panel';

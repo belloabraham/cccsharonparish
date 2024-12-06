@@ -1,0 +1,16 @@
+@use '../variables/colors';
+
+.bg-primary-800 {
+  background-color: colors.$primary-800;
+}
+
+.bg-primary-600 {
+  background-color: colors.$primary-800;
+}
+
+.bg-accent-400-tinted {
+  background-color: #ff7d4b;
+}
+.bg-accent-300 {
+  background-color: colors.$accent-300;
+}

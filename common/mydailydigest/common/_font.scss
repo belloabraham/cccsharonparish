@@ -1,0 +1,33 @@
+@use './mixins/breakpoints';
+
+html {
+  font-size: 80%;
+
+  @include breakpoints.small {
+    font-size: 82.5%;
+  }
+
+  @include breakpoints.medium {
+    font-size: 85%;
+  }
+
+  @include breakpoints.tablet {
+    font-size: 92.5%;
+  }
+
+  @include breakpoints.large {
+    font-size: 90%;
+  }
+
+  @include breakpoints.xLarge {
+    font-size: 95%;
+  }
+
+  @include breakpoints.xxLarge {
+    font-size: 100%;
+  }
+
+  @include breakpoints.xxxLarge {
+    font-size: 125%;
+  }
+}

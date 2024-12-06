@@ -4,8 +4,6 @@
 dist
 tmp
 /out-tsc
-.nx
-
 
 # dependencies
 node_modules
@@ -40,4 +38,20 @@ testem.log
 .DS_Store
 Thumbs.db
 
+.nx/cache
+.nx/workspace-data
+
 .angular
+
+
+apps/admin.mydailydigest.me/src/environments/
+apps/mydailydigest.me/src/environments/
+
+apps/admin.mydailydigest.me/public/images/global/
+apps/mydailydigest.me/public/images/global/
+apps/mydailydigest.me/public/favicon.ico
+apps/admin.mydailydigest.me/public/favicon.ico
+
+
+
+

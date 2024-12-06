@@ -1,0 +1,66 @@
+@forward '../../../common/utils/colors';
+@forward '../../../common/transitions/scale';
+@forward '../../../common/animations/burning-candle';
+
+.page-container {
+  height: 100dvh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 7rem 1fr 20rem;
+}
+
+.candle-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.candle-wrapper > :first-child {
+  flex-grow: 1;
+  text-align: end;
+}
+
+.candle-wrapper > :last-child {
+  flex-grow: 1;
+  text-align: start;
+}
+
+.message-container {
+  text-align: center;
+}
+
+.title {
+  font-size: 14rem;
+  font-weight: 500;
+}
+.home-btn {
+  width: 10rem;
+}
+.title-0 {
+  left: -2.2rem;
+  bottom: -7rem;
+  font-size: 16.1rem;
+  font-weight: 300;
+}
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+}
+
+.logo {
+  border-radius: 1.7rem;
+  width: 4rem;
+  height: 4rem;
+  margin: 2rem;
+  img {
+    width: 3rem;
+    height: auto;
+  }
+}
+
+.description {
+  text-align: center;
+}

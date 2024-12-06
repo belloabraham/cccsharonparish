@@ -1,4 +1,3 @@
-/* eslint-disable */
 export default {
   displayName: 'admin.mydailydigest.me',
   preset: '../../jest.preset.js',

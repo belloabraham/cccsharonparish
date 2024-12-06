@@ -1,10 +1,18 @@
-import { defineConfig } from 'cypress';
 import { nxE2EPreset } from '@nx/cypress/plugins/cypress-preset';
 
-const nxConfig = nxE2EPreset(__dirname);
+import { defineConfig } from 'cypress';
+
 export default defineConfig({
   e2e: {
-    ...nxConfig,
+    ...nxE2EPreset(__filename, {
+      cypressDir: 'src',
+      webServerCommands: {
+        default: 'pnpm exec nx run mydailydigest.me:serve',
+        production: 'pnpm exec nx run mydailydigest.me:serve-static',
+      },
+      ciWebServerCommand: 'pnpm exec nx run mydailydigest.me:serve-static',
+      ciBaseUrl: 'http://localhost:4400',
+    }),
     baseUrl: 'http://localhost:4400',
   },
 });

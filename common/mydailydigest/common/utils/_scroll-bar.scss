@@ -1,0 +1,57 @@
+@use '../variables/colors';
+
+.no-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.2rem;
+
+    height: 0.2rem !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+
+    border-radius: 0.25rem;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-track {
+      background: colors.$neutral-300;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: colors.$neutral-400;
+    }
+  }
+}
+
+.custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.2rem;
+
+    height: 0.2rem !important;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+
+    border-radius: 0.25rem;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-track {
+      background: colors.$neutral-300;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: colors.$neutral-400;
+    }
+  }
+}

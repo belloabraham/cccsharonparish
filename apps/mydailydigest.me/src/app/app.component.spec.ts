@@ -1,32 +1,27 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { RouterTestingModule } from '@angular/router/testing';
-import { HttpClientModule } from '@angular/common/http';
-import { TranslocoRootModule } from '@cccsharonparish.org/angular';
-import { SubSink } from 'subsink';
+import { NxWelcomeComponent } from './nx-welcome.component';
+import { RouterModule } from '@angular/router';
 
 describe('AppComponent', () => {
-  let component: AppComponent;
-  let fixture: ComponentFixture<AppComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule, TranslocoRootModule, HttpClientModule],
-      declarations: [AppComponent],
+      imports: [AppComponent, NxWelcomeComponent, RouterModule.forRoot([])],
     }).compileComponents();
-    fixture = TestBed.createComponent(AppComponent);
-    component = fixture.componentInstance;
+  });
+
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Welcome mydailydigest.me'
+    );
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should unsubscribe on destroy', () => {
-    const mockSubSink = new SubSink();
-    component['subscriptions'] = mockSubSink;
-    const mockUnsubscribe = jest.spyOn(mockSubSink, 'unsubscribe');
-    component.ngOnDestroy();
-    expect(mockUnsubscribe).toHaveBeenCalled();
+  it(`should have as title 'mydailydigest.me'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('mydailydigest.me');
   });
 });
