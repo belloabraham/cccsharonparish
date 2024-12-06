@@ -13,7 +13,7 @@
         "outputPath": "dist/apps/mydailydigest.me",
         "index": "apps/mydailydigest.me/src/index.html",
         "browser": "apps/mydailydigest.me/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [],
         "tsConfig": "apps/mydailydigest.me/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

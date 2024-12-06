@@ -1,7 +1,7 @@
 import {
   ApplicationConfig,
-  provideZoneChangeDetection,
   isDevMode,
+  provideExperimentalZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { appRoutes } from './app.routes';
@@ -22,9 +22,11 @@ import { provideTransloco } from '@jsverse/transloco';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
     provideAnimationsAsync(),
+    provideExperimentalZonelessChangeDetection(),
+
+    //Firebase
     provideFirebaseApp(() => initializeApp({ ...environment.firebase })),
     provideAuth(() => getAuth(getApp())),
     provideFirestore(() => getFirestore()),
@@ -38,6 +40,8 @@ export const appConfig: ApplicationConfig = {
         isTokenAutoRefreshEnabled: true,
       });
     }),
+
+    //Transloco
     provideHttpClient(),
     provideTransloco({
       config: {
