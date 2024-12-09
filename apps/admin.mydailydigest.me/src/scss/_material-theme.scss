@@ -17,6 +17,31 @@ html {
   );
 }
 
+//overrides for Form fields
+$form-field: mat.define-theme(
+  (
+    density: (
+      scale: -3,
+    ),
+  )
+);
+:root {
+  @include mat.form-field-density($form-field);
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font, sans-serif;
+  scroll-behavior: smooth;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100, 'YTLC' 500;
+
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}
+
 [data-theme='light'] {
   --mat-sys-primary: rgb(8, 89, 109);
   --mat-sys-surface-tint: rgb(0 105 109);
@@ -67,19 +92,6 @@ html {
   --mat-sys-surface-container: rgb(240 237 237);
   --mat-sys-surface-container-high: rgb(234 232 231);
   --mat-sys-surface-container-highest: rgb(228 226 225);
-}
-
-body {
-  margin: 0;
-  font-family: $primary-font, sans-serif;
-  scroll-behavior: smooth;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal;
-  font-variation-settings: 'wdth' 100, 'YTLC' 500;
-
-  background: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
 }
 
 [data-theme='dark'] {

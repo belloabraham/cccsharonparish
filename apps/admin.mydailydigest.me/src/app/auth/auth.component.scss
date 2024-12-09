@@ -1,0 +1,18 @@
+.auth{
+    height: 100dvh;
+    width: 100vw;
+    background-color: hsla(218, 5%, 87.5%, 1);
+}
+
+.logo {
+  border-radius: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: white;
+   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
+  img {
+    width: 5rem;
+    height: auto;
+  }
+}
