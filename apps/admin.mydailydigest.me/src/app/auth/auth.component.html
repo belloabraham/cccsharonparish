@@ -1,6 +1,20 @@
-<div *transloco="let t" class="auth flex justify-center items-center">
+<div *transloco="let t" class="auth flex flex-col justify-center items-center">
     <div class="logo flex justify-center items-center">
         <img width="80" height="75" ngSrc="/images/global/logo.png" priority>
+    </div>
+
+    <h3>For authorized personnel only</h3>
+
+    <div class="flex flex-col gap-2">
+
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Placeholder">
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+        <button mat-raised-button>Login</button>
+
     </div>
 
 </div>

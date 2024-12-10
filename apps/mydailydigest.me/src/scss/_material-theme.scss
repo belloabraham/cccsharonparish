@@ -48,7 +48,7 @@ body {
   color: var(--mat-sys-on-surface);
 }
 
-[data-theme='light'] {
+:root {
   --mat-sys-primary: rgb(8, 89, 109);
   --mat-sys-surface-tint: rgb(0 105 109);
   --mat-sys-on-primary: rgb(255 255 255);
@@ -98,7 +98,6 @@ body {
   --mat-sys-surface-container: rgb(240 237 237);
   --mat-sys-surface-container-high: rgb(234 232 231);
   --mat-sys-surface-container-highest: rgb(228 226 225);
-  --bootstrap-light: hsla(218, 5%, 87.5%, 1);
 }
 
 [data-theme='dark'] {
@@ -151,5 +150,4 @@ body {
   --mat-sys-surface-container: rgb(31 32 32);
   --mat-sys-surface-container-high: rgb(42 42 42);
   --mat-sys-surface-container-highest: rgb(52 53 53);
-  --bootstrap-light: b(16 20 20);
 }
