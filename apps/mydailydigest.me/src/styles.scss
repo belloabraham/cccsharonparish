@@ -1,4 +1,5 @@
-@use 'material-theme';
+@forward 'material-theme';
+@use 'common/material-theme';
 @use 'common/utils/scroll-bar';
 @use 'common/font-icon';
 @use 'common/font';
