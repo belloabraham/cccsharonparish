@@ -1,13 +1,18 @@
 import { Component, inject, OnDestroy, OnInit, Signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ThemeService } from '@cccsharonparish/angular';
+import { Theme, ThemeService } from '@cccsharonparish/angular';
 import { Subscription } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
-import { BaseAppComponent, ROUTE } from '@cccsharonparish/mydailydigest';
+import {
+  BaseAppComponent,
+  ROUTE,
+  Settings,
+} from '@cccsharonparish/mydailydigest';
 import { ConnectionStateUtil } from '@cccsharonparish/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { APP_STRING_RESOURCE_KEY } from './i18n/app-string-res-keys';
+import { environment } from '../environments/environment';
 
 @Component({
   standalone: true,
@@ -36,7 +41,10 @@ export class AppComponent
   }
 
   loadAppTheme() {
-    const theme = this.themeService.getDeviceTheme();
+    const settingsTheme = this.themeService.getSettingsTheme(
+      Settings.themeKey(environment.domain)
+    );
+    const theme = settingsTheme ?? this.themeService.getDeviceTheme();
     this.themeService.setTheme(theme);
 
     this.themeChangeSubscription = this.themeService

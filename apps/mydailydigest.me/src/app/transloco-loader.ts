@@ -8,6 +8,6 @@ export class TranslocoHttpLoader implements TranslocoLoader {
     private http = inject(HttpClient);
 
     getTranslation(lang: string) {
-        return this.http.get<Translation>(`${environment.baseUrl}/i18n/${lang}.json`);
+        return this.http.get<Translation>(`${environment.domain}/i18n/${lang}.json`);
     }
 }

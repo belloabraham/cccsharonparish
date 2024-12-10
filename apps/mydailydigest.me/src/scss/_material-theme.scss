@@ -1,0 +1,155 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@include mat.core();
+
+$app-theme: mat.define-theme(
+  (
+    color: (
+      use-system-variables: true,
+    ),
+    typography: (
+      plain-family: $primary-font,
+    ),
+    density: (
+      scale: 0,
+    ),
+  )
+);
+
+//overrides for Form fields
+$form-field: mat.define-theme(
+  (
+    density: (
+      scale: -3,
+    ),
+  )
+);
+
+:root {
+  @include mat.button-theme($app-theme);
+  // @include mat.icon-button-theme($app-theme);
+  // @include mat.form-field-theme($app-theme);
+  // @include mat.input-theme($app-theme);
+  // @include mat.icon-theme($app-theme);
+  // @include mat.form-field-density($form-field);
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font, sans-serif;
+  scroll-behavior: smooth;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100, 'YTLC' 500;
+
+  background: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+}
+
+[data-theme='light'] {
+  --mat-sys-primary: rgb(8, 89, 109);
+  --mat-sys-surface-tint: rgb(0 105 109);
+  --mat-sys-on-primary: rgb(255 255 255);
+  --mat-sys-primary-container: rgb(0 75 78);
+  --mat-sys-on-primary-container: rgb(255 255 255);
+  --mat-sys-secondary: rgb(0 0 0);
+  --mat-sys-on-secondary: rgb(255 255 255);
+  --mat-sys-secondary-container: rgb(38 37 40);
+  --mat-sys-on-secondary-container: rgb(255 255 255);
+  --mat-sys-tertiary: rgb(78 0 1);
+  --mat-sys-on-tertiary: rgb(255 255 255);
+  --mat-sys-tertiary-container: rgb(130 26 18);
+  --mat-sys-on-tertiary-container: rgb(255 255 255);
+  --mat-sys-error: rgb(78 0 0);
+  --mat-sys-on-error: rgb(255 255 255);
+  --mat-sys-error-container: rgb(140 0 0);
+  --mat-sys-on-error-container: rgb(255 255 255);
+  --mat-sys-background: rgb(247 250 249);
+  --mat-sys-on-background: rgb(24 28 28);
+  --mat-sys-surface: rgb(251 249 248);
+  --mat-sys-on-surface: rgb(0 0 0);
+  --mat-sys-surface-variant: rgb(218 229 229);
+  --mat-sys-on-surface-variant: rgb(28 38 38);
+  --mat-sys-outline: rgb(58 69 69);
+  --mat-sys-outline-variant: rgb(58 69 69);
+  --mat-sys-shadow: rgb(0 0 0);
+  --mat-sys-scrim: rgb(0 0 0);
+  --mat-sys-inverse-surface: rgb(48 48 48);
+  --mat-sys-inverse-on-surface: rgb(255 255 255);
+  --mat-sys-inverse-primary: rgb(168 250 254);
+  --mat-sys-primary-fixed: rgb(0 75 78);
+  --mat-sys-on-primary-fixed: rgb(255 255 255);
+  --mat-sys-primary-fixed-dim: rgb(0 51 53);
+  --mat-sys-on-primary-fixed-variant: rgb(255 255 255);
+  --mat-sys-secondary-fixed: rgb(67 66 69);
+  --mat-sys-on-secondary-fixed: rgb(255 255 255);
+  --mat-sys-secondary-fixed-dim: rgb(45 44 47);
+  --mat-sys-on-secondary-fixed-variant: rgb(255 255 255);
+  --mat-sys-tertiary-fixed: rgb(130 26 18);
+  --mat-sys-on-tertiary-fixed: rgb(255 255 255);
+  --mat-sys-tertiary-fixed-dim: rgb(98 0 1);
+  --mat-sys-on-tertiary-fixed-variant: rgb(255 255 255);
+  --mat-sys-surface-dim: rgb(219 217 217);
+  --mat-sys-surface-bright: rgb(251 249 248);
+  --mat-sys-surface-container-lowest: rgb(255 255 255);
+  --mat-sys-surface-container-low: rgb(245 243 242);
+  --mat-sys-surface-container: rgb(240 237 237);
+  --mat-sys-surface-container-high: rgb(234 232 231);
+  --mat-sys-surface-container-highest: rgb(228 226 225);
+  --bootstrap-light: hsla(218, 5%, 87.5%, 1);
+}
+
+[data-theme='dark'] {
+  --mat-sys-primary: rgb(235 254 255);
+  --mat-sys-surface-tint: rgb(130 212 216);
+  --mat-sys-on-primary: rgb(0 0 0);
+  --mat-sys-primary-container: rgb(135 216 220);
+  --mat-sys-on-primary-container: rgb(0 0 0);
+  --mat-sys-secondary: rgb(253 250 252);
+  --mat-sys-on-secondary: rgb(0 0 0);
+  --mat-sys-secondary-container: rgb(205 202 204);
+  --mat-sys-on-secondary-container: rgb(0 0 0);
+  --mat-sys-tertiary: rgb(255 249 248);
+  --mat-sys-on-tertiary: rgb(0 0 0);
+  --mat-sys-tertiary-container: rgb(255 186 176);
+  --mat-sys-on-tertiary-container: rgb(0 0 0);
+  --mat-sys-error: rgb(255 249 248);
+  --mat-sys-on-error: rgb(0 0 0);
+  --mat-sys-error-container: rgb(255 186 175);
+  --mat-sys-on-error-container: rgb(0 0 0);
+  --mat-sys-background: rgb(16 20 20);
+  --mat-sys-on-background: rgb(224 227 227);
+  --mat-sys-surface: rgb(19 19 19);
+  --mat-sys-on-surface: rgb(255 255 255);
+  --mat-sys-surface-variant: rgb(62 73 73);
+  --mat-sys-on-surface-variant: rgb(242 253 253);
+  --mat-sys-outline: rgb(194 205 205);
+  --mat-sys-outline-variant: rgb(194 205 205);
+  --mat-sys-shadow: rgb(0 0 0);
+  --mat-sys-scrim: rgb(0 0 0);
+  --mat-sys-inverse-surface: rgb(228 226 225);
+  --mat-sys-inverse-on-surface: rgb(0 0 0);
+  --mat-sys-inverse-primary: rgb(0 48 50);
+  --mat-sys-primary-fixed: rgb(163 245 249);
+  --mat-sys-on-primary-fixed: rgb(0 0 0);
+  --mat-sys-primary-fixed-dim: rgb(135 216 220);
+  --mat-sys-on-primary-fixed-variant: rgb(0 26 27);
+  --mat-sys-secondary-fixed: rgb(233 230 233);
+  --mat-sys-on-secondary-fixed: rgb(0 0 0);
+  --mat-sys-secondary-fixed-dim: rgb(205 202 204);
+  --mat-sys-on-secondary-fixed-variant: rgb(22 22 24);
+  --mat-sys-tertiary-fixed: rgb(255 224 219);
+  --mat-sys-on-tertiary-fixed: rgb(0 0 0);
+  --mat-sys-tertiary-fixed-dim: rgb(255 186 176);
+  --mat-sys-on-tertiary-fixed-variant: rgb(55 0 0);
+  --mat-sys-surface-dim: rgb(19 19 19);
+  --mat-sys-surface-bright: rgb(57 57 57);
+  --mat-sys-surface-container-lowest: rgb(14 14 14);
+  --mat-sys-surface-container-low: rgb(27 28 28);
+  --mat-sys-surface-container: rgb(31 32 32);
+  --mat-sys-surface-container-high: rgb(42 42 42);
+  --mat-sys-surface-container-highest: rgb(52 53 53);
+  --bootstrap-light: b(16 20 20);
+}

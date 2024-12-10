@@ -21,6 +21,18 @@ export class ThemeService {
       : 'light';
   }
 
+  getSettingsTheme(key: string) {
+    const theme = localStorage.getItem(key);
+    if (theme) {
+      return theme as Theme;
+    }
+    return null;
+  }
+
+  setSettingsTheme(key: string, theme: Theme) {
+    return localStorage.setItem(key, theme);
+  }
+
   onDeviceThemeChanged(): Observable<Theme> {
     return new Observable((observer) => {
       window
