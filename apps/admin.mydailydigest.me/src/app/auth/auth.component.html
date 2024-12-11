@@ -1,19 +1,21 @@
-<div *transloco="let t" class="auth flex flex-col justify-center items-center">
+<div *transloco="let t" class="auth flex flex-col justify-center items-center gap-10">
     <div class="logo flex justify-center items-center">
         <img width="80" height="75" ngSrc="/images/global/logo.png" priority>
     </div>
 
-    <h3>For authorized personnel only</h3>
+    <h3 class="title text-center">{{t(KEY.AUTH_LOGIN_MGS)}}</h3>
 
-    <div class="flex flex-col gap-2">
+    <div [formGroup]="form" class="flex flex-col gap-3 login-form-container">
 
         <mat-form-field>
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Placeholder">
-            <mat-hint>Hint</mat-hint>
+            <mat-label>{{t(KEY.EMAIL)}}</mat-label>
+            <input matInput formControlName="email" placeholder="name@example.com">
+            @if (this.emailFC.invalid) {
+            <mat-error>{{t(KEY.INVALID_EMAIL_MGS)}}</mat-error>
+            }
         </mat-form-field>
 
-        <button mat-flat-button class="login-btn mat-elevation-z1">Login</button>
+        <button (click)="onSubmit()" mat-flat-button class="login-btn mat-elevation-z1 w-100">{{t(KEY.LOGIN)}}</button>
 
     </div>
 

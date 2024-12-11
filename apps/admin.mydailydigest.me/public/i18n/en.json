@@ -4,5 +4,15 @@
   "go_home": "Go Home",
   "logo": "Logo",
   "page_not_found_title": "Error 404 - Page Not Found",
-  "no_internet_connection_notice": "Can not connect to {{value}} because there is no internet connection"
+  "no_internet_connection_notice": "Can not connect to {{value}} because there is no internet connection",
+
+  "email": "Email",
+  "login_link_sent_msg": "A login link has been sent to <b>{{value}}</b>, click on it to login",
+  "login_link_sent_title": "Login link sent",
+  "login_error_title": "Error - Unable to login",
+  "ok": "Ok",
+  "unauthorized_login_error_msg": "Authorized personnel only",
+  "authorized_login_msg": "For authorized personnel's only",
+  "auth_title": "Login - {{value}}",
+  "invalid_email_msg": "Enter a valid email address"
 }
