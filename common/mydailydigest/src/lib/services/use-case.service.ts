@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { LanguageResourceService } from '@cccsharonparish/angular';
-import { GLOBAL_STRING_RESOURCE_KEY } from '../data/i18n/global-string-res-keys';
+import { environment } from '../environments';
 
 @Injectable({
   providedIn: 'root',
@@ -10,13 +10,11 @@ export class UseCaseService {
 
   getPageTitle(
     pageTitleKey: string,
-    appNameKey: string = GLOBAL_STRING_RESOURCE_KEY.APP_NAME
   ) {
-    const appName = this.languageService.getString(appNameKey);
     const pageTitle = this.languageService.getStringWithParameter(
       pageTitleKey,
       {
-        value: appName,
+        value: environment.appName,
       }
     );
     return pageTitle;

@@ -33,6 +33,7 @@ export class AppComponent
   deviceConnected: Signal<boolean | undefined>;
   KEY = APP_STRING_RESOURCE_KEY;
   isDarkMode = this.themeService.isDarkMode;
+  APP_NAME = environment.appName
 
   constructor() {
     super();

@@ -9,7 +9,7 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { NgOptimizedImage } from '@angular/common';
 import { AUTH_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
-import { REGEX } from '@cccsharonparish/mydailydigest';
+import { REGEX, UseCaseService } from '@cccsharonparish/mydailydigest';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AppStore } from 'common/mydailydigest/src/lib/app.store';
@@ -42,6 +42,7 @@ export class AuthComponent implements OnInit {
   private readonly languageResourceService = inject(LanguageResourceService);
   private readonly title = inject(Title);
   private readonly auth = inject(AUTH_TOKEN);
+  private readonly useCaseService = inject(UseCaseService);
 
   stringResources!: {
     login_error_title: string;
@@ -67,10 +68,7 @@ export class AuthComponent implements OnInit {
   }
 
   private setPageTitle() {
-    const pageTitle = this.languageResourceService.getStringWithParameter(
-      this.KEY.PAGE_TITLE,
-      { value: this.KEY.APP_NAME }
-    );
+    const pageTitle = this.useCaseService.getPageTitle(this.KEY.PAGE_TITLE);
     this.title.setTitle(pageTitle);
   }
 
