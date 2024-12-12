@@ -1,4 +1,4 @@
-<tui-root>
+<tui-root [attr.tuiTheme]="isDarkMode() ? 'dark' : null">
     <router-outlet></router-outlet>
 
     @if (!deviceConnected()) {

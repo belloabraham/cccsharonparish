@@ -1,7 +1,7 @@
-import { TuiRoot } from "@taiga-ui/core";
+import { TuiRoot } from '@taiga-ui/core';
 import { Component, inject, OnDestroy, OnInit, Signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Theme, ThemeService } from '@cccsharonparish/angular';
+import { ThemeService } from '@cccsharonparish/angular';
 import { Subscription } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
@@ -32,6 +32,7 @@ export class AppComponent
   private connectionStateUtil = inject(ConnectionStateUtil);
   deviceConnected: Signal<boolean | undefined>;
   KEY = APP_STRING_RESOURCE_KEY;
+  isDarkMode = this.themeService.isDarkMode;
 
   constructor() {
     super();
@@ -45,7 +46,10 @@ export class AppComponent
     const settingsTheme = this.themeService.getSettingsTheme(
       Settings.themeKey(environment.domain)
     );
-    const theme = settingsTheme ?? this.themeService.getDeviceTheme();
+    const theme =
+      settingsTheme === 'light' || settingsTheme === 'dark'
+        ? settingsTheme
+        : this.themeService.getDeviceTheme();
     this.themeService.setTheme(theme);
 
     this.themeChangeSubscription = this.themeService
