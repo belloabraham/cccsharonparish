@@ -20,9 +20,17 @@
           {
             "glob": "**/*",
             "input": "apps/admin.mydailydigest.me/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "node_modules/@taiga-ui/icons/src",
+            "output": "assets/taiga-ui/icons"
           }
         ],
-        "styles": ["apps/admin.mydailydigest.me/src/styles.scss"],
+        "styles": [
+          "apps/admin.mydailydigest.me/src/less/taiga-ui.less",
+          "apps/admin.mydailydigest.me/src/styles.scss"
+        ],
         "scripts": [],
         "stylePreprocessorOptions": {
           "includePaths": [

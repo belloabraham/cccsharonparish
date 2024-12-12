@@ -1,3 +1,4 @@
+import { NG_EVENT_PLUGINS } from '@taiga-ui/event-plugins';
 import {
   ApplicationConfig,
   isDevMode,
@@ -63,5 +64,6 @@ export const appConfig: ApplicationConfig = {
         subscriptSizing: 'dynamic',
       },
     },
+    NG_EVENT_PLUGINS,
   ],
 };

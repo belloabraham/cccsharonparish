@@ -1,3 +1,4 @@
+import { TuiRoot } from "@taiga-ui/core";
 import { Component, inject, OnDestroy, OnInit, Signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Theme, ThemeService } from '@cccsharonparish/angular';
@@ -16,7 +17,7 @@ import { environment } from '../environments/environment';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, NgIf, TranslocoModule],
+  imports: [RouterModule, NgIf, TranslocoModule, TuiRoot],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
