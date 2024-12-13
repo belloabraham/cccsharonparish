@@ -35,6 +35,7 @@ $form-field: mat.define-theme(
   @include mat.input-theme($app-theme);
   @include mat.icon-theme($app-theme);
   @include mat.form-field-density($form-field);
+  @include mat.progress-bar-theme($app-theme);
 }
 
 body {
@@ -49,4 +50,3 @@ body {
   background: var(--mat-sys-surface);
   color: var(--mat-sys-on-surface);
 }
-

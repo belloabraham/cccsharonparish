@@ -15,7 +15,8 @@
             }
         </mat-form-field>
 
-        <button (click)="onSubmit()" mat-flat-button class="login-btn mat-elevation-z1 w-100">{{t(KEY.LOGIN)}}</button>
+        <button [disabled]="isLoading()" (click)="onSubmit()" mat-flat-button
+            class="login-btn mat-elevation-z1 w-100">{{t(KEY.LOGIN)}}</button>
 
     </div>
 

@@ -14,10 +14,12 @@ import { ConnectionStateUtil } from '@cccsharonparish/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { APP_STRING_RESOURCE_KEY } from './i18n/app-string-res-keys';
 import { environment } from '../environments/environment';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { HttpRequestLoadingIndicatorService } from './services/http-request-loading-indicator.service';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, NgIf, TranslocoModule, TuiRoot],
+  imports: [RouterModule, NgIf, TranslocoModule, TuiRoot, MatProgressBarModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -30,10 +32,16 @@ export class AppComponent
   private readonly themeService = inject(ThemeService);
   themeChangeSubscription = Subscription.EMPTY;
   private connectionStateUtil = inject(ConnectionStateUtil);
+  private httpRequestLoadingIndicatorService = inject(
+    HttpRequestLoadingIndicatorService
+  );
+
   deviceConnected: Signal<boolean | undefined>;
+  isLoading = this.httpRequestLoadingIndicatorService.isLoading
+
   KEY = APP_STRING_RESOURCE_KEY;
   isDarkMode = this.themeService.isDarkMode;
-  APP_NAME = environment.appName
+  APP_NAME = environment.appName;
 
   constructor() {
     super();

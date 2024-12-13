@@ -17,10 +17,11 @@ import {
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
-import { provideHttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient } from '@angular/common/http';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { HttpLoadingRequestInterceptorsService } from './interceptors/http-loading-interceptors.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -64,6 +65,14 @@ export const appConfig: ApplicationConfig = {
         subscriptSizing: 'dynamic',
       },
     },
+
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpLoadingRequestInterceptorsService,
+      multi: true,
+    },
+
+    //Taiga UI
     NG_EVENT_PLUGINS,
   ],
 };

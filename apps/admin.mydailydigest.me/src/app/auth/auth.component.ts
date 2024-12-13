@@ -1,4 +1,4 @@
-import { Component, effect, inject, OnInit, signal } from '@angular/core';
+import { Component, effect, inject, OnInit } from '@angular/core';
 import { SharedModule } from '../shared';
 import {
   FormControl,
@@ -9,13 +9,20 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { NgOptimizedImage } from '@angular/common';
 import { AUTH_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
-import { REGEX, UseCaseService } from '@cccsharonparish/mydailydigest';
+import {
+  REGEX,
+  Settings,
+  UseCaseService,
+} from '@cccsharonparish/mydailydigest';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AppStore } from 'common/mydailydigest/src/lib/app.store';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { Title } from '@angular/platform-browser';
-import { AUTH_TOKEN } from '../services';
+import { AUTH_TOKEN, AuthError } from '../services';
+import { TuiAlertService } from '@taiga-ui/core';
+import { HttpRequestLoadingIndicatorService } from '../services/http-request-loading-indicator.service';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-auth',
@@ -43,6 +50,11 @@ export class AuthComponent implements OnInit {
   private readonly title = inject(Title);
   private readonly auth = inject(AUTH_TOKEN);
   private readonly useCaseService = inject(UseCaseService);
+  private readonly alertService = inject(TuiAlertService);
+  private httpRequestLoadingIndicatorService = inject(
+    HttpRequestLoadingIndicatorService
+  );
+  isLoading = this.httpRequestLoadingIndicatorService.isLoading;
 
   stringResources!: {
     login_error_title: string;
@@ -100,27 +112,29 @@ export class AuthComponent implements OnInit {
     }
 
     if (!this.auth.emailIsAuthorized(email)) {
-      // AlertDialog.error(
-      //   unAuthorizedLoginErrorMsg,
-      //   this.loginErrorTitle,
-      //   this.ok
-      // );
+      this.alertService
+        .open(this.stringResources.login_error_message, {
+          label: this.stringResources.login_error_title,
+          appearance: 'negative',
+        })
+        .subscribe();
     }
   }
 
   async sendSignInLinkTo(email: string) {
-    // const responsiveSvgSize = this.displayService.percentage * 60;
-    // Shield.standard(responsiveSvgSize);
-    // try {
-    //   await this.auth.sendSignInLinkTo(email);
-    //   localStorage.setItem(Preference.SIGN_IN_MAIL, email);
-    //   this.showMailSentSuccessAlert(email);
-    // } catch (error: any) {
-    //   const message = AuthError.message(error.code);
-    //   AlertDialog.error(message, this.loginErrorTitle, this.ok);
-    // } finally {
-    //   Shield.remove();
-    // }
+    try {
+      await this.auth.sendSignInLinkTo(email);
+      localStorage.setItem(Settings.loginEmailKey(environment.domain), email);
+      this.showMailSentSuccessAlert(email);
+    } catch (error: any) {
+      const message = AuthError.message(error.code);
+      this.alertService
+        .open(message, {
+          label: this.stringResources.login_error_title,
+          appearance: 'negative',
+        })
+        .subscribe();
+    }
   }
 
   private showMailSentSuccessAlert(email: string) {
@@ -136,8 +150,11 @@ export class AuthComponent implements OnInit {
       link_sent_message: message,
     };
 
-    // AlertDialog.success(message, title, this.ok, {
-    //   plainText: false,
-    // });
+    this.alertService
+      .open(message, {
+        label: this.stringResources.link_sent_message,
+        appearance: 'positive',
+      })
+      .subscribe();
   }
 }
