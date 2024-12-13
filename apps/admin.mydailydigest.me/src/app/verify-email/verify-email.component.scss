@@ -1,3 +1,12 @@
 .verify-email {
   background-color: var(--bootstrap-light);
 }
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.login-form-container,.title {
+  width: 18rem;
+}
