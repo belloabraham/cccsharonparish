@@ -15,7 +15,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { APP_STRING_RESOURCE_KEY } from './i18n/app-string-res-keys';
 import { environment } from '../environments/environment';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { HttpRequestProgressIndicatorService } from './services/http-request-progress-indicator.service';
+import { HttpRequestProgressIndicatorService } from './services';
 
 @Component({
   standalone: true,

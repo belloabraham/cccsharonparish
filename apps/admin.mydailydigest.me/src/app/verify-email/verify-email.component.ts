@@ -17,7 +17,7 @@ import { REGEX, ROUTE, Settings } from '@cccsharonparish/mydailydigest';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { TuiAlertService } from '@taiga-ui/core';
-import { HttpRequestProgressIndicatorService } from '../services/http-request-progress-indicator.service';
+import { HttpRequestProgressIndicatorService } from '../services';
 @Component({
   selector: 'app-verify-email',
   imports: [
@@ -100,8 +100,8 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
 
   onSubmit() {
     if (this.emailFC.valid) {
-      const email = this.emailFC.value?.trim();
-      this.verifyEmail(email!, (error) => {
+      const email = this.emailFC.value!.trim();
+      this.verifyEmail(email, (error) => {
         const message = AuthError.message(error.code);
         this.alertService
           .open(message, {

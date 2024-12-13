@@ -16,7 +16,7 @@ import { AppStore } from 'common/mydailydigest/src/lib/app.store';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { AUTH_TOKEN, AuthError } from '../services';
 import { TuiAlertService } from '@taiga-ui/core';
-import { HttpRequestProgressIndicatorService } from '../services/http-request-progress-indicator.service';
+import { HttpRequestProgressIndicatorService } from '../services';
 import { environment } from '../../environments/environment';
 
 @Component({
