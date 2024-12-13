@@ -1,5 +1,5 @@
 import { Component, effect, inject, OnInit } from '@angular/core';
-import { SharedModule } from '../shared';
+import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
 import {
   FormControl,
   FormGroup,
@@ -9,19 +9,14 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { NgOptimizedImage } from '@angular/common';
 import { AUTH_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
-import {
-  REGEX,
-  Settings,
-  UseCaseService,
-} from '@cccsharonparish/mydailydigest';
+import { REGEX, Settings } from '@cccsharonparish/mydailydigest';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { AppStore } from 'common/mydailydigest/src/lib/app.store';
 import { LanguageResourceService } from '@cccsharonparish/angular';
-import { Title } from '@angular/platform-browser';
 import { AUTH_TOKEN, AuthError } from '../services';
 import { TuiAlertService } from '@taiga-ui/core';
-import { HttpRequestLoadingIndicatorService } from '../services/http-request-loading-indicator.service';
+import { HttpRequestProgressIndicatorService } from '../services/http-request-progress-indicator.service';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -30,15 +25,17 @@ import { environment } from '../../environments/environment';
     SharedModule,
     ReactiveFormsModule,
     NgOptimizedImage,
-    MatButtonModule,
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
   ],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss',
+  providers: [
+    { provide: PAGE_TITLE_KEY, useValue: AUTH_STRING_RESOURCE_KEY.PAGE_TITLE },
+  ],
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent extends CommonComponent implements OnInit {
   KEY = AUTH_STRING_RESOURCE_KEY;
   emailFC = new FormControl<string | null>(null, {
     validators: [Validators.required, Validators.pattern(REGEX.EMAIL)],
@@ -47,14 +44,12 @@ export class AuthComponent implements OnInit {
   form!: FormGroup;
   private readonly appStore = inject(AppStore);
   private readonly languageResourceService = inject(LanguageResourceService);
-  private readonly title = inject(Title);
   private readonly auth = inject(AUTH_TOKEN);
-  private readonly useCaseService = inject(UseCaseService);
   private readonly alertService = inject(TuiAlertService);
-  private httpRequestLoadingIndicatorService = inject(
-    HttpRequestLoadingIndicatorService
+  private httpRequestProgressIndicatorService = inject(
+    HttpRequestProgressIndicatorService
   );
-  isLoading = this.httpRequestLoadingIndicatorService.isLoading;
+  isLoading = this.httpRequestProgressIndicatorService.isLoading;
 
   stringResources!: {
     login_error_title: string;
@@ -65,9 +60,9 @@ export class AuthComponent implements OnInit {
   };
 
   constructor() {
+    super();
     effect(() => {
       if (this.appStore.language().loaded) {
-        this.setPageTitle();
         this.loadStringResource();
       }
     });
@@ -77,11 +72,6 @@ export class AuthComponent implements OnInit {
     this.form = new FormGroup({
       email: this.emailFC,
     });
-  }
-
-  private setPageTitle() {
-    const pageTitle = this.useCaseService.getPageTitle(this.KEY.PAGE_TITLE);
-    this.title.setTitle(pageTitle);
   }
 
   loadStringResource() {
@@ -106,9 +96,9 @@ export class AuthComponent implements OnInit {
     }
   }
 
-  private async sendLoginLinkTo(email: string) {
+  private sendLoginLinkTo(email: string) {
     if (this.auth.emailIsAuthorized(email)) {
-      await this.sendSignInLinkTo(email);
+      this.sendSignInLinkTo(email);
     }
 
     if (!this.auth.emailIsAuthorized(email)) {
@@ -121,20 +111,22 @@ export class AuthComponent implements OnInit {
     }
   }
 
-  async sendSignInLinkTo(email: string) {
-    try {
-      await this.auth.sendSignInLinkTo(email);
-      localStorage.setItem(Settings.loginEmailKey(environment.domain), email);
-      this.showMailSentSuccessAlert(email);
-    } catch (error: any) {
-      const message = AuthError.message(error.code);
-      this.alertService
-        .open(message, {
-          label: this.stringResources.login_error_title,
-          appearance: 'negative',
-        })
-        .subscribe();
-    }
+  sendSignInLinkTo(email: string) {
+    this.auth.sendSignInLinkTo(email).subscribe({
+      next: () => {
+        localStorage.setItem(Settings.loginEmailKey(environment.domain), email);
+        this.showMailSentSuccessAlert(email);
+      },
+      error: (error) => {
+        const message = AuthError.message(error.code);
+        this.alertService
+          .open(message, {
+            label: this.stringResources.login_error_title,
+            appearance: 'negative',
+          })
+          .subscribe();
+      },
+    });
   }
 
   private showMailSentSuccessAlert(email: string) {
@@ -151,9 +143,10 @@ export class AuthComponent implements OnInit {
     };
 
     this.alertService
-      .open(message, {
-        label: this.stringResources.link_sent_message,
+      .open(this.stringResources.link_sent_message, {
+        label: this.stringResources.link_sent_title,
         appearance: 'positive',
+        autoClose: 6000,
       })
       .subscribe();
   }

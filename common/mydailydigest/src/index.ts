@@ -3,7 +3,6 @@ export * from './lib/data';
 export * from './lib/app.component';
 export * from './lib/environments';
 export * from './lib/utils';
-export * from './lib/services';
 
 
 

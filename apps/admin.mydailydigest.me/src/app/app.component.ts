@@ -15,7 +15,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { APP_STRING_RESOURCE_KEY } from './i18n/app-string-res-keys';
 import { environment } from '../environments/environment';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { HttpRequestLoadingIndicatorService } from './services/http-request-loading-indicator.service';
+import { HttpRequestProgressIndicatorService } from './services/http-request-progress-indicator.service';
 
 @Component({
   standalone: true,
@@ -33,11 +33,11 @@ export class AppComponent
   themeChangeSubscription = Subscription.EMPTY;
   private connectionStateUtil = inject(ConnectionStateUtil);
   private httpRequestLoadingIndicatorService = inject(
-    HttpRequestLoadingIndicatorService
+    HttpRequestProgressIndicatorService
   );
 
   deviceConnected: Signal<boolean | undefined>;
-  isLoading = this.httpRequestLoadingIndicatorService.isLoading
+  isLoading = this.httpRequestLoadingIndicatorService.isLoading;
 
   KEY = APP_STRING_RESOURCE_KEY;
   isDarkMode = this.themeService.isDarkMode;

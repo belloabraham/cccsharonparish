@@ -1,1 +1,24 @@
-<p>verify-email works!</p>
+<div class="verify-email flex flex-col justify-center items-center gap-4">
+
+    <div *transloco="let t" class="auth flex flex-col justify-center items-center gap-10">
+
+        <h3 class="title text-center">{{t(KEY.EMAIL_VERIFICATION_TITLE)}}</h3>
+
+        <div [formGroup]="form" class="flex flex-col gap-3 login-form-container">
+
+            <mat-form-field>
+                <mat-label>{{t(KEY.EMAIL)}}</mat-label>
+                <input matInput formControlName="email" placeholder="name@example.com">
+                @if (this.emailFC.invalid) {
+                <mat-error>{{t(KEY.INVALID_EMAIL_MGS)}}</mat-error>
+                }
+            </mat-form-field>
+
+            <button [disabled]="isLoading()" (click)="onSubmit()" mat-flat-button
+                class="login-btn mat-elevation-z1 w-100">{{t(KEY.VERIFY_EMAIL)}}</button>
+
+        </div>
+
+    </div>
+
+</div>

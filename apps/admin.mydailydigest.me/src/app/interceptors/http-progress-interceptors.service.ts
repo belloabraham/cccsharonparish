@@ -7,12 +7,12 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
-import { HttpRequestLoadingIndicatorService } from '../services/http-request-loading-indicator.service';
+import { HttpRequestProgressIndicatorService } from '../services/http-request-progress-indicator.service';
 
 @Injectable()
-export class HttpLoadingRequestInterceptorsService implements HttpInterceptor {
+export class HttpProgressInterceptorService implements HttpInterceptor {
   constructor(
-    private httpRequestLoadingIndicatorService: HttpRequestLoadingIndicatorService
+    private httpRequestLoadingIndicatorService: HttpRequestProgressIndicatorService
   ) {}
 
   intercept(

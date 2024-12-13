@@ -21,7 +21,7 @@ import { HTTP_INTERCEPTORS, provideHttpClient } from '@angular/common/http';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
-import { HttpLoadingRequestInterceptorsService } from './interceptors/http-loading-interceptors.service';
+import { HttpProgressInterceptorService } from './interceptors/http-progress-interceptors.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -68,7 +68,7 @@ export const appConfig: ApplicationConfig = {
 
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: HttpLoadingRequestInterceptorsService,
+      useClass: HttpProgressInterceptorService,
       multi: true,
     },
 

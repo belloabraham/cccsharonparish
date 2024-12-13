@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { HttpLoadingRequestInterceptorsService } from './http-loading-interceptors.service';
+import { HttpProgressInterceptorService } from './http-progress-interceptors.service';
 
 describe('LoadingInterceptorsService', () => {
-  let service: HttpLoadingRequestInterceptorsService;
+  let service: HttpProgressInterceptorService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(HttpLoadingRequestInterceptorsService);
+    service = TestBed.inject(HttpProgressInterceptorService);
   });
 
   it('should be created', () => {

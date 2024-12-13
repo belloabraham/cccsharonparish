@@ -6,7 +6,7 @@ import { map, scan, startWith } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
-export class HttpRequestLoadingIndicatorService {
+export class HttpRequestProgressIndicatorService {
   private requestSubject = new Subject<boolean>();
 
   isLoading = toSignal(

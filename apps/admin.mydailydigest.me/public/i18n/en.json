@@ -14,5 +14,9 @@
   "unauthorized_login_error_msg": "Authorized personnel only",
   "authorized_login_msg": "For authorized personnel's only",
   "auth_title": "Login - {{value}}",
-  "invalid_email_msg": "Enter a valid email address"
+  "invalid_email_msg": "Enter a valid email address",
+
+  "verify_email": "Verify Email",
+  "verify_email_title": "Verify Email - {{value}}",
+  "email_verification_title": "Let's Confirm Your Email"
 }

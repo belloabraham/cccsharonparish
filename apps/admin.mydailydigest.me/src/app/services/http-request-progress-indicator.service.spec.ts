@@ -1,13 +1,14 @@
+
 import { TestBed } from '@angular/core/testing';
 
-import { HttpRequestLoadingService } from './http-request-loading-indicator.service';
+import { HttpRequestProgressIndicatorService } from './http-request-progress-indicator.service';
 
 describe('HttpRequestLoadingService', () => {
-  let service: HttpRequestLoadingService;
+  let service: HttpRequestProgressIndicatorService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(HttpRequestLoadingService);
+    service = TestBed.inject(HttpRequestProgressIndicatorService);
   });
 
   it('should be created', () => {

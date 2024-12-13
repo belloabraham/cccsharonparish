@@ -1,4 +1,4 @@
-import { Route } from '@angular/router';
+import { Route, Router } from '@angular/router';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { AuthComponent } from './auth/auth.component';
 import { map } from 'rxjs';
@@ -46,6 +46,23 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       import('./dashboard/dashboard.routes').then(
         (mod) => mod.DASHBOARD_ROUTES
+      ),
+  },
+  {
+    path: ROUTE.VERIFY_EMAIL,
+    canMatch: [
+      (router: Router) =>
+        inject(AUTH_TOKEN)
+          .getAuthSate$()
+          .pipe(
+            map((userIsAuthenticated) =>
+              userIsAuthenticated ? router.createUrlTree([ROUTE.ROOT]) : true
+            )
+          ),
+    ],
+    loadComponent: () =>
+      import('./verify-email/verify-email.component').then(
+        (mod) => mod.VerifyEmailComponent
       ),
   },
   {
