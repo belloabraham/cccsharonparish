@@ -7,24 +7,26 @@ import {
   AUTH_TOKEN,
   CLOUD_STORAGE_TOKEN,
   CloudStorageService,
+  FirestoreService,
 } from './services';
 import { DashboardService } from './dashboard/dashboard.service';
+import { REMOTE_DATA_TOKEN } from './services/data/remote/remote-data.token';
 
 export const appRoutes: Route[] = [
-  {
-    path: ROUTE.ROOT,
-    pathMatch: 'full',
-    canMatch: [
-      //Match route if authenticated user does not exist
-      () =>
-        inject(AUTH_TOKEN)
-          .getAuthSate$()
-          .pipe(
-            map((userIsAuthenticated) => (userIsAuthenticated ? false : true))
-          ),
-    ],
-    component: AuthComponent,
-  },
+  // {
+  //   path: ROUTE.ROOT,
+  //   pathMatch: 'full',
+  //   canMatch: [
+  //     //Match route if authenticated user does not exist
+  //     () =>
+  //       inject(AUTH_TOKEN)
+  //         .getAuthSate$()
+  //         .pipe(
+  //           map((userIsAuthenticated) => (userIsAuthenticated ? false : true))
+  //         ),
+  //   ],
+  //   component: AuthComponent,
+  // },
   {
     path: ROUTE.ROOT,
     providers: [
@@ -32,17 +34,21 @@ export const appRoutes: Route[] = [
         provide: CLOUD_STORAGE_TOKEN,
         useClass: CloudStorageService,
       },
+      {
+        provide: REMOTE_DATA_TOKEN,
+        useFactory: () => new FirestoreService(),
+      },
       DashboardService,
     ],
-    canMatch: [
-      //Match route only if authenticated user exist
-      () =>
-        inject(AUTH_TOKEN)
-          .getAuthSate$()
-          .pipe(
-            map((userIsAuthenticated) => (userIsAuthenticated ? true : false))
-          ),
-    ],
+    // canMatch: [
+    //   //Match route only if authenticated user exist
+    //   () =>
+    //     inject(AUTH_TOKEN)
+    //       .getAuthSate$()
+    //       .pipe(
+    //         map((userIsAuthenticated) => (userIsAuthenticated ? true : false))
+    //       ),
+    // ],
     loadChildren: () =>
       import('./dashboard/dashboard.routes').then(
         (mod) => mod.DASHBOARD_ROUTES
