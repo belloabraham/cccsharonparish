@@ -22,9 +22,10 @@ import {
   querySnapshotToArrayOfType,
 } from './utils';
 import { Observable } from 'rxjs';
+import { IRemoteData } from '../remote-data.interface';
 
 @Injectable()
-export class FirestoreService {
+export class FirestoreService implements IRemoteData {
   private firestore = inject(Firestore);
 
   getALiveDocumentData<T>(
@@ -215,14 +216,21 @@ export class FirestoreService {
     collection: string,
     pathSegment: string[],
     docIds: string[]
-  ) {
+  ): Observable<void> {
     const batch = writeBatch(this.firestore);
     for (let index = 0; index < docIds.length; index++) {
       const pathSegmentWithId = pathSegment.concat([docIds[index]]);
       const docRef = doc(this.firestore, collection, ...pathSegmentWithId);
       batch.delete(docRef);
     }
-    return batch.commit();
+
+    return new Observable((observer) => {
+      batch
+        .commit()
+        .then(() => observer.next())
+        .catch((error) => observer.next(error))
+        .finally(() => observer.complete());
+    });
   }
 
   deleteADocumentFrom(
@@ -257,9 +265,14 @@ export class FirestoreService {
     pathSegment: string[],
     field: string | FieldPath,
     fieldValue: unknown
-  ) {
+  ): Observable<void> {
     const docRef = doc(this.firestore, collection, ...pathSegment);
-    return updateDoc(docRef, field, fieldValue);
+    return new Observable((observer) => {
+      updateDoc(docRef, field, fieldValue)
+        .then(() => observer.next())
+        .catch((error) => observer.next(error))
+        .finally(() => observer.complete());
+    });
   }
 
   updateAllDocumentDataIn<T>(
@@ -268,13 +281,20 @@ export class FirestoreService {
     field: string | FieldPath,
     fieldValue: unknown,
     docIds: string[]
-  ) {
+  ): Observable<void> {
     const batch = writeBatch(this.firestore);
     for (let index = 0; index < docIds.length; index++) {
       const pathSegmentWithId = pathSegment.concat([docIds[index]]);
       const docRef = doc(this.firestore, collection, ...pathSegmentWithId);
       batch.update(docRef, field, fieldValue);
     }
-    return batch.commit();
+
+    return new Observable((observer) => {
+      batch
+        .commit()
+        .then(() => observer.next())
+        .catch((error) => observer.next(error))
+        .finally(() => observer.complete());
+    });
   }
 }
