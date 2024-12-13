@@ -52,7 +52,7 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
     HttpRequestProgressIndicatorService
   );
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
-  
+
   private signInMail = localStorage.getItem(
     Settings.loginEmailKey(environment.domain)
   );
@@ -71,6 +71,10 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.form = new FormGroup({
+      email: this.emailFC,
+    });
+
     if (this.signInMail) {
       this.verifyEmail(this.signInMail);
     }
