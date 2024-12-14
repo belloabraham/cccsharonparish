@@ -1,2 +1,12 @@
-<p>dashboard works!</p>
-<router-outlet></router-outlet>
+<div class="dashboard-root">
+    <header tuiNavigationHeader>Header content</header>
+    <div class="flex">
+        <aside [tuiNavigationAside]="true">
+            Sidebar content
+        </aside>
+        <main tuiNavigationMain>
+            <nav [style.position]="'sticky'" tuiNavigationNav>Breadcrumbs, tabs, buttons</nav>
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>
