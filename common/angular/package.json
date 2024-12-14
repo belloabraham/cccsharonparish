@@ -2,8 +2,8 @@
   "name": "@cccsharonparish/angular",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^19.0.1",
-    "@angular/core": "^19.0.1"
+    "@angular/common": "^19.0.3",
+    "@angular/core": "^19.0.3"
   },
   "sideEffects": false
 }
