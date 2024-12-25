@@ -28,7 +28,7 @@
           }
         ],
         "styles": [
-          "apps/admin.mydailydigest.me/src/less/taiga-ui.less",
+          "apps/admin.mydailydigest.me/src/less/index.less",
           "apps/admin.mydailydigest.me/src/styles.scss"
         ],
         "scripts": [],
