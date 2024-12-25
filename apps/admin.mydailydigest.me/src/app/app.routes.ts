@@ -21,7 +21,9 @@ export const appRoutes: Route[] = [
       () =>
         inject(AUTH_TOKEN)
           .getAuthSate$()
-          .pipe(map((user) => (user === null ? true : false))),
+          .pipe(
+            map((userIsAuthenticated) => (userIsAuthenticated ? false : true))
+          ),
     ],
     component: AuthComponent,
   },
@@ -96,7 +98,6 @@ export const appRoutes: Route[] = [
     loadComponent: () =>
       import('./sign-up/sign-up.component').then((mod) => mod.SignUpComponent),
   },
-
   {
     path: '**',
     loadComponent: () =>
