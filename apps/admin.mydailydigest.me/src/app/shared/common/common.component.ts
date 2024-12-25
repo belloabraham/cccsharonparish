@@ -11,12 +11,12 @@ import { LanguageResourceService } from '@cccsharonparish/angular';
 export class CommonComponent {
   private readonly title = inject(Title);
   private readonly languageService = inject(LanguageResourceService);
-  private readonly _appStore = inject(AppStore);
+  readonly appStore = inject(AppStore);
   private readonly pageTitleKey = inject(PAGE_TITLE_KEY);
 
   constructor() {
     effect(() => {
-      if (this._appStore.language().loaded) {
+      if (this.appStore.language().loaded) {
         this.setPageTitle(this.pageTitleKey);
       }
     });

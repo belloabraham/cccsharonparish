@@ -18,5 +18,14 @@
 
   "verify_email": "Verify Email",
   "verify_email_title": "Verify Email - {{value}}",
-  "email_verification_title": "Let's Confirm Your Email"
+  "email_verification_title": "Let's Confirm Your Email",
+
+  "dashboard_title": "Dashboard - {{value}}",
+
+  "sign_up_title": "Sign Up - {{value}}",
+  "sign_up": "Sign up",
+  "whats_app": "WhatsApp",
+  "last_name": "Last name",
+  "first_name": "First name",
+  "phone_number": "Phone number"
 }

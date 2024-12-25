@@ -1,7 +1,6 @@
 import { Component, effect, inject, OnInit } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AppStore } from 'common/mydailydigest/src/lib/app.store';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
@@ -45,7 +44,6 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
   form!: FormGroup;
   private readonly auth = inject(AUTH_TOKEN);
   private readonly router = inject(Router);
-  private readonly appStore = inject(AppStore);
   private readonly alertService = inject(TuiAlertService);
   private readonly languageResourceService = inject(LanguageResourceService);
   private httpRequestProgressIndicatorService = inject(

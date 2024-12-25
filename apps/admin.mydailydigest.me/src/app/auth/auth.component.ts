@@ -12,7 +12,6 @@ import { AUTH_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { REGEX, Settings } from '@cccsharonparish/mydailydigest';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { AppStore } from 'common/mydailydigest/src/lib/app.store';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { AUTH_TOKEN, AuthError } from '../services';
 import { TuiAlertService } from '@taiga-ui/core';
@@ -42,7 +41,6 @@ export class AuthComponent extends CommonComponent implements OnInit {
     updateOn: 'blur',
   });
   form!: FormGroup;
-  private readonly appStore = inject(AppStore);
   private readonly languageResourceService = inject(LanguageResourceService);
   private readonly auth = inject(AUTH_TOKEN);
   private readonly alertService = inject(TuiAlertService);
