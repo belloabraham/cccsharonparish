@@ -42,6 +42,7 @@ export const appRoutes: Route[] = [
     ],
     canMatch: [
       //Match route only if authenticated user exist
+      //TODO Check if user data exist in auth object, if not redirect to sign up component
       () =>
         inject(AUTH_TOKEN)
           .getAuthSate$()
@@ -71,6 +72,23 @@ export const appRoutes: Route[] = [
         (mod) => mod.VerifyEmailComponent
       ),
   },
+  {
+    path: ROUTE.SIGN_UP,
+ /* TODO
+ canMatch: [
+      (router: Router) =>
+        inject(AUTH_TOKEN)
+          .getAuthSate$()
+          .pipe(
+            map((userIsAuthenticated) =>
+              userIsAuthenticated ? router.createUrlTree([ROUTE.ROOT]) : true
+            )
+          ),
+    ], */
+    loadComponent: () =>
+      import('./sign-up/sign-up.component').then((mod) => mod.SignUpComponent),
+  },
+
   {
     path: '**',
     loadComponent: () =>
