@@ -21,9 +21,7 @@ export const appRoutes: Route[] = [
       () =>
         inject(AUTH_TOKEN)
           .getAuthSate$()
-          .pipe(
-            map((userIsAuthenticated) => (userIsAuthenticated ? false : true))
-          ),
+          .pipe(map((user) => (user === null ? true : false))),
     ],
     component: AuthComponent,
   },
@@ -41,13 +39,19 @@ export const appRoutes: Route[] = [
       DashboardService,
     ],
     canMatch: [
-      //Match route only if authenticated user exist
-      //TODO Check if user data exist in auth object, if not redirect to sign up component
-      () =>
+      (router: Router) =>
         inject(AUTH_TOKEN)
           .getAuthSate$()
           .pipe(
-            map((userIsAuthenticated) => (userIsAuthenticated ? true : false))
+            map((user) => {
+              if (user === null) {
+                return router.createUrlTree([ROUTE.ROOT]);
+              }
+              if (user?.displayName === null) {
+                return router.createUrlTree([ROUTE.SIGN_UP]);
+              }
+              return true;
+            })
           ),
     ],
     loadChildren: () =>
@@ -62,8 +66,10 @@ export const appRoutes: Route[] = [
         inject(AUTH_TOKEN)
           .getAuthSate$()
           .pipe(
-            map((userIsAuthenticated) =>
-              userIsAuthenticated ? router.createUrlTree([ROUTE.ROOT]) : true
+            map((user) =>
+              user?.emailVerified === true
+                ? router.createUrlTree([ROUTE.ROOT])
+                : true
             )
           ),
     ],
@@ -74,17 +80,19 @@ export const appRoutes: Route[] = [
   },
   {
     path: ROUTE.SIGN_UP,
- /* TODO
- canMatch: [
+    canMatch: [
       (router: Router) =>
         inject(AUTH_TOKEN)
           .getAuthSate$()
           .pipe(
-            map((userIsAuthenticated) =>
-              userIsAuthenticated ? router.createUrlTree([ROUTE.ROOT]) : true
-            )
+            map((user) => {
+              if (user === null || user?.displayName === null) {
+                return router.createUrlTree([ROUTE.ROOT]);
+              }
+              return true;
+            })
           ),
-    ], */
+    ],
     loadComponent: () =>
       import('./sign-up/sign-up.component').then((mod) => mod.SignUpComponent),
   },

@@ -44,6 +44,7 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
   form!: FormGroup;
   private readonly auth = inject(AUTH_TOKEN);
   private readonly router = inject(Router);
+  private readonly authService = inject(AUTH_TOKEN);
   private readonly alertService = inject(TuiAlertService);
   private readonly languageResourceService = inject(LanguageResourceService);
   private httpRequestProgressIndicatorService = inject(
@@ -76,6 +77,20 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
     if (this.signInMail) {
       this.verifyEmail(this.signInMail);
     }
+    this.onAuthStateChanged()
+  }
+
+  onAuthStateChanged() {
+    this.authService.getAuthSate$().subscribe({
+      next: (user) => {
+        if (user?.displayName) {
+          this.router.navigate([ROUTE.ROOT]);
+        }
+        if (user) {
+          this.router.navigate([ROUTE.SIGN_UP]);
+        }
+      },
+    });
   }
 
   private loadStringResource() {
