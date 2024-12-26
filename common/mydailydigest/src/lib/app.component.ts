@@ -11,7 +11,7 @@ export class BaseAppComponent implements OnInit {
   private readonly matIconRegistry = inject(MatIconRegistry);
 
   constructor() {
-    this.matIconRegistry.registerFontClassAlias('sdd', 'sdd-icons');
+    this.matIconRegistry.setDefaultFontSetClass('sdd-icons');
   }
 
   ngOnInit(): void {

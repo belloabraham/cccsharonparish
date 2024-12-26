@@ -13,7 +13,7 @@ import { DashboardService } from './dashboard/dashboard.service';
 import { REMOTE_DATA_TOKEN } from './services/data/remote/remote-data.token';
 
 export const appRoutes: Route[] = [
-  {
+/*   {
     path: ROUTE.ROOT,
     pathMatch: 'full',
     canMatch: [
@@ -26,7 +26,7 @@ export const appRoutes: Route[] = [
           ),
     ],
     component: AuthComponent,
-  },
+  }, */
   {
     path: ROUTE.ROOT,
     providers: [
@@ -40,22 +40,22 @@ export const appRoutes: Route[] = [
       },
       DashboardService,
     ],
-    canMatch: [
-      (router: Router) =>
-        inject(AUTH_TOKEN)
-          .getAuthSate$()
-          .pipe(
-            map((user) => {
-              if (user === null) {
-                return router.createUrlTree([ROUTE.ROOT]);
-              }
-              if (user?.displayName === null) {
-                return router.createUrlTree([ROUTE.SIGN_UP]);
-              }
-              return true;
-            })
-          ),
-    ],
+    // canMatch: [
+    //   (router: Router) =>
+    //     inject(AUTH_TOKEN)
+    //       .getAuthSate$()
+    //       .pipe(
+    //         map((user) => {
+    //           if (user === null) {
+    //             return router.createUrlTree([ROUTE.ROOT]);
+    //           }
+    //           if (user?.displayName === null) {
+    //             return router.createUrlTree([ROUTE.SIGN_UP]);
+    //           }
+    //           return true;
+    //         })
+    //       ),
+    // ],
     loadChildren: () =>
       import('./dashboard/dashboard.routes').then(
         (mod) => mod.DASHBOARD_ROUTES

@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dark-mode-fill:before {
+  content: '\e900';
+}
 .facebook-fill:before {
   content: '\e900';
 }

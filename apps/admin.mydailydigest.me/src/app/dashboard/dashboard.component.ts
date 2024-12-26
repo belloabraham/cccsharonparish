@@ -1,12 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TuiNavigation } from '@taiga-ui/layout';
 import { CommonComponent, PAGE_TITLE_KEY } from '../shared';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
+import { DashboardService } from './dashboard.service';
+import { AsyncPipe, NgIf } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [RouterOutlet, TuiNavigation],
+  imports: [
+    RouterOutlet,
+    TuiNavigation,
+    AsyncPipe,
+    NgIf,
+    MatButtonModule,
+    MatIconModule,
+  ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
   providers: [
@@ -16,4 +27,11 @@ import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
     },
   ],
 })
-export class DashboardComponent extends CommonComponent {}
+export class DashboardComponent extends CommonComponent {
+  readonly dashboardService = inject(DashboardService);
+  minimizeSideNav = signal(false);
+
+  toggleTheme() {
+    this.dashboardService.toggleTheme();
+  }
+}
