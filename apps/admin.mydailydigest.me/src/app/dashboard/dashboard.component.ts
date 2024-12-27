@@ -8,6 +8,10 @@ import { AsyncPipe, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { environment } from '../../environments/environment';
+import { TuiDrawer } from '@taiga-ui/kit';
+	import {
+    TuiPopup
+  } from '@taiga-ui/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,10 +19,12 @@ import { environment } from '../../environments/environment';
     RouterOutlet,
     TuiNavigation,
     AsyncPipe,
+    TuiPopup,
     NgIf,
     MatButtonModule,
     MatIconModule,
     NgOptimizedImage,
+    TuiDrawer,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
@@ -32,7 +38,12 @@ import { environment } from '../../environments/environment';
 export class DashboardComponent extends CommonComponent {
   readonly dashboardService = inject(DashboardService);
   minimizeSideNav = signal(false);
-  appName = environment.appName
+  appName = environment.appName;
+  readonly openSideDrawer = signal(false);
+
+  onClose() {
+    this.openSideDrawer.set(false);
+  }
 
   toggleTheme() {
     this.dashboardService.toggleTheme();

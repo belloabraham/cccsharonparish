@@ -5,6 +5,24 @@
   grid-template-rows: auto 1fr;
 }
 
+.mobile-header {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.5rem;
+  right: 0.5rem;
+  h4 {
+    font-size: 1.2rem;
+  }
+}
+
+.drawer {
+  top: 0;
+  border-radius: 0;
+  inline-size: 20rem;
+  background: var(--tui-theme-color);
+  color: white;
+}
+
 .page-title {
   display: grid;
   grid-template-columns: auto auto;

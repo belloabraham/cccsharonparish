@@ -2,7 +2,7 @@
     <header tuiNavigationHeader class="flex justify-between">
 
         <div class="lg:hidden">
-            <button class="!text-white" mat-icon-button>
+            <button (click)="openSideDrawer.set(true)" class="!text-white" mat-icon-button>
                 <mat-icon fontIcon="hamburger-fill"></mat-icon>
             </button>
         </div>
@@ -13,8 +13,6 @@
             </div>
             <h4 class="hidden lg:block">{{appName}}</h4>
         </div>
-
-
 
         <div class="grid grid-flow-col gap-4 items-center">
 
@@ -29,16 +27,30 @@
             </div>
         </div>
     </header>
-    <div class="flex">
 
+    <div class="flex">
         <aside *ngIf="(dashboardService.breakpoint$ | async) === 'desktopLarge'" [tuiNavigationAside]="true">
             Sidebar content
         </aside>
+
+
+        <tui-drawer *tuiPopup="openSideDrawer()" direction="left" class="drawer relative" [overlay]="true"
+            (click.self)="onClose()">
+            <div class="flex gap-4 justify-between items-center mobile-header">
+                <h4>{{appName}}</h4>
+
+                <button (click)="openSideDrawer.set(true)" class="!text-white" mat-icon-button>
+                    <mat-icon fontIcon="hamburger-fill"></mat-icon>
+                </button>
+
+            </div>
+
+        </tui-drawer>
+
         <main tuiNavigationMain>
             <nav [style.position]="'sticky'" tuiNavigationNav>Breadcrumbs, tabs, buttons</nav>
 
             <router-outlet></router-outlet>
-
         </main>
     </div>
 </div>
