@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.hamburger-fill:before {
+  content: '\e905';
+}
 .dark-mode-fill:before {
   content: '\e900';
 }

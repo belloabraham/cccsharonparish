@@ -2,19 +2,27 @@
     <header tuiNavigationHeader class="flex justify-between">
 
         <div class="lg:hidden">
-            Menu
-        </div>
-
-        <div>
-            Logo
-        </div>
-
-        <div class="flex gap-4">
-
-            <button class="!text-white" (click)="toggleTheme()" mat-icon-button>
-                <mat-icon fontIcon="dark-mode-fill"></mat-icon>
+            <button class="!text-white" mat-icon-button>
+                <mat-icon fontIcon="hamburger-fill"></mat-icon>
             </button>
+        </div>
 
+        <div class="page-title">
+            <div class="logo flex justify-center items-center">
+                <img width="80" height="75" ngSrc="/images/global/logo.png" priority>
+            </div>
+            <h4 class="hidden lg:block">{{appName}}</h4>
+        </div>
+
+
+
+        <div class="grid grid-flow-col gap-4 items-center">
+
+            <div class="hidden lg:block">
+                <button class="!text-white" (click)="toggleTheme()" mat-icon-button>
+                    <mat-icon fontIcon="dark-mode-fill"></mat-icon>
+                </button>
+            </div>
 
             <div>
                 User

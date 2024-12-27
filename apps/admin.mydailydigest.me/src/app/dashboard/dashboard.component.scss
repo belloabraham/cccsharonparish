@@ -4,3 +4,24 @@
   width: 100dvw;
   grid-template-rows: auto 1fr;
 }
+
+.page-title {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.5rem;
+  align-items: center;
+  h4 {
+    font-size: 1.4rem;
+  }
+}
+
+.logo {
+  border-radius: 0.7rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  img {
+    width: 2.3rem;
+    height: auto;
+  }
+}
