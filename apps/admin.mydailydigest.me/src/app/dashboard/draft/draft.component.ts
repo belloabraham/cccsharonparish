@@ -5,7 +5,7 @@ import { SharedModule } from '../../shared';
   selector: 'app-draft',
   imports: [SharedModule],
   templateUrl: './draft.component.html',
-  styleUrl: './draft.component.css'
+  styleUrl: './draft.component.scss'
 })
 export class DraftComponent {
 
