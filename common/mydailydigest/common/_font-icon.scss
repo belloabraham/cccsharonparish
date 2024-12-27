@@ -25,6 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.pages-outline:before {
+  content: '\e906';
+}
+.writing-outline:before {
+  content: '\e907';
+}
+.settings-outline:before {
+  content: '\e908';
+}
+.close-fill:before {
+  content: '\e909';
+}
+.bookshelf-fill:before {
+  content: '\e90a';
+}
+.add-note-outline:before {
+  content: '\e90b';
+}
 .hamburger-fill:before {
   content: '\e905';
 }

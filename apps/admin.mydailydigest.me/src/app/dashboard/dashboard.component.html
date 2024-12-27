@@ -38,11 +38,9 @@
             (click.self)="onClose()">
             <div class="flex gap-4 justify-between items-center mobile-header">
                 <h4>{{appName}}</h4>
-
-                <button (click)="openSideDrawer.set(true)" class="!text-white" mat-icon-button>
-                    <mat-icon fontIcon="hamburger-fill"></mat-icon>
+                <button (click)="openSideDrawer.set(false)" class="!text-white" mat-icon-button>
+                    <mat-icon fontIcon="close-fill"></mat-icon>
                 </button>
-
             </div>
 
         </tui-drawer>
