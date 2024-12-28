@@ -2,8 +2,8 @@
   "name": "@cccsharonparish/mydailydigest",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^19.0.3",
-    "@angular/core": "^19.0.3"
+    "@angular/common": "^19.0.5",
+    "@angular/core": "^19.0.5"
   },
   "sideEffects": false
 }

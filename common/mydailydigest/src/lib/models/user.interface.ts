@@ -6,9 +6,8 @@ export interface IUser {
   phone: string;
   firstName: string;
   lastName: string;
-  imageUrl: string;
+  imageUrl: string | null;
   createdOn: Date;
   updatedOn: Date;
   userType: UserType;
 }
-
