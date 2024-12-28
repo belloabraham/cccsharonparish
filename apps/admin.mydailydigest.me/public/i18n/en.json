@@ -27,5 +27,6 @@
   "whats_app": "WhatsApp",
   "last_name": "Last name",
   "first_name": "First name",
-  "phone_number": "Phone number"
+  "phone_number": "Phone number",
+  "signup_header": "You are new here, tell us about you."
 }

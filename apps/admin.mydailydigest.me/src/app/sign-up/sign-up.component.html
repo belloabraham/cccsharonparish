@@ -1,1 +1,23 @@
-<p>sign-up works!</p>
+<div *transloco="let t" class="signup">
+
+    <div class="p-4 py-8">
+        <div class="logo d-flex justify-content-center align-items-center bg-white">
+            <a [routerLink]="ROUTE.ROOT"><img class="scale" width="50" height="40" alt="Logo"
+                    ngSrc="images/global/logo.png" priority>
+            </a>
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center form px-4">
+        <h5>{{t(KEY.SIGN_UP_HEADER)}}</h5>
+
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+    </div>
+
+
+
+
+
+</div>
