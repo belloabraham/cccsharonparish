@@ -9,18 +9,41 @@
     </div>
 
     <div class="flex flex-col items-center form px-4">
-        <div class="flex gap-4 flex-col">
+
+        <div>
             <h5>{{t(KEY.SIGN_UP_HEADER)}},</h5>
-            <h5>{{t(KEY.TELL_US_ABOUT)}}</h5>
+            <h5 >{{t(KEY.TELL_US_ABOUT)}}</h5>
+
+            <form [formGroup]="form">
+                <div class="name flex flex-col lg:flex-row  gap-4 items-start">
+                    <mat-form-field>
+                        <mat-label>{{t(KEY.FIRST_NAME)}}</mat-label>
+                        <input matInput formControlName="firstName" [placeholder]="t(KEY.FIRST_NAME)">
+                        @if (this.firstNameFC.invalid) {
+                        <mat-error>{{t(KEY.INVALID_NAME_MSG)}}</mat-error>
+                        }
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>{{t(KEY.LAST_NAME)}}</mat-label>
+                        <input matInput formControlName="lastName" [placeholder]="t(KEY.LAST_NAME)">
+                        @if (this.lastNameFC.invalid) {
+                        <mat-error>{{t(KEY.INVALID_NAME_MSG)}}</mat-error>
+                        }
+                    </mat-form-field>
+                </div>
+
+                <div>
+
+                </div>
+
+            </form>
+
         </div>
 
 
-        <!-- <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </div> -->
+
     </div>
-
-
 
 
 

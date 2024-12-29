@@ -29,5 +29,6 @@
   "first_name": "First name",
   "phone_number": "Phone number",
   "signup_header": "Hi there 👋🏽, you are new here",
-  "tell_us_about_u": "Tell us about you."
+  "tell_us_about_u": "Tell us about you.",
+  "invalid_name_msg": "Enter a valid name"
 }

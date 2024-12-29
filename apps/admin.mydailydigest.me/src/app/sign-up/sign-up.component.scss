@@ -1,3 +1,5 @@
+@use 'common/mixins/breakpoint';
+
 .signup {
   min-height: 100%;
 }
@@ -16,5 +18,18 @@
   h5 {
     font-weight: 500;
     font-size: 2rem;
+    line-height: 2.34rem;
+  }
+  form {
+    margin-top: 3rem;
+  }
+}
+
+.name {
+  mat-form-field {
+    width: 90%;
+    @include breakpoint.large {
+      width: 15rem;
+    }
   }
 }

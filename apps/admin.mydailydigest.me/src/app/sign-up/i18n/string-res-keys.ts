@@ -7,4 +7,5 @@ export const SIGNUP_STRING_RESOURCE_KEY = {
   WHATS_APP: 'whats_app',
   SIGN_UP_HEADER: 'signup_header',
   TELL_US_ABOUT: 'tell_us_about_u',
+  INVALID_NAME_MSG: 'invalid_name_msg',
 };
