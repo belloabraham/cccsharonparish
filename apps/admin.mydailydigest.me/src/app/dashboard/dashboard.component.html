@@ -29,8 +29,45 @@
     </header>
 
     <div class="flex">
-        <aside *ngIf="(dashboardService.breakpoint$ | async) === 'desktopLarge'" [tuiNavigationAside]="true">
-            Sidebar content
+        <aside class="!pt-8 !pb-4 aside" *ngIf="(dashboardService.breakpoint$ | async) === 'desktopLarge'"
+            [tuiNavigationAside]="expandSideNav()">
+
+            <button tuiAsideItem matRipple>
+                <mat-icon fontIcon="bookshelf-fill"></mat-icon>
+                Published
+            </button>
+
+            <button tuiAsideItem matRipple>
+                <mat-icon fontIcon="add-note-outline"></mat-icon>
+                Add New
+            </button>
+
+            <button tuiAsideItem matRipple>
+                <mat-icon fontIcon="pages-outline"></mat-icon>
+                Draft
+            </button>
+
+
+            <footer>
+
+                <button tuiAsideItem matRipple type="button">
+                    <mat-icon fontIcon="writing-outline"></mat-icon>
+                    Editors
+                </button>
+                <button tuiAsideItem matRipple type="button">
+                    <mat-icon fontIcon="settings-outline"></mat-icon>
+                    Settings
+                </button>
+
+                <button tuiAsideItem matRipple type="button"
+                    [iconStart]="expandSideNav() ? '@tui.chevron-left' : '@tui.chevron-right'"
+                    (click)="expandSideNav.set(!expandSideNav())">
+                    {{ expandSideNav() ? 'Collapse' : 'Expand' }}
+                </button>
+            </footer>
+
+
+
         </aside>
 
 
