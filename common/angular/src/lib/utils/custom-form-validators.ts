@@ -11,20 +11,16 @@ export class CustomValidator {
     };
   }
 
-  static validPhoneNumber(
-    error: Record<string, string>
-  ): ValidatorFn {
+  static validPhoneNumber(error: Record<string, string>): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
-      if (!control.value) {
+      const value = control.value;
+      if (!value) {
         return error;
       }
 
-      if (!control.value) {
-        return parsePhoneNumber('08026687216', {
-          defaultCallingCode: '+234',
-        })?.isValid
-          ? null
-          : error;
+      if (value) {
+        const number = parsePhoneNumber(value);
+        return number?.isValid ? null : error;
       }
 
       return null;

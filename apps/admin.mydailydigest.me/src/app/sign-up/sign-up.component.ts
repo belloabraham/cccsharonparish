@@ -113,7 +113,9 @@ export class SignUpComponent extends CommonComponent {
     });
   }
 
-  onSubmit() {}
+  onSubmit() {
+    this.form.markAllAsTouched();
+  }
 
   //TODO update user id token information with data from the user
 }

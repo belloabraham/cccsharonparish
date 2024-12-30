@@ -41,7 +41,7 @@
                     </tui-textfield>
                     <tui-error formControlName="phone" [error]="[] | tuiFieldError | async"/>
                 </div>
-                
+
                 <div class="text-end mt-4 submit">
                     <button [disabled]="isLoading()" (click)="onSubmit()" mat-flat-button
                         class="login-btn mat-elevation-z1">{{t(KEY.SUBMIT)}}</button>
