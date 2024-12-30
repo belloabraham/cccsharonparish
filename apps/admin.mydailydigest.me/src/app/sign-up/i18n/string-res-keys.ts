@@ -10,4 +10,5 @@ export const SIGNUP_STRING_RESOURCE_KEY = {
   INVALID_NAME_MSG: 'invalid_name_msg',
   SUBMIT: 'submit',
   SELECT_A_COUNTRY: 'select_a_country',
+  INVALID_PHONE_MSG: 'invalid_phone_msg',
 };

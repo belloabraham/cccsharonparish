@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, effect, inject, OnInit } from '@angular/core';
 import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
 import { SIGNUP_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { RouterLink } from '@angular/router';
@@ -24,7 +24,10 @@ import { getCountries } from 'libphonenumber-js';
 import { defer } from 'rxjs';
 import { TuiInputPhoneInternational } from '@taiga-ui/experimental';
 import { TuiDropdownMobile } from '@taiga-ui/addon-mobile';
-import { CustomValidator } from '@cccsharonparish/angular';
+import {
+  CustomValidator,
+  LanguageResourceService,
+} from '@cccsharonparish/angular';
 
 @Component({
   selector: 'app-sign-up',
@@ -59,13 +62,14 @@ import { CustomValidator } from '@cccsharonparish/angular';
     }),
   ],
 })
-export class SignUpComponent extends CommonComponent implements OnInit {
+export class SignUpComponent extends CommonComponent {
   ROUTE = ROUTE;
   KEY = SIGNUP_STRING_RESOURCE_KEY;
   protected readonly countries = getCountries();
   protected countryIsoCode: any = 'NG';
   protected value = '';
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
+  private readonly languageResourceService = inject(LanguageResourceService);
 
   form!: FormGroup<SignUpForm>;
 
@@ -79,20 +83,29 @@ export class SignUpComponent extends CommonComponent implements OnInit {
     updateOn: 'blur',
   });
 
-  phoneNoFC = new FormControl<string | null>(null, {
-    validators: [
-      CustomValidator.validPhoneNumber('', {
-        other: 'Enter a valid phone number',
-      }),
-    ],
-    updateOn: 'blur',
-  });
+  phoneNoFC!: FormControl<string | null>;
 
-  ngOnInit(): void {
-    this.initForm();
+  constructor() {
+    super();
+    effect(() => {
+      if (this.appStore.language().loaded) {
+        this.initForm();
+      }
+    });
   }
 
   initForm() {
+    this.phoneNoFC = new FormControl<string | null>(null, {
+      validators: [
+        CustomValidator.validPhoneNumber({
+          other: this.languageResourceService.getString(
+            this.KEY.INVALID_PHONE_MSG
+          ),
+        }),
+      ],
+      updateOn: 'blur',
+    });
+
     this.form = new FormGroup({
       firstName: this.firstNameFC,
       lastName: this.lastNameFC,

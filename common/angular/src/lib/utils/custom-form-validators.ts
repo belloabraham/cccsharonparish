@@ -12,7 +12,6 @@ export class CustomValidator {
   }
 
   static validPhoneNumber(
-    CountryCode: string,
     error: Record<string, string>
   ): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {

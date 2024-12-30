@@ -32,5 +32,6 @@
   "tell_us_about_u": "Tell us about you.",
   "invalid_name_msg": "Enter a valid name",
   "submit": "Submit",
-  "select_a_country":"Select a country"
+  "select_a_country": "Select a country",
+  "invalid_phone_msg": "Enter a valid phone number"
 }
