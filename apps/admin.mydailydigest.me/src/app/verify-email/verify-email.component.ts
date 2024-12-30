@@ -14,8 +14,9 @@ import {
 import { AUTH_TOKEN, AuthError } from '../services';
 import { REGEX, ROUTE, Settings } from '@cccsharonparish/mydailydigest';
 import { environment } from '../../environments/environment';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { TuiAlertService } from '@taiga-ui/core';
+import { NgOptimizedImage } from '@angular/common';
 @Component({
   selector: 'app-verify-email',
   imports: [
@@ -24,6 +25,8 @@ import { TuiAlertService } from '@taiga-ui/core';
     MatButtonModule,
     MatInputModule,
     SharedModule,
+    RouterLink,
+    NgOptimizedImage
   ],
   templateUrl: './verify-email.component.html',
   styleUrl: './verify-email.component.scss',
@@ -47,6 +50,8 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
   private readonly alertService = inject(TuiAlertService);
   private readonly languageResourceService = inject(LanguageResourceService);
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
+
+  ROUTE = ROUTE;
 
   private signInMail = localStorage.getItem(
     Settings.loginEmailKey(environment.domain)
@@ -73,7 +78,7 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
     if (this.signInMail) {
       this.verifyEmail(this.signInMail);
     }
-    this.onAuthStateChanged()
+    this.onAuthStateChanged();
   }
 
   onAuthStateChanged() {

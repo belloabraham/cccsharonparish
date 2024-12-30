@@ -1,4 +1,13 @@
-<div *transloco="let t" class="verify-email h-dvh w-dvw flex flex-col justify-center items-center gap-10">
+<div *transloco="let t" class="verify-email h-dvh w-dvw flex flex-col justify-center items-center gap-8">
+
+
+    <div class="p-4 pb-8">
+        <div class="logo flex justify-center  items-center bg-white">
+            <a [routerLink]="ROUTE.ROOT"><img class="scale" width="50" height="40" alt="Logo"
+                    ngSrc="images/global/logo.png" priority>
+            </a>
+        </div>
+    </div>
 
     <h3 class="title text-center">{{t(KEY.EMAIL_VERIFICATION_TITLE)}}</h3>
 
