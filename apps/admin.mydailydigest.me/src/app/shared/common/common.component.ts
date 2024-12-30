@@ -4,6 +4,7 @@ import { AppStore } from 'common/mydailydigest/src/lib/app.store';
 import { PAGE_TITLE_KEY } from '../injection.token';
 import { environment } from '../../../environments/environment';
 import { LanguageResourceService } from '@cccsharonparish/angular';
+import { HttpRequestProgressIndicatorService } from '../../services';
 
 @Component({
   template: ``,
@@ -13,6 +14,9 @@ export class CommonComponent {
   private readonly languageService = inject(LanguageResourceService);
   readonly appStore = inject(AppStore);
   private readonly pageTitleKey = inject(PAGE_TITLE_KEY);
+  readonly httpRequestProgressIndicatorService = inject(
+    HttpRequestProgressIndicatorService
+  );
 
   constructor() {
     effect(() => {

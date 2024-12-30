@@ -30,5 +30,7 @@
   "phone_number": "Phone number",
   "signup_header": "Hi there 👋🏽, you are new here",
   "tell_us_about_u": "Tell us about you.",
-  "invalid_name_msg": "Enter a valid name"
+  "invalid_name_msg": "Enter a valid name",
+  "submit": "Submit",
+  "select_a_country":"Select a country"
 }

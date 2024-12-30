@@ -1,7 +1,7 @@
 <div *transloco="let t" class="signup">
 
     <div class="p-4 py-8">
-        <div class="logo d-flex justify-content-center align-items-center bg-white">
+        <div class="logo flex justify-center  items-center  bg-white">
             <a [routerLink]="ROUTE.ROOT"><img class="scale" width="50" height="40" alt="Logo"
                     ngSrc="images/global/logo.png" priority>
             </a>
@@ -12,10 +12,10 @@
 
         <div>
             <h5>{{t(KEY.SIGN_UP_HEADER)}},</h5>
-            <h5 >{{t(KEY.TELL_US_ABOUT)}}</h5>
+            <h5>{{t(KEY.TELL_US_ABOUT)}}</h5>
 
             <form [formGroup]="form">
-                <div class="name flex flex-col lg:flex-row  gap-4 items-start">
+                <div class="name flex flex-col lg:flex-row gap-4 items-start">
                     <mat-form-field>
                         <mat-label>{{t(KEY.FIRST_NAME)}}</mat-label>
                         <input matInput formControlName="firstName" [placeholder]="t(KEY.FIRST_NAME)">
@@ -33,8 +33,18 @@
                     </mat-form-field>
                 </div>
 
-                <div>
-
+                <div class="mt-4 phone-control">
+                    <tui-textfield [tuiDropdownMobile]="t(KEY.SELECT_A_COUNTRY)">
+                        <label tuiLabel>{{t(KEY.PHONE_NUMBER)}} (WhatsApp)</label>
+                        <input tuiInputPhoneInternational [countries]="(countries | tuiSortCountries | async) || []"
+                            [countrySearch]="true" [(countryIsoCode)]="countryIsoCode" formControlName="phone" />
+                    </tui-textfield>
+                    <tui-error formControlName="phone" [error]="[] | tuiFieldError | async"/>
+                </div>
+                
+                <div class="text-end mt-4 submit">
+                    <button [disabled]="isLoading()" (click)="onSubmit()" mat-flat-button
+                        class="login-btn mat-elevation-z1">{{t(KEY.SUBMIT)}}</button>
                 </div>
 
             </form>

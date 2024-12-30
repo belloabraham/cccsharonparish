@@ -16,7 +16,6 @@ import { REGEX, ROUTE, Settings } from '@cccsharonparish/mydailydigest';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { TuiAlertService } from '@taiga-ui/core';
-import { HttpRequestProgressIndicatorService } from '../services';
 @Component({
   selector: 'app-verify-email',
   imports: [
@@ -47,9 +46,6 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
   private readonly authService = inject(AUTH_TOKEN);
   private readonly alertService = inject(TuiAlertService);
   private readonly languageResourceService = inject(LanguageResourceService);
-  private httpRequestProgressIndicatorService = inject(
-    HttpRequestProgressIndicatorService
-  );
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
 
   private signInMail = localStorage.getItem(

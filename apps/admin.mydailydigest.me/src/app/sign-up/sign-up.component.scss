@@ -23,13 +23,29 @@
   form {
     margin-top: 3rem;
   }
-}
-
-.name {
+  
+  .phone-control,
+  .submit,
   mat-form-field {
     width: 90%;
-    @include breakpoint.large {
+  }
+
+  @include breakpoint.large {
+    .phone-control,
+    .submit {
+      width: 31rem;
+    }
+    mat-form-field {
       width: 15rem;
+    }
+  }
+}
+
+.submit {
+  button {
+    width: 70%;
+    @include breakpoint.medium {
+      width: 60%;
     }
   }
 }

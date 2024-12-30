@@ -3,21 +3,28 @@ import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
 import { SIGNUP_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { RouterLink } from '@angular/router';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
-import { NgOptimizedImage } from '@angular/common';
+import { NgOptimizedImage, AsyncPipe } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import {
   FormControl,
   FormGroup,
+  FormsModule,
   ReactiveFormsModule,
-  Validators,
 } from '@angular/forms';
 import { SignUpForm } from './sign-up-form';
-import { TuiInputPhoneInternational } from '@taiga-ui/kit';
-// import { TuiInputPhoneModule } from '@taiga-ui/legacy';
-
-
+import {
+  tuiInputPhoneInternationalOptionsProvider,
+  TuiSortCountriesPipe,
+  TuiFieldErrorPipe,
+} from '@taiga-ui/kit';
+import { TuiTextfield, TuiError } from '@taiga-ui/core';
+import { getCountries } from 'libphonenumber-js';
+import { defer } from 'rxjs';
+import { TuiInputPhoneInternational } from '@taiga-ui/experimental';
+import { TuiDropdownMobile } from '@taiga-ui/addon-mobile';
+import { CustomValidator } from '@cccsharonparish/angular';
 
 @Component({
   selector: 'app-sign-up',
@@ -29,8 +36,14 @@ import { TuiInputPhoneInternational } from '@taiga-ui/kit';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    TuiInputPhoneInternational
-
+    FormsModule,
+    TuiInputPhoneInternational,
+    TuiSortCountriesPipe,
+    AsyncPipe,
+    TuiTextfield,
+    TuiDropdownMobile,
+    TuiError,
+    TuiFieldErrorPipe,
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss',
@@ -39,26 +52,39 @@ import { TuiInputPhoneInternational } from '@taiga-ui/kit';
       provide: PAGE_TITLE_KEY,
       useValue: SIGNUP_STRING_RESOURCE_KEY.PAGE_TITLE,
     },
+    tuiInputPhoneInternationalOptionsProvider({
+      metadata: defer(async () =>
+        import('libphonenumber-js/max/metadata').then((m) => m.default)
+      ),
+    }),
   ],
 })
 export class SignUpComponent extends CommonComponent implements OnInit {
   ROUTE = ROUTE;
   KEY = SIGNUP_STRING_RESOURCE_KEY;
+  protected readonly countries = getCountries();
+  protected countryIsoCode: any = 'NG';
+  protected value = '';
+  isLoading = this.httpRequestProgressIndicatorService.isLoading;
 
   form!: FormGroup<SignUpForm>;
 
   firstNameFC = new FormControl<string | null>(null, {
-    validators: [Validators.required, Validators.minLength(2)],
+    validators: [CustomValidator.requiredString()],
     updateOn: 'blur',
   });
 
   lastNameFC = new FormControl<string | null>(null, {
-    validators: [Validators.required, Validators.minLength(2)],
+    validators: [CustomValidator.requiredString()],
     updateOn: 'blur',
   });
 
   phoneNoFC = new FormControl<string | null>(null, {
-    validators: [Validators.required],
+    validators: [
+      CustomValidator.validPhoneNumber('', {
+        other: 'Enter a valid phone number',
+      }),
+    ],
     updateOn: 'blur',
   });
 

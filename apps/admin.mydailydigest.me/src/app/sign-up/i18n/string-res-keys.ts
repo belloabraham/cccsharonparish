@@ -8,4 +8,6 @@ export const SIGNUP_STRING_RESOURCE_KEY = {
   SIGN_UP_HEADER: 'signup_header',
   TELL_US_ABOUT: 'tell_us_about_u',
   INVALID_NAME_MSG: 'invalid_name_msg',
+  SUBMIT: 'submit',
+  SELECT_A_COUNTRY: 'select_a_country',
 };

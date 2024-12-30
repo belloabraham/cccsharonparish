@@ -1,0 +1,12 @@
+.phone-control {
+  .t-ipi-select {
+    position: absolute !important;
+    border-radius: inherit !important;
+    border-start-end-radius: 0 !important;
+    border-end-end-radius: 0 !important;
+  }
+}
+
+[tuiAppearance][data-appearance='textfield'] {
+  --t-shadow: none;
+}

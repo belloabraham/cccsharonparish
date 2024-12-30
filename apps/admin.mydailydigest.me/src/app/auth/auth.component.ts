@@ -15,7 +15,6 @@ import { MatInputModule } from '@angular/material/input';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { AUTH_TOKEN, AuthError } from '../services';
 import { TuiAlertService } from '@taiga-ui/core';
-import { HttpRequestProgressIndicatorService } from '../services';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -44,9 +43,7 @@ export class AuthComponent extends CommonComponent implements OnInit {
   private readonly languageResourceService = inject(LanguageResourceService);
   private readonly auth = inject(AUTH_TOKEN);
   private readonly alertService = inject(TuiAlertService);
-  private httpRequestProgressIndicatorService = inject(
-    HttpRequestProgressIndicatorService
-  );
+
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
 
   stringResources!: {
