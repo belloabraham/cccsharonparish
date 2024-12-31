@@ -32,16 +32,15 @@
         <aside class="!pt-8 !pb-4 aside" *ngIf="(dashboardService.breakpoint$ | async) === 'desktopLarge'"
             [tuiNavigationAside]="expandSideNav()">
 
-            <button tuiAsideItem matRipple>
+            <a tuiAsideItem matRipple [routerLink]="[ROUTE.PUBLISHED]">
                 <mat-icon fontIcon="bookshelf-fill"></mat-icon>
-                Published
-            </button>
+                {{t(KEY.PUBLISHED)}}
+            </a>
 
             <tui-aside-group>
                 <button automation-id="setting" tuiAsideItem tuiChevron matRipple type="button">
                     <mat-icon fontIcon="add-note-outline"></mat-icon>
-
-                    Add New
+                    {{t(KEY.ADD_NEW)}}
                     <ng-template>
                         <button tuiAsideItem matRipple type="button" class="content">
                             Account
@@ -56,22 +55,23 @@
                 </button>
             </tui-aside-group>
 
-            <button tuiAsideItem matRipple>
+            <a [routerLink]="[ROUTE.DRAFT]" tuiAsideItem matRipple>
                 <mat-icon fontIcon="note-outline"></mat-icon>
-                Draft
-            </button>
+                {{t(KEY.DRAFT)}}
+            </a>
 
 
             <footer>
 
-                <button tuiAsideItem matRipple type="button">
+                <a [routerLink]="[ROUTE.EDITORS]" tuiAsideItem matRipple type="button">
                     <mat-icon fontIcon="spark-user-outline"></mat-icon>
-                    Editors
-                </button>
-                <button tuiAsideItem matRipple type="button">
+                    {{t(KEY.EDITORS)}}
+                </a>
+
+                <a [routerLink]="[ROUTE.SETTINGS]" tuiAsideItem matRipple type="button">
                     <mat-icon fontIcon="settings-outline"></mat-icon>
-                    Settings
-                </button>
+                    {{t(KEY.SETTINGS)}}
+                </a>
 
                 <button tuiAsideItem matRipple type="button" (click)="expandSideNav.set(!expandSideNav())">
                     <mat-icon [fontIcon]="expandSideNav() ? 'chevron-left-fill' : 'chevron-right-fill' "></mat-icon>

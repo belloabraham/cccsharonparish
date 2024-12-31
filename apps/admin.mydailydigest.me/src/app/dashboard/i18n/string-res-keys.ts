@@ -8,4 +8,5 @@ export const DASHBOARD_STRING_RESOURCE_KEY = {
   EDITORS: 'editors',
   EXPAND: 'expand',
   COLLAPSE: 'collapse',
+  PUBLISHED:'published'
 };

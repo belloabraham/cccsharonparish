@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { TuiNavigation } from '@taiga-ui/layout';
 import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
@@ -11,6 +11,7 @@ import { environment } from '../../environments/environment';
 import { TuiDrawer, TuiChevron } from '@taiga-ui/kit';
 import { TuiPopup } from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
+import { ROUTE } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-dashboard',
@@ -28,6 +29,7 @@ import { MatRippleModule } from '@angular/material/core';
     MatRippleModule,
     SharedModule,
     TuiChevron,
+    RouterLink,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
@@ -43,6 +45,8 @@ export class DashboardComponent extends CommonComponent {
   expandSideNav = signal(true);
   appName = environment.appName;
   readonly openSideDrawer = signal(false);
+  KEY = DASHBOARD_STRING_RESOURCE_KEY;
+  ROUTE = ROUTE;
 
   onClose() {
     this.openSideDrawer.set(false);

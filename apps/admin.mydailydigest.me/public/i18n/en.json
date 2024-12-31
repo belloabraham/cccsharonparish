@@ -26,6 +26,8 @@
   "editors": "Editors",
   "draft": "Draft",
   "settings": "Settings",
+  "published": "Published",
+  "add_new":"Add new",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",
