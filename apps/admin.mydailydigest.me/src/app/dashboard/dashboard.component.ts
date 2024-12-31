@@ -8,7 +8,7 @@ import { AsyncPipe, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { environment } from '../../environments/environment';
-import { TuiDrawer } from '@taiga-ui/kit';
+import { TuiDrawer, TuiChevron } from '@taiga-ui/kit';
 import { TuiPopup } from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
 
@@ -26,7 +26,8 @@ import { MatRippleModule } from '@angular/material/core';
     TuiDrawer,
     RouterLinkActive,
     MatRippleModule,
-    SharedModule
+    SharedModule,
+    TuiChevron,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',

@@ -37,10 +37,24 @@
                 Published
             </button>
 
-            <button tuiAsideItem matRipple>
-                <mat-icon fontIcon="add-note-outline"></mat-icon>
-                Add New
-            </button>
+            <tui-aside-group>
+                <button automation-id="setting" tuiAsideItem tuiChevron matRipple type="button">
+                    <mat-icon fontIcon="add-note-outline"></mat-icon>
+
+                    Add New
+                    <ng-template>
+                        <button tuiAsideItem matRipple type="button" class="content">
+                            Account
+                        </button>
+                        <button tuiAsideItem matRipple type="button" class="content">
+                            Notifications
+                        </button>
+                        <button tuiAsideItem matRipple type="button" class="content">
+                            Privacy
+                        </button>
+                    </ng-template>
+                </button>
+            </tui-aside-group>
 
             <button tuiAsideItem matRipple>
                 <mat-icon fontIcon="note-outline"></mat-icon>

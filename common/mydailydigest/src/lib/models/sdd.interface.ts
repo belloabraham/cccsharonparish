@@ -24,12 +24,13 @@ export type Language = {
 };
 
 type TextContent = {
-  title: string;
-  body: string;
+  topic: string;
+  message: string;
   bibleVerse: BibleVerseContent;
 };
 
 type BibleVerseContent = {
-  title: string;
-  body: string;
+  reference: string;
+  verses: string;
+  keyVerse: string;
 };
