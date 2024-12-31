@@ -19,12 +19,12 @@ export const appRoutes: Route[] = [
     pathMatch: 'full',
     canMatch: [
       //Match route if authenticated user does not exist
-      () =>
-        inject(AUTH_TOKEN)
-          .getAuthSate$()
-          .pipe(
-            map((userIsAuthenticated) => (userIsAuthenticated ? false : true))
-          ),
+      () => false,
+      // inject(AUTH_TOKEN)
+      //   .getAuthSate$()
+      //   .pipe(
+      //     map((userIsAuthenticated) => (userIsAuthenticated ? false : true))
+      //   ),
     ],
     component: AuthComponent,
   },
@@ -41,18 +41,18 @@ export const appRoutes: Route[] = [
       },
       DashboardService,
     ],
-    canMatch: [
-      (router: Router) => {
-        const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
-        if (user === null) {
-          return router.createUrlTree([ROUTE.ROOT]);
-        }
-        if (user?.displayName === null) {
-          return router.createUrlTree([ROUTE.SIGN_UP]);
-        }
-        return true;
-      },
-    ],
+    // canMatch: [
+    //   (router: Router) => {
+    //     const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
+    //     if (user === null) {
+    //       return router.createUrlTree([ROUTE.ROOT]);
+    //     }
+    //     if (user?.displayName === null) {
+    //       return router.createUrlTree([ROUTE.SIGN_UP]);
+    //     }
+    //     return true;
+    //   },
+    // ],
     loadChildren: () =>
       import('./dashboard/dashboard.routes').then(
         (mod) => mod.DASHBOARD_ROUTES
@@ -78,9 +78,9 @@ export const appRoutes: Route[] = [
     canMatch: [
       (router: Router) => {
         const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
-        // if (user === null || user?.displayName === null) {
-        //   return router.createUrlTree([ROUTE.ROOT]);
-        // }
+        if (user === null || user?.displayName === null) {
+          return router.createUrlTree([ROUTE.ROOT]);
+        }
         return true;
       },
     ],

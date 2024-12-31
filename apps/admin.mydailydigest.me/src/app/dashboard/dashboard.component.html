@@ -1,4 +1,4 @@
-<div class="dashboard-root">
+<div *transloco="let t" class="dashboard-root">
     <header tuiNavigationHeader class="flex justify-between">
 
         <div class="lg:hidden">
@@ -43,7 +43,7 @@
             </button>
 
             <button tuiAsideItem matRipple>
-                <mat-icon fontIcon="pages-outline"></mat-icon>
+                <mat-icon fontIcon="note-outline"></mat-icon>
                 Draft
             </button>
 
@@ -51,7 +51,7 @@
             <footer>
 
                 <button tuiAsideItem matRipple type="button">
-                    <mat-icon fontIcon="writing-outline"></mat-icon>
+                    <mat-icon fontIcon="spark-user-outline"></mat-icon>
                     Editors
                 </button>
                 <button tuiAsideItem matRipple type="button">
@@ -59,9 +59,9 @@
                     Settings
                 </button>
 
-                <button tuiAsideItem matRipple type="button"
-                    [iconStart]="expandSideNav() ? '@tui.chevron-left' : '@tui.chevron-right'"
-                    (click)="expandSideNav.set(!expandSideNav())">
+                <button tuiAsideItem matRipple type="button" (click)="expandSideNav.set(!expandSideNav())">
+                    <mat-icon [fontIcon]="expandSideNav() ? 'chevron-left-fill' : 'chevron-right-fill' "></mat-icon>
+
                     {{ expandSideNav() ? 'Collapse' : 'Expand' }}
                 </button>
             </footer>

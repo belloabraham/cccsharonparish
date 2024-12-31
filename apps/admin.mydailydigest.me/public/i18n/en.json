@@ -21,6 +21,11 @@
   "email_verification_title": "Let's Confirm Your Email",
 
   "dashboard_title": "Dashboard - {{value}}",
+  "collapse": "Collapse",
+  "expand": "Expand",
+  "editors": "Editors",
+  "draft": "Draft",
+  "settings": "Settings",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",

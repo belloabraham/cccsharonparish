@@ -1,7 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterLinkActive, RouterOutlet } from '@angular/router';
 import { TuiNavigation } from '@taiga-ui/layout';
-import { CommonComponent, PAGE_TITLE_KEY } from '../shared';
+import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { DashboardService } from './dashboard.service';
 import { AsyncPipe, NgIf, NgOptimizedImage } from '@angular/common';
@@ -25,7 +25,8 @@ import { MatRippleModule } from '@angular/material/core';
     NgOptimizedImage,
     TuiDrawer,
     RouterLinkActive,
-    MatRippleModule
+    MatRippleModule,
+    SharedModule
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',

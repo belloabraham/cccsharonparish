@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { SharedModule } from '../../shared';
 
 @Component({
   selector: 'app-settings',
-  imports: [],
+  imports: [SharedModule],
   templateUrl: './settings.component.html',
   styleUrl: './settings.component.scss'
 })

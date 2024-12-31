@@ -24,11 +24,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.chevron-left-fill:before {
+  content: '\e90c';
+}
+.chevron-right-fill:before {
+  content: '\e90d';
+}
+.spark-user-outline:before {
+  content: '\e90e';
+}
 .pages-outline:before {
   content: '\e906';
 }
 .writing-outline:before {
   content: '\e907';
+}
+.note-outline:before {
+  content: '\e906';
 }
 .settings-outline:before {
   content: '\e908';
