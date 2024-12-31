@@ -4,7 +4,7 @@ import {
   isDevMode,
   provideExperimentalZonelessChangeDetection,
 } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { getApp, initializeApp, provideFirebaseApp } from '@angular/fire/app';
@@ -25,7 +25,7 @@ import { HttpProgressInterceptorService } from './interceptors/http-progress-int
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(appRoutes),
+    provideRouter(appRoutes, withComponentInputBinding()),
     provideAnimationsAsync(),
     provideExperimentalZonelessChangeDetection(),
 

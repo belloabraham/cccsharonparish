@@ -25,7 +25,7 @@ export const DASHBOARD_ROUTES: Routes = [
           import('./draft/draft.component').then((mod) => mod.DraftComponent),
       },
       {
-        path: ROUTE.NEW,
+        path: `${ROUTE.NEW}:${ROUTE.PARAMS.LANGUAGE_CODE}`,
         loadComponent: () =>
           import('./new-content/new-content.component').then(
             (mod) => mod.NewContentComponent
