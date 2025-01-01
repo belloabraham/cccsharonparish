@@ -12,7 +12,7 @@ export interface ISpiritualDailyDigest extends Record<string, any> {
   updatedAt: Date; //'2024-12-13T12:00:00Z'; // Timestamp of the last update
 }
 
-type Content = {
+export type Content = {
   language: Language;
   text: TextContent;
   audioUrl: string;
@@ -23,13 +23,13 @@ export type Language = {
   label: string;
 };
 
-type TextContent = {
+export type TextContent = {
   topic: string;
   message: string;
   bibleVerse: BibleVerseContent;
 };
 
-type BibleVerseContent = {
+export type BibleVerseContent = {
   reference: string;
   verses: string;
   keyVerse: string;

@@ -7,10 +7,10 @@ import { SharedModule } from '../../shared';
   templateUrl: './new-content.component.html',
   styleUrl: './new-content.component.scss',
 })
-export class NewContentComponent implements OnInit {
-  languageCode = input.required<string>();
+export class NewContentComponent  {
+  languageCode = input.required<string>({
+    alias: 'languageCode',
+  });
 
-  ngOnInit(): void {
-    console.error(this.languageCode());
-  }
+
 }

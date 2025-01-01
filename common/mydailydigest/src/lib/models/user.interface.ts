@@ -1,4 +1,4 @@
-type UserType = 'Publisher' | 'Editor';
+export type UserType = 'Publisher' | 'Editor';
 
 export interface IUser {
   id: string;
