@@ -45,27 +45,35 @@ export class AppComponent
 
   constructor() {
     super();
-    this.loadAppTheme();
+    this.setAppTheme();
+    this.onDeviceThemeChanged();
     this.deviceConnected = toSignal(
       this.connectionStateUtil.observeDeviceInternetConnectionState(ROUTE.ROOT)
     );
   }
 
-  loadAppTheme() {
-    const settingsTheme = this.themeService.getSettingsTheme(
+  setAppTheme() {
+    const themeType = this.themeService.getThemeType(
       Settings.themeKey(environment.domain)
     );
-    const theme =
-      settingsTheme === 'light' || settingsTheme === 'dark'
-        ? settingsTheme
-        : this.themeService.getDeviceTheme();
-    this.themeService.setTheme(theme);
 
+    const theme = this.themeService.isAppTheme(themeType)
+      ? themeType
+      : this.themeService.getDeviceTheme();
+    this.themeService.setTheme(theme);
+  }
+
+  onDeviceThemeChanged() {
     this.themeChangeSubscription = this.themeService
       .onDeviceThemeChanged()
       .subscribe({
-        next: (theme) => {
-          this.themeService.setTheme(theme);
+        next: () => {
+          const themeType = this.themeService.getThemeType(
+            Settings.themeKey(environment.domain)
+          );
+          if (!this.themeService.isAppTheme(themeType)) {
+            this.themeService.setTheme(this.themeService.getDeviceTheme());
+          }
         },
       });
   }

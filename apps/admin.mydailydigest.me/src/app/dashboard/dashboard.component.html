@@ -23,7 +23,7 @@
 
                 <mat-menu #menu="matMenu">
                     <div class="menu">
-                        <button *ngFor="let theme of themes" mat-menu-item>{{t(theme)}}
+                        <button *ngFor="let theme of themes" (click)="setTheme(theme)" mat-menu-item>{{t(theme)}}
                         </button>
                     </div>
                 </mat-menu>

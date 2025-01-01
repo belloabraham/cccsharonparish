@@ -43,7 +43,8 @@ $form-field: mat.define-theme(
       container-shape: 15px,
       item-hover-state-layer-color: var(--mat-sys-surface-dim),
       container-color: var(--mat-sys-surface),
-      item-label-text-size: 1rem,
+      item-label-text-size: 0.9rem,
+      item-label-text-weight: 500,
     )
   );
 }

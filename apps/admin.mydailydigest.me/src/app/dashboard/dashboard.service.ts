@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { ThemeService } from '@cccsharonparish/angular';
+import { ThemeService, ThemeType } from '@cccsharonparish/angular';
 import { TuiBreakpointService } from '@taiga-ui/core';
 import { environment } from '../../environments/environment';
 import { Settings } from '@cccsharonparish/mydailydigest';
@@ -9,12 +9,18 @@ export class DashboardService {
   readonly breakpoint$ = inject(TuiBreakpointService);
   private readonly themeService = inject(ThemeService);
 
-  toggleTheme() {
-    const theme = this.themeService.isDarkMode() ? 'light' : 'dark';
+  setTheme(themeType: ThemeType) {
+    this.setThemeType(themeType);
+    const theme = this.themeService.isAppTheme(themeType)
+      ? themeType
+      : this.themeService.getDeviceTheme();
     this.themeService.setTheme(theme);
-    this.themeService.setSettingsTheme(
+  }
+
+  private setThemeType(themeType: ThemeType) {
+    this.themeService.setThemeType(
       Settings.themeKey(environment.domain),
-      theme
+      themeType
     );
   }
 }

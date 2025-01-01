@@ -2,6 +2,7 @@ import { Injectable, signal } from '@angular/core';
 import { Observable } from 'rxjs';
 
 export type Theme = 'light' | 'dark';
+export type ThemeType = Theme | 'device';
 
 @Injectable({
   providedIn: 'root',
@@ -15,30 +16,34 @@ export class ThemeService {
     this.isDarkMode.set(isDarkMode);
   }
 
+  isAppTheme(themeType: ThemeType | null) {
+    return themeType === 'light' || themeType === 'dark';
+  }
+
   getDeviceTheme(): Theme {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : 'light';
   }
 
-  getSettingsTheme(key: string) {
+  getThemeType(key: string) {
     const theme = localStorage.getItem(key);
     if (theme) {
-      return theme as Theme;
+      return theme as ThemeType;
     }
     return null;
   }
 
-  setSettingsTheme(key: string, theme: Theme) {
+  setThemeType(key: string, theme: ThemeType) {
     return localStorage.setItem(key, theme);
   }
 
-  onDeviceThemeChanged(): Observable<Theme> {
+  onDeviceThemeChanged(): Observable<void> {
     return new Observable((observer) => {
       window
         .matchMedia('(prefers-color-scheme: dark)')
         .addEventListener('change', (event) => {
-          observer.next(event.matches ? 'dark' : 'light');
+          observer.next();
         });
     });
   }

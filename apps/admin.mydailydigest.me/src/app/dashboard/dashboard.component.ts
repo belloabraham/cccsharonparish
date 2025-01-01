@@ -14,6 +14,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { Language, ROUTE } from '@cccsharonparish/mydailydigest';
 import { TuiItem } from '@taiga-ui/cdk';
 import { MatMenuModule } from '@angular/material/menu';
+import { ThemeType } from '@cccsharonparish/angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -57,7 +58,7 @@ export class DashboardComponent extends CommonComponent {
   KEY = DASHBOARD_STRING_RESOURCE_KEY;
   ROUTE = ROUTE;
 
-  themes = [this.KEY.LIGHT, this.KEY.DARK, this.KEY.DEVICE]
+  themes: any[] = [this.KEY.LIGHT, this.KEY.DARK, this.KEY.DEVICE];
 
   supportedLanguages = signal<Language[]>([
     {
@@ -85,7 +86,7 @@ export class DashboardComponent extends CommonComponent {
     this.openSideDrawer.set(false);
   }
 
-  toggleTheme() {
-    this.dashboardService.toggleTheme();
+  setTheme(themeType: ThemeType) {
+    this.dashboardService.setTheme(themeType);
   }
 }
