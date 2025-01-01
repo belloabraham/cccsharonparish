@@ -12,7 +12,8 @@ import { TuiDrawer, TuiChevron, TuiBreadcrumbs, TuiFade } from '@taiga-ui/kit';
 import { TuiLink, TuiPopup } from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
 import { Language, ROUTE } from '@cccsharonparish/mydailydigest';
-import { TuiItem, TuiRepeatTimes } from '@taiga-ui/cdk';
+import { TuiItem } from '@taiga-ui/cdk';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-dashboard',
@@ -37,6 +38,7 @@ import { TuiItem, TuiRepeatTimes } from '@taiga-ui/cdk';
     TuiFade,
     TuiLink,
     TuiItem,
+    MatMenuModule,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
@@ -54,6 +56,9 @@ export class DashboardComponent extends CommonComponent {
   readonly openSideDrawer = signal(false);
   KEY = DASHBOARD_STRING_RESOURCE_KEY;
   ROUTE = ROUTE;
+
+  themes = [this.KEY.LIGHT, this.KEY.DARK, this.KEY.DEVICE]
+
   supportedLanguages = signal<Language[]>([
     {
       label: 'Yoruba',

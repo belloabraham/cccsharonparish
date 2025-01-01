@@ -17,9 +17,17 @@
         <div class="grid grid-flow-col gap-4 items-center">
 
             <div class="hidden lg:block">
-                <button class="!text-white" (click)="toggleTheme()" mat-icon-button>
+                <button [matMenuTriggerFor]="menu" class="!text-white" mat-icon-button>
                     <mat-icon fontIcon="dark-mode-fill"></mat-icon>
                 </button>
+
+                <mat-menu #menu="matMenu">
+                    <div class="menu">
+                        <button *ngFor="let theme of themes" mat-menu-item>{{t(theme)}}
+                        </button>
+                    </div>
+                </mat-menu>
+
             </div>
 
             <div>
