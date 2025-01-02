@@ -41,8 +41,8 @@
 
                 <mat-menu #accountMenu="matMenu">
                     <div class="menu">
-                        <button mat-menu-item>{{t(KEY.PROFILE)}}
-                        </button>
+                        <a [routerLink]="ROUTE.PROFILE" mat-menu-item>{{t(KEY.PROFILE)}}
+                        </a>
                         <button (click)="logout()" mat-menu-item>{{t(KEY.LOGOUT)}}
                         </button>
                     </div>
