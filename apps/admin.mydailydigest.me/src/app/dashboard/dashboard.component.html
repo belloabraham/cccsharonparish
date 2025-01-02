@@ -32,12 +32,21 @@
 
             <div>
 
-                <button mat-button>
+                <button [matMenuTriggerFor]="accountMenu" mat-button>
                     <tui-avatar size="s"
                         [src]="'https://avatars.githubusercontent.com/u/11832552' | tuiFallbackSrc: '@tui.user' | async" />
 
                 </button>
 
+
+                <mat-menu #accountMenu="matMenu">
+                    <div class="menu">
+                        <button mat-menu-item>{{t(KEY.PROFILE)}}
+                        </button>
+                        <button mat-menu-item>{{t(KEY.LOGOUT)}}
+                        </button>
+                    </div>
+                </mat-menu>
             </div>
         </div>
     </header>

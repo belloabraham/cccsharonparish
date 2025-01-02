@@ -12,4 +12,6 @@ export const DASHBOARD_STRING_RESOURCE_KEY = {
   LIGHT: 'light',
   DARK: 'dark',
   DEVICE: 'device',
+  PROFILE: 'profile',
+  LOGOUT: 'logout',
 };
