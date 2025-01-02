@@ -3,11 +3,17 @@ import { ThemeService, ThemeType } from '@cccsharonparish/angular';
 import { TuiBreakpointService } from '@taiga-ui/core';
 import { environment } from '../../environments/environment';
 import { Settings } from '@cccsharonparish/mydailydigest';
+import { AuthService } from '../services';
 
 @Injectable()
 export class DashboardService {
   readonly breakpoint$ = inject(TuiBreakpointService);
   private readonly themeService = inject(ThemeService);
+  private readonly authService = inject(AuthService);
+
+  logout() {
+    return this.authService.signOut();
+  }
 
   setTheme(themeType: ThemeType) {
     this.setThemeType(themeType);

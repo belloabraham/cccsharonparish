@@ -39,6 +39,13 @@ export const DASHBOARD_ROUTES: Routes = [
           ),
       },
       {
+        path: ROUTE.PROFILE,
+        loadComponent: () =>
+          import('./profile/profile.component').then(
+            (mod) => mod.ProfileComponent
+          ),
+      },
+      {
         path: ROUTE.SETTINGS,
         loadComponent: () =>
           import('./settings/settings.component').then(

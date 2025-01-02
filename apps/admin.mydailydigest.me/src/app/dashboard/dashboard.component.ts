@@ -1,5 +1,10 @@
 import { Component, inject, signal } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import {
+  Router,
+  RouterLink,
+  RouterLinkActive,
+  RouterOutlet,
+} from '@angular/router';
 import { TuiNavigation } from '@taiga-ui/layout';
 import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
@@ -15,11 +20,7 @@ import {
   TuiFade,
   TuiAvatar,
 } from '@taiga-ui/kit';
-import {
-  TuiLink,
-  TuiPopup,
-  TuiFallbackSrcPipe,
-} from '@taiga-ui/core';
+import { TuiLink, TuiPopup, TuiFallbackSrcPipe } from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
 import { Language, ROUTE } from '@cccsharonparish/mydailydigest';
 import { TuiItem } from '@taiga-ui/cdk';
@@ -64,6 +65,8 @@ import { ThemeType } from '@cccsharonparish/angular';
 })
 export class DashboardComponent extends CommonComponent {
   readonly dashboardService = inject(DashboardService);
+  readonly router = inject(Router);
+
   expandSideNav = signal(true);
   appName = environment.appName;
   readonly openSideDrawer = signal(false);
@@ -93,6 +96,14 @@ export class DashboardComponent extends CommonComponent {
     'Repositories',
     'Taiga UI',
   ];
+
+  logout() {
+    this.dashboardService.logout().subscribe({
+      next: () => {
+        this.router.navigate([ROUTE.ROOT]);
+      },
+    });
+  }
 
   onClose() {
     this.openSideDrawer.set(false);

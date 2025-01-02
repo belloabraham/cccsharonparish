@@ -7,12 +7,12 @@
             </button>
         </div>
 
-        <div class="page-title">
+        <a [routerLink]="ROUTE.ROOT" class="page-title">
             <div class="logo flex justify-center items-center">
                 <img width="80" height="75" ngSrc="/images/global/logo.png" priority>
             </div>
             <h4 class="hidden lg:block">{{appName}}</h4>
-        </div>
+        </a>
 
         <div class="grid grid-flow-col gap-2 items-center">
 
@@ -43,7 +43,7 @@
                     <div class="menu">
                         <button mat-menu-item>{{t(KEY.PROFILE)}}
                         </button>
-                        <button mat-menu-item>{{t(KEY.LOGOUT)}}
+                        <button (click)="logout()" mat-menu-item>{{t(KEY.LOGOUT)}}
                         </button>
                     </div>
                 </mat-menu>
@@ -105,11 +105,12 @@
 
         </aside>
 
-
         <tui-drawer *tuiPopup="openSideDrawer() && (dashboardService.breakpoint$ | async) !== 'desktopLarge'"
             direction="left" class="drawer relative" [overlay]="true" (click.self)="onClose()">
             <div class="flex gap-4 justify-between items-center mobile-header">
-                <h4>{{appName}}</h4>
+                <a [routerLink]="ROUTE.ROOT">
+                    <h4>{{appName}}</h4>
+                </a>
                 <button (click)="openSideDrawer.set(false)" class="!text-white" mat-icon-button>
                     <mat-icon fontIcon="close-fill"></mat-icon>
                 </button>

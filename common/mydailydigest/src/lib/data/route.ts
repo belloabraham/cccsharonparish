@@ -7,6 +7,7 @@ export const ROUTE = {
   PUBLISHED: 'published',
   EDITORS: 'editors',
   SETTINGS: 'settings',
+  PROFILE: 'profile',
   PARAMS: {
     LANGUAGE_CODE: 'languageCode',
   },
