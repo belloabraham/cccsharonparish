@@ -14,4 +14,6 @@ export const DASHBOARD_STRING_RESOURCE_KEY = {
   DEVICE: 'device',
   PROFILE: 'profile',
   LOGOUT: 'logout',
+  DAILY_DIGEST: 'daily_digest',
+  DASHBOARD: 'dashboard',
 };

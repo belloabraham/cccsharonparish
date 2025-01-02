@@ -33,6 +33,8 @@
   "device": "Device",
   "profile": "Profile",
   "logout": "Logout",
+  "daily_digest": "Daily Digest",
+  "dashboard": "Dashboard",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",
