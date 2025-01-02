@@ -27,7 +27,6 @@
                         </button>
                     </div>
                 </mat-menu>
-
             </div>
 
             <div>
@@ -121,15 +120,15 @@
         <main tuiNavigationMain class="!block">
             <nav compact tuiSubheader [style.position]="'sticky'">
                 <tui-breadcrumbs [itemsLimit]="10">
-                    <ng-container *ngFor="let item of breadcrumbs; let last = last">
+                    <ng-container *ngFor="let item of breadcrumbs(); let last = last">
                         <ng-container *ngIf="last">
                             <strong *tuiItem tuiFade>
-                                {{ item }}
+                                {{ item.label }}
                             </strong>
                         </ng-container>
                         <ng-container *ngIf="!last">
-                            <button *tuiItem tuiLink type="button">
-                                {{ item }}
+                            <button  *tuiItem tuiLink [routerLink]="item.url" type="button">
+                                {{ item.label }}
                             </button>
                         </ng-container>
                     </ng-container>

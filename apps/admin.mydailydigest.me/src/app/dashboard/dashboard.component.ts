@@ -1,5 +1,7 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import {
+  ActivatedRoute,
+  NavigationEnd,
   Router,
   RouterLink,
   RouterLinkActive,
@@ -8,7 +10,7 @@ import {
 import { TuiNavigation } from '@taiga-ui/layout';
 import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
-import { DashboardService } from './dashboard.service';
+import { DashboardService, IBreadCrumb } from './dashboard.service';
 import { AsyncPipe, NgFor, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -26,6 +28,7 @@ import { Language, ROUTE } from '@cccsharonparish/mydailydigest';
 import { TuiItem } from '@taiga-ui/cdk';
 import { MatMenuModule } from '@angular/material/menu';
 import { ThemeType } from '@cccsharonparish/angular';
+import { distinctUntilChanged, filter, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -66,14 +69,16 @@ import { ThemeType } from '@cccsharonparish/angular';
 export class DashboardComponent extends CommonComponent {
   readonly dashboardService = inject(DashboardService);
   readonly router = inject(Router);
+  breadcrumbs = signal<IBreadCrumb[]>([]);
 
   expandSideNav = signal(true);
   appName = environment.appName;
   readonly openSideDrawer = signal(false);
   KEY = DASHBOARD_STRING_RESOURCE_KEY;
   ROUTE = ROUTE;
-
   themes: any[] = [this.KEY.LIGHT, this.KEY.DARK, this.KEY.DEVICE];
+  subscription = Subscription.EMPTY;
+  private activatedRoute = inject(ActivatedRoute);
 
   supportedLanguages = signal<Language[]>([
     {
@@ -90,12 +95,36 @@ export class DashboardComponent extends CommonComponent {
     },
   ]);
 
-  protected readonly breadcrumbs = [
-    'Home',
-    'Angular',
-    'Repositories',
-    'Taiga UI',
-  ];
+  constructor() {
+    super();
+    this.onNavigationEnd();
+    effect(() => {
+      if (this.appStore.language().loaded) {
+        this.breadcrumbs.set(
+          this.dashboardService.createBreadCrumbs(
+            this.activatedRoute,
+            this.supportedLanguages()
+          )
+        );
+      }
+    });
+  }
+
+  onNavigationEnd() {
+    this.subscription = this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd),
+        distinctUntilChanged()
+      )
+      .subscribe(() => {
+        this.breadcrumbs.set(
+          this.dashboardService.createBreadCrumbs(
+            this.activatedRoute,
+            this.supportedLanguages()
+          )
+        );
+      });
+  }
 
   logout() {
     this.dashboardService.logout().subscribe({
