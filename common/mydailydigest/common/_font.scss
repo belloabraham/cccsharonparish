@@ -20,14 +20,14 @@ html {
   }
 
   @include breakpoint.xLarge {
-    font-size: 95%;
+    font-size: 92.5%;
   }
 
   @include breakpoint.xxLarge {
-    font-size: 100%;
+    font-size: 95%;
   }
 
   @include breakpoint.xxxLarge {
-    font-size: 125%;
+    font-size: 100%;
   }
 }

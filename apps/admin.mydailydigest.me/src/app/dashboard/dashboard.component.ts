@@ -8,8 +8,18 @@ import { AsyncPipe, NgFor, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { environment } from '../../environments/environment';
-import { TuiDrawer, TuiChevron, TuiBreadcrumbs, TuiFade } from '@taiga-ui/kit';
-import { TuiLink, TuiPopup } from '@taiga-ui/core';
+import {
+  TuiDrawer,
+  TuiChevron,
+  TuiBreadcrumbs,
+  TuiFade,
+  TuiAvatar,
+} from '@taiga-ui/kit';
+import {
+  TuiLink,
+  TuiPopup,
+  TuiFallbackSrcPipe,
+} from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
 import { Language, ROUTE } from '@cccsharonparish/mydailydigest';
 import { TuiItem } from '@taiga-ui/cdk';
@@ -40,6 +50,8 @@ import { ThemeType } from '@cccsharonparish/angular';
     TuiLink,
     TuiItem,
     MatMenuModule,
+    TuiAvatar,
+    TuiFallbackSrcPipe,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',

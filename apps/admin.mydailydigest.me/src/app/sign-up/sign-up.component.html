@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="mt-4 phone-control">
-                    <tui-textfield [tuiDropdownMobile]="t(KEY.SELECT_A_COUNTRY)">
+                    <tui-textfield  [tuiDropdownMobile]="t(KEY.SELECT_A_COUNTRY)">
                         <label tuiLabel>{{t(KEY.PHONE_NUMBER)}} (WhatsApp)</label>
                         <input tuiInputPhoneInternational [countries]="(countries | tuiSortCountries | async) || []"
                             [countrySearch]="true" [(countryIsoCode)]="countryIsoCode" formControlName="phone" />

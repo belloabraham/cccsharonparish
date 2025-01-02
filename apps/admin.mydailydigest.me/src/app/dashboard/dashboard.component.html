@@ -14,7 +14,7 @@
             <h4 class="hidden lg:block">{{appName}}</h4>
         </div>
 
-        <div class="grid grid-flow-col gap-4 items-center">
+        <div class="grid grid-flow-col gap-2 items-center">
 
             <div class="hidden lg:block">
                 <button [matMenuTriggerFor]="menu" class="!text-white" mat-icon-button>
@@ -31,7 +31,13 @@
             </div>
 
             <div>
-                User
+
+                <button mat-button>
+                    <tui-avatar size="s"
+                        [src]="'https://avatars.githubusercontent.com/u/11832552' | tuiFallbackSrc: '@tui.user' | async" />
+
+                </button>
+
             </div>
         </div>
     </header>
@@ -91,8 +97,8 @@
         </aside>
 
 
-        <tui-drawer *tuiPopup="openSideDrawer()" direction="left" class="drawer relative" [overlay]="true"
-            (click.self)="onClose()">
+        <tui-drawer *tuiPopup="openSideDrawer() && (dashboardService.breakpoint$ | async) !== 'desktopLarge'"
+            direction="left" class="drawer relative" [overlay]="true" (click.self)="onClose()">
             <div class="flex gap-4 justify-between items-center mobile-header">
                 <h4>{{appName}}</h4>
                 <button (click)="openSideDrawer.set(false)" class="!text-white" mat-icon-button>
