@@ -88,10 +88,10 @@ export class DashboardService {
       //Change path from lyrics/:id to lyrics/2
       path = path?.replace(dynamicRouteInPath!, dynamicRouteParameter);
       //Change label from Lyrics to Lyrics/2
-      label = `${label} / ${this.getLanguageCodeLabel(
+      label = `${label} (${this.getLanguageCodeLabel(
         dynamicRouteParameter,
         supportedLanguages
-      )}`;
+      )})`;
     }
 
     //In the routeConfig the complete path is not available,
