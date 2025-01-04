@@ -39,6 +39,23 @@
   inline-size: 20rem;
   background: var(--tui-theme-color);
   color: white;
+  header {
+    .title {
+      font-size: 1.3rem;
+    }
+  }
+  mat-icon {
+    font-size: 1.5rem;
+  }
+  .nav-item {
+    display: flex;
+    align-items: start;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    padding-bottom: 0;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
 }
 
 .page-title {
