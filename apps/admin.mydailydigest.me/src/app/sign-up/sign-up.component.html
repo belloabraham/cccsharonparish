@@ -2,9 +2,7 @@
 
     <div class="p-4 py-8">
         <div class="logo flex justify-center  items-center  bg-white">
-            <a [routerLink]="ROUTE.ROOT"><img class="scale" width="50" height="40" alt="Logo"
-                    ngSrc="images/global/logo.png" priority>
-            </a>
+            <img class="scale" width="50" height="40" alt="Logo" ngSrc="images/global/logo.png" priority>
         </div>
     </div>
 
@@ -34,12 +32,12 @@
                 </div>
 
                 <div class="mt-4 phone-control">
-                    <tui-textfield  [tuiDropdownMobile]="t(KEY.SELECT_A_COUNTRY)">
+                    <tui-textfield [tuiDropdownMobile]="t(KEY.SELECT_A_COUNTRY)">
                         <label tuiLabel>{{t(KEY.PHONE_NUMBER)}} (WhatsApp)</label>
                         <input tuiInputPhoneInternational [countries]="(countries | tuiSortCountries | async) || []"
                             [countrySearch]="true" [(countryIsoCode)]="countryIsoCode" formControlName="phone" />
                     </tui-textfield>
-                    <tui-error formControlName="phone" [error]="[] | tuiFieldError | async"/>
+                    <tui-error formControlName="phone" [error]="[] | tuiFieldError | async" />
                 </div>
 
                 <div class="text-end mt-4 submit">
