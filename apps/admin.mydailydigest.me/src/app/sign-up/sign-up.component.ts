@@ -1,8 +1,6 @@
 import { Component, effect, inject, OnInit } from '@angular/core';
 import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
 import { SIGNUP_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
-import { RouterLink } from '@angular/router';
-import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { NgOptimizedImage, AsyncPipe } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -33,7 +31,6 @@ import {
   selector: 'app-sign-up',
   imports: [
     SharedModule,
-    RouterLink,
     ReactiveFormsModule,
     NgOptimizedImage,
     MatFormFieldModule,
@@ -63,7 +60,7 @@ import {
   ],
 })
 export class SignUpComponent extends CommonComponent {
-  ROUTE = ROUTE;
+  // ROUTE = ROUTE;
   KEY = SIGNUP_STRING_RESOURCE_KEY;
   protected readonly countries = getCountries();
   protected countryIsoCode: any = 'NG';

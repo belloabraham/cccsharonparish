@@ -14,8 +14,6 @@ import { REMOTE_DATA_TOKEN } from './services/data/remote/remote-data.token';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getApp } from '@angular/fire/app';
-import { provideImgixLoader } from '@angular/common';
-import { environment } from '../environments/environment';
 
 export const appRoutes: Route[] = [
   {
@@ -44,7 +42,6 @@ export const appRoutes: Route[] = [
         useFactory: () => new FirestoreService(),
       },
       provideStorage(() => getStorage(getApp())),
-      provideImgixLoader(environment.cdnBaseUrl),
       DashboardService,
     ],
     // canMatch: [

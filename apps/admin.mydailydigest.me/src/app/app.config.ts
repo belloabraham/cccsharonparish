@@ -17,6 +17,7 @@ import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { HttpProgressInterceptorService } from './interceptors/http-progress-interceptors.service';
+import { provideImgixLoader } from '@angular/common';
 
 function setDNSPreConnectLink() {
   const domain = environment.cdnBaseUrl;
@@ -46,6 +47,9 @@ export const appConfig: ApplicationConfig = {
     provideFirebaseApp(() => initializeApp({ ...environment.firebase })),
     provideAuth(() => getAuth(getApp())),
     provideFirestore(() => getFirestore()),
+
+    //NgOptimize
+    provideImgixLoader(environment.cdnBaseUrl),
 
     //Transloco
     provideHttpClient(),
