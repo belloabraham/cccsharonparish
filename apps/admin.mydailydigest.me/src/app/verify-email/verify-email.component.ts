@@ -26,7 +26,7 @@ import { NgOptimizedImage } from '@angular/common';
     MatInputModule,
     SharedModule,
     RouterLink,
-    NgOptimizedImage
+    NgOptimizedImage,
   ],
   templateUrl: './verify-email.component.html',
   styleUrl: './verify-email.component.scss',
@@ -63,6 +63,7 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
 
   constructor() {
     super();
+    this.onAuthStateChanged();
     effect(() => {
       if (this.appStore.language().loaded) {
         this.loadStringResource();
@@ -78,7 +79,6 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
     if (this.signInMail) {
       this.verifyEmail(this.signInMail);
     }
-    this.onAuthStateChanged();
   }
 
   onAuthStateChanged() {

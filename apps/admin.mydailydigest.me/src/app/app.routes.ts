@@ -12,6 +12,14 @@ import {
 import { DashboardService } from './dashboard/dashboard.service';
 import { REMOTE_DATA_TOKEN } from './services/data/remote/remote-data.token';
 import { toSignal } from '@angular/core/rxjs-interop';
+import {
+  initializeAppCheck,
+  ReCaptchaEnterpriseProvider,
+  provideAppCheck,
+} from '@angular/fire/app-check';
+import { getStorage, provideStorage } from '@angular/fire/storage';
+import { environment } from '../environments/environment';
+import { getApp } from '@angular/fire/app';
 
 export const appRoutes: Route[] = [
   {
@@ -39,6 +47,16 @@ export const appRoutes: Route[] = [
         provide: REMOTE_DATA_TOKEN,
         useFactory: () => new FirestoreService(),
       },
+      provideStorage(() => getStorage(getApp())),
+      provideAppCheck(() => {
+        const provider = new ReCaptchaEnterpriseProvider(
+          environment.reCAPTCHAEnterpriseKey
+        );
+        return initializeAppCheck(getApp(), {
+          provider,
+          isTokenAutoRefreshEnabled: true,
+        });
+      }),
       DashboardService,
     ],
     // canMatch: [
@@ -60,14 +78,14 @@ export const appRoutes: Route[] = [
   },
   {
     path: ROUTE.VERIFY_EMAIL,
-    canMatch: [
-      (router: Router) => {
-        const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
-        return user?.emailVerified === true
-          ? router.createUrlTree([ROUTE.ROOT])
-          : true;
-      },
-    ],
+    // canMatch: [
+    //   (router: Router) => {
+    //     const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
+    //     return user?.emailVerified === true
+    //       ? router.createUrlTree([ROUTE.ROOT])
+    //       : true;
+    //   },
+    // ],
     loadComponent: () =>
       import('./verify-email/verify-email.component').then(
         (mod) => mod.VerifyEmailComponent

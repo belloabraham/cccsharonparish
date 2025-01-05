@@ -9,13 +9,7 @@ import { appRoutes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { getApp, initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
-import {
-  initializeAppCheck,
-  ReCaptchaEnterpriseProvider,
-  provideAppCheck,
-} from '@angular/fire/app-check';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { getStorage, provideStorage } from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 import { HTTP_INTERCEPTORS, provideHttpClient } from '@angular/common/http';
 import { TranslocoHttpLoader } from './transloco-loader';
@@ -33,16 +27,6 @@ export const appConfig: ApplicationConfig = {
     provideFirebaseApp(() => initializeApp({ ...environment.firebase })),
     provideAuth(() => getAuth(getApp())),
     provideFirestore(() => getFirestore()),
-    provideStorage(() => getStorage(getApp())),
-    provideAppCheck(() => {
-      const provider = new ReCaptchaEnterpriseProvider(
-        environment.reCAPTCHAEnterpriseKey
-      );
-      return initializeAppCheck(getApp(), {
-        provider,
-        isTokenAutoRefreshEnabled: true,
-      });
-    }),
 
     //Transloco
     provideHttpClient(),
