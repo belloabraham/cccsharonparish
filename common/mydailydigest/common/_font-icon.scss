@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.chevron-down-fill:before {
+  content: '\e90f';
+}
+.chevron-up-fill:before {
+  content: '\e910';
+}
 .chevron-left-fill:before {
   content: '\e90c';
 }
