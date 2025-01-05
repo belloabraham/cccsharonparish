@@ -1,37 +1,47 @@
 <div *transloco="let t" class="dashboard-root">
 
+    <!-- Header -->
     <ng-container *ngTemplateOutlet="header"></ng-container>
 
     <div class="flex">
-        <ng-container *ngIf="(dashboardService.breakpoint$ | async) === 'desktopLarge'">
-            <ng-container *ngTemplateOutlet="desktopSideNav"></ng-container>
-        </ng-container>
-
-        <ng-container *ngTemplateOutlet="mobileSideNav"></ng-container>
-
+        <!-- Drawer/ Sidenav -->
+        @if ((dashboardService.breakpoint$ | async) === 'desktopLarge') {
+        <ng-container *ngTemplateOutlet="desktopSideNav"></ng-container>
+        }@else {
+        <ng-container *ngTemplateOutlet="mobileDrawer"></ng-container>
+        }
 
         <main tuiNavigationMain class="!block">
-            <nav compact tuiSubheader [style.position]="'sticky'">
-                <tui-breadcrumbs [itemsLimit]="10">
-                    <ng-container *ngFor="let item of breadcrumbs(); let last = last">
-                        <ng-container *ngIf="last">
-                            <strong *tuiItem tuiFade>
-                                {{ item.label }}
-                            </strong>
-                        </ng-container>
-                        <ng-container *ngIf="!last">
-                            <button *tuiItem tuiLink [routerLink]="item.url" type="button">
-                                {{ item.label }}
-                            </button>
-                        </ng-container>
-                    </ng-container>
-                </tui-breadcrumbs>
-            </nav>
-            <router-outlet class="w-100 h-100"></router-outlet>
+            <!-- Top Navigation -->
+            <ng-container *ngTemplateOutlet="topNavigation"></ng-container>
+
+            <!-- Main Routes -->
+            <router-outlet></router-outlet>
         </main>
     </div>
+
 </div>
 
+
+<!-- Top Navigation -->
+<ng-template #topNavigation>
+    <nav compact tuiSubheader [style.position]="'sticky'">
+        <tui-breadcrumbs [itemsLimit]="10">
+            <ng-container *ngFor="let item of breadcrumbs(); let last = last">
+                <ng-container *ngIf="last">
+                    <strong *tuiItem tuiFade>
+                        {{ item.label }}
+                    </strong>
+                </ng-container>
+                <ng-container *ngIf="!last">
+                    <button *tuiItem tuiLink [routerLink]="item.url" type="button">
+                        {{ item.label }}
+                    </button>
+                </ng-container>
+            </ng-container>
+        </tui-breadcrumbs>
+    </nav>
+</ng-template>
 
 <!-- Header -->
 <ng-template #header>
@@ -85,10 +95,11 @@
     </header>
 </ng-template>
 
-<ng-template #mobileSideNav>
+<!-- Mobile Drawer -->
+<ng-template #mobileDrawer>
     <ng-container *transloco="let t">
-        <tui-drawer *tuiPopup="openSideDrawer() && (dashboardService.breakpoint$ | async) !== 'desktopLarge'"
-            direction="left" class="drawer" [overlay]="true" (click.self)="closeSideDrawer()">
+        <tui-drawer *tuiPopup="openSideDrawer()" direction="left" class="drawer" [overlay]="true"
+            (click.self)="closeSideDrawer()">
             <header class="flex gap-4 justify-between items-center !flex-row">
                 <a class="title" [routerLink]="ROUTE.ROOT">
                     <h4>{{appName}}</h4>
@@ -146,7 +157,7 @@
     </ng-container>
 </ng-template>
 
-<!-- Side Nav Desktop -->
+<!-- Desktop Side Nav  -->
 <ng-template #desktopSideNav>
     <aside (click)="closeSideDrawer()" *transloco="let t" class="!md:pt-8 !pb-4 aside"
         [tuiNavigationAside]="expandSideNav()">
