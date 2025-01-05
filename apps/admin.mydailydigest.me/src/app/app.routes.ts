@@ -12,14 +12,10 @@ import {
 import { DashboardService } from './dashboard/dashboard.service';
 import { REMOTE_DATA_TOKEN } from './services/data/remote/remote-data.token';
 import { toSignal } from '@angular/core/rxjs-interop';
-import {
-  initializeAppCheck,
-  ReCaptchaEnterpriseProvider,
-  provideAppCheck,
-} from '@angular/fire/app-check';
 import { getStorage, provideStorage } from '@angular/fire/storage';
-import { environment } from '../environments/environment';
 import { getApp } from '@angular/fire/app';
+import { provideImgixLoader } from '@angular/common';
+import { environment } from '../environments/environment';
 
 export const appRoutes: Route[] = [
   {
@@ -48,15 +44,7 @@ export const appRoutes: Route[] = [
         useFactory: () => new FirestoreService(),
       },
       provideStorage(() => getStorage(getApp())),
-      provideAppCheck(() => {
-        const provider = new ReCaptchaEnterpriseProvider(
-          environment.reCAPTCHAEnterpriseKey
-        );
-        return initializeAppCheck(getApp(), {
-          provider,
-          isTokenAutoRefreshEnabled: true,
-        });
-      }),
+      provideImgixLoader(environment.cdnBaseUrl),
       DashboardService,
     ],
     // canMatch: [

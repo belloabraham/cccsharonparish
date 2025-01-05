@@ -2,6 +2,7 @@ import { NG_EVENT_PLUGINS } from '@taiga-ui/event-plugins';
 import {
   ApplicationConfig,
   isDevMode,
+  provideAppInitializer,
   provideExperimentalZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
@@ -17,11 +18,29 @@ import { provideTransloco } from '@jsverse/transloco';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { HttpProgressInterceptorService } from './interceptors/http-progress-interceptors.service';
 
+function setDNSPreConnectLink() {
+  const domain = environment.cdnBaseUrl;
+  const preconnectLink = document.createElement('link');
+  preconnectLink.rel = 'preconnect';
+  preconnectLink.href = domain;
+  preconnectLink.crossOrigin = 'anonymous';
+  document.head.appendChild(preconnectLink);
+
+  const dnsPrefetchLink = document.createElement('link');
+  dnsPrefetchLink.rel = 'dns-prefetch';
+  dnsPrefetchLink.href = domain;
+  document.head.appendChild(dnsPrefetchLink);
+}
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(appRoutes, withComponentInputBinding()),
     provideAnimationsAsync(),
     provideExperimentalZonelessChangeDetection(),
+
+    provideAppInitializer(() => {
+      setDNSPreConnectLink();
+    }),
 
     //Firebase
     provideFirebaseApp(() => initializeApp({ ...environment.firebase })),
