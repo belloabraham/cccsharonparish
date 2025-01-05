@@ -5,7 +5,6 @@ import { NotFoundComponent as SDDNotFoundComponent } from '@cccsharonparish/myda
   selector: 'app-not-found',
   imports: [SDDNotFoundComponent],
   templateUrl: './not-found.component.html',
-  styleUrl: './not-found.component.scss',
 })
 export class NotFoundComponent {
 }

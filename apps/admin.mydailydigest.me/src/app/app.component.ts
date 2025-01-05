@@ -29,8 +29,6 @@ export class AppComponent
   extends BaseAppComponent
   implements OnDestroy, OnInit
 {
-  private readonly themeService = inject(ThemeService);
-  themeChangeSubscription = Subscription.EMPTY;
   private connectionStateUtil = inject(ConnectionStateUtil);
   private httpRequestLoadingIndicatorService = inject(
     HttpRequestProgressIndicatorService
@@ -45,40 +43,11 @@ export class AppComponent
 
   constructor() {
     super();
-    this.setAppTheme();
-    this.onDeviceThemeChanged();
+    const domain = environment.domain;
+    this.setAppTheme(domain);
+    this.onDeviceThemeChanged(domain);
     this.deviceConnected = toSignal(
       this.connectionStateUtil.observeDeviceInternetConnectionState(ROUTE.ROOT)
     );
-  }
-
-  setAppTheme() {
-    const themeType = this.themeService.getThemeType(
-      Settings.themeKey(environment.domain)
-    );
-
-    const theme = this.themeService.isAppTheme(themeType)
-      ? themeType
-      : this.themeService.getDeviceTheme();
-    this.themeService.setTheme(theme);
-  }
-
-  onDeviceThemeChanged() {
-    this.themeChangeSubscription = this.themeService
-      .onDeviceThemeChanged()
-      .subscribe({
-        next: () => {
-          const themeType = this.themeService.getThemeType(
-            Settings.themeKey(environment.domain)
-          );
-          if (!this.themeService.isAppTheme(themeType)) {
-            this.themeService.setTheme(this.themeService.getDeviceTheme());
-          }
-        },
-      });
-  }
-
-  ngOnDestroy(): void {
-    this.themeChangeSubscription.unsubscribe();
   }
 }

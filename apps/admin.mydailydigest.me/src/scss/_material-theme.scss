@@ -34,17 +34,14 @@ $form-field: mat.define-theme(
   @include mat.form-field-theme($app-theme);
   @include mat.input-theme($app-theme);
   @include mat.icon-theme($app-theme);
+  @include mat.menu-theme($app-theme);
   @include mat.form-field-density($form-field);
   @include mat.progress-bar-theme($app-theme);
 
   //Global Overrides
   @include mat.menu-overrides(
     (
-      container-shape: 15px,
-      item-hover-state-layer-color: var(--mat-sys-surface-dim),
-      container-color: var(--mat-sys-surface),
-      item-label-text-size: 0.9rem,
-      item-label-text-weight: 500,
+      container-shape: 0.9rem,
     )
   );
 }

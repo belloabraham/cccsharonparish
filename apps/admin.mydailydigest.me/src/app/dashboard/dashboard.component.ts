@@ -84,12 +84,11 @@ export class DashboardComponent extends CommonComponent {
   readonly dashboardService = inject(DashboardService);
   readonly router = inject(Router);
   breadcrumbs = signal<IBreadCrumb[]>([]);
-
   expandSideNav = signal(true);
   expandMobileDropdown = signal(false);
+  openSideDrawer = signal(false);
 
   appName = environment.appName;
-  readonly openSideDrawer = signal(false);
   KEY = DASHBOARD_STRING_RESOURCE_KEY;
   ROUTE = ROUTE;
   themes: any[] = [this.KEY.LIGHT, this.KEY.DARK, this.KEY.DEVICE];

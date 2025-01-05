@@ -1,4 +1,4 @@
-import { inject, Injectable, InjectionToken } from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 import { ICloudStorage } from './cloud-storage.interface';
 import { FirebaseStorageService } from './firebase/firebase-storage.service';
 import { StorageReference, Storage } from '@angular/fire/storage';

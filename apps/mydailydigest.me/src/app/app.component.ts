@@ -18,32 +18,10 @@ export class AppComponent
   extends BaseAppComponent
   implements OnDestroy, OnInit
 {
-  private readonly themeService = inject(ThemeService);
-  themeChangeSubscription = Subscription.EMPTY;
-
   constructor() {
     super();
-    this.loadAppTheme();
-  }
-
-  loadAppTheme() {
-    const settingsTheme = this.themeService.getSettingsTheme(
-      Settings.themeKey(environment.domain)
-    );
-    const theme = settingsTheme ?? this.themeService.getDeviceTheme();
-    this.themeService.setTheme(theme);
-
-    this.themeChangeSubscription = this.themeService
-      .onDeviceThemeChanged()
-      .subscribe({
-        next: (theme) => {
-          this.themeService.setTheme(theme);
-        },
-      });
-  }
-
-  ngOnDestroy(): void {
-    this.themeChangeSubscription.unsubscribe();
+    const domain = environment.domain
+    this.setAppTheme(domain);
+    this.onDeviceThemeChanged(domain);
   }
 }
-
