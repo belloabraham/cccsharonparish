@@ -37,11 +37,13 @@
 <ng-template #header>
     <header *transloco="let t" tuiNavigationHeader class="flex justify-between">
 
-        <div class="lg:hidden">
+        <div class="lg:hidden flex gap-2">
             <button (click)="openSideDrawer.set(true)" class="!text-white" mat-icon-button>
                 <mat-icon fontIcon="hamburger-fill"></mat-icon>
             </button>
+            <button class="w-8 h-8" disabled></button>
         </div>
+
 
         <a [routerLink]="ROUTE.ROOT" class="page-title">
             <div class="logo flex justify-center items-center">
@@ -51,8 +53,7 @@
         </a>
 
         <div class="grid grid-flow-col gap-2 items-center">
-
-            <div class="hidden lg:block">
+            <div>
                 <button [matMenuTriggerFor]="menu" class="!text-white" mat-icon-button>
                     <mat-icon fontIcon="dark-mode-fill"></mat-icon>
                 </button>
@@ -66,13 +67,10 @@
             </div>
 
             <div>
-
                 <div [matMenuTriggerFor]="accountMenu" matRipple>
                     <tui-avatar size="s"
                         [src]="'https://avatars.githubusercontent.com/u/11832552' | tuiFallbackSrc: '@tui.user' | async" />
-
                 </div>
-
 
                 <mat-menu #accountMenu="matMenu">
                     <div class="menu">
@@ -90,7 +88,7 @@
 <ng-template #mobileSideNav>
     <ng-container *transloco="let t">
         <tui-drawer *tuiPopup="openSideDrawer() && (dashboardService.breakpoint$ | async) !== 'desktopLarge'"
-            direction="left" class="drawer" [overlay]="true">
+            direction="left" class="drawer" [overlay]="true" (click.self)="closeSideDrawer()">
             <header class="flex gap-4 justify-between items-center !flex-row">
                 <a class="title" [routerLink]="ROUTE.ROOT">
                     <h4>{{appName}}</h4>
@@ -105,10 +103,24 @@
                 {{t(KEY.PUBLISHED)}}
             </a>
 
+            <a  (click)="expandMobileDropdown.set(!expandMobileDropdown())" class="nav-item" matRipple>
+                <mat-icon fontIcon="add-note-outline"></mat-icon>
+                {{t(KEY.ADD_NEW)}}
+            </a>
+            <tui-expand *ngIf="supportedLanguages().length > 0" [expanded]="expandMobileDropdown()">
+                <ng-template tuiExpandContent>
+                    <div class="ps-10">
+                        <a *ngFor="let language of supportedLanguages()" [routerLink]="[ROUTE.NEW, language.code]"
+                        class="nav-item !items-center !p-3" matRipple>
+                        {{language.label}}
+                    </a>
+                    </div>
+                </ng-template>
+            </tui-expand>
+
             <a [routerLink]="[ROUTE.DRAFT]" class="nav-item" matRipple>
                 <mat-icon fontIcon="note-outline"></mat-icon>
                 {{t(KEY.DRAFT)}}
-
             </a>
 
             <footer class="flex flex-col">
@@ -122,12 +134,6 @@
                     <mat-icon fontIcon="settings-outline"></mat-icon>
                     {{t(KEY.SETTINGS)}}
                 </a>
-
-                <div class="nav-item !items-center !gap-4">
-                    <p><mat-slide-toggle>Slide me!</mat-slide-toggle></p>
-                    {{t(KEY.SETTINGS)}}
-                </div>
-
             </footer>
 
         </tui-drawer>

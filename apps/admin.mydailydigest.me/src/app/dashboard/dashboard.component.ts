@@ -29,14 +29,18 @@ import {
   TuiFade,
   TuiAvatar,
 } from '@taiga-ui/kit';
-import { TuiLink, TuiPopup, TuiFallbackSrcPipe } from '@taiga-ui/core';
+import {
+  TuiLink,
+  TuiPopup,
+  TuiFallbackSrcPipe,
+  TuiExpand,
+} from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
 import { Language, ROUTE } from '@cccsharonparish/mydailydigest';
 import { TuiItem } from '@taiga-ui/cdk';
 import { MatMenuModule } from '@angular/material/menu';
 import { ThemeType } from '@cccsharonparish/angular';
 import { distinctUntilChanged, filter, Subscription } from 'rxjs';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-dashboard',
@@ -65,7 +69,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     TuiAvatar,
     TuiFallbackSrcPipe,
     NgTemplateOutlet,
-    MatSlideToggleModule,
+    TuiExpand,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
@@ -82,6 +86,8 @@ export class DashboardComponent extends CommonComponent {
   breadcrumbs = signal<IBreadCrumb[]>([]);
 
   expandSideNav = signal(true);
+  expandMobileDropdown = signal(false);
+
   appName = environment.appName;
   readonly openSideDrawer = signal(false);
   KEY = DASHBOARD_STRING_RESOURCE_KEY;

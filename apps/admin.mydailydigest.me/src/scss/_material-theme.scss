@@ -36,7 +36,6 @@ $form-field: mat.define-theme(
   @include mat.icon-theme($app-theme);
   @include mat.form-field-density($form-field);
   @include mat.progress-bar-theme($app-theme);
-  @include mat.slide-toggle-theme($app-theme);
 
   //Global Overrides
   @include mat.menu-overrides(
