@@ -6,10 +6,28 @@
   background-color: var(--mat-sys-surface);
 }
 
+tui-drawer {
+  .add-note-outline {
+    font-size: 1.5rem;
+  }
+  footer,
+  header {
+    color: var(--tui-text-primary);
+  }
+}
+
+.link-active {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.link-active-light {
+  background: var(--tui-background-neutral-1-hover);
+}
+
 .aside {
+  a,
   button {
-    font-size: 0.9rem;
-    padding-inline-start: 0.3rem;
+    padding-inline-start: 0.4rem;
   }
   mat-icon {
     flex-shrink: 0;

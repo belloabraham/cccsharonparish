@@ -93,44 +93,49 @@
                 <a class="title" [routerLink]="ROUTE.ROOT">
                     <h4>{{appName}}</h4>
                 </a>
-                <button (click)="openSideDrawer.set(false)" class="!text-white" mat-icon-button>
+                <button (click)="openSideDrawer.set(false)" mat-icon-button>
                     <mat-icon fontIcon="close-fill"></mat-icon>
                 </button>
             </header>
 
-            <a class="nav-item" matRipple [routerLink]="[ROUTE.PUBLISHED]">
+            <a class="nav-item" matRipple [routerLink]="[ROUTE.PUBLISHED]" routerLinkActive="link-active" >
                 <mat-icon fontIcon="bookshelf-fill"></mat-icon>
                 {{t(KEY.PUBLISHED)}}
             </a>
 
-            <a  (click)="expandMobileDropdown.set(!expandMobileDropdown())" class="nav-item" matRipple>
-                <mat-icon fontIcon="add-note-outline"></mat-icon>
-                {{t(KEY.ADD_NEW)}}
-            </a>
+            <button (click)="expandMobileDropdown.set(!expandMobileDropdown())"
+                class="nav-item mb-2 !pb-2 !items-center justify-between" matRipple>
+                <span class="flex items-center gap-4">
+                    <span class="sdd-icons add-note-outline">
+                    </span>
+                    <span>{{t(KEY.ADD_NEW)}}</span>
+                </span>
+                <mat-icon [fontIcon]="expandMobileDropdown() ? 'chevron-left-fill' :'chevron-right-fill'"></mat-icon>
+            </button>
             <tui-expand *ngIf="supportedLanguages().length > 0" [expanded]="expandMobileDropdown()">
                 <ng-template tuiExpandContent>
                     <div class="ps-10">
                         <a *ngFor="let language of supportedLanguages()" [routerLink]="[ROUTE.NEW, language.code]"
-                        class="nav-item !items-center !p-3" matRipple>
-                        {{language.label}}
-                    </a>
+                            routerLinkActive="link-active" class="nav-item !items-center !p-3" matRipple>
+                            {{language.label}}
+                        </a>
                     </div>
                 </ng-template>
             </tui-expand>
 
-            <a [routerLink]="[ROUTE.DRAFT]" class="nav-item" matRipple>
+            <a [routerLink]="[ROUTE.DRAFT]" routerLinkActive="link-active"  class="nav-item" matRipple>
                 <mat-icon fontIcon="note-outline"></mat-icon>
                 {{t(KEY.DRAFT)}}
             </a>
 
             <footer class="flex flex-col">
 
-                <a [routerLink]="[ROUTE.EDITORS]" class="nav-item" matRipple type="button">
+                <a [routerLink]="[ROUTE.EDITORS]" routerLinkActive="link-active-light"  class="nav-item" matRipple type="button">
                     <mat-icon fontIcon="spark-user-outline"></mat-icon>
                     {{t(KEY.EDITORS)}}
                 </a>
 
-                <a [routerLink]="[ROUTE.SETTINGS]" class="nav-item" matRipple>
+                <a [routerLink]="[ROUTE.SETTINGS]" routerLinkActive="link-active-light"  class="nav-item" matRipple>
                     <mat-icon fontIcon="settings-outline"></mat-icon>
                     {{t(KEY.SETTINGS)}}
                 </a>
