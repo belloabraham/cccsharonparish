@@ -22,10 +22,9 @@ import { getCountries } from 'libphonenumber-js';
 import { defer } from 'rxjs';
 import { TuiInputPhoneInternational } from '@taiga-ui/experimental';
 import { TuiDropdownMobile } from '@taiga-ui/addon-mobile';
-import {
-  CustomValidator,
-  LanguageResourceService,
-} from '@cccsharonparish/angular';
+import { CustomValidator } from '@cccsharonparish/angular';
+import { SignUpService } from './sign-up.service';
+import { IUserUIState } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-sign-up',
@@ -60,13 +59,12 @@ import {
   ],
 })
 export class SignUpComponent extends CommonComponent {
-  // ROUTE = ROUTE;
   KEY = SIGNUP_STRING_RESOURCE_KEY;
   protected readonly countries = getCountries();
   protected countryIsoCode: any = 'NG';
   protected value = '';
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
-  private readonly languageResourceService = inject(LanguageResourceService);
+  signUpService = inject(SignUpService);
 
   form!: FormGroup<SignUpForm>;
 
@@ -95,9 +93,7 @@ export class SignUpComponent extends CommonComponent {
     this.phoneNoFC = new FormControl<string | null>(null, {
       validators: [
         CustomValidator.validPhoneNumber({
-          other: this.languageResourceService.getString(
-            this.KEY.INVALID_PHONE_MSG
-          ),
+          other: this.languageService.getString(this.KEY.INVALID_PHONE_MSG),
         }),
       ],
       updateOn: 'blur',
@@ -112,7 +108,14 @@ export class SignUpComponent extends CommonComponent {
 
   onSubmit() {
     this.form.markAllAsTouched();
+    if (this.form.valid) {
+      const value = this.form.value;
+      const user: IUserUIState = {
+        firstName: value.firstName!,
+        lastName: value.lastName!,
+        phone: value.phone!,
+      };
+      this.signUpService.createUser(user, true);
+    }
   }
-
-  //TODO update user id token information with data from the user
 }

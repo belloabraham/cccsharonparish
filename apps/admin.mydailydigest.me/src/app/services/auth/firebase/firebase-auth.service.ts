@@ -8,6 +8,7 @@ import {
   sendSignInLinkToEmail,
   signInWithEmailLink,
   signOut,
+  updateCurrentUser,
 } from '@angular/fire/auth';
 import { environment as env } from '../../../../environments/environment';
 import { Observable } from 'rxjs';
@@ -34,6 +35,15 @@ export class FirebaseAuthService {
 
   getUser(): User | null {
     return this.auth.currentUser;
+  }
+
+  updateCurrentUser(user: User): Observable<User> {
+    return new Observable((observer) => {
+      updateCurrentUser(this.auth, user)
+        .then(() => observer.next(user))
+        .catch((error) => observer.next(error))
+        .finally(() => observer.complete());
+    });
   }
 
   getAuthSate$() {

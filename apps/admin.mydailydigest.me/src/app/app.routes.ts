@@ -14,6 +14,7 @@ import { REMOTE_DATA_TOKEN } from './services/data/remote/remote-data.token';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getApp } from '@angular/fire/app';
+import { SignUpService } from './sign-up/sign-up.service';
 
 export const appRoutes: Route[] = [
   {
@@ -78,6 +79,13 @@ export const appRoutes: Route[] = [
   },
   {
     path: ROUTE.SIGN_UP,
+    providers: [
+      {
+        provide: REMOTE_DATA_TOKEN,
+        useFactory: () => new FirestoreService(),
+      },
+      SignUpService
+    ],
     canMatch: [
       (router: Router) => {
         const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();

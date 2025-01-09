@@ -29,6 +29,10 @@ export class AuthService implements IAuth {
     return this.firebaseAuth.getUser();
   }
 
+  updateCurrentUser(user: User) {
+    return this.firebaseAuth.updateCurrentUser(user);
+  }
+
   emailIsAuthorized(email: string) {
     return email.endsWith(environment.emailDomain);
   }

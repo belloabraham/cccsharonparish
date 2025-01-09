@@ -1,13 +1,23 @@
+import { Timestamp } from '@angular/fire/firestore';
+
 export type UserType = 'Publisher' | 'Editor';
 
-export interface IUser {
-  id: string;
-  email: string;
+export interface IUserUIState {
   phone: string;
   firstName: string;
   lastName: string;
-  imageUrl: string | null;
-  createdOn: Date;
-  updatedOn: Date;
+  imageUrl?: string;
+  email?: string;
+}
+
+export interface IUser extends IUserUIState {
+  id: string;
+  email: string | undefined;
+  phone: string;
+  firstName: string;
+  lastName: string;
+  imageUrl?: string;
+  createdOn?: Date | Timestamp;
+  updatedOn: Date | Timestamp;
   userType: UserType;
 }

@@ -11,7 +11,7 @@ import { HttpRequestProgressIndicatorService } from '../../services';
 })
 export class CommonComponent {
   private readonly title = inject(Title);
-  private readonly languageService = inject(LanguageResourceService);
+  readonly languageService = inject(LanguageResourceService);
   readonly appStore = inject(AppStore);
   private readonly pageTitleKey = inject(PAGE_TITLE_KEY);
   readonly httpRequestProgressIndicatorService = inject(

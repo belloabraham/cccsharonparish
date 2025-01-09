@@ -1,5 +1,5 @@
-import { User, UserCredential } from "@angular/fire/auth";
-import { Observable } from "rxjs";
+import { User, UserCredential } from '@angular/fire/auth';
+import { Observable } from 'rxjs';
 
 export interface IAuth {
   getAuthSate$: () => Observable<User | null>;
@@ -11,4 +11,5 @@ export interface IAuth {
     email: string,
     emailLink: string
   ) => Observable<UserCredential>;
+  updateCurrentUser: (user: User) => Observable<User>;
 }
