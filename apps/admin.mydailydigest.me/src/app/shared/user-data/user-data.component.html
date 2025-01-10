@@ -1,0 +1,28 @@
+<form *transloco="let t" [formGroup]="form">
+    <div class="name flex flex-col lg:flex-row gap-4 items-start">
+        <mat-form-field>
+            <mat-label>{{t(KEY.FIRST_NAME)}}</mat-label>
+            <input matInput formControlName="firstName" [placeholder]="t(KEY.FIRST_NAME)">
+            @if (this.firstNameFC.invalid) {
+            <mat-error>{{t(KEY.INVALID_NAME_MSG)}}</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>{{t(KEY.LAST_NAME)}}</mat-label>
+            <input matInput formControlName="lastName" [placeholder]="t(KEY.LAST_NAME)">
+            @if (this.lastNameFC.invalid) {
+            <mat-error>{{t(KEY.INVALID_NAME_MSG)}}</mat-error>
+            }
+        </mat-form-field>
+    </div>
+
+    <div class="mt-4 phone-control">
+        <tui-textfield [tuiDropdownMobile]="t(KEY.SELECT_A_COUNTRY)">
+            <label tuiLabel>{{t(KEY.PHONE_NUMBER)}} (WhatsApp)</label>
+            <input tuiInputPhoneInternational [countries]="(countries | tuiSortCountries | async) || []"
+                [countrySearch]="true" [(countryIsoCode)]="countryIsoCode" formControlName="phone" />
+        </tui-textfield>
+        <tui-error formControlName="phone" [error]="[] | tuiFieldError | async" />
+    </div>
+</form>

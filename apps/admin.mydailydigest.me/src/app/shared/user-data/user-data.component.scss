@@ -1,0 +1,14 @@
+@use 'common/mixins/breakpoint';
+
+.phone-control,
+mat-form-field {
+  width: 90%;
+}
+@include breakpoint.large {
+  .phone-control {
+    width: 31rem;
+  }
+  mat-form-field {
+    width: 15rem;
+  }
+}
