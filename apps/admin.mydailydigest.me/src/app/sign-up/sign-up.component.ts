@@ -115,7 +115,7 @@ export class SignUpComponent extends CommonComponent {
         lastName: value.lastName!,
         phone: value.phone!,
       };
-      this.signUpService.createUser(user, true);
+      this.signUpService.createUser(user);
     }
   }
 }

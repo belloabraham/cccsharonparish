@@ -9,7 +9,14 @@ export class SignUpService {
   private readonly remoteData = inject(REMOTE_DATA_TOKEN);
   private readonly auth = inject(AUTH_TOKEN);
 
-  createUser(
+  updateUser(userUIState: IUserUIState, userType: UserType = 'Editor') {
+    return this.addUser(userUIState, false, userType);
+  }
+  createUser(userUIState: IUserUIState, userType: UserType = 'Editor') {
+    return this.addUser(userUIState, true, userType);
+  }
+
+  addUser(
     userUIState: IUserUIState,
     isNew: boolean,
     userType: UserType = 'Editor'
