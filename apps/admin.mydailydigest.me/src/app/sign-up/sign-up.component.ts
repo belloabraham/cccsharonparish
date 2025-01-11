@@ -1,5 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
+import {
+  CommonComponent,
+  PAGE_TITLE_KEY,
+  SharedModule,
+  UserDataComponent,
+} from '../shared';
 import { SIGNUP_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
@@ -9,7 +14,6 @@ import {
 import { UserDataForm } from '../shared/user-data/user-data-form';
 import { SignUpService } from './sign-up.service';
 import { IUserUIState } from '@cccsharonparish/mydailydigest';
-import { UserDataComponent } from '../shared/user-data/user-data.component';
 
 @Component({
   selector: 'app-sign-up',
