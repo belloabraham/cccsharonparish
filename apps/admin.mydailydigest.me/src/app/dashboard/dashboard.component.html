@@ -37,9 +37,9 @@
                     </strong>
                 </ng-container>
                 <ng-container *ngIf="!last">
-                    <button *tuiItem tuiLink [routerLink]="item.url" type="button">
+                    <a *tuiItem tuiLink [routerLink]="item.url" type="button" >
                         {{ item.label }}
-                    </button>
+                    </a>
                 </ng-container>
             </ng-container>
         </tui-breadcrumbs>
