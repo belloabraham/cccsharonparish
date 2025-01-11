@@ -14,6 +14,7 @@ import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { DashboardService, IBreadCrumb } from './dashboard.service';
 import {
   AsyncPipe,
+  NgClass,
   NgFor,
   NgIf,
   NgOptimizedImage,
@@ -70,6 +71,7 @@ import { distinctUntilChanged, filter, Subscription } from 'rxjs';
     TuiFallbackSrcPipe,
     NgTemplateOutlet,
     TuiExpand,
+    NgClass
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',

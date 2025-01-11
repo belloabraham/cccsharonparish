@@ -1,9 +1,28 @@
+@use 'common/mixins/breakpoint';
+
 .dashboard-root {
   display: grid;
   height: 100dvh;
   width: 100dvw;
   grid-template-rows: auto 1fr;
   background-color: var(--mat-sys-surface);
+}
+
+.route {
+  margin-top: 5rem;
+}
+
+.nav-expand {
+  margin-left: 0;
+  @include breakpoint.large {
+    margin-left: 14.375rem;
+  }
+}
+.nav-collapse {
+  margin-left: 0;
+  @include breakpoint.large {
+    margin-left: 3rem;
+  }
 }
 
 tui-drawer {
@@ -25,7 +44,8 @@ tui-drawer {
 }
 
 .aside {
-  padding-top: 2.5rem;
+  position: fixed !important;
+  height: calc(100dvh - 3rem);
   a,
   button {
     padding-inline-start: 0.4rem;
@@ -77,11 +97,12 @@ tui-drawer {
   }
 }
 
-.page-title {
+.dashboard-title {
   display: grid;
   grid-template-columns: auto auto;
   gap: 0.5rem;
   align-items: center;
+  justify-items: center;
   h4 {
     font-size: 1.2rem;
   }

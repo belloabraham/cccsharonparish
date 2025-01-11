@@ -11,12 +11,15 @@
         <ng-container *ngTemplateOutlet="mobileDrawer"></ng-container>
         }
 
-        <main tuiNavigationMain class="!block">
+        <main tuiNavigationMain [ngClass]="{'nav-expand': expandSideNav(), 'nav-collapse': !expandSideNav()}"
+            class="!block">
             <!-- Top Navigation -->
             <ng-container *ngTemplateOutlet="topNavigation"></ng-container>
 
             <!-- Main Routes -->
-            <router-outlet></router-outlet>
+            <div class="route">
+                <router-outlet></router-outlet>
+            </div>
         </main>
     </div>
 
@@ -45,7 +48,7 @@
 
 <!-- Header -->
 <ng-template #header>
-    <header *transloco="let t" tuiNavigationHeader class="flex justify-between">
+    <header *transloco="let t" tuiNavigationHeader class="flex justify-between items-center !fixed top-0">
 
         <div class="lg:hidden flex gap-2">
             <button (click)="openSideDrawer.set(true)" class="!text-white" mat-icon-button>
@@ -55,7 +58,7 @@
         </div>
 
 
-        <a [routerLink]="ROUTE.ROOT" class="page-title">
+        <a [routerLink]="ROUTE.ROOT" class="dashboard-title">
             <div class="logo flex justify-center items-center">
                 <img width="80" height="75" ngSrc="/images/global/logo.png" priority>
             </div>
@@ -159,7 +162,7 @@
 
 <!-- Desktop Side Nav  -->
 <ng-template #desktopSideNav>
-    <aside (click)="closeSideDrawer()" *transloco="let t" class="!md:pt-8 !pb-4 aside"
+    <aside (click)="closeSideDrawer()" *transloco="let t" class="!pt-8 !pb-4 aside"
         [tuiNavigationAside]="expandSideNav()">
 
         <a tuiAsideItem matRipple [routerLink]="[ROUTE.PUBLISHED]">
