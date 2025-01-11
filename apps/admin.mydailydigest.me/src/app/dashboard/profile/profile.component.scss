@@ -1,5 +1,40 @@
 @use 'common/mixins/breakpoint';
 
+.add-profile {
+  border-radius: 50%;
+  bottom: -10px;
+  background: var(--mat-sys-primary);
+  color: white;
+  padding: 0.5rem;
+}
+
+.loader {
+  bottom: -10px;
+  background: var(--mat-sys-surface);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.submit-btn {
+  width: 15rem;
+}
+
+.file {
+  margin-bottom: 2rem;
+}
+
+.image-upload {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  .content {
+    img {
+      width: 6.5rem;
+      height: auto;
+    }
+  }
+}
 .card {
   width: 100%;
   @include breakpoint.medium {

@@ -1,6 +1,40 @@
-<h5 class="page-title">Profile</h5>
+<div *transloco="let t" class="profile">
 
-<div *transloco="let t" class="mat-elevation-z1 p-4 card">
-    <app-user-data />
+    <h5 class="page-title">{{t(KEY.PROFILE)}}</h5>
 
+    <div class="mat-elevation-z1 p-4 card">
+
+        <div class="file">
+            <label tuiInputFiles class="image-upload">
+                <input tuiInputFiles accept="image/*" [formControl]="control" />
+                <ng-template let-dragged>
+                    <div *ngIf="dragged; else base" class="content">
+                        <tui-avatar appearance="secondary" src="@tui.droplet" />
+                        <div>
+                            {{t(KEY.DROP_IT)}}
+                        </div>
+                    </div>
+                    <ng-template #base>
+                        <div class="content">
+                            @if (imageUrl()) {
+                            <img width="50" height="50" alt="Profile Image" [ngSrc]="imageUrl()!" priority>
+                            <div *ngIf="!uploadingProfileImage()" class="absolute z-20 right-1 add-profile">
+                                <tui-icon icon="@tui.user-round-pen" />
+                            </div>
+                            <tui-loader *ngIf="uploadingProfileImage()" size="l"
+                                class="!absolute z-20 right-1 loader" />
+                            }@else {
+                            <tui-icon icon="@tui.user-round-plus" />
+                            }
+                        </div>
+                    </ng-template>
+                </ng-template>
+            </label>
+        </div>
+
+        <app-user-data #userDataForm />
+
+        <button [disabled]="isLoading()" (click)="onSubmit(userDataForm.form)" mat-flat-button
+            class="submit-btn mat-elevation-z1 mt-4">{{t(KEY.UPDATE)}}</button>
+    </div>
 </div>

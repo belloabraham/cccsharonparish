@@ -31,10 +31,13 @@
   "light": "Light",
   "dark": "Dark",
   "device": "Device",
-  "profile": "Profile",
   "logout": "Logout",
   "daily_digest": "Daily Digest",
   "dashboard": "Dashboard",
+
+  "profile": "Profile",
+  "drop_it": "Drop it",
+  "update":"Update",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",
