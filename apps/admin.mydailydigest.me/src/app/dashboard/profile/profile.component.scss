@@ -2,14 +2,14 @@
 
 .add-profile {
   border-radius: 50%;
-  bottom: -10px;
+  bottom: 0;
   background: var(--mat-sys-primary);
   color: white;
   padding: 0.5rem;
 }
 
 .loader {
-  bottom: -10px;
+  bottom: 0;
   background: var(--mat-sys-surface);
   border-radius: 50%;
   width: 2.5rem;
@@ -25,12 +25,13 @@
 }
 
 .image-upload {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
+  padding: 0;
   .content {
     img {
-      width: 6.5rem;
+      width: 6rem;
       height: auto;
     }
   }

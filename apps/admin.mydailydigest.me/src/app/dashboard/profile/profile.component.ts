@@ -31,7 +31,7 @@ import { HttpRequestProgressIndicatorService } from '../../services';
 export class ProfileComponent {
   KEY = PROFILE_STRING_RESOURCE_KEY;
   protected readonly control = new FormControl<TuiFileLike | null>(null);
-  imageUrl = signal<string | undefined>(undefined);
+  imageUrl = signal<string | undefined>('images/global/logo.png');
   uploadingProfileImage = signal<boolean>(false);
   private readonly httpRequestProgressIndicatorService = inject(
     HttpRequestProgressIndicatorService

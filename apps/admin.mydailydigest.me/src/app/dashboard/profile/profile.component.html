@@ -17,7 +17,8 @@
                     <ng-template #base>
                         <div class="content">
                             @if (imageUrl()) {
-                            <img width="50" height="50" alt="Profile Image" [ngSrc]="imageUrl()!" priority>
+                            <img width="50" height="50" alt="Profile Image" class="rounded-full object-cover"
+                                [ngSrc]="imageUrl()!" priority>
                             <div *ngIf="!uploadingProfileImage()" class="absolute z-20 right-1 add-profile">
                                 <tui-icon icon="@tui.user-round-pen" />
                             </div>
