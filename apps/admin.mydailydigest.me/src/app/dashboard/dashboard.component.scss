@@ -5,11 +5,20 @@
   height: 100dvh;
   width: 100dvw;
   grid-template-rows: auto 1fr;
-  background-color: var(--mat-sys-surface);
+  background: var(--mat-sys-surface-variant);
+}
+nav {
+  background: var(--mat-sys-surface-container-low);
 }
 
 .route {
   margin-top: 5rem;
+}
+
+nav,
+.route {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .nav-expand {
@@ -80,7 +89,7 @@ tui-drawer {
   color: white;
   header {
     .title {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
   }
   mat-icon {
