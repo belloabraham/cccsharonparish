@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
+import { ProfileService } from './profile/profile.service';
 
 const KEY = DASHBOARD_STRING_RESOURCE_KEY;
 
@@ -58,6 +59,7 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: ROUTE.PROFILE,
+        providers: [ProfileService],
         data: {
           breadcrumb: KEY.PROFILE,
         },

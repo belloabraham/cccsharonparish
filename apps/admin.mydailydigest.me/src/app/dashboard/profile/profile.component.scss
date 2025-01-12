@@ -24,14 +24,21 @@
   margin-bottom: 2rem;
 }
 
+$imageSize: 7rem;
 .image-upload {
-  width: 6rem;
-  height: 6rem;
+  width: $imageSize;
+  height: $imageSize;
   border-radius: 50%;
+  border-style: dashed;
+  border-width: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
-  .content {
+  cursor: pointer;
+  .badge {
     img {
-      width: 6rem;
+      width: calc($imageSize - 5rem);
       height: auto;
     }
   }
@@ -39,6 +46,6 @@
 .card {
   width: 100%;
   @include breakpoint.medium {
-    width: 35rem;
+    width: 33rem;
   }
 }
