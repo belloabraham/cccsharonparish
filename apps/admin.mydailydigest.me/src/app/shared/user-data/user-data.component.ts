@@ -18,7 +18,7 @@ import {
 } from '@angular/forms';
 import { AsyncPipe } from '@angular/common';
 import {
-  CustomValidator,
+  CustomValidators,
   LanguageResourceService,
 } from '@cccsharonparish/angular';
 import { UserDataForm } from './user-data-form';
@@ -66,12 +66,12 @@ export class UserDataComponent {
   form!: FormGroup<UserDataForm>;
 
   firstNameFC = new FormControl<string | null>(null, {
-    validators: [CustomValidator.requiredString()],
+    validators: [CustomValidators.requiredString()],
     updateOn: 'blur',
   });
 
   lastNameFC = new FormControl<string | null>(null, {
-    validators: [CustomValidator.requiredString()],
+    validators: [CustomValidators.requiredString()],
     updateOn: 'blur',
   });
 
@@ -88,7 +88,7 @@ export class UserDataComponent {
   initForm() {
     this.phoneNoFC = new FormControl<string | null>(null, {
       validators: [
-        CustomValidator.validPhoneNumber({
+        CustomValidators.validPhoneNumber({
           other: this.languageService.getString(this.KEY.INVALID_PHONE_MSG),
         }),
       ],

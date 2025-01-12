@@ -5,7 +5,8 @@
     <div class="mat-elevation-z1 p-4 card">
 
         <div class="file">
-            <div (click)="fileInput.click()" class="image-upload relative">
+            <div (click)="fileInput.click()" class="image-upload relative"
+                [class.border-red-600]="profileImageFC.hasError('maxFileSize')">
                 <input #fileInput sddFileUpload accept="image/*" type="file" hidden [formControl]="profileImageFC" />
                 <div class="badge">
                     @if (imageUrl()) {
@@ -20,6 +21,9 @@
                     <tui-loader *ngIf="uploadingProfileImage()" size="l" class="!absolute z-20 right-1 loader" />
                 </div>
             </div>
+            @let errorMessage = profileImageFC.getError('maxFileSize');
+            <p *ngIf="errorMessage" class="text-red-500 pt-2">
+                {{errorMessage}}</p>
         </div>
 
         <app-user-data #userDataForm />

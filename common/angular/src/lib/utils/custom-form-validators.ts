@@ -1,9 +1,9 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import parsePhoneNumber from 'libphonenumber-js';
 
-export class CustomValidator {
+export class CustomValidators {
   static requiredString(
-    error: Record<'error', string> = { error: 'Enter a valid value' }
+    error: Record<string, string> = { error: 'Enter a valid value' }
   ): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       const hasWhitespace = (control.value || '').trim().length === 0;
