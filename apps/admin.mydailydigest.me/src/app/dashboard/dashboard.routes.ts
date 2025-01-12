@@ -68,16 +68,6 @@ export const DASHBOARD_ROUTES: Routes = [
             (mod) => mod.ProfileComponent
           ),
       },
-      {
-        path: ROUTE.SETTINGS,
-        data: {
-          breadcrumb: KEY.SETTINGS,
-        },
-        loadComponent: () =>
-          import('./settings/settings.component').then(
-            (mod) => mod.SettingsComponent
-          ),
-      },
     ],
   },
 ];
