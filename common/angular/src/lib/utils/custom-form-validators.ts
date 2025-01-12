@@ -3,7 +3,7 @@ import parsePhoneNumber from 'libphonenumber-js';
 
 export class CustomValidator {
   static requiredString(
-    error: Record<string, string> = { error: 'Enter a valid value' }
+    error: Record<'error', string> = { error: 'Enter a valid value' }
   ): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       const hasWhitespace = (control.value || '').trim().length === 0;
@@ -23,6 +23,20 @@ export class CustomValidator {
         return number?.isValid ? null : error;
       }
 
+      return null;
+    };
+  }
+
+  static maxFileSize(
+    maxSizeInBytes: number,
+    error: Record<string, string> = { error: 'Enter a valid value' }
+  ): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      const file = control.value instanceof File ? control.value : null;
+
+      if (file && file.size > maxSizeInBytes) {
+        return error;
+      }
       return null;
     };
   }

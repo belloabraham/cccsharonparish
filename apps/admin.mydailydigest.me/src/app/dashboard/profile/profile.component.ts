@@ -1,6 +1,5 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { SharedModule, UserDataComponent } from '../../shared';
-import { TuiFileLike, TuiFiles } from '@taiga-ui/kit';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { TuiIcon, TuiLoader } from '@taiga-ui/core';
 import { PROFILE_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
@@ -9,7 +8,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { UserDataForm } from '../../shared/user-data/user-data-form';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpRequestProgressIndicatorService } from '../../services';
-import { SDDFileUploadDirective } from '@cccsharonparish/angular';
+import {
+  CustomValidator,
+  SDDFileUploadDirective,
+} from '@cccsharonparish/angular';
 import { IUserUIState } from '@cccsharonparish/mydailydigest';
 import { ProfileService } from './profile.service';
 
@@ -18,7 +20,6 @@ import { ProfileService } from './profile.service';
   imports: [
     SharedModule,
     UserDataComponent,
-    TuiFiles,
     ReactiveFormsModule,
     TuiIcon,
     NgIf,
@@ -34,20 +35,33 @@ import { ProfileService } from './profile.service';
 export class ProfileComponent implements OnInit {
   KEY = PROFILE_STRING_RESOURCE_KEY;
   profileService = inject(ProfileService);
-  protected readonly profileImageFC = new FormControl<TuiFileLike | null>(null);
+  private readonly MAX_ALLOWED_PROFILE_IMAGE_SIZE_IN_BYTES = 300 * 1024; //100Kb
+  protected readonly profileImageFC = new FormControl<File | null>(null, [
+    CustomValidator.maxFileSize(this.MAX_ALLOWED_PROFILE_IMAGE_SIZE_IN_BYTES, {
+      error: `Image is too large, image should not be greater than ${
+        this.MAX_ALLOWED_PROFILE_IMAGE_SIZE_IN_BYTES / 1024
+      }Kb, reduce image size or use another image and re-upload`,
+    }),
+  ]);
+
   imageUrl = signal<string | undefined>(undefined);
   uploadingProfileImage = signal<boolean>(false);
   private readonly httpRequestProgressIndicatorService = inject(
     HttpRequestProgressIndicatorService
   );
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
-  private readonly MAX_ALLOWED_PROFILE_IMAGE_SIZE_IN_BYTES = 100 * 1024; //100Kb
 
   ngOnInit(): void {
     this.profileImageFC.valueChanges.subscribe({
-      next: () => {},
+      next: (file) => {
+        if (file) {
+          this.uploadImage(file);
+        }
+      },
     });
   }
+
+  uploadImage(file: File) {}
 
   onSubmit(form: FormGroup<UserDataForm>) {
     form.markAllAsTouched();
@@ -67,14 +81,5 @@ export class ProfileComponent implements OnInit {
       next: () => {},
       error: (error) => {},
     });
-  }
-
-  onFileUpload(e: any) {
-    if (e.target.files && e.target.files[0]) {
-      const file: File = e.target.files[0];
-      if (file.size > this.MAX_ALLOWED_PROFILE_IMAGE_SIZE_IN_BYTES) {
-      } else {
-      }
-    }
   }
 }

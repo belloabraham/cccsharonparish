@@ -10,7 +10,7 @@
                 <div class="badge">
                     @if (imageUrl()) {
                     <img width="50" height="50" alt="Profile Image" class="rounded-full object-cover"
-                        [ngSrc]="imageUrl()!" priority>
+                        [ngSrc]="imageUrl()!">
                     <div *ngIf="!uploadingProfileImage()" class="absolute z-20 right-1 add-profile">
                         <tui-icon icon="@tui.user-round-pen" />
                     </div>
