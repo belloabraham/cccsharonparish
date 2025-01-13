@@ -1,4 +1,4 @@
-@use 'common/mixins/breakpoint';
+@use 'breakpoints';
 
 .signup {
   min-height: 100%;
@@ -25,7 +25,7 @@
     width: 90%;
   }
 
-  @include breakpoint.large {
+  @include breakpoints.large {
     .submit {
       width: 31rem;
     }
@@ -35,7 +35,7 @@
 .submit {
   button {
     width: 70%;
-    @include breakpoint.medium {
+    @include breakpoints.medium {
       width: 60%;
     }
   }

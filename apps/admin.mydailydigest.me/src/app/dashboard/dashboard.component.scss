@@ -1,4 +1,4 @@
-@use 'common/mixins/breakpoint';
+@use 'breakpoints';
 
 .dashboard-root {
   display: grid;
@@ -22,13 +22,13 @@ nav,
 
 .nav-expand {
   margin-left: 0;
-  @include breakpoint.large {
+  @include breakpoints.large {
     margin-left: 14.375rem;
   }
 }
 .nav-collapse {
   margin-left: 0;
-  @include breakpoint.large {
+  @include breakpoints.large {
     margin-left: 3rem;
   }
 }

@@ -1,9 +1,10 @@
+@use 'breakpoints';
 .nav {
   background: var(--mat-sys-surface-container-low);
   border-top-left-radius: 0.625rem;
   border-top-right-radius: 0.625rem;
 
   button {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 }
