@@ -1,6 +1,30 @@
-<div *transloco="let t">
-        New content works
+<div *transloco="let t" class="new-content">
+        <h5 class="page-title">{{title()}}</h5>
 
-        <p>{{languageCode()}}</p>
+        <div style="height: 500px;" class="card inline-block !p-0">
+                <nav class="nav px-4 py-2 flex gap-4 items-center">
+
+                        <tui-textfield class="flex-1" tuiTextfieldSize="s" iconStart="@tui.search">
+                                <input [placeholder]="t(KEY.SEARCH_PLACEHOLDER)" tuiTextfield />
+                        </tui-textfield>
+
+                        <button mat-mini-fab>
+                                <mat-icon fontIcon="add-note-outline"></mat-icon>
+                        </button>
+                </nav>
+
+                <hr class="border-">
+
+
+                <div class="p-4">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam possimus magnam quo magni ad quia
+                        voluptatem ratione nobis explicabo, porro cum! Labore voluptates laudantium excepturi non cum
+                        ipsam
+                        cupiditate eum.
+
+                </div>
+
+
+        </div>
 
 </div>

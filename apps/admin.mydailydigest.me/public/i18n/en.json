@@ -37,7 +37,9 @@
 
   "profile": "Profile",
   "drop_it": "Drop it",
-  "update":"Update",
+  "update": "Update",
+
+  "search_placeholder": "Type to search",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",

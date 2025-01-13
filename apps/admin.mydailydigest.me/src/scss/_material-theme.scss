@@ -35,6 +35,7 @@ $form-field: mat.define-theme(
   @include mat.input-theme($app-theme);
   @include mat.icon-theme($app-theme);
   @include mat.menu-theme($app-theme);
+  @include mat.fab-theme($app-theme);
   @include mat.form-field-density($form-field);
   @include mat.progress-bar-theme($app-theme);
 
