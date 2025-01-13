@@ -24,8 +24,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.plus-fill:before {
+  content: '\e912';
+}
 .user-circle-outline:before {
-  content: "\e911";
+  content: '\e911';
 }
 .chevron-down-fill:before {
   content: '\e90f';

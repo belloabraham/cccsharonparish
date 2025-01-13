@@ -47,6 +47,12 @@ $form-field: mat.define-theme(
   );
 }
 
+//Mat icon overrides
+.mat-icon {
+  width: auto !important;
+  height: auto !important;
+}
+
 body {
   margin: 0;
   font-family: $primary-font, sans-serif;
