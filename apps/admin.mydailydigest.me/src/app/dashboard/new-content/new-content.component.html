@@ -1,7 +1,10 @@
 <div *transloco="let t" class="new-content">
         <h5 class="page-title">{{title()}}</h5>
 
-        <div class="card inline-block !p-0">
+        <app-empty-status [description]="t(KEY.NO_ADDED_CONTENT_MSG, {value: title()})" />
+
+
+        <!-- <div class="card inline-block !p-0">
                 <nav class="nav px-4 py-2 flex gap-4 items-center">
 
                         <tui-textfield class="flex-1" tuiTextfieldSize="s" iconStart="@tui.search">
@@ -15,13 +18,9 @@
 
                 <hr class="border-">
 
-
                 <div class="p-4">
-                        <app-empty-status [description]="t(KEY.NO_ADDED_CONTENT_MSG, {value: title()})" />
                 </div>
-
-
-        </div>
+        </div> -->
 
 </div>
 

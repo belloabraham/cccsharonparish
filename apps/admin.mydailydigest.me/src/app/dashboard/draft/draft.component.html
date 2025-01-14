@@ -1,3 +1,5 @@
-<div *transloco="let t">
-    Draft works
+<div *transloco="let t" class="draft">
+        <h5 class="page-title">{{t(KEY.DRAFT)}}</h5>
+
+    <app-empty-status [description]="t(KEY.NO_DRAFT_CONTENT_MSG)" />
 </div>
