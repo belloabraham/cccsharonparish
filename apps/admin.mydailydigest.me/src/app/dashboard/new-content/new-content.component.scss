@@ -1,6 +1,13 @@
 @use 'breakpoints';
 @use '@angular/material' as mat;
 
+.card {
+  width: 100%;
+  @include breakpoints.large {
+    width: 45rem;
+  }
+}
+
 .fab {
   @include mat.fab-overrides(
     (

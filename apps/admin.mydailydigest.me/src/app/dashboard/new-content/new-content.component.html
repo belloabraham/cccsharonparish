@@ -17,10 +17,7 @@
 
 
                 <div class="p-4">
-
-                        <app-empty-status
-                                description=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe cumque labore" />
-
+                        <app-empty-status [description]="t(KEY.NO_ADDED_CONTENT_MSG, {value: title()})" />
                 </div>
 
 

@@ -40,6 +40,9 @@
   "update": "Update",
 
   "search_placeholder": "Type to search",
+  "no_added_content_msg": "You have not added any {{value}} content, click the plus button to add one",
+
+  "no_published_content_msg": "You have not published any content, add new content, published the content, and view them here",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",

@@ -2,13 +2,17 @@
 
 :host {
   --image-width: 9rem;
-  --image-width-lg: 12rem;
+  --image-width-lg: 10rem;
+  --description-size: 1rem;
 }
 
 .empty-status {
   display: flex;
   flex-direction: column;
   align-items: center;
+  P {
+    font-size: var(--description-size);
+  }
   .img {
     width: var(--image-width);
     height: auto;
