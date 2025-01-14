@@ -5,10 +5,11 @@ import { Language } from '@cccsharonparish/mydailydigest';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CONTENT_STRING_RESOURCE_KEYS } from './i18n/string-res-keys';
+import { EmptyStatusComponent } from '../shared';
 
 @Component({
   selector: 'app-new-content',
-  imports: [SharedModule, TuiTextfield, MatButtonModule, MatIconModule],
+  imports: [SharedModule, TuiTextfield, MatButtonModule, MatIconModule, EmptyStatusComponent],
   templateUrl: './new-content.component.html',
   styleUrl: './new-content.component.scss',
 })

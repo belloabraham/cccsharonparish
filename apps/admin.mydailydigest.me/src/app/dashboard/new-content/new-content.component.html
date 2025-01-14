@@ -8,7 +8,7 @@
                                 <input [placeholder]="t(KEY.SEARCH_PLACEHOLDER)" tuiTextfield />
                         </tui-textfield>
 
-                        <button mat-mini-fab>
+                        <button class="fab" mat-mini-fab>
                                 <mat-icon fontIcon="plus-fill"></mat-icon>
                         </button>
                 </nav>
@@ -17,10 +17,9 @@
 
 
                 <div class="p-4">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam possimus magnam quo magni ad quia
-                        voluptatem ratione nobis explicabo, porro cum! Labore voluptates laudantium excepturi non cum
-                        ipsam
-                        cupiditate eum.
+
+                        <app-empty-status
+                                description=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe cumque labore" />
 
                 </div>
 
@@ -29,6 +28,6 @@
 
 </div>
 
-<button class="!fixed right-4 bottom-4 mobile-fab" mat-fab>
+<button class="!fixed right-4 bottom-4 mobile-fab fab" mat-fab>
         <mat-icon fontIcon="plus-fill"></mat-icon>
 </button>

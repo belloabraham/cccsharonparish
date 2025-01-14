@@ -1,4 +1,15 @@
 @use 'breakpoints';
+@use '@angular/material' as mat;
+
+.fab {
+  @include mat.fab-overrides(
+    (
+      container-color: var(--mat-sys-tertiary-fixed),
+      small-container-color: var(--mat-sys-tertiary-fixed),
+    )
+  );
+}
+
 .nav {
   background: var(--mat-sys-surface-container-low);
   border-top-left-radius: 0.625rem;
@@ -6,5 +17,12 @@
 
   button {
     font-size: 1.5rem;
+  }
+}
+
+.mobile-fab {
+  font-size: 2rem;
+  @include breakpoints.large {
+    display: none;
   }
 }

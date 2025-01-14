@@ -1,0 +1,19 @@
+@use 'breakpoints';
+
+:host {
+  --image-width: 9rem;
+  --image-width-lg: 12rem;
+}
+
+.empty-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .img {
+    width: var(--image-width);
+    height: auto;
+    @include breakpoints.large {
+      width: var(--image-width-lg);
+    }
+  }
+}
