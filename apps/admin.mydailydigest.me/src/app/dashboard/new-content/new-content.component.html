@@ -1,17 +1,17 @@
 <div *transloco="let t" class="new-content">
         <h5 class="page-title">{{title()}}</h5>
 
-        <app-empty-status [description]="t(KEY.NO_ADDED_CONTENT_MSG, {value: title()})" />
+        <!-- <app-empty-status [description]="t(KEY.NO_ADDED_CONTENT_MSG, {value: title()})" /> -->
 
 
-        <!-- <div class="card inline-block !p-0">
+        <div class="card inline-block !p-0">
                 <nav class="nav px-4 py-2 flex gap-4 items-center">
 
                         <tui-textfield class="flex-1" tuiTextfieldSize="s" iconStart="@tui.search">
                                 <input [placeholder]="t(KEY.SEARCH_PLACEHOLDER)" tuiTextfield />
                         </tui-textfield>
 
-                        <button class="fab" mat-mini-fab>
+                        <button (click)="openContentDialog()" class="fab" mat-mini-fab>
                                 <mat-icon fontIcon="plus-fill"></mat-icon>
                         </button>
                 </nav>
@@ -20,10 +20,12 @@
 
                 <div class="p-4">
                 </div>
-        </div> -->
+        </div>
+
+        <!-- <app-content-form /> -->
 
 </div>
 
-<button class="!fixed right-4 bottom-4 mobile-fab fab" mat-fab>
+<button (click)="openContentDialog()" class="!fixed right-4 bottom-4 mobile-fab fab" mat-fab>
         <mat-icon fontIcon="plus-fill"></mat-icon>
 </button>

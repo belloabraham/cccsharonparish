@@ -10,3 +10,20 @@
 [tuiAppearance][data-appearance='textfield'] {
   --t-shadow: none;
 }
+
+tui-dialog {
+  header.t-header {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.5rem !important;
+    background: var(--mat-sys-surface-container-low);
+  }
+
+  button.t-close {
+    &::before {
+      font-size: 1.5rem !important;
+      background: var(--mat-sys-tertiary-fixed);
+    }
+
+    top: 0.3rem !important;
+  }
+}
