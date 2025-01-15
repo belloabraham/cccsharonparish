@@ -1,14 +1,11 @@
 import { TuiRoot } from '@taiga-ui/core';
 import { Component, inject, OnDestroy, OnInit, Signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ThemeService } from '@cccsharonparish/angular';
-import { Subscription } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 import {
   BaseAppComponent,
   ROUTE,
-  Settings,
 } from '@cccsharonparish/mydailydigest';
 import { ConnectionStateUtil } from '@cccsharonparish/core';
 import { toSignal } from '@angular/core/rxjs-interop';

@@ -15,6 +15,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getApp } from '@angular/fire/app';
 import { SignUpService } from './sign-up/sign-up.service';
+import { ContentStore } from './dashboard/new-content/content.store';
 
 export const appRoutes: Route[] = [
   {
@@ -44,6 +45,7 @@ export const appRoutes: Route[] = [
       },
       provideStorage(() => getStorage(getApp())),
       DashboardService,
+      ContentStore
     ],
     // canMatch: [
     //   (router: Router) => {

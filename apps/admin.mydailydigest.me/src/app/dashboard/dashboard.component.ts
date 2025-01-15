@@ -37,7 +37,7 @@ import {
   TuiExpand,
 } from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
-import { Language, ROUTE } from '@cccsharonparish/mydailydigest';
+import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { TuiItem } from '@taiga-ui/cdk';
 import { MatMenuModule } from '@angular/material/menu';
 import { ThemeType } from '@cccsharonparish/angular';
@@ -71,7 +71,7 @@ import { distinctUntilChanged, filter, Subscription } from 'rxjs';
     TuiFallbackSrcPipe,
     NgTemplateOutlet,
     TuiExpand,
-    NgClass
+    NgClass,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
@@ -96,36 +96,23 @@ export class DashboardComponent extends CommonComponent {
   themes: any[] = [this.KEY.LIGHT, this.KEY.DARK, this.KEY.DEVICE];
   navEndSubscription = Subscription.EMPTY;
   navStartSubscription = Subscription.EMPTY;
-
   private activatedRoute = inject(ActivatedRoute);
-
-  supportedLanguages = signal<Language[]>([
-    {
-      label: 'Yoruba',
-      code: 'yr',
-    },
-    {
-      label: 'English',
-      code: 'en',
-    },
-    {
-      label: 'French',
-      code: 'fr',
-    },
-  ]);
 
   constructor() {
     super();
     this.onNavigationStart();
     this.onNavigationEnd();
     effect(() => {
+      const supportedLanguages = this.appStore.supportedLanguages().languages;
       if (this.appStore.language().loaded) {
-        this.breadcrumbs.set(
-          this.dashboardService.createBreadCrumbs(
-            this.activatedRoute,
-            this.supportedLanguages()
-          )
-        );
+        if (supportedLanguages.length > 0) {
+          this.breadcrumbs.set(
+            this.dashboardService.createBreadCrumbs(
+              this.activatedRoute,
+              supportedLanguages
+            )
+          );
+        }
       }
     });
   }
@@ -144,7 +131,7 @@ export class DashboardComponent extends CommonComponent {
         this.breadcrumbs.set(
           this.dashboardService.createBreadCrumbs(
             this.activatedRoute,
-            this.supportedLanguages()
+            this.appStore.supportedLanguages().languages
           )
         );
       });

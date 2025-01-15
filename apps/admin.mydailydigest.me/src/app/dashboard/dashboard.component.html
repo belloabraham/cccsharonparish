@@ -25,6 +25,7 @@
 
 </div>
 
+@let supportedLanguages = appStore.supportedLanguages().languages;
 
 <!-- Top Navigation -->
 <ng-template #topNavigation>
@@ -126,10 +127,10 @@
                 </span>
                 <mat-icon [fontIcon]="expandMobileDropdown() ? 'chevron-up-fill' :'chevron-down-fill'"></mat-icon>
             </button>
-            <tui-expand *ngIf="supportedLanguages().length > 0" [expanded]="expandMobileDropdown()">
+            <tui-expand *ngIf="supportedLanguages.length > 0" [expanded]="expandMobileDropdown()">
                 <ng-template tuiExpandContent>
                     <div class="ps-10">
-                        <a *ngFor="let language of supportedLanguages()" [routerLink]="[ROUTE.NEW, language.code]"
+                        <a *ngFor="let language of supportedLanguages" [routerLink]="[ROUTE.NEW, language.code]"
                             routerLinkActive="link-active" class="nav-item !items-center !p-3" matRipple>
                             {{language.label}}
                         </a>
@@ -150,7 +151,8 @@
                     {{t(KEY.EDITORS)}}
                 </a>
 
-                <a [routerLink]="[ROUTE.PROFILE]" routerLinkActive="link-active-light" class="nav-item" matRipple type="button">
+                <a [routerLink]="[ROUTE.PROFILE]" routerLinkActive="link-active-light" class="nav-item" matRipple
+                    type="button">
                     <mat-icon fontIcon="user-circle-outline"></mat-icon>
                     {{t(KEY.PROFILE)}}
                 </a>
@@ -171,14 +173,14 @@
             {{t(KEY.PUBLISHED)}}
         </a>
 
-        <tui-aside-group *ngIf="supportedLanguages().length > 0">
-            <button [routerLink]="[ROUTE.NEW, supportedLanguages()[0].code]" automation-id="setting" tuiAsideItem
+        <tui-aside-group *ngIf="supportedLanguages.length > 0">
+            <button [routerLink]="[ROUTE.NEW, supportedLanguages[0].code]" automation-id="setting" tuiAsideItem
                 tuiChevron matRipple type="button">
                 <mat-icon fontIcon="add-note-outline"></mat-icon>
                 {{t(KEY.ADD_NEW)}}
                 <ng-template>
 
-                    <a *ngFor="let language of supportedLanguages()" [routerLink]="[ROUTE.NEW, language.code]"
+                    <a *ngFor="let language of supportedLanguages" [routerLink]="[ROUTE.NEW, language.code]"
                         tuiAsideItem matRipple type="button" class="content">
                         {{language.label}}
                     </a>

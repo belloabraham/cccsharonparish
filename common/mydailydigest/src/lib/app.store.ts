@@ -7,11 +7,17 @@ import {
 } from '@ngrx/signals';
 import { inject } from '@angular/core';
 import { LANGUAGE, LanguageResourceService } from '@cccsharonparish/angular';
+import { Language } from './models';
 
 type AppState = {
   language: {
     isLoading: boolean;
     loaded: boolean;
+    error: any;
+  };
+  supportedLanguages: {
+    isLoading: boolean;
+    languages: Language[];
     error: any;
   };
 };
@@ -20,6 +26,11 @@ const initialState: AppState = {
   language: {
     loaded: false,
     isLoading: true,
+    error: null,
+  },
+  supportedLanguages: {
+    isLoading: true,
+    languages: [],
     error: null,
   },
 };
@@ -48,10 +59,39 @@ export const AppStore = signalStore(
         },
       });
     },
+    loadSupportedLanguages(): void {
+      patchState(store, (state) => ({
+        ...state,
+        supportedLanguages: { languages: [], isLoading: true, error: null },
+      }));
+
+      patchState(store, (state) => ({
+        ...state,
+        supportedLanguages: {
+          languages: [
+            {
+              label: 'Yoruba',
+              code: 'yr',
+            },
+            {
+              label: 'English',
+              code: 'en',
+            },
+            {
+              label: 'French',
+              code: 'fr',
+            },
+          ],
+          isLoading: false,
+          error: null,
+        },
+      }));
+    },
   })),
   withHooks({
     onInit(store) {
       store.loadLanguageResource();
+      store.loadSupportedLanguages();
     },
   })
 );

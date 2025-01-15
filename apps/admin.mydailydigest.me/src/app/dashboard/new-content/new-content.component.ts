@@ -21,6 +21,8 @@ import { ContentFormComponent } from './content-form/content-form.component';
 import { TuiDialogService } from '@taiga-ui/core';
 import { Subscription } from 'rxjs';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
+import { ContentStore } from './content.store';
+import { AppStore } from 'common/mydailydigest/src/lib/app.store';
 
 @Component({
   selector: 'app-new-content',
@@ -30,7 +32,7 @@ import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
     MatButtonModule,
     MatIconModule,
     EmptyStatusComponent,
-    // ContentFormComponent,
+    ContentFormComponent,
   ],
   templateUrl: './new-content.component.html',
   styleUrl: './new-content.component.scss',
@@ -40,28 +42,19 @@ export class NewContentComponent implements OnDestroy {
   private dialogService = inject(TuiDialogService);
   private injector = inject(Injector);
   contentFormDialogSubscription = Subscription.EMPTY;
+  contentStore = inject(ContentStore);
+  appStore = inject(AppStore);
+
+  sddForSelectedLanguage = signal<ISpiritualDailyDigest[]>([]);
 
   languageCode = input.required<string>({
     alias: 'languageCode',
   });
   title = signal('');
-  supportedLanguages = signal<Language[]>([
-    {
-      label: 'Yoruba',
-      code: 'yr',
-    },
-    {
-      label: 'English',
-      code: 'en',
-    },
-    {
-      label: 'French',
-      code: 'fr',
-    },
-  ]);
+
   constructor() {
     effect(() => {
-      const title = this.supportedLanguages().filter(
+      const title = this.appStore.supportedLanguages().languages.filter(
         (lang) => lang.code === this.languageCode()
       )[0].label;
       this.title.set(title);
