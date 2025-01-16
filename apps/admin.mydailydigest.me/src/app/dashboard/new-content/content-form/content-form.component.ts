@@ -22,7 +22,6 @@ import { REGEX } from '@cccsharonparish/mydailydigest';
 import { HttpRequestProgressIndicatorService } from '../../../services';
 import { TextFieldModule } from '@angular/cdk/text-field';
 
-
 @Component({
   selector: 'app-content-form',
   imports: [
@@ -103,6 +102,8 @@ export class ContentFormComponent implements OnInit {
   }
 
   onSubmit() {
-    
+    this.form.markAllAsTouched();
+    if (this.form.valid) {
+    }
   }
 }

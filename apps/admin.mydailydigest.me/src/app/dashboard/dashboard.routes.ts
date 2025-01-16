@@ -3,6 +3,7 @@ import { DashboardComponent } from './dashboard.component';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { ProfileService } from './profile/profile.service';
+import { ContentService } from './new-content/content.service';
 
 const KEY = DASHBOARD_STRING_RESOURCE_KEY;
 
@@ -42,6 +43,7 @@ export const DASHBOARD_ROUTES: Routes = [
         data: {
           breadcrumb: KEY.DAILY_DIGEST,
         },
+        providers:[ContentService],
         loadComponent: () =>
           import('./new-content/new-content.component').then(
             (mod) => mod.NewContentComponent
