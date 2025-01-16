@@ -57,7 +57,7 @@
   "message": "Message",
   "tag_placeholder": "Type to add (e.g Faith)",
   "content_req_msg": "Content {{value}} is required",
-  "bible_ref_req_msg": "Bible reference is required",
+  "bible_ref_req_msg": "A valid bible reference is required",
   "ref_key_verse_req_msg": "Bible reference key verse is required",
   "ref_verses_req_msg": "Bible reference verses is required",
   "content_msg_req_msg": "Content message is required",

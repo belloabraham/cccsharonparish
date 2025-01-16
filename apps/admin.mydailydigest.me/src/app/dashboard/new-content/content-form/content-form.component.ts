@@ -4,6 +4,7 @@ import {
   FormGroup,
   ReactiveFormsModule,
   ValidatorFn,
+  Validators,
 } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -17,6 +18,7 @@ import { CONTENT_STRING_RESOURCE_KEYS } from '../i18n/string-res-keys';
 import { TuiNotification } from '@taiga-ui/core';
 import { ContentForm } from './form';
 import { CustomValidators } from '@cccsharonparish/angular';
+import { REGEX } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-content-form',
@@ -41,7 +43,9 @@ export class ContentFormComponent implements OnInit {
 
   readonly topicC = this.getNewStringFC();
 
-  readonly bibleReferenceFC = this.getNewStringFC();
+  readonly bibleReferenceFC = this.getNewStringFC([
+    Validators.pattern(REGEX.BIBLE_REFERENCE),
+  ]);
   readonly referenceVersesFC = this.getNewStringFC();
   readonly referenceKeyVersesFC = this.getNewStringFC();
   readonly messageFC = this.getNewStringFC();
