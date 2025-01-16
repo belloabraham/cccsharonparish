@@ -1,4 +1,15 @@
 export const CONTENT_STRING_RESOURCE_KEYS = {
   SEARCH_PLACEHOLDER: 'search_placeholder',
   NO_ADDED_CONTENT_MSG: 'no_added_content_msg',
+  CONTENT_DATE: 'content_date',
+  TOPIC: 'topic',
+  BIBLE_REFERENCE: 'bible_reference',
+  VERSES: 'verses',
+  KEY_VERSE: 'key_verse',
+  MESSAGE: 'message',
+  TAGS: 'tags',
+  TAG_PLACEHOLDER: 'tag_placeholder',
+  OPTIONAL: 'optional',
+  REQUIRED_FIELD_MESSAGE: 'required_field_msg',
+  UNIQUE_CONTENT_DATE_MESSAGE: 'unique_content_date_msg',
 };

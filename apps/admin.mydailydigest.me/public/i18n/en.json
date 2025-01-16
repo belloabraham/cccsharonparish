@@ -45,7 +45,17 @@
   "no_published_content_msg": "You have not published any content, add new content, published the content, and they will appear here",
 
   "no_draft_content_msg": "You have no saved content ready for publishing, add a new content and it will appear here",
-
+  "topic": "Topic",
+  "verses": "Verses",
+  "optional": "Optional",
+  "tags": "Tags",
+  "unique_content_date_msg": "Ensure each content has a unique date. If two different content share the same date, the second content will replace the first",
+  "required_field_msg": "Fields marked with * are required",
+  "content_date": "Content Date",
+  "key_verse": "Key verse",
+  "bible_reference": "Bible Reference",
+  "message": "Message",
+  "tag_placeholder":"Type to add (e.g Faith)",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",

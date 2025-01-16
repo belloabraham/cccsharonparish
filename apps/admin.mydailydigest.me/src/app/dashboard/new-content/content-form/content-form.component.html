@@ -1,11 +1,67 @@
-<p>
+<form *transloco="let t" class="content-form flex flex-col gap-4">
 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos suscipit earum numquam placeat dolores repellat
-    mollitia perferendis asperiores hic, corrupti ducimus tenetur, dolorem obcaecati magnam ipsam iste pariatur
-    provident quod.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, dolor repudiandae, quisquam porro nesciunt, ratione
-    aperiam repellat nemo tempore ab cumque modi. Iusto ipsa assumenda ducimus voluptatibus eos, velit sequi!
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur officia maiores animi aliquid. Doloribus quasi
-    odit, repudiandae magni ipsam deleniti error alias ab! Tempora distinctio mollitia repudiandae ducimus sapiente
-    cupiditate!
-</p>
+    <tui-notification size="s" appearance="warning">{{t(KEY.UNIQUE_CONTENT_DATE_MESSAGE)}}. <br>
+        {{t(KEY.REQUIRED_FIELD_MESSAGE)}}</tui-notification>
+
+    <mat-form-field class="topic">
+        <mat-label>{{t(KEY.TOPIC)}}</mat-label>
+        <input matInput>
+        <!-- @if (this.emailFC.invalid) {
+                        <mat-error>{{t(KEY.INVALID_EMAIL_MGS)}}</mat-error>
+                        } -->
+    </mat-form-field>
+
+    <div class="flex gap-4">
+        <mat-form-field class="input">
+            <mat-label>{{t(KEY.CONTENT_DATE)}}</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+
+        <mat-form-field class="input">
+            <mat-label>{{t(KEY.BIBLE_REFERENCE)}}</mat-label>
+            <input matInput>
+            <!-- @if (this.emailFC.invalid) {
+                        <mat-error>{{t(KEY.INVALID_EMAIL_MGS)}}</mat-error>
+                        } -->
+        </mat-form-field>
+    </div>
+
+
+
+
+    <mat-form-field class="textarea">
+        <mat-label>{{t(KEY.VERSES)}}</mat-label>
+        <textarea matInput></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="textarea">
+        <mat-label>{{t(KEY.KEY_VERSE)}}</mat-label>
+        <textarea matInput></textarea>
+    </mat-form-field>
+
+
+    <mat-form-field class="textarea">
+        <mat-label>{{t(KEY.MESSAGE)}}</mat-label>
+        <textarea matInput></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="tags">
+        <mat-label>{{t(KEY.TAGS)}}</mat-label>
+        <mat-chip-grid #reactiveChipGrid [formControl]="formControl">
+            @for (keyword of reactiveKeywords(); track keyword) {
+            <mat-chip-row (removed)="removeReactiveKeyword(keyword)">
+                {{keyword}}
+                <button matChipRemove>
+                    <mat-icon>cancel</mat-icon>
+                </button>
+            </mat-chip-row>
+            }
+        </mat-chip-grid>
+        <input [placeholder]="t(KEY.TAG_PLACEHOLDER)" [matChipInputFor]="reactiveChipGrid"
+            (matChipInputTokenEnd)="addReactiveKeyword($event)" />
+    </mat-form-field>
+</form>

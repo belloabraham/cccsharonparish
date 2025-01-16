@@ -23,6 +23,7 @@ import { Subscription } from 'rxjs';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
 import { ContentStore } from './content.store';
 import { AppStore } from 'common/mydailydigest/src/lib/app.store';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-new-content',
@@ -32,7 +33,7 @@ import { AppStore } from 'common/mydailydigest/src/lib/app.store';
     MatButtonModule,
     MatIconModule,
     EmptyStatusComponent,
-    ContentFormComponent,
+    NgIf
   ],
   templateUrl: './new-content.component.html',
   styleUrl: './new-content.component.scss',

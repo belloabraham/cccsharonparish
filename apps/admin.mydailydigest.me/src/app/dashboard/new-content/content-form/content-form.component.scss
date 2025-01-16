@@ -1,0 +1,14 @@
+@use 'breakpoints';
+.textarea,
+.tags,
+tui-notification,
+.topic {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  @include breakpoints.large {
+    width: 50%;
+  }
+}
