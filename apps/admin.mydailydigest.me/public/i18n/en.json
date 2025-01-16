@@ -55,7 +55,7 @@
   "key_verse": "Reference key verse",
   "bible_reference": "Bible Reference",
   "message": "Message",
-  "tag_placeholder": "Type to add (e.g Faith)",
+  "tag_placeholder": "e.g Faith, Salvation, Holy Spirit",
   "content_req_msg": "Content {{value}} is required",
   "bible_ref_req_msg": "A valid bible reference is required",
   "ref_key_verse_req_msg": "Bible reference key verse is required",

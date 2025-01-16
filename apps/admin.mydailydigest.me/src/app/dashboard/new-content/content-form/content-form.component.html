@@ -30,7 +30,7 @@
 
     <mat-form-field class="textarea">
         <mat-label>{{t(KEY.VERSES)}}*</mat-label>
-        <textarea formControlName="verses" matInput></textarea>
+        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="3" formControlName="verses" matInput></textarea>
         @if (this.referenceVersesFC.invalid) {
         <mat-error>{{t(KEY.REFERENCE_VERSES_REQ_MSG)}}</mat-error>
         }
@@ -47,7 +47,8 @@
 
     <mat-form-field class="textarea">
         <mat-label>{{t(KEY.MESSAGE)}}*</mat-label>
-        <textarea formControlName="message" matInput></textarea>
+        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" formControlName="message"
+            matInput></textarea>
         @if (this.messageFC.invalid) {
         <mat-error>{{t(KEY.CONTENT_MSG_REQ_MSG)}}</mat-error>
         }
@@ -60,7 +61,7 @@
             <mat-chip-row (removed)="removeATag(keyword)">
                 {{keyword}}
                 <button matChipRemove>
-                    <mat-icon>cancel</mat-icon>
+                    <mat-icon fontIcon="close-fill"></mat-icon>
                 </button>
             </mat-chip-row>
             }

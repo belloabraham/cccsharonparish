@@ -20,6 +20,8 @@ import { ContentForm } from './form';
 import { CustomValidators } from '@cccsharonparish/angular';
 import { REGEX } from '@cccsharonparish/mydailydigest';
 import { HttpRequestProgressIndicatorService } from '../../../services';
+import { TextFieldModule } from '@angular/cdk/text-field';
+
 
 @Component({
   selector: 'app-content-form',
@@ -33,6 +35,7 @@ import { HttpRequestProgressIndicatorService } from '../../../services';
     MatChipsModule,
     MatIconModule,
     TuiNotification,
+    TextFieldModule,
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './content-form.component.html',
@@ -99,7 +102,7 @@ export class ContentFormComponent implements OnInit {
     event.chipInput!.clear();
   }
 
-  onSubmit(){
+  onSubmit() {
     
   }
 }
