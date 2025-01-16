@@ -6,6 +6,10 @@ tui-notification,
   width: 100%;
 }
 
+mat-label {
+  text-transform: capitalize;
+}
+
 .input {
   width: 100%;
   @include breakpoints.large {

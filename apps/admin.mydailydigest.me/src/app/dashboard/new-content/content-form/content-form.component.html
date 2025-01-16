@@ -1,59 +1,63 @@
-<form *transloco="let t" class="content-form flex flex-col gap-4">
+<form *transloco="let t" [formGroup]="form" class="content-form flex flex-col gap-4">
 
     <tui-notification size="s" appearance="warning">{{t(KEY.UNIQUE_CONTENT_DATE_MESSAGE)}}. <br>
         {{t(KEY.REQUIRED_FIELD_MESSAGE)}}</tui-notification>
 
     <mat-form-field class="topic">
-        <mat-label>{{t(KEY.TOPIC)}}</mat-label>
-        <input matInput>
-        <!-- @if (this.emailFC.invalid) {
-                        <mat-error>{{t(KEY.INVALID_EMAIL_MGS)}}</mat-error>
-                        } -->
+        <mat-label>{{t(KEY.TOPIC)}}*</mat-label>
+        <input formControlName="topic" matInput>
+        @if (this.topicC.invalid) {
+        <mat-error>{{t(KEY.CONTENT_REQ_MSG, {value: t(KEY.TOPIC)})}}</mat-error>
+        }
     </mat-form-field>
 
-    <div class="flex gap-4">
+    <div class="flex gap-4 flex-col !lg:flex-row">
         <mat-form-field class="input">
-            <mat-label>{{t(KEY.CONTENT_DATE)}}</mat-label>
+            <mat-label>{{t(KEY.CONTENT_DATE)}}*</mat-label>
             <input matInput [matDatepicker]="picker">
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
-
-
         <mat-form-field class="input">
-            <mat-label>{{t(KEY.BIBLE_REFERENCE)}}</mat-label>
-            <input matInput>
-            <!-- @if (this.emailFC.invalid) {
-                        <mat-error>{{t(KEY.INVALID_EMAIL_MGS)}}</mat-error>
-                        } -->
+            <mat-label>{{t(KEY.BIBLE_REFERENCE)}}*</mat-label>
+            <input formControlName="reference" matInput>
+            @if (this.bibleReferenceFC.invalid) {
+            <mat-error>{{t(KEY.BIBLE_REF_KEY_VERSE_REQ_MSG)}}</mat-error>
+            }
         </mat-form-field>
     </div>
 
-
-
-
     <mat-form-field class="textarea">
-        <mat-label>{{t(KEY.VERSES)}}</mat-label>
-        <textarea matInput></textarea>
+        <mat-label>{{t(KEY.VERSES)}}*</mat-label>
+        <textarea formControlName="verses" matInput></textarea>
+        @if (this.referenceVersesFC.invalid) {
+        <mat-error>{{t(KEY.REFERENCE_VERSES_REQ_MSG)}}</mat-error>
+        }
     </mat-form-field>
 
     <mat-form-field class="textarea">
-        <mat-label>{{t(KEY.KEY_VERSE)}}</mat-label>
-        <textarea matInput></textarea>
+        <mat-label>{{t(KEY.KEY_VERSE)}}*</mat-label>
+        <textarea formControlName="keyVerse" matInput></textarea>
+        @if (this.referenceKeyVersesFC.invalid) {
+        <mat-error>{{t(KEY.REFERENCE_KEY_VERSE_REQ_MSG)}}</mat-error>
+        }
     </mat-form-field>
 
 
     <mat-form-field class="textarea">
-        <mat-label>{{t(KEY.MESSAGE)}}</mat-label>
-        <textarea matInput></textarea>
+        <mat-label>{{t(KEY.MESSAGE)}}*</mat-label>
+        <textarea formControlName="message" matInput></textarea>
+        @if (this.messageFC.invalid) {
+        <mat-error>{{t(KEY.CONTENT_MSG_REQ_MSG)}}</mat-error>
+        }
     </mat-form-field>
 
     <mat-form-field class="tags">
-        <mat-label>{{t(KEY.TAGS)}}</mat-label>
-        <mat-chip-grid #reactiveChipGrid [formControl]="formControl">
-            @for (keyword of reactiveKeywords(); track keyword) {
-            <mat-chip-row (removed)="removeReactiveKeyword(keyword)">
+        <mat-label>{{t(KEY.TAGS)}} ({{t(KEY.OPTIONAL)}})</mat-label>
+        <mat-chip-grid #reactiveChipGrid formControlName="tags">
+            @for (keyword of tags(); track keyword) {
+            <mat-chip-row (removed)="removeATag(keyword)">
                 {{keyword}}
                 <button matChipRemove>
                     <mat-icon>cancel</mat-icon>
@@ -62,6 +66,6 @@
             }
         </mat-chip-grid>
         <input [placeholder]="t(KEY.TAG_PLACEHOLDER)" [matChipInputFor]="reactiveChipGrid"
-            (matChipInputTokenEnd)="addReactiveKeyword($event)" />
+            (matChipInputTokenEnd)="addATag($event)" />
     </mat-form-field>
 </form>

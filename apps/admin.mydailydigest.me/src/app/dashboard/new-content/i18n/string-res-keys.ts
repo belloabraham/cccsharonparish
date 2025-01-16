@@ -12,4 +12,10 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   OPTIONAL: 'optional',
   REQUIRED_FIELD_MESSAGE: 'required_field_msg',
   UNIQUE_CONTENT_DATE_MESSAGE: 'unique_content_date_msg',
+  CONTENT_REQ_MSG: 'content_req_msg',
+
+  REFERENCE_VERSES_REQ_MSG: 'ref_verses_req_msg',
+  REFERENCE_KEY_VERSE_REQ_MSG: 'ref_key_verse_req_msg',
+  BIBLE_REF_KEY_VERSE_REQ_MSG: 'bible_ref_req_msg',
+  CONTENT_MSG_REQ_MSG: 'content_msg_req_msg',
 };
