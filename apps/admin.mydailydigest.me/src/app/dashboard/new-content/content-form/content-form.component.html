@@ -11,7 +11,7 @@
         }
     </mat-form-field>
 
-    <div class="flex gap-4 flex-col !lg:flex-row">
+    <div class="flex gap-4 flex-col lg:flex-row">
         <mat-form-field class="input">
             <mat-label>{{t(KEY.CONTENT_DATE)}}*</mat-label>
             <input matInput [matDatepicker]="picker">
@@ -68,4 +68,7 @@
         <input [placeholder]="t(KEY.TAG_PLACEHOLDER)" [matChipInputFor]="reactiveChipGrid"
             (matChipInputTokenEnd)="addATag($event)" />
     </mat-form-field>
+
+    <button [disabled]="isLoading()" (click)="onSubmit()" mat-flat-button
+        class="mat-elevation-z1 mt-4">{{t(KEY.SAVE)}}</button>
 </form>

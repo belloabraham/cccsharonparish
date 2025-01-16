@@ -19,6 +19,7 @@ import { TuiNotification } from '@taiga-ui/core';
 import { ContentForm } from './form';
 import { CustomValidators } from '@cccsharonparish/angular';
 import { REGEX } from '@cccsharonparish/mydailydigest';
+import { HttpRequestProgressIndicatorService } from '../../../services';
 
 @Component({
   selector: 'app-content-form',
@@ -40,6 +41,10 @@ import { REGEX } from '@cccsharonparish/mydailydigest';
 export class ContentFormComponent implements OnInit {
   KEY = CONTENT_STRING_RESOURCE_KEYS;
   form!: FormGroup<ContentForm>;
+  httpRequestProgressIndicatorService = inject(
+    HttpRequestProgressIndicatorService
+  );
+  isLoading = this.httpRequestProgressIndicatorService.isLoading;
 
   readonly topicC = this.getNewStringFC();
 
@@ -67,7 +72,7 @@ export class ContentFormComponent implements OnInit {
       topic: this.topicC,
       message: this.messageFC,
       reference: this.bibleReferenceFC,
-      verses: this.referenceKeyVersesFC,
+      verses: this.referenceVersesFC,
       keyVerse: this.referenceKeyVersesFC,
       tags: this.tagsFC,
     });
@@ -92,5 +97,9 @@ export class ContentFormComponent implements OnInit {
       this.tags.update((keywords) => [...keywords, value]);
     }
     event.chipInput!.clear();
+  }
+
+  onSubmit(){
+    
   }
 }

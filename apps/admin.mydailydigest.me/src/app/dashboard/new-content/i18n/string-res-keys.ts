@@ -18,4 +18,5 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   REFERENCE_KEY_VERSE_REQ_MSG: 'ref_key_verse_req_msg',
   BIBLE_REF_KEY_VERSE_REQ_MSG: 'bible_ref_req_msg',
   CONTENT_MSG_REQ_MSG: 'content_msg_req_msg',
+  SAVE: 'save',
 };
