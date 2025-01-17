@@ -49,7 +49,6 @@ export class ContentFormComponent implements OnInit {
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
 
   readonly topicC = this.getNewStringFC();
-
   readonly bibleReferenceFC = this.getNewStringFC([
     Validators.pattern(REGEX.BIBLE_REFERENCE),
   ]);
@@ -57,6 +56,7 @@ export class ContentFormComponent implements OnInit {
   readonly referenceKeyVersesFC = this.getNewStringFC();
   readonly messageFC = this.getNewStringFC();
   readonly tagsFC = new FormControl<string[] | null>([]);
+  readonly dateFC = new FormControl<Date | null>(null);
 
   ngOnInit(): void {
     this.initForm();
@@ -77,6 +77,7 @@ export class ContentFormComponent implements OnInit {
       verses: this.referenceVersesFC,
       keyVerse: this.referenceKeyVersesFC,
       tags: this.tagsFC,
+      date:this.dateFC
     });
   }
 

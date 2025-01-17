@@ -62,6 +62,7 @@
   "ref_verses_req_msg": "Bible reference verses is required",
   "content_msg_req_msg": "Content message is required",
   "save": "Save",
+  "date_reg_msg":"Enter a valid date",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",

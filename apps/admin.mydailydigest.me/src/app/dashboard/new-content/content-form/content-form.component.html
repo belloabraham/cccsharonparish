@@ -14,9 +14,12 @@
     <div class="flex gap-4 flex-col lg:flex-row">
         <mat-form-field class="input">
             <mat-label>{{t(KEY.CONTENT_DATE)}}*</mat-label>
-            <input matInput [matDatepicker]="picker">
+            <input matInput [matDatepicker]="picker" formControlName="date">
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
+            @if (this.dateFC.invalid) {
+            <mat-error>{{t(KEY.DATE_REQ_MSG)}}</mat-error>
+            }
         </mat-form-field>
 
         <mat-form-field class="input">
