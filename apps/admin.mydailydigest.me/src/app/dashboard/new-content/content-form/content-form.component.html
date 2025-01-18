@@ -83,7 +83,7 @@
                 <mat-panel-title> {{t(KEY.MEDIA)}}
                 </mat-panel-title>
                 <mat-panel-description>
-                    {{t(KEY.OPTIONAL)}}
+                  ({{t(KEY.OPTIONAL)}})
                 </mat-panel-description>
             </mat-expansion-panel-header>
 
@@ -92,7 +92,7 @@
                 <mat-progress-bar *ngIf="imageUploadState() === 'uploading'" mode="determinate"
                     [value]="imageUploadProgress()"></mat-progress-bar>
 
-                <div (click)="attachImage(imageUpload)">
+                <div class="block" (click)="attachImage(imageUpload)">
                     <img class="cover" src="https://placehold.co/480x270?text=." #cover>
                 </div>
                 <div *ngIf="imageUploadState() !== 'uploading'" class="flex justify-end gap-2 image-controls">
@@ -102,8 +102,8 @@
                         <mat-icon fontIcon="upload-fill" class="upload-icon"></mat-icon>
                     </button>
 
-                    <button matTooltip="Reset crop changes" *ngIf="imageAttached() && cropperState()==='touched'" (click)="resetCropper()"
-                        type="button" mat-icon-button>
+                    <button matTooltip="Reset crop changes" *ngIf="imageAttached() && cropperState()==='touched'"
+                        (click)="resetCropper()" type="button" mat-icon-button>
                         <mat-icon fontIcon="reset-left-outline"></mat-icon>
                     </button>
 

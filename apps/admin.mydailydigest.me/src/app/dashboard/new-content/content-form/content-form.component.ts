@@ -231,6 +231,9 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     this.cropper.clear();
     this.cropperState.set('pristine');
     this.imageAttached.set(false);
+    setTimeout(() => {
+      this.cropper.disable();
+    }, 500);
   }
 
   onSubmit() {
