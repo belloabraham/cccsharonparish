@@ -44,7 +44,7 @@
     "@angular/core": "~19.1.0",
     "@angular/fire": "19.0.0-rc.4",
     "@angular/forms": "~19.1.0",
-    "@angular/material": "~19.0.4",
+    "@angular/material": "~19.1.0",
     "@angular/platform-browser": "~19.1.0",
     "@angular/platform-browser-dynamic": "~19.1.0",
     "@angular/platform-server": "~19.1.0",

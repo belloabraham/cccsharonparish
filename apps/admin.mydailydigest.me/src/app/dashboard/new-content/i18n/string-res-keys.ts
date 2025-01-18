@@ -24,4 +24,5 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   HEADER_IMAGE: 'header_image',
   CANCEL: 'cancel',
   UPLOAD: 'upload',
+  MEDIA: 'media',
 };

@@ -8,10 +8,9 @@ import {
   signal,
 } from '@angular/core';
 import { SharedModule } from '../../shared';
-import { tuiDialog, TuiTextfield } from '@taiga-ui/core';
+import {  TuiTextfield } from '@taiga-ui/core';
 import {
   ISpiritualDailyDigest,
-  Language,
 } from '@cccsharonparish/mydailydigest';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';

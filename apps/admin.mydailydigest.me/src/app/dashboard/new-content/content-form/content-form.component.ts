@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  Inject,
   inject,
   OnInit,
   signal,
@@ -23,7 +24,7 @@ import { SharedModule } from '../../../shared';
 import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { CONTENT_STRING_RESOURCE_KEYS } from '../i18n/string-res-keys';
-import { TuiDialogService, TuiNotification } from '@taiga-ui/core';
+import { TuiDialogContext, TuiNotification } from '@taiga-ui/core';
 import { ContentForm } from './form';
 import {
   CustomValidators,
@@ -36,6 +37,9 @@ import Cropper from 'cropperjs';
 import { TuiError } from '@taiga-ui/core';
 import { TuiValidationError } from '@taiga-ui/cdk';
 import { NgIf } from '@angular/common';
+import { POLYMORPHEUS_CONTEXT } from '@taiga-ui/polymorpheus';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-content-form',
@@ -52,6 +56,8 @@ import { NgIf } from '@angular/common';
     TextFieldModule,
     TuiError,
     NgIf,
+    MatProgressBarModule,
+    MatExpansionModule,
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './content-form.component.html',
@@ -66,12 +72,17 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
   coverImage = viewChild.required<ElementRef<HTMLImageElement>>('cover');
   cropper!: Cropper;
-  private dialogService = inject(TuiDialogService);
+  readonly panelOpenState = signal(false);
+
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
   > | null = null;
   readonly languageService = inject(LanguageResourceService);
   private readonly MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES = 500 * 1024; //500Kb
+  imageUploadState = signal<'uploading' | 'uploaded' | 'error' | 'none'>(
+    'none'
+  );
+  imageUploadProgress = signal(0);
 
   readonly topicC = this.getNewStringFC();
   readonly bibleReferenceFC = this.getNewStringFC([
@@ -85,6 +96,11 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     validators: [Validators.required],
     updateOn: 'blur',
   });
+
+  constructor(
+    @Inject(POLYMORPHEUS_CONTEXT)
+    private readonly dialogContext: TuiDialogContext<boolean>
+  ) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -176,12 +192,14 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     );
   }
 
-  hello() {
-    const src = this.cropper.getCroppedCanvas().toDataURL('image/png');
-    console.error(src);
-    this.cropper.replace(src);
+  closeDialog() {
+    this.dialogContext.$implicit.complete();
   }
 
+  uploadImage() {
+    const src = this.cropper.getCroppedCanvas().toDataURL('image/png');
+    this.cropper.replace(src);
+  }
 
   onSubmit() {
     this.cropper.getCroppedCanvas();

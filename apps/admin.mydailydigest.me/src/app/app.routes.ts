@@ -45,7 +45,7 @@ export const appRoutes: Route[] = [
       },
       provideStorage(() => getStorage(getApp())),
       DashboardService,
-      ContentStore
+      ContentStore,
     ],
     // canMatch: [
     //   (router: Router) => {
@@ -86,7 +86,7 @@ export const appRoutes: Route[] = [
         provide: REMOTE_DATA_TOKEN,
         useFactory: () => new FirestoreService(),
       },
-      SignUpService
+      SignUpService,
     ],
     canMatch: [
       (router: Router) => {

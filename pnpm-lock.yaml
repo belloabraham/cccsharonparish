@@ -27,8 +27,8 @@ dependencies:
     specifier: ~19.1.0
     version: 19.1.1(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)(rxjs@7.8.1)
   '@angular/material':
-    specifier: ~19.0.4
-    version: 19.0.5(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(rxjs@7.8.1)
+    specifier: ~19.1.0
+    version: 19.1.0(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(rxjs@7.8.1)
   '@angular/platform-browser':
     specifier: ~19.1.0
     version: 19.1.1(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)
@@ -389,7 +389,7 @@ packages:
       tree-kill: 1.2.2
       tslib: 2.8.1
       typescript: 5.7.3
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
       webpack-dev-middleware: 7.4.2(webpack@5.97.1)
       webpack-dev-server: 5.2.0(webpack@5.97.1)
       webpack-merge: 6.0.1
@@ -429,7 +429,7 @@ packages:
     dependencies:
       '@angular-devkit/architect': 0.1901.1
       rxjs: 7.8.1
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
       webpack-dev-server: 5.2.0(webpack@5.97.1)
     transitivePeerDependencies:
       - chokidar
@@ -831,11 +831,11 @@ packages:
     engines: {node: ^18.19.1 || ^20.11.1 || >=22.0.0}
     dev: true
 
-  /@angular/material@19.0.5(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(rxjs@7.8.1):
-    resolution: {integrity: sha512-yiW/ZJNkOPlQdqgj5U8DHTu3r7OHMI5R1cAbCpOmHlsVHEoc/Vw4V3RFUgpWLqCGgdRIkayoilMAooT52gG2Dg==}
+  /@angular/material@19.1.0(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(rxjs@7.8.1):
+    resolution: {integrity: sha512-LTQBWtuRGjNpA7ceQu9PyiUUq0KLfBP8LvL04hLFbEsZ0fIPQ/OO/Otn67/7TMtnHRFnPeezYPHcAHBhiNlR4A==}
     peerDependencies:
       '@angular/animations': ^19.0.0 || ^20.0.0
-      '@angular/cdk': 19.0.5
+      '@angular/cdk': 19.1.0
       '@angular/common': ^19.0.0 || ^20.0.0
       '@angular/core': ^19.0.0 || ^20.0.0
       '@angular/forms': ^19.0.0 || ^20.0.0
@@ -850,7 +850,6 @@ packages:
       '@angular/platform-browser': 19.1.1(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)
       rxjs: 7.8.1
       tslib: 2.8.1
-    dev: false
 
   /@angular/platform-browser-dynamic@19.1.1(@angular/common@19.1.1)(@angular/compiler@19.1.1)(@angular/core@19.1.1)(@angular/platform-browser@19.1.1):
     resolution: {integrity: sha512-iEVOFKpBEFXKDqQb42xhEXpseQc2vpl16kuT9gbjuvBC8KJLsTdvE34HIoZN1Igm22wZzp+PBzSWYa8WiQK83A==}
@@ -4746,7 +4745,7 @@ packages:
     dependencies:
       '@angular/compiler-cli': 19.1.1(@angular/compiler@19.1.1)(typescript@5.7.3)
       typescript: 5.7.3
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -7287,7 +7286,7 @@ packages:
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
     dependencies:
-      vite: 6.0.7(@types/node@18.16.9)(less@4.1.3)(stylus@0.64.0)
+      vite: 6.0.7(@types/node@18.16.9)(less@4.2.1)(sass@1.83.1)(stylus@0.64.0)(terser@5.37.0)
     dev: true
 
   /@webassemblyjs/ast@1.14.1:
@@ -7851,7 +7850,7 @@ packages:
       '@babel/core': 7.26.0
       find-cache-dir: 4.0.0
       schema-utils: 4.3.0
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     dev: true
 
   /babel-plugin-const-enum@1.2.0(@babel/core@7.26.0):
@@ -8651,7 +8650,7 @@ packages:
       normalize-path: 3.0.0
       schema-utils: 4.3.0
       serialize-javascript: 6.0.2
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     dev: true
 
   /core-js-compat@3.40.0:
@@ -8834,7 +8833,7 @@ packages:
       postcss-modules-values: 4.0.0(postcss@8.5.1)
       postcss-value-parser: 4.2.0
       semver: 7.6.3
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     dev: true
 
   /css-minimizer-webpack-plugin@5.0.1(esbuild@0.19.12)(webpack@5.97.1):
@@ -12275,7 +12274,7 @@ packages:
         optional: true
     dependencies:
       less: 4.2.1
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     dev: true
 
   /less@4.1.3:
@@ -12341,7 +12340,7 @@ packages:
       webpack-sources:
         optional: true
     dependencies:
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
       webpack-sources: 3.2.3
     dev: true
 
@@ -12784,7 +12783,7 @@ packages:
     dependencies:
       schema-utils: 4.3.0
       tapable: 2.2.1
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     dev: true
 
   /minimalistic-assert@1.0.1:
@@ -14032,7 +14031,7 @@ packages:
       jiti: 1.21.7
       postcss: 8.4.49
       semver: 7.6.3
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     transitivePeerDependencies:
       - typescript
     dev: true
@@ -14972,7 +14971,7 @@ packages:
     dependencies:
       neo-async: 2.6.2
       sass: 1.83.1
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     dev: true
 
   /sass@1.83.1:
@@ -15359,7 +15358,7 @@ packages:
     dependencies:
       iconv-lite: 0.6.3
       source-map-js: 1.2.1
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     dev: true
 
   /source-map-support@0.5.13:
@@ -15819,32 +15818,6 @@ packages:
       serialize-javascript: 6.0.2
       terser: 5.37.0
       webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
-    dev: true
-
-  /terser-webpack-plugin@5.3.11(@swc/core@1.5.29)(esbuild@0.24.2)(webpack@5.97.1):
-    resolution: {integrity: sha512-RVCsMfuD0+cTt3EwX8hSl2Ks56EbFHWmhluwcqoPKtBnfjiT6olaq7PRIRfhyU8nnC2MrnDrBLfrD/RGE+cVXQ==}
-    engines: {node: '>= 10.13.0'}
-    peerDependencies:
-      '@swc/core': '*'
-      esbuild: '*'
-      uglify-js: '*'
-      webpack: ^5.1.0
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      esbuild:
-        optional: true
-      uglify-js:
-        optional: true
-    dependencies:
-      '@jridgewell/trace-mapping': 0.3.25
-      '@swc/core': 1.5.29(@swc/helpers@0.5.15)
-      esbuild: 0.24.2
-      jest-worker: 27.5.1
-      schema-utils: 4.3.0
-      serialize-javascript: 6.0.2
-      terser: 5.37.0
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
     dev: true
 
   /terser@5.37.0:
@@ -16532,56 +16505,6 @@ packages:
       extsprintf: 1.3.0
     dev: true
 
-  /vite@6.0.7(@types/node@18.16.9)(less@4.1.3)(stylus@0.64.0):
-    resolution: {integrity: sha512-RDt8r/7qx9940f8FcOIAH9PTViRrghKaK2K1jY3RaAURrEUbm9Du1mJ72G+jlhtG3WwodnfzY8ORQZbBavZEAQ==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
-      jiti: '>=1.21.0'
-      less: '*'
-      lightningcss: ^1.21.0
-      sass: '*'
-      sass-embedded: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.16.0
-      tsx: ^4.8.1
-      yaml: ^2.4.2
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      jiti:
-        optional: true
-      less:
-        optional: true
-      lightningcss:
-        optional: true
-      sass:
-        optional: true
-      sass-embedded:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-      tsx:
-        optional: true
-      yaml:
-        optional: true
-    dependencies:
-      '@types/node': 18.16.9
-      esbuild: 0.24.2
-      less: 4.1.3
-      postcss: 8.5.1
-      rollup: 4.30.1
-      stylus: 0.64.0
-    optionalDependencies:
-      fsevents: 2.3.3
-    dev: true
-
   /vite@6.0.7(@types/node@18.16.9)(less@4.2.1)(sass@1.83.1)(stylus@0.64.0)(terser@5.37.0):
     resolution: {integrity: sha512-RDt8r/7qx9940f8FcOIAH9PTViRrghKaK2K1jY3RaAURrEUbm9Du1mJ72G+jlhtG3WwodnfzY8ORQZbBavZEAQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
@@ -16702,7 +16625,7 @@ packages:
       on-finished: 2.4.1
       range-parser: 1.2.1
       schema-utils: 4.3.0
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     dev: true
 
   /webpack-dev-server@5.2.0(webpack@5.97.1):
@@ -16743,7 +16666,7 @@ packages:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
       webpack-dev-middleware: 7.4.2(webpack@5.97.1)
       ws: 8.18.0
     transitivePeerDependencies:
@@ -16792,7 +16715,7 @@ packages:
         optional: true
     dependencies:
       typed-assert: 1.0.9
-      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.24.2)
+      webpack: 5.97.1(@swc/core@1.5.29)(esbuild@0.19.12)
     dev: true
 
   /webpack@5.97.1(@swc/core@1.5.29)(esbuild@0.19.12):
@@ -16826,45 +16749,6 @@ packages:
       schema-utils: 3.3.0
       tapable: 2.2.1
       terser-webpack-plugin: 5.3.11(@swc/core@1.5.29)(esbuild@0.19.12)(webpack@5.97.1)
-      watchpack: 2.4.2
-      webpack-sources: 3.2.3
-    transitivePeerDependencies:
-      - '@swc/core'
-      - esbuild
-      - uglify-js
-    dev: true
-
-  /webpack@5.97.1(@swc/core@1.5.29)(esbuild@0.24.2):
-    resolution: {integrity: sha512-EksG6gFY3L1eFMROS/7Wzgrii5mBAFe4rIr3r2BTfo7bcc+DWwFZ4OJ/miOuHJO/A85HwyI4eQ0F6IKXesO7Fg==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
-    peerDependencies:
-      webpack-cli: '*'
-    peerDependenciesMeta:
-      webpack-cli:
-        optional: true
-    dependencies:
-      '@types/eslint-scope': 3.7.7
-      '@types/estree': 1.0.6
-      '@webassemblyjs/ast': 1.14.1
-      '@webassemblyjs/wasm-edit': 1.14.1
-      '@webassemblyjs/wasm-parser': 1.14.1
-      acorn: 8.14.0
-      browserslist: 4.24.4
-      chrome-trace-event: 1.0.4
-      enhanced-resolve: 5.18.0
-      es-module-lexer: 1.6.0
-      eslint-scope: 5.1.1
-      events: 3.3.0
-      glob-to-regexp: 0.4.1
-      graceful-fs: 4.2.11
-      json-parse-even-better-errors: 2.3.1
-      loader-runner: 4.3.0
-      mime-types: 2.1.35
-      neo-async: 2.6.2
-      schema-utils: 3.3.0
-      tapable: 2.2.1
-      terser-webpack-plugin: 5.3.11(@swc/core@1.5.29)(esbuild@0.24.2)(webpack@5.97.1)
       watchpack: 2.4.2
       webpack-sources: 3.2.3
     transitivePeerDependencies:

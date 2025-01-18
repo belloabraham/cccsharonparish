@@ -19,7 +19,7 @@ $app-theme: mat.define-theme(
 );
 
 //overrides for Form fields
-$form-field: mat.define-theme(
+$density-override: mat.define-theme(
   (
     density: (
       scale: -4,
@@ -38,9 +38,12 @@ $form-field: mat.define-theme(
   @include mat.menu-theme($app-theme);
   @include mat.fab-theme($app-theme);
   @include mat.chips-theme($app-theme);
-  @include mat.form-field-density($form-field);
-  @include mat.datepicker-density($form-field);
+  @include mat.form-field-density($density-override);
+  @include mat.datepicker-density($density-override);
   @include mat.progress-bar-theme($app-theme);
+  @include mat.progress-spinner-theme($app-theme);
+  @include mat.expansion-theme($app-theme);
+  @include mat.expansion-density($density-override);
 
   //Global Overrides
   @include mat.menu-overrides(

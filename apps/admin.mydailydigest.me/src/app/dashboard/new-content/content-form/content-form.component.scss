@@ -1,4 +1,16 @@
+@use '@angular/material' as mat;
 @use 'breakpoints';
+
+.expansion-panel {
+  @include mat.expansion-overrides(
+    (
+      container-shape: 4px,
+    )
+  );
+  mat-expansion-panel {
+    border-color: var(--mat-sys-outline);
+  }
+}
 
 .image-upload {
   border: 1px solid var(--mat-sys-outline);
