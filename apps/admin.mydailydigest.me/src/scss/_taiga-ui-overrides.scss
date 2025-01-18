@@ -14,6 +14,7 @@
 tui-dialog {
   header.t-header {
     padding: 0.5rem 1.5rem;
+    padding-top: 1rem;
     font-size: 1.5rem !important;
     background: var(--mat-sys-surface-container-low);
   }
@@ -24,6 +25,6 @@ tui-dialog {
       background: var(--mat-sys-tertiary-fixed);
     }
 
-    top: 0.3rem !important;
+    top: 0.5rem !important;
   }
 }

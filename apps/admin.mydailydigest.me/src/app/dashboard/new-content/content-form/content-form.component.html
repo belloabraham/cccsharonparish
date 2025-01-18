@@ -87,29 +87,35 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
 
-            <div class="image-upload">
+            <div class="image-upload mt-4">
                 <p class="text-start mb-2 ps-2">{{t(KEY.HEADER_IMAGE)}}</p>
                 <mat-progress-bar *ngIf="imageUploadState() === 'uploading'" mode="determinate"
                     [value]="imageUploadProgress()"></mat-progress-bar>
 
-                <div>
+                <div (click)="attachImage(imageUpload)">
                     <img class="cover" src="https://placehold.co/480x270?text=." #cover>
                 </div>
                 <div *ngIf="imageUploadState() !== 'uploading'" class="flex justify-end gap-2 image-controls">
 
-                    <button *ngIf="imageAttached()" (click)="uploadImage()" type="button" mat-icon-button>
-                        <mat-icon fontIcon="image-upload-outline" class="upload-icon"></mat-icon>
+                    <button *ngIf="imageAttached()" matTooltip="Crop and upload image" (click)="uploadImage()"
+                        type="button" mat-icon-button>
+                        <mat-icon fontIcon="upload-fill" class="upload-icon"></mat-icon>
                     </button>
 
-                    <button *ngIf="cropperState()==='touched'" (click)="resetCropper()" type="button" mat-icon-button>
+                    <button matTooltip="Reset crop changes" *ngIf="imageAttached() && cropperState()==='touched'" (click)="resetCropper()"
+                        type="button" mat-icon-button>
                         <mat-icon fontIcon="reset-left-outline"></mat-icon>
                     </button>
-                    <button (click)="imageUpload.click();" type="button" mat-icon-button>
+
+                    <button matTooltip="Attach an image for cropping" (click)="imageUpload.click();" type="button"
+                        mat-icon-button>
                         <mat-icon fontIcon="photo-plus-circle-fill"></mat-icon>
                     </button>
                 </div>
-                <tui-error class="text-start" *ngIf="maxImageSizeExceededError"
-                    [error]="maxImageSizeExceededError"></tui-error>
+                <div *ngIf="maxImageSizeExceededError" class="px-4">
+                    <tui-error class="text-start" [error]="maxImageSizeExceededError"></tui-error>
+                </div>
+
             </div>
 
         </mat-expansion-panel>

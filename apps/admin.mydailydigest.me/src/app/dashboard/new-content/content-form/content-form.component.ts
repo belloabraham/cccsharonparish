@@ -40,6 +40,7 @@ import { NgIf } from '@angular/common';
 import { POLYMORPHEUS_CONTEXT } from '@taiga-ui/polymorpheus';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-content-form',
@@ -58,6 +59,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     NgIf,
     MatProgressBarModule,
     MatExpansionModule,
+    MatTooltip,
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './content-form.component.html',
@@ -72,7 +74,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
   coverImage = viewChild.required<ElementRef<HTMLImageElement>>('cover');
   cropper!: Cropper;
-   imageAttached = signal(false);
+  imageAttached = signal(false);
 
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
@@ -112,6 +114,12 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.cropper.disable();
     }, 500);
+  }
+
+  attachImage(input: HTMLInputElement) {
+    if (!this.imageAttached()) {
+      input.click();
+    }
   }
 
   private getNewStringFC(validators: ValidatorFn[] = []) {
@@ -157,9 +165,16 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   initCropper() {
     const image = this.coverImage().nativeElement;
     const cropperState = this.cropperState;
+    const imageAttached = this.imageAttached;
+
     const cropper = new Cropper(image, {
       aspectRatio: 4 / 3,
       dragMode: 'move',
+      ready() {
+        if (!imageAttached()) {
+          cropper.clear();
+        }
+      },
       cropmove(event) {
         cropperState.set('touched');
       },
@@ -187,7 +202,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         reader.onload = (e: ProgressEvent<FileReader>) => {
           const dataUrl = e.target?.result as string;
           this.cropper.enable();
-          this.imageAttached.set(true)
+          this.imageAttached.set(true);
           this.cropper.replace(dataUrl);
         };
         reader.readAsDataURL(file);
@@ -211,8 +226,11 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   uploadImage() {
-    const src = this.cropper.getCroppedCanvas().toDataURL('image/png');
-    this.cropper.replace(src);
+    const dataURL = this.cropper.getCroppedCanvas().toDataURL('image/png');
+    this.cropper.replace(dataURL);
+    this.cropper.clear();
+    this.cropperState.set('pristine');
+    this.imageAttached.set(false);
   }
 
   onSubmit() {

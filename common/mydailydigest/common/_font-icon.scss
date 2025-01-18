@@ -24,14 +24,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.upload-fill:before {
+  content: '\e913';
+}
 .photo-plus-circle-fill:before {
-  content: "\e916";
+  content: '\e916';
 }
 .upload-cloud-outline:before {
   content: '\e915';
-}
-.image-upload-outline:before {
-  content: '\e913';
 }
 .reset-left-outline:before {
   content: '\e914';
