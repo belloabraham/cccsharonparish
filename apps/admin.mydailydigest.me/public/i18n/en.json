@@ -62,7 +62,11 @@
   "ref_verses_req_msg": "Bible reference verses is required",
   "content_msg_req_msg": "Content message is required",
   "save": "Save",
-  "date_reg_msg":"Enter a valid date",
+  "date_reg_msg": "Enter a valid date",
+  "max_image_size_exceeded_mgs": "Maximum image size of was exceeded, upload image that is less than {{value}}",
+  "header_image": "Header Image",
+  "cancel": "Cancel",
+  "upload": "Upload",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",

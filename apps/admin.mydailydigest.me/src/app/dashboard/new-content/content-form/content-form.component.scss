@@ -7,8 +7,16 @@
   max-width: 100%;
 }
 
-.image-upload{
-  
+.image-controls {
+  .upload-icon {
+    color: var(--mat-sys-tertiary-fixed);
+  }
+  .upload-btn {
+    font-size: 1rem;
+    mat-icon {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 .textarea,

@@ -23,14 +23,19 @@ import { SharedModule } from '../../../shared';
 import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { CONTENT_STRING_RESOURCE_KEYS } from '../i18n/string-res-keys';
-import { TuiNotification } from '@taiga-ui/core';
+import { TuiDialogService, TuiNotification } from '@taiga-ui/core';
 import { ContentForm } from './form';
-import { CustomValidators } from '@cccsharonparish/angular';
+import {
+  CustomValidators,
+  LanguageResourceService,
+} from '@cccsharonparish/angular';
 import { REGEX } from '@cccsharonparish/mydailydigest';
 import { HttpRequestProgressIndicatorService } from '../../../services';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import Cropper from 'cropperjs';
-import { TuiButton } from '@taiga-ui/core';
+import { TuiError } from '@taiga-ui/core';
+import { TuiValidationError } from '@taiga-ui/cdk';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-content-form',
@@ -45,6 +50,8 @@ import { TuiButton } from '@taiga-ui/core';
     MatIconModule,
     TuiNotification,
     TextFieldModule,
+    TuiError,
+    NgIf,
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './content-form.component.html',
@@ -59,6 +66,12 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
   coverImage = viewChild.required<ElementRef<HTMLImageElement>>('cover');
   cropper!: Cropper;
+  private dialogService = inject(TuiDialogService);
+  protected maxImageSizeExceededError: TuiValidationError<
+    Record<string, unknown>
+  > | null = null;
+  readonly languageService = inject(LanguageResourceService);
+  private readonly MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES = 500 * 1024; //500Kb
 
   readonly topicC = this.getNewStringFC();
   readonly bibleReferenceFC = this.getNewStringFC([
@@ -135,22 +148,38 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   onImageFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
+    this.maxImageSizeExceededError = null;
     if (input.files && input.files[0]) {
       const file = input.files[0];
-      const reader = new FileReader();
-      reader.onload = (e: ProgressEvent<FileReader>) => {
-        const dataUrl = e.target?.result as string;
-        this.cropper.enable();
-        this.cropper.replace(dataUrl);
-      };
-      reader.readAsDataURL(file);
+      if (file.size > this.MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES) {
+        this.showMaximumSizeExceededError();
+      } else {
+        const reader = new FileReader();
+        reader.onload = (e: ProgressEvent<FileReader>) => {
+          const dataUrl = e.target?.result as string;
+          this.cropper.enable();
+          this.cropper.replace(dataUrl);
+        };
+        reader.readAsDataURL(file);
+      }
     }
   }
 
-  hello(){
-    const src = this.cropper.getCroppedCanvas().toDataURL('image/png')
-    console.error(src)
-    this.cropper.replace(src)
+  showMaximumSizeExceededError() {
+    this.maxImageSizeExceededError = new TuiValidationError(
+      this.languageService.getStringWithParameter(
+        this.KEY.MAX_IMAGE_SIZE_EXCEEDED_MSG,
+        {
+          value: `${this.MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES / 1024}kb`,
+        }
+      )
+    );
+  }
+
+  hello() {
+    const src = this.cropper.getCroppedCanvas().toDataURL('image/png');
+    console.error(src);
+    this.cropper.replace(src);
   }
 
   onSubmit() {

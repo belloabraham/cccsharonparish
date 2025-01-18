@@ -20,4 +20,8 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   CONTENT_MSG_REQ_MSG: 'content_msg_req_msg',
   SAVE: 'save',
   DATE_REQ_MSG: 'date_reg_msg',
+  MAX_IMAGE_SIZE_EXCEEDED_MSG: 'max_image_size_exceeded_mgs',
+  HEADER_IMAGE: 'header_image',
+  CANCEL: 'cancel',
+  UPLOAD: 'upload',
 };

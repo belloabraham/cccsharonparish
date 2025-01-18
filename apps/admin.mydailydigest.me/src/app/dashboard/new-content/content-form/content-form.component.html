@@ -77,10 +77,31 @@
     <input #imageUpload type="file" (change)="onImageFileSelected($event)" accept="image/*" hidden />
 
 
-    <div (click)="imageUpload.click();" class="image-upload">
-        <img class="cover" src="https://placehold.co/480x270?text=Cover" #cover>
+    <div>
+        <p class="text-start mb-2">{{t(KEY.HEADER_IMAGE)}} ({{t(KEY.OPTIONAL)}})</p>
+        <div class="image-upload">
+            <img class="cover" src="https://placehold.co/480x270?text=." #cover>
+        </div>
+        <div class="flex justify-end gap-4 image-controls">
+            <button mat-button type="button" class="upload-btn"> <mat-icon fontIcon="upload-cloud-outline"></mat-icon>
+                {{t(KEY.UPLOAD)}}
+            </button>
+
+            <button (click)="cropper.reset();" type="button" mat-icon-button>
+                <mat-icon fontIcon="reset-left-outline"></mat-icon>
+            </button>
+            <button (click)="imageUpload.click();" type="button" mat-icon-button>
+                <mat-icon fontIcon="image-upload-outline" class="upload-icon"></mat-icon>
+            </button>
+        </div>
+        <tui-error class="text-start" *ngIf="maxImageSizeExceededError" [error]="maxImageSizeExceededError"></tui-error>
     </div>
 
-    <button [disabled]="isLoading()" (click)="hello()" mat-flat-button
-        class="mat-elevation-z1 mt-2">{{t(KEY.SAVE)}}</button>
+    <div class="flex gap-4 mt-2">
+        <button type="submit" [disabled]="isLoading()" (click)="onSubmit()" mat-flat-button
+            class="mat-elevation-z1 flex-1">{{t(KEY.SAVE)}}</button>
+
+        <button type="button" class="flex-1" (click)="onSubmit()" mat-stroked-button>{{t(KEY.CANCEL)}}</button>
+    </div>
+
 </form>

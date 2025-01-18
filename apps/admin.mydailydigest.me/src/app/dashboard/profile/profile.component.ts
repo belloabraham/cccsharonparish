@@ -40,7 +40,7 @@ import { ProfileService } from './profile.service';
 export class ProfileComponent implements OnInit {
   KEY = PROFILE_STRING_RESOURCE_KEY;
   profileService = inject(ProfileService);
-  private readonly MAX_ALLOWED_PROFILE_IMAGE_SIZE_IN_BYTES = 300 * 1024; //100Kb
+  private readonly MAX_ALLOWED_PROFILE_IMAGE_SIZE_IN_BYTES = 300 * 1024; //300Kb
   protected readonly profileImageFC = new FormControl<File | null>(null, [
     Validators.required,
     CustomValidators.maxFileSize(this.MAX_ALLOWED_PROFILE_IMAGE_SIZE_IN_BYTES, {
@@ -67,7 +67,9 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  uploadImage(file: File) {}
+  uploadImage(file: File) {
+
+  }
 
   onSubmit(form: FormGroup<UserDataForm>) {
     form.markAllAsTouched();
