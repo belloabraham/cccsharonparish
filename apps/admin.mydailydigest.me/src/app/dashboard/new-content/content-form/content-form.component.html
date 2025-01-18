@@ -77,9 +77,9 @@
     <input #imageUpload type="file" (change)="onImageFileSelected($event)" accept="image/*" hidden />
 
 
-    <div>
-        <p class="text-start mb-2">{{t(KEY.HEADER_IMAGE)}} ({{t(KEY.OPTIONAL)}})</p>
-        <div class="image-upload">
+    <div class="image-upload">
+        <p class="text-start mb-2 ps-2">{{t(KEY.HEADER_IMAGE)}} ({{t(KEY.OPTIONAL)}})</p>
+        <div>
             <img class="cover" src="https://placehold.co/480x270?text=." #cover>
         </div>
         <div class="flex justify-end gap-4 image-controls">

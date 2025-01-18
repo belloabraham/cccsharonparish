@@ -182,6 +182,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     this.cropper.replace(src);
   }
 
+
   onSubmit() {
     this.cropper.getCroppedCanvas();
     if (this.form.valid) {
