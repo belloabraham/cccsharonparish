@@ -59,7 +59,7 @@
     </mat-form-field>
 
     <mat-form-field class="tags">
-        <mat-label>{{t(KEY.TAGS)}}  <span class="lowercase">({{t(KEY.OPTIONAL)}})</span> </mat-label>
+        <mat-label>{{t(KEY.TAGS)}} <span class="lowercase">({{t(KEY.OPTIONAL)}})</span> </mat-label>
         <mat-chip-grid #reactiveChipGrid formControlName="tags">
             @for (keyword of tags(); track keyword) {
             <mat-chip-row (removed)="removeATag(keyword)">
@@ -78,13 +78,12 @@
 
 
     <mat-accordion class="expansion-panel">
-        <mat-expansion-panel class="mat-elevation-z0 border border-3 " (opened)="panelOpenState.set(true)"
-            (closed)="panelOpenState.set(false)">
+        <mat-expansion-panel class="mat-elevation-z0 border border-3">
             <mat-expansion-panel-header>
                 <mat-panel-title> {{t(KEY.MEDIA)}}
                 </mat-panel-title>
                 <mat-panel-description>
-                    ({{t(KEY.OPTIONAL)}})
+                    {{t(KEY.OPTIONAL)}}
                 </mat-panel-description>
             </mat-expansion-panel-header>
 
@@ -96,16 +95,17 @@
                 <div>
                     <img class="cover" src="https://placehold.co/480x270?text=." #cover>
                 </div>
-                <div  *ngIf="imageUploadState() !== 'uploading'" class="flex justify-end gap-4 image-controls">
-                    <button mat-button type="button" (click)="uploadImage()" class="upload-btn"> <mat-icon
-                            fontIcon="upload-cloud-outline"></mat-icon>
-                        {{t(KEY.UPLOAD)}}
+                <div *ngIf="imageUploadState() !== 'uploading'" class="flex justify-end gap-2 image-controls">
+
+                    <button *ngIf="imageAttached()" (click)="uploadImage()" type="button" mat-icon-button>
+                        <mat-icon fontIcon="image-upload-outline" class="upload-icon"></mat-icon>
                     </button>
-                    <button (click)="cropper.reset();" type="button" mat-icon-button>
+
+                    <button *ngIf="cropperState()==='touched'" (click)="resetCropper()" type="button" mat-icon-button>
                         <mat-icon fontIcon="reset-left-outline"></mat-icon>
                     </button>
                     <button (click)="imageUpload.click();" type="button" mat-icon-button>
-                        <mat-icon fontIcon="image-upload-outline" class="upload-icon"></mat-icon>
+                        <mat-icon fontIcon="photo-plus-circle-fill"></mat-icon>
                     </button>
                 </div>
                 <tui-error class="text-start" *ngIf="maxImageSizeExceededError"

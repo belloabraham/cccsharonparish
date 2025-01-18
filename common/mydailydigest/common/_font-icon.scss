@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.photo-plus-circle-fill:before {
+  content: "\e916";
+}
 .upload-cloud-outline:before {
   content: '\e915';
 }

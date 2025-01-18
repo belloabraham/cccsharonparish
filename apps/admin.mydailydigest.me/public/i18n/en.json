@@ -47,7 +47,7 @@
   "no_draft_content_msg": "You have no saved content ready for publishing, add a new content and it will appear here",
   "topic": "topic",
   "verses": "Reference verses",
-  "optional": "optional",
+  "optional": "Optional",
   "tags": "Tags",
   "unique_content_date_msg": "Ensure each content has a unique date. If two different content share the same date, the second content will replace the first",
   "required_field_msg": "All fields marked with * are required",

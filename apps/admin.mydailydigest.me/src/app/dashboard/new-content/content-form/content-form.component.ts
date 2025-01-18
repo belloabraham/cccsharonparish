@@ -72,7 +72,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
   coverImage = viewChild.required<ElementRef<HTMLImageElement>>('cover');
   cropper!: Cropper;
-  readonly panelOpenState = signal(false);
+   imageAttached = signal(false);
 
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
@@ -83,6 +83,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     'none'
   );
   imageUploadProgress = signal(0);
+  cropperState = signal<'touched' | 'pristine'>('pristine');
 
   readonly topicC = this.getNewStringFC();
   readonly bibleReferenceFC = this.getNewStringFC([
@@ -155,11 +156,23 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   initCropper() {
     const image = this.coverImage().nativeElement;
+    const cropperState = this.cropperState;
     const cropper = new Cropper(image, {
       aspectRatio: 4 / 3,
       dragMode: 'move',
+      cropmove(event) {
+        cropperState.set('touched');
+      },
+      zoom(event) {
+        cropperState.set('touched');
+      },
     });
     this.cropper = cropper;
+  }
+
+  resetCropper() {
+    this.cropper.reset();
+    this.cropperState.set('pristine');
   }
 
   onImageFileSelected(event: Event): void {
@@ -174,6 +187,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         reader.onload = (e: ProgressEvent<FileReader>) => {
           const dataUrl = e.target?.result as string;
           this.cropper.enable();
+          this.imageAttached.set(true)
           this.cropper.replace(dataUrl);
         };
         reader.readAsDataURL(file);
