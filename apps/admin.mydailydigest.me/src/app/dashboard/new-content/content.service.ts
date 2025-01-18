@@ -5,5 +5,5 @@ import { REMOTE_DATA_TOKEN } from '../../services';
 export class ContentService {
   private readonly remoteData = inject(REMOTE_DATA_TOKEN);
 
-  constructor() {}
+
 }

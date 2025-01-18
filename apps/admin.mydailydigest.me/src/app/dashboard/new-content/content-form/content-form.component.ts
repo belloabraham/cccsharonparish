@@ -1,4 +1,12 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  inject,
+  OnInit,
+  signal,
+  viewChild,
+} from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -21,6 +29,8 @@ import { CustomValidators } from '@cccsharonparish/angular';
 import { REGEX } from '@cccsharonparish/mydailydigest';
 import { HttpRequestProgressIndicatorService } from '../../../services';
 import { TextFieldModule } from '@angular/cdk/text-field';
+import Cropper from 'cropperjs';
+import { TuiButton } from '@taiga-ui/core';
 
 @Component({
   selector: 'app-content-form',
@@ -40,13 +50,15 @@ import { TextFieldModule } from '@angular/cdk/text-field';
   templateUrl: './content-form.component.html',
   styleUrl: './content-form.component.scss',
 })
-export class ContentFormComponent implements OnInit {
+export class ContentFormComponent implements OnInit, AfterViewInit {
   KEY = CONTENT_STRING_RESOURCE_KEYS;
   form!: FormGroup<ContentForm>;
   httpRequestProgressIndicatorService = inject(
     HttpRequestProgressIndicatorService
   );
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
+  coverImage = viewChild.required<ElementRef<HTMLImageElement>>('cover');
+  cropper!: Cropper;
 
   readonly topicC = this.getNewStringFC();
   readonly bibleReferenceFC = this.getNewStringFC([
@@ -56,10 +68,20 @@ export class ContentFormComponent implements OnInit {
   readonly referenceKeyVersesFC = this.getNewStringFC();
   readonly messageFC = this.getNewStringFC();
   readonly tagsFC = new FormControl<string[] | null>([]);
-  readonly dateFC = new FormControl<Date | null>(null);
+  readonly dateFC = new FormControl<Date | null>(null, {
+    validators: [Validators.required],
+    updateOn: 'blur',
+  });
 
   ngOnInit(): void {
     this.initForm();
+  }
+
+  ngAfterViewInit(): void {
+    this.initCropper();
+    setTimeout(() => {
+      this.cropper.disable();
+    }, 500);
   }
 
   private getNewStringFC(validators: ValidatorFn[] = []) {
@@ -77,7 +99,7 @@ export class ContentFormComponent implements OnInit {
       verses: this.referenceVersesFC,
       keyVerse: this.referenceKeyVersesFC,
       tags: this.tagsFC,
-      date:this.dateFC
+      date: this.dateFC,
     });
   }
 
@@ -102,8 +124,37 @@ export class ContentFormComponent implements OnInit {
     event.chipInput!.clear();
   }
 
+  initCropper() {
+    const image = this.coverImage().nativeElement;
+    const cropper = new Cropper(image, {
+      aspectRatio: 4 / 3,
+      dragMode: 'move',
+    });
+    this.cropper = cropper;
+  }
+
+  onImageFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files[0]) {
+      const file = input.files[0];
+      const reader = new FileReader();
+      reader.onload = (e: ProgressEvent<FileReader>) => {
+        const dataUrl = e.target?.result as string;
+        this.cropper.enable();
+        this.cropper.replace(dataUrl);
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  hello(){
+    const src = this.cropper.getCroppedCanvas().toDataURL('image/png')
+    console.error(src)
+    this.cropper.replace(src)
+  }
+
   onSubmit() {
-    this.form.markAllAsTouched();
+    this.cropper.getCroppedCanvas();
     if (this.form.valid) {
     }
   }

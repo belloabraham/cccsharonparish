@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.image-upload-outline:before {
+  content: '\e913';
+}
+.reset-left-outline:before {
+  content: '\e914';
+}
 .plus-fill:before {
   content: '\e912';
 }

@@ -11,9 +11,9 @@
         }
     </mat-form-field>
 
-    <div class="flex gap-4 flex-col lg:flex-row">
+    <div class="flex gap-4 flex-col lg:flex-row items-start">
         <mat-form-field class="input">
-            <mat-label>{{t(KEY.CONTENT_DATE)}}*</mat-label>
+            <mat-label>{{t(KEY.CONTENT_DATE)}}</mat-label>
             <input matInput [matDatepicker]="picker" formControlName="date">
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
@@ -33,7 +33,8 @@
 
     <mat-form-field class="textarea">
         <mat-label>{{t(KEY.VERSES)}}*</mat-label>
-        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="3" formControlName="verses" matInput></textarea>
+        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="3" formControlName="verses"
+            matInput></textarea>
         @if (this.referenceVersesFC.invalid) {
         <mat-error>{{t(KEY.REFERENCE_VERSES_REQ_MSG)}}</mat-error>
         }
@@ -73,6 +74,13 @@
             (matChipInputTokenEnd)="addATag($event)" />
     </mat-form-field>
 
-    <button [disabled]="isLoading()" (click)="onSubmit()" mat-flat-button
-        class="mat-elevation-z1 mt-4">{{t(KEY.SAVE)}}</button>
+    <input #imageUpload type="file" (change)="onImageFileSelected($event)" accept="image/*" hidden />
+
+
+    <div (click)="imageUpload.click();" class="image-upload">
+        <img class="cover" src="https://placehold.co/480x270?text=Cover" #cover>
+    </div>
+
+    <button [disabled]="isLoading()" (click)="hello()" mat-flat-button
+        class="mat-elevation-z1 mt-2">{{t(KEY.SAVE)}}</button>
 </form>

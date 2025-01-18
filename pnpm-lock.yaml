@@ -83,6 +83,9 @@ dependencies:
   '@taiga-ui/polymorpheus':
     specifier: ^4.7.4
     version: 4.8.0(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)
+  cropperjs:
+    specifier: ^1.6.2
+    version: 1.6.2
   express:
     specifier: ~4.18.2
     version: 4.18.3
@@ -8766,6 +8769,10 @@ packages:
     dependencies:
       luxon: 3.5.0
     dev: true
+
+  /cropperjs@1.6.2:
+    resolution: {integrity: sha512-nhymn9GdnV3CqiEHJVai54TULFAE3VshJTXSqSJKa8yXAKyBKDWdhHarnlIPrshJ0WMFTGuFvG02YjLXfPiuOA==}
+    dev: false
 
   /cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
