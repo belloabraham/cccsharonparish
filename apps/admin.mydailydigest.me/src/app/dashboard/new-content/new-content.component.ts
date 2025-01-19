@@ -8,10 +8,8 @@ import {
   signal,
 } from '@angular/core';
 import { SharedModule } from '../../shared';
-import {  TuiTextfield } from '@taiga-ui/core';
-import {
-  ISpiritualDailyDigest,
-} from '@cccsharonparish/mydailydigest';
+import { TuiTextfield } from '@taiga-ui/core';
+import { ISpiritualDailyDigest, ISpiritualDailyDigestUIState } from '@cccsharonparish/mydailydigest';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CONTENT_STRING_RESOURCE_KEYS } from './i18n/string-res-keys';
@@ -24,6 +22,11 @@ import { ContentStore } from './content.store';
 import { AppStore } from 'common/mydailydigest/src/lib/app.store';
 import { NgIf } from '@angular/common';
 
+export interface IDialogData {
+  content?: ISpiritualDailyDigestUIState;
+  langCode: string;
+}
+
 @Component({
   selector: 'app-new-content',
   imports: [
@@ -32,7 +35,7 @@ import { NgIf } from '@angular/common';
     MatButtonModule,
     MatIconModule,
     EmptyStatusComponent,
-    NgIf
+    NgIf,
   ],
   templateUrl: './new-content.component.html',
   styleUrl: './new-content.component.scss',
@@ -54,19 +57,22 @@ export class NewContentComponent implements OnDestroy {
 
   constructor() {
     effect(() => {
-      const title = this.appStore.supportedLanguages().languages.filter(
-        (lang) => lang.code === this.languageCode()
-      )[0].label;
+      const title = this.appStore
+        .supportedLanguages()
+        .languages.filter((lang) => lang.code === this.languageCode())[0].label;
       this.title.set(title);
     });
   }
 
-  openContentDialog(selectedContent?: ISpiritualDailyDigest) {
+  openContentDialog(selectedContent?: ISpiritualDailyDigestUIState) {
     this.contentFormDialogSubscription = this.dialogService
-      .open<ISpiritualDailyDigest>(
+      .open<IDialogData | undefined>(
         new PolymorpheusComponent(ContentFormComponent, this.injector),
         {
-          data: selectedContent,
+          data: {
+            content: selectedContent,
+            langCode: this.languageCode(),
+          },
           dismissible: false,
           header: this.title(),
         }

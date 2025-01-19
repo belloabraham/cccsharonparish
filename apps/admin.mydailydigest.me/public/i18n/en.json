@@ -68,7 +68,7 @@
   "cancel": "Cancel",
   "upload": "Upload",
   "media": "Media",
-
+  "copy_eng_version_msg": "Copy English version for translation",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",

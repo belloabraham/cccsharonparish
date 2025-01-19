@@ -50,7 +50,7 @@ export const appConfig: ApplicationConfig = {
     provideFirestore(() => getFirestore()),
 
     //NgOptimize
-    provideImgixLoader(environment.cdnBaseUrl),
+    // provideImgixLoader(environment.cdnBaseUrl),
 
     //Transloco
     provideHttpClient(),
@@ -75,7 +75,7 @@ export const appConfig: ApplicationConfig = {
     },
     { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
 
-    
+
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpProgressInterceptorService,

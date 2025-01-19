@@ -1,8 +1,20 @@
+export interface ISpiritualDailyDigestUIState {
+  topic: string;
+  message: string;
+  reference: string;
+  verses: string;
+  keyVerse: string;
+  tags: string[];
+  date: Date;
+  imageUrl?: string;
+  audioUrl?: string;
+}
+
 export interface ISpiritualDailyDigest extends Record<string, any> {
   id: string; //'2024-12-14'; //allow create only
   year: number;
   day: number;
-  imageUrl: string;
+  imageUrl?: string;
   tags: string[]; // ['faith', 'devotional', 'daily'];
   content: Content[];
   isPublished: boolean;
@@ -15,7 +27,7 @@ export interface ISpiritualDailyDigest extends Record<string, any> {
 export type Content = {
   language: Language;
   text: TextContent;
-  audioUrl: string;
+  audioUrl?: string;
 };
 
 export type Language = {

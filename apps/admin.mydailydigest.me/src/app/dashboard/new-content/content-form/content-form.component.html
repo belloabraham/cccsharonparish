@@ -3,10 +3,14 @@
     <tui-notification size="s" appearance="warning">{{t(KEY.UNIQUE_CONTENT_DATE_MESSAGE)}}. <br>
         {{t(KEY.REQUIRED_FIELD_MESSAGE)}}</tui-notification>
 
+    <div *ngIf="englishContent()" class="text-end">
+        <button mat-button [cdkCopyToClipboard]="englishContent()!">{{t(KEY.COPY_ENG_VERSION_MSG)}}</button>
+    </div>
+
     <mat-form-field class="topic">
         <mat-label>{{t(KEY.TOPIC)}}*</mat-label>
         <input formControlName="topic" matInput>
-        @if (this.topicC.invalid) {
+        @if (this.topicFC.invalid) {
         <mat-error>{{t(KEY.CONTENT_REQ_MSG, {value: t(KEY.TOPIC)})}}</mat-error>
         }
     </mat-form-field>
@@ -76,8 +80,8 @@
 
     <input #imageUpload type="file" (change)="onImageFileSelected($event)" accept="image/*" hidden />
 
-
-    <mat-accordion class="expansion-panel">
+    @let dialogLanguageIsEnglish = languageCode() === 'en';
+    <mat-accordion *ngIf="dialogLanguageIsEnglish" class="expansion-panel">
         <mat-expansion-panel class="mat-elevation-z0 border border-3">
             <mat-expansion-panel-header>
                 <mat-panel-title> {{t(KEY.MEDIA)}}
@@ -93,7 +97,7 @@
                     [value]="imageUploadProgress()"></mat-progress-bar>
 
                 <div class="block" (click)="attachImage(imageUpload)">
-                    <img class="cover" src="https://placehold.co/480x270?text=." #cover>
+                    <img class="cover" [src]="defaultImageUrl" #cover>
                 </div>
                 <div *ngIf="imageUploadState() !== 'uploading'" class="flex justify-end gap-2 image-controls">
 
@@ -123,10 +127,11 @@
 
 
     <div *ngIf="imageUploadState() !== 'uploading'" class="flex gap-4 mt-2">
+        <button type="button" class="flex-1" (click)="closeDialog()" mat-stroked-button>{{t(KEY.CANCEL)}}</button>
+
         <button type="submit" [disabled]="isLoading()" (click)="onSubmit()" mat-flat-button
             class="mat-elevation-z1 flex-1">{{t(KEY.SAVE)}}</button>
 
-        <button type="button" class="flex-1" (click)="closeDialog()" mat-stroked-button>{{t(KEY.CANCEL)}}</button>
     </div>
 
 </form>

@@ -25,12 +25,15 @@ import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { CONTENT_STRING_RESOURCE_KEYS } from '../i18n/string-res-keys';
 import { TuiDialogContext, TuiNotification } from '@taiga-ui/core';
-import { ContentForm } from './form';
+import { ContentForm } from './content-form';
 import {
   CustomValidators,
   LanguageResourceService,
 } from '@cccsharonparish/angular';
-import { REGEX } from '@cccsharonparish/mydailydigest';
+import {
+  ISpiritualDailyDigestUIState,
+  REGEX,
+} from '@cccsharonparish/mydailydigest';
 import { HttpRequestProgressIndicatorService } from '../../../services';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import Cropper from 'cropperjs';
@@ -40,7 +43,9 @@ import { NgIf } from '@angular/common';
 import { POLYMORPHEUS_CONTEXT } from '@taiga-ui/polymorpheus';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
+import { MatTooltip } from '@angular/material/tooltip';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { IDialogData } from '../new-content.component';
 
 @Component({
   selector: 'app-content-form',
@@ -60,6 +65,7 @@ import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
     MatProgressBarModule,
     MatExpansionModule,
     MatTooltip,
+    ClipboardModule,
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './content-form.component.html',
@@ -74,20 +80,24 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
   coverImage = viewChild.required<ElementRef<HTMLImageElement>>('cover');
   cropper!: Cropper;
-  imageAttached = signal(false);
+  readonly imageAttached = signal(false);
+  readonly languageCode = signal('');
+  readonly englishContent = signal<string | null>(null);
+  defaultImageUrl = 'https://placehold.co/480x270?text=.';
 
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
   > | null = null;
   readonly languageService = inject(LanguageResourceService);
   private readonly MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES = 500 * 1024; //500Kb
-  imageUploadState = signal<'uploading' | 'uploaded' | 'error' | 'none'>(
-    'none'
-  );
-  imageUploadProgress = signal(0);
-  cropperState = signal<'touched' | 'pristine'>('pristine');
+  readonly imageUploadState = signal<
+    'uploading' | 'uploaded' | 'error' | 'none'
+  >('none');
+  readonly imageUploadProgress = signal(0);
+  readonly cropperState = signal<'touched' | 'pristine'>('pristine');
+  readonly tags = signal<string[]>([]);
 
-  readonly topicC = this.getNewStringFC();
+  readonly topicFC = this.getNewStringFC();
   readonly bibleReferenceFC = this.getNewStringFC([
     Validators.pattern(REGEX.BIBLE_REFERENCE),
   ]);
@@ -102,18 +112,40 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   constructor(
     @Inject(POLYMORPHEUS_CONTEXT)
-    private readonly dialogContext: TuiDialogContext<boolean>
+    private readonly dialogContext: TuiDialogContext<IDialogData, IDialogData>
   ) {}
 
   ngOnInit(): void {
     this.initForm();
+    const data = this.dialogContext.data;
+    const content = data.content;
+    this.languageCode.set(data.langCode);
+    this.setDefaultMediaContent();
+    this.setFormValue(content);
+  }
+
+  setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
+    if (sddUIiState?.imageUrl) {
+      this.defaultImageUrl = sddUIiState.imageUrl;
+    }
+  }
+
+  private setFormValue(sddUIiState?: ISpiritualDailyDigestUIState) {
+    if (sddUIiState) {
+      this.form.setValue({
+        ...sddUIiState,
+      });
+      this.dateFC.disable();
+    }
   }
 
   ngAfterViewInit(): void {
-    this.initCropper();
-    setTimeout(() => {
-      this.cropper.disable();
-    }, 500);
+    if (this.languageCode() === 'en') {
+      this.initCropper();
+      setTimeout(() => {
+        this.cropper.disable();
+      }, 500);
+    }
   }
 
   attachImage(input: HTMLInputElement) {
@@ -131,7 +163,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   private initForm() {
     this.form = new FormGroup({
-      topic: this.topicC,
+      topic: this.topicFC,
       message: this.messageFC,
       reference: this.bibleReferenceFC,
       verses: this.referenceVersesFC,
@@ -140,8 +172,6 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       date: this.dateFC,
     });
   }
-
-  readonly tags = signal<string[]>([]);
 
   removeATag(keyword: string) {
     this.tags.update((keywords) => {
@@ -219,6 +249,11 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         }
       )
     );
+  }
+
+  getEnglishContentForTranslation() {
+    if (this.languageCode() !== 'en') {
+    }
   }
 
   closeDialog() {
