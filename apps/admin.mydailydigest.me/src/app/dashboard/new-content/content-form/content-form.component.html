@@ -84,7 +84,7 @@
     <mat-accordion *ngIf="dialogLanguageIsEnglish" class="expansion-panel">
         <mat-expansion-panel class="mat-elevation-z0 border border-3">
             <mat-expansion-panel-header>
-                <mat-panel-title> {{t(KEY.MEDIA)}}
+                <mat-panel-title> {{t(KEY.HEADER_IMAGE)}}
                 </mat-panel-title>
                 <mat-panel-description>
                     ({{t(KEY.OPTIONAL)}})
@@ -92,7 +92,7 @@
             </mat-expansion-panel-header>
 
             <div class="image-upload mt-4">
-                <p class="text-start mb-2 ps-2">{{t(KEY.HEADER_IMAGE)}}</p>
+                <!-- <p class="text-start mb-2 ps-2">{{t(KEY.HEADER_IMAGE)}}</p> -->
                 <mat-progress-bar *ngIf="imageUploadState() === 'uploading'" mode="determinate"
                     [value]="imageUploadProgress()"></mat-progress-bar>
 
@@ -128,10 +128,8 @@
 
     <div *ngIf="imageUploadState() !== 'uploading'" class="flex gap-4 mt-2">
         <button type="button" class="flex-1" (click)="closeDialog()" mat-stroked-button>{{t(KEY.CANCEL)}}</button>
-
         <button type="submit" [disabled]="isLoading()" (click)="onSubmit()" mat-flat-button
             class="mat-elevation-z1 flex-1">{{t(KEY.SAVE)}}</button>
-
     </div>
 
 </form>

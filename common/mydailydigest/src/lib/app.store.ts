@@ -70,12 +70,12 @@ export const AppStore = signalStore(
         supportedLanguages: {
           languages: [
             {
-              label: 'Yoruba',
-              code: 'yr',
-            },
-            {
               label: 'English',
               code: 'en',
+            },
+            {
+              label: 'Yoruba',
+              code: 'yr',
             },
             {
               label: 'French',
