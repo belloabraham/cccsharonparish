@@ -58,6 +58,9 @@ $density-override: mat.define-theme(
   width: auto !important;
   height: auto !important;
 }
+.mat-expansion-panel-header {
+  padding: 0 16px !important;
+}
 
 body {
   margin: 0;
