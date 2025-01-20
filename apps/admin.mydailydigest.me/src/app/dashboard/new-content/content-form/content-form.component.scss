@@ -1,6 +1,12 @@
 @use '@angular/material' as mat;
 @use 'breakpoints';
 
+.content {
+  mat-icon {
+    font-size: 1.6rem;
+  }
+}
+
 .expansion-panel {
   @include mat.expansion-overrides(
     (

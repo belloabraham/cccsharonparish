@@ -92,7 +92,6 @@
             </mat-expansion-panel-header>
 
             <div class="image-upload mt-4">
-                <!-- <p class="text-start mb-2 ps-2">{{t(KEY.HEADER_IMAGE)}}</p> -->
                 <mat-progress-bar *ngIf="imageUploadState() === 'uploading'" mode="determinate"
                     [value]="imageUploadProgress()"></mat-progress-bar>
 
@@ -101,24 +100,84 @@
                 </div>
                 <div *ngIf="imageUploadState() !== 'uploading'" class="flex justify-end gap-2 image-controls">
 
-                    <button *ngIf="imageAttached()" matTooltip="Crop and upload image" (click)="uploadImage()"
+                    <button *ngIf="imageAttached()" [matTooltip]="t(KEY.CROP_AND_UPLOAD_IMG)" (click)="uploadImage()"
                         type="button" mat-icon-button>
                         <mat-icon fontIcon="upload-fill" class="upload-icon"></mat-icon>
                     </button>
 
-                    <button matTooltip="Reset crop changes" *ngIf="imageAttached() && cropperState()==='touched'"
-                        (click)="resetCropper()" type="button" mat-icon-button>
+                    <button [matTooltip]="t(KEY.RESET_CROP_CHANGES)"
+                        *ngIf="imageAttached() && cropperState()==='touched'" (click)="resetCropper()" type="button"
+                        mat-icon-button>
                         <mat-icon fontIcon="reset-left-outline"></mat-icon>
                     </button>
 
-                    <button matTooltip="Attach an image for cropping" (click)="imageUpload.click();" type="button"
-                        mat-icon-button>
+                    <button [matTooltip]="t(KEY.ATTACH_IMAGE_FOR_CROPPING)" [matTooltip]="t(KEY.CROP_AND_UPLOAD_IMG)"
+                        (click)="imageUpload.click();" type="button" mat-icon-button>
                         <mat-icon fontIcon="photo-plus-circle-fill"></mat-icon>
                     </button>
                 </div>
                 <div *ngIf="maxImageSizeExceededError" class="px-4">
                     <tui-error class="text-start" [error]="maxImageSizeExceededError"></tui-error>
                 </div>
+
+            </div>
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-accordion class="expansion-panel">
+        <mat-expansion-panel class="mat-elevation-z0 border border-3">
+            <mat-expansion-panel-header>
+                <mat-panel-title> {{t(KEY.AUDIO)}}
+                </mat-panel-title>
+                <mat-panel-description>
+                    ({{t(KEY.OPTIONAL)}})
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div class="audio-upload mt-4 flex flex-col gap-4">
+
+                <audio *ngIf="uploadedAudioUrl()" #audioPlayer controls>
+                    <source [src]="uploadedAudioUrl()" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+
+                <label tuiInputFiles>
+                    <input tuiInputFiles [formControl]="control" />
+                    <ng-template let-dragged>
+                        <div *ngIf="dragged; else base" class="content p-4 ">
+                            <mat-icon fontIcon="water-drop-fill"></mat-icon>
+                            <div>
+                                {{t(KEY.DROP_IT)}}
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                        <ng-template #base>
+                            <div class="content p-4">
+                                <mat-icon fontIcon="track-upload-outline"></mat-icon>
+                                <div>
+                                    <a tuiLink>{{uploadedAudioUrl() ? t(KEY.REPLACE):t(KEY.UPLOAD) }} audio</a>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </ng-template>
+                </label>
+
+                <tui-files class="tui-space_top-1">
+                    <tui-file *ngIf="control.value | tuiFileRejected: {accept: 'image/*'} | async as file" state="error"
+                        [file]="file" (remove)="removeFile()" />
+
+                    <tui-file *ngIf="loadedFiles$ | async as file" [file]="file" (remove)="removeFile()" />
+
+                    <tui-file *ngIf="failedFiles$ | async as file" state="error" [file]="file"
+                        (remove)="removeFile()" />
+
+                    <tui-file *ngIf="loadingFiles$ | async as file" state="loading" [file]="file"
+                        (remove)="removeFile()" />
+                </tui-files>
+
 
             </div>
 

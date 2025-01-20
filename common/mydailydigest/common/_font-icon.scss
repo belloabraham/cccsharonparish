@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.track-upload-outline:before {
+  content: '\e917';
+}
+.water-drop-fill:before {
+  content: '\e918';
+}
 .upload-fill:before {
   content: '\e913';
 }

@@ -25,4 +25,10 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   CANCEL: 'cancel',
   UPLOAD: 'upload',
   COPY_ENG_VERSION_MSG: 'copy_eng_version_msg',
+  AUDIO: 'audio',
+  DROP_IT: 'drop_it',
+  REPLACE: 'replace',
+  CROP_AND_UPLOAD_IMG: 'crop_and_upload_img',
+  RESET_CROP_CHANGES: 'reset_crop_changes',
+  ATTACH_IMAGE_FOR_CROPPING: 'attach_image_for_cropping',
 };

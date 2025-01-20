@@ -24,7 +24,7 @@ import { SharedModule } from '../../../shared';
 import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { CONTENT_STRING_RESOURCE_KEYS } from '../i18n/string-res-keys';
-import { TuiDialogContext, TuiNotification } from '@taiga-ui/core';
+import { TuiDialogContext, TuiLink, TuiNotification } from '@taiga-ui/core';
 import { ContentForm } from './content-form';
 import {
   CustomValidators,
@@ -47,6 +47,12 @@ import { MatTooltip } from '@angular/material/tooltip';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { IDialogData } from '../new-content.component';
 
+import type { TuiFileLike } from '@taiga-ui/kit';
+import { TuiFiles } from '@taiga-ui/kit';
+import type { Observable } from 'rxjs';
+import { finalize, map, of, Subject, switchMap, timer } from 'rxjs';
+import { AsyncPipe } from '@angular/common';
+
 @Component({
   selector: 'app-content-form',
   imports: [
@@ -66,6 +72,11 @@ import { IDialogData } from '../new-content.component';
     MatExpansionModule,
     MatTooltip,
     ClipboardModule,
+    AsyncPipe,
+    NgIf,
+    ReactiveFormsModule,
+    TuiFiles,
+    TuiLink
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './content-form.component.html',
@@ -84,6 +95,9 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   readonly languageCode = signal('');
   readonly englishContent = signal<string | null>(null);
   defaultImageUrl = 'https://placehold.co/480x270?text=.';
+  readonly uploadedAudioUrl = signal<string | null>(
+    'https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3'
+  );
 
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
@@ -275,5 +289,45 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     this.cropper.getCroppedCanvas();
     if (this.form.valid) {
     }
+  }
+
+  protected readonly control = new FormControl<TuiFileLike | null>(
+    null,
+    Validators.required
+  );
+
+  protected readonly failedFiles$ = new Subject<TuiFileLike | null>();
+  protected readonly loadingFiles$ = new Subject<TuiFileLike | null>();
+  protected readonly loadedFiles$ = this.control.valueChanges.pipe(
+    switchMap((file) => this.processFile(file))
+  );
+
+  protected removeFile(): void {
+    this.control.setValue(null);
+  }
+
+  protected processFile(
+    file: TuiFileLike | null
+  ): Observable<TuiFileLike | null> {
+    this.failedFiles$.next(null);
+
+    if (this.control.invalid || !file) {
+      return of(null);
+    }
+
+    this.loadingFiles$.next(file);
+
+    return timer(1000).pipe(
+      map(() => {
+        if (Math.random() > 0.5) {
+          return file;
+        }
+
+        this.failedFiles$.next(file);
+
+        return null;
+      }),
+      finalize(() => this.loadingFiles$.next(null))
+    );
   }
 }

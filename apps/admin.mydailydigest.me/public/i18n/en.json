@@ -68,6 +68,11 @@
   "cancel": "Cancel",
   "upload": "Upload",
   "copy_eng_version_msg": "Copy English version for translation",
+  "audio": "Audio",
+  "replace": "Replace",
+  "crop_and_upload_img":"Crop and upload image",
+  "reset_crop_changes":"Reset crop changes",
+  "attach_image_for_cropping":"Attach an image for cropping",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",
