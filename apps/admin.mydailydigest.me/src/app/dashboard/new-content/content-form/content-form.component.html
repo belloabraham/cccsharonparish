@@ -144,7 +144,8 @@
 
 
                 <label tuiInputFiles>
-                    <input tuiInputFiles [formControl]="control" />
+                    <input tuiInputFiles [formControl]="audioFileFC" accept="audio/mpeg"
+                        (change)="uploadAudio($event)" />
                     <ng-template let-dragged>
                         <div *ngIf="dragged; else base" class="content p-4 ">
                             <mat-icon fontIcon="water-drop-fill"></mat-icon>
@@ -165,16 +166,14 @@
                     </ng-template>
                 </label>
 
-                <tui-files class="tui-space_top-1">
-                    <tui-file *ngIf="control.value | tuiFileRejected: {accept: 'image/*'} | async as file" state="error"
-                        [file]="file" (remove)="removeFile()" />
+                <tui-files>
 
-                    <tui-file *ngIf="loadedFiles$ | async as file" [file]="file" (remove)="removeFile()" />
+                    <tui-file *ngIf="loadedAudioFile$ | async as file" [file]="file" (remove)="removeFile()" />
 
-                    <tui-file *ngIf="failedFiles$ | async as file" state="error" [file]="file"
+                    <tui-file *ngIf="failedAudioFile$ | async as file" state="error" [file]="file"
                         (remove)="removeFile()" />
 
-                    <tui-file *ngIf="loadingFiles$ | async as file" state="loading" [file]="file"
+                    <tui-file *ngIf="loadingAudioFile$ | async as file" state="loading" [file]="file"
                         (remove)="removeFile()" />
                 </tui-files>
 

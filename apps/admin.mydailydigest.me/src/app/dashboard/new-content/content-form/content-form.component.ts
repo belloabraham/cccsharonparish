@@ -50,7 +50,7 @@ import { IDialogData } from '../new-content.component';
 import type { TuiFileLike } from '@taiga-ui/kit';
 import { TuiFiles } from '@taiga-ui/kit';
 import type { Observable } from 'rxjs';
-import { finalize, map, of, Subject, switchMap, timer } from 'rxjs';
+import { of, Subject } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 
 @Component({
@@ -76,7 +76,7 @@ import { AsyncPipe } from '@angular/common';
     NgIf,
     ReactiveFormsModule,
     TuiFiles,
-    TuiLink
+    TuiLink,
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './content-form.component.html',
@@ -95,9 +95,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   readonly languageCode = signal('');
   readonly englishContent = signal<string | null>(null);
   defaultImageUrl = 'https://placehold.co/480x270?text=.';
-  readonly uploadedAudioUrl = signal<string | null>(
-    'https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3'
-  );
+  readonly uploadedAudioUrl = signal<string | null>(null);
 
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
@@ -123,6 +121,10 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     validators: [Validators.required],
     updateOn: 'blur',
   });
+  protected readonly audioFileFC = new FormControl<TuiFileLike | null>(null);
+  protected readonly failedAudioFile$ = new Subject<TuiFileLike | null>();
+  protected readonly loadingAudioFile$ = new Subject<TuiFileLike | null>();
+  loadedAudioFile$: Observable<TuiFileLike | null> = of(null);
 
   constructor(
     @Inject(POLYMORPHEUS_CONTEXT)
@@ -291,43 +293,22 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     }
   }
 
-  protected readonly control = new FormControl<TuiFileLike | null>(
-    null,
-    Validators.required
-  );
-
-  protected readonly failedFiles$ = new Subject<TuiFileLike | null>();
-  protected readonly loadingFiles$ = new Subject<TuiFileLike | null>();
-  protected readonly loadedFiles$ = this.control.valueChanges.pipe(
-    switchMap((file) => this.processFile(file))
-  );
-
-  protected removeFile(): void {
-    this.control.setValue(null);
+  removeFile(): void {
+    this.failedAudioFile$.next(null);
+    this.loadedAudioFile$ = of(null);
   }
 
-  protected processFile(
-    file: TuiFileLike | null
-  ): Observable<TuiFileLike | null> {
-    this.failedFiles$.next(null);
+  uploadAudio(event: Event) {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files[0]) {
+      const file = input.files![0];
+      this.failedAudioFile$.next(null);
+      this.loadingAudioFile$.next(file);
 
-    if (this.control.invalid || !file) {
-      return of(null);
+      //Start file uploading
+      // this.loadedFiles$ = of(null); //null or file
+      // this.loadingFiles$.next(null);
+      // this.failedFiles$.next(null); //null or file
     }
-
-    this.loadingFiles$.next(file);
-
-    return timer(1000).pipe(
-      map(() => {
-        if (Math.random() > 0.5) {
-          return file;
-        }
-
-        this.failedFiles$.next(file);
-
-        return null;
-      }),
-      finalize(() => this.loadingFiles$.next(null))
-    );
   }
 }
