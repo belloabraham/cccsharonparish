@@ -52,6 +52,6 @@ apps/mydailydigest.me/public/images/global/
 apps/mydailydigest.me/public/favicon.ico
 apps/admin.mydailydigest.me/public/favicon.ico
 
-
+common/mydailydigest/src/lib/environments/
 
 
