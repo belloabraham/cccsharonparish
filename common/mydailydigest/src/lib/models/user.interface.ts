@@ -1,6 +1,6 @@
 import { Timestamp } from '@angular/fire/firestore';
 
-export type UserType = 'Publisher' | 'Editor';
+export type UserType = 'Publisher' | 'Editor' | 'Admin';
 
 export interface IUserUIState {
   phone: string;

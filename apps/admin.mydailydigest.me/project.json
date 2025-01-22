@@ -53,21 +53,42 @@
               "maximumError": "40kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "fileReplacements": [
+            {
+              "replace": "apps/admin.mydailydigest.me/src/environments/environment.ts",
+              "with": "apps/admin.mydailydigest.me/src/environments/environment.production.ts"
+            }
+          ]
         },
         "development": {
-          "optimization": false,
-          "extractLicenses": false,
-          "sourceMap": true,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "40kb"
+            }
+          ],
+          "outputHashing": "all",
           "fileReplacements": [
             {
               "replace": "apps/admin.mydailydigest.me/src/environments/environment.ts",
               "with": "apps/admin.mydailydigest.me/src/environments/environment.development.ts"
             }
           ]
+        },
+        "local": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
         }
       },
-      "defaultConfiguration": "production"
+      "defaultConfiguration": "development"
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
@@ -83,9 +104,12 @@
         },
         "development": {
           "buildTarget": "admin.mydailydigest.me:build:development"
+        },
+        "local": {
+          "buildTarget": "admin.mydailydigest.me:build:local"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "local"
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
