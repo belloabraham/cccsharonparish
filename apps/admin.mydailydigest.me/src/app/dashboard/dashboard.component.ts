@@ -94,8 +94,6 @@ export class DashboardComponent extends CommonComponent {
   KEY = DASHBOARD_STRING_RESOURCE_KEY;
   ROUTE = ROUTE;
   themes: any[] = [this.KEY.LIGHT, this.KEY.DARK, this.KEY.DEVICE];
-  navEndSubscription = Subscription.EMPTY;
-  navStartSubscription = Subscription.EMPTY;
   private activatedRoute = inject(ActivatedRoute);
 
   constructor() {
@@ -122,7 +120,7 @@ export class DashboardComponent extends CommonComponent {
   }
 
   onNavigationEnd() {
-    this.navEndSubscription = this.router.events
+    this.subscriptions.sink = this.router.events
       .pipe(
         filter((event) => event instanceof NavigationEnd),
         distinctUntilChanged()
@@ -138,7 +136,7 @@ export class DashboardComponent extends CommonComponent {
   }
 
   onNavigationStart() {
-    this.navStartSubscription = this.router.events
+    this.subscriptions.sink = this.router.events
       .pipe(filter((event) => event instanceof NavigationStart))
       .subscribe(() => {
         this.closeSideDrawer();

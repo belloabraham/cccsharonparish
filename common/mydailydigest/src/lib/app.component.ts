@@ -1,7 +1,7 @@
 import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { MatIconRegistry } from '@angular/material/icon';
-import { Subscription } from 'rxjs';
+import { SubSink } from 'subsink';
 import { ThemeService } from '@cccsharonparish/angular';
 import { Settings } from './data';
 
@@ -12,7 +12,7 @@ export class BaseAppComponent implements OnInit, OnDestroy {
   readonly showPreloader = signal(true);
   private readonly router = inject(Router);
   private readonly matIconRegistry = inject(MatIconRegistry);
-  themeChangeSubscription = Subscription.EMPTY;
+  subscriptions = new SubSink();
   readonly themeService = inject(ThemeService);
 
   constructor() {
@@ -36,8 +36,8 @@ export class BaseAppComponent implements OnInit, OnDestroy {
     this.themeService.setTheme(theme);
   }
 
-  onDeviceThemeChanged(domain:string) {
-    this.themeChangeSubscription = this.themeService
+  onDeviceThemeChanged(domain: string) {
+    this.subscriptions.sink = this.themeService
       .onDeviceThemeChanged()
       .subscribe({
         next: () => {
@@ -52,6 +52,6 @@ export class BaseAppComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.themeChangeSubscription.unsubscribe();
+    this.subscriptions.unsubscribe();
   }
 }
