@@ -18,7 +18,7 @@ export class UserDataService {
     return this.addUser(userUIState, true, userType);
   }
 
-  addUser(
+  private addUser(
     userUIState: IUserUIState,
     isNew: boolean,
     userType: UserType = 'Editor'

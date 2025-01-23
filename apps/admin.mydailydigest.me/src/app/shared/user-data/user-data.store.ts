@@ -1,49 +1,68 @@
 import { signalStore, withState, withMethods, patchState } from '@ngrx/signals';
 import { inject } from '@angular/core';
-import { IUser } from '@cccsharonparish/mydailydigest';
+import { IUser, IUserUIState, UserType } from '@cccsharonparish/mydailydigest';
 import { UserDataService } from './user-data.service';
 import { firestoreRetryStrategy } from '../../services/data/remote/retry-strategy';
-import { retryWhen } from 'rxjs';
+import { retryWhen, tap } from 'rxjs';
 
 type UserDataState = {
   isLoading: boolean;
   loaded: boolean;
   error: any;
-  data: IUser | null;
+  user: IUser | null;
 };
 
 const initialState: UserDataState = {
   loaded: false,
   isLoading: true,
   error: null,
-  data: null,
+  user: null,
 };
 
 export const UserDataStore = signalStore(
   { providedIn: 'root' },
   withState(initialState),
   withMethods((store, userDataService = inject(UserDataService)) => ({
-    getUser(): void {
-      patchState(store, (state) => ({
-        loaded: false,
-        isLoading: true,
-        error: null,
-        data: null,
-      }));
-
-      userDataService
-        .getUser()
-        .pipe(retryWhen(firestoreRetryStrategy(Infinity)))
-        .subscribe({
+    getUser() {
+      return userDataService.getUser().pipe(
+        retryWhen(firestoreRetryStrategy(Infinity)),
+        tap({
           next: (data) => {
             patchState(store, (state) => ({
               loaded: true,
               isLoading: false,
               error: null,
-              data: data,
+              user: data,
             }));
           },
-        });
+        })
+      );
+    },
+    createUser(userUIState: IUserUIState, userType?: UserType) {
+      return userDataService.createUser(userUIState, userType).pipe(
+        tap({
+          next: (data) => {
+            patchState(store, (state) => ({
+              loaded: true,
+              isLoading: false,
+              error: null,
+              user: data.userData,
+            }));
+          },
+        })
+      );
+    },
+    updateUser(userUIState: IUserUIState, userType?: UserType) {
+      return userDataService.updateUser(userUIState, userType).pipe(
+        tap({
+          next: (data) => {
+            patchState(store, (state) => ({
+              ...state,
+              user: data.userData,
+            }));
+          },
+        })
+      );
     },
   }))
 );

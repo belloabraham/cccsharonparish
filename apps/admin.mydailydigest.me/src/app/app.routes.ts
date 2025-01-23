@@ -7,15 +7,13 @@ import {
   AUTH_TOKEN,
   CLOUD_STORAGE_TOKEN,
   CloudStorageService,
-  FirestoreService,
 } from './services';
 import { DashboardService } from './dashboard/dashboard.service';
-import { REMOTE_DATA_TOKEN } from './services/data/remote/remote-data.token';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getApp } from '@angular/fire/app';
-import { SignUpService } from './sign-up/sign-up.service';
 import { ContentStore } from './dashboard/new-content/content.store';
+import {  UserDataStore } from './shared';
 
 export const appRoutes: Route[] = [
   {
@@ -39,14 +37,13 @@ export const appRoutes: Route[] = [
         provide: CLOUD_STORAGE_TOKEN,
         useClass: CloudStorageService,
       },
-      {
-        provide: REMOTE_DATA_TOKEN,
-        useFactory: () => new FirestoreService(),
-      },
       provideStorage(() => getStorage(getApp())),
       DashboardService,
       ContentStore,
     ],
+    resolve: {
+      userData: () => inject(UserDataStore).getUser(),
+    },
     // canMatch: [
     //   (router: Router) => {
     //     const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
@@ -81,13 +78,6 @@ export const appRoutes: Route[] = [
   },
   {
     path: ROUTE.SIGN_UP,
-    providers: [
-      {
-        provide: REMOTE_DATA_TOKEN,
-        useFactory: () => new FirestoreService(),
-      },
-      SignUpService,
-    ],
     canMatch: [
       (router: Router) => {
         const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();

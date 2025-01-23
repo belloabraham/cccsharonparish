@@ -4,13 +4,13 @@ import {
   PAGE_TITLE_KEY,
   SharedModule,
   UserDataComponent,
+  UserDataStore,
 } from '../shared';
 import { SIGNUP_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { FormGroup } from '@angular/forms';
 import { UserDataForm } from '../shared/user-data/user-data-form';
-import { SignUpService } from './sign-up.service';
 import { IUserUIState, JSON, ROUTE } from '@cccsharonparish/mydailydigest';
 import { Router } from '@angular/router';
 import { TuiAlertService } from '@taiga-ui/core';
@@ -31,15 +31,15 @@ import { LanguageResourceService } from '@cccsharonparish/angular';
 export class SignUpComponent extends CommonComponent implements OnDestroy {
   KEY = SIGNUP_STRING_RESOURCE_KEY;
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
-  signUpService = inject(SignUpService);
   private readonly router = inject(Router);
   private readonly alertService = inject(TuiAlertService);
   private readonly languageResourceService = inject(LanguageResourceService);
+  private readonly userDataStore = inject(UserDataStore);
 
   onSubmit(form: FormGroup<UserDataForm>) {
     form.markAllAsTouched();
     if (form.valid) {
-      this.createUser(form)
+      this.createUser(form);
     }
   }
 
@@ -50,9 +50,8 @@ export class SignUpComponent extends CommonComponent implements OnDestroy {
       lastName: JSON.escapeSpecialChars(value.lastName!),
       phone: value.phone!,
     };
-    this.subscriptions.sink = this.signUpService.createUser(user).subscribe({
+    this.subscriptions.sink = this.userDataStore.createUser(user).subscribe({
       next: (response) => {
-        //TODO Update user store
         this.router.navigate([ROUTE.ROOT]);
       },
       error: (error) => {

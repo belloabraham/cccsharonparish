@@ -1,5 +1,5 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { SharedModule, UserDataComponent } from '../../shared';
+import { SharedModule, UserDataComponent, UserDataStore } from '../../shared';
 import {
   FormControl,
   FormGroup,
@@ -18,7 +18,6 @@ import {
   SDDFileUploadDirective,
 } from '@cccsharonparish/angular';
 import { IUserUIState, JSON } from '@cccsharonparish/mydailydigest';
-import { ProfileService } from './profile.service';
 import { SubSink } from 'subsink';
 
 @Component({
@@ -40,7 +39,7 @@ import { SubSink } from 'subsink';
 })
 export class ProfileComponent implements OnInit {
   KEY = PROFILE_STRING_RESOURCE_KEY;
-  profileService = inject(ProfileService);
+  private readonly userDataStore = inject(UserDataStore);
   private readonly MAX_ALLOWED_PROFILE_IMAGE_SIZE_IN_BYTES = 300 * 1024; //300Kb
   protected readonly profileImageFC = new FormControl<File | null>(null, [
     Validators.required,
@@ -85,9 +84,8 @@ export class ProfileComponent implements OnInit {
       lastName: JSON.escapeSpecialChars(value.lastName!),
       phone: value.phone!,
     };
-    this.subscriptions.sink = this.profileService.updateUser(user).subscribe({
+    this.subscriptions.sink = this.userDataStore.updateUser(user).subscribe({
       next: (response) => {
-        //TODO Update user store
         this.showUserUpdateSuccessAlert();
       },
       error: (error) => {
