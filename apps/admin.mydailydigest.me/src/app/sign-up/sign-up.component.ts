@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnDestroy } from '@angular/core';
 import {
   CommonComponent,
   PAGE_TITLE_KEY,
@@ -11,7 +11,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormGroup } from '@angular/forms';
 import { UserDataForm } from '../shared/user-data/user-data-form';
 import { SignUpService } from './sign-up.service';
-import { IUserUIState, JSON } from '@cccsharonparish/mydailydigest';
+import { IUserUIState, JSON, ROUTE } from '@cccsharonparish/mydailydigest';
+import { Router } from '@angular/router';
+import { TuiAlertService } from '@taiga-ui/core';
+import { LanguageResourceService } from '@cccsharonparish/angular';
 
 @Component({
   selector: 'app-sign-up',
@@ -25,21 +28,52 @@ import { IUserUIState, JSON } from '@cccsharonparish/mydailydigest';
     },
   ],
 })
-export class SignUpComponent extends CommonComponent {
+export class SignUpComponent extends CommonComponent implements OnDestroy {
   KEY = SIGNUP_STRING_RESOURCE_KEY;
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
   signUpService = inject(SignUpService);
+  private readonly router = inject(Router);
+  private readonly alertService = inject(TuiAlertService);
+  private readonly languageResourceService = inject(LanguageResourceService);
 
   onSubmit(form: FormGroup<UserDataForm>) {
     form.markAllAsTouched();
     if (form.valid) {
-      const value = form.value;
-      const user: IUserUIState = {
-        firstName: JSON.escapeSpecialChars(value.firstName!),
-        lastName: JSON.escapeSpecialChars(value.lastName!),
-        phone: value.phone!,
-      };
-      this.signUpService.createUser(user);
+      this.createUser(form)
     }
+  }
+
+  private createUser(form: FormGroup<UserDataForm>) {
+    const value = form.value;
+    const user: IUserUIState = {
+      firstName: JSON.escapeSpecialChars(value.firstName!),
+      lastName: JSON.escapeSpecialChars(value.lastName!),
+      phone: value.phone!,
+    };
+    this.subscriptions.sink = this.signUpService.createUser(user).subscribe({
+      next: (response) => {
+        //TODO Update user store
+        this.router.navigate([ROUTE.ROOT]);
+      },
+      error: (error) => {
+        this.showCreateUserFailedErrorAlert();
+      },
+    });
+  }
+
+  private showCreateUserFailedErrorAlert() {
+    const message = this.languageResourceService.getString(
+      this.KEY.USER_CREATE_ERROR_MSG
+    );
+    this.alertService
+      .open(message, {
+        label: 'Error',
+        appearance: 'negative',
+      })
+      .subscribe();
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
   }
 }

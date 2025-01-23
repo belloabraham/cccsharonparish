@@ -21,7 +21,7 @@ export interface IRemoteData {
   getALiveDocumentData<T>(
     collection: string,
     pathSegment: string[],
-    onNext: (type: T) => void,
+    onNext: (data: T) => void,
     retryTimeout?: number
   ): () => void;
 
@@ -38,7 +38,7 @@ export interface IRemoteData {
     collection: string,
     pathSegment: string[],
     queryConstraint: QueryConstraint[],
-    onNext: (type: T[], arrayOfDocIds: string[]) => void,
+    onNext: (data: T[], arrayOfDocIds: string[]) => void,
     onError: (errorCode: string) => void
   ): Unsubscribe;
 
@@ -54,7 +54,7 @@ export interface IRemoteData {
   getLiveListOfDocumentData<T>(
     collection: string,
     pathSegment: string[],
-    onNext: (type: T[]) => void,
+    onNext: (data: T[]) => void,
     onError: (errorCode: string) => void,
     retryTimeout: number
   ): Unsubscribe;
@@ -106,16 +106,16 @@ export interface IRemoteData {
    * Adds a document data to a collection.
    * @param collection The name of the collection.
    * @param pathSegment Array of path segments.
-   * @param type The data to be added.
+   * @param data The data to be added.
    * @param merge Optional parameter to merge the data.
    * @returns A observable that resolves once the operation is completed.
    */
-  addADocumentDataTo(
+  addADocumentDataTo<T extends Record<string, any>>(
     collection: string,
     pathSegment: string[],
-    type: any,
+    data: T,
     merge?: { merge: boolean }
-  ): Observable<void>;
+  ): Observable<T>;
 
   /**
    * Deletes all documents from a collection.

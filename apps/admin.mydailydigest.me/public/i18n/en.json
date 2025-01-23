@@ -86,5 +86,7 @@
   "invalid_name_msg": "Enter a valid name",
   "submit": "Submit",
   "select_a_country": "Select a country",
-  "invalid_phone_msg": "Enter a valid phone number"
+  "invalid_phone_msg": "Enter a valid phone number",
+  "user_create_error_message": "Oops! Something went wrong while creating your account. Please check your internet connection and try again. If the issue persists, contact support for assistance.",
+  "profile_create_error_message": "Oops! Something went wrong while updating your profile. Please check your internet connection and try again. If the issue persists, contact support for assistance."
 }

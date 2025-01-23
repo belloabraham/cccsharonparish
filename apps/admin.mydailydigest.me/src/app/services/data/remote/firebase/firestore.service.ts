@@ -31,17 +31,17 @@ export class FirestoreService implements IRemoteData {
   getALiveDocumentData<T>(
     path: string,
     pathSegment: string[],
-    onNext: (type: T) => void,
+    onNext: (data: T) => void,
     retryTimeout: number = 2000
   ) {
     const ref = doc(this.firestore, path, ...pathSegment);
     const unsubscribe = onSnapshot(ref, {
       next: (docSnapshot) => {
         if (docSnapshot.exists()) {
-          const data = docSnapshot.data();
-          const json = JSON.stringify(data);
-          const type: T = JSON.parse(json);
-          onNext(type);
+          const docData = docSnapshot.data();
+          const json = JSON.stringify(docData);
+          const data: T = JSON.parse(json);
+          onNext(data);
         }
       },
       error: (error: FirestoreError) => {
@@ -62,7 +62,7 @@ export class FirestoreService implements IRemoteData {
   getLiveListOfDocumentData<T>(
     path: string,
     pathSegment: string[],
-    onNext: (type: T[]) => void,
+    onNext: (data: T[]) => void,
     onError: (errorCode: string) => void,
     retryTimeout: number
   ) {
@@ -73,10 +73,10 @@ export class FirestoreService implements IRemoteData {
         const dataArray: T[] = [];
         querySnapShot.forEach((queryDoc) => {
           if (queryDoc.exists()) {
-            const data = queryDoc.data();
-            const json = JSON.stringify(data);
-            const type: T = JSON.parse(json);
-            dataArray.push(type);
+            const docData = queryDoc.data();
+            const json = JSON.stringify(docData);
+            const data: T = JSON.parse(json);
+            dataArray.push(data);
           }
         });
         onNext(dataArray);
@@ -102,7 +102,7 @@ export class FirestoreService implements IRemoteData {
     path: string,
     pathSegment: string[],
     queryConstraint: QueryConstraint[],
-    onNext: (type: T[], arrayOfDocIds: string[]) => void,
+    onNext: (data: T[], arrayOfDocIds: string[]) => void,
     onError: (errorCode: string) => void
   ) {
     const q = query(
@@ -116,10 +116,10 @@ export class FirestoreService implements IRemoteData {
         const arrayOfIds: string[] = [];
         querySnapShot.forEach((queryDoc) => {
           if (queryDoc.exists()) {
-            const data = queryDoc.data();
-            const json = JSON.stringify(data);
-            const type: T = JSON.parse(json);
-            dataArray.push(type);
+            const docData = queryDoc.data();
+            const json = JSON.stringify(docData);
+            const data: T = JSON.parse(json);
+            dataArray.push(data);
             arrayOfIds.push(queryDoc.id);
           }
         });
@@ -197,16 +197,16 @@ export class FirestoreService implements IRemoteData {
     });
   }
 
-  addADocumentDataTo(
+  addADocumentDataTo<T extends Record<string, any>>(
     collection: string,
     pathSegment: string[],
-    type: any,
+    data: T,
     merge = { merge: true }
-  ): Observable<void> {
+  ): Observable<T> {
     const docRef = doc(this.firestore, collection, ...pathSegment);
     return new Observable((observer) => {
-      setDoc(docRef, type, merge)
-        .then(() => observer.next())
+      setDoc(docRef, data, merge)
+        .then(() => observer.next(data))
         .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });

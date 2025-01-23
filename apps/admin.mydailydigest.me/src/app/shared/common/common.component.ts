@@ -5,6 +5,7 @@ import { PAGE_TITLE_KEY } from '../injection.token';
 import { environment } from '../../../environments/environment';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { HttpRequestProgressIndicatorService } from '../../services';
+import { SubSink } from 'subsink';
 
 @Component({
   template: ``,
@@ -17,6 +18,7 @@ export class CommonComponent {
   readonly httpRequestProgressIndicatorService = inject(
     HttpRequestProgressIndicatorService
   );
+  subscriptions = new SubSink();
 
   constructor() {
     effect(() => {

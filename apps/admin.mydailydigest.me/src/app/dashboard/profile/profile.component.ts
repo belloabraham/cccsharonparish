@@ -17,8 +17,9 @@ import {
   CustomValidators,
   SDDFileUploadDirective,
 } from '@cccsharonparish/angular';
-import { IUserUIState } from '@cccsharonparish/mydailydigest';
+import { IUserUIState, JSON } from '@cccsharonparish/mydailydigest';
 import { ProfileService } from './profile.service';
+import { SubSink } from 'subsink';
 
 @Component({
   selector: 'app-profile',
@@ -56,6 +57,7 @@ export class ProfileComponent implements OnInit {
     HttpRequestProgressIndicatorService
   );
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
+  private subscriptions = new SubSink();
 
   ngOnInit(): void {
     this.profileImageFC.valueChanges.subscribe({
@@ -67,27 +69,34 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  uploadImage(file: File) {
-
-  }
+  uploadImage(file: File) {}
 
   onSubmit(form: FormGroup<UserDataForm>) {
     form.markAllAsTouched();
     if (form.valid) {
-      const value = form.value;
-      const user: IUserUIState = {
-        firstName: value.firstName!,
-        lastName: value.lastName!,
-        phone: value.phone!,
-      };
-      this.updateUserProfile(user);
+      this.updateUserProfile(form);
     }
   }
 
-  updateUserProfile(user: IUserUIState) {
-    this.profileService.updateUser(user).subscribe({
-      next: () => {},
-      error: (error) => {},
+  updateUserProfile(form: FormGroup<UserDataForm>) {
+    const value = form.value;
+    const user: IUserUIState = {
+      firstName: JSON.escapeSpecialChars(value.firstName!),
+      lastName: JSON.escapeSpecialChars(value.lastName!),
+      phone: value.phone!,
+    };
+    this.subscriptions.sink = this.profileService.updateUser(user).subscribe({
+      next: (response) => {
+        //TODO Update user store
+        this.showUserUpdateSuccessAlert();
+      },
+      error: (error) => {
+        this.showFailedUserUpdateAlert();
+      },
     });
   }
+
+  showFailedUserUpdateAlert() {}
+
+  showUserUpdateSuccessAlert() {}
 }

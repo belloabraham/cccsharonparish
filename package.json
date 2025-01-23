@@ -42,7 +42,7 @@
     "@angular/common": "~19.1.0",
     "@angular/compiler": "~19.1.0",
     "@angular/core": "~19.1.0",
-    "@angular/fire": "19.0.0-rc.4",
+    "@angular/fire": "19.0.0",
     "@angular/forms": "~19.1.0",
     "@angular/material": "~19.1.0",
     "@angular/platform-browser": "~19.1.0",
@@ -68,7 +68,8 @@
     "isomorphic-dompurify": "^2.17.0",
     "libphonenumber-js": "^1.11.17",
     "modern-css-reset": "^1.4.0",
-    "rxjs": "~7.8.0"
+    "rxjs": "~7.8.0",
+    "subsink": "^1.0.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~19.1.0",

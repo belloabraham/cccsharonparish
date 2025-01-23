@@ -38,15 +38,17 @@ export class UserDataService {
       );
     }
 
-    return forkJoin([
-      this.auth
-        .updateCurrentUser({
-          ...authUser,
-          displayName: `${userUIState.firstName}#${userUIState.lastName}`,
-          phoneNumber: userUIState.phone,
-        }),
-      this.remoteData
-        .addADocumentDataTo(COLLECTION.EDITORS, [user.id], user)
-    ]);
+    return forkJoin({
+      authUser: this.auth.updateCurrentUser({
+        ...authUser,
+        displayName: `${userUIState.firstName}#${userUIState.lastName}`,
+        phoneNumber: userUIState.phone,
+      }),
+      userData: this.remoteData.addADocumentDataTo(
+        COLLECTION.EDITORS,
+        [user.id],
+        user
+      ),
+    });
   }
 }

@@ -4,4 +4,5 @@ export const SIGNUP_STRING_RESOURCE_KEY = {
   SIGN_UP_HEADER: 'signup_header',
   TELL_US_ABOUT: 'tell_us_about_u',
   SUBMIT: 'submit',
+  USER_CREATE_ERROR_MSG: 'user_create_error_message',
 };
