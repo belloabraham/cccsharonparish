@@ -97,7 +97,7 @@ export interface IRemoteData {
    * @param pathSegment Array of path segments.
    * @returns A observable that resolves to the document data or null if not found.
    */
-  getADocumentDataAsync<T>(
+  getADocumentData<T>(
     collection: string,
     pathSegment: string[]
   ): Observable<T | null>;

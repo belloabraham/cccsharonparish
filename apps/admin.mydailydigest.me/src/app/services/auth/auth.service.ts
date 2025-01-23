@@ -12,8 +12,7 @@ export const AUTH_TOKEN = new InjectionToken<IAuth>('authentication', {
 
 @Injectable()
 export class AuthService implements IAuth {
-
-  constructor(private readonly firebaseAuth:FirebaseAuthService) {}
+  constructor(private readonly firebaseAuth: FirebaseAuthService) {}
 
   signInWithEmailLink(
     email: string,
@@ -27,6 +26,10 @@ export class AuthService implements IAuth {
 
   getUser(): User | null {
     return this.firebaseAuth.getUser();
+  }
+
+  getUserId() {
+    return this.firebaseAuth.getUser()?.uid;
   }
 
   updateCurrentUser(user: User) {

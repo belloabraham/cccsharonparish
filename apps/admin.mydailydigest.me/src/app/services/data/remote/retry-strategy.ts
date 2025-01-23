@@ -1,19 +1,15 @@
 import { Observable, mergeMap, throwError, timer } from 'rxjs';
 import { FIRESTORE_ERROR_CODES } from './firebase/error-codes';
 
-export const genericRetryStrategy =
-  ({
-    maxRetryAttempts = 3,
-    scalingDuration = 1000,
-    excludedStatusCodes = [
-      FIRESTORE_ERROR_CODES.PERMISSION_DENIED,
+export const firestoreRetryStrategy =
+  (
+    maxRetryAttempts: number = 3,
+    scalingDuration: number = 1000,
+    excludedStatusCodes: string[] = [
       FIRESTORE_ERROR_CODES.UNAUTHENTICATED,
-    ],
-  }: {
-    maxRetryAttempts?: number;
-    scalingDuration?: number;
-    excludedStatusCodes?: string[];
-  } = {}) =>
+      FIRESTORE_ERROR_CODES.PERMISSION_DENIED,
+    ]
+  ) =>
   (attempts: Observable<any>) => {
     return attempts.pipe(
       mergeMap((error, i) => {
@@ -34,6 +30,5 @@ export const genericRetryStrategy =
         // retry after 1s, 2s, etc...
         return timer(retryAttempt * scalingDuration);
       })
-      // finalize(() => console.log('We are done!'))
     );
   };

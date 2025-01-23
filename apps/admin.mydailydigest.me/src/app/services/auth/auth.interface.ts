@@ -5,6 +5,7 @@ export interface IAuth {
   getAuthSate$: () => Observable<User | null>;
   signOut: () => Observable<void>;
   getUser: () => User | null;
+  getUserId(): string | undefined;
   emailIsAuthorized: (email: string) => boolean;
   sendSignInLinkTo: (email: string) => Observable<void>;
   signInWithEmailLink: (

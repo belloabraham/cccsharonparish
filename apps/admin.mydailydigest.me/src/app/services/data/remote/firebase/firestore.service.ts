@@ -182,7 +182,7 @@ export class FirestoreService implements IRemoteData {
     });
   }
 
-  getADocumentDataAsync<T>(
+  getADocumentData<T>(
     collection: string,
     pathSegment: string[]
   ): Observable<T | null> {

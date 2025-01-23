@@ -51,4 +51,9 @@ export class UserDataService {
       ),
     });
   }
+
+  getUser(){
+    const userId = this.auth.getUserId()!
+    return this.remoteData.getADocumentData<IUser>(COLLECTION.EDITORS, [userId]);
+  }
 }
