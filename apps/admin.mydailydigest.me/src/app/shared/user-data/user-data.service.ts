@@ -34,7 +34,7 @@ export class UserDataService {
 
     if (isNew) {
       user.createdOn = new Date(
-        authUser.metadata.creationTime || new Date().toISOString()
+        authUser?.metadata?.creationTime || new Date().toISOString()
       );
     }
 
