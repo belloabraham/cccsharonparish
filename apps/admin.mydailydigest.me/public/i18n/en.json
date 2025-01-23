@@ -63,7 +63,7 @@
   "content_msg_req_msg": "Content message is required",
   "save": "Save",
   "date_reg_msg": "Enter a valid date",
-  "max_image_size_exceeded_mgs": "Maximum image size of was exceeded, upload image that is less than {{value}}",
+  "max_image_size_exceeded_mgs": "Maximum allowed image size  was exceeded, upload an image that is less than {{value}}",
   "header_image": "Header Image",
   "cancel": "Cancel",
   "upload": "Upload",
@@ -73,6 +73,7 @@
   "crop_and_upload_img": "Crop and upload image",
   "reset_crop_changes": "Reset crop changes",
   "attach_image_for_cropping": "Attach an image for cropping",
+  "max_audio_size_exceeded_mgs": "Maximum allowed audio size was exceeded, upload an audio that is less than {{value}}",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",

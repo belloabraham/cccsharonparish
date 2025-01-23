@@ -21,6 +21,7 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   SAVE: 'save',
   DATE_REQ_MSG: 'date_reg_msg',
   MAX_IMAGE_SIZE_EXCEEDED_MSG: 'max_image_size_exceeded_mgs',
+  MAX_AUDIO_SIZE_EXCEEDED_MSG: 'max_audio_size_exceeded_mgs',
   HEADER_IMAGE: 'header_image',
   CANCEL: 'cancel',
   UPLOAD: 'upload',

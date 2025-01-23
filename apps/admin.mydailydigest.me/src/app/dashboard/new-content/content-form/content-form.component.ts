@@ -100,8 +100,13 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
   > | null = null;
+  protected maxAudioSizeExceededError: TuiValidationError<
+    Record<string, unknown>
+  > | null = null;
   readonly languageService = inject(LanguageResourceService);
   private readonly MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES = 500 * 1024; //500Kb
+  private readonly MAX_ALLOWED_AUDIO_SIZE_IN_BYTES = 10 * 1024 * 1024; //10Mb
+
   readonly imageUploadState = signal<
     'uploading' | 'uploaded' | 'error' | 'none'
   >('none');
@@ -299,16 +304,33 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   uploadAudio(event: Event) {
+    this.maxAudioSizeExceededError = null;
     const input = event.target as HTMLInputElement;
     if (input.files && input.files[0]) {
       const file = input.files![0];
-      this.failedAudioFile$.next(null);
-      this.loadingAudioFile$.next(file);
+      if (file.size > this.MAX_ALLOWED_AUDIO_SIZE_IN_BYTES) {
+        this.failedAudioFile$.next(file);
+        this.showMaximumAudioSizeExceededError();
+      } else {
+        this.failedAudioFile$.next(null);
+        this.loadingAudioFile$.next(file);
 
-      //Start file uploading
-      // this.loadedFiles$ = of(null); //null or file
-      // this.loadingFiles$.next(null);
-      // this.failedFiles$.next(null); //null or file
+        //Start file uploading
+        // this.loadedFiles$ = of(null); //null or file
+        // this.loadingFiles$.next(null);
+        // this.failedFiles$.next(null); //null or file
+      }
     }
+  }
+
+  showMaximumAudioSizeExceededError() {
+    this.maxAudioSizeExceededError = new TuiValidationError(
+      this.languageService.getStringWithParameter(
+        this.KEY.MAX_AUDIO_SIZE_EXCEEDED_MSG,
+        {
+          value: `${this.MAX_ALLOWED_AUDIO_SIZE_IN_BYTES / (1024 * 1024)}Mb`,
+        }
+      )
+    );
   }
 }
