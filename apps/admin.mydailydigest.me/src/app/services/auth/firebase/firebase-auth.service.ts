@@ -28,7 +28,7 @@ export class FirebaseAuthService {
     return new Observable((observer) => {
       signOut(this.auth)
         .then(() => observer.next())
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -41,7 +41,7 @@ export class FirebaseAuthService {
     return new Observable((observer) => {
       updateCurrentUser(this.auth, user)
         .then(() => observer.next(user))
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -57,7 +57,7 @@ export class FirebaseAuthService {
     return new Observable((observer) => {
       signInWithEmailLink(this.auth, email, emailLink)
         .then((userCredential) => observer.next(userCredential))
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -70,7 +70,7 @@ export class FirebaseAuthService {
     return new Observable((observer) => {
       sendSignInLinkToEmail(this.auth, email, actionCodeSettings)
         .then(() => observer.next())
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }

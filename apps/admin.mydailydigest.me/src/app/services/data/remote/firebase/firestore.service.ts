@@ -147,7 +147,7 @@ export class FirestoreService implements IRemoteData {
         .then((querySnapshot) =>
           observer.next(querySnapshotToArrayOfType<T>(querySnapshot))
         )
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -165,7 +165,7 @@ export class FirestoreService implements IRemoteData {
         .then((querySnapshot) =>
           observer.next(querySnapshotToArrayOfType<T>(querySnapshot))
         )
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -177,7 +177,7 @@ export class FirestoreService implements IRemoteData {
         .then((querySnapshot) =>
           observer.next(querySnapshotToArrayOfType<T>(querySnapshot))
         )
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -192,7 +192,7 @@ export class FirestoreService implements IRemoteData {
         .then((docSnapShot) =>
           observer.next(documentDataSnapshotToType<T>(docSnapShot))
         )
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -207,7 +207,7 @@ export class FirestoreService implements IRemoteData {
     return new Observable((observer) => {
       setDoc(docRef, type, merge)
         .then(() => observer.next())
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -228,7 +228,7 @@ export class FirestoreService implements IRemoteData {
       batch
         .commit()
         .then(() => observer.next())
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -241,7 +241,7 @@ export class FirestoreService implements IRemoteData {
     return new Observable((observer) => {
       deleteDoc(docRef)
         .then(() => observer.next())
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -255,7 +255,7 @@ export class FirestoreService implements IRemoteData {
     return new Observable((observer) => {
       updateDoc(docRef, map)
         .then(() => observer.next())
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -270,7 +270,7 @@ export class FirestoreService implements IRemoteData {
     return new Observable((observer) => {
       updateDoc(docRef, field, fieldValue)
         .then(() => observer.next())
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
@@ -293,7 +293,7 @@ export class FirestoreService implements IRemoteData {
       batch
         .commit()
         .then(() => observer.next())
-        .catch((error) => observer.next(error))
+        .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
   }
