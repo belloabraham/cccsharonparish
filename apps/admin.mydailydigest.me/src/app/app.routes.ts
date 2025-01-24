@@ -41,9 +41,9 @@ export const appRoutes: Route[] = [
       DashboardService,
       ContentStore,
     ],
-    resolve: {
-      userData: () => inject(UserDataStore).getUser(),
-    },
+    // resolve: {
+    //   userData: () => inject(UserDataStore).getUser(),
+    // },
     // canMatch: [
     //   (router: Router) => {
     //     const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();

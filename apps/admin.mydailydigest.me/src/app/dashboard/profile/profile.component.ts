@@ -1,4 +1,11 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  inject,
+  OnInit,
+  signal,
+  viewChild,
+} from '@angular/core';
 import { SharedModule, UserDataComponent, UserDataStore } from '../../shared';
 import {
   FormControl,
@@ -37,7 +44,7 @@ import { SubSink } from 'subsink';
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent implements OnInit, AfterViewInit {
   KEY = PROFILE_STRING_RESOURCE_KEY;
   private readonly userDataStore = inject(UserDataStore);
   private readonly MAX_ALLOWED_PROFILE_IMAGE_SIZE_IN_BYTES = 300 * 1024; //300Kb
@@ -49,7 +56,7 @@ export class ProfileComponent implements OnInit {
       }Kb in size`,
     }),
   ]);
-
+  userDataComponent = viewChild.required<UserDataComponent>('userDataForm');
   imageUrl = signal<string | undefined>(undefined);
   uploadingProfileImage = signal<boolean>(false);
   private readonly httpRequestProgressIndicatorService = inject(
@@ -66,6 +73,13 @@ export class ProfileComponent implements OnInit {
         }
       },
     });
+  }
+
+  ngAfterViewInit(): void {
+    const user = this.userDataStore.user();
+    if (user) {
+      this.userDataComponent().form.patchValue(user);
+    }
   }
 
   uploadImage(file: File) {}
