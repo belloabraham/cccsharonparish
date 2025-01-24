@@ -7,20 +7,23 @@ import {
 import { TuiBreakpointService } from '@taiga-ui/core';
 import { environment } from '../../environments/environment';
 import { Language, Settings } from '@cccsharonparish/mydailydigest';
-import { AUTH_TOKEN } from '../services';
+import { AUTH_TOKEN, COLLECTION, REMOTE_DATA_TOKEN } from '../services';
 import { ActivatedRoute } from '@angular/router';
 export interface IBreadCrumb {
   label: string;
   url: string;
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class DashboardService {
   readonly breakpoint$ = inject(TuiBreakpointService);
   private readonly themeService = inject(ThemeService);
   private readonly authService = inject(AUTH_TOKEN);
   private readonly BREADCRUMB_ROUTE_DATA_KEY = 'breadcrumb';
   private readonly languageService = inject(LanguageResourceService);
+  private readonly remoteData = inject(REMOTE_DATA_TOKEN);
 
   logout() {
     return this.authService.signOut();
@@ -116,5 +119,12 @@ export class DashboardService {
       );
     }
     return newBreadcrumbs;
+  }
+
+  getSupportedLanguages() {
+    return this.remoteData.getAListOfDocData<Language>(
+      COLLECTION.LANGUAGES,
+      []
+    );
   }
 }

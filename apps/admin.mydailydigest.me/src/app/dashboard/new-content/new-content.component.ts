@@ -19,8 +19,8 @@ import { TuiDialogService } from '@taiga-ui/core';
 import { Subscription } from 'rxjs';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
 import { ContentStore } from './content.store';
-import { AppStore } from 'common/mydailydigest/src/lib/app.store';
 import { NgIf } from '@angular/common';
+import { DashboardStore } from '../dashboard.store';
 
 export interface IDialogData {
   content?: ISpiritualDailyDigestUIState;
@@ -46,7 +46,7 @@ export class NewContentComponent implements OnDestroy {
   private injector = inject(Injector);
   contentFormDialogSubscription = Subscription.EMPTY;
   contentStore = inject(ContentStore);
-  appStore = inject(AppStore);
+  dashboardStore = inject(DashboardStore);
 
   sddForSelectedLanguage = signal<ISpiritualDailyDigest[]>([]);
 
@@ -57,7 +57,7 @@ export class NewContentComponent implements OnDestroy {
 
   constructor() {
     effect(() => {
-      const title = this.appStore
+      const title = this.dashboardStore
         .supportedLanguages()
         .languages.filter((lang) => lang.code === this.languageCode())[0].label;
       this.title.set(title);

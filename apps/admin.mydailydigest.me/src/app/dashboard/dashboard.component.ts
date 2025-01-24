@@ -41,7 +41,8 @@ import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { TuiItem } from '@taiga-ui/cdk';
 import { MatMenuModule } from '@angular/material/menu';
 import { ThemeType } from '@cccsharonparish/angular';
-import { distinctUntilChanged, filter, Subscription } from 'rxjs';
+import { distinctUntilChanged, filter } from 'rxjs';
+import { DashboardStore } from './dashboard.store';
 
 @Component({
   selector: 'app-dashboard',
@@ -89,6 +90,7 @@ export class DashboardComponent extends CommonComponent {
   expandSideNav = signal(true);
   expandMobileDropdown = signal(false);
   openSideDrawer = signal(false);
+  readonly dashboardStore = inject(DashboardStore);
 
   appName = environment.appName;
   KEY = DASHBOARD_STRING_RESOURCE_KEY;
@@ -101,8 +103,8 @@ export class DashboardComponent extends CommonComponent {
     this.onNavigationStart();
     this.onNavigationEnd();
     effect(() => {
-      const supportedLanguages = this.appStore.supportedLanguages().languages;
-      if (this.appStore.language().loaded) {
+      const supportedLanguages = this.dashboardStore.supportedLanguages().languages;
+      if (this.dashboardStore.supportedLanguages().loaded) {
         if (supportedLanguages.length > 0) {
           this.breadcrumbs.set(
             this.dashboardService.createBreadCrumbs(
@@ -129,7 +131,7 @@ export class DashboardComponent extends CommonComponent {
         this.breadcrumbs.set(
           this.dashboardService.createBreadCrumbs(
             this.activatedRoute,
-            this.appStore.supportedLanguages().languages
+            this.dashboardStore.supportedLanguages().languages
           )
         );
       });

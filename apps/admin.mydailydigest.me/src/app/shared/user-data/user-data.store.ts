@@ -2,8 +2,8 @@ import { signalStore, withState, withMethods, patchState } from '@ngrx/signals';
 import { inject } from '@angular/core';
 import { IUser, IUserUIState, UserType } from '@cccsharonparish/mydailydigest';
 import { UserDataService } from './user-data.service';
-import { firestoreRetryStrategy } from '../../services/data/remote/retry-strategy';
 import { retryWhen, tap } from 'rxjs';
+import { firestoreRetryStrategy } from '../../services';
 
 type UserDataState = {
   isLoading: boolean;

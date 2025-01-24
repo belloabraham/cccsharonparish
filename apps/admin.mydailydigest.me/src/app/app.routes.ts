@@ -1,7 +1,7 @@
 import { Route, Router } from '@angular/router';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { AuthComponent } from './auth/auth.component';
-import { map } from 'rxjs';
+import { forkJoin, map } from 'rxjs';
 import { inject } from '@angular/core';
 import {
   AUTH_TOKEN,
@@ -13,7 +13,8 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getApp } from '@angular/fire/app';
 import { ContentStore } from './dashboard/new-content/content.store';
-import {  UserDataStore } from './shared';
+import { UserDataStore } from './shared';
+import { DashboardStore } from './dashboard/dashboard.store';
 
 export const appRoutes: Route[] = [
   {
@@ -41,9 +42,13 @@ export const appRoutes: Route[] = [
       DashboardService,
       ContentStore,
     ],
-    // resolve: {
-    //   userData: () => inject(UserDataStore).getUser(),
-    // },
+    resolve: {
+      data: () => {
+        // const user$ = inject(UserDataStore).getUser();
+        const languages$ = inject(DashboardStore).getSupportedLanguages();
+        return forkJoin([languages$]);
+      },
+    },
     // canMatch: [
     //   (router: Router) => {
     //     const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();

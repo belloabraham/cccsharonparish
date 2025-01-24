@@ -5,5 +5,7 @@ export * from './remote/firebase/firestore.service';
 export * from './remote/remote-data.token';
 export * from './remote/remote-data.interface';
 export * from './remote/firebase/firestore.service';
+export * from './remote/retry-strategy';
+
 
 
