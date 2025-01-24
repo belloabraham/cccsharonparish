@@ -7,6 +7,8 @@ export const ROUTE = {
   PUBLISHED: 'published',
   EDITORS: 'editors',
   PROFILE: 'profile',
+  PRIVACY: 'privacy',
+  TERMS: 'terms',
   PARAMS: {
     LANGUAGE_CODE: 'languageCode',
   },
