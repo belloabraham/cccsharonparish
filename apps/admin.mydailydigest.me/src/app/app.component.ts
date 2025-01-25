@@ -31,7 +31,7 @@ export class AppComponent
     HttpRequestProgressIndicatorService
   );
 
-  deviceConnected: Signal<boolean | undefined>;
+  deviceIsConnected: Signal<boolean | undefined>;
   isLoading = this.httpRequestLoadingIndicatorService.isLoading;
 
   KEY = APP_STRING_RESOURCE_KEY;
@@ -43,7 +43,7 @@ export class AppComponent
     const domain = environment.domain;
     this.setAppTheme(domain);
     this.onDeviceThemeChanged(domain);
-    this.deviceConnected = toSignal(
+    this.deviceIsConnected = toSignal(
       this.connectionStateUtil.observeDeviceInternetConnectionState(ROUTE.ROOT)
     );
   }

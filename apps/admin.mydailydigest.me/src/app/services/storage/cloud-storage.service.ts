@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 export const CLOUD_STORAGE_TOKEN = new InjectionToken<ICloudStorage>(
   'cloud-storage',
   {
-    // providedIn: 'any',
     factory: () => new CloudStorageService(new FirebaseStorageService()),
   }
 );
@@ -16,10 +15,10 @@ export const CLOUD_STORAGE_TOKEN = new InjectionToken<ICloudStorage>(
 export class CloudStorageService implements ICloudStorage {
   constructor(private readonly firebaseStorage: FirebaseStorageService) {}
 
-  deleteFileFrom(pathSegment: string[]): Observable<void> {
+  deleteFileFrom(pathSegment: string[], fileNameWithExt:string): Observable<void> {
     return new Observable((observer) => {
       this.firebaseStorage
-        .deleteFileFrom(pathSegment)
+        .deleteFileFrom(pathSegment, fileNameWithExt)
         .then(() => observer.next())
         .catch((error) => observer.error(error))
         .finally(() => observer.complete());
@@ -38,11 +37,12 @@ export class CloudStorageService implements ICloudStorage {
 
   uploadFileTo(
     pathSegment: string[],
+    fileNameWithExt:string,
     file: Blob | Uint8Array | ArrayBuffer | File
   ): Observable<UploadResult> {
     return new Observable((observer) => {
       this.firebaseStorage
-        .uploadFileTo(pathSegment, file)
+        .uploadFileTo(pathSegment, fileNameWithExt, file)
         .then((uploadResult) => observer.next(uploadResult))
         .catch((error) => observer.error(error))
         .finally(() => observer.complete());

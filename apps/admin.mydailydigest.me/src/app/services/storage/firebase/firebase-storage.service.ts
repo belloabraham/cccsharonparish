@@ -12,17 +12,18 @@ import {
 export class FirebaseStorageService {
   private storage = inject(Storage);
 
-  deleteFileFrom(pathSegment: string[]) {
-    const path = pathSegment.join('/');
+  deleteFileFrom(pathSegment: string[], fileNameWithExt: string) {
+    const path = [...pathSegment, fileNameWithExt].join('/');
     const storageRef = ref(this.storage, path);
     return deleteObject(storageRef);
   }
 
   uploadFileTo(
     pathSegment: string[],
+    fileNameWithExt: string,
     file: Blob | Uint8Array | ArrayBuffer | File
   ) {
-    const path = pathSegment.join('/');
+    const path = [...pathSegment, fileNameWithExt].join('/');
     const storageRef = ref(this.storage, path);
     return uploadBytes(storageRef, file);
   }

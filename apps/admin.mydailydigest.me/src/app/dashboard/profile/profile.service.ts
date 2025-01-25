@@ -14,7 +14,8 @@ export class ProfileService {
     const fileNameWithExt = userId + '.' + getFileExtension(file.name);
     const profileImage = renameFile(file, fileNameWithExt);
     return this.cloudStorage.uploadFileTo(
-      [STORAGE_PATH.EDITORS, STORAGE_PATH.PROFILE, fileNameWithExt],
+      [STORAGE_PATH.EDITORS, STORAGE_PATH.PROFILE],
+      fileNameWithExt,
       profileImage
     );
   }

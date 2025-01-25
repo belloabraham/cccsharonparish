@@ -1,4 +1,3 @@
-
 import { StorageReference, UploadResult } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
 
@@ -7,7 +6,10 @@ export interface ICloudStorage {
    * Deletes a file from the storage.
    * @param pathSegment - The path to the file to be deleted.
    */
-  deleteFileFrom(pathSegment: string[]): Observable<void>;
+  deleteFileFrom(
+    pathSegment: string[],
+    fileNameWithExt: string
+  ): Observable<void>;
 
   /**
    * Uploads a file to Cloud Storage.
@@ -17,6 +19,7 @@ export interface ICloudStorage {
    */
   uploadFileTo(
     pathSegment: string[],
+    fileNameWithExt: string,
     file: Blob | File | Uint8Array | ArrayBuffer
   ): Observable<UploadResult>;
 

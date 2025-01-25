@@ -5,7 +5,7 @@
     <mat-progress-bar mode="indeterminate" class="!fixed top-0"></mat-progress-bar>
     }
 
-    @if (!deviceConnected()) {
+    @if (!deviceIsConnected()) {
     <div class="warning-panel">
         <span *transloco="let t"> {{ t(KEY.NO_INTERNET_CONNECTION_NOTICE , {value: APP_NAME}) }}</span>
     </div>
