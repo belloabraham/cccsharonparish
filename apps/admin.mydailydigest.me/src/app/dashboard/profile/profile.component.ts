@@ -28,6 +28,7 @@ import {
 import { IUserUIState, JSON } from '@cccsharonparish/mydailydigest';
 import { SubSink } from 'subsink';
 import { ProfileService } from './profile.service';
+import { environment } from 'apps/admin.mydailydigest.me/src/environments/environment';
 
 @Component({
   selector: 'app-profile',
@@ -92,11 +93,12 @@ export class ProfileComponent implements OnInit, AfterViewInit {
     this.uploadingProfileImage.set(true);
     this.profileService.uploadProfileImage(file).subscribe({
       next: (uploadResult) => {
-        console.error(uploadResult);
-        // this.imageUrl.set()
+        this.imageUrl.set(
+          `${environment.cdnBaseUrl}/${uploadResult.metadata.fullPath}`
+        );
+        this.uploadingProfileImage.set(false);
       },
-      error: () => {},
-      complete: () => {
+      error: () => {
         this.uploadingProfileImage.set(false);
       },
     });
@@ -115,6 +117,7 @@ export class ProfileComponent implements OnInit, AfterViewInit {
       firstName: JSON.escapeSpecialChars(value.firstName!),
       lastName: JSON.escapeSpecialChars(value.lastName!),
       phone: value.phone!,
+      imageUrl: this.imageUrl(),
     };
     this.subscriptions.sink = this.userDataStore.updateUser(user).subscribe({
       next: (response) => {

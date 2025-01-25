@@ -5,7 +5,7 @@
     <div class="mat-elevation-z1 p-4 card">
 
         <div class="file">
-            <div (click)="fileInput.click()" class="image-upload relative"
+            <div (click)="fileInput.click()" class="image-upload relative rounded-full"
                 [class.border-red-600]="profileImageFC.hasError('maxFileSize')">
                 <input #fileInput sddFileUpload accept="image/*" type="file" hidden [formControl]="profileImageFC" />
                 <div class="badge">

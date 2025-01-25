@@ -38,7 +38,6 @@ export const appRoutes: Route[] = [
         provide: CLOUD_STORAGE_TOKEN,
         useClass: CloudStorageService,
       },
-      provideStorage(() => getStorage(getApp())),
       DashboardService,
       ContentStore,
     ],

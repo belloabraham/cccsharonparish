@@ -19,6 +19,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { HttpProgressInterceptorService } from './interceptors/http-progress-interceptors.service';
 import { provideImgixLoader } from '@angular/common';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 function setDNSPreConnectLink() {
   const domain = environment.cdnBaseUrl;
@@ -48,6 +49,7 @@ export const appConfig: ApplicationConfig = {
     provideFirebaseApp(() => initializeApp({ ...environment.firebase })),
     provideAuth(() => getAuth(getApp())),
     provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage(getApp())),
 
     //NgOptimize
     // provideImgixLoader(environment.cdnBaseUrl),
@@ -74,7 +76,6 @@ export const appConfig: ApplicationConfig = {
       },
     },
     { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
-
 
     {
       provide: HTTP_INTERCEPTORS,

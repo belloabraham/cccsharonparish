@@ -28,7 +28,6 @@ $imageSize: 7rem;
 .image-upload {
   width: $imageSize;
   height: $imageSize;
-  border-radius: 50%;
   border-style: dashed;
   border-width: 2px;
   display: flex;
@@ -38,8 +37,8 @@ $imageSize: 7rem;
   cursor: pointer;
   .badge {
     img {
-      width: calc($imageSize - 5rem);
-      height: auto;
+      width: calc($imageSize - 0.5rem);
+      height: calc($imageSize - 0.5rem);
     }
   }
 }
