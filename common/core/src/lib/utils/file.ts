@@ -14,3 +14,14 @@ export function dataURLtoFile(dataURL: string, fileName: string): File {
   // Create and return the File object
   return new File([byteNumbers], fileName, { type: mimeType });
 }
+
+export function renameFile(file: File, newNameWithExt: string) {
+  return new File([file], newNameWithExt, {
+    type: file.type,
+    lastModified: file.lastModified,
+  });
+}
+
+export function getFileExtension(fileName: string): string {
+  return fileName.slice(((fileName.lastIndexOf('.') - 1) >>> 0) + 2);
+}

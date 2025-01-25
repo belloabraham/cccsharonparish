@@ -13,7 +13,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { TuiIcon, TuiLoader } from '@taiga-ui/core';
+import { TuiAlertService, TuiIcon, TuiLoader } from '@taiga-ui/core';
 import { PROFILE_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { NgIf, NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
@@ -22,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpRequestProgressIndicatorService } from '../../services';
 import {
   CustomValidators,
+  LanguageResourceService,
   SDDFileUploadDirective,
 } from '@cccsharonparish/angular';
 import { IUserUIState, JSON } from '@cccsharonparish/mydailydigest';
@@ -66,6 +67,8 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
   private subscriptions = new SubSink();
   private readonly profileService = inject(ProfileService);
+  private readonly languageResourceService = inject(LanguageResourceService);
+  private readonly alertService = inject(TuiAlertService);
 
   ngOnInit(): void {
     this.profileImageFC.valueChanges.subscribe({
@@ -80,14 +83,22 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     const user = this.userDataStore.user();
     if (user) {
+      this.imageUrl.set(user.imageUrl);
       this.userDataComponent().form.patchValue(user);
     }
   }
 
   uploadProfileImage(file: File) {
+    this.uploadingProfileImage.set(true);
     this.profileService.uploadProfileImage(file).subscribe({
-      next: () => {},
+      next: (uploadResult) => {
+        console.error(uploadResult);
+        // this.imageUrl.set()
+      },
       error: () => {},
+      complete: () => {
+        this.uploadingProfileImage.set(false);
+      },
     });
   }
 
@@ -115,7 +126,28 @@ export class ProfileComponent implements OnInit, AfterViewInit {
     });
   }
 
-  showFailedUserUpdateAlert() {}
+  showFailedUserUpdateAlert() {
+    const message = this.languageResourceService.getString(
+      this.KEY.PROFILE_UPDATE_ERR_MSG
+    );
+    this.alertService
+      .open(message, {
+        label: 'Error',
+        appearance: 'negative',
+      })
+      .subscribe();
+  }
 
-  showUserUpdateSuccessAlert() {}
+  showUserUpdateSuccessAlert() {
+    const message = this.languageResourceService.getString(
+      this.KEY.PROFILE_UPDATE_SUCCESS_MSG
+    );
+    const title = this.languageResourceService.getString(this.KEY.UPDATED);
+    this.alertService
+      .open(message, {
+        label: title,
+        appearance: 'positive',
+      })
+      .subscribe();
+  }
 }
