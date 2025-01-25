@@ -20,20 +20,7 @@ import { HttpProgressInterceptorService } from './interceptors/http-progress-int
 import { provideImgixLoader } from '@angular/common';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { getStorage, provideStorage } from '@angular/fire/storage';
-
-function setDNSPreConnectLink() {
-  const domain = environment.cdnBaseUrl;
-  const preconnectLink = document.createElement('link');
-  preconnectLink.rel = 'preconnect';
-  preconnectLink.href = domain;
-  preconnectLink.crossOrigin = 'anonymous';
-  document.head.appendChild(preconnectLink);
-
-  const dnsPrefetchLink = document.createElement('link');
-  dnsPrefetchLink.rel = 'dns-prefetch';
-  dnsPrefetchLink.href = domain;
-  document.head.appendChild(dnsPrefetchLink);
-}
+import { setDNSPreConnectLink } from '@cccsharonparish/mydailydigest';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -42,7 +29,7 @@ export const appConfig: ApplicationConfig = {
     provideExperimentalZonelessChangeDetection(),
 
     provideAppInitializer(() => {
-      setDNSPreConnectLink();
+      setDNSPreConnectLink(environment.cdnBaseUrl);
     }),
 
     //Firebase
