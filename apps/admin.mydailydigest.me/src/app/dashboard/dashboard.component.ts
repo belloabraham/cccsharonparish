@@ -9,7 +9,7 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { TuiNavigation } from '@taiga-ui/layout';
-import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
+import { CommonComponent, PAGE_TITLE_KEY, SharedModule, UserDataStore } from '../shared';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { DashboardService, IBreadCrumb } from './dashboard.service';
 import {
@@ -91,6 +91,7 @@ export class DashboardComponent extends CommonComponent {
   expandMobileDropdown = signal(false);
   openSideDrawer = signal(false);
   readonly dashboardStore = inject(DashboardStore);
+  readonly userDataStore = inject(UserDataStore);
 
   appName = environment.appName;
   KEY = DASHBOARD_STRING_RESOURCE_KEY;
@@ -103,7 +104,8 @@ export class DashboardComponent extends CommonComponent {
     this.onNavigationStart();
     this.onNavigationEnd();
     effect(() => {
-      const supportedLanguages = this.dashboardStore.supportedLanguages().languages;
+      const supportedLanguages =
+        this.dashboardStore.supportedLanguages().languages;
       if (this.dashboardStore.supportedLanguages().loaded) {
         if (supportedLanguages.length > 0) {
           this.breadcrumbs.set(

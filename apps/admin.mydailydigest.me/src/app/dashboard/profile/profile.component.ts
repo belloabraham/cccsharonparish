@@ -26,6 +26,7 @@ import {
 } from '@cccsharonparish/angular';
 import { IUserUIState, JSON } from '@cccsharonparish/mydailydigest';
 import { SubSink } from 'subsink';
+import { ProfileService } from './profile.service';
 
 @Component({
   selector: 'app-profile',
@@ -64,12 +65,13 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   );
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
   private subscriptions = new SubSink();
+  private readonly profileService = inject(ProfileService);
 
   ngOnInit(): void {
     this.profileImageFC.valueChanges.subscribe({
       next: (file) => {
         if (file) {
-          this.uploadImage(file);
+          this.uploadProfileImage(file);
         }
       },
     });
@@ -82,7 +84,12 @@ export class ProfileComponent implements OnInit, AfterViewInit {
     }
   }
 
-  uploadImage(file: File) {}
+  uploadProfileImage(file: File) {
+    this.profileService.uploadProfileImage(file).subscribe({
+      next: () => {},
+      error: () => {},
+    });
+  }
 
   onSubmit(form: FormGroup<UserDataForm>) {
     form.markAllAsTouched();
