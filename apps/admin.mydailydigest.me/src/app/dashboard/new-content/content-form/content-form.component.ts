@@ -31,8 +31,10 @@ import {
   LanguageResourceService,
 } from '@cccsharonparish/angular';
 import {
+  dataURLtoFile,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
+  Language,
   REGEX,
 } from '@cccsharonparish/mydailydigest';
 import { HttpRequestProgressIndicatorService } from '../../../services';
@@ -53,6 +55,7 @@ import { TuiFiles } from '@taiga-ui/kit';
 import type { Observable } from 'rxjs';
 import { of, Subject } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
+import { ContentService } from '../content.service';
 
 @Component({
   selector: 'app-content-form',
@@ -93,7 +96,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   coverImage = viewChild.required<ElementRef<HTMLImageElement>>('cover');
   cropper!: Cropper;
   readonly imageAttached = signal(false);
-  readonly languageCode = signal('');
+  readonly language = signal<Language | null>(null);
   readonly englishContent = signal<string | null>(null);
   defaultImageUrl = 'https://placehold.co/480x270?text=.';
   readonly uploadedAudioUrl = signal<string | null>(null);
@@ -105,6 +108,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     Record<string, unknown>
   > | null = null;
   readonly languageService = inject(LanguageResourceService);
+  readonly contentService = inject(ContentService);
+
   private readonly MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES = 500 * 1024; //500Kb
   private readonly MAX_ALLOWED_AUDIO_SIZE_IN_BYTES = 10 * 1024 * 1024; //10Mb
 
@@ -141,7 +146,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     this.initForm();
     const data = this.dialogContext.data;
     const content = data.content;
-    this.languageCode.set(data.langCode);
+    this.language.set(data.language);
     this.setDefaultMediaContent();
     this.setFormValue(content);
   }
@@ -149,6 +154,9 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
     if (sddUIiState?.imageUrl) {
       this.defaultImageUrl = sddUIiState.imageUrl;
+    }
+    if (sddUIiState?.audioUrl) {
+      this.uploadedAudioUrl.set(sddUIiState.audioUrl);
     }
   }
 
@@ -162,7 +170,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    if (this.languageCode() === 'en') {
+    if (this.language()?.code === 'en') {
       this.initCropper();
       setTimeout(() => {
         this.cropper.disable();
@@ -242,11 +250,13 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     this.cropperState.set('pristine');
   }
 
+  private contentHeaderImageFileNameWithExt = '';
   onImageFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     this.maxImageSizeExceededError = null;
     if (input.files && input.files[0]) {
       const file = input.files[0];
+      this.contentHeaderImageFileNameWithExt = file.name;
       if (file.size > this.MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES) {
         this.showMaximumSizeExceededError();
       } else {
@@ -274,7 +284,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   getEnglishContentForTranslation() {
-    if (this.languageCode() !== 'en') {
+    if (this.language()?.code !== 'en') {
     }
   }
 
@@ -291,28 +301,37 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.cropper.disable();
     }, 500);
+    this.contentService
+      .uploadContentHeaderImage(dataURL, this.contentHeaderImageFileNameWithExt)
+      .subscribe({
+        next: () => {},
+        error: () => {},
+      });
   }
 
   onSubmit() {
     this.cropper.getCroppedCanvas();
 
     if (this.form.valid) {
-      const date = this.dateFC.value!;
-      //     const sdd:ISpiritualDailyDigest ={
-      //   id: string; //'2024-12-14'; //allow create only
-      // year: date.y
-      // day: number;
-      // imageUrl?: string;
-      // tags: string[]; // ['faith', 'devotional', 'daily'];
-      // content: Content[];
-      // isPublished: boolean;
-      // createdBy: string; //'content_creator_id';
-      // updatedBy: string;
-      // createdAt: Date; //'2024-12-13T10:00:00Z'; // Timestamp when the content was created
-      // updatedAt: Date;
-      //     }
+      this.form.value;
+
+      const sddUIState: ISpiritualDailyDigestUIState = {
+        topic: this.topicFC.value!,
+        message: this.messageFC.value!,
+        reference: this.bibleReferenceFC.value!,
+        verses: this.referenceVersesFC.value!,
+        keyVerse: this.referenceKeyVersesFC.value!,
+        tags: this.tagsFC.value!,
+        date: this.dateFC.value!,
+        imageUrl: this.defaultImageUrl,
+        audioUrl: this.uploadedAudioUrl() || undefined,
+      };
+
+      this.contentService.createContent(sddUIState, this.language()!);
     }
   }
+
+  private getIdFromDate(date: Date) {}
 
   removeFile(): void {
     this.failedAudioFile$.next(null);

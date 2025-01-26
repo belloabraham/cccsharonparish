@@ -4,4 +4,5 @@ export const STORAGE_PATH = {
   PUBLISHED: 'published',
   DRAFT: 'draft',
   EDITORS: 'editors',
+  HEADERS: 'headers',
 };

@@ -1,3 +1,5 @@
+import { Timestamp } from "@angular/fire/firestore";
+
 export interface ISpiritualDailyDigestUIState {
   topic: string;
   message: string;
@@ -13,15 +15,17 @@ export interface ISpiritualDailyDigestUIState {
 export interface ISpiritualDailyDigest extends Record<string, any> {
   id: string; //'2024-12-14'; //allow create only
   year: number;
+  month: number;
   day: number;
   imageUrl?: string;
   tags: string[]; // ['faith', 'devotional', 'daily'];
   content: Content[];
   isPublished: boolean;
+  isApproved: boolean;
   createdBy: string; //'content_creator_id';
-  updatedBy: string;
-  createdAt: Date; //'2024-12-13T10:00:00Z'; // Timestamp when the content was created
-  updatedAt: Date; //'2024-12-13T12:00:00Z'; // Timestamp of the last update
+  updatedBy?: string;
+  createdAt: Date | Timestamp; //'2024-12-13T10:00:00Z'; // Timestamp when the content was created
+  updatedAt?: Date | Timestamp; //'2024-12-13T12:00:00Z'; // Timestamp of the last update
 }
 
 export type Content = {

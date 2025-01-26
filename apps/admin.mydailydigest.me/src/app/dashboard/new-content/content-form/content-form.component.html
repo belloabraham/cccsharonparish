@@ -80,7 +80,7 @@
 
     <input #imageUpload type="file" (change)="onImageFileSelected($event)" accept="image/*" hidden />
 
-    @let dialogLanguageIsEnglish = languageCode() === 'en';
+    @let dialogLanguageIsEnglish = language()?.code === 'en';
     <mat-accordion *ngIf="dialogLanguageIsEnglish" class="expansion-panel">
         <mat-expansion-panel class="mat-elevation-z0 border border-3">
             <mat-expansion-panel-header>
