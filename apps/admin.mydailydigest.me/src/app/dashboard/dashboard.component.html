@@ -128,21 +128,20 @@
                 {{t(KEY.DRAFT)}}
             </a>
 
-            <ng-container>
+            <ng-container *ngIf="nonEnglishSupportedLanguages().length > 0">
                 <button (click)="expandMobileDropdown.set(!expandMobileDropdown())"
                     class="nav-item mb-2 !pb-2 !items-center justify-between" matRipple>
                     <span class="flex items-center gap-4">
                         <mat-icon fontIcon="translate-outline"></mat-icon>
-
                         <span>{{t(KEY.TRANSLATE)}}</span>
                     </span>
                     <mat-icon [fontIcon]="expandMobileDropdown() ? 'chevron-up-fill' :'chevron-down-fill'"></mat-icon>
                 </button>
-                <tui-expand *ngIf="nonEnglishSupportedLanguages().length > 0" [expanded]="expandMobileDropdown()">
+                <tui-expand [expanded]="expandMobileDropdown()">
                     <ng-template tuiExpandContent>
                         <div class="ps-10">
                             <a *ngFor="let language of nonEnglishSupportedLanguages()"
-                                [routerLink]="[ROUTE.NEW, language.code]" routerLinkActive="link-active"
+                                [routerLink]="[ROUTE.TRANSLATE, language.code]" routerLinkActive="link-active"
                                 class="nav-item !items-center !p-3" matRipple>
                                 {{language.label}}
                             </a>
@@ -198,14 +197,15 @@
         </a>
 
         <tui-aside-group *ngIf="nonEnglishSupportedLanguages().length > 0">
-            <button [routerLink]="[ROUTE.NEW, nonEnglishSupportedLanguages()[0].code]" automation-id="setting"
+            <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].code]" automation-id="setting"
                 tuiAsideItem tuiChevron matRipple type="button">
                 <mat-icon fontIcon="translate-outline"></mat-icon>
                 {{t(KEY.TRANSLATE)}}
                 <ng-template>
 
-                    <a *ngFor="let language of nonEnglishSupportedLanguages()" [routerLink]="[ROUTE.NEW, language.code]"
-                        tuiAsideItem matRipple type="button" class="content">
+                    <a *ngFor="let language of nonEnglishSupportedLanguages()"
+                        [routerLink]="[ROUTE.TRANSLATE, language.code]" tuiAsideItem matRipple type="button"
+                        class="content">
                         {{language.label}}
                     </a>
 

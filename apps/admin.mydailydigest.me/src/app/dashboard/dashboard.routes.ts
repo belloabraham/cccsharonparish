@@ -42,10 +42,19 @@ export const DASHBOARD_ROUTES: Routes = [
         data: {
           breadcrumb: KEY.DAILY_DIGEST,
         },
-        providers: [ContentService],
         loadComponent: () =>
           import('./new-content/new-content.component').then(
             (mod) => mod.NewContentComponent
+          ),
+      },
+      {
+        path: `${ROUTE.TRANSLATE}/:${ROUTE.PARAMS.LANGUAGE_CODE}`,
+        data: {
+          breadcrumb: KEY.TRANSLATE,
+        },
+        loadComponent: () =>
+          import('./translate/translate.component').then(
+            (mod) => mod.TranslateComponent
           ),
       },
       {
