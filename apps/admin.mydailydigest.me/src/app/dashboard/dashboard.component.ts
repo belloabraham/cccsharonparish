@@ -42,7 +42,7 @@ import {
   TuiExpand,
 } from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
-import { ROUTE } from '@cccsharonparish/mydailydigest';
+import { Language, ROUTE } from '@cccsharonparish/mydailydigest';
 import { TuiItem } from '@taiga-ui/cdk';
 import { MatMenuModule } from '@angular/material/menu';
 import { ThemeType } from '@cccsharonparish/angular';
@@ -98,6 +98,7 @@ export class DashboardComponent extends CommonComponent {
   readonly dashboardStore = inject(DashboardStore);
   readonly userDataStore = inject(UserDataStore);
   readonly ENGLISH_LANG_CODE = 'en';
+  nonEnglishSupportedLanguages = signal<Language[]>([]);
 
   appName = environment.appName;
   KEY = DASHBOARD_STRING_RESOURCE_KEY;
@@ -113,6 +114,11 @@ export class DashboardComponent extends CommonComponent {
       const supportedLanguages =
         this.dashboardStore.supportedLanguages().languages;
       if (this.dashboardStore.supportedLanguages().loaded) {
+        const nonEnglishLanguages = supportedLanguages.filter(
+          (lang) => lang.code !== this.ENGLISH_LANG_CODE
+        );
+        this.nonEnglishSupportedLanguages.set(nonEnglishLanguages);
+
         if (supportedLanguages.length > 0) {
           this.breadcrumbs.set(
             this.dashboardService.createBreadCrumbs(

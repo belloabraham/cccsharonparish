@@ -42,10 +42,20 @@ export const DASHBOARD_ROUTES: Routes = [
         data: {
           breadcrumb: KEY.DAILY_DIGEST,
         },
-        providers:[ContentService],
+        providers: [ContentService],
         loadComponent: () =>
           import('./new-content/new-content.component').then(
             (mod) => mod.NewContentComponent
+          ),
+      },
+      {
+        path: ROUTE.APPROVED,
+        data: {
+          breadcrumb: KEY.APPROVED,
+        },
+        loadComponent: () =>
+          import('./approved/approved.component').then(
+            (mod) => mod.ApprovedComponent
           ),
       },
       {
