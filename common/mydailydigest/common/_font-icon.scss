@@ -24,6 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.check-box-outline:before {
+  content: '\e919';
+}
+.translate-outline:before {
+  content: '\e91a';
+}
 .track-upload-outline:before {
   content: '\e917';
 }

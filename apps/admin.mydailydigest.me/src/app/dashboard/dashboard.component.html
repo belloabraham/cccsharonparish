@@ -173,11 +173,21 @@
             {{t(KEY.PUBLISHED)}}
         </a>
 
+        <a [routerLink]="[ROUTE.NEW, ENGLISH_LANG_CODE]" tuiAsideItem matRipple>
+            <mat-icon fontIcon="add-note-outline"></mat-icon>
+            {{t(KEY.ADD_NEW)}}
+        </a>
+
+        <a [routerLink]="[ROUTE.DRAFT]" tuiAsideItem matRipple>
+            <mat-icon fontIcon="note-outline"></mat-icon>
+            {{t(KEY.DRAFT)}}
+        </a>
+
         <tui-aside-group *ngIf="supportedLanguages.length > 0">
             <button [routerLink]="[ROUTE.NEW, supportedLanguages[0].code]" automation-id="setting" tuiAsideItem
                 tuiChevron matRipple type="button">
-                <mat-icon fontIcon="add-note-outline"></mat-icon>
-                {{t(KEY.ADD_NEW)}}
+                <mat-icon fontIcon="translate-outline"></mat-icon>
+                {{t(KEY.TRANSLATE)}}
                 <ng-template>
 
                     <a *ngFor="let language of supportedLanguages" [routerLink]="[ROUTE.NEW, language.code]"
@@ -189,9 +199,9 @@
             </button>
         </tui-aside-group>
 
-        <a [routerLink]="[ROUTE.DRAFT]" tuiAsideItem matRipple>
-            <mat-icon fontIcon="note-outline"></mat-icon>
-            {{t(KEY.DRAFT)}}
+        <a [routerLink]="[ROUTE.APPROVED]" tuiAsideItem matRipple>
+            <mat-icon fontIcon="check-box-outline"></mat-icon>
+            {{t(KEY.APPROVED)}}
         </a>
 
         <footer>

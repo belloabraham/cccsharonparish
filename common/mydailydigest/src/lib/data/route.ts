@@ -4,6 +4,7 @@ export const ROUTE = {
   SIGN_UP: 'sign-up',
   DRAFT: 'draft',
   NEW: 'new',
+  APPROVED: 'approved',
   PUBLISHED: 'published',
   EDITORS: 'editors',
   PROFILE: 'profile',

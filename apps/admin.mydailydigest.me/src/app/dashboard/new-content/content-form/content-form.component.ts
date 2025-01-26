@@ -31,6 +31,7 @@ import {
   LanguageResourceService,
 } from '@cccsharonparish/angular';
 import {
+  ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
   REGEX,
 } from '@cccsharonparish/mydailydigest';
@@ -294,7 +295,22 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   onSubmit() {
     this.cropper.getCroppedCanvas();
+
     if (this.form.valid) {
+      const date = this.dateFC.value!;
+      //     const sdd:ISpiritualDailyDigest ={
+      //   id: string; //'2024-12-14'; //allow create only
+      // year: date.y
+      // day: number;
+      // imageUrl?: string;
+      // tags: string[]; // ['faith', 'devotional', 'daily'];
+      // content: Content[];
+      // isPublished: boolean;
+      // createdBy: string; //'content_creator_id';
+      // updatedBy: string;
+      // createdAt: Date; //'2024-12-13T10:00:00Z'; // Timestamp when the content was created
+      // updatedAt: Date;
+      //     }
     }
   }
 

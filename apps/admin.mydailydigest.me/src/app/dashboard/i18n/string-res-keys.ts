@@ -16,4 +16,6 @@ export const DASHBOARD_STRING_RESOURCE_KEY = {
   LOGOUT: 'logout',
   DAILY_DIGEST: 'daily_digest',
   DASHBOARD: 'dashboard',
+  TRANSLATE: 'translate',
+  APPROVED: 'approved',
 };

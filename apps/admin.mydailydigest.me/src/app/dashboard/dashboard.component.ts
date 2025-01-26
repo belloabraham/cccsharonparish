@@ -9,7 +9,12 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { TuiNavigation } from '@taiga-ui/layout';
-import { CommonComponent, PAGE_TITLE_KEY, SharedModule, UserDataStore } from '../shared';
+import {
+  CommonComponent,
+  PAGE_TITLE_KEY,
+  SharedModule,
+  UserDataStore,
+} from '../shared';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { DashboardService, IBreadCrumb } from './dashboard.service';
 import {
@@ -92,6 +97,7 @@ export class DashboardComponent extends CommonComponent {
   openSideDrawer = signal(false);
   readonly dashboardStore = inject(DashboardStore);
   readonly userDataStore = inject(UserDataStore);
+  readonly ENGLISH_LANG_CODE = 'en';
 
   appName = environment.appName;
   KEY = DASHBOARD_STRING_RESOURCE_KEY;
