@@ -20,8 +20,8 @@ export interface ISpiritualDailyDigest extends Record<string, any> {
   imageUrl?: string;
   tags: string[]; // ['faith', 'devotional', 'daily'];
   content: Content[];
-  isPublished: boolean;
-  isApproved: boolean;
+  isPublished?: boolean;
+  isAwaitingApproval: boolean;
   createdBy: string; //'content_creator_id';
   updatedBy?: string;
   createdAt: Date | Timestamp; //'2024-12-13T10:00:00Z'; // Timestamp when the content was created

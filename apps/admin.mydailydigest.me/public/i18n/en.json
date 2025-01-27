@@ -36,7 +36,7 @@
   "dashboard": "Dashboard",
   "translate": "Translate",
   "approved": "Approved",
-  "awaiting_approval":"Awaiting Approval",
+  "awaiting_approval": "Awaiting Approval",
 
   "profile": "Profile",
   "drop_it": "Drop it",
@@ -80,6 +80,11 @@
   "reset_crop_changes": "Reset crop changes",
   "attach_image_for_cropping": "Attach an image for cropping",
   "max_audio_size_exceeded_mgs": "Maximum allowed audio size was exceeded, upload an audio that is less than {{value}}",
+  "content_updated_success_msg": "Updated content successfully",
+  "content_created_success_msg": "Created content successfully",
+  "content_updated_error_msg": "Unable to update content, check your internet connection and try again.",
+  "content_created_error_msg": "Unable to create content, check your internet connection and try again.",
+  "created": "Created",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",

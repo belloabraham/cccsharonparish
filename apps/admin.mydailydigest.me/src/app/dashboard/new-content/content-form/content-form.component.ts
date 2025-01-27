@@ -24,7 +24,12 @@ import { SharedModule } from '../../../shared';
 import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { CONTENT_STRING_RESOURCE_KEYS } from '../i18n/string-res-keys';
-import { TuiDialogContext, TuiLink, TuiNotification } from '@taiga-ui/core';
+import {
+  TuiAlertService,
+  TuiDialogContext,
+  TuiLink,
+  TuiNotification,
+} from '@taiga-ui/core';
 import { ContentForm } from './content-form';
 import {
   CustomValidators,
@@ -100,11 +105,11 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   cropper!: Cropper;
   readonly imageAttached = signal(false);
   readonly language = signal<Language | null>(null);
-  readonly englishContent = signal<string | null>(null);
   defaultImageUrl = 'https://placehold.co/480x270?text=.';
   readonly uploadedAudioUrl = signal<string | null>(null);
   rootStoragePath = '';
-
+  rootDataPath = '';
+  existingContent?: ISpiritualDailyDigest;
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
   > | null = null;
@@ -139,6 +144,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   protected readonly failedAudioFile$ = new Subject<TuiFileLike | null>();
   protected readonly loadingAudioFile$ = new Subject<TuiFileLike | null>();
   loadedAudioFile$: Observable<TuiFileLike | null> = of(null);
+  private readonly alertService = inject(TuiAlertService);
+  private readonly languageResourceService = inject(LanguageResourceService);
 
   constructor(
     @Inject(POLYMORPHEUS_CONTEXT)
@@ -148,11 +155,12 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.initForm();
     const data = this.dialogContext.data;
-    const existingContent = data.existingContent;
+    this.existingContent = data.existingContent;
     this.rootStoragePath = data.rootStoragePath;
+    this.rootDataPath = data.rootDataPath;
     this.language.set(data.language);
-    if (existingContent) {
-      this.updateFormWithExistingData(existingContent);
+    if (this.existingContent) {
+      this.updateFormWithExistingData(this.existingContent);
     }
   }
 
@@ -363,8 +371,75 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         audioUrl: this.uploadedAudioUrl() || undefined,
       };
 
-      this.contentService.createContent(sddUIState, this.language()!);
+      if (this.existingContent) {
+        this.updateContent(sddUIState, this.existingContent);
+      }
+
+      if (!this.existingContent) {
+        this.createContent(sddUIState);
+      }
     }
+  }
+
+  private updateContent(
+    sddUIState: ISpiritualDailyDigestUIState,
+    existingContent: ISpiritualDailyDigest
+  ) {
+    this.contentService
+      .updateContent(
+        sddUIState,
+        this.language()!,
+        existingContent,
+        this.rootDataPath
+      )
+      .subscribe({
+        next: () => {
+          this.showAlertSuccessMessage(
+            this.KEY.CONTENT_UPDATED_SUCCESS_MSG,
+            this.KEY.UPDATED
+          );
+        },
+        error: (error) => {
+          this.showAlertErrorMessage(this.KEY.CONTENT_UPDATED_ERROR_MSG);
+        },
+      });
+  }
+
+  showAlertErrorMessage(messageKey: string) {
+    const message = this.languageResourceService.getString(messageKey);
+    this.alertService
+      .open(message, {
+        label: 'Error',
+        appearance: 'negative',
+      })
+      .subscribe();
+  }
+
+  showAlertSuccessMessage(messageKey: string, titleKey: string) {
+    const message = this.languageResourceService.getString(messageKey);
+    const title = this.languageResourceService.getString(titleKey);
+    this.alertService
+      .open(message, {
+        label: title,
+        appearance: 'positive',
+      })
+      .subscribe();
+  }
+
+  private createContent(sddUIState: ISpiritualDailyDigestUIState) {
+    this.contentService
+      .createContent(sddUIState, this.language()!, this.rootDataPath)
+      .subscribe({
+        next: () => {
+          this.showAlertSuccessMessage(
+            this.KEY.CONTENT_CREATED_SUCCESS_MSG,
+            this.KEY.CREATED
+          );
+        },
+        error: (error) => {
+          this.showAlertErrorMessage(this.KEY.CONTENT_CREATED_ERROR_MSG);
+        },
+      });
   }
 
   removeAudioFile(): void {

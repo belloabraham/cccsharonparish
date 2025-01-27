@@ -26,17 +26,17 @@ export class ContentService {
 
   createContent(
     sddUIState: ISpiritualDailyDigestUIState,
-    language: Language
+    language: Language,
+    collection: string
   ) {
     const userId = this.auth.getUserId()!;
     const date = sddUIState.date;
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
     const day = date.getDate();
-
     const content = this.getContent(sddUIState, language);
 
-    const createContent: ISpiritualDailyDigest = {
+    const createdContent: ISpiritualDailyDigest = {
       id: this.getIdFromDate(date),
       year: year,
       month: month,
@@ -44,28 +44,41 @@ export class ContentService {
       imageUrl: sddUIState.imageUrl,
       tags: sddUIState.tags,
       content: [content],
-      isPublished: false,
-      isApproved: false,
+      isAwaitingApproval: false,
       createdBy: userId,
       createdAt: Timestamp.now(),
     };
+    return this.remoteData.addADocumentDataTo(
+      collection,
+      [createdContent.id],
+      createdContent,
+      { merge: false }
+    );
   }
 
   updateContent(
     sddUIiState: ISpiritualDailyDigestUIState,
     language: Language,
-    existingSDD: ISpiritualDailyDigest
+    existingSDD: ISpiritualDailyDigest,
+    collection: string
   ) {
     const userId = this.auth.getUserId()!;
     const content = this.getContent(sddUIiState, language);
-    const updatedDraftContent: ISpiritualDailyDigest = {
+    const updatedContent: ISpiritualDailyDigest = {
       ...existingSDD,
       imageUrl: sddUIiState.imageUrl,
       tags: sddUIiState.tags,
+      isAwaitingApproval: false,
       content: [content],
       updatedBy: userId,
       updatedAt: Timestamp.now(),
     };
+    return this.remoteData.addADocumentDataTo(
+      collection,
+      [updatedContent.id],
+      updatedContent,
+      { merge: true }
+    );
   }
 
   private getContent(
@@ -107,7 +120,6 @@ export class ContentService {
       imageFile
     );
   }
-
 
   uploadAudio(audioFile: File, pathSegment: string[]) {
     return this.cloudStorage.uploadFileTo(

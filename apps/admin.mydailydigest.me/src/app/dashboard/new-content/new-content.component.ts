@@ -24,12 +24,13 @@ import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
 import { ContentStore } from './content.store';
 import { NgIf } from '@angular/common';
 import { DashboardStore } from '../dashboard.store';
-import { STORAGE_PATH } from '../../services';
+import { COLLECTION, STORAGE_PATH } from '../../services';
 
 export interface IDialogData {
   language: Language;
   existingContent?: ISpiritualDailyDigest;
-  rootStoragePath:string
+  rootStoragePath: string;
+  rootDataPath: string;
 }
 
 @Component({
@@ -80,7 +81,8 @@ export class NewContentComponent implements OnDestroy {
           data: {
             existingContent: selectedContent,
             language: language,
-            rootStoragePath:STORAGE_PATH.DRAFT
+            rootStoragePath: STORAGE_PATH.DRAFT,
+            rootDataPath: COLLECTION.DRAFT,
           },
           dismissible: false,
           header: this.title(),

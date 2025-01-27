@@ -13,7 +13,6 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   REQUIRED_FIELD_MESSAGE: 'required_field_msg',
   UNIQUE_CONTENT_DATE_MESSAGE: 'unique_content_date_msg',
   CONTENT_REQ_MSG: 'content_req_msg',
-
   REFERENCE_VERSES_REQ_MSG: 'ref_verses_req_msg',
   REFERENCE_KEY_VERSE_REQ_MSG: 'ref_key_verse_req_msg',
   BIBLE_REF_KEY_VERSE_REQ_MSG: 'bible_ref_req_msg',
@@ -32,4 +31,12 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   CROP_AND_UPLOAD_IMG: 'crop_and_upload_img',
   RESET_CROP_CHANGES: 'reset_crop_changes',
   ATTACH_IMAGE_FOR_CROPPING: 'attach_image_for_cropping',
+
+  CONTENT_UPDATED_SUCCESS_MSG: 'content_updated_success_msg',
+  CONTENT_CREATED_SUCCESS_MSG: 'content_created_success_msg',
+  CONTENT_UPDATED_ERROR_MSG: 'content_updated_error_msg',
+  CONTENT_CREATED_ERROR_MSG: 'content_created_error_msg',
+
+  UPDATED: 'updated',
+  CREATED: 'created',
 };
