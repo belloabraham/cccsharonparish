@@ -24,7 +24,7 @@ export class ContentService {
   private readonly auth = inject(AUTH_TOKEN);
   private readonly cloudStorage = inject(CLOUD_STORAGE_TOKEN);
 
-  createDraftContent(
+  createContent(
     sddUIState: ISpiritualDailyDigestUIState,
     language: Language
   ) {
@@ -36,7 +36,7 @@ export class ContentService {
 
     const content = this.getContent(sddUIState, language);
 
-    const createdDraftContent: ISpiritualDailyDigest = {
+    const createContent: ISpiritualDailyDigest = {
       id: this.getIdFromDate(date),
       year: year,
       month: month,
@@ -51,7 +51,7 @@ export class ContentService {
     };
   }
 
-  updateDraftContent(
+  updateContent(
     sddUIiState: ISpiritualDailyDigestUIState,
     language: Language,
     existingSDD: ISpiritualDailyDigest

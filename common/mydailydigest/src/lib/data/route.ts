@@ -5,6 +5,7 @@ export const ROUTE = {
   DRAFT: 'draft',
   NEW: 'new',
   APPROVED: 'approved',
+  AWAITING_APPROVAL: 'awaiting-approval',
   TRANSLATE: 'translate',
   PUBLISHED: 'published',
   EDITORS: 'editors',

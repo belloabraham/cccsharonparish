@@ -167,13 +167,13 @@
 
                 <tui-files>
 
-                    <tui-file *ngIf="loadedAudioFile$ | async as file" [file]="file" (remove)="removeFile()" />
+                    <tui-file *ngIf="loadedAudioFile$ | async as file" [file]="file" (remove)="removeAudioFile()" />
 
                     <tui-file *ngIf="failedAudioFile$ | async as file" state="error" [file]="file"
-                        (remove)="removeFile()" />
+                        (remove)="removeAudioFile()" />
 
                     <tui-file *ngIf="loadingAudioFile$ | async as file" state="loading" [file]="file"
-                        (remove)="removeFile()" />
+                        (remove)="removeAudioFile()" />
                 </tui-files>
                 <tui-error class="text-start" [error]="maxAudioSizeExceededError"></tui-error>
 

@@ -34,10 +34,6 @@ export const appRoutes: Route[] = [
   {
     path: ROUTE.ROOT,
     providers: [
-      {
-        provide: CLOUD_STORAGE_TOKEN,
-        useClass: CloudStorageService,
-      },
       DashboardService,
       ContentStore,
     ],

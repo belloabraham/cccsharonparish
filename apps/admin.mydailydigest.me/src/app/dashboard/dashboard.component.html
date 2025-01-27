@@ -123,9 +123,9 @@
                 {{t(KEY.ADD_NEW)}}
             </a>
 
-            <a [routerLink]="[ROUTE.DRAFT]" routerLinkActive="link-active" class="nav-item" matRipple>
+            <a [routerLink]="[ROUTE.AWAITING_APPROVAL]" routerLinkActive="link-active" class="nav-item" matRipple>
                 <mat-icon fontIcon="note-outline"></mat-icon>
-                {{t(KEY.DRAFT)}}
+                {{t(KEY.AWAITING_APPROVAL)}}
             </a>
 
             <ng-container *ngIf="nonEnglishSupportedLanguages().length > 0">
@@ -191,9 +191,9 @@
             {{t(KEY.ADD_NEW)}}
         </a>
 
-        <a [routerLink]="[ROUTE.DRAFT]" tuiAsideItem matRipple>
+        <a [routerLink]="[ROUTE.AWAITING_APPROVAL]" tuiAsideItem matRipple>
             <mat-icon fontIcon="note-outline"></mat-icon>
-            {{t(KEY.DRAFT)}}
+            {{t(KEY.AWAITING_APPROVAL)}}
         </a>
 
         <tui-aside-group *ngIf="nonEnglishSupportedLanguages().length > 0">

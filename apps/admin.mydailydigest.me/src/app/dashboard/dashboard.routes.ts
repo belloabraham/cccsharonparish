@@ -30,12 +30,14 @@ export const DASHBOARD_ROUTES: Routes = [
           ),
       },
       {
-        path: ROUTE.DRAFT,
+        path: ROUTE.AWAITING_APPROVAL,
         data: {
-          breadcrumb: KEY.DRAFT,
+          breadcrumb: KEY.AWAITING_APPROVAL,
         },
         loadComponent: () =>
-          import('./draft/draft.component').then((mod) => mod.DraftComponent),
+          import('./awaiting-approval/awaiting-approval.component').then(
+            (mod) => mod.AwaitingApprovalComponent
+          ),
       },
       {
         path: `${ROUTE.NEW}/:${ROUTE.PARAMS.LANGUAGE_CODE}`,

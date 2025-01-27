@@ -36,6 +36,7 @@
   "dashboard": "Dashboard",
   "translate": "Translate",
   "approved": "Approved",
+  "awaiting_approval":"Awaiting Approval",
 
   "profile": "Profile",
   "drop_it": "Drop it",

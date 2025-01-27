@@ -18,4 +18,5 @@ export const DASHBOARD_STRING_RESOURCE_KEY = {
   DASHBOARD: 'dashboard',
   TRANSLATE: 'translate',
   APPROVED: 'approved',
+  AWAITING_APPROVAL: 'awaiting_approval',
 };

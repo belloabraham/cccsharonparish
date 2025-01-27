@@ -363,11 +363,11 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         audioUrl: this.uploadedAudioUrl() || undefined,
       };
 
-      this.contentService.createDraftContent(sddUIState, this.language()!);
+      this.contentService.createContent(sddUIState, this.language()!);
     }
   }
 
-  removeFile(): void {
+  removeAudioFile(): void {
     this.failedAudioFile$.next(null);
     this.loadedAudioFile$ = of(null);
   }
