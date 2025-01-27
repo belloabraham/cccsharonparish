@@ -156,7 +156,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     }
   }
 
-  updateFormWithExistingData(existingContent: ISpiritualDailyDigest) {
+  private updateFormWithExistingData(existingContent: ISpiritualDailyDigest) {
     const contentForLanguage = existingContent.content.find(
       (content) => content.language.code === this.language()?.code
     )!;
@@ -184,7 +184,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     this.setFormValue(uiState);
   }
 
-  setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
+  private setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
     if (sddUIiState?.imageUrl) {
       this.defaultImageUrl = sddUIiState.imageUrl;
     }
@@ -253,7 +253,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     event.chipInput!.clear();
   }
 
-  initCropper() {
+  private initCropper() {
     const image = this.coverImage().nativeElement;
     const cropperState = this.cropperState;
     const imageAttached = this.imageAttached;

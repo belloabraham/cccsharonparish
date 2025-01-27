@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.reload-time-outline:before {
+  content: '\e91b';
+}
 .document-clock-outline:before {
   content: '\e91b';
 }
