@@ -3,5 +3,5 @@ export const COLLECTION = {
   LANGUAGES: 'languages',
   DRAFT: 'draft',
   APPROVED: 'approved',
-  PENDING_APPROVAL: 'pending_approved',
+  AWAITING_APPROVAL: 'awaiting_approved',
 };

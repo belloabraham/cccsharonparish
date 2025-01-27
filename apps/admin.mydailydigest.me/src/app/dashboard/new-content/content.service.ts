@@ -2,6 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import {
   AUTH_TOKEN,
   CLOUD_STORAGE_TOKEN,
+  COLLECTION,
   REMOTE_DATA_TOKEN,
   STORAGE_PATH,
 } from '../../services';
@@ -109,7 +110,7 @@ export class ContentService {
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
     const day = date.getDate();
-    return `${year}-${month}-${day}`;
+    return `${day}-${month}-${year}`;
   }
 
   uploadDraftContentHeaderImage(dataURL: string, fileNameWithExt: string) {
@@ -127,5 +128,24 @@ export class ContentService {
       audioFile.name,
       audioFile
     );
+  }
+
+  private getContents(collection: string) {
+    return this.remoteData.getAListOfDocData<ISpiritualDailyDigest>(
+      collection,
+      []
+    );
+  }
+
+  getDraftContents() {
+    return this.getContents(COLLECTION.DRAFT);
+  }
+
+  getApprovedContents() {
+    return this.getContents(COLLECTION.APPROVED);
+  }
+
+  getContentsAwaitingApproval() {
+    return this.getContents(COLLECTION.AWAITING_APPROVAL);
   }
 }
