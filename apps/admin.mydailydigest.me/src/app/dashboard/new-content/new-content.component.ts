@@ -11,7 +11,6 @@ import { SharedModule } from '../../shared';
 import { TuiTextfield } from '@taiga-ui/core';
 import {
   ISpiritualDailyDigest,
-  ISpiritualDailyDigestUIState,
   Language,
 } from '@cccsharonparish/mydailydigest';
 import { MatIconModule } from '@angular/material/icon';
@@ -25,10 +24,12 @@ import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
 import { ContentStore } from './content.store';
 import { NgIf } from '@angular/common';
 import { DashboardStore } from '../dashboard.store';
+import { STORAGE_PATH } from '../../services';
 
 export interface IDialogData {
-  content?: ISpiritualDailyDigestUIState;
   language: Language;
+  existingContent?: ISpiritualDailyDigest;
+  rootStoragePath:string
 }
 
 @Component({
@@ -68,7 +69,7 @@ export class NewContentComponent implements OnDestroy {
     });
   }
 
-  openContentDialog(selectedContent?: ISpiritualDailyDigestUIState) {
+  openContentDialog(selectedContent?: ISpiritualDailyDigest) {
     const language = this.dashboardStore
       .supportedLanguages()
       .languages.find((lang) => lang.code === this.languageCode());
@@ -77,8 +78,9 @@ export class NewContentComponent implements OnDestroy {
         new PolymorpheusComponent(ContentFormComponent, this.injector),
         {
           data: {
-            content: selectedContent,
+            existingContent: selectedContent,
             language: language,
+            rootStoragePath:STORAGE_PATH.DRAFT
           },
           dismissible: false,
           header: this.title(),

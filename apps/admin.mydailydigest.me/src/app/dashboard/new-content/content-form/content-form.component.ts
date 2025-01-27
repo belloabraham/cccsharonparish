@@ -31,13 +31,15 @@ import {
   LanguageResourceService,
 } from '@cccsharonparish/angular';
 import {
-  dataURLtoFile,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
   Language,
   REGEX,
 } from '@cccsharonparish/mydailydigest';
-import { HttpRequestProgressIndicatorService } from '../../../services';
+import {
+  HttpRequestProgressIndicatorService,
+  STORAGE_PATH,
+} from '../../../services';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import Cropper from 'cropperjs';
 import { TuiError } from '@taiga-ui/core';
@@ -56,6 +58,7 @@ import type { Observable } from 'rxjs';
 import { of, Subject } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { ContentService } from '../content.service';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-content-form',
@@ -100,6 +103,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   readonly englishContent = signal<string | null>(null);
   defaultImageUrl = 'https://placehold.co/480x270?text=.';
   readonly uploadedAudioUrl = signal<string | null>(null);
+  rootStoragePath = '';
 
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
@@ -116,7 +120,6 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   readonly imageUploadState = signal<
     'uploading' | 'uploaded' | 'error' | 'none'
   >('none');
-  readonly imageUploadProgress = signal(0);
   readonly cropperState = signal<'touched' | 'pristine'>('pristine');
   readonly tags = signal<string[]>([]);
 
@@ -145,10 +148,40 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.initForm();
     const data = this.dialogContext.data;
-    const content = data.content;
+    const existingContent = data.existingContent;
+    this.rootStoragePath = data.rootStoragePath;
     this.language.set(data.language);
+    if (existingContent) {
+      this.updateFormWithExistingData(existingContent);
+    }
+  }
+
+  updateFormWithExistingData(existingContent: ISpiritualDailyDigest) {
+    const contentForLanguage = existingContent.content.find(
+      (content) => content.language.code === this.language()?.code
+    )!;
+
+    const textContent = contentForLanguage.text;
+    const bibleVerse = contentForLanguage.text.bibleVerse;
+    const date = new Date(
+      existingContent.year,
+      existingContent.month - 1,
+      existingContent.day
+    );
+
+    const uiState: ISpiritualDailyDigestUIState = {
+      topic: textContent.topic,
+      message: textContent.message,
+      reference: bibleVerse.reference,
+      verses: bibleVerse.verses,
+      keyVerse: bibleVerse.keyVerse,
+      tags: existingContent.tags,
+      date: date,
+      imageUrl: existingContent.imageUrl,
+      audioUrl: contentForLanguage.audioUrl,
+    };
     this.setDefaultMediaContent();
-    this.setFormValue(content);
+    this.setFormValue(uiState);
   }
 
   setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
@@ -160,13 +193,11 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     }
   }
 
-  private setFormValue(sddUIiState?: ISpiritualDailyDigestUIState) {
-    if (sddUIiState) {
-      this.form.setValue({
-        ...sddUIiState,
-      });
-      this.dateFC.disable();
-    }
+  private setFormValue(sddUIiState: ISpiritualDailyDigestUIState) {
+    this.form.setValue({
+      ...sddUIiState,
+    });
+    this.dateFC.disable();
   }
 
   ngAfterViewInit(): void {
@@ -301,20 +332,25 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.cropper.disable();
     }, 500);
+    this.imageUploadState.set('uploading');
     this.contentService
-      .uploadContentHeaderImage(dataURL, this.contentHeaderImageFileNameWithExt)
+      .uploadDraftContentHeaderImage(
+        dataURL,
+        this.contentHeaderImageFileNameWithExt
+      )
       .subscribe({
-        next: () => {},
-        error: () => {},
+        next: (uploadResult) => {
+          this.imageUploadState.set('uploaded');
+          this.defaultImageUrl = `${environment.cdnBaseUrl}/${uploadResult.metadata.fullPath}`;
+        },
+        error: () => {
+          this.imageUploadState.set('error');
+        },
       });
   }
 
   onSubmit() {
-    this.cropper.getCroppedCanvas();
-
     if (this.form.valid) {
-      this.form.value;
-
       const sddUIState: ISpiritualDailyDigestUIState = {
         topic: this.topicFC.value!,
         message: this.messageFC.value!,
@@ -327,11 +363,9 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         audioUrl: this.uploadedAudioUrl() || undefined,
       };
 
-      this.contentService.createContent(sddUIState, this.language()!);
+      this.contentService.createDraftContent(sddUIState, this.language()!);
     }
   }
-
-  private getIdFromDate(date: Date) {}
 
   removeFile(): void {
     this.failedAudioFile$.next(null);
@@ -349,11 +383,25 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       } else {
         this.failedAudioFile$.next(null);
         this.loadingAudioFile$.next(file);
+        this.loadedAudioFile$ = of(null);
 
-        //Start file uploading
-        // this.loadedFiles$ = of(null); //null or file
-        // this.loadingFiles$.next(null);
-        // this.failedFiles$.next(null); //null or file
+        this.contentService
+          .uploadAudio(file, [
+            this.rootStoragePath,
+            STORAGE_PATH.AUDIO,
+            this.language()!.code,
+          ])
+          .subscribe({
+            next: () => {
+              this.loadingAudioFile$.next(null);
+              this.loadedAudioFile$ = of(file);
+            },
+            error: () => {
+              this.failedAudioFile$.next(file);
+              this.loadingAudioFile$.next(null);
+              this.loadedAudioFile$ = of(null);
+            },
+          });
       }
     }
   }

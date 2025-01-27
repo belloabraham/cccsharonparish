@@ -36,7 +36,7 @@ export class ContentService {
 
     const content = this.getContent(sddUIState, language);
 
-    const newSDD: ISpiritualDailyDigest = {
+    const createdDraftContent: ISpiritualDailyDigest = {
       id: this.getIdFromDate(date),
       year: year,
       month: month,
@@ -68,7 +68,10 @@ export class ContentService {
     };
   }
 
-  private getContent(sddUIiState: ISpiritualDailyDigestUIState, language: Language) {
+  private getContent(
+    sddUIiState: ISpiritualDailyDigestUIState,
+    language: Language
+  ) {
     const bibleVerse: BibleVerseContent = {
       reference: sddUIiState.reference,
       verses: sddUIiState.verses,
@@ -89,19 +92,28 @@ export class ContentService {
     return content;
   }
 
-  getIdFromDate(date: Date) {
+  private getIdFromDate(date: Date) {
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
     const day = date.getDate();
     return `${year}-${month}-${day}`;
   }
 
-  uploadContentHeaderImage(dataURL: string, fileNameWithExt: string) {
+  uploadDraftContentHeaderImage(dataURL: string, fileNameWithExt: string) {
     const imageFile = dataURLtoFile(dataURL, fileNameWithExt);
     return this.cloudStorage.uploadFileTo(
       [STORAGE_PATH.DRAFT, STORAGE_PATH.IMAGES, STORAGE_PATH.HEADERS],
       fileNameWithExt,
       imageFile
+    );
+  }
+
+
+  uploadAudio(audioFile: File, pathSegment: string[]) {
+    return this.cloudStorage.uploadFileTo(
+      [...pathSegment],
+      audioFile.name,
+      audioFile
     );
   }
 }
