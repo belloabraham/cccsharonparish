@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
+import { inject } from '@angular/core';
+import { ContentStore } from './new-content/content.store';
 
 const KEY = DASHBOARD_STRING_RESOURCE_KEY;
 
@@ -30,6 +32,9 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: ROUTE.AWAITING_APPROVAL,
+        resolve: {
+          data: () => inject(ContentStore).getContentsAwaitingApproval(),
+        },
         data: {
           breadcrumb: KEY.AWAITING_APPROVAL,
         },
@@ -40,6 +45,9 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: `${ROUTE.NEW}/:${ROUTE.PARAMS.LANGUAGE_CODE}`,
+        resolve: {
+          data: () => inject(ContentStore).getDraftContentForTheYear(),
+        },
         data: {
           breadcrumb: KEY.DAILY_DIGEST,
         },
@@ -50,6 +58,9 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: `${ROUTE.TRANSLATE}/:${ROUTE.PARAMS.LANGUAGE_CODE}`,
+        resolve: {
+          data: () => inject(ContentStore).getApprovedContents(),
+        },
         data: {
           breadcrumb: KEY.TRANSLATE,
         },
@@ -60,6 +71,9 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: ROUTE.APPROVED,
+        resolve: {
+          data: () => inject(ContentStore).getApprovedContents(),
+        },
         data: {
           breadcrumb: KEY.APPROVED,
         },

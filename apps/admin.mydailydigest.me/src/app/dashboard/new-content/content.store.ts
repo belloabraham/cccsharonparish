@@ -23,10 +23,6 @@ export const ContentStore = signalStore(
   withState(initialState),
   withMethods((store, contentService = inject(ContentService)) => ({
     getDraftContentForTheYear() {
-      patchState(store, (state) => ({
-        ...state,
-        draftContentForTheYear: [],
-      }));
       return contentService.getDraftContents().pipe(
         retryWhen(firestoreRetryStrategy(Infinity)),
         tap({
@@ -40,10 +36,6 @@ export const ContentStore = signalStore(
       );
     },
     getContentsAwaitingApproval() {
-      patchState(store, (state) => ({
-        ...state,
-        contentAwaitingApproval: [],
-      }));
       return contentService.getContentsAwaitingApproval().pipe(
         retryWhen(firestoreRetryStrategy(Infinity)),
         tap({
@@ -57,10 +49,6 @@ export const ContentStore = signalStore(
       );
     },
     getApprovedContents() {
-      patchState(store, (state) => ({
-        ...state,
-        approvedContent: [],
-      }));
       return contentService.getApprovedContents().pipe(
         retryWhen(firestoreRetryStrategy(Infinity)),
         tap({
