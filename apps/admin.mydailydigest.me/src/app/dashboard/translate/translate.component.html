@@ -1,1 +1,29 @@
-<p>translate works!</p>
+<div *transloco="let t" class="new-content">
+    <h5 class="page-title">{{title()}}</h5>
+
+    @let contentForTheCurrentYear = contentStore.approvedContent();
+    @let contentIsEmpty = contentForTheCurrentYear.length === 0;
+
+    <div class="card inline-block !p-0">
+        <nav class="nav px-4 py-2 flex gap-4 items-center justify-between">
+
+            <tui-textfield *ngIf="!contentIsEmpty" class="flex-1" tuiTextfieldSize="s" iconStart="@tui.search">
+                <input [placeholder]="t(KEY.SEARCH_PLACEHOLDER)" tuiTextfield />
+            </tui-textfield>
+        </nav>
+
+        <hr>
+
+        <div class="p-4">
+            @if (contentIsEmpty) {
+            <app-empty-status [description]="t(KEY.NO_ADDED_CONTENT_MSG, {value: title()})" />
+            }
+
+            <!-- @if (!contentForTheCurrentYear.error && !contentIsEmpty) { -->
+            <!-- } -->
+
+        </div>
+    </div>
+
+
+</div>

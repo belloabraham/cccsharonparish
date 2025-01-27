@@ -1,9 +1,4 @@
-import {
-  signalStore,
-  withState,
-  withMethods,
-  patchState,
-} from '@ngrx/signals';
+import { signalStore, withState, withMethods, patchState } from '@ngrx/signals';
 import { inject } from '@angular/core';
 import {
   ISpiritualDailyDigest,
@@ -11,29 +6,30 @@ import {
 } from '@cccsharonparish/mydailydigest';
 
 type ContentState = {
-  forTheCurrentYear: {
-    isLoading: boolean;
-    content: ISpiritualDailyDigest[];
-    error: any;
-  };
+  draftContentForTheYear: ISpiritualDailyDigest[];
+  approvedContent: ISpiritualDailyDigest[];
+  contentAwaitingApproval: ISpiritualDailyDigest[];
 };
 
 const initialState: ContentState = {
-  forTheCurrentYear: {
-    content: [],
-    isLoading: true,
-    error: null,
-  },
+  draftContentForTheYear: [],
+  approvedContent: [],
+  contentAwaitingApproval: [],
 };
 
 export const ContentStore = signalStore(
   withState(initialState),
   withMethods((store) => ({
-    loadContentForTheCurrentYear(): void {
+    getDraftContentForTheYear(): void {
       patchState(store, (state) => ({
         ...state,
-        forTheCurrentYear: { content: [], isLoading: true, error: null },
+        draftContentForTheYear: [],
+        approvedContent: [],
+        contentAwaitingApproval: [],
       }));
+
+      
+
     },
-  })),
+  }))
 );

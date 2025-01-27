@@ -1,8 +1,8 @@
 <div *transloco="let t" class="new-content">
         <h5 class="page-title">{{title()}}</h5>
 
-        @let contentForTheCurrentYear = contentStore.forTheCurrentYear();
-        @let contentIsEmpty = contentForTheCurrentYear.content.length === 0;
+        @let contentForTheCurrentYear = contentStore.draftContentForTheYear();
+        @let contentIsEmpty = contentForTheCurrentYear.length === 0;
 
         <div class="card inline-block !p-0">
                 <nav class="nav px-4 py-2 flex gap-4 items-center justify-between">
@@ -22,7 +22,7 @@
                 <hr>
 
                 <div class="p-4">
-                        @if (!contentForTheCurrentYear.error && contentIsEmpty) {
+                        @if (contentIsEmpty) {
                         <app-empty-status [description]="t(KEY.NO_ADDED_CONTENT_MSG, {value: title()})" />
                         }
 

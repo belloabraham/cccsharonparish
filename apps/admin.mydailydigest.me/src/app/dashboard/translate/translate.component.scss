@@ -1,0 +1,26 @@
+@use 'breakpoints';
+@use '@angular/material' as mat;
+
+.card {
+  width: 100%;
+  @include breakpoints.large {
+    width: 45rem;
+  }
+}
+
+.nav {
+  background: var(--mat-sys-surface-container-low);
+  border-top-left-radius: 0.625rem;
+  border-top-right-radius: 0.625rem;
+
+  button {
+    font-size: 1.5rem;
+  }
+}
+
+.mobile-fab {
+  font-size: 2rem;
+  @include breakpoints.large {
+    display: none;
+  }
+}

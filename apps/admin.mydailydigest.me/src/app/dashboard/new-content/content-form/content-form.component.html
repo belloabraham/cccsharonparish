@@ -3,9 +3,9 @@
     <tui-notification size="s" appearance="warning">{{t(KEY.UNIQUE_CONTENT_DATE_MESSAGE)}}. <br>
         {{t(KEY.REQUIRED_FIELD_MESSAGE)}}</tui-notification>
 
-    <div *ngIf="englishContent()" class="text-end">
+    <!-- <div *ngIf="englishContent()" class="text-end">
         <button mat-button [cdkCopyToClipboard]="englishContent()!">{{t(KEY.COPY_ENG_VERSION_MSG)}}</button>
-    </div>
+    </div> -->
 
     <mat-form-field class="topic">
         <mat-label>{{t(KEY.TOPIC)}}*</mat-label>
