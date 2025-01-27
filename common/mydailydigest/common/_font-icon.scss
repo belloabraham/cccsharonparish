@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.document-clock-outline:before {
+  content: '\e91b';
+}
 .check-box-outline:before {
   content: '\e919';
 }
