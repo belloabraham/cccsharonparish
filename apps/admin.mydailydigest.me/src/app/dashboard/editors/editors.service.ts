@@ -2,11 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { AUTH_TOKEN, COLLECTION, REMOTE_DATA_TOKEN } from '../../services';
 import { IUser } from '@cccsharonparish/mydailydigest';
 import {
-  Firestore,
-  collection,
-  query,
   where,
-  getDocs,
 } from '@angular/fire/firestore';
 
 @Injectable({
