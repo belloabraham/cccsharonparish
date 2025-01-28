@@ -55,6 +55,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ThemeType } from '@cccsharonparish/angular';
 import { distinctUntilChanged, filter } from 'rxjs';
 import { DashboardStore } from './dashboard.store';
+import { ContentStore } from './new-content/content.store';
 
 @Component({
   selector: 'app-dashboard',
@@ -104,6 +105,8 @@ export class DashboardComponent extends CommonComponent {
   openSideDrawer = signal(false);
   readonly dashboardStore = inject(DashboardStore);
   readonly userDataStore = inject(UserDataStore);
+  readonly contentStore = inject(ContentStore);
+
   readonly ENGLISH_LANG_CODE = 'en';
   nonEnglishSupportedLanguages!: Signal<Language[]>;
 
