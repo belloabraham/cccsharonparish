@@ -25,9 +25,9 @@ export const DASHBOARD_ROUTES: Routes = [
         data: {
           breadcrumb: KEY.PUBLISHED,
         },
-        loadComponent: () =>
-          import('./published-content/published-content.component').then(
-            (mod) => mod.PublishedContentComponent
+        loadChildren: () =>
+          import('./published-content/published.routes').then(
+            (mod) => mod.PUBLISHED_CONTENT_ROUTES
           ),
       },
       {

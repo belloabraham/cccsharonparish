@@ -13,12 +13,12 @@ export const PUBLISHED_CONTENT_ROUTES: Routes = [
       {
         path: ROUTE.ROOT,
         pathMatch: 'full',
-        redirectTo: ROUTE.YEAR,
+        redirectTo: ROUTE.YEARS,
       },
       {
-        path: ROUTE.YEAR,
+        path: ROUTE.YEARS,
         data: {
-          breadcrumb: KEY.YEAR,
+          breadcrumb: KEY.YEARS,
         },
         loadComponent: () =>
           import('./content-option/content-option.component').then(
