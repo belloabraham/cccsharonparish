@@ -5,7 +5,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../../shared';
 import { TuiTextfield } from '@taiga-ui/core';
 import { NgIf } from '@angular/common';
-import { EmptyStatusComponent } from '../shared';
 
 @Component({
   selector: 'app-translate',
@@ -14,7 +13,6 @@ import { EmptyStatusComponent } from '../shared';
     TuiTextfield,
     MatButtonModule,
     MatIconModule,
-    EmptyStatusComponent,
     NgIf,
   ],
   templateUrl: './translate.component.html',

@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../../shared';
 import { DRAFT_STRING_RESOURCE_KEY } from '../awaiting-approval/i18n/string-res-keys';
-import { EmptyStatusComponent } from '../shared';
 
 @Component({
   selector: 'app-awaiting-approval',
-  imports: [SharedModule, EmptyStatusComponent],
+  imports: [SharedModule],
   templateUrl: './awaiting-approval.component.html',
   styleUrl: './awaiting-approval.component.scss',
 })

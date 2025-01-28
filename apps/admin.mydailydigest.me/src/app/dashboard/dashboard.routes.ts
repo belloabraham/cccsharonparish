@@ -32,9 +32,9 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: ROUTE.AWAITING_APPROVAL,
-        resolve: {
-          data: () => inject(ContentStore).getContentsAwaitingApproval(),
-        },
+        // resolve: {
+        //   data: () => inject(ContentStore).getContentsAwaitingApproval(),
+        // },
         data: {
           breadcrumb: KEY.AWAITING_APPROVAL,
         },
@@ -45,11 +45,11 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: `${ROUTE.NEW}/:${ROUTE.PARAMS.LANGUAGE_CODE}`,
-        resolve: {
-          data: () => inject(ContentStore).getDraftContentForTheYear(),
-        },
+        // resolve: {
+        //   data: () =>  inject(ContentStore).getDraftContentForTheYear(),
+        // },
         data: {
-          breadcrumb: KEY.DAILY_DIGEST,
+          breadcrumb: KEY.DRAFT,
         },
         loadComponent: () =>
           import('./new-content/new-content.component').then(
@@ -71,9 +71,9 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: ROUTE.APPROVED,
-        resolve: {
-          data: () => inject(ContentStore).getApprovedContents(),
-        },
+        // resolve: {
+        //   data: () => inject(ContentStore).getApprovedContents(),
+        // },
         data: {
           breadcrumb: KEY.APPROVED,
         },
