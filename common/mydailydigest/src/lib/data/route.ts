@@ -8,6 +8,8 @@ export const ROUTE = {
   AWAITING_APPROVAL: 'awaiting-approval',
   TRANSLATE: 'translate',
   PUBLISHED: 'published',
+  OPTIONS: 'options',
+  LIST: 'list',
   EDITORS: 'editors',
   PROFILE: 'profile',
   PRIVACY: 'privacy',
