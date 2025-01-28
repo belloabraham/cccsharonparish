@@ -4,4 +4,6 @@ export const COLLECTION = {
   DRAFT: 'draft',
   APPROVED: 'approved',
   AWAITING_APPROVAL: 'awaiting_approved',
+  PUBLISHED: 'published',
+  PUBLISHED_CONTENT_YEARS: 'published_content_years',
 };

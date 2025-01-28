@@ -1,1 +1,5 @@
-<p>content-option works!</p>
+<div *transloco="let t">
+    <h5 class="page-title">{{t(KEY.PUBLISHED)}}</h5>
+
+    <app-empty-status [description]="t(KEY.NO_PUBLISHED_CONTENT_MSG)" />
+</div>

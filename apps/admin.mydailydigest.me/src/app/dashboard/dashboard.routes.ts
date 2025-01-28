@@ -58,9 +58,9 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: `${ROUTE.TRANSLATE}/:${ROUTE.PARAMS.LANGUAGE_CODE}`,
-        resolve: {
-          data: () => inject(ContentStore).getApprovedContents(),
-        },
+        // resolve: {
+        //   data: () => inject(ContentStore).getApprovedContents(),
+        // },
         data: {
           breadcrumb: KEY.TRANSLATE,
         },

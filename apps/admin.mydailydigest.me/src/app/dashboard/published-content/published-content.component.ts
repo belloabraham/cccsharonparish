@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
-import { SharedModule } from '../../shared';
-import { EmptyStatusComponent } from '../shared';
-import { PUBLISHED_CONTENT_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-published-content',
-  imports: [SharedModule, EmptyStatusComponent],
+  imports: [RouterOutlet],
   templateUrl: './published-content.component.html',
   styleUrl: './published-content.component.scss'
 })
 export class PublishedContentComponent {
-  readonly KEY = PUBLISHED_CONTENT_STRING_RESOURCE_KEY
 }

@@ -86,6 +86,10 @@
   "content_created_error_msg": "Unable to create content, check your internet connection and try again.",
   "created": "Created",
 
+
+  "year":"Year",
+
+
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",
   "whats_app": "WhatsApp",
