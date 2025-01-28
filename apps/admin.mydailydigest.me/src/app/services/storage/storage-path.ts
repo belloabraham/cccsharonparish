@@ -6,4 +6,6 @@ export const STORAGE_PATH = {
   DRAFT: 'draft',
   EDITORS: 'editors',
   HEADERS: 'headers',
+  AWAITING_APPROVAL: 'awaiting_approval',
+  PUBLISHED: 'published',
 };
