@@ -1,10 +1,12 @@
 import {
   Component,
+  computed,
   effect,
   inject,
   Injector,
   input,
   OnDestroy,
+  Signal,
   signal,
 } from '@angular/core';
 import { SharedModule } from '../../shared';
@@ -59,14 +61,14 @@ export class NewContentComponent implements OnDestroy {
   languageCode = input.required<string>({
     alias: 'languageCode',
   });
-  title = signal('');
+  title!: Signal<string>;
 
   constructor() {
-    effect(() => {
+    this.title = computed(() => {
       const title = this.dashboardStore
         .supportedLanguages()
         .languages.filter((lang) => lang.code === this.languageCode())[0].label;
-      this.title.set(title);
+      return title;
     });
   }
 

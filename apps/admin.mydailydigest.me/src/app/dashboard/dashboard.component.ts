@@ -1,4 +1,11 @@
-import { Component, effect, inject, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  effect,
+  inject,
+  Signal,
+  signal,
+} from '@angular/core';
 import {
   ActivatedRoute,
   NavigationEnd,
@@ -98,7 +105,7 @@ export class DashboardComponent extends CommonComponent {
   readonly dashboardStore = inject(DashboardStore);
   readonly userDataStore = inject(UserDataStore);
   readonly ENGLISH_LANG_CODE = 'en';
-  nonEnglishSupportedLanguages = signal<Language[]>([]);
+  nonEnglishSupportedLanguages!: Signal<Language[]>;
 
   appName = environment.appName;
   KEY = DASHBOARD_STRING_RESOURCE_KEY;
@@ -110,23 +117,19 @@ export class DashboardComponent extends CommonComponent {
     super();
     this.onNavigationStart();
     this.onNavigationEnd();
-    effect(() => {
+
+    this.nonEnglishSupportedLanguages = computed(() => {
       const supportedLanguages =
         this.dashboardStore.supportedLanguages().languages;
-      if (this.dashboardStore.supportedLanguages().loaded) {
-        const nonEnglishLanguages = supportedLanguages.filter(
-          (lang) => lang.code !== this.ENGLISH_LANG_CODE
-        );
-        this.nonEnglishSupportedLanguages.set(nonEnglishLanguages);
+      const nonEnglishLanguages = supportedLanguages.filter(
+        (lang) => lang.code !== this.ENGLISH_LANG_CODE
+      );
+      return nonEnglishLanguages;
+    });
 
-        if (supportedLanguages.length > 0) {
-          this.breadcrumbs.set(
-            this.dashboardService.createBreadCrumbs(
-              this.activatedRoute,
-              supportedLanguages
-            )
-          );
-        }
+    effect(() => {
+      if (this.appStore.language().loaded) {
+        this.setBreadCrumb();
       }
     });
   }
@@ -142,13 +145,17 @@ export class DashboardComponent extends CommonComponent {
         distinctUntilChanged()
       )
       .subscribe(() => {
-        this.breadcrumbs.set(
-          this.dashboardService.createBreadCrumbs(
-            this.activatedRoute,
-            this.dashboardStore.supportedLanguages().languages
-          )
-        );
+        this.setBreadCrumb();
       });
+  }
+
+  private setBreadCrumb() {
+    this.breadcrumbs.set(
+      this.dashboardService.createBreadCrumbs(
+        this.activatedRoute,
+        this.dashboardStore.supportedLanguages().languages
+      )
+    );
   }
 
   onNavigationStart() {
