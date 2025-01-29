@@ -2,7 +2,7 @@
     <router-outlet></router-outlet>
 
     @if (isLoading() || routerIsNavigating()) {
-    <mat-progress-bar mode="indeterminate" class="!fixed top-0"></mat-progress-bar>
+    <mat-progress-bar mode="indeterminate" class="!fixed top-0 indeterminate"></mat-progress-bar>
     }
 
     @if (!deviceIsConnected()) {
