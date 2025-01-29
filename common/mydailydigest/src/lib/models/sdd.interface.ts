@@ -24,8 +24,10 @@ export interface ISpiritualDailyDigest extends Record<string, any> {
   isAwaitingApproval: boolean;
   createdBy: string;
   updatedBy?: string;
-  createdAt: Date | Timestamp;
-  updatedAt?: Date | Timestamp;
+  createdAt: any;
+  updatedAt?: any;
+  // createdAt: Date | Timestamp;
+  // updatedAt?: Date | Timestamp;
 }
 
 export type Content = {
