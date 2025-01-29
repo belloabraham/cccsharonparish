@@ -16,5 +16,6 @@ export const ROUTE = {
   TERMS: 'terms',
   PARAMS: {
     LANGUAGE_CODE: 'languageCode',
+    CONTENT_YEAR: 'contentYear',
   },
 };
