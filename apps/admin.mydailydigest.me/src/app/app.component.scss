@@ -1,7 +1,15 @@
 @use 'common/animations/book-preloader';
 @use 'common/utils/colors';
 @use 'common/components/warning-panel';
+@use '@angular/material' as mat;
 
-.indeterminate{
-    z-index: 1000;
+.indeterminate {
+  z-index: 1000;
+
+  @include mat.progress-bar-overrides(
+    (
+      active-indicator-color: rgb(130 26 18),
+      track-color: #d2a49c,
+    )
+  );
 }
