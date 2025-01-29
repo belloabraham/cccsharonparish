@@ -10,7 +10,7 @@ import { Settings } from './data';
 })
 export class BaseAppComponent implements OnInit, OnDestroy {
   readonly showPreloader = signal(true);
-  private readonly router = inject(Router);
+   readonly router = inject(Router);
   private readonly matIconRegistry = inject(MatIconRegistry);
   subscriptions = new SubSink();
   readonly themeService = inject(ThemeService);

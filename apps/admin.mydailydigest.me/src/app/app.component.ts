@@ -1,18 +1,28 @@
 import { TuiRoot } from '@taiga-ui/core';
-import { Component, inject, OnDestroy, OnInit, Signal } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {
+  Component,
+  inject,
+  OnDestroy,
+  OnInit,
+  Signal,
+} from '@angular/core';
+import {
+  NavigationCancel,
+  NavigationEnd,
+  NavigationError,
+  NavigationStart,
+  RouterModule,
+} from '@angular/router';
 import { NgIf } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
-import {
-  BaseAppComponent,
-  ROUTE,
-} from '@cccsharonparish/mydailydigest';
+import { BaseAppComponent, ROUTE } from '@cccsharonparish/mydailydigest';
 import { ConnectionStateUtil } from '@cccsharonparish/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { APP_STRING_RESOURCE_KEY } from './i18n/app-string-res-keys';
 import { environment } from '../environments/environment';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HttpRequestProgressIndicatorService } from './services';
+import { filter, map, merge } from 'rxjs';
 
 @Component({
   standalone: true,
@@ -37,6 +47,7 @@ export class AppComponent
   KEY = APP_STRING_RESOURCE_KEY;
   isDarkMode = this.themeService.isDarkMode;
   APP_NAME = environment.appName;
+  routerIsNavigating!: Signal<boolean>;
 
   constructor() {
     super();
@@ -45,6 +56,30 @@ export class AppComponent
     this.onDeviceThemeChanged(domain);
     this.deviceIsConnected = toSignal(
       this.connectionStateUtil.observeDeviceInternetConnectionState(ROUTE.ROOT)
+    );
+    this.setNavigationObserver()
+  }
+
+  setNavigationObserver() {
+    const routerNavigationStartEvent$ = this.router.events.pipe(
+      filter((e) => e instanceof NavigationStart),
+      map(() => true)
+    );
+    const routerNavigationStoppedEvent$ = this.router.events.pipe(
+      filter(
+        (e) =>
+          e instanceof NavigationEnd ||
+          e instanceof NavigationCancel ||
+          e instanceof NavigationError
+      ),
+      map(() => false)
+    );
+
+    this.routerIsNavigating = toSignal(
+      merge(routerNavigationStoppedEvent$, routerNavigationStartEvent$),
+      {
+        initialValue: false,
+      }
     );
   }
 }
