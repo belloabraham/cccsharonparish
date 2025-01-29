@@ -11,7 +11,7 @@
         <ng-container *ngTemplateOutlet="mobileDrawer"></ng-container>
         }
 
-        <main  tuiNavigationMain [ngClass]="{'nav-expand': expandSideNav(), 'nav-collapse': !expandSideNav()}"
+        <main tuiNavigationMain [ngClass]="{'nav-expand': expandSideNav(), 'nav-collapse': !expandSideNav()}"
             class="!block !border-none">
             <!-- Top Navigation -->
             <ng-container *ngTemplateOutlet="topNavigation"></ng-container>
@@ -25,7 +25,10 @@
 
 </div>
 
-<!-- @let supportedLanguages = dashboardStore.supportedLanguages().languages; -->
+
+@let isAdmin = userDataStore.user()?.userType === 'Admin';
+@let isPublisher = isAdmin ||  userDataStore.user()?.userType === 'Publisher';
+
 
 <!-- Top Navigation -->
 <ng-template #topNavigation>
@@ -123,7 +126,7 @@
                 {{t(KEY.ADD_NEW)}}
             </a>
 
-            <a *ngIf="contentStore.contentAwaitingApproval.length > 0" [routerLink]="[ROUTE.AWAITING_APPROVAL]"
+            <a *ngIf="contentStore.contentAwaitingApproval.length > 0 && isPublisher" [routerLink]="[ROUTE.AWAITING_APPROVAL]"
                 routerLinkActive="link-active" class="nav-item" matRipple>
                 <mat-icon fontIcon="reload-time-outline"></mat-icon>
                 {{t(KEY.AWAITING_APPROVAL)}}
@@ -160,7 +163,7 @@
 
             <footer class="flex flex-col">
 
-                <a *ngIf="userDataStore.user()?.userType === 'Admin'" [routerLink]="[ROUTE.EDITORS]"
+                <a *ngIf="isAdmin" [routerLink]="[ROUTE.EDITORS]"
                     routerLinkActive="link-active-light" class="nav-item" matRipple type="button">
                     <mat-icon fontIcon="spark-user-outline"></mat-icon>
                     {{t(KEY.EDITORS)}}
@@ -193,7 +196,7 @@
             {{t(KEY.ADD_NEW)}}
         </a>
 
-        <a *ngIf="contentStore.contentAwaitingApproval.length > 0" [routerLink]="[ROUTE.AWAITING_APPROVAL]" tuiAsideItem
+        <a *ngIf="contentStore.contentAwaitingApproval.length > 0 && isPublisher" [routerLink]="[ROUTE.AWAITING_APPROVAL]" tuiAsideItem
             matRipple>
             <mat-icon fontIcon="reload-time-outline"></mat-icon>
             {{t(KEY.AWAITING_APPROVAL)}}
@@ -223,7 +226,7 @@
 
         <footer>
 
-            <a *ngIf="userDataStore.user()?.userType === 'Admin'" [routerLink]="[ROUTE.EDITORS]" tuiAsideItem matRipple
+            <a *ngIf="isAdmin" [routerLink]="[ROUTE.EDITORS]" tuiAsideItem matRipple
                 type="button">
                 <mat-icon fontIcon="spark-user-outline"></mat-icon>
                 {{t(KEY.EDITORS)}}

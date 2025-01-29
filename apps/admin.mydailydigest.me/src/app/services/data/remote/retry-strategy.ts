@@ -22,6 +22,7 @@ export const firestoreRetryStrategy =
         ) {
           return throwError(error);
         }
+        console.error(error);
         console.info(
           `Attempt ${retryAttempt}: retrying in ${
             retryAttempt * scalingDuration
