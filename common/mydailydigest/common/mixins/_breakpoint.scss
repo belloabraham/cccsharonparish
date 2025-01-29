@@ -35,13 +35,13 @@
 }
 
 @mixin large {
-  @media (min-width: 976px) {
+  @media (min-width: 1024px) {
     @content;
   }
 }
 
 @mixin lsLarge {
-  @media (max-width: 976px) {
+  @media (max-width: 1024px) {
     @content;
   }
 }

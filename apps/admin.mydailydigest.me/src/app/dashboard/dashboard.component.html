@@ -11,7 +11,7 @@
         <ng-container *ngTemplateOutlet="mobileDrawer"></ng-container>
         }
 
-        <main tuiNavigationMain [ngClass]="{'nav-expand': expandSideNav(), 'nav-collapse': !expandSideNav()}"
+        <main  tuiNavigationMain [ngClass]="{'nav-expand': expandSideNav(), 'nav-collapse': !expandSideNav()}"
             class="!block !border-none">
             <!-- Top Navigation -->
             <ng-container *ngTemplateOutlet="topNavigation"></ng-container>
@@ -51,7 +51,7 @@
 <ng-template #header>
     <header *transloco="let t" tuiNavigationHeader class="flex justify-between items-center !fixed top-0">
 
-        <div class="flex gap-2 hamburger">
+        <div class="lg:hidden flex gap-2">
             <button (click)="openSideDrawer.set(true)" class="!text-white" mat-icon-button>
                 <mat-icon fontIcon="hamburger-fill"></mat-icon>
             </button>

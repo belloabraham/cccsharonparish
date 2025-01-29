@@ -1,11 +1,5 @@
 @use 'breakpoints';
 
-@media (min-width: 1024px) {
-  .hamburger {
-    display: none;
-  }
-}
-
 .dashboard-root {
   display: grid;
   height: 100dvh;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { SharedModule } from '../../../shared';
 
 @Component({
@@ -7,4 +7,8 @@ import { SharedModule } from '../../../shared';
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss',
 })
-export class ContentListComponent {}
+export class ContentListComponent {
+  contentYear = input.required<string>({
+    alias: 'contentYear',
+  });
+}

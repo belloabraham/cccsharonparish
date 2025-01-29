@@ -11,13 +11,11 @@ import { PublishedContentService } from './published-content.service';
 type PublishedContentState = {
   publishedContentYears: IPublishedContentYear[];
   publishedContentsByAYear: ISpiritualDailyDigest[];
-  selectedYear: number;
 };
 
 const initialState: PublishedContentState = {
   publishedContentYears: [],
   publishedContentsByAYear: [],
-  selectedYear: 0,
 };
 
 export const PublishedContentStore = signalStore(

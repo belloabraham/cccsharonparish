@@ -1,5 +1,18 @@
 <div *transloco="let t">
     <h5 class="page-title">{{t(KEY.PUBLISHED)}}</h5>
 
-    <app-empty-status [description]="t(KEY.NO_PUBLISHED_CONTENT_MSG)" />
+    @let publishedContentYears = contentStore.publishedContentYears();
+    @let contentIsEmpty = publishedContentYears.length === 0;
+
+    @if (!contentIsEmpty) {
+    <div class="years">
+        <a *ngFor="let item of publishedContentYears" [routerLink]="['../',ROUTE.LIST, item.year]">
+            <div matRipple class="year">
+                <p> {{item.year}} </p>
+            </div>
+        </a>
+    </div>
+    }
+
+    <app-empty-status *ngIf="contentIsEmpty" [description]="t(KEY.NO_PUBLISHED_CONTENT_MSG)" />
 </div>

@@ -1,0 +1,35 @@
+@use 'breakpoints';
+
+.years {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 1rem;
+  @include breakpoints.medium {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include breakpoints.large {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.year {
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  p {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+}

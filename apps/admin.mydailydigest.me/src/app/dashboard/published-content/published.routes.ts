@@ -32,16 +32,19 @@ export const PUBLISHED_CONTENT_ROUTES: Routes = [
       },
       {
         path: `${ROUTE.LIST}/:${ROUTE.PARAMS.CONTENT_YEAR}`,
-        resolve: {
-          data: () => {
-            const selectedYear = inject(ActivatedRouteSnapshot).paramMap.get(
-              ROUTE.PARAMS.CONTENT_YEAR
-            )!;
-            return inject(PublishedContentStore).getPublishedContentsByAYear(
-              Number(selectedYear)
-            );
-          },
+        data: {
+          breadcrumb: KEY.YEAR,
         },
+        // resolve: {
+        //   data: () => {
+        //     const selectedYear = inject(ActivatedRouteSnapshot).paramMap.get(
+        //       ROUTE.PARAMS.CONTENT_YEAR
+        //     )!;
+        //     return inject(PublishedContentStore).getPublishedContentsByAYear(
+        //       Number(selectedYear)
+        //     );
+        //   },
+        // },
         loadComponent: () =>
           import('./content-list/content-list.component').then(
             (mod) => mod.ContentListComponent
