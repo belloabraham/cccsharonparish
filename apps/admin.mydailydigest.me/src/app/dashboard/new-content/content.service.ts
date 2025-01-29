@@ -16,6 +16,11 @@ import {
   TextContent,
 } from '@cccsharonparish/mydailydigest';
 import { Timestamp } from '@angular/fire/firestore';
+import { environment } from '../../../../src/environments/environment';
+import { of } from 'rxjs';
+import { AWAITING_APPROVAL_CONTENT_MOCK } from './mock/awaiting-approval-content';
+import { APPROVED_CONTENT_MOCK } from './mock/approved-content';
+import { DRAFT_CONTENT_MOCK } from './mock/draft-content';
 
 @Injectable({
   providedIn: 'any',
@@ -24,6 +29,7 @@ export class ContentService {
   private readonly remoteData = inject(REMOTE_DATA_TOKEN);
   private readonly auth = inject(AUTH_TOKEN);
   private readonly cloudStorage = inject(CLOUD_STORAGE_TOKEN);
+  readonly USE_MOCK_DATA = environment.useMockData;
 
   createContent(
     sddUIState: ISpiritualDailyDigestUIState,
@@ -138,14 +144,23 @@ export class ContentService {
   }
 
   getDraftContents() {
+    if (this.USE_MOCK_DATA) {
+      return of(DRAFT_CONTENT_MOCK);
+    }
     return this.getContents(COLLECTION.DRAFT);
   }
 
   getApprovedContents() {
+    if (this.USE_MOCK_DATA) {
+      return of(APPROVED_CONTENT_MOCK);
+    }
     return this.getContents(COLLECTION.APPROVED);
   }
 
   getContentsAwaitingApproval() {
+    if (this.USE_MOCK_DATA) {
+      return of(AWAITING_APPROVAL_CONTENT_MOCK);
+    }
     return this.getContents(COLLECTION.AWAITING_APPROVAL);
   }
 }
