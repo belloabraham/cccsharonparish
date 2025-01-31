@@ -36,7 +36,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
         },
         text: {
           topic: 'Grace and Salvation',
-          message: 'For by grace you have been saved through faith.',
+          message: 'FRENCH For by grace you have been saved through faith.',
           bibleVerse: {
             reference: 'Ephesians 2:8-9',
             verses:
@@ -54,7 +54,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
         },
         text: {
           topic: 'Faith in God',
-          message: 'Trust in the Lord with all your heart.',
+          message: 'YORUBA Trust in the Lord with all your heart.',
           bibleVerse: {
             reference: 'Proverbs 3:5-6',
             verses:

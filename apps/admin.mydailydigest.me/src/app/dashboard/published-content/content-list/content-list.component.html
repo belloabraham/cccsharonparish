@@ -6,14 +6,15 @@
     <div class="flex gap-4">
         <div class="flex-1 ps-1">
             <tui-textfield tuiTextfieldSize="m" iconStart="@tui.search">
-                <input [(ngModel)]="search" [placeholder]="t(KEY.SEARCH_PLACEHOLDER)" tuiTextfield />
+                <input [(ngModel)]="searchQuery" [placeholder]="t(KEY.SEARCH_PLACEHOLDER)" tuiTextfield />
             </tui-textfield>
         </div>
 
 
         <tui-badged-content>
 
-            <img alt="" size="s" tuiBadge tuiSlot="bottom" [src]="languageFC.value ?? ''|| switcher.language | tuiFlag" />
+            <img alt="" size="s" tuiBadge tuiSlot="bottom"
+                [src]="languageFC.value ?? ''|| switcher.language | tuiFlag" />
 
             <button appearance="outline-grayscale" size="m" tuiButtonSelect tuiIconButton type="button"
                 [formControl]="languageFC" [iconStart]="'@tui.languages'" style="border-radius: 1rem;">
@@ -21,7 +22,7 @@
                 <tui-data-list *tuiTextfieldDropdown>
                     <tui-opt-group>
                         <button class="flex gap-2" *ngFor="let lang of languages" tuiOption type="button"
-                            [value]="lang.countryCode" (click)="setLang(lang.countryCode)">
+                            [value]="lang.countryCode" (click)="setLang(lang)">
                             <img alt="" class="t-flag" [src]="lang.countryCode | tuiFlag" />
                             {{ lang.label }}
                         </button>
@@ -41,7 +42,7 @@
             <thead>
                 <tr tuiThGroup>
 
-                    <th *tuiHead="columns[0]" tuiSortable tuiTh [sticky]="true"
+                    <th *tuiHead="columns[0]" [tuiSortable]="false" tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                         {{ t(columns[0])}}
                     </th>
@@ -70,11 +71,6 @@
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                         {{t(columns[5])}}
                     </th>
-
-                    <th *tuiHead="columns[6]" tuiSortable="false" tuiTh [sticky]="true"
-                        [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                        {{t(columns[6])}}
-                    </th>
                 </tr>
             </thead>
             <tbody *tuiLet="data | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
@@ -89,7 +85,7 @@
             <tfoot>
                 <tr>
                     <td [colSpan]="columns.length">
-                        <tui-table-pagination class="mt-2" [size]="TABLE_PAGINATED_SIZE" [page]="(page$ | async) || 0"
+                        <tui-table-pagination class="mt-2" [size]="TABLE_PAGE_SIZE" [page]="(page$ | async) || 0"
                             [total]="this.publishedContentStore.publishedContentsByAYear().length"
                             (paginationChange)="onPagination($event)" />
                     </td>

@@ -41,7 +41,7 @@ export const PUBLISHED_CONTENT_ROUTES: Routes = [
         },
         resolve: {
           data: (route: ActivatedRouteSnapshot) => {
-            const selectedYear = route.paramMap.get('contentYear')!;
+            const selectedYear = route.paramMap.get(ROUTE.PARAMS.CONTENT_YEAR)!;
             return inject(PublishedContentStore).getPublishedContentsByAYear(
               Number(selectedYear)
             );

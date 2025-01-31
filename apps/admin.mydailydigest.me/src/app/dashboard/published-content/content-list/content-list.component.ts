@@ -4,7 +4,6 @@ import { PUBLISHED_CONTENT_LIST_STRING_RESOURCE_KEY } from './i18n/string-res-ke
 
 import { TuiDataList } from '@taiga-ui/core/components/data-list';
 import { TuiFlagPipe } from '@taiga-ui/core/pipes/flag';
-import type { TuiLanguageName } from '@taiga-ui/i18n/types';
 import { TuiLanguageSwitcherService } from '@taiga-ui/i18n/utils';
 import { TuiBadge } from '@taiga-ui/kit/components/badge';
 import { TuiBadgedContent } from '@taiga-ui/kit/components/badged-content';
@@ -20,13 +19,11 @@ import { TuiTable, TuiTablePagination } from '@taiga-ui/addon-table';
 import {
   TUI_DEFAULT_MATCHER,
   tuiDefaultSort,
-  tuiIsFalsy,
   tuiIsPresent,
   TuiLet,
 } from '@taiga-ui/cdk';
 import {
   TuiButton,
-  TuiDropdown,
   TuiTextfield,
   TuiWithTextfieldDropdown,
 } from '@taiga-ui/core';
@@ -46,10 +43,10 @@ import { PublishedContentStore } from '../published-content-store';
 import {
   DEFAULT_LANG_CODE,
   ISpiritualDailyDigestTableUIState,
+  Language,
 } from '@cccsharonparish/mydailydigest';
 import {
   CdkFixedSizeVirtualScroll,
-  CdkVirtualForOf,
   CdkVirtualScrollViewport,
 } from '@angular/cdk/scrolling';
 
@@ -62,21 +59,14 @@ function sortBy(
   return (a, b) => direction * tuiDefaultSort(a[key], b[key]);
 }
 
-function capitalize(value: string): string {
-  return `${value.charAt(0).toUpperCase()}${value.slice(1)}`;
-}
-
 @Component({
   selector: 'app-content-list',
   imports: [
     SharedModule,
-
     TuiTextfield,
     TuiWithTextfieldDropdown,
-
     CdkFixedSizeVirtualScroll,
     CdkVirtualScrollViewport,
-
     TuiBadge,
     TuiBadgedContent,
     TuiButton,
@@ -84,7 +74,6 @@ function capitalize(value: string): string {
     TuiDataList,
     TuiFlagPipe,
     TuiTextfield,
-
     AsyncPipe,
     FormsModule,
     NgForOf,
@@ -109,37 +98,30 @@ export class ContentListComponent {
   KEY = PUBLISHED_CONTENT_LIST_STRING_RESOURCE_KEY;
   dashboardStore = inject(DashboardStore);
   publishedContentStore = inject(PublishedContentStore);
-  readonly TABLE_PAGINATED_SIZE = 31;
+  readonly TABLE_PAGE_SIZE = 31;
 
   protected readonly switcher = inject(TuiLanguageSwitcherService);
   protected readonly languageFC = new FormControl(
-    capitalize(this.switcher.language)
+    this.dashboardStore.supportedLanguages().languages[0].countryCode
   );
 
-  public readonly names: TuiLanguageName[] = Array.from(
-    this.dashboardStore
-      .supportedLanguages()
-      .languages.map((lang) => lang.label.toLowerCase())
-  );
-
-  private readonly size$ = new BehaviorSubject(this.TABLE_PAGINATED_SIZE);
+  private readonly size$ = new BehaviorSubject(this.TABLE_PAGE_SIZE);
   protected readonly page$ = new BehaviorSubject(0);
   private readonly language$ = new BehaviorSubject(DEFAULT_LANG_CODE);
   protected readonly direction$ = new BehaviorSubject<-1 | 1>(-1);
 
   sddStateKeys: ISpiritualDailyDigestTableUIState = {
-    sn: 0,
+    date: '',
     topic: '',
     message: '',
     reference: '',
-    date: '',
     imageUrl: '',
     audioUrl: '',
   };
   protected columns = Object.keys(
     this.sddStateKeys
   ) as (keyof ISpiritualDailyDigestTableUIState)[];
-  protected readonly sorter$ = new BehaviorSubject<Key | any>('');
+  protected readonly sorter$ = new BehaviorSubject<any>('');
 
   protected readonly request$ = combineLatest([
     this.sorter$,
@@ -152,7 +134,7 @@ export class ContentListComponent {
     share()
   );
 
-  protected search = '';
+  protected searchQuery = '';
 
   protected readonly data$: Observable<
     readonly ISpiritualDailyDigestTableUIState[]
@@ -162,20 +144,13 @@ export class ContentListComponent {
     startWith([])
   );
 
-  protected onDirection(direction: -1 | 1): void {
-    this.direction$.next(direction);
-  }
-
   protected onPagination({ page, size }: TuiTablePaginationEvent): void {
-    console.error('Page ', page);
-    console.error('Size ', size);
-
     this.page$.next(page);
     this.size$.next(size);
   }
 
   protected isMatch(value: unknown): boolean {
-    return !!this.search && TUI_DEFAULT_MATCHER(value, this.search);
+    return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);
   }
 
   private getData(
@@ -187,18 +162,16 @@ export class ContentListComponent {
   ): Observable<ReadonlyArray<ISpiritualDailyDigestTableUIState | null>> {
     const start = page * size;
     const end = start + size;
-    console.error('Start ', start);
-    console.error('End ', end);
-
     const result = [...this.getTableUIState(languageCode, start, end)].sort(
       sortBy(key, direction)
     );
     return of(result);
   }
 
-  public setLang(lang: TuiLanguageName): void {
-    this.languageFC.setValue(lang);
-    this.switcher.setLanguage(lang);
+  public setLang(lang: Language): void {
+    this.language$.next(lang.code);
+    this.languageFC.setValue(lang.countryCode);
+    this.switcher.setLanguage(lang.countryCode);
   }
 
   getTableUIState(languageCode: string, start: number, end: number) {
@@ -212,13 +185,15 @@ export class ContentListComponent {
         const content = contentState.content.find(
           (c) => c.language.code === languageCode
         )!;
+        if (!content) {
+          return null;
+        }
         const date = new Date(
           contentState.year,
           contentState.month - 1,
           contentState.day
         ).toDateString();
         const tableState: ISpiritualDailyDigestTableUIState = {
-          sn: index + start + 1,
           topic: content.text.topic,
           message: content.text.message,
           reference: content.text.bibleVerse.reference,
@@ -227,6 +202,7 @@ export class ContentListComponent {
           audioUrl: content.audioUrl,
         };
         return tableState;
-      });
+      })
+      .filter((item) => item != null);
   }
 }
