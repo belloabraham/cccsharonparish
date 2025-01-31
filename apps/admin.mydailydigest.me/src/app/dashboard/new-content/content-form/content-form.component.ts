@@ -36,6 +36,7 @@ import {
   LanguageResourceService,
 } from '@cccsharonparish/angular';
 import {
+  DEFAULT_LANG_CODE,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
   Language,
@@ -122,6 +123,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   private readonly MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES = 500 * 1024; //500Kb
   private readonly MAX_ALLOWED_AUDIO_SIZE_IN_BYTES = 10 * 1024 * 1024; //10Mb
 
+  DEFAULT_LANG_COUNTRY_CODE = DEFAULT_LANG_CODE;
+
   readonly imageUploadState = signal<
     'uploading' | 'uploaded' | 'error' | 'none'
   >('none');
@@ -166,7 +169,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   private updateFormWithExistingData(existingContent: ISpiritualDailyDigest) {
     const contentForLanguage = existingContent.content.find(
-      (content) => content.language.code === this.language()?.code
+      (content) => content.language.code === this.language()?.countryCode
     )!;
 
     const textContent = contentForLanguage.text;
@@ -209,7 +212,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    if (this.language()?.code === 'en') {
+    if (this.language()?.code === DEFAULT_LANG_CODE) {
       this.initCropper();
       setTimeout(() => {
         this.cropper.disable();
@@ -323,7 +326,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   getEnglishContentForTranslation() {
-    if (this.language()?.code !== 'en') {
+    if (this.language()?.code !== DEFAULT_LANG_CODE) {
     }
   }
 

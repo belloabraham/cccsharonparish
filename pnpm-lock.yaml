@@ -58,25 +58,28 @@ dependencies:
     version: 4.20.0(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
   '@taiga-ui/addon-table':
     specifier: ^4.20.0
-    version: 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@ng-web-apis/intersection-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+    version: 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@ng-web-apis/intersection-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
   '@taiga-ui/cdk':
     specifier: ^4.20.0
     version: 4.20.0(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/platform@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@ng-web-apis/screen-orientation@4.11.1)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
   '@taiga-ui/core':
     specifier: ^4.20.0
-    version: 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+    version: 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
   '@taiga-ui/event-plugins':
     specifier: ^4.3.1
     version: 4.3.1(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)(rxjs@7.8.1)
   '@taiga-ui/experimental':
     specifier: ^4.20.0
     version: 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@taiga-ui/addon-commerce@4.21.0)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+  '@taiga-ui/i18n':
+    specifier: ^4.22.0
+    version: 4.22.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1)
   '@taiga-ui/icons':
     specifier: ^4.20.0
     version: 4.20.0
   '@taiga-ui/kit':
     specifier: ^4.20.0
-    version: 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+    version: 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
   '@taiga-ui/layout':
     specifier: ^4.20.0
     version: 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
@@ -6489,7 +6492,7 @@ packages:
       '@swc/counter': 0.1.3
     dev: true
 
-  /@taiga-ui/addon-commerce@4.21.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@ng-web-apis/common@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1):
+  /@taiga-ui/addon-commerce@4.21.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@ng-web-apis/common@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1):
     resolution: {integrity: sha512-CmibFfEsSW2h9k6/NcAiverxiMZDk1e15j10Uupfodn7vpZk3u4j4/c8aS4klV4Hk3lC5UCCvpYVLpx/c9u+/A==}
     peerDependencies:
       '@angular/common': '>=16.0.0'
@@ -6514,9 +6517,9 @@ packages:
       '@maskito/kit': 3.2.1(@maskito/core@3.2.1)
       '@ng-web-apis/common': 4.11.1(@angular/common@19.1.1)(@angular/core@19.1.1)(rxjs@7.8.1)
       '@taiga-ui/cdk': 4.20.0(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/platform@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@ng-web-apis/screen-orientation@4.11.1)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/i18n': 4.21.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1)
-      '@taiga-ui/kit': 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/i18n': 4.22.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1)
+      '@taiga-ui/kit': 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
       '@taiga-ui/polymorpheus': 4.8.0(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)
       rxjs: 7.8.1
       tslib: 2.8.1
@@ -6540,14 +6543,14 @@ packages:
       '@angular/core': 19.1.1(rxjs@7.8.1)(zone.js@0.15.0)
       '@ng-web-apis/common': 4.11.1(@angular/common@19.1.1)(@angular/core@19.1.1)(rxjs@7.8.1)
       '@taiga-ui/cdk': 4.20.0(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/platform@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@ng-web-apis/screen-orientation@4.11.1)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/kit': 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/kit': 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
       '@taiga-ui/polymorpheus': 4.8.0(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)
       rxjs: 7.8.1
       tslib: 2.8.1
     dev: false
 
-  /@taiga-ui/addon-table@4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@ng-web-apis/intersection-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1):
+  /@taiga-ui/addon-table@4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@ng-web-apis/intersection-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1):
     resolution: {integrity: sha512-bJL18gpAmFLMXxcpbP8OOSH05m59ALRvMOrlFMvcfkhfwQt2ACSUGoz7lGUif5TBt6t/yWdubENXBjVjLAqzlQ==}
     peerDependencies:
       '@angular/common': '>=16.0.0'
@@ -6564,9 +6567,9 @@ packages:
       '@angular/core': 19.1.1(rxjs@7.8.1)(zone.js@0.15.0)
       '@ng-web-apis/intersection-observer': 4.11.1(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)
       '@taiga-ui/cdk': 4.20.0(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/platform@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@ng-web-apis/screen-orientation@4.11.1)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/i18n': 4.21.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1)
-      '@taiga-ui/kit': 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/i18n': 4.22.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1)
+      '@taiga-ui/kit': 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
       '@taiga-ui/polymorpheus': 4.8.0(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)
       rxjs: 7.8.1
       tslib: 2.8.1
@@ -6613,7 +6616,7 @@ packages:
       - chokidar
     dev: false
 
-  /@taiga-ui/core@4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1):
+  /@taiga-ui/core@4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1):
     resolution: {integrity: sha512-bK29L9Z4NKzi2fx6prHihl9UG3iPZI0h7qtTiQMEr/4+TfrUrXOdtqCCtvobq8rxSHFeJ31wBSCUsGQOx3MHEA==}
     peerDependencies:
       '@angular/animations': '>=16.0.0'
@@ -6640,7 +6643,7 @@ packages:
       '@ng-web-apis/mutation-observer': 4.11.1(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)
       '@taiga-ui/cdk': 4.20.0(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/platform@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@ng-web-apis/screen-orientation@4.11.1)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
       '@taiga-ui/event-plugins': 4.3.1(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)(rxjs@7.8.1)
-      '@taiga-ui/i18n': 4.21.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1)
+      '@taiga-ui/i18n': 4.22.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1)
       '@taiga-ui/polymorpheus': 4.8.0(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)
       rxjs: 7.8.1
       tslib: 2.8.1
@@ -6673,17 +6676,17 @@ packages:
     dependencies:
       '@angular/common': 19.1.1(@angular/core@19.1.1)(rxjs@7.8.1)
       '@angular/core': 19.1.1(rxjs@7.8.1)(zone.js@0.15.0)
-      '@taiga-ui/addon-commerce': 4.21.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@ng-web-apis/common@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/addon-commerce': 4.21.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@ng-web-apis/common@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/kit@4.20.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
       '@taiga-ui/cdk': 4.20.0(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/platform@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@ng-web-apis/screen-orientation@4.11.1)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/kit': 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/kit': 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
       '@taiga-ui/polymorpheus': 4.8.0(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)
       rxjs: 7.8.1
       tslib: 2.8.1
     dev: false
 
-  /@taiga-ui/i18n@4.21.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1):
-    resolution: {integrity: sha512-T6BQ+qSXh34JpXpNJ9gEzJOjpPM8AchjSuwlZnbZHGo4H7eTRGgt6DdnEBVUIcvGyebVIdBZLSDhpH3lu3c8Yw==}
+  /@taiga-ui/i18n@4.22.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1):
+    resolution: {integrity: sha512-4zxOKKjSciFYMDibhqX+gd4NVxwao8SPbMz6kfXMqPga0aNDvnZnt+P64YwL0pj0gaFG8RaPbs+B70LkFLpBEA==}
     peerDependencies:
       '@angular/core': '>=16.0.0'
       '@ng-web-apis/common': ^4.11.1
@@ -6701,7 +6704,7 @@ packages:
       tslib: 2.8.1
     dev: false
 
-  /@taiga-ui/kit@4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1):
+  /@taiga-ui/kit@4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1):
     resolution: {integrity: sha512-mvId0SLJXQ5ziprlgtIHIlpF9vjKRQ6gfjcTQwm8Pu2o97zPyYvsyUUyByqXU7qrsYHMBOSbLy7aybrc7pUOcw==}
     peerDependencies:
       '@angular/common': '>=16.0.0'
@@ -6735,8 +6738,8 @@ packages:
       '@ng-web-apis/mutation-observer': 4.11.1(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)
       '@ng-web-apis/resize-observer': 4.11.1(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)
       '@taiga-ui/cdk': 4.20.0(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/platform@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@ng-web-apis/screen-orientation@4.11.1)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/i18n': 4.21.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1)
+      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/i18n': 4.22.0(@angular/core@19.1.1)(@ng-web-apis/common@4.11.1)(rxjs@7.8.1)
       '@taiga-ui/polymorpheus': 4.8.0(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)
       rxjs: 7.8.1
       tslib: 2.8.1
@@ -6756,8 +6759,8 @@ packages:
       '@angular/common': 19.1.1(@angular/core@19.1.1)(rxjs@7.8.1)
       '@angular/core': 19.1.1(rxjs@7.8.1)(zone.js@0.15.0)
       '@taiga-ui/cdk': 4.20.0(@angular/animations@19.1.1)(@angular/cdk@19.1.0)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/platform@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@ng-web-apis/screen-orientation@4.11.1)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
-      '@taiga-ui/kit': 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.21.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/core': 4.20.0(@angular/animations@19.1.1)(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/platform-browser@19.1.1)(@angular/router@19.1.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/event-plugins@4.3.1)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
+      '@taiga-ui/kit': 4.20.0(@angular/common@19.1.1)(@angular/core@19.1.1)(@angular/forms@19.1.1)(@angular/router@19.1.1)(@maskito/angular@3.2.1)(@maskito/core@3.2.1)(@maskito/kit@3.2.1)(@maskito/phone@3.2.1)(@ng-web-apis/common@4.11.1)(@ng-web-apis/intersection-observer@4.11.1)(@ng-web-apis/mutation-observer@4.11.1)(@ng-web-apis/resize-observer@4.11.1)(@taiga-ui/cdk@4.20.0)(@taiga-ui/core@4.20.0)(@taiga-ui/i18n@4.22.0)(@taiga-ui/polymorpheus@4.8.0)(rxjs@7.8.1)
       '@taiga-ui/polymorpheus': 4.8.0(@angular/core@19.1.1)(@angular/platform-browser@19.1.1)
       rxjs: 7.8.1
       tslib: 2.8.1

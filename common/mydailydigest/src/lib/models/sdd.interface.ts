@@ -1,5 +1,16 @@
 import { Timestamp } from '@angular/fire/firestore';
 
+export const DEFAULT_LANG_CODE = 'en';
+export interface ISpiritualDailyDigestTableUIState {
+  sn:number,
+  topic: string;
+  message: string;
+  reference: string;
+  date: string;
+  imageUrl?: string;
+  audioUrl?: string;
+}
+
 export interface ISpiritualDailyDigestUIState {
   topic: string;
   message: string;
@@ -17,8 +28,8 @@ export interface ISpiritualDailyDigest extends Record<string, any> {
   year: number;
   month: number;
   day: number;
-  imageUrl?: string;
-  tags: string[];
+  imageUrl?: string; //
+  tags: string[]; // and date
   content: Content[];
   isPublished?: boolean;
   isAwaitingApproval: boolean;
@@ -36,14 +47,16 @@ export type Content = {
   audioUrl?: string;
 };
 
+
 export type Language = {
+  countryCode: string;
   code: string;
   label: string;
 };
 
 export type TextContent = {
-  topic: string;
-  message: string;
+  topic: string; //
+  message: string; //
   bibleVerse: BibleVerseContent;
 };
 

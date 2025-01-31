@@ -12,11 +12,13 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
           topic: 'Love of God',
-          message: 'God so loved the world that He gave His only Son.',
+          message:
+            'God so loved the world that He gave His only Son.  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, alias consectetur ipsum facere totam sed tempora, molestiae magni labore quisquam laboriosam quos ducimus. Fugit facilis nihil provident voluptas atque ab?  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, alias consectetur ipsum facere totam sed tempora, molestiae magni labore quisquam laboriosam quos ducimus. Fugit facilis nihil provident voluptas atque ab?  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, alias consectetur ipsum facere totam sed tempora, molestiae magni labore quisquam laboriosam quos ducimus. Fugit facilis nihil provident voluptas atque ab? ',
           bibleVerse: {
             reference: 'John 3:16',
             verses:
@@ -29,6 +31,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -45,7 +48,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -79,6 +83,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -96,6 +101,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -112,7 +118,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -146,6 +153,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -163,6 +171,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -179,7 +188,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -213,6 +223,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -230,6 +241,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -246,7 +258,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -280,6 +293,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -297,6 +311,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -313,7 +328,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -347,6 +363,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -364,6 +381,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -380,7 +398,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -414,6 +433,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -431,6 +451,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -447,7 +468,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -481,6 +503,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -498,6 +521,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -514,7 +538,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -548,6 +573,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -565,6 +591,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -581,7 +608,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -615,6 +643,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -632,6 +661,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -648,7 +678,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -682,6 +713,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -699,6 +731,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -715,7 +748,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -749,6 +783,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -766,6 +801,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -782,7 +818,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -816,6 +853,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -833,6 +871,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -849,7 +888,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -883,6 +923,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -900,6 +941,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -916,7 +958,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -950,6 +993,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -967,6 +1011,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -983,7 +1028,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1017,6 +1063,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1034,6 +1081,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1050,7 +1098,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1084,6 +1133,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1101,6 +1151,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1117,7 +1168,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1151,6 +1203,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1168,6 +1221,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1184,7 +1238,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1218,6 +1273,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1235,6 +1291,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1251,7 +1308,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1285,6 +1343,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1302,6 +1361,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1318,7 +1378,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1352,6 +1413,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1369,6 +1431,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1385,7 +1448,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1419,6 +1483,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1436,6 +1501,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1452,7 +1518,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1486,6 +1553,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1503,6 +1571,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1519,7 +1588,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1553,6 +1623,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1570,6 +1641,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1586,7 +1658,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1620,6 +1693,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1637,6 +1711,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1653,7 +1728,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1687,6 +1763,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1704,6 +1781,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1720,7 +1798,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1754,6 +1833,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1771,6 +1851,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1787,7 +1868,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1821,6 +1903,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1838,6 +1921,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1854,7 +1938,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1888,6 +1973,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1905,6 +1991,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1921,7 +2008,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -1955,6 +2043,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -1972,6 +2061,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -1988,7 +2078,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2022,6 +2113,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2039,6 +2131,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2055,7 +2148,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2089,6 +2183,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2106,6 +2201,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2122,7 +2218,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2156,6 +2253,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2173,6 +2271,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2189,7 +2288,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2223,6 +2323,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2240,6 +2341,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2256,7 +2358,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2290,6 +2393,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2307,6 +2411,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2323,7 +2428,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2357,6 +2463,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2374,6 +2481,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2390,7 +2498,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2424,6 +2533,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2441,6 +2551,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2457,7 +2568,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2491,6 +2603,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2508,6 +2621,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2524,7 +2638,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2558,6 +2673,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2575,6 +2691,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2591,7 +2708,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2625,6 +2743,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2642,6 +2761,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2658,7 +2778,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2692,6 +2813,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2709,6 +2831,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2725,7 +2848,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2759,6 +2883,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2776,6 +2901,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2792,7 +2918,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2826,6 +2953,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2843,6 +2971,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2859,7 +2988,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2893,6 +3023,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2910,6 +3041,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2926,7 +3058,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -2960,6 +3093,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -2977,6 +3111,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -2993,7 +3128,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3027,6 +3163,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3044,6 +3181,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3060,7 +3198,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3094,6 +3233,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3111,6 +3251,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3127,7 +3268,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3161,6 +3303,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3178,6 +3321,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3194,7 +3338,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3228,6 +3373,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3245,6 +3391,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3261,7 +3408,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3295,6 +3443,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3312,6 +3461,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3328,7 +3478,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3362,6 +3513,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3379,6 +3531,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3395,7 +3548,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3429,6 +3583,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3446,6 +3601,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3462,7 +3618,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3496,6 +3653,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3513,6 +3671,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3529,7 +3688,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3563,6 +3723,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3580,6 +3741,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3596,7 +3758,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3630,6 +3793,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3647,6 +3811,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3663,7 +3828,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3697,6 +3863,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3714,6 +3881,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3730,7 +3898,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3764,6 +3933,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3781,6 +3951,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3797,7 +3968,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3831,6 +4003,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3848,6 +4021,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3864,7 +4038,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3898,6 +4073,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3915,6 +4091,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3931,7 +4108,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -3965,6 +4143,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -3982,6 +4161,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -3998,7 +4178,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4032,6 +4213,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4049,6 +4231,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4065,7 +4248,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4099,6 +4283,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4116,6 +4301,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4132,7 +4318,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4166,6 +4353,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4183,6 +4371,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4199,7 +4388,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4233,6 +4423,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4250,6 +4441,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4266,7 +4458,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4300,6 +4493,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4317,6 +4511,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4333,7 +4528,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4367,6 +4563,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4384,6 +4581,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4400,7 +4598,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4434,6 +4633,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4451,6 +4651,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4467,7 +4668,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4501,6 +4703,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4518,6 +4721,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4534,7 +4738,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4568,6 +4773,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4585,6 +4791,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4601,7 +4808,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4635,6 +4843,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4652,6 +4861,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4668,7 +4878,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4702,6 +4913,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4719,6 +4931,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4735,7 +4948,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4769,6 +4983,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4786,6 +5001,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4802,7 +5018,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4836,6 +5053,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4853,6 +5071,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4869,7 +5088,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4903,6 +5123,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4920,6 +5141,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -4936,7 +5158,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -4970,6 +5193,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -4987,6 +5211,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5003,7 +5228,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5037,6 +5263,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5054,6 +5281,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5070,7 +5298,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5104,6 +5333,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5121,6 +5351,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5137,7 +5368,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5171,6 +5403,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5188,6 +5421,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5204,7 +5438,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5238,6 +5473,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5255,6 +5491,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5271,7 +5508,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5305,6 +5543,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5322,6 +5561,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5338,7 +5578,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5372,6 +5613,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5389,6 +5631,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5405,7 +5648,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5439,6 +5683,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5456,6 +5701,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5472,7 +5718,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5506,6 +5753,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5523,6 +5771,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5539,7 +5788,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5573,6 +5823,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5590,6 +5841,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5606,7 +5858,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5640,6 +5893,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5657,6 +5911,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5673,7 +5928,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5707,6 +5963,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5724,6 +5981,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5740,7 +5998,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5774,6 +6033,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5791,6 +6051,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5807,7 +6068,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5841,6 +6103,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5858,6 +6121,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5874,7 +6138,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5908,6 +6173,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5925,6 +6191,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -5941,7 +6208,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -5975,6 +6243,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -5992,6 +6261,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6008,7 +6278,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6042,6 +6313,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6059,6 +6331,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6075,7 +6348,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6109,6 +6383,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6126,6 +6401,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6142,7 +6418,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6176,6 +6453,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6193,6 +6471,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6209,7 +6488,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6243,6 +6523,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6260,6 +6541,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6276,7 +6558,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6310,6 +6593,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6327,6 +6611,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6343,7 +6628,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6377,6 +6663,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6394,6 +6681,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6410,7 +6698,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6444,6 +6733,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6461,6 +6751,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6477,7 +6768,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6511,6 +6803,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6528,6 +6821,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6544,7 +6838,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6578,6 +6873,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6595,6 +6891,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6611,7 +6908,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6645,6 +6943,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6662,6 +6961,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6678,7 +6978,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6712,6 +7013,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6729,6 +7031,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6745,7 +7048,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6779,6 +7083,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6796,6 +7101,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6812,7 +7118,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6846,6 +7153,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6863,6 +7171,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6879,7 +7188,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6913,6 +7223,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6930,6 +7241,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -6946,7 +7258,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -6980,6 +7293,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -6997,6 +7311,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7013,7 +7328,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7047,6 +7363,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7064,6 +7381,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7080,7 +7398,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7114,6 +7433,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7131,6 +7451,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7147,7 +7468,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7181,6 +7503,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7198,6 +7521,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7214,7 +7538,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7248,6 +7573,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7265,6 +7591,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7281,7 +7608,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7315,6 +7643,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7332,6 +7661,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7348,7 +7678,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7382,6 +7713,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7399,6 +7731,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7415,7 +7748,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7449,6 +7783,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7466,6 +7801,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7482,7 +7818,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7516,6 +7853,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7533,6 +7871,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7549,7 +7888,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7583,6 +7923,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7600,6 +7941,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7616,7 +7958,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7650,6 +7993,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7667,6 +8011,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7683,7 +8028,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7717,6 +8063,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7734,6 +8081,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7750,7 +8098,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7784,6 +8133,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7801,6 +8151,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7817,7 +8168,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7851,6 +8203,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7868,6 +8221,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7884,7 +8238,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7918,6 +8273,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -7935,6 +8291,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -7951,7 +8308,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -7985,6 +8343,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8002,6 +8361,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8018,7 +8378,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8052,6 +8413,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8069,6 +8431,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8085,7 +8448,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8119,6 +8483,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8136,6 +8501,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8152,7 +8518,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8186,6 +8553,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8203,6 +8571,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8219,7 +8588,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8253,6 +8623,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8270,6 +8641,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8286,7 +8658,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8320,6 +8693,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8337,6 +8711,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8353,7 +8728,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8387,6 +8763,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8404,6 +8781,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8420,7 +8798,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8454,6 +8833,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8471,6 +8851,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8487,7 +8868,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8521,6 +8903,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8538,6 +8921,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8554,7 +8938,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8588,6 +8973,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8605,6 +8991,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8621,7 +9008,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8655,6 +9043,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8672,6 +9061,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8688,7 +9078,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8722,6 +9113,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8739,6 +9131,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8755,7 +9148,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8789,6 +9183,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8806,6 +9201,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8822,7 +9218,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8856,6 +9253,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8873,6 +9271,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8889,7 +9288,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8923,6 +9323,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -8940,6 +9341,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -8956,7 +9358,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -8990,6 +9393,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9007,6 +9411,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9023,7 +9428,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9057,6 +9463,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9074,6 +9481,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9090,7 +9498,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9124,6 +9533,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9141,6 +9551,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9157,7 +9568,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9191,6 +9603,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9208,6 +9621,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9224,7 +9638,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9258,6 +9673,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9275,6 +9691,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9291,7 +9708,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9325,6 +9743,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9342,6 +9761,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9358,7 +9778,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9392,6 +9813,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9409,6 +9831,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9425,7 +9848,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9459,6 +9883,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9476,6 +9901,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9492,7 +9918,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9526,6 +9953,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9543,6 +9971,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9559,7 +9988,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9593,6 +10023,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9610,6 +10041,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9626,7 +10058,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9660,6 +10093,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9677,6 +10111,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9693,7 +10128,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9727,6 +10163,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9744,6 +10181,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9760,7 +10198,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9794,6 +10233,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9811,6 +10251,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9827,7 +10268,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9861,6 +10303,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9878,6 +10321,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9894,7 +10338,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9928,6 +10373,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -9945,6 +10391,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -9961,7 +10408,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -9995,6 +10443,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10012,6 +10461,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10028,7 +10478,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10062,6 +10513,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10079,6 +10531,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10095,7 +10548,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10129,6 +10583,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10146,6 +10601,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10162,7 +10618,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10196,6 +10653,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10213,6 +10671,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10229,7 +10688,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10263,6 +10723,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10280,6 +10741,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10296,7 +10758,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10330,6 +10793,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10347,6 +10811,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10363,7 +10828,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10397,6 +10863,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10414,6 +10881,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10430,7 +10898,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10464,6 +10933,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10481,6 +10951,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10497,7 +10968,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10531,6 +11003,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10548,6 +11021,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10564,7 +11038,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10598,6 +11073,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10615,6 +11091,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10631,7 +11108,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10665,6 +11143,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10682,6 +11161,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10698,7 +11178,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10732,6 +11213,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10749,6 +11231,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10765,7 +11248,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10799,6 +11283,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10816,6 +11301,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10832,7 +11318,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10866,6 +11353,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10883,6 +11371,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10899,7 +11388,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -10933,6 +11423,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -10950,6 +11441,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -10966,7 +11458,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11000,6 +11493,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11017,6 +11511,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11033,7 +11528,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11067,6 +11563,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11084,6 +11581,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11100,7 +11598,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11134,6 +11633,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11151,6 +11651,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11167,7 +11668,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11201,6 +11703,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11218,6 +11721,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11234,7 +11738,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11268,6 +11773,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11285,6 +11791,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11301,7 +11808,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11335,6 +11843,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11352,6 +11861,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11368,7 +11878,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11402,6 +11913,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11419,6 +11931,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11435,7 +11948,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11469,6 +11983,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11486,6 +12001,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11502,7 +12018,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11536,6 +12053,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11553,6 +12071,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11569,7 +12088,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11603,6 +12123,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11620,6 +12141,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11636,7 +12158,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11670,6 +12193,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11687,6 +12211,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11703,7 +12228,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11737,6 +12263,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11754,6 +12281,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11770,7 +12298,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11804,6 +12333,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11821,6 +12351,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11837,7 +12368,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11871,6 +12403,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11888,6 +12421,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11904,7 +12438,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -11938,6 +12473,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -11955,6 +12491,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -11971,7 +12508,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12005,6 +12543,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12022,6 +12561,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12038,7 +12578,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12072,6 +12613,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12089,6 +12631,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12105,7 +12648,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12139,6 +12683,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12156,6 +12701,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12172,7 +12718,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12206,6 +12753,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12223,6 +12771,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12239,7 +12788,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12273,6 +12823,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12290,6 +12841,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12306,7 +12858,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12340,6 +12893,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12357,6 +12911,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12373,7 +12928,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12407,6 +12963,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12424,6 +12981,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12440,7 +12998,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12474,6 +13033,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12491,6 +13051,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12507,7 +13068,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12541,6 +13103,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12558,6 +13121,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12574,7 +13138,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12608,6 +13173,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12625,6 +13191,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12641,7 +13208,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12675,6 +13243,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12692,6 +13261,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12708,7 +13278,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12742,6 +13313,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12759,6 +13331,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12775,7 +13348,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12809,6 +13383,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12826,6 +13401,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12842,7 +13418,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12876,6 +13453,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12893,6 +13471,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12909,7 +13488,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -12943,6 +13523,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -12960,6 +13541,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -12976,7 +13558,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13010,6 +13593,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13027,6 +13611,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13043,7 +13628,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13077,6 +13663,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13094,6 +13681,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13110,7 +13698,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13144,6 +13733,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13161,6 +13751,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13177,7 +13768,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13211,6 +13803,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13228,6 +13821,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13244,7 +13838,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13278,6 +13873,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13295,6 +13891,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13311,7 +13908,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13345,6 +13943,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13362,6 +13961,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13378,7 +13978,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13412,6 +14013,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13429,6 +14031,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13445,7 +14048,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13479,6 +14083,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13496,6 +14101,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13512,7 +14118,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13546,6 +14153,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13563,6 +14171,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13579,7 +14188,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13613,6 +14223,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13630,6 +14241,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13646,7 +14258,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13680,6 +14293,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13697,6 +14311,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13713,7 +14328,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13747,6 +14363,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13764,6 +14381,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13780,7 +14398,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13814,6 +14433,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13831,6 +14451,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13847,7 +14468,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13881,6 +14503,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13898,6 +14521,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13914,7 +14538,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -13948,6 +14573,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -13965,6 +14591,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -13981,7 +14608,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14015,6 +14643,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14032,6 +14661,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14048,7 +14678,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14082,6 +14713,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14099,6 +14731,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14115,7 +14748,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14149,6 +14783,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14166,6 +14801,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14182,7 +14818,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14216,6 +14853,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14233,6 +14871,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14249,7 +14888,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14283,6 +14923,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14300,6 +14941,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14316,7 +14958,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14350,6 +14993,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14367,6 +15011,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14383,7 +15028,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14417,6 +15063,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14434,6 +15081,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14450,7 +15098,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14484,6 +15133,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14501,6 +15151,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14517,7 +15168,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14551,6 +15203,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14568,6 +15221,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14584,7 +15238,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14618,6 +15273,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14635,6 +15291,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14651,7 +15308,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14685,6 +15343,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14702,6 +15361,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14718,7 +15378,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14752,6 +15413,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14769,6 +15431,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14785,7 +15448,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14819,6 +15483,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14836,6 +15501,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14852,7 +15518,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14886,6 +15553,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14903,6 +15571,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14919,7 +15588,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -14953,6 +15623,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -14970,6 +15641,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -14986,7 +15658,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15020,6 +15693,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15037,6 +15711,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15053,7 +15728,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15087,6 +15763,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15104,6 +15781,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15120,7 +15798,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15154,6 +15833,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15171,6 +15851,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15187,7 +15868,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15221,6 +15903,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15238,6 +15921,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15254,7 +15938,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15288,6 +15973,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15305,6 +15991,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15321,7 +16008,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15355,6 +16043,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15372,6 +16061,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15388,7 +16078,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15422,6 +16113,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15439,6 +16131,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15455,7 +16148,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15489,6 +16183,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15506,6 +16201,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15522,7 +16218,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15556,6 +16253,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15573,6 +16271,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15589,7 +16288,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15623,6 +16323,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15640,6 +16341,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15656,7 +16358,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15690,6 +16393,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15707,6 +16411,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15723,7 +16428,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15757,6 +16463,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15774,6 +16481,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15790,7 +16498,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15824,6 +16533,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15841,6 +16551,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15857,7 +16568,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15891,6 +16603,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15908,6 +16621,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15924,7 +16638,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -15958,6 +16673,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -15975,6 +16691,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -15991,7 +16708,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16025,6 +16743,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16042,6 +16761,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16058,7 +16778,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16092,6 +16813,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16109,6 +16831,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16125,7 +16848,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16159,6 +16883,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16176,6 +16901,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16192,7 +16918,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16226,6 +16953,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16243,6 +16971,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16259,7 +16988,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16293,6 +17023,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16310,6 +17041,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16326,7 +17058,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16360,6 +17093,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16377,6 +17111,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16393,7 +17128,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16427,6 +17163,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16444,6 +17181,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16460,7 +17198,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16494,6 +17233,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16511,6 +17251,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16527,7 +17268,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16561,6 +17303,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16578,6 +17321,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16594,7 +17338,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16628,6 +17373,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16645,6 +17391,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16661,7 +17408,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16695,6 +17443,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16712,6 +17461,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16728,7 +17478,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16762,6 +17513,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16779,6 +17531,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16795,7 +17548,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16829,6 +17583,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16846,6 +17601,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16862,7 +17618,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16896,6 +17653,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16913,6 +17671,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16929,7 +17688,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -16963,6 +17723,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -16980,6 +17741,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -16996,7 +17758,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17030,6 +17793,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17047,6 +17811,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17063,7 +17828,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17097,6 +17863,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17114,6 +17881,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17130,7 +17898,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17164,6 +17933,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17181,6 +17951,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17197,7 +17968,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17231,6 +18003,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17248,6 +18021,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17264,7 +18038,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17298,6 +18073,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17315,6 +18091,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17331,7 +18108,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17365,6 +18143,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17382,6 +18161,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17398,7 +18178,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17432,6 +18213,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17449,6 +18231,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17465,7 +18248,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17499,6 +18283,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17516,6 +18301,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17532,7 +18318,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17566,6 +18353,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17583,6 +18371,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17599,7 +18388,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17633,6 +18423,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17650,6 +18441,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17666,7 +18458,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17700,6 +18493,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17717,6 +18511,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17733,7 +18528,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17767,6 +18563,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17784,6 +18581,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17800,7 +18598,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17834,6 +18633,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17851,6 +18651,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17867,7 +18668,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17901,6 +18703,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17918,6 +18721,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -17934,7 +18738,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -17968,6 +18773,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -17985,6 +18791,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18001,7 +18808,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18035,6 +18843,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18052,6 +18861,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18068,7 +18878,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18102,6 +18913,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18119,6 +18931,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18135,7 +18948,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18169,6 +18983,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18186,6 +19001,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18202,7 +19018,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18236,6 +19053,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18253,6 +19071,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18269,7 +19088,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18303,6 +19123,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18320,6 +19141,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18336,7 +19158,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18370,6 +19193,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18387,6 +19211,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18403,7 +19228,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18437,6 +19263,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18454,6 +19281,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18470,7 +19298,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18504,6 +19333,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18521,6 +19351,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18537,7 +19368,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18571,6 +19403,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18588,6 +19421,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18604,7 +19438,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18638,6 +19473,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18655,6 +19491,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18671,7 +19508,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18705,6 +19543,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18722,6 +19561,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18738,7 +19578,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18772,6 +19613,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18789,6 +19631,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18805,7 +19648,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18839,6 +19683,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18856,6 +19701,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18872,7 +19718,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18906,6 +19753,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18923,6 +19771,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -18939,7 +19788,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -18973,6 +19823,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -18990,6 +19841,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19006,7 +19858,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19040,6 +19893,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19057,6 +19911,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19073,7 +19928,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19107,6 +19963,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19124,6 +19981,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19140,7 +19998,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19174,6 +20033,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19191,6 +20051,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19207,7 +20068,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19241,6 +20103,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19258,6 +20121,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19274,7 +20138,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19308,6 +20173,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19325,6 +20191,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19341,7 +20208,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19375,6 +20243,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19392,6 +20261,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19408,7 +20278,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19442,6 +20313,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19459,6 +20331,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19475,7 +20348,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19509,6 +20383,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19526,6 +20401,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19542,7 +20418,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19576,6 +20453,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19593,6 +20471,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19609,7 +20488,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19643,6 +20523,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19660,6 +20541,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19676,7 +20558,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19710,6 +20593,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19727,6 +20611,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19743,7 +20628,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19777,6 +20663,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19794,6 +20681,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19810,7 +20698,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19844,6 +20733,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19861,6 +20751,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19877,7 +20768,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19911,6 +20803,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19928,6 +20821,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -19944,7 +20838,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -19978,6 +20873,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -19995,6 +20891,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20011,7 +20908,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20045,6 +20943,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20062,6 +20961,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20078,7 +20978,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20112,6 +21013,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20129,6 +21031,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20145,7 +21048,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20179,6 +21083,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20196,6 +21101,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20212,7 +21118,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20246,6 +21153,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20263,6 +21171,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20279,7 +21188,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20313,6 +21223,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20330,6 +21241,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20346,7 +21258,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20380,6 +21293,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20397,6 +21311,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20413,7 +21328,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20447,6 +21363,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20464,6 +21381,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20480,7 +21398,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20514,6 +21433,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20531,6 +21451,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20547,7 +21468,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20581,6 +21503,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20598,6 +21521,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20614,7 +21538,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20648,6 +21573,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20665,6 +21591,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20681,7 +21608,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20715,6 +21643,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20732,6 +21661,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20748,7 +21678,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20782,6 +21713,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20799,6 +21731,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20815,7 +21748,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20849,6 +21783,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20866,6 +21801,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20882,7 +21818,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20916,6 +21853,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -20933,6 +21871,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -20949,7 +21888,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -20983,6 +21923,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21000,6 +21941,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21016,7 +21958,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21050,6 +21993,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21067,6 +22011,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21083,7 +22028,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21117,6 +22063,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21134,6 +22081,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21150,7 +22098,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21184,6 +22133,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21201,6 +22151,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21217,7 +22168,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21251,6 +22203,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21268,6 +22221,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21284,7 +22238,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21318,6 +22273,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21335,6 +22291,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21351,7 +22308,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21385,6 +22343,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21402,6 +22361,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21418,7 +22378,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21452,6 +22413,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21469,6 +22431,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21485,7 +22448,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21519,6 +22483,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21536,6 +22501,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21552,7 +22518,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21586,6 +22553,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21603,6 +22571,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21619,7 +22588,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21653,6 +22623,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21670,6 +22641,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21686,7 +22658,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21720,6 +22693,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21737,6 +22711,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21753,7 +22728,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21787,6 +22763,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21804,6 +22781,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21820,7 +22798,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21854,6 +22833,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21871,6 +22851,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21887,7 +22868,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21921,6 +22903,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -21938,6 +22921,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -21954,7 +22938,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -21988,6 +22973,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22005,6 +22991,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22021,7 +23008,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22055,6 +23043,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22072,6 +23061,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22088,7 +23078,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22122,6 +23113,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22139,6 +23131,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22155,7 +23148,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22189,6 +23183,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22206,6 +23201,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22222,7 +23218,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22256,6 +23253,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22273,6 +23271,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22289,7 +23288,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22323,6 +23323,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22340,6 +23341,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22356,7 +23358,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22390,6 +23393,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22407,6 +23411,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22423,7 +23428,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22457,6 +23463,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22474,6 +23481,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22490,7 +23498,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22524,6 +23533,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22541,6 +23551,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22557,7 +23568,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22591,6 +23603,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22608,6 +23621,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22624,7 +23638,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22658,6 +23673,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22675,6 +23691,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22691,7 +23708,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22725,6 +23743,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22742,6 +23761,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22758,7 +23778,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22792,6 +23813,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22809,6 +23831,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22825,7 +23848,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22859,6 +23883,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22876,6 +23901,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22892,7 +23918,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22926,6 +23953,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -22943,6 +23971,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -22959,7 +23988,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -22993,6 +24023,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23010,6 +24041,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23026,7 +24058,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23060,6 +24093,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23077,6 +24111,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23093,7 +24128,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23127,6 +24163,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23144,6 +24181,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23160,7 +24198,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23194,6 +24233,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23211,6 +24251,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23227,7 +24268,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23261,6 +24303,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23278,6 +24321,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23294,7 +24338,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23328,6 +24373,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23345,6 +24391,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23361,7 +24408,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23395,6 +24443,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23412,6 +24461,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23428,7 +24478,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23462,6 +24513,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23479,6 +24531,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23495,7 +24548,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23529,6 +24583,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23546,6 +24601,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23562,7 +24618,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23596,6 +24653,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23613,6 +24671,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23629,7 +24688,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23663,6 +24723,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23680,6 +24741,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23696,7 +24758,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23730,6 +24793,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23747,6 +24811,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23763,7 +24828,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23797,6 +24863,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23814,6 +24881,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23830,7 +24898,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23864,6 +24933,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23881,6 +24951,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23897,7 +24968,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23931,6 +25003,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -23948,6 +25021,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -23964,7 +25038,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -23998,6 +25073,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -24015,6 +25091,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -24031,7 +25108,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -24065,6 +25143,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -24082,6 +25161,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -24098,7 +25178,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -24132,6 +25213,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -24149,6 +25231,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -24165,7 +25248,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -24199,6 +25283,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -24216,6 +25301,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -24232,7 +25318,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -24266,6 +25353,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -24283,6 +25371,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -24299,7 +25388,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -24333,6 +25423,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -24350,6 +25441,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -24366,7 +25458,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {
@@ -24400,6 +25493,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'en',
+          countryCode: 'gb',
           label: 'English',
         },
         text: {
@@ -24417,6 +25511,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       {
         language: {
           code: 'fr',
+          countryCode: 'fr',
           label: 'French',
         },
         text: {
@@ -24433,7 +25528,8 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
-          code: 'yr',
+          code: 'yo',
+          countryCode: 'ng',
           label: 'Yoruba',
         },
         text: {

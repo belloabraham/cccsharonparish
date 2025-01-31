@@ -1,4 +1,8 @@
-import { ActivatedRouteSnapshot, Routes } from '@angular/router';
+import {
+  ActivatedRoute,
+  ActivatedRouteSnapshot,
+  Routes,
+} from '@angular/router';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { PublishedContentComponent } from './published-content.component';
 import { PUBLISHED_CONTENT_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
@@ -35,16 +39,14 @@ export const PUBLISHED_CONTENT_ROUTES: Routes = [
         data: {
           breadcrumb: KEY.YEAR,
         },
-        // resolve: {
-        //   data: () => {
-        //     const selectedYear = inject(ActivatedRouteSnapshot).paramMap.get(
-        //       ROUTE.PARAMS.CONTENT_YEAR
-        //     )!;
-        //     return inject(PublishedContentStore).getPublishedContentsByAYear(
-        //       Number(selectedYear)
-        //     );
-        //   },
-        // },
+        resolve: {
+          data: (route: ActivatedRouteSnapshot) => {
+            const selectedYear = route.paramMap.get('contentYear')!;
+            return inject(PublishedContentStore).getPublishedContentsByAYear(
+              Number(selectedYear)
+            );
+          },
+        },
         loadComponent: () =>
           import('./content-list/content-list.component').then(
             (mod) => mod.ContentListComponent

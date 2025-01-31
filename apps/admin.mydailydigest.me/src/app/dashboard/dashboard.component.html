@@ -3,7 +3,7 @@
     <!-- Header -->
     <ng-container *ngTemplateOutlet="header"></ng-container>
 
-    <div class="flex">
+    <div class="flex h-dvh">
         <!-- Drawer/ Sidenav -->
         @if ((dashboardService.breakpoint$ | async) === 'desktopLarge') {
         <ng-container *ngTemplateOutlet="desktopSideNav"></ng-container>
@@ -12,12 +12,12 @@
         }
 
         <main tuiNavigationMain [ngClass]="{'nav-expand': expandSideNav(), 'nav-collapse': !expandSideNav()}"
-            class="!block !border-none">
+            class="!block !border-none no-scrollbar">
             <!-- Top Navigation -->
             <ng-container *ngTemplateOutlet="topNavigation"></ng-container>
 
             <!-- Main Routes -->
-            <div class="route">
+            <div class="route no-scrollbar h-full">
                 <router-outlet></router-outlet>
             </div>
         </main>
@@ -121,7 +121,7 @@
                 {{t(KEY.PUBLISHED)}}
             </a>
 
-            <a [routerLink]="[ROUTE.NEW, ENGLISH_LANG_CODE]" routerLinkActive="link-active" class="nav-item" matRipple>
+            <a [routerLink]="[ROUTE.NEW, DEFAULT_LANG_CODE]" routerLinkActive="link-active" class="nav-item" matRipple>
                 <mat-icon fontIcon="add-note-outline"></mat-icon>
                 {{t(KEY.ADD_NEW)}}
             </a>
@@ -145,7 +145,7 @@
                     <ng-template tuiExpandContent>
                         <div class="ps-10">
                             <a *ngFor="let language of nonEnglishSupportedLanguages()"
-                                [routerLink]="[ROUTE.TRANSLATE, language.code]" routerLinkActive="link-active"
+                                [routerLink]="[ROUTE.TRANSLATE, language.countryCode]" routerLinkActive="link-active"
                                 class="nav-item !items-center !p-3" matRipple>
                                 {{language.label}}
                             </a>
@@ -191,7 +191,7 @@
             {{t(KEY.PUBLISHED)}}
         </a>
 
-        <a [routerLink]="[ROUTE.NEW, ENGLISH_LANG_CODE]" tuiAsideItem matRipple>
+        <a [routerLink]="[ROUTE.NEW, DEFAULT_LANG_CODE]" tuiAsideItem matRipple>
             <mat-icon fontIcon="add-note-outline"></mat-icon>
             {{t(KEY.ADD_NEW)}}
         </a>
@@ -203,14 +203,14 @@
         </a>
 
         <tui-aside-group *ngIf="nonEnglishSupportedLanguages().length > 0 && contentStore.approvedContent.length > 0">
-            <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].code]" automation-id="setting"
+            <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].countryCode]" automation-id="setting"
                 tuiAsideItem tuiChevron matRipple type="button">
                 <mat-icon fontIcon="translate-outline"></mat-icon>
                 {{t(KEY.TRANSLATE)}}
                 <ng-template>
 
                     <a *ngFor="let language of nonEnglishSupportedLanguages()"
-                        [routerLink]="[ROUTE.TRANSLATE, language.code]" tuiAsideItem matRipple type="button"
+                        [routerLink]="[ROUTE.TRANSLATE, language.countryCode]" tuiAsideItem matRipple type="button"
                         class="content">
                         {{language.label}}
                     </a>

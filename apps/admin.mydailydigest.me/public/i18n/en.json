@@ -50,7 +50,7 @@
   "no_published_content_msg": "You have not published any content, add new content, published the content, and they will appear here",
 
   "no_draft_content_msg": "You have no saved content ready for publishing, add a new content and it will appear here",
-  "topic": "topic",
+  "topic": "Topic",
   "verses": "Reference verses",
   "optional": "optional",
   "tags": "Tags",
@@ -87,6 +87,11 @@
 
   "years": "Years",
   "year": "Year",
+  "reference": "Reference",
+  "date": "Date",
+  "audioUrl": "Audio",
+  "imageUrl": "Image",
+  "sn": "SN",
 
   "no_content_awaiting_approval_msg": "There are no content submitted for approval, have editors submit a draft content for approval and they will appear here.",
 

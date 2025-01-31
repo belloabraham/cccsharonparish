@@ -49,14 +49,17 @@ import {
   TuiExpand,
 } from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
-import { Language, ROUTE } from '@cccsharonparish/mydailydigest';
+import {
+  DEFAULT_LANG_CODE,
+  Language,
+  ROUTE,
+} from '@cccsharonparish/mydailydigest';
 import { TuiItem } from '@taiga-ui/cdk';
 import { MatMenuModule } from '@angular/material/menu';
 import { ThemeType } from '@cccsharonparish/angular';
 import { distinctUntilChanged, filter } from 'rxjs';
 import { DashboardStore } from './dashboard.store';
 import { ContentStore } from './new-content/content.store';
-
 
 @Component({
   selector: 'app-dashboard',
@@ -108,7 +111,6 @@ export class DashboardComponent extends CommonComponent {
   readonly userDataStore = inject(UserDataStore);
   readonly contentStore = inject(ContentStore);
 
-  readonly ENGLISH_LANG_CODE = 'en';
   nonEnglishSupportedLanguages!: Signal<Language[]>;
 
   appName = environment.appName;
@@ -116,6 +118,7 @@ export class DashboardComponent extends CommonComponent {
   ROUTE = ROUTE;
   themes: any[] = [this.KEY.LIGHT, this.KEY.DARK, this.KEY.DEVICE];
   private activatedRoute = inject(ActivatedRoute);
+  DEFAULT_LANG_CODE = DEFAULT_LANG_CODE;
 
   constructor() {
     super();
@@ -126,7 +129,7 @@ export class DashboardComponent extends CommonComponent {
       const supportedLanguages =
         this.dashboardStore.supportedLanguages().languages;
       const nonEnglishLanguages = supportedLanguages.filter(
-        (lang) => lang.code !== this.ENGLISH_LANG_CODE
+        (lang) => lang.code !== DEFAULT_LANG_CODE
       );
       return nonEnglishLanguages;
     });

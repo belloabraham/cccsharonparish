@@ -29,7 +29,10 @@ export class PublishedContentService {
 
   getPublishedContentsByAYear(year: number) {
     if (this.USE_MOCK_DATA) {
-      return of(PUBLISHED_CONTENTS_MOCK);
+      const result = PUBLISHED_CONTENTS_MOCK.filter(
+        (content) => content.year === year
+      );
+      return of(result);
     }
     return this.remoteData.getListOfDocumentDataWithQueryAsync<ISpiritualDailyDigest>(
       COLLECTION.PUBLISHED,

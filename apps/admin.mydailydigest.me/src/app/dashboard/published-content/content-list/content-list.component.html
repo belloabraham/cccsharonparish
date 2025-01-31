@@ -1,4 +1,102 @@
-<div *transloco="let t" class="draft">
+<div *transloco="let t" class="draft no-scrollbar h-full">
     <h5 class="page-title">{{t(KEY.PUBLISHED)}} ({{contentYear()}})</h5>
+
+    @let languages = dashboardStore.supportedLanguages().languages;
+
+    <div class="flex gap-4">
+        <div class="flex-1 ps-1">
+            <tui-textfield tuiTextfieldSize="m" iconStart="@tui.search">
+                <input [(ngModel)]="search" [placeholder]="t(KEY.SEARCH_PLACEHOLDER)" tuiTextfield />
+            </tui-textfield>
+        </div>
+
+
+        <tui-badged-content>
+
+            <img alt="" size="s" tuiBadge tuiSlot="bottom" [src]="languageFC.value ?? ''|| switcher.language | tuiFlag" />
+
+            <button appearance="outline-grayscale" size="m" tuiButtonSelect tuiIconButton type="button"
+                [formControl]="languageFC" [iconStart]="'@tui.languages'" style="border-radius: 1rem;">
+                Language
+                <tui-data-list *tuiTextfieldDropdown>
+                    <tui-opt-group>
+                        <button class="flex gap-2" *ngFor="let lang of languages" tuiOption type="button"
+                            [value]="lang.countryCode" (click)="setLang(lang.countryCode)">
+                            <img alt="" class="t-flag" [src]="lang.countryCode | tuiFlag" />
+                            {{ lang.label }}
+                        </button>
+                    </tui-opt-group>
+                </tui-data-list>
+            </button>
+        </tui-badged-content>
+
+    </div>
+
+    <cdk-virtual-scroll-viewport style="height: 100%;" #viewport appendOnly tuiScrollable
+        class="viewport tui-zero-scrollbar mt-4" [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
+
+        <table *ngIf="data$ | async as data" tuiTable class="table" [columns]="columns"
+            [direction]="(direction$ | async) || 1" [tuiSortBy]="sorter$ | async"
+            (directionChange)="direction$.next($event)" (tuiSortByChange)="sorter$.next($event!)">
+            <thead>
+                <tr tuiThGroup>
+
+                    <th *tuiHead="columns[0]" tuiSortable tuiTh [sticky]="true"
+                        [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                        {{ t(columns[0])}}
+                    </th>
+
+                    <th *tuiHead="columns[1]" tuiSortable tuiTh [sticky]="true"
+                        [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                        {{t(columns[1])}}
+                    </th>
+
+                    <th *tuiHead="columns[2]" tuiSortable="false" tuiTh [sticky]="true"
+                        [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                        {{t(columns[2])}}
+                    </th>
+
+                    <th *tuiHead="columns[3]" tuiSortable tuiTh [sticky]="true"
+                        [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                        {{t(columns[3])}}
+                    </th>
+
+                    <th *tuiHead="columns[4]" tuiSortable="false" tuiTh [sticky]="true"
+                        [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                        {{t(columns[4])}}
+                    </th>
+
+                    <th *tuiHead="columns[5]" tuiSortable="false" tuiTh [sticky]="true"
+                        [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                        {{t(columns[5])}}
+                    </th>
+
+                    <th *tuiHead="columns[6]" tuiSortable="false" tuiTh [sticky]="true"
+                        [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                        {{t(columns[6])}}
+                    </th>
+                </tr>
+            </thead>
+            <tbody *tuiLet="data | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
+                <tr *ngFor="let item of sortedData" tuiTr>
+                    <ng-container *ngFor="let key of columns">
+                        <td *tuiCell="key" tuiTd [class.match]="isMatch(item[key])">
+                            {{ item[key]}}
+                        </td>
+                    </ng-container>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td [colSpan]="columns.length">
+                        <tui-table-pagination class="mt-2" [size]="TABLE_PAGINATED_SIZE" [page]="(page$ | async) || 0"
+                            [total]="this.publishedContentStore.publishedContentsByAYear().length"
+                            (paginationChange)="onPagination($event)" />
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </cdk-virtual-scroll-viewport>
 
 </div>
