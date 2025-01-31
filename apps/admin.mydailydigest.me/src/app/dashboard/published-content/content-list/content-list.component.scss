@@ -3,13 +3,11 @@
   height: auto;
 }
 
-.filters {
-  display: flex;
-  gap: 1rem;
-  white-space: nowrap;
-  align-items: center;
+.header-image {
+  width: 100%;
+  height: auto;
 }
 
 .match {
-  background: var(--tui-service-selection-background);
+  background: var(--mat-sys-inverse-primary);
 }

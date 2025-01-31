@@ -2,6 +2,7 @@ import { Timestamp } from '@angular/fire/firestore';
 
 export const DEFAULT_LANG_CODE = 'en';
 export interface ISpiritualDailyDigestTableUIState {
+  sn: any;
   date: string;
   topic: string;
   message: string;

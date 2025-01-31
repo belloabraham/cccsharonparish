@@ -49,6 +49,7 @@ import {
   CdkFixedSizeVirtualScroll,
   CdkVirtualScrollViewport,
 } from '@angular/cdk/scrolling';
+import { NgAudioPlayerComponent } from '@cccsharonparish/angular';
 
 type Key = keyof ISpiritualDailyDigestTableUIState;
 
@@ -83,6 +84,7 @@ function sortBy(
     TuiLet,
     TuiTable,
     TuiTablePagination,
+    NgAudioPlayerComponent,
   ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss',
@@ -111,6 +113,7 @@ export class ContentListComponent {
   protected readonly direction$ = new BehaviorSubject<-1 | 1>(-1);
 
   sddStateKeys: ISpiritualDailyDigestTableUIState = {
+    sn: 0,
     date: '',
     topic: '',
     message: '',
@@ -121,7 +124,7 @@ export class ContentListComponent {
   protected columns = Object.keys(
     this.sddStateKeys
   ) as (keyof ISpiritualDailyDigestTableUIState)[];
-  protected readonly sorter$ = new BehaviorSubject<any>('');
+  protected readonly sorter$ = new BehaviorSubject<any>(null);
 
   protected readonly request$ = combineLatest([
     this.sorter$,
@@ -194,6 +197,7 @@ export class ContentListComponent {
           contentState.day
         ).toDateString();
         const tableState: ISpiritualDailyDigestTableUIState = {
+          sn: index + start + 1,
           topic: content.text.topic,
           message: content.text.message,
           reference: content.text.bibleVerse.reference,

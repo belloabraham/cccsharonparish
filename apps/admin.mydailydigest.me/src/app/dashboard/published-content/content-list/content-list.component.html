@@ -42,27 +42,27 @@
             <thead>
                 <tr tuiThGroup>
 
-                    <th *tuiHead="columns[0]" [tuiSortable]="false" tuiTh [sticky]="true"
+                    <th *tuiHead="columns[0]" tuiSortable tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                         {{ t(columns[0])}}
                     </th>
 
-                    <th *tuiHead="columns[1]" tuiSortable tuiTh [sticky]="true"
+                    <th *tuiHead="columns[1]" [tuiSortable]="false" tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                         {{t(columns[1])}}
                     </th>
 
-                    <th *tuiHead="columns[2]" tuiSortable="false" tuiTh [sticky]="true"
+                    <th *tuiHead="columns[2]" tuiSortable tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                         {{t(columns[2])}}
                     </th>
 
-                    <th *tuiHead="columns[3]" tuiSortable tuiTh [sticky]="true"
+                    <th *tuiHead="columns[3]" [tuiSortable]="false" tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                         {{t(columns[3])}}
                     </th>
 
-                    <th *tuiHead="columns[4]" tuiSortable="false" tuiTh [sticky]="true"
+                    <th *tuiHead="columns[4]" tuiSortable tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                         {{t(columns[4])}}
                     </th>
@@ -71,14 +71,34 @@
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                         {{t(columns[5])}}
                     </th>
+
+                    <th *tuiHead="columns[6]" tuiSortable="false" tuiTh [sticky]="true"
+                        [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                        {{t(columns[6])}}
+                    </th>
                 </tr>
             </thead>
             <tbody *tuiLet="data | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
                 <tr *ngFor="let item of sortedData" tuiTr>
-                    <ng-container *ngFor="let key of columns">
+                    <ng-container *ngFor="let key of columns; let i = index">
+                        @let isImage = i===5;
+                        @let isAudio = i===6;
+                        @if (isImage) {
+                        <td *tuiCell="key" tuiTd>
+                            <a [href]="item[key]" target="_blank" rel="noopener noreferrer">
+                                <img class="header-image" [src]="item[key]" alt="Header Image">
+                            </a>
+                        </td>
+                        }@else if (isAudio) {
+                        <td *tuiCell="key" tuiTd>
+                            <ng-audio-player *ngIf="item[key]" [src]="item[key]" />
+                        </td>
+                        }@else {
                         <td *tuiCell="key" tuiTd [class.match]="isMatch(item[key])">
                             {{ item[key]}}
                         </td>
+                        }
+
                     </ng-container>
                 </tr>
             </tbody>
