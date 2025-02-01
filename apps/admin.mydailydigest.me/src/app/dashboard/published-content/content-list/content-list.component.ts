@@ -75,7 +75,7 @@ import {
     TuiTable,
     TuiTablePagination,
     NgAudioPlayerComponent,
-    DatePipe
+    DatePipe,
   ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss',
@@ -126,7 +126,7 @@ export class ContentListComponent {
     this.tablePageSize$.next(size);
   }
 
-  isMatch(value: unknown): boolean {
+  isColumnMatch(value: any): boolean {
     return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);
   }
 

@@ -33,8 +33,8 @@
 
     </div>
 
-    <cdk-virtual-scroll-viewport style="height: 100%;" #viewport appendOnly tuiScrollable
-        class="viewport tui-zero-scrollbar mt-4" [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
+    <cdk-virtual-scroll-viewport #viewport appendOnly tuiScrollable class="viewport tui-zero-scrollbar mt-4 h-full"
+        [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
 
         <table *ngIf="data$ | async as data" tuiTable class="table" [columns]="tableColumns"
             [direction]="(orderDirection$ | async) || 1" [tuiSortBy]="sortColumnBy$ | async"
@@ -86,7 +86,9 @@
                         @let isDate = i===1;
 
                         @if (isDate) {
-                        <td *tuiCell="key" tuiTd [class.match]="isMatch(item[key])"> {{ item['date'] | date:'fullDate' }} </td>
+                        <td *tuiCell="key" tuiTd [class.match]="isColumnMatch([key])"> {{ item['date'] |
+                            date:'fullDate'
+                            }} </td>
                         } @else if (isImage) {
                         <td *tuiCell="key" tuiTd>
                             <a [href]="item[key]" target="_blank" rel="noopener noreferrer">
@@ -98,7 +100,8 @@
                             <ng-audio-player *ngIf="item[key]" src="{{item[key]}}" />
                         </td>
                         }@else{
-                        <td *tuiCell="key" tuiTd [class.match]="isMatch(item[key])"> {{ item[key]}} </td>
+                        <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{ item[key]}}
+                        </td>
                         }
 
                     </ng-container>
