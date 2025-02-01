@@ -36,9 +36,9 @@
     <cdk-virtual-scroll-viewport #viewport appendOnly tuiScrollable class="viewport tui-zero-scrollbar mt-4 h-full"
         [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
 
-        <table *ngIf="data" tuiTable class="table" [columns]="tableColumns"
-            [direction]="orderDirection() || 1" [tuiSortBy]="sortColumnBy()"
-            (directionChange)="orderDirection.set($event)" (tuiSortByChange)="sortColumnBy.set($event!)">
+        <table *ngIf="data" tuiTable class="table" [columns]="tableColumns" [direction]="orderDirection() || 1"
+            [tuiSortBy]="sortColumnBy()" (directionChange)="orderDirection.set($event)"
+            (tuiSortByChange)="sortColumnBy.set($event!)">
             <thead>
                 <tr tuiThGroup>
 
@@ -78,7 +78,8 @@
                     </th>
                 </tr>
             </thead>
-            <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody [heading]="'January'" [data]="sortedData">
+            <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody [heading]="t(KEY.MONTH_+tablePage())"
+                [data]="sortedData">
                 <tr *ngFor="let item of sortedData" tuiTr>
                     <ng-container *ngFor="let key of tableColumns; let i = index">
                         @let isImage = i===5;
