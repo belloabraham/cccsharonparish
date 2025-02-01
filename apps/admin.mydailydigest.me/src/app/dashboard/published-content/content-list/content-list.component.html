@@ -36,9 +36,9 @@
     <cdk-virtual-scroll-viewport #viewport appendOnly tuiScrollable class="viewport tui-zero-scrollbar mt-4 h-full"
         [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
 
-        <table *ngIf="data$ | async as data" tuiTable class="table" [columns]="tableColumns"
-            [direction]="(orderDirection$ | async) || 1" [tuiSortBy]="sortColumnBy$ | async"
-            (directionChange)="orderDirection$.next($event)" (tuiSortByChange)="sortColumnBy$.next($event!)">
+        <table *ngIf="data" tuiTable class="table" [columns]="tableColumns"
+            [direction]="orderDirection() || 1" [tuiSortBy]="sortColumnBy()"
+            (directionChange)="orderDirection.set($event)" (tuiSortByChange)="sortColumnBy.set($event!)">
             <thead>
                 <tr tuiThGroup>
 
@@ -78,7 +78,7 @@
                     </th>
                 </tr>
             </thead>
-            <tbody *tuiLet="data | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
+            <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody [heading]="'January'" [data]="sortedData">
                 <tr *ngFor="let item of sortedData" tuiTr>
                     <ng-container *ngFor="let key of tableColumns; let i = index">
                         @let isImage = i===5;
@@ -110,7 +110,7 @@
             <tfoot>
                 <tr>
                     <td [colSpan]="tableColumns.length">
-                        <tui-table-pagination class="mt-2" [size]="TABLE_PAGE_SIZE" [page]="(tablePage$ | async) || 0"
+                        <tui-table-pagination class="mt-2" [size]="TABLE_PAGE_SIZE" [page]="tablePage() || 0"
                             [total]="this.publishedContentStore.publishedContentsByAYear().length"
                             (paginationChange)="onPagination($event)" />
                     </td>

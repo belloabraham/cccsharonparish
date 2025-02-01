@@ -1,4 +1,12 @@
-import { Component, HostBinding, inject, input } from '@angular/core';
+import {
+  Component,
+  computed,
+  HostBinding,
+  inject,
+  input,
+  Signal,
+  signal,
+} from '@angular/core';
 import { SharedModule } from '../../../shared';
 import { PUBLISHED_CONTENT_LIST_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 
@@ -9,7 +17,7 @@ import { TuiBadge } from '@taiga-ui/kit/components/badge';
 import { TuiBadgedContent } from '@taiga-ui/kit/components/badged-content';
 import { TuiButtonSelect } from '@taiga-ui/kit/directives/button-select';
 
-import { AsyncPipe, DatePipe, NgForOf, NgIf } from '@angular/common';
+import { DatePipe, NgForOf, NgIf } from '@angular/common';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import type { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { TuiTable, TuiTablePagination } from '@taiga-ui/addon-table';
@@ -19,17 +27,6 @@ import {
   TuiTextfield,
   TuiWithTextfieldDropdown,
 } from '@taiga-ui/core';
-import type { Observable } from 'rxjs';
-import {
-  BehaviorSubject,
-  combineLatest,
-  filter,
-  map,
-  of,
-  share,
-  startWith,
-  switchMap,
-} from 'rxjs';
 import { DashboardStore } from '../../dashboard.store';
 import { PublishedContentStore } from '../published-content-store';
 import {
@@ -65,7 +62,6 @@ import {
     TuiDataList,
     TuiFlagPipe,
     TuiTextfield,
-    AsyncPipe,
     FormsModule,
     NgForOf,
     NgIf,
@@ -97,38 +93,39 @@ export class ContentListComponent {
     this.dashboardStore.supportedLanguages().languages[0].countryCode
   );
 
-  private readonly tablePageSize$ = new BehaviorSubject(TABLE_PAGE_SIZE);
-  readonly tablePage$ = new BehaviorSubject(0);
-  private readonly languageCode$ = new BehaviorSubject(DEFAULT_LANG_CODE);
-  readonly orderDirection$ = new BehaviorSubject<-1 | 1>(-1);
-  readonly sortColumnBy$ = new BehaviorSubject<any>(null);
   tableColumns = PUBLISHED_TABLE_COLUMNS;
   TABLE_PAGE_SIZE = TABLE_PAGE_SIZE;
-
-  readonly data$ = combineLatest([
-    this.sortColumnBy$,
-    this.orderDirection$,
-    this.languageCode$,
-    this.tablePage$,
-    this.tablePageSize$,
-  ]).pipe(
-    switchMap((query) => this.getData(...query)),
-    share(),
-    filter(tuiIsPresent),
-    map((data) => data.filter(tuiIsPresent)),
-    startWith([])
-  );
-
   searchQuery = '';
 
+  readonly sortColumnBy = signal<any | null>(null);
+  private readonly tablePageSize = signal(TABLE_PAGE_SIZE);
+  readonly tablePage = signal(0);
+  private readonly languageCode = signal(DEFAULT_LANG_CODE);
+  readonly orderDirection = signal<-1 | 1>(-1);
+
+  data?: Signal<ISpiritualDailyDigestTableUIState[]> = signal([]);
+
+  constructor() {
+    this.data = computed(() =>
+      this.getData(
+        this.sortColumnBy(),
+        this.orderDirection(),
+        this.languageCode(),
+        this.tablePage(),
+        this.tablePageSize()
+      ).filter(tuiIsPresent)
+    );
+  }
+
   onPagination({ page, size }: TuiTablePaginationEvent): void {
-    this.tablePage$.next(page);
-    this.tablePageSize$.next(size);
+    this.tablePage.set(page);
+    this.tablePageSize.set(size);
   }
 
   isColumnMatch(value: any): boolean {
     return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);
   }
+
 
   private getData(
     key: ColumnKeys,
@@ -136,17 +133,17 @@ export class ContentListComponent {
     languageCode: string,
     page: number,
     size: number
-  ): Observable<ReadonlyArray<ISpiritualDailyDigestTableUIState | null>> {
+  ): ReadonlyArray<ISpiritualDailyDigestTableUIState | null> {
     const start = page * size;
     const end = start + size;
     const result = [...this.getTableUIState(languageCode, start, end)].sort(
       ascDescSortCompare(key, direction)
     );
-    return of(result);
+    return result;
   }
 
   public setLang(lang: Language): void {
-    this.languageCode$.next(lang.code);
+    this.languageCode.set(lang.code);
     this.languageFC.setValue(lang.countryCode);
     this.languageSwitcher.setLanguage(lang.countryCode);
   }
