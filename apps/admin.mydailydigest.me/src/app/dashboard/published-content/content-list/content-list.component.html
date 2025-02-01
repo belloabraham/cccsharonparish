@@ -16,8 +16,8 @@
             <img alt="" size="s" tuiBadge tuiSlot="bottom"
                 [src]="languageFC.value ?? ''|| languageSwitcher.language | tuiFlag" />
 
-            <button appearance="outline-grayscale" size="m" tuiButtonSelect tuiIconButton type="button"
-                [formControl]="languageFC" [iconStart]="'@tui.languages'" style="border-radius: 1rem;">
+            <button appearance="outline-grayscale" matRipple size="m" tuiButtonSelect tuiIconButton type="button"
+                [formControl]="languageFC" [iconStart]="'@tui.languages'" class="!rounded-xl">
                 Language
                 <tui-data-list *tuiTextfieldDropdown>
                     <tui-opt-group>
@@ -57,7 +57,7 @@
                         {{t(tableColumns[2])}}
                     </th>
 
-                    <th *tuiHead="tableColumns[3]" [tuiSortable]="false" tuiTh [sticky]="true"
+                    <th *tuiHead="tableColumns[3]" [tuiSortable]="false" style="min-width: 300px;" tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                         {{t(tableColumns[3])}}
                     </th>
@@ -82,27 +82,36 @@
                 [data]="sortedData">
                 <tr *ngFor="let item of sortedData" tuiTr>
                     <ng-container *ngFor="let key of tableColumns; let i = index">
-                        @let isImage = i===5;
-                        @let isAudio = i===6;
-                        @let isDate = i===1;
-
-                        @if (isDate) {
+                        @switch (i) {
+                        @case (1) {
+                        <!-- isDate -->
                         <td *tuiCell="key" tuiTd> {{ item['date'] |
                             date:'fullDate'
                             }} </td>
-                        } @else if (isImage) {
+                        }
+                        @case (3) {
+                        <!-- isMessage -->
+                        <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{ item[key]}}
+                        </td>
+                        }
+                        @case (5) {
+                        <!-- isImage -->
                         <td *tuiCell="key" tuiTd>
                             <a [href]="item[key]" target="_blank" rel="noopener noreferrer">
                                 <img class="header-image" [src]="item[key]" alt="Header Image">
                             </a>
                         </td>
-                        }@else if (isAudio) {
+                        }
+                        @case (6) {
+                        <!-- isAudio -->
                         <td *tuiCell="key" tuiTd>
                             <ng-audio-player *ngIf="item[key]" src="{{item[key]}}" />
                         </td>
-                        }@else{
+                        }
+                        @default {
                         <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{ item[key]}}
                         </td>
+                        }
                         }
 
                     </ng-container>

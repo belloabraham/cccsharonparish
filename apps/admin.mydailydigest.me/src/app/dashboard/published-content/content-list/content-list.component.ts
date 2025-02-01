@@ -46,6 +46,7 @@ import {
   ColumnKeys,
   PUBLISHED_TABLE_COLUMNS,
 } from '../../shared';
+import { MatRipple, MatRippleModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-content-list',
@@ -72,6 +73,7 @@ import {
     TuiTablePagination,
     NgAudioPlayerComponent,
     DatePipe,
+    MatRippleModule
   ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss',
