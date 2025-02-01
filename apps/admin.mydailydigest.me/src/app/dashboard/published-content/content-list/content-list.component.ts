@@ -11,17 +11,9 @@ import { TuiButtonSelect } from '@taiga-ui/kit/directives/button-select';
 
 import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import type {
-  TuiComparator,
-  TuiTablePaginationEvent,
-} from '@taiga-ui/addon-table';
+import type { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { TuiTable, TuiTablePagination } from '@taiga-ui/addon-table';
-import {
-  TUI_DEFAULT_MATCHER,
-  tuiDefaultSort,
-  tuiIsPresent,
-  TuiLet,
-} from '@taiga-ui/cdk';
+import { TUI_DEFAULT_MATCHER, tuiIsPresent, TuiLet } from '@taiga-ui/cdk';
 import {
   TuiButton,
   TuiTextfield,
@@ -41,6 +33,7 @@ import {
 import { DashboardStore } from '../../dashboard.store';
 import { PublishedContentStore } from '../published-content-store';
 import {
+  contentsToTableUIState,
   DEFAULT_LANG_CODE,
   ISpiritualDailyDigestTableUIState,
   Language,
@@ -50,15 +43,12 @@ import {
   CdkVirtualScrollViewport,
 } from '@angular/cdk/scrolling';
 import { NgAudioPlayerComponent } from '@cccsharonparish/angular';
-
-type Key = keyof ISpiritualDailyDigestTableUIState;
-
-function sortBy(
-  key: Key,
-  direction: -1 | 1
-): TuiComparator<ISpiritualDailyDigestTableUIState> {
-  return (a, b) => direction * tuiDefaultSort(a[key], b[key]);
-}
+import {
+  ascDescSortCompare,
+  ColumnKeys,
+  PUBLISHED_TABLE_COLUMNS,
+  TABLE_PAGE_SIZE,
+} from '../../shared';
 
 @Component({
   selector: 'app-content-list',
@@ -100,64 +90,47 @@ export class ContentListComponent {
   KEY = PUBLISHED_CONTENT_LIST_STRING_RESOURCE_KEY;
   dashboardStore = inject(DashboardStore);
   publishedContentStore = inject(PublishedContentStore);
-  readonly TABLE_PAGE_SIZE = 31;
 
-  protected readonly switcher = inject(TuiLanguageSwitcherService);
-  protected readonly languageFC = new FormControl(
+  readonly languageSwitcher = inject(TuiLanguageSwitcherService);
+  readonly languageFC = new FormControl(
     this.dashboardStore.supportedLanguages().languages[0].countryCode
   );
 
-  private readonly size$ = new BehaviorSubject(this.TABLE_PAGE_SIZE);
-  protected readonly page$ = new BehaviorSubject(0);
-  private readonly language$ = new BehaviorSubject(DEFAULT_LANG_CODE);
-  protected readonly direction$ = new BehaviorSubject<-1 | 1>(-1);
+  private readonly tablePageSize$ = new BehaviorSubject(TABLE_PAGE_SIZE);
+  readonly tablePage$ = new BehaviorSubject(0);
+  private readonly languageCode$ = new BehaviorSubject(DEFAULT_LANG_CODE);
+  readonly orderDirection$ = new BehaviorSubject<-1 | 1>(-1);
+  readonly sortColumnBy$ = new BehaviorSubject<any>(null);
+  tableColumns = PUBLISHED_TABLE_COLUMNS;
+  TABLE_PAGE_SIZE = TABLE_PAGE_SIZE;
 
-  sddStateKeys: ISpiritualDailyDigestTableUIState = {
-    sn: 0,
-    date: '',
-    topic: '',
-    message: '',
-    reference: '',
-    imageUrl: '',
-    audioUrl: '',
-  };
-  protected columns = Object.keys(
-    this.sddStateKeys
-  ) as (keyof ISpiritualDailyDigestTableUIState)[];
-  protected readonly sorter$ = new BehaviorSubject<any>(null);
-
-  protected readonly request$ = combineLatest([
-    this.sorter$,
-    this.direction$,
-    this.language$,
-    this.page$,
-    this.size$,
+  readonly data$ = combineLatest([
+    this.sortColumnBy$,
+    this.orderDirection$,
+    this.languageCode$,
+    this.tablePage$,
+    this.tablePageSize$,
   ]).pipe(
     switchMap((query) => this.getData(...query)),
-    share()
-  );
-
-  protected searchQuery = '';
-
-  protected readonly data$: Observable<
-    readonly ISpiritualDailyDigestTableUIState[]
-  > = this.request$.pipe(
+    share(),
     filter(tuiIsPresent),
     map((data) => data.filter(tuiIsPresent)),
     startWith([])
   );
 
-  protected onPagination({ page, size }: TuiTablePaginationEvent): void {
-    this.page$.next(page);
-    this.size$.next(size);
+  searchQuery = '';
+
+  onPagination({ page, size }: TuiTablePaginationEvent): void {
+    this.tablePage$.next(page);
+    this.tablePageSize$.next(size);
   }
 
-  protected isMatch(value: unknown): boolean {
+  isMatch(value: unknown): boolean {
     return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);
   }
 
   private getData(
-    key: Key,
+    key: ColumnKeys,
     direction: -1 | 1,
     languageCode: string,
     page: number,
@@ -166,47 +139,24 @@ export class ContentListComponent {
     const start = page * size;
     const end = start + size;
     const result = [...this.getTableUIState(languageCode, start, end)].sort(
-      sortBy(key, direction)
+      ascDescSortCompare(key, direction)
     );
     return of(result);
   }
 
   public setLang(lang: Language): void {
-    this.language$.next(lang.code);
+    this.languageCode$.next(lang.code);
     this.languageFC.setValue(lang.countryCode);
-    this.switcher.setLanguage(lang.countryCode);
+    this.languageSwitcher.setLanguage(lang.countryCode);
   }
 
   getTableUIState(languageCode: string, start: number, end: number) {
-    const publishedContent =
-      this.publishedContentStore.publishedContentsByAYear();
-    return publishedContent
+    const publishedContent = this.publishedContentStore
+      .publishedContentsByAYear()
       .filter((data, index) => {
         return index >= start && index < end;
-      })
-      .map((contentState, index) => {
-        const content = contentState.content.find(
-          (c) => c.language.code === languageCode
-        )!;
-        if (!content) {
-          return null;
-        }
-        const date = new Date(
-          contentState.year,
-          contentState.month - 1,
-          contentState.day
-        ).toDateString();
-        const tableState: ISpiritualDailyDigestTableUIState = {
-          sn: index + start + 1,
-          topic: content.text.topic,
-          message: content.text.message,
-          reference: content.text.bibleVerse.reference,
-          date: date,
-          imageUrl: contentState.imageUrl,
-          audioUrl: content.audioUrl,
-        };
-        return tableState;
-      })
-      .filter((item) => item != null);
+      });
+    const tableUIState = contentsToTableUIState(publishedContent, languageCode);
+    return tableUIState;
   }
 }

@@ -14,7 +14,7 @@
         <tui-badged-content>
 
             <img alt="" size="s" tuiBadge tuiSlot="bottom"
-                [src]="languageFC.value ?? ''|| switcher.language | tuiFlag" />
+                [src]="languageFC.value ?? ''|| languageSwitcher.language | tuiFlag" />
 
             <button appearance="outline-grayscale" size="m" tuiButtonSelect tuiIconButton type="button"
                 [formControl]="languageFC" [iconStart]="'@tui.languages'" style="border-radius: 1rem;">
@@ -36,51 +36,51 @@
     <cdk-virtual-scroll-viewport style="height: 100%;" #viewport appendOnly tuiScrollable
         class="viewport tui-zero-scrollbar mt-4" [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
 
-        <table *ngIf="data$ | async as data" tuiTable class="table" [columns]="columns"
-            [direction]="(direction$ | async) || 1" [tuiSortBy]="sorter$ | async"
-            (directionChange)="direction$.next($event)" (tuiSortByChange)="sorter$.next($event!)">
+        <table *ngIf="data$ | async as data" tuiTable class="table" [columns]="tableColumns"
+            [direction]="(orderDirection$ | async) || 1" [tuiSortBy]="sortColumnBy$ | async"
+            (directionChange)="orderDirection$.next($event)" (tuiSortByChange)="sortColumnBy$.next($event!)">
             <thead>
                 <tr tuiThGroup>
 
-                    <th *tuiHead="columns[0]" tuiSortable tuiTh [sticky]="true"
+                    <th *tuiHead="tableColumns[0]" tuiSortable tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                        {{ t(columns[0])}}
+                        {{ t(tableColumns[0])}}
                     </th>
 
-                    <th *tuiHead="columns[1]" [tuiSortable]="false" tuiTh [sticky]="true"
+                    <th *tuiHead="tableColumns[1]" [tuiSortable]="false" tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                        {{t(columns[1])}}
+                        {{t(tableColumns[1])}}
                     </th>
 
-                    <th *tuiHead="columns[2]" tuiSortable tuiTh [sticky]="true"
+                    <th *tuiHead="tableColumns[2]" tuiSortable tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                        {{t(columns[2])}}
+                        {{t(tableColumns[2])}}
                     </th>
 
-                    <th *tuiHead="columns[3]" [tuiSortable]="false" tuiTh [sticky]="true"
+                    <th *tuiHead="tableColumns[3]" [tuiSortable]="false" tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                        {{t(columns[3])}}
+                        {{t(tableColumns[3])}}
                     </th>
 
-                    <th *tuiHead="columns[4]" tuiSortable tuiTh [sticky]="true"
+                    <th *tuiHead="tableColumns[4]" tuiSortable tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                        {{t(columns[4])}}
+                        {{t(tableColumns[4])}}
                     </th>
 
-                    <th *tuiHead="columns[5]" tuiSortable="false" tuiTh [sticky]="true"
+                    <th *tuiHead="tableColumns[5]" tuiSortable="false" tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                        {{t(columns[5])}}
+                        {{t(tableColumns[5])}}
                     </th>
 
-                    <th *tuiHead="columns[6]" tuiSortable="false" tuiTh [sticky]="true"
+                    <th *tuiHead="tableColumns[6]" tuiSortable="false" tuiTh [sticky]="true"
                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                        {{t(columns[6])}}
+                        {{t(tableColumns[6])}}
                     </th>
                 </tr>
             </thead>
             <tbody *tuiLet="data | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
                 <tr *ngFor="let item of sortedData" tuiTr>
-                    <ng-container *ngFor="let key of columns; let i = index">
+                    <ng-container *ngFor="let key of tableColumns; let i = index">
                         @let isImage = i===5;
                         @let isAudio = i===6;
                         @if (isImage) {
@@ -91,12 +91,10 @@
                         </td>
                         }@else if (isAudio) {
                         <td *tuiCell="key" tuiTd>
-                            <ng-audio-player *ngIf="item[key]" [src]="item[key]" />
+                            <ng-audio-player *ngIf="item[key]" src="{{item[key]}}" />
                         </td>
-                        }@else {
-                        <td *tuiCell="key" tuiTd [class.match]="isMatch(item[key])">
-                            {{ item[key]}}
-                        </td>
+                        }@else{
+                        <td *tuiCell="key" tuiTd [class.match]="isMatch(item[key])"> {{ item[key]}} </td>
                         }
 
                     </ng-container>
@@ -104,8 +102,8 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td [colSpan]="columns.length">
-                        <tui-table-pagination class="mt-2" [size]="TABLE_PAGE_SIZE" [page]="(page$ | async) || 0"
+                    <td [colSpan]="tableColumns.length">
+                        <tui-table-pagination class="mt-2" [size]="TABLE_PAGE_SIZE" [page]="(tablePage$ | async) || 0"
                             [total]="this.publishedContentStore.publishedContentsByAYear().length"
                             (paginationChange)="onPagination($event)" />
                     </td>

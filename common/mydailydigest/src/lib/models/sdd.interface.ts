@@ -1,17 +1,11 @@
 import { Timestamp } from '@angular/fire/firestore';
 
 export const DEFAULT_LANG_CODE = 'en';
-export interface ISpiritualDailyDigestTableUIState {
-  sn: any;
-  date: string;
-  topic: string;
-  message: string;
-  reference: string;
-  imageUrl?: string;
-  audioUrl?: string;
-}
+export type ISpiritualDailyDigestTableUIState = ISpiritualDailyDigestUIState & {
+  sn: number;
+};
 
-export interface ISpiritualDailyDigestUIState {
+export interface ISpiritualDailyDigestUIState{
   topic: string;
   message: string;
   reference: string;
@@ -46,7 +40,6 @@ export type Content = {
   text: TextContent;
   audioUrl?: string;
 };
-
 
 export type Language = {
   countryCode: string;
