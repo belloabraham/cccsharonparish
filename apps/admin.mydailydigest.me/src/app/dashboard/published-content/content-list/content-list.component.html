@@ -83,7 +83,11 @@
                     <ng-container *ngFor="let key of tableColumns; let i = index">
                         @let isImage = i===5;
                         @let isAudio = i===6;
-                        @if (isImage) {
+                        @let isDate = i===1;
+
+                        @if (isDate) {
+                        <td *tuiCell="key" tuiTd [class.match]="isMatch(item[key])"> {{ item['date'] | date:'fullDate' }} </td>
+                        } @else if (isImage) {
                         <td *tuiCell="key" tuiTd>
                             <a [href]="item[key]" target="_blank" rel="noopener noreferrer">
                                 <img class="header-image" [src]="item[key]" alt="Header Image">

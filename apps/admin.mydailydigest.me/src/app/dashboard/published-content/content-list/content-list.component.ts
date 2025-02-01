@@ -9,7 +9,7 @@ import { TuiBadge } from '@taiga-ui/kit/components/badge';
 import { TuiBadgedContent } from '@taiga-ui/kit/components/badged-content';
 import { TuiButtonSelect } from '@taiga-ui/kit/directives/button-select';
 
-import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe, DatePipe, NgForOf, NgIf } from '@angular/common';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import type { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { TuiTable, TuiTablePagination } from '@taiga-ui/addon-table';
@@ -75,6 +75,7 @@ import {
     TuiTable,
     TuiTablePagination,
     NgAudioPlayerComponent,
+    DatePipe
   ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss',
