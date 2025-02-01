@@ -5,7 +5,7 @@ import {
 import { TuiComparator } from '@taiga-ui/addon-table';
 import { tuiDefaultSort } from '@taiga-ui/cdk';
 
-export const TABLE_PAGE_SIZE = 31;
+export const AVERAGE_TABLE_PAGE_SIZE = 31;
 
 export type ColumnKeys = keyof ISpiritualDailyDigestTableUIState;
 

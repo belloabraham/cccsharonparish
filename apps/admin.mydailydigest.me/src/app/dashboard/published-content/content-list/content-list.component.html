@@ -87,7 +87,7 @@
                         @let isDate = i===1;
 
                         @if (isDate) {
-                        <td *tuiCell="key" tuiTd [class.match]="isColumnMatch([key])"> {{ item['date'] |
+                        <td *tuiCell="key" tuiTd> {{ item['date'] |
                             date:'fullDate'
                             }} </td>
                         } @else if (isImage) {
@@ -111,7 +111,7 @@
             <tfoot>
                 <tr>
                     <td [colSpan]="tableColumns.length">
-                        <tui-table-pagination class="mt-2" [size]="TABLE_PAGE_SIZE" [page]="tablePage() || 0"
+                        <tui-table-pagination class="mt-2" [size]="AVERAGE_TABLE_PAGE_SIZE" [page]="tablePage() || 0"
                             [total]="this.publishedContentStore.publishedContentsByAYear().length"
                             (paginationChange)="onPagination($event)" />
                     </td>
