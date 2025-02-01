@@ -63,8 +63,9 @@ import { TuiFiles } from '@taiga-ui/kit';
 import type { Observable } from 'rxjs';
 import { of, Subject } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
-import { ContentService } from '../content.service';
 import { environment } from '../../../../environments/environment';
+import { ContentService } from '../../shared';
+import { DraftService } from '../draft.service';
 
 @Component({
   selector: 'app-content-form',
@@ -118,7 +119,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     Record<string, unknown>
   > | null = null;
   readonly languageService = inject(LanguageResourceService);
-  readonly contentService = inject(ContentService);
+  readonly draftService = inject(DraftService);
 
   private readonly MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES = 500 * 1024; //500Kb
   private readonly MAX_ALLOWED_AUDIO_SIZE_IN_BYTES = 10 * 1024 * 1024; //10Mb
@@ -344,7 +345,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       this.cropper.disable();
     }, 500);
     this.imageUploadState.set('uploading');
-    this.contentService
+    this.draftService
       .uploadDraftContentHeaderImage(
         dataURL,
         this.contentHeaderImageFileNameWithExt
@@ -388,7 +389,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     sddUIState: ISpiritualDailyDigestUIState,
     existingContent: ISpiritualDailyDigest
   ) {
-    this.contentService
+    this.draftService
       .updateContent(
         sddUIState,
         this.language()!,
@@ -430,7 +431,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   private createContent(sddUIState: ISpiritualDailyDigestUIState) {
-    this.contentService
+    this.draftService
       .createContent(sddUIState, this.language()!, this.rootDataPath)
       .subscribe({
         next: () => {
@@ -463,7 +464,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         this.loadingAudioFile$.next(file);
         this.loadedAudioFile$ = of(null);
 
-        this.contentService
+        this.draftService
           .uploadAudio(file, [
             this.rootStoragePath,
             STORAGE_PATH.AUDIO,

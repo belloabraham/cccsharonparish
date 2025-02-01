@@ -59,7 +59,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ThemeType } from '@cccsharonparish/angular';
 import { distinctUntilChanged, filter } from 'rxjs';
 import { DashboardStore } from './dashboard.store';
-import { ContentStore } from './new-content/content.store';
+import { ContentStore } from './shared';
 
 @Component({
   selector: 'app-dashboard',

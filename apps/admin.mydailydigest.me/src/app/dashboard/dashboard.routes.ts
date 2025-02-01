@@ -3,7 +3,6 @@ import { DashboardComponent } from './dashboard.component';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { inject } from '@angular/core';
-import { ContentStore } from './new-content/content.store';
 import { PublishedContentStore } from './published-content/published-content-store';
 
 const KEY = DASHBOARD_STRING_RESOURCE_KEY;

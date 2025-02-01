@@ -18,12 +18,11 @@ import {
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CONTENT_STRING_RESOURCE_KEYS } from './i18n/string-res-keys';
-import { EmptyStatusComponent } from '../shared';
+import { ContentStore, EmptyStatusComponent } from '../shared';
 import { ContentFormComponent } from './content-form/content-form.component';
 import { TuiDialogService } from '@taiga-ui/core';
 import { Subscription } from 'rxjs';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
-import { ContentStore } from './content.store';
 import { NgIf } from '@angular/common';
 import { DashboardStore } from '../dashboard.store';
 import { COLLECTION, STORAGE_PATH } from '../../services';

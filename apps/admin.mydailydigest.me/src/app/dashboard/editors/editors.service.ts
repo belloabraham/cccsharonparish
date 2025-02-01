@@ -7,7 +7,7 @@ import { AWAITING_APPROVAL_CONTENT_MOCK } from '../awaiting-approval/mock/awaiti
 import { of } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'any',
 })
 export class EditorsService {
   private readonly remoteData = inject(REMOTE_DATA_TOKEN);

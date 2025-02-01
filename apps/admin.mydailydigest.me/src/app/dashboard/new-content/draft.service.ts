@@ -23,7 +23,7 @@ import { DRAFT_CONTENT_MOCK } from './mock/draft-content';
 @Injectable({
   providedIn: 'any',
 })
-export class ContentService {
+export class DraftService {
   private readonly remoteData = inject(REMOTE_DATA_TOKEN);
   private readonly auth = inject(AUTH_TOKEN);
   private readonly cloudStorage = inject(CLOUD_STORAGE_TOKEN);
@@ -147,5 +147,4 @@ export class ContentService {
     }
     return this.getContents(COLLECTION.DRAFT);
   }
-
 }
