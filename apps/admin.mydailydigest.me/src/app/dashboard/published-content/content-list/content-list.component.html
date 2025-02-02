@@ -23,7 +23,7 @@
                     <tui-opt-group>
                         <button class="flex gap-2" *ngFor="let lang of languages" tuiOption type="button"
                             [value]="lang.countryCode" (click)="setLang(lang)">
-                            <img alt="" class="t-flag" [src]="lang.countryCode | tuiFlag" />
+                            <img class="t-flag" [src]="lang.countryCode | tuiFlag" />
                             {{ lang.label }}
                         </button>
                     </tui-opt-group>
@@ -98,7 +98,8 @@
                         <!-- isImage -->
                         <td *tuiCell="key" tuiTd>
                             <a [href]="item[key]" target="_blank" rel="noopener noreferrer">
-                                <img class="header-image" [src]="item[key]" alt="Header Image">
+                                <img width="50" height="50" class="header-image" ngSrc="{{item[key]}}"
+                                    alt="Header Image">
                             </a>
                         </td>
                         }

@@ -46,7 +46,7 @@ export class DraftService {
       year: year,
       month: month,
       day: day,
-      imageUrl: sddUIState.imageUrl,
+      imagePath: sddUIState.imagePath,
       tags: sddUIState.tags,
       content: [content],
       isAwaitingApproval: false,
@@ -71,7 +71,7 @@ export class DraftService {
     const content = this.getContent(sddUIiState, language);
     const updatedContent: ISpiritualDailyDigest = {
       ...existingSDD,
-      imageUrl: sddUIiState.imageUrl,
+      imagePath: sddUIiState.imagePath,
       tags: sddUIiState.tags,
       isAwaitingApproval: false,
       content: [content],

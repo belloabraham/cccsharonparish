@@ -28,7 +28,7 @@ export function contentsToTableUIState(
       keyVerse: contentText?.bibleVerse?.keyVerse || '',
       tags: content.tags,
       date: date,
-      imageUrl: content.imageUrl,
+      imagePath: content.imagePath,
       audioUrl: contentByLanguage?.audioUrl,
     };
     result.push(uiState);

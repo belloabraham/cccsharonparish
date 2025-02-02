@@ -17,7 +17,7 @@ import { TuiBadge } from '@taiga-ui/kit/components/badge';
 import { TuiBadgedContent } from '@taiga-ui/kit/components/badged-content';
 import { TuiButtonSelect } from '@taiga-ui/kit/directives/button-select';
 
-import { DatePipe, NgForOf, NgIf } from '@angular/common';
+import { DatePipe, NgForOf, NgIf, NgOptimizedImage } from '@angular/common';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import type { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { TuiTable, TuiTablePagination } from '@taiga-ui/addon-table';
@@ -46,7 +46,7 @@ import {
   ColumnKeys,
   PUBLISHED_TABLE_COLUMNS,
 } from '../../shared';
-import { MatRipple, MatRippleModule } from '@angular/material/core';
+import { MatRippleModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-content-list',
@@ -73,7 +73,8 @@ import { MatRipple, MatRippleModule } from '@angular/material/core';
     TuiTablePagination,
     NgAudioPlayerComponent,
     DatePipe,
-    MatRippleModule
+    MatRippleModule,
+    NgOptimizedImage,
   ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss',

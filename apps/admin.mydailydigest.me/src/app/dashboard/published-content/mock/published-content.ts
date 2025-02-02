@@ -6,7 +6,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 1,
-    imageUrl: 'https://example.com/image_01-01-2025.jpg',
+    imagePath: 'images/global/logo.png',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -77,7 +77,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 2,
-    imageUrl: 'https://example.com/image_02-01-2025.jpg',
+    imagePath: 'https://example.com/image_02-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -147,7 +147,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 3,
-    imageUrl: 'https://example.com/image_03-01-2025.jpg',
+    imagePath: 'https://example.com/image_03-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -217,7 +217,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 4,
-    imageUrl: 'https://example.com/image_04-01-2025.jpg',
+    imagePath: 'https://example.com/image_04-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -287,7 +287,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 5,
-    imageUrl: 'https://example.com/image_05-01-2025.jpg',
+    imagePath: 'https://example.com/image_05-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -357,7 +357,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 6,
-    imageUrl: 'https://example.com/image_06-01-2025.jpg',
+    imagePath: 'https://example.com/image_06-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -427,7 +427,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 7,
-    imageUrl: 'https://example.com/image_07-01-2025.jpg',
+    imagePath: 'https://example.com/image_07-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -497,7 +497,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 8,
-    imageUrl: 'https://example.com/image_08-01-2025.jpg',
+    imagePath: 'https://example.com/image_08-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -567,7 +567,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 9,
-    imageUrl: 'https://example.com/image_09-01-2025.jpg',
+    imagePath: 'https://example.com/image_09-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -637,7 +637,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 10,
-    imageUrl: 'https://example.com/image_10-01-2025.jpg',
+    imagePath: 'https://example.com/image_10-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -707,7 +707,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 11,
-    imageUrl: 'https://example.com/image_11-01-2025.jpg',
+    imagePath: 'https://example.com/image_11-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -777,7 +777,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 12,
-    imageUrl: 'https://example.com/image_12-01-2025.jpg',
+    imagePath: 'https://example.com/image_12-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -847,7 +847,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 13,
-    imageUrl: 'https://example.com/image_13-01-2025.jpg',
+    imagePath: 'https://example.com/image_13-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -917,7 +917,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 14,
-    imageUrl: 'https://example.com/image_14-01-2025.jpg',
+    imagePath: 'https://example.com/image_14-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -987,7 +987,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 15,
-    imageUrl: 'https://example.com/image_15-01-2025.jpg',
+    imagePath: 'https://example.com/image_15-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1057,7 +1057,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 16,
-    imageUrl: 'https://example.com/image_16-01-2025.jpg',
+    imagePath: 'https://example.com/image_16-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1127,7 +1127,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 17,
-    imageUrl: 'https://example.com/image_17-01-2025.jpg',
+    imagePath: 'https://example.com/image_17-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1197,7 +1197,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 18,
-    imageUrl: 'https://example.com/image_18-01-2025.jpg',
+    imagePath: 'https://example.com/image_18-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1267,7 +1267,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 19,
-    imageUrl: 'https://example.com/image_19-01-2025.jpg',
+    imagePath: 'https://example.com/image_19-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1337,7 +1337,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 20,
-    imageUrl: 'https://example.com/image_20-01-2025.jpg',
+    imagePath: 'https://example.com/image_20-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1407,7 +1407,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 21,
-    imageUrl: 'https://example.com/image_21-01-2025.jpg',
+    imagePath: 'https://example.com/image_21-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1477,7 +1477,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 22,
-    imageUrl: 'https://example.com/image_22-01-2025.jpg',
+    imagePath: 'https://example.com/image_22-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1547,7 +1547,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 23,
-    imageUrl: 'https://example.com/image_23-01-2025.jpg',
+    imagePath: 'https://example.com/image_23-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1617,7 +1617,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 24,
-    imageUrl: 'https://example.com/image_24-01-2025.jpg',
+    imagePath: 'https://example.com/image_24-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1687,7 +1687,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 25,
-    imageUrl: 'https://example.com/image_25-01-2025.jpg',
+    imagePath: 'https://example.com/image_25-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1757,7 +1757,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 26,
-    imageUrl: 'https://example.com/image_26-01-2025.jpg',
+    imagePath: 'https://example.com/image_26-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1827,7 +1827,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 27,
-    imageUrl: 'https://example.com/image_27-01-2025.jpg',
+    imagePath: 'https://example.com/image_27-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1897,7 +1897,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 28,
-    imageUrl: 'https://example.com/image_28-01-2025.jpg',
+    imagePath: 'https://example.com/image_28-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -1967,7 +1967,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 29,
-    imageUrl: 'https://example.com/image_29-01-2025.jpg',
+    imagePath: 'https://example.com/image_29-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2037,7 +2037,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 30,
-    imageUrl: 'https://example.com/image_30-01-2025.jpg',
+    imagePath: 'https://example.com/image_30-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2107,7 +2107,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 1,
     day: 31,
-    imageUrl: 'https://example.com/image_31-01-2025.jpg',
+    imagePath: 'https://example.com/image_31-01-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2177,7 +2177,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 1,
-    imageUrl: 'https://example.com/image_01-02-2025.jpg',
+    imagePath: 'https://example.com/image_01-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2247,7 +2247,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 2,
-    imageUrl: 'https://example.com/image_02-02-2025.jpg',
+    imagePath: 'https://example.com/image_02-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2317,7 +2317,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 3,
-    imageUrl: 'https://example.com/image_03-02-2025.jpg',
+    imagePath: 'https://example.com/image_03-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2387,7 +2387,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 4,
-    imageUrl: 'https://example.com/image_04-02-2025.jpg',
+    imagePath: 'https://example.com/image_04-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2457,7 +2457,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 5,
-    imageUrl: 'https://example.com/image_05-02-2025.jpg',
+    imagePath: 'https://example.com/image_05-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2527,7 +2527,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 6,
-    imageUrl: 'https://example.com/image_06-02-2025.jpg',
+    imagePath: 'https://example.com/image_06-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2597,7 +2597,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 7,
-    imageUrl: 'https://example.com/image_07-02-2025.jpg',
+    imagePath: 'https://example.com/image_07-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2667,7 +2667,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 8,
-    imageUrl: 'https://example.com/image_08-02-2025.jpg',
+    imagePath: 'https://example.com/image_08-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2737,7 +2737,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 9,
-    imageUrl: 'https://example.com/image_09-02-2025.jpg',
+    imagePath: 'https://example.com/image_09-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2807,7 +2807,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 10,
-    imageUrl: 'https://example.com/image_10-02-2025.jpg',
+    imagePath: 'https://example.com/image_10-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2877,7 +2877,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 11,
-    imageUrl: 'https://example.com/image_11-02-2025.jpg',
+    imagePath: 'https://example.com/image_11-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -2947,7 +2947,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 12,
-    imageUrl: 'https://example.com/image_12-02-2025.jpg',
+    imagePath: 'https://example.com/image_12-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3017,7 +3017,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 13,
-    imageUrl: 'https://example.com/image_13-02-2025.jpg',
+    imagePath: 'https://example.com/image_13-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3087,7 +3087,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 14,
-    imageUrl: 'https://example.com/image_14-02-2025.jpg',
+    imagePath: 'https://example.com/image_14-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3157,7 +3157,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 15,
-    imageUrl: 'https://example.com/image_15-02-2025.jpg',
+    imagePath: 'https://example.com/image_15-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3227,7 +3227,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 16,
-    imageUrl: 'https://example.com/image_16-02-2025.jpg',
+    imagePath: 'https://example.com/image_16-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3297,7 +3297,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 17,
-    imageUrl: 'https://example.com/image_17-02-2025.jpg',
+    imagePath: 'https://example.com/image_17-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3367,7 +3367,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 18,
-    imageUrl: 'https://example.com/image_18-02-2025.jpg',
+    imagePath: 'https://example.com/image_18-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3437,7 +3437,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 19,
-    imageUrl: 'https://example.com/image_19-02-2025.jpg',
+    imagePath: 'https://example.com/image_19-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3507,7 +3507,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 20,
-    imageUrl: 'https://example.com/image_20-02-2025.jpg',
+    imagePath: 'https://example.com/image_20-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3577,7 +3577,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 21,
-    imageUrl: 'https://example.com/image_21-02-2025.jpg',
+    imagePath: 'https://example.com/image_21-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3647,7 +3647,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 22,
-    imageUrl: 'https://example.com/image_22-02-2025.jpg',
+    imagePath: 'https://example.com/image_22-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3717,7 +3717,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 23,
-    imageUrl: 'https://example.com/image_23-02-2025.jpg',
+    imagePath: 'https://example.com/image_23-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3787,7 +3787,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 24,
-    imageUrl: 'https://example.com/image_24-02-2025.jpg',
+    imagePath: 'https://example.com/image_24-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3857,7 +3857,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 25,
-    imageUrl: 'https://example.com/image_25-02-2025.jpg',
+    imagePath: 'https://example.com/image_25-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3927,7 +3927,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 26,
-    imageUrl: 'https://example.com/image_26-02-2025.jpg',
+    imagePath: 'https://example.com/image_26-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -3997,7 +3997,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 27,
-    imageUrl: 'https://example.com/image_27-02-2025.jpg',
+    imagePath: 'https://example.com/image_27-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4067,7 +4067,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 2,
     day: 28,
-    imageUrl: 'https://example.com/image_28-02-2025.jpg',
+    imagePath: 'https://example.com/image_28-02-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4137,7 +4137,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 1,
-    imageUrl: 'https://example.com/image_01-03-2025.jpg',
+    imagePath: 'https://example.com/image_01-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4207,7 +4207,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 2,
-    imageUrl: 'https://example.com/image_02-03-2025.jpg',
+    imagePath: 'https://example.com/image_02-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4277,7 +4277,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 3,
-    imageUrl: 'https://example.com/image_03-03-2025.jpg',
+    imagePath: 'https://example.com/image_03-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4347,7 +4347,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 4,
-    imageUrl: 'https://example.com/image_04-03-2025.jpg',
+    imagePath: 'https://example.com/image_04-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4417,7 +4417,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 5,
-    imageUrl: 'https://example.com/image_05-03-2025.jpg',
+    imagePath: 'https://example.com/image_05-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4487,7 +4487,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 6,
-    imageUrl: 'https://example.com/image_06-03-2025.jpg',
+    imagePath: 'https://example.com/image_06-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4557,7 +4557,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 7,
-    imageUrl: 'https://example.com/image_07-03-2025.jpg',
+    imagePath: 'https://example.com/image_07-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4627,7 +4627,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 8,
-    imageUrl: 'https://example.com/image_08-03-2025.jpg',
+    imagePath: 'https://example.com/image_08-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4697,7 +4697,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 9,
-    imageUrl: 'https://example.com/image_09-03-2025.jpg',
+    imagePath: 'https://example.com/image_09-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4767,7 +4767,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 10,
-    imageUrl: 'https://example.com/image_10-03-2025.jpg',
+    imagePath: 'https://example.com/image_10-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4837,7 +4837,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 11,
-    imageUrl: 'https://example.com/image_11-03-2025.jpg',
+    imagePath: 'https://example.com/image_11-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4907,7 +4907,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 12,
-    imageUrl: 'https://example.com/image_12-03-2025.jpg',
+    imagePath: 'https://example.com/image_12-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -4977,7 +4977,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 13,
-    imageUrl: 'https://example.com/image_13-03-2025.jpg',
+    imagePath: 'https://example.com/image_13-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5047,7 +5047,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 14,
-    imageUrl: 'https://example.com/image_14-03-2025.jpg',
+    imagePath: 'https://example.com/image_14-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5117,7 +5117,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 15,
-    imageUrl: 'https://example.com/image_15-03-2025.jpg',
+    imagePath: 'https://example.com/image_15-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5187,7 +5187,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 16,
-    imageUrl: 'https://example.com/image_16-03-2025.jpg',
+    imagePath: 'https://example.com/image_16-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5257,7 +5257,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 17,
-    imageUrl: 'https://example.com/image_17-03-2025.jpg',
+    imagePath: 'https://example.com/image_17-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5327,7 +5327,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 18,
-    imageUrl: 'https://example.com/image_18-03-2025.jpg',
+    imagePath: 'https://example.com/image_18-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5397,7 +5397,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 19,
-    imageUrl: 'https://example.com/image_19-03-2025.jpg',
+    imagePath: 'https://example.com/image_19-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5467,7 +5467,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 20,
-    imageUrl: 'https://example.com/image_20-03-2025.jpg',
+    imagePath: 'https://example.com/image_20-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5537,7 +5537,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 21,
-    imageUrl: 'https://example.com/image_21-03-2025.jpg',
+    imagePath: 'https://example.com/image_21-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5607,7 +5607,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 22,
-    imageUrl: 'https://example.com/image_22-03-2025.jpg',
+    imagePath: 'https://example.com/image_22-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5677,7 +5677,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 23,
-    imageUrl: 'https://example.com/image_23-03-2025.jpg',
+    imagePath: 'https://example.com/image_23-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5747,7 +5747,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 24,
-    imageUrl: 'https://example.com/image_24-03-2025.jpg',
+    imagePath: 'https://example.com/image_24-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5817,7 +5817,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 25,
-    imageUrl: 'https://example.com/image_25-03-2025.jpg',
+    imagePath: 'https://example.com/image_25-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5887,7 +5887,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 26,
-    imageUrl: 'https://example.com/image_26-03-2025.jpg',
+    imagePath: 'https://example.com/image_26-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -5957,7 +5957,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 27,
-    imageUrl: 'https://example.com/image_27-03-2025.jpg',
+    imagePath: 'https://example.com/image_27-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6027,7 +6027,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 28,
-    imageUrl: 'https://example.com/image_28-03-2025.jpg',
+    imagePath: 'https://example.com/image_28-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6097,7 +6097,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 29,
-    imageUrl: 'https://example.com/image_29-03-2025.jpg',
+    imagePath: 'https://example.com/image_29-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6167,7 +6167,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 30,
-    imageUrl: 'https://example.com/image_30-03-2025.jpg',
+    imagePath: 'https://example.com/image_30-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6237,7 +6237,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 3,
     day: 31,
-    imageUrl: 'https://example.com/image_31-03-2025.jpg',
+    imagePath: 'https://example.com/image_31-03-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6307,7 +6307,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 1,
-    imageUrl: 'https://example.com/image_01-04-2025.jpg',
+    imagePath: 'https://example.com/image_01-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6377,7 +6377,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 2,
-    imageUrl: 'https://example.com/image_02-04-2025.jpg',
+    imagePath: 'https://example.com/image_02-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6447,7 +6447,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 3,
-    imageUrl: 'https://example.com/image_03-04-2025.jpg',
+    imagePath: 'https://example.com/image_03-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6517,7 +6517,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 4,
-    imageUrl: 'https://example.com/image_04-04-2025.jpg',
+    imagePath: 'https://example.com/image_04-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6587,7 +6587,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 5,
-    imageUrl: 'https://example.com/image_05-04-2025.jpg',
+    imagePath: 'https://example.com/image_05-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6657,7 +6657,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 6,
-    imageUrl: 'https://example.com/image_06-04-2025.jpg',
+    imagePath: 'https://example.com/image_06-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6727,7 +6727,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 7,
-    imageUrl: 'https://example.com/image_07-04-2025.jpg',
+    imagePath: 'https://example.com/image_07-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6797,7 +6797,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 8,
-    imageUrl: 'https://example.com/image_08-04-2025.jpg',
+    imagePath: 'https://example.com/image_08-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6867,7 +6867,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 9,
-    imageUrl: 'https://example.com/image_09-04-2025.jpg',
+    imagePath: 'https://example.com/image_09-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -6937,7 +6937,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 10,
-    imageUrl: 'https://example.com/image_10-04-2025.jpg',
+    imagePath: 'https://example.com/image_10-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7007,7 +7007,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 11,
-    imageUrl: 'https://example.com/image_11-04-2025.jpg',
+    imagePath: 'https://example.com/image_11-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7077,7 +7077,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 12,
-    imageUrl: 'https://example.com/image_12-04-2025.jpg',
+    imagePath: 'https://example.com/image_12-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7147,7 +7147,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 13,
-    imageUrl: 'https://example.com/image_13-04-2025.jpg',
+    imagePath: 'https://example.com/image_13-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7217,7 +7217,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 14,
-    imageUrl: 'https://example.com/image_14-04-2025.jpg',
+    imagePath: 'https://example.com/image_14-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7287,7 +7287,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 15,
-    imageUrl: 'https://example.com/image_15-04-2025.jpg',
+    imagePath: 'https://example.com/image_15-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7357,7 +7357,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 16,
-    imageUrl: 'https://example.com/image_16-04-2025.jpg',
+    imagePath: 'https://example.com/image_16-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7427,7 +7427,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 17,
-    imageUrl: 'https://example.com/image_17-04-2025.jpg',
+    imagePath: 'https://example.com/image_17-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7497,7 +7497,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 18,
-    imageUrl: 'https://example.com/image_18-04-2025.jpg',
+    imagePath: 'https://example.com/image_18-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7567,7 +7567,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 19,
-    imageUrl: 'https://example.com/image_19-04-2025.jpg',
+    imagePath: 'https://example.com/image_19-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7637,7 +7637,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 20,
-    imageUrl: 'https://example.com/image_20-04-2025.jpg',
+    imagePath: 'https://example.com/image_20-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7707,7 +7707,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 21,
-    imageUrl: 'https://example.com/image_21-04-2025.jpg',
+    imagePath: 'https://example.com/image_21-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7777,7 +7777,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 22,
-    imageUrl: 'https://example.com/image_22-04-2025.jpg',
+    imagePath: 'https://example.com/image_22-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7847,7 +7847,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 23,
-    imageUrl: 'https://example.com/image_23-04-2025.jpg',
+    imagePath: 'https://example.com/image_23-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7917,7 +7917,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 24,
-    imageUrl: 'https://example.com/image_24-04-2025.jpg',
+    imagePath: 'https://example.com/image_24-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -7987,7 +7987,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 25,
-    imageUrl: 'https://example.com/image_25-04-2025.jpg',
+    imagePath: 'https://example.com/image_25-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8057,7 +8057,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 26,
-    imageUrl: 'https://example.com/image_26-04-2025.jpg',
+    imagePath: 'https://example.com/image_26-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8127,7 +8127,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 27,
-    imageUrl: 'https://example.com/image_27-04-2025.jpg',
+    imagePath: 'https://example.com/image_27-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8197,7 +8197,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 28,
-    imageUrl: 'https://example.com/image_28-04-2025.jpg',
+    imagePath: 'https://example.com/image_28-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8267,7 +8267,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 29,
-    imageUrl: 'https://example.com/image_29-04-2025.jpg',
+    imagePath: 'https://example.com/image_29-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8337,7 +8337,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 4,
     day: 30,
-    imageUrl: 'https://example.com/image_30-04-2025.jpg',
+    imagePath: 'https://example.com/image_30-04-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8407,7 +8407,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 1,
-    imageUrl: 'https://example.com/image_01-05-2025.jpg',
+    imagePath: 'https://example.com/image_01-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8477,7 +8477,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 2,
-    imageUrl: 'https://example.com/image_02-05-2025.jpg',
+    imagePath: 'https://example.com/image_02-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8547,7 +8547,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 3,
-    imageUrl: 'https://example.com/image_03-05-2025.jpg',
+    imagePath: 'https://example.com/image_03-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8617,7 +8617,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 4,
-    imageUrl: 'https://example.com/image_04-05-2025.jpg',
+    imagePath: 'https://example.com/image_04-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8687,7 +8687,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 5,
-    imageUrl: 'https://example.com/image_05-05-2025.jpg',
+    imagePath: 'https://example.com/image_05-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8757,7 +8757,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 6,
-    imageUrl: 'https://example.com/image_06-05-2025.jpg',
+    imagePath: 'https://example.com/image_06-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8827,7 +8827,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 7,
-    imageUrl: 'https://example.com/image_07-05-2025.jpg',
+    imagePath: 'https://example.com/image_07-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8897,7 +8897,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 8,
-    imageUrl: 'https://example.com/image_08-05-2025.jpg',
+    imagePath: 'https://example.com/image_08-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -8967,7 +8967,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 9,
-    imageUrl: 'https://example.com/image_09-05-2025.jpg',
+    imagePath: 'https://example.com/image_09-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9037,7 +9037,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 10,
-    imageUrl: 'https://example.com/image_10-05-2025.jpg',
+    imagePath: 'https://example.com/image_10-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9107,7 +9107,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 11,
-    imageUrl: 'https://example.com/image_11-05-2025.jpg',
+    imagePath: 'https://example.com/image_11-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9177,7 +9177,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 12,
-    imageUrl: 'https://example.com/image_12-05-2025.jpg',
+    imagePath: 'https://example.com/image_12-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9247,7 +9247,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 13,
-    imageUrl: 'https://example.com/image_13-05-2025.jpg',
+    imagePath: 'https://example.com/image_13-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9317,7 +9317,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 14,
-    imageUrl: 'https://example.com/image_14-05-2025.jpg',
+    imagePath: 'https://example.com/image_14-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9387,7 +9387,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 15,
-    imageUrl: 'https://example.com/image_15-05-2025.jpg',
+    imagePath: 'https://example.com/image_15-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9457,7 +9457,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 16,
-    imageUrl: 'https://example.com/image_16-05-2025.jpg',
+    imagePath: 'https://example.com/image_16-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9527,7 +9527,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 17,
-    imageUrl: 'https://example.com/image_17-05-2025.jpg',
+    imagePath: 'https://example.com/image_17-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9597,7 +9597,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 18,
-    imageUrl: 'https://example.com/image_18-05-2025.jpg',
+    imagePath: 'https://example.com/image_18-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9667,7 +9667,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 19,
-    imageUrl: 'https://example.com/image_19-05-2025.jpg',
+    imagePath: 'https://example.com/image_19-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9737,7 +9737,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 20,
-    imageUrl: 'https://example.com/image_20-05-2025.jpg',
+    imagePath: 'https://example.com/image_20-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9807,7 +9807,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 21,
-    imageUrl: 'https://example.com/image_21-05-2025.jpg',
+    imagePath: 'https://example.com/image_21-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9877,7 +9877,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 22,
-    imageUrl: 'https://example.com/image_22-05-2025.jpg',
+    imagePath: 'https://example.com/image_22-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -9947,7 +9947,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 23,
-    imageUrl: 'https://example.com/image_23-05-2025.jpg',
+    imagePath: 'https://example.com/image_23-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10017,7 +10017,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 24,
-    imageUrl: 'https://example.com/image_24-05-2025.jpg',
+    imagePath: 'https://example.com/image_24-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10087,7 +10087,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 25,
-    imageUrl: 'https://example.com/image_25-05-2025.jpg',
+    imagePath: 'https://example.com/image_25-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10157,7 +10157,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 26,
-    imageUrl: 'https://example.com/image_26-05-2025.jpg',
+    imagePath: 'https://example.com/image_26-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10227,7 +10227,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 27,
-    imageUrl: 'https://example.com/image_27-05-2025.jpg',
+    imagePath: 'https://example.com/image_27-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10297,7 +10297,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 28,
-    imageUrl: 'https://example.com/image_28-05-2025.jpg',
+    imagePath: 'https://example.com/image_28-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10367,7 +10367,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 29,
-    imageUrl: 'https://example.com/image_29-05-2025.jpg',
+    imagePath: 'https://example.com/image_29-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10437,7 +10437,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 30,
-    imageUrl: 'https://example.com/image_30-05-2025.jpg',
+    imagePath: 'https://example.com/image_30-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10507,7 +10507,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 5,
     day: 31,
-    imageUrl: 'https://example.com/image_31-05-2025.jpg',
+    imagePath: 'https://example.com/image_31-05-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10577,7 +10577,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 1,
-    imageUrl: 'https://example.com/image_01-06-2025.jpg',
+    imagePath: 'https://example.com/image_01-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10647,7 +10647,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 2,
-    imageUrl: 'https://example.com/image_02-06-2025.jpg',
+    imagePath: 'https://example.com/image_02-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10717,7 +10717,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 3,
-    imageUrl: 'https://example.com/image_03-06-2025.jpg',
+    imagePath: 'https://example.com/image_03-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10787,7 +10787,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 4,
-    imageUrl: 'https://example.com/image_04-06-2025.jpg',
+    imagePath: 'https://example.com/image_04-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10857,7 +10857,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 5,
-    imageUrl: 'https://example.com/image_05-06-2025.jpg',
+    imagePath: 'https://example.com/image_05-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10927,7 +10927,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 6,
-    imageUrl: 'https://example.com/image_06-06-2025.jpg',
+    imagePath: 'https://example.com/image_06-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -10997,7 +10997,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 7,
-    imageUrl: 'https://example.com/image_07-06-2025.jpg',
+    imagePath: 'https://example.com/image_07-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11067,7 +11067,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 8,
-    imageUrl: 'https://example.com/image_08-06-2025.jpg',
+    imagePath: 'https://example.com/image_08-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11137,7 +11137,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 9,
-    imageUrl: 'https://example.com/image_09-06-2025.jpg',
+    imagePath: 'https://example.com/image_09-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11207,7 +11207,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 10,
-    imageUrl: 'https://example.com/image_10-06-2025.jpg',
+    imagePath: 'https://example.com/image_10-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11277,7 +11277,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 11,
-    imageUrl: 'https://example.com/image_11-06-2025.jpg',
+    imagePath: 'https://example.com/image_11-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11347,7 +11347,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 12,
-    imageUrl: 'https://example.com/image_12-06-2025.jpg',
+    imagePath: 'https://example.com/image_12-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11417,7 +11417,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 13,
-    imageUrl: 'https://example.com/image_13-06-2025.jpg',
+    imagePath: 'https://example.com/image_13-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11487,7 +11487,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 14,
-    imageUrl: 'https://example.com/image_14-06-2025.jpg',
+    imagePath: 'https://example.com/image_14-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11557,7 +11557,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 15,
-    imageUrl: 'https://example.com/image_15-06-2025.jpg',
+    imagePath: 'https://example.com/image_15-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11627,7 +11627,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 16,
-    imageUrl: 'https://example.com/image_16-06-2025.jpg',
+    imagePath: 'https://example.com/image_16-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11697,7 +11697,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 17,
-    imageUrl: 'https://example.com/image_17-06-2025.jpg',
+    imagePath: 'https://example.com/image_17-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11767,7 +11767,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 18,
-    imageUrl: 'https://example.com/image_18-06-2025.jpg',
+    imagePath: 'https://example.com/image_18-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11837,7 +11837,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 19,
-    imageUrl: 'https://example.com/image_19-06-2025.jpg',
+    imagePath: 'https://example.com/image_19-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11907,7 +11907,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 20,
-    imageUrl: 'https://example.com/image_20-06-2025.jpg',
+    imagePath: 'https://example.com/image_20-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -11977,7 +11977,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 21,
-    imageUrl: 'https://example.com/image_21-06-2025.jpg',
+    imagePath: 'https://example.com/image_21-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12047,7 +12047,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 22,
-    imageUrl: 'https://example.com/image_22-06-2025.jpg',
+    imagePath: 'https://example.com/image_22-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12117,7 +12117,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 23,
-    imageUrl: 'https://example.com/image_23-06-2025.jpg',
+    imagePath: 'https://example.com/image_23-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12187,7 +12187,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 24,
-    imageUrl: 'https://example.com/image_24-06-2025.jpg',
+    imagePath: 'https://example.com/image_24-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12257,7 +12257,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 25,
-    imageUrl: 'https://example.com/image_25-06-2025.jpg',
+    imagePath: 'https://example.com/image_25-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12327,7 +12327,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 26,
-    imageUrl: 'https://example.com/image_26-06-2025.jpg',
+    imagePath: 'https://example.com/image_26-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12397,7 +12397,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 27,
-    imageUrl: 'https://example.com/image_27-06-2025.jpg',
+    imagePath: 'https://example.com/image_27-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12467,7 +12467,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 28,
-    imageUrl: 'https://example.com/image_28-06-2025.jpg',
+    imagePath: 'https://example.com/image_28-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12537,7 +12537,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 29,
-    imageUrl: 'https://example.com/image_29-06-2025.jpg',
+    imagePath: 'https://example.com/image_29-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12607,7 +12607,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 6,
     day: 30,
-    imageUrl: 'https://example.com/image_30-06-2025.jpg',
+    imagePath: 'https://example.com/image_30-06-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12677,7 +12677,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 1,
-    imageUrl: 'https://example.com/image_01-07-2025.jpg',
+    imagePath: 'https://example.com/image_01-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12747,7 +12747,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 2,
-    imageUrl: 'https://example.com/image_02-07-2025.jpg',
+    imagePath: 'https://example.com/image_02-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12817,7 +12817,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 3,
-    imageUrl: 'https://example.com/image_03-07-2025.jpg',
+    imagePath: 'https://example.com/image_03-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12887,7 +12887,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 4,
-    imageUrl: 'https://example.com/image_04-07-2025.jpg',
+    imagePath: 'https://example.com/image_04-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -12957,7 +12957,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 5,
-    imageUrl: 'https://example.com/image_05-07-2025.jpg',
+    imagePath: 'https://example.com/image_05-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13027,7 +13027,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 6,
-    imageUrl: 'https://example.com/image_06-07-2025.jpg',
+    imagePath: 'https://example.com/image_06-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13097,7 +13097,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 7,
-    imageUrl: 'https://example.com/image_07-07-2025.jpg',
+    imagePath: 'https://example.com/image_07-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13167,7 +13167,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 8,
-    imageUrl: 'https://example.com/image_08-07-2025.jpg',
+    imagePath: 'https://example.com/image_08-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13237,7 +13237,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 9,
-    imageUrl: 'https://example.com/image_09-07-2025.jpg',
+    imagePath: 'https://example.com/image_09-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13307,7 +13307,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 10,
-    imageUrl: 'https://example.com/image_10-07-2025.jpg',
+    imagePath: 'https://example.com/image_10-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13377,7 +13377,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 11,
-    imageUrl: 'https://example.com/image_11-07-2025.jpg',
+    imagePath: 'https://example.com/image_11-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13447,7 +13447,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 12,
-    imageUrl: 'https://example.com/image_12-07-2025.jpg',
+    imagePath: 'https://example.com/image_12-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13517,7 +13517,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 13,
-    imageUrl: 'https://example.com/image_13-07-2025.jpg',
+    imagePath: 'https://example.com/image_13-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13587,7 +13587,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 14,
-    imageUrl: 'https://example.com/image_14-07-2025.jpg',
+    imagePath: 'https://example.com/image_14-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13657,7 +13657,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 15,
-    imageUrl: 'https://example.com/image_15-07-2025.jpg',
+    imagePath: 'https://example.com/image_15-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13727,7 +13727,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 16,
-    imageUrl: 'https://example.com/image_16-07-2025.jpg',
+    imagePath: 'https://example.com/image_16-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13797,7 +13797,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 17,
-    imageUrl: 'https://example.com/image_17-07-2025.jpg',
+    imagePath: 'https://example.com/image_17-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13867,7 +13867,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 18,
-    imageUrl: 'https://example.com/image_18-07-2025.jpg',
+    imagePath: 'https://example.com/image_18-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -13937,7 +13937,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 19,
-    imageUrl: 'https://example.com/image_19-07-2025.jpg',
+    imagePath: 'https://example.com/image_19-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14007,7 +14007,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 20,
-    imageUrl: 'https://example.com/image_20-07-2025.jpg',
+    imagePath: 'https://example.com/image_20-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14077,7 +14077,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 21,
-    imageUrl: 'https://example.com/image_21-07-2025.jpg',
+    imagePath: 'https://example.com/image_21-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14147,7 +14147,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 22,
-    imageUrl: 'https://example.com/image_22-07-2025.jpg',
+    imagePath: 'https://example.com/image_22-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14217,7 +14217,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 23,
-    imageUrl: 'https://example.com/image_23-07-2025.jpg',
+    imagePath: 'https://example.com/image_23-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14287,7 +14287,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 24,
-    imageUrl: 'https://example.com/image_24-07-2025.jpg',
+    imagePath: 'https://example.com/image_24-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14357,7 +14357,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 25,
-    imageUrl: 'https://example.com/image_25-07-2025.jpg',
+    imagePath: 'https://example.com/image_25-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14427,7 +14427,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 26,
-    imageUrl: 'https://example.com/image_26-07-2025.jpg',
+    imagePath: 'https://example.com/image_26-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14497,7 +14497,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 27,
-    imageUrl: 'https://example.com/image_27-07-2025.jpg',
+    imagePath: 'https://example.com/image_27-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14567,7 +14567,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 28,
-    imageUrl: 'https://example.com/image_28-07-2025.jpg',
+    imagePath: 'https://example.com/image_28-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14637,7 +14637,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 29,
-    imageUrl: 'https://example.com/image_29-07-2025.jpg',
+    imagePath: 'https://example.com/image_29-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14707,7 +14707,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 30,
-    imageUrl: 'https://example.com/image_30-07-2025.jpg',
+    imagePath: 'https://example.com/image_30-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14777,7 +14777,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 7,
     day: 31,
-    imageUrl: 'https://example.com/image_31-07-2025.jpg',
+    imagePath: 'https://example.com/image_31-07-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14847,7 +14847,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 1,
-    imageUrl: 'https://example.com/image_01-08-2025.jpg',
+    imagePath: 'https://example.com/image_01-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14917,7 +14917,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 2,
-    imageUrl: 'https://example.com/image_02-08-2025.jpg',
+    imagePath: 'https://example.com/image_02-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -14987,7 +14987,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 3,
-    imageUrl: 'https://example.com/image_03-08-2025.jpg',
+    imagePath: 'https://example.com/image_03-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15057,7 +15057,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 4,
-    imageUrl: 'https://example.com/image_04-08-2025.jpg',
+    imagePath: 'https://example.com/image_04-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15127,7 +15127,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 5,
-    imageUrl: 'https://example.com/image_05-08-2025.jpg',
+    imagePath: 'https://example.com/image_05-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15197,7 +15197,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 6,
-    imageUrl: 'https://example.com/image_06-08-2025.jpg',
+    imagePath: 'https://example.com/image_06-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15267,7 +15267,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 7,
-    imageUrl: 'https://example.com/image_07-08-2025.jpg',
+    imagePath: 'https://example.com/image_07-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15337,7 +15337,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 8,
-    imageUrl: 'https://example.com/image_08-08-2025.jpg',
+    imagePath: 'https://example.com/image_08-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15407,7 +15407,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 9,
-    imageUrl: 'https://example.com/image_09-08-2025.jpg',
+    imagePath: 'https://example.com/image_09-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15477,7 +15477,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 10,
-    imageUrl: 'https://example.com/image_10-08-2025.jpg',
+    imagePath: 'https://example.com/image_10-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15547,7 +15547,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 11,
-    imageUrl: 'https://example.com/image_11-08-2025.jpg',
+    imagePath: 'https://example.com/image_11-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15617,7 +15617,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 12,
-    imageUrl: 'https://example.com/image_12-08-2025.jpg',
+    imagePath: 'https://example.com/image_12-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15687,7 +15687,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 13,
-    imageUrl: 'https://example.com/image_13-08-2025.jpg',
+    imagePath: 'https://example.com/image_13-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15757,7 +15757,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 14,
-    imageUrl: 'https://example.com/image_14-08-2025.jpg',
+    imagePath: 'https://example.com/image_14-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15827,7 +15827,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 15,
-    imageUrl: 'https://example.com/image_15-08-2025.jpg',
+    imagePath: 'https://example.com/image_15-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15897,7 +15897,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 16,
-    imageUrl: 'https://example.com/image_16-08-2025.jpg',
+    imagePath: 'https://example.com/image_16-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -15967,7 +15967,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 17,
-    imageUrl: 'https://example.com/image_17-08-2025.jpg',
+    imagePath: 'https://example.com/image_17-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16037,7 +16037,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 18,
-    imageUrl: 'https://example.com/image_18-08-2025.jpg',
+    imagePath: 'https://example.com/image_18-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16107,7 +16107,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 19,
-    imageUrl: 'https://example.com/image_19-08-2025.jpg',
+    imagePath: 'https://example.com/image_19-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16177,7 +16177,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 20,
-    imageUrl: 'https://example.com/image_20-08-2025.jpg',
+    imagePath: 'https://example.com/image_20-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16247,7 +16247,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 21,
-    imageUrl: 'https://example.com/image_21-08-2025.jpg',
+    imagePath: 'https://example.com/image_21-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16317,7 +16317,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 22,
-    imageUrl: 'https://example.com/image_22-08-2025.jpg',
+    imagePath: 'https://example.com/image_22-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16387,7 +16387,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 23,
-    imageUrl: 'https://example.com/image_23-08-2025.jpg',
+    imagePath: 'https://example.com/image_23-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16457,7 +16457,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 24,
-    imageUrl: 'https://example.com/image_24-08-2025.jpg',
+    imagePath: 'https://example.com/image_24-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16527,7 +16527,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 25,
-    imageUrl: 'https://example.com/image_25-08-2025.jpg',
+    imagePath: 'https://example.com/image_25-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16597,7 +16597,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 26,
-    imageUrl: 'https://example.com/image_26-08-2025.jpg',
+    imagePath: 'https://example.com/image_26-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16667,7 +16667,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 27,
-    imageUrl: 'https://example.com/image_27-08-2025.jpg',
+    imagePath: 'https://example.com/image_27-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16737,7 +16737,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 28,
-    imageUrl: 'https://example.com/image_28-08-2025.jpg',
+    imagePath: 'https://example.com/image_28-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16807,7 +16807,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 29,
-    imageUrl: 'https://example.com/image_29-08-2025.jpg',
+    imagePath: 'https://example.com/image_29-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16877,7 +16877,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 30,
-    imageUrl: 'https://example.com/image_30-08-2025.jpg',
+    imagePath: 'https://example.com/image_30-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -16947,7 +16947,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 8,
     day: 31,
-    imageUrl: 'https://example.com/image_31-08-2025.jpg',
+    imagePath: 'https://example.com/image_31-08-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17017,7 +17017,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 1,
-    imageUrl: 'https://example.com/image_01-09-2025.jpg',
+    imagePath: 'https://example.com/image_01-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17087,7 +17087,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 2,
-    imageUrl: 'https://example.com/image_02-09-2025.jpg',
+    imagePath: 'https://example.com/image_02-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17157,7 +17157,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 3,
-    imageUrl: 'https://example.com/image_03-09-2025.jpg',
+    imagePath: 'https://example.com/image_03-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17227,7 +17227,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 4,
-    imageUrl: 'https://example.com/image_04-09-2025.jpg',
+    imagePath: 'https://example.com/image_04-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17297,7 +17297,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 5,
-    imageUrl: 'https://example.com/image_05-09-2025.jpg',
+    imagePath: 'https://example.com/image_05-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17367,7 +17367,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 6,
-    imageUrl: 'https://example.com/image_06-09-2025.jpg',
+    imagePath: 'https://example.com/image_06-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17437,7 +17437,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 7,
-    imageUrl: 'https://example.com/image_07-09-2025.jpg',
+    imagePath: 'https://example.com/image_07-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17507,7 +17507,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 8,
-    imageUrl: 'https://example.com/image_08-09-2025.jpg',
+    imagePath: 'https://example.com/image_08-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17577,7 +17577,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 9,
-    imageUrl: 'https://example.com/image_09-09-2025.jpg',
+    imagePath: 'https://example.com/image_09-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17647,7 +17647,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 10,
-    imageUrl: 'https://example.com/image_10-09-2025.jpg',
+    imagePath: 'https://example.com/image_10-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17717,7 +17717,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 11,
-    imageUrl: 'https://example.com/image_11-09-2025.jpg',
+    imagePath: 'https://example.com/image_11-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17787,7 +17787,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 12,
-    imageUrl: 'https://example.com/image_12-09-2025.jpg',
+    imagePath: 'https://example.com/image_12-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17857,7 +17857,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 13,
-    imageUrl: 'https://example.com/image_13-09-2025.jpg',
+    imagePath: 'https://example.com/image_13-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17927,7 +17927,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 14,
-    imageUrl: 'https://example.com/image_14-09-2025.jpg',
+    imagePath: 'https://example.com/image_14-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -17997,7 +17997,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 15,
-    imageUrl: 'https://example.com/image_15-09-2025.jpg',
+    imagePath: 'https://example.com/image_15-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18067,7 +18067,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 16,
-    imageUrl: 'https://example.com/image_16-09-2025.jpg',
+    imagePath: 'https://example.com/image_16-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18137,7 +18137,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 17,
-    imageUrl: 'https://example.com/image_17-09-2025.jpg',
+    imagePath: 'https://example.com/image_17-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18207,7 +18207,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 18,
-    imageUrl: 'https://example.com/image_18-09-2025.jpg',
+    imagePath: 'https://example.com/image_18-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18277,7 +18277,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 19,
-    imageUrl: 'https://example.com/image_19-09-2025.jpg',
+    imagePath: 'https://example.com/image_19-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18347,7 +18347,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 20,
-    imageUrl: 'https://example.com/image_20-09-2025.jpg',
+    imagePath: 'https://example.com/image_20-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18417,7 +18417,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 21,
-    imageUrl: 'https://example.com/image_21-09-2025.jpg',
+    imagePath: 'https://example.com/image_21-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18487,7 +18487,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 22,
-    imageUrl: 'https://example.com/image_22-09-2025.jpg',
+    imagePath: 'https://example.com/image_22-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18557,7 +18557,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 23,
-    imageUrl: 'https://example.com/image_23-09-2025.jpg',
+    imagePath: 'https://example.com/image_23-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18627,7 +18627,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 24,
-    imageUrl: 'https://example.com/image_24-09-2025.jpg',
+    imagePath: 'https://example.com/image_24-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18697,7 +18697,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 25,
-    imageUrl: 'https://example.com/image_25-09-2025.jpg',
+    imagePath: 'https://example.com/image_25-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18767,7 +18767,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 26,
-    imageUrl: 'https://example.com/image_26-09-2025.jpg',
+    imagePath: 'https://example.com/image_26-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18837,7 +18837,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 27,
-    imageUrl: 'https://example.com/image_27-09-2025.jpg',
+    imagePath: 'https://example.com/image_27-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18907,7 +18907,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 28,
-    imageUrl: 'https://example.com/image_28-09-2025.jpg',
+    imagePath: 'https://example.com/image_28-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -18977,7 +18977,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 29,
-    imageUrl: 'https://example.com/image_29-09-2025.jpg',
+    imagePath: 'https://example.com/image_29-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19047,7 +19047,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 9,
     day: 30,
-    imageUrl: 'https://example.com/image_30-09-2025.jpg',
+    imagePath: 'https://example.com/image_30-09-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19117,7 +19117,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 1,
-    imageUrl: 'https://example.com/image_01-10-2025.jpg',
+    imagePath: 'https://example.com/image_01-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19187,7 +19187,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 2,
-    imageUrl: 'https://example.com/image_02-10-2025.jpg',
+    imagePath: 'https://example.com/image_02-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19257,7 +19257,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 3,
-    imageUrl: 'https://example.com/image_03-10-2025.jpg',
+    imagePath: 'https://example.com/image_03-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19327,7 +19327,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 4,
-    imageUrl: 'https://example.com/image_04-10-2025.jpg',
+    imagePath: 'https://example.com/image_04-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19397,7 +19397,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 5,
-    imageUrl: 'https://example.com/image_05-10-2025.jpg',
+    imagePath: 'https://example.com/image_05-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19467,7 +19467,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 6,
-    imageUrl: 'https://example.com/image_06-10-2025.jpg',
+    imagePath: 'https://example.com/image_06-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19537,7 +19537,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 7,
-    imageUrl: 'https://example.com/image_07-10-2025.jpg',
+    imagePath: 'https://example.com/image_07-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19607,7 +19607,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 8,
-    imageUrl: 'https://example.com/image_08-10-2025.jpg',
+    imagePath: 'https://example.com/image_08-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19677,7 +19677,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 9,
-    imageUrl: 'https://example.com/image_09-10-2025.jpg',
+    imagePath: 'https://example.com/image_09-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19747,7 +19747,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 10,
-    imageUrl: 'https://example.com/image_10-10-2025.jpg',
+    imagePath: 'https://example.com/image_10-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19817,7 +19817,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 11,
-    imageUrl: 'https://example.com/image_11-10-2025.jpg',
+    imagePath: 'https://example.com/image_11-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19887,7 +19887,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 12,
-    imageUrl: 'https://example.com/image_12-10-2025.jpg',
+    imagePath: 'https://example.com/image_12-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -19957,7 +19957,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 13,
-    imageUrl: 'https://example.com/image_13-10-2025.jpg',
+    imagePath: 'https://example.com/image_13-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20027,7 +20027,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 14,
-    imageUrl: 'https://example.com/image_14-10-2025.jpg',
+    imagePath: 'https://example.com/image_14-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20097,7 +20097,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 15,
-    imageUrl: 'https://example.com/image_15-10-2025.jpg',
+    imagePath: 'https://example.com/image_15-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20167,7 +20167,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 16,
-    imageUrl: 'https://example.com/image_16-10-2025.jpg',
+    imagePath: 'https://example.com/image_16-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20237,7 +20237,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 17,
-    imageUrl: 'https://example.com/image_17-10-2025.jpg',
+    imagePath: 'https://example.com/image_17-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20307,7 +20307,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 18,
-    imageUrl: 'https://example.com/image_18-10-2025.jpg',
+    imagePath: 'https://example.com/image_18-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20377,7 +20377,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 19,
-    imageUrl: 'https://example.com/image_19-10-2025.jpg',
+    imagePath: 'https://example.com/image_19-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20447,7 +20447,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 20,
-    imageUrl: 'https://example.com/image_20-10-2025.jpg',
+    imagePath: 'https://example.com/image_20-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20517,7 +20517,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 21,
-    imageUrl: 'https://example.com/image_21-10-2025.jpg',
+    imagePath: 'https://example.com/image_21-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20587,7 +20587,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 22,
-    imageUrl: 'https://example.com/image_22-10-2025.jpg',
+    imagePath: 'https://example.com/image_22-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20657,7 +20657,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 23,
-    imageUrl: 'https://example.com/image_23-10-2025.jpg',
+    imagePath: 'https://example.com/image_23-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20727,7 +20727,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 24,
-    imageUrl: 'https://example.com/image_24-10-2025.jpg',
+    imagePath: 'https://example.com/image_24-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20797,7 +20797,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 25,
-    imageUrl: 'https://example.com/image_25-10-2025.jpg',
+    imagePath: 'https://example.com/image_25-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20867,7 +20867,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 26,
-    imageUrl: 'https://example.com/image_26-10-2025.jpg',
+    imagePath: 'https://example.com/image_26-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -20937,7 +20937,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 27,
-    imageUrl: 'https://example.com/image_27-10-2025.jpg',
+    imagePath: 'https://example.com/image_27-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21007,7 +21007,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 28,
-    imageUrl: 'https://example.com/image_28-10-2025.jpg',
+    imagePath: 'https://example.com/image_28-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21077,7 +21077,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 29,
-    imageUrl: 'https://example.com/image_29-10-2025.jpg',
+    imagePath: 'https://example.com/image_29-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21147,7 +21147,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 30,
-    imageUrl: 'https://example.com/image_30-10-2025.jpg',
+    imagePath: 'https://example.com/image_30-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21217,7 +21217,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 10,
     day: 31,
-    imageUrl: 'https://example.com/image_31-10-2025.jpg',
+    imagePath: 'https://example.com/image_31-10-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21287,7 +21287,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 1,
-    imageUrl: 'https://example.com/image_01-11-2025.jpg',
+    imagePath: 'https://example.com/image_01-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21357,7 +21357,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 2,
-    imageUrl: 'https://example.com/image_02-11-2025.jpg',
+    imagePath: 'https://example.com/image_02-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21427,7 +21427,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 3,
-    imageUrl: 'https://example.com/image_03-11-2025.jpg',
+    imagePath: 'https://example.com/image_03-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21497,7 +21497,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 4,
-    imageUrl: 'https://example.com/image_04-11-2025.jpg',
+    imagePath: 'https://example.com/image_04-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21567,7 +21567,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 5,
-    imageUrl: 'https://example.com/image_05-11-2025.jpg',
+    imagePath: 'https://example.com/image_05-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21637,7 +21637,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 6,
-    imageUrl: 'https://example.com/image_06-11-2025.jpg',
+    imagePath: 'https://example.com/image_06-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21707,7 +21707,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 7,
-    imageUrl: 'https://example.com/image_07-11-2025.jpg',
+    imagePath: 'https://example.com/image_07-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21777,7 +21777,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 8,
-    imageUrl: 'https://example.com/image_08-11-2025.jpg',
+    imagePath: 'https://example.com/image_08-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21847,7 +21847,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 9,
-    imageUrl: 'https://example.com/image_09-11-2025.jpg',
+    imagePath: 'https://example.com/image_09-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21917,7 +21917,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 10,
-    imageUrl: 'https://example.com/image_10-11-2025.jpg',
+    imagePath: 'https://example.com/image_10-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -21987,7 +21987,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 11,
-    imageUrl: 'https://example.com/image_11-11-2025.jpg',
+    imagePath: 'https://example.com/image_11-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22057,7 +22057,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 12,
-    imageUrl: 'https://example.com/image_12-11-2025.jpg',
+    imagePath: 'https://example.com/image_12-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22127,7 +22127,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 13,
-    imageUrl: 'https://example.com/image_13-11-2025.jpg',
+    imagePath: 'https://example.com/image_13-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22197,7 +22197,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 14,
-    imageUrl: 'https://example.com/image_14-11-2025.jpg',
+    imagePath: 'https://example.com/image_14-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22267,7 +22267,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 15,
-    imageUrl: 'https://example.com/image_15-11-2025.jpg',
+    imagePath: 'https://example.com/image_15-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22337,7 +22337,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 16,
-    imageUrl: 'https://example.com/image_16-11-2025.jpg',
+    imagePath: 'https://example.com/image_16-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22407,7 +22407,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 17,
-    imageUrl: 'https://example.com/image_17-11-2025.jpg',
+    imagePath: 'https://example.com/image_17-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22477,7 +22477,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 18,
-    imageUrl: 'https://example.com/image_18-11-2025.jpg',
+    imagePath: 'https://example.com/image_18-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22547,7 +22547,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 19,
-    imageUrl: 'https://example.com/image_19-11-2025.jpg',
+    imagePath: 'https://example.com/image_19-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22617,7 +22617,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 20,
-    imageUrl: 'https://example.com/image_20-11-2025.jpg',
+    imagePath: 'https://example.com/image_20-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22687,7 +22687,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 21,
-    imageUrl: 'https://example.com/image_21-11-2025.jpg',
+    imagePath: 'https://example.com/image_21-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22757,7 +22757,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 22,
-    imageUrl: 'https://example.com/image_22-11-2025.jpg',
+    imagePath: 'https://example.com/image_22-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22827,7 +22827,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 23,
-    imageUrl: 'https://example.com/image_23-11-2025.jpg',
+    imagePath: 'https://example.com/image_23-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22897,7 +22897,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 24,
-    imageUrl: 'https://example.com/image_24-11-2025.jpg',
+    imagePath: 'https://example.com/image_24-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -22967,7 +22967,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 25,
-    imageUrl: 'https://example.com/image_25-11-2025.jpg',
+    imagePath: 'https://example.com/image_25-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23037,7 +23037,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 26,
-    imageUrl: 'https://example.com/image_26-11-2025.jpg',
+    imagePath: 'https://example.com/image_26-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23107,7 +23107,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 27,
-    imageUrl: 'https://example.com/image_27-11-2025.jpg',
+    imagePath: 'https://example.com/image_27-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23177,7 +23177,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 28,
-    imageUrl: 'https://example.com/image_28-11-2025.jpg',
+    imagePath: 'https://example.com/image_28-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23247,7 +23247,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 29,
-    imageUrl: 'https://example.com/image_29-11-2025.jpg',
+    imagePath: 'https://example.com/image_29-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23317,7 +23317,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 11,
     day: 30,
-    imageUrl: 'https://example.com/image_30-11-2025.jpg',
+    imagePath: 'https://example.com/image_30-11-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23387,7 +23387,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 1,
-    imageUrl: 'https://example.com/image_01-12-2025.jpg',
+    imagePath: 'https://example.com/image_01-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23457,7 +23457,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 2,
-    imageUrl: 'https://example.com/image_02-12-2025.jpg',
+    imagePath: 'https://example.com/image_02-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23527,7 +23527,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 3,
-    imageUrl: 'https://example.com/image_03-12-2025.jpg',
+    imagePath: 'https://example.com/image_03-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23597,7 +23597,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 4,
-    imageUrl: 'https://example.com/image_04-12-2025.jpg',
+    imagePath: 'https://example.com/image_04-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23667,7 +23667,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 5,
-    imageUrl: 'https://example.com/image_05-12-2025.jpg',
+    imagePath: 'https://example.com/image_05-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23737,7 +23737,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 6,
-    imageUrl: 'https://example.com/image_06-12-2025.jpg',
+    imagePath: 'https://example.com/image_06-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23807,7 +23807,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 7,
-    imageUrl: 'https://example.com/image_07-12-2025.jpg',
+    imagePath: 'https://example.com/image_07-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23877,7 +23877,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 8,
-    imageUrl: 'https://example.com/image_08-12-2025.jpg',
+    imagePath: 'https://example.com/image_08-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -23947,7 +23947,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 9,
-    imageUrl: 'https://example.com/image_09-12-2025.jpg',
+    imagePath: 'https://example.com/image_09-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24017,7 +24017,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 10,
-    imageUrl: 'https://example.com/image_10-12-2025.jpg',
+    imagePath: 'https://example.com/image_10-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24087,7 +24087,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 11,
-    imageUrl: 'https://example.com/image_11-12-2025.jpg',
+    imagePath: 'https://example.com/image_11-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24157,7 +24157,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 12,
-    imageUrl: 'https://example.com/image_12-12-2025.jpg',
+    imagePath: 'https://example.com/image_12-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24227,7 +24227,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 13,
-    imageUrl: 'https://example.com/image_13-12-2025.jpg',
+    imagePath: 'https://example.com/image_13-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24297,7 +24297,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 14,
-    imageUrl: 'https://example.com/image_14-12-2025.jpg',
+    imagePath: 'https://example.com/image_14-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24367,7 +24367,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 15,
-    imageUrl: 'https://example.com/image_15-12-2025.jpg',
+    imagePath: 'https://example.com/image_15-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24437,7 +24437,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 16,
-    imageUrl: 'https://example.com/image_16-12-2025.jpg',
+    imagePath: 'https://example.com/image_16-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24507,7 +24507,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 17,
-    imageUrl: 'https://example.com/image_17-12-2025.jpg',
+    imagePath: 'https://example.com/image_17-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24577,7 +24577,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 18,
-    imageUrl: 'https://example.com/image_18-12-2025.jpg',
+    imagePath: 'https://example.com/image_18-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24647,7 +24647,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 19,
-    imageUrl: 'https://example.com/image_19-12-2025.jpg',
+    imagePath: 'https://example.com/image_19-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24717,7 +24717,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 20,
-    imageUrl: 'https://example.com/image_20-12-2025.jpg',
+    imagePath: 'https://example.com/image_20-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24787,7 +24787,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 21,
-    imageUrl: 'https://example.com/image_21-12-2025.jpg',
+    imagePath: 'https://example.com/image_21-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24857,7 +24857,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 22,
-    imageUrl: 'https://example.com/image_22-12-2025.jpg',
+    imagePath: 'https://example.com/image_22-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24927,7 +24927,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 23,
-    imageUrl: 'https://example.com/image_23-12-2025.jpg',
+    imagePath: 'https://example.com/image_23-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -24997,7 +24997,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 24,
-    imageUrl: 'https://example.com/image_24-12-2025.jpg',
+    imagePath: 'https://example.com/image_24-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -25067,7 +25067,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 25,
-    imageUrl: 'https://example.com/image_25-12-2025.jpg',
+    imagePath: 'https://example.com/image_25-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -25137,7 +25137,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 26,
-    imageUrl: 'https://example.com/image_26-12-2025.jpg',
+    imagePath: 'https://example.com/image_26-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -25207,7 +25207,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 27,
-    imageUrl: 'https://example.com/image_27-12-2025.jpg',
+    imagePath: 'https://example.com/image_27-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -25277,7 +25277,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 28,
-    imageUrl: 'https://example.com/image_28-12-2025.jpg',
+    imagePath: 'https://example.com/image_28-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -25347,7 +25347,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 29,
-    imageUrl: 'https://example.com/image_29-12-2025.jpg',
+    imagePath: 'https://example.com/image_29-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -25417,7 +25417,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 30,
-    imageUrl: 'https://example.com/image_30-12-2025.jpg',
+    imagePath: 'https://example.com/image_30-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {
@@ -25487,7 +25487,7 @@ export const PUBLISHED_CONTENTS_MOCK: ISpiritualDailyDigest[] = [
     year: 2025,
     month: 12,
     day: 31,
-    imageUrl: 'https://example.com/image_31-12-2025.jpg',
+    imagePath: 'https://example.com/image_31-12-2025.jpg',
     tags: ['faith', 'grace', 'love'],
     content: [
       {

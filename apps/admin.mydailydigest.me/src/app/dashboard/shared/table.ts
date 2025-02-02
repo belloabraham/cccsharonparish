@@ -22,7 +22,7 @@ const sddStateKeys = {
   topic: '',
   message: '',
   reference: '',
-  imageUrl: '',
+  imagePath: '',
   audioUrl: '',
 };
 

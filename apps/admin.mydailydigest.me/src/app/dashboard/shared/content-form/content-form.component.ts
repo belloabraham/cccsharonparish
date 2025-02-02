@@ -107,6 +107,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   readonly imageAttached = signal(false);
   readonly language = signal<Language | null>(null);
   defaultImageUrl = 'https://placehold.co/480x270?text=.';
+  imageFullPath = '';
   readonly uploadedAudioUrl = signal<string | null>(null);
   rootStoragePath = '';
   rootDataPath = '';
@@ -188,16 +189,16 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       keyVerse: bibleVerse.keyVerse,
       tags: existingContent.tags,
       date: date,
-      imageUrl: existingContent.imageUrl,
+      imagePath: existingContent.imagePath,
       audioUrl: contentForLanguage.audioUrl,
     };
-    this.setDefaultMediaContent();
+    this.setDefaultMediaContent(uiState);
     this.setFormValue(uiState);
   }
 
   private setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
-    if (sddUIiState?.imageUrl) {
-      this.defaultImageUrl = sddUIiState.imageUrl;
+    if (sddUIiState?.imagePath) {
+      this.defaultImageUrl = `${environment.cdnBaseUrl}/${sddUIiState.imagePath}`;
     }
     if (sddUIiState?.audioUrl) {
       this.uploadedAudioUrl.set(sddUIiState.audioUrl);
@@ -353,6 +354,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         next: (uploadResult) => {
           this.imageUploadState.set('uploaded');
           this.defaultImageUrl = `${environment.cdnBaseUrl}/${uploadResult.metadata.fullPath}`;
+          this.imageFullPath = uploadResult.metadata.fullPath;
         },
         error: () => {
           this.imageUploadState.set('error');
@@ -370,7 +372,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         keyVerse: this.referenceKeyVersesFC.value!,
         tags: this.tagsFC.value!,
         date: this.dateFC.value!,
-        imageUrl: this.defaultImageUrl,
+        imagePath: this.imageFullPath,
         audioUrl: this.uploadedAudioUrl() || undefined,
       };
 

@@ -5,7 +5,7 @@ export type ISpiritualDailyDigestTableUIState = ISpiritualDailyDigestUIState & {
   sn: number;
 };
 
-export interface ISpiritualDailyDigestUIState{
+export interface ISpiritualDailyDigestUIState {
   topic: string;
   message: string;
   reference: string;
@@ -13,7 +13,7 @@ export interface ISpiritualDailyDigestUIState{
   keyVerse: string;
   tags: string[];
   date: Date;
-  imageUrl?: string;
+  imagePath?: string;
   audioUrl?: string;
 }
 
@@ -22,7 +22,7 @@ export interface ISpiritualDailyDigest extends Record<string, any> {
   year: number;
   month: number;
   day: number;
-  imageUrl?: string; //
+  imagePath?: string; //
   tags: string[]; // and date
   content: Content[];
   isPublished?: boolean;

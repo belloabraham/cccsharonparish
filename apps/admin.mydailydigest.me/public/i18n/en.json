@@ -90,7 +90,7 @@
   "reference": "Reference",
   "date": "Date",
   "audioUrl": "Audio",
-  "imageUrl": "Image",
+  "imagePath": "Image",
   "sn": "SN",
   "month_0": "January",
   "month_1": "February",
@@ -104,7 +104,7 @@
   "month_9": "October",
   "month_10": "November",
   "month_11": "December",
-  
+
 
   "no_content_awaiting_approval_msg": "There are no content submitted for approval, have editors submit a draft content for approval and they will appear here.",
 
