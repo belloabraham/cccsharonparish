@@ -44,6 +44,7 @@ import {
   ascDescSortCompare,
   AVERAGE_TABLE_PAGE_SIZE,
   ColumnKeys,
+  getDaysInMonth,
   PUBLISHED_TABLE_COLUMNS,
 } from '../../shared';
 import { MatRippleModule } from '@angular/material/core';
@@ -99,9 +100,8 @@ export class ContentListComponent {
   tableColumns = PUBLISHED_TABLE_COLUMNS;
   AVERAGE_TABLE_PAGE_SIZE = AVERAGE_TABLE_PAGE_SIZE;
   searchQuery = '';
-
   readonly sortColumnBy = signal<any | null>(null);
-  readonly tablePageSize = signal(this.getDaysInMonth(0));
+  readonly tablePageSize = signal(getDaysInMonth(0));
   readonly tablePage = signal(0);
   private readonly languageCode = signal(DEFAULT_LANG_CODE);
   readonly orderDirection = signal<-1 | 1>(-1);
@@ -122,24 +122,13 @@ export class ContentListComponent {
 
   onPagination({ page, size }: TuiTablePaginationEvent): void {
     this.tablePage.set(page);
-    this.tablePageSize.set(this.getDaysInMonth(page));
+    this.tablePageSize.set(getDaysInMonth(page));
   }
 
   isColumnMatch(value: any): boolean {
     return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);
   }
 
-  getDaysInMonth(
-    month: number,
-    year: number = new Date().getFullYear()
-  ): number {
-    if (month < 0 || month > 11) {
-      throw new Error(
-        'Invalid month. Month should be between 0 (January) and 11 (December).'
-      );
-    }
-    return new Date(year, month + 1, 0).getDate();
-  }
 
   private getData(
     key: ColumnKeys,

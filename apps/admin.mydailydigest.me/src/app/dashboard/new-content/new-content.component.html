@@ -4,15 +4,10 @@
         @let contentForTheCurrentYear = contentStore.draftContentForTheYear();
         @let contentIsEmpty = contentForTheCurrentYear.length === 0;
 
-        <div class="card inline-block !p-0">
+        <div *ngIf="contentIsEmpty" class="card inline-block !p-0">
                 <nav class="nav px-4 py-2 flex gap-4 items-center justify-between">
 
-                        <tui-textfield *ngIf="!contentIsEmpty" class="flex-1" tuiTextfieldSize="s"
-                                iconStart="@tui.search">
-                                <input [placeholder]="t(KEY.SEARCH_PLACEHOLDER)" tuiTextfield />
-                        </tui-textfield>
-
-                        <span *ngIf="contentIsEmpty"></span>
+                        <span></span>
 
                         <button (click)="openContentDialog()" class="fab" mat-mini-fab>
                                 <mat-icon fontIcon="plus-fill"></mat-icon>
@@ -22,16 +17,100 @@
                 <hr>
 
                 <div class="p-4">
-                        @if (contentIsEmpty) {
                         <app-empty-status [description]="t(KEY.NO_ADDED_CONTENT_MSG)" />
-                        }
-
-                        <!-- @if (!contentForTheCurrentYear.error && !contentIsEmpty) { -->
-                        <!-- } -->
 
                 </div>
         </div>
 
+        <ng-container *ngIf="!contentIsEmpty">
+
+                <div class="ps-1">
+                        <tui-textfield tuiTextfieldSize="m" iconStart="@tui.search">
+                                <input [(ngModel)]="searchQuery" [placeholder]="t(KEY.SEARCH_PLACEHOLDER)"
+                                        tuiTextfield />
+                        </tui-textfield>
+                </div>
+
+                <cdk-virtual-scroll-viewport #viewport appendOnly tuiScrollable
+                        class="viewport tui-zero-scrollbar mt-4 h-full" [itemSize]="45" [maxBufferPx]="500"
+                        [minBufferPx]="400">
+
+                        <table *ngIf="data" tuiTable class="table" [columns]="tableColumns"
+                                [direction]="orderDirection() || 1" [tuiSortBy]="sortColumnBy()"
+                                (directionChange)="orderDirection.set($event)"
+                                (tuiSortByChange)="sortColumnBy.set($event!)">
+                                <thead>
+                                        <tr tuiThGroup>
+                                                <ng-container *ngFor="let column of tableColumns">
+                                                        <th *tuiHead="column" tuiSortable tuiTh [sticky]="true"
+                                                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                                                {{ t(column)}}
+                                                        </th>
+                                                </ng-container>
+                                        </tr>
+                                </thead>
+                                <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
+                                        <tr *ngFor="let item of sortedData" tuiTr>
+                                                <ng-container *ngFor="let key of tableColumns; let i = index">
+                                                        @switch (i) {
+                                                        @case (1) {
+                                                        <!-- isDate -->
+                                                        <td *tuiCell="key" tuiTd> {{ item['date'] |
+                                                                date:'fullDate'
+                                                                }} </td>
+                                                        }
+                                                        @case (3) {
+                                                        <!-- isMessage -->
+                                                        <td *tuiCell="key" tuiTd
+                                                                [class.match]="isColumnMatch(item[key])"> {{
+                                                                item[key]}}
+                                                        </td>
+                                                        }
+                                                        @case (5) {
+                                                        <!-- isImage -->
+                                                        <td *tuiCell="key" tuiTd>
+                                                                <a [href]="item[key]" target="_blank"
+                                                                        rel="noopener noreferrer">
+                                                                        <img width="50" height="50" class="header-image"
+                                                                                ngSrc="{{item[key]}}"
+                                                                                alt="Header Image">
+                                                                </a>
+                                                        </td>
+                                                        }
+                                                        @case (6) {
+                                                        <!-- isAudio -->
+                                                        <td *tuiCell="key" tuiTd>
+                                                                <ng-audio-player *ngIf="item[key]"
+                                                                        src="{{item[key]}}" />
+                                                        </td>
+                                                        }
+                                                        @default {
+                                                        <td *tuiCell="key" tuiTd
+                                                                [class.match]="isColumnMatch(item[key])"> {{
+                                                                item[key]}}
+                                                        </td>
+                                                        }
+                                                        }
+
+                                                </ng-container>
+                                        </tr>
+                                </tbody>
+                                <tfoot>
+                                        <tr>
+                                                <td [colSpan]="tableColumns.length">
+                                                        <tui-table-pagination class="mt-2"
+                                                                [size]="AVERAGE_TABLE_PAGE_SIZE"
+                                                                [page]="tablePage() || 0"
+                                                                [total]="contentStore.draftContentForTheYear().length"
+                                                                (paginationChange)="onPagination($event)" />
+                                                </td>
+                                        </tr>
+                                </tfoot>
+                        </table>
+
+                </cdk-virtual-scroll-viewport>
+
+        </ng-container>
 
 </div>
 
