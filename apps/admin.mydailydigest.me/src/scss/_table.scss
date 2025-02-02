@@ -1,3 +1,14 @@
 .match {
   background: var(--mat-sys-inverse-primary) !important;
 }
+.message-column {
+  min-width: 300px;
+}
+
+.verses-column {
+  min-width: 200px;
+}
+
+.key-verse-column {
+  min-width: 100px;
+}

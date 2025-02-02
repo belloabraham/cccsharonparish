@@ -7,7 +7,6 @@ import {
   Signal,
   signal,
 } from '@angular/core';
-import { SharedModule } from '../../../shared';
 import { PUBLISHED_CONTENT_LIST_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 
 import { TuiDataList } from '@taiga-ui/core/components/data-list';
@@ -17,16 +16,11 @@ import { TuiBadge } from '@taiga-ui/kit/components/badge';
 import { TuiBadgedContent } from '@taiga-ui/kit/components/badged-content';
 import { TuiButtonSelect } from '@taiga-ui/kit/directives/button-select';
 
-import { DatePipe, NgForOf, NgIf, NgOptimizedImage } from '@angular/common';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgForOf, NgOptimizedImage } from '@angular/common';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import type { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
-import { TuiTable, TuiTablePagination } from '@taiga-ui/addon-table';
 import { TUI_DEFAULT_MATCHER, tuiIsPresent, TuiLet } from '@taiga-ui/cdk';
-import {
-  TuiButton,
-  TuiTextfield,
-  TuiWithTextfieldDropdown,
-} from '@taiga-ui/core';
+import { TuiButton, TuiTextfield } from '@taiga-ui/core';
 import { DashboardStore } from '../../dashboard.store';
 import { PublishedContentStore } from '../published-content-store';
 import {
@@ -36,27 +30,18 @@ import {
   Language,
 } from '@cccsharonparish/mydailydigest';
 import {
-  CdkFixedSizeVirtualScroll,
-  CdkVirtualScrollViewport,
-} from '@angular/cdk/scrolling';
-import { NgAudioPlayerComponent } from '@cccsharonparish/angular';
-import {
   ascDescSortCompare,
   AVERAGE_TABLE_PAGE_SIZE,
   ColumnKeys,
   getDaysInMonth,
   PUBLISHED_TABLE_COLUMNS,
+  TABLE_MODULES,
 } from '../../shared';
-import { MatRippleModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-content-list',
   imports: [
-    SharedModule,
     TuiTextfield,
-    TuiWithTextfieldDropdown,
-    CdkFixedSizeVirtualScroll,
-    CdkVirtualScrollViewport,
     TuiBadge,
     TuiBadgedContent,
     TuiButton,
@@ -64,18 +49,11 @@ import { MatRippleModule } from '@angular/material/core';
     TuiDataList,
     TuiFlagPipe,
     TuiTextfield,
-    FormsModule,
     NgForOf,
-    NgIf,
     ReactiveFormsModule,
     TuiButton,
-    TuiLet,
-    TuiTable,
-    TuiTablePagination,
-    NgAudioPlayerComponent,
-    DatePipe,
-    MatRippleModule,
     NgOptimizedImage,
+    ...TABLE_MODULES,
   ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss',
@@ -128,7 +106,6 @@ export class ContentListComponent {
   isColumnMatch(value: any): boolean {
     return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);
   }
-
 
   private getData(
     key: ColumnKeys,

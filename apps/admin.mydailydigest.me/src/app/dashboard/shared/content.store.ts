@@ -8,13 +8,13 @@ import { retryWhen, tap } from 'rxjs';
 import { firestoreRetryStrategy } from '../../services';
 
 type ContentState = {
-  draftContentForTheYear: ISpiritualDailyDigest[];
+  draftContents: ISpiritualDailyDigest[];
   approvedContent: ISpiritualDailyDigest[];
   contentAwaitingApproval: ISpiritualDailyDigest[];
 };
 
 const initialState: ContentState = {
-  draftContentForTheYear: [],
+  draftContents: [],
   approvedContent: [],
   contentAwaitingApproval: [],
 };
@@ -22,14 +22,14 @@ const initialState: ContentState = {
 export const ContentStore = signalStore(
   withState(initialState),
   withMethods((store, contentService = inject(ContentService)) => ({
-    getDraftContentForTheYear() {
+    getDraftContents() {
       return contentService.getDraftContents().pipe(
         retryWhen(firestoreRetryStrategy(Infinity)),
         tap({
           next: (data) => {
             patchState(store, (state) => ({
               ...state,
-              draftContentForTheYear: data,
+              draftContents: data,
             }));
           },
         })

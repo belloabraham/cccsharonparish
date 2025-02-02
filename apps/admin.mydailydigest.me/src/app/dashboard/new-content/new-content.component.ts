@@ -129,7 +129,7 @@ export class NewContentComponent implements OnDestroy {
 
   getTableUIState(start: number, end: number) {
     const publishedContent = this.contentStore
-      .draftContentForTheYear()
+      .draftContents()
       .filter((data, index) => {
         return index >= start && index < end;
       });

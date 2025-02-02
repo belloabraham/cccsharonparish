@@ -15,7 +15,7 @@ import {
   Language,
   TextContent,
 } from '@cccsharonparish/mydailydigest';
-import { Timestamp } from '@angular/fire/firestore';
+import { limit, orderBy, Timestamp } from '@angular/fire/firestore';
 import { environment } from '../../../../src/environments/environment';
 import { of } from 'rxjs';
 import { DRAFT_CONTENT_MOCK } from './mock/draft-content';
@@ -134,17 +134,14 @@ export class DraftService {
     );
   }
 
-  private getContents(collection: string) {
-    return this.remoteData.getAListOfDocData<ISpiritualDailyDigest>(
-      collection,
-      []
-    );
-  }
-
   getDraftContents() {
     if (this.USE_MOCK_DATA) {
       return of(DRAFT_CONTENT_MOCK);
     }
-    return this.getContents(COLLECTION.DRAFT);
+    return this.remoteData.getListOfDocumentDataWithQueryAsync<ISpiritualDailyDigest>(
+      COLLECTION.DRAFT,
+      [],
+      [orderBy('year', 'desc'), limit(365)]
+    );
   }
 }

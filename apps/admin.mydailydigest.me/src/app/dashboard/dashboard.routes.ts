@@ -4,6 +4,7 @@ import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { inject } from '@angular/core';
 import { PublishedContentStore } from './published-content/published-content-store';
+import { ContentStore } from './shared';
 
 const KEY = DASHBOARD_STRING_RESOURCE_KEY;
 
@@ -46,9 +47,9 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: `${ROUTE.NEW}/:${ROUTE.PARAMS.LANGUAGE_CODE}`,
-        // resolve: {
-        //   data: () =>  inject(ContentStore).getDraftContentForTheYear(),
-        // },
+        resolve: {
+          data: () =>  inject(ContentStore).getDraftContents(),
+        },
         data: {
           breadcrumb: KEY.DRAFT,
         },
