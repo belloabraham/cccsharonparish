@@ -1,7 +1,6 @@
 import {
   Component,
   computed,
-  effect,
   inject,
   Injector,
   input,
@@ -18,8 +17,7 @@ import {
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CONTENT_STRING_RESOURCE_KEYS } from './i18n/string-res-keys';
-import { ContentStore, EmptyStatusComponent } from '../shared';
-import { ContentFormComponent } from './content-form/content-form.component';
+import { ContentFormComponent, ContentStore, EmptyStatusComponent } from '../shared';
 import { TuiDialogService } from '@taiga-ui/core';
 import { Subscription } from 'rxjs';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';

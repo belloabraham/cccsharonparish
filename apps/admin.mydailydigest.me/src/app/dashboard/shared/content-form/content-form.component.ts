@@ -23,7 +23,6 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { SharedModule } from '../../../shared';
 import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
-import { CONTENT_STRING_RESOURCE_KEYS } from '../i18n/string-res-keys';
 import {
   TuiAlertService,
   TuiDialogContext,
@@ -56,7 +55,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltip } from '@angular/material/tooltip';
 import { ClipboardModule } from '@angular/cdk/clipboard';
-import { IDialogData } from '../new-content.component';
 
 import type { TuiFileLike } from '@taiga-ui/kit';
 import { TuiFiles } from '@taiga-ui/kit';
@@ -64,8 +62,9 @@ import type { Observable } from 'rxjs';
 import { of, Subject } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { environment } from '../../../../environments/environment';
-import { ContentService } from '../../shared';
-import { DraftService } from '../draft.service';
+import { CONTENT_STRING_RESOURCE_KEYS } from './i18n/string-res-keys';
+import { DraftService } from '../../new-content/draft.service';
+import { IDialogData } from '../../new-content/new-content.component';
 
 @Component({
   selector: 'app-content-form',
