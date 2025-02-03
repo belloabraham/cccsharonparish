@@ -48,21 +48,21 @@
 
                                                                 @if (column === "message") {
                                                                 <th *tuiHead="column" class="message-column" tuiTh
-                                                                        [sticky]="true"
+                                                                        [sticky]="true" [tuiSortable]="false"
                                                                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                                                         {{ t(column)}}
                                                                 </th>
                                                                 }
                                                                 @else if (column === "verses") {
                                                                 <th *tuiHead="column" class="verses-column" tuiTh
-                                                                        [sticky]="true"
+                                                                        [sticky]="true" [tuiSortable]="false"
                                                                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                                                         {{ t(column)}}
                                                                 </th>
                                                                 }
                                                                 @else if (column === "keyVerse") {
                                                                 <th *tuiHead="column" class="key-verse-column" tuiTh
-                                                                        [sticky]="true"
+                                                                        [sticky]="true" [tuiSortable]="false"
                                                                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                                                         {{ t(column)}}
                                                                 </th>
@@ -86,7 +86,7 @@
                                         </thead>
                                         <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody
                                                 [data]="sortedData">
-                                                <tr *ngFor="let item of sortedData" tuiTr matRipple>
+                                                <tr *ngFor="let item of sortedData" tuiTr>
                                                         <ng-container *ngFor="let key of tableColumns; let i = index">
                                                                 @if (key ==="date") {
                                                                 <td *tuiCell="key" tuiTd> {{ item[key] |
@@ -118,7 +118,6 @@
                                                                         item[key]}}
                                                                 </td>
                                                                 }
-
 
                                                         </ng-container>
                                                 </tr>
