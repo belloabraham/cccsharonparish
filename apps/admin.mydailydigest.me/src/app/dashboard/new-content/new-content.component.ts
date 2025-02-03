@@ -104,6 +104,10 @@ export class NewContentComponent implements OnDestroy {
     );
   }
 
+  deleteContent() {}
+  editContent() {}
+  submitForReview() {}
+
   isColumnMatch(value: any): boolean {
     return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);
   }

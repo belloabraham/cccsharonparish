@@ -110,7 +110,41 @@
                                                                 }@else if (key === "audioUrl"){
                                                                 <td *tuiCell="key" tuiTd>
                                                                         <ng-audio-player *ngIf="item[key]"
-                                                                                src="{{item[key]}}" />
+                                                                                [src]="item[key]!" />
+                                                                </td>
+                                                                }@else if (key === "sn"){
+                                                                <td *tuiCell="key" tuiTd
+                                                                        [class.match]="isColumnMatch(item[key])">
+
+                                                                        <div
+                                                                                class="flex flex-col justify-between items-center h-full gap-4">
+                                                                                <p>
+                                                                                        {{ item[key]}}
+                                                                                </p>
+
+                                                                                <div class="flex flex-col">
+
+                                                                                        <button mat-icon-button
+                                                                                                (click)="submitForReview()">
+                                                                                                <mat-icon
+                                                                                                        fontIcon="file-upload-outline"></mat-icon>
+                                                                                        </button>
+
+                                                                                        <button (click)="editContent()"
+                                                                                                mat-icon-button>
+                                                                                                <mat-icon
+                                                                                                        fontIcon="pen-fill"></mat-icon>
+                                                                                        </button>
+
+                                                                                        <button (click)="deleteContent()"
+                                                                                                mat-icon-button>
+                                                                                                <mat-icon
+                                                                                                        class="text-orange-700"
+                                                                                                        fontIcon="trash-can-fill"></mat-icon>
+                                                                                        </button>
+
+                                                                                </div>
+                                                                        </div>
                                                                 </td>
                                                                 }@else {
                                                                 <td *tuiCell="key" tuiTd
