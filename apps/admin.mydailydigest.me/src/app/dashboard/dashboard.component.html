@@ -27,12 +27,12 @@
 
 
 @let isAdmin = userDataStore.user()?.userType === 'Admin';
-@let isPublisher = isAdmin ||  userDataStore.user()?.userType === 'Publisher';
+@let isPublisher = isAdmin || userDataStore.user()?.userType === 'Publisher';
 
 
 <!-- Top Navigation -->
 <ng-template #topNavigation>
-    <nav compact tuiSubheader [style.position]="'sticky'" class="!left-0 !right-0">
+    <nav compact tuiSubheader [style.position]="'sticky'" class="!left-0 !right-0 !z-50">
         <tui-breadcrumbs [itemsLimit]="10">
             <ng-container *ngFor="let item of breadcrumbs(); let last = last">
                 <ng-container *ngIf="last">
@@ -126,8 +126,8 @@
                 {{t(KEY.ADD_NEW)}}
             </a>
 
-            <a *ngIf="contentStore.contentAwaitingApproval.length > 0 && isPublisher" [routerLink]="[ROUTE.AWAITING_APPROVAL]"
-                routerLinkActive="link-active" class="nav-item" matRipple>
+            <a *ngIf="contentStore.contentAwaitingApproval.length > 0 && isPublisher"
+                [routerLink]="[ROUTE.AWAITING_APPROVAL]" routerLinkActive="link-active" class="nav-item" matRipple>
                 <mat-icon fontIcon="reload-time-outline"></mat-icon>
                 {{t(KEY.AWAITING_APPROVAL)}}
             </a>
@@ -163,8 +163,8 @@
 
             <footer class="flex flex-col">
 
-                <a *ngIf="isAdmin" [routerLink]="[ROUTE.EDITORS]"
-                    routerLinkActive="link-active-light" class="nav-item" matRipple type="button">
+                <a *ngIf="isAdmin" [routerLink]="[ROUTE.EDITORS]" routerLinkActive="link-active-light" class="nav-item"
+                    matRipple type="button">
                     <mat-icon fontIcon="spark-user-outline"></mat-icon>
                     {{t(KEY.EDITORS)}}
                 </a>
@@ -196,15 +196,15 @@
             {{t(KEY.ADD_NEW)}}
         </a>
 
-        <a *ngIf="contentStore.contentAwaitingApproval.length > 0 && isPublisher" [routerLink]="[ROUTE.AWAITING_APPROVAL]" tuiAsideItem
-            matRipple>
+        <a *ngIf="contentStore.contentAwaitingApproval.length > 0 && isPublisher"
+            [routerLink]="[ROUTE.AWAITING_APPROVAL]" tuiAsideItem matRipple>
             <mat-icon fontIcon="reload-time-outline"></mat-icon>
             {{t(KEY.AWAITING_APPROVAL)}}
         </a>
 
         <tui-aside-group *ngIf="nonEnglishSupportedLanguages().length > 0 && contentStore.approvedContent.length > 0">
-            <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].countryCode]" automation-id="setting"
-                tuiAsideItem tuiChevron matRipple type="button">
+            <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].countryCode]"
+                automation-id="setting" tuiAsideItem tuiChevron matRipple type="button">
                 <mat-icon fontIcon="translate-outline"></mat-icon>
                 {{t(KEY.TRANSLATE)}}
                 <ng-template>
@@ -226,8 +226,7 @@
 
         <footer>
 
-            <a *ngIf="isAdmin" [routerLink]="[ROUTE.EDITORS]" tuiAsideItem matRipple
-                type="button">
+            <a *ngIf="isAdmin" [routerLink]="[ROUTE.EDITORS]" tuiAsideItem matRipple type="button">
                 <mat-icon fontIcon="spark-user-outline"></mat-icon>
                 {{t(KEY.EDITORS)}}
             </a>
