@@ -5,7 +5,6 @@ import { TuiDialogCloseService } from '@taiga-ui/core';
 import {
   injectContext,
   PolymorpheusOutlet,
-  PolymorpheusTemplate,
 } from '@taiga-ui/polymorpheus';
 import { AlertPromptOptions } from './alert-prompt-options';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   standalone: true,
   selector: 'app-alert-dialog',
-  imports: [PolymorpheusOutlet, PolymorpheusTemplate, MatButtonModule],
+  imports: [PolymorpheusOutlet, MatButtonModule],
   templateUrl: './alert-dialog.component.html',
   styleUrls: ['./alert-dialog.component.scss'],
   providers: [TuiDialogCloseService],
