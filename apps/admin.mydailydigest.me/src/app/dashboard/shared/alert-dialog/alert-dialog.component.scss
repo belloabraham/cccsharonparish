@@ -1,17 +1,22 @@
+@use 'breakpoints';
+
 :host {
-    display: block;
-    padding: 1.5rem;
-    margin: auto;
-    border-radius: 0 0 0.75rem 0.75rem;
-    background: var(--tui-background-base);
-    box-shadow: inset 0 4px var(--tui-background-accent-2);
-    animation:
-        tuiReveal var(--tui-duration),
-        tuiFadeIn var(--tui-duration);
+  display: block;
+  padding: 1rem;
+  min-width: 90%;
+  margin: auto;
+  border-radius: 0 0 0.75rem 0.75rem;
+  background: var(--tui-background-base);
+  box-shadow: inset 0 4px var(--tui-background-accent-2);
+  animation: tuiReveal var(--tui-duration), tuiFadeIn var(--tui-duration);
+  @include breakpoints.medium {
+    min-width: 30rem;
+  }
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    margin: 1.5rem 0 0;
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  margin: 1rem 0 0;
 }
