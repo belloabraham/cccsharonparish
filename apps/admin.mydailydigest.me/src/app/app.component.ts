@@ -1,11 +1,5 @@
-import { TuiRoot } from '@taiga-ui/core';
-import {
-  Component,
-  inject,
-  OnDestroy,
-  OnInit,
-  Signal,
-} from '@angular/core';
+import { TUI_SCROLLBAR_OPTIONS, TuiRoot } from '@taiga-ui/core';
+import { Component, inject, OnDestroy, OnInit, Signal } from '@angular/core';
 import {
   NavigationCancel,
   NavigationEnd,
@@ -30,7 +24,15 @@ import { filter, map, merge } from 'rxjs';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  providers: [ConnectionStateUtil],
+  providers: [
+    ConnectionStateUtil,
+    {
+      provide: TUI_SCROLLBAR_OPTIONS,
+      useValue: {
+        mode: 'native',
+      },
+    },
+  ],
 })
 export class AppComponent
   extends BaseAppComponent
@@ -57,7 +59,7 @@ export class AppComponent
     this.deviceIsConnected = toSignal(
       this.connectionStateUtil.observeDeviceInternetConnectionState(ROUTE.ROOT)
     );
-    this.setNavigationObserver()
+    this.setNavigationObserver();
   }
 
   setNavigationObserver() {

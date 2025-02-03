@@ -47,6 +47,7 @@ import {
   TuiPopup,
   TuiFallbackSrcPipe,
   TuiExpand,
+  TUI_SCROLLBAR_OPTIONS,
 } from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
 import {
@@ -97,6 +98,12 @@ import { ContentStore } from './shared';
     {
       provide: PAGE_TITLE_KEY,
       useValue: DASHBOARD_STRING_RESOURCE_KEY.PAGE_TITLE,
+    },
+    {
+      provide: TUI_SCROLLBAR_OPTIONS,
+      useValue: {
+        mode: 'always',
+      },
     },
   ],
 })
