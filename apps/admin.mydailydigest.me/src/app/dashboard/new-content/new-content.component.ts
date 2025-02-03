@@ -12,6 +12,7 @@ import {
 import { SharedModule } from '../../shared';
 import {
   TuiAlertService,
+  TuiNotification,
   TuiTextfield,
 } from '@taiga-ui/core';
 import {
@@ -63,6 +64,7 @@ export interface IDialogData {
     MatIconModule,
     EmptyStatusComponent,
     NgIf,
+    TuiNotification,
     MatTooltipModule,
     ...TABLE_MODULES,
   ],

@@ -1,8 +1,12 @@
 <div *transloco="let t" class="new-content h-full">
-        <h5 class="page-title">{{title()}}</h5>
-
         @let draftContents = contentStore.draftContents();
         @let contentIsEmpty = draftContents.length === 0;
+        <h5 class="page-title" [class.!mb-0]="!contentIsEmpty">{{title()}}</h5>
+
+        <tui-notification *ngIf="!contentIsEmpty" size="s" appearance="warning" class="mb-12">
+                <p [innerHTML]="t(KEY.SUBMIT_FOR_REVIEW_WARN_MSG)"></p>
+        </tui-notification>
+
 
         <div *ngIf="contentIsEmpty" class="card inline-block !p-0">
                 <nav class="nav px-4 py-2 flex gap-4 items-center justify-between">
@@ -128,7 +132,8 @@
                                                                                                 mat-icon-button
                                                                                                 (click)="submitForReviewPrompt(item)">
                                                                                                 <mat-icon
-                                                                                                        fontIcon="file-upload-outline"></mat-icon>
+                                                                                                        class="text-orange-700"
+                                                                                                        fontIcon="file-upload-fill"></mat-icon>
                                                                                         </button>
 
                                                                                         <button [matTooltip]="t(KEY.EDIT)"
@@ -142,7 +147,6 @@
                                                                                                 (click)="deleteContentPrompt(item)"
                                                                                                 mat-icon-button>
                                                                                                 <mat-icon
-                                                                                                        class="text-orange-700"
                                                                                                         fontIcon="trash-can-fill"></mat-icon>
                                                                                         </button>
 

@@ -10,4 +10,5 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   DELETE: 'delete',
   EDIT: 'edit',
   SUBMIT_FOR_REVIEW: 'submit_for_review',
+  SUBMIT_FOR_REVIEW_WARN_MSG: 'submit_for_review_warn_msg',
 };

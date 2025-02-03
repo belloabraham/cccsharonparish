@@ -94,6 +94,7 @@
   "delete": "Delete",
   "edit": "Edit",
   "submit_for_review": "Submit for review",
+  "submit_for_review_warn_msg": "Once you are done writing any content, remember to submit it for review by clicking the arrow up button in the <strong>SN</strong>  column.",
 
   "years": "Years",
   "year": "Year",

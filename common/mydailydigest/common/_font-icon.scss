@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.file-upload-fill:before {
+  content: '\e91f';
+}
 .file-upload-outline:before {
   content: '\e91c';
 }
