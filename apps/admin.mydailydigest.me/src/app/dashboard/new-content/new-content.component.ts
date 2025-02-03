@@ -10,7 +10,7 @@ import {
   signal,
 } from '@angular/core';
 import { SharedModule } from '../../shared';
-import { TuiTextfield } from '@taiga-ui/core';
+import { TUI_DIALOGS, TuiAlertService, TuiTextfield } from '@taiga-ui/core';
 import {
   contentsToTableUIState,
   DEFAULT_LANG_CODE,
@@ -22,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CONTENT_STRING_RESOURCE_KEYS } from './i18n/string-res-keys';
 import {
+  AlertDialogService,
   ascDescSortCompare,
   AVERAGE_TABLE_PAGE_SIZE,
   ColumnKeys,
@@ -68,6 +69,9 @@ export class NewContentComponent implements OnDestroy {
   contentFormDialogSubscription = Subscription.EMPTY;
   contentStore = inject(ContentStore);
   dashboardStore = inject(DashboardStore);
+  private readonly alertService = inject(TuiAlertService);
+  private readonly alertDialogService = inject(AlertDialogService);
+
   sddForSelectedLanguage = signal<ISpiritualDailyDigest[]>([]);
   @HostBinding('style.height') height = '100%';
   @HostBinding('style.display') display = 'block';
@@ -104,7 +108,17 @@ export class NewContentComponent implements OnDestroy {
     );
   }
 
-  deleteContent() {}
+  deleteContent() {
+    this.alertDialogService
+      .open('', {
+        heading: 'Taiga UI is the best',
+        buttons: ['Absolutely!', 'No way!'],
+      })
+      .subscribe({
+        next: (data) => {
+        },
+      });
+  }
   editContent() {}
   submitForReview() {}
 
