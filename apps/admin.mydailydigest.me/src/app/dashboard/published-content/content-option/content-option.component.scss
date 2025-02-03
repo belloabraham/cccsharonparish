@@ -21,7 +21,8 @@
   cursor: pointer;
   background: var(--mat-sys-surface-container-low);
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   p {
     font-weight: 600;
@@ -30,7 +31,6 @@
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 }
