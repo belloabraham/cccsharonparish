@@ -50,11 +50,11 @@ form {
   }
 
   &::-webkit-scrollbar-track {
-    background: transparent;
+    background: transparent !important;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: transparent;
+    background: transparent !important;
 
     border-radius: 0.25rem;
   }
