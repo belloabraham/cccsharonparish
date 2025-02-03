@@ -85,6 +85,13 @@
   "content_created_error_msg": "Unable to create content, check your internet connection and try again.",
   "created": "Created",
 
+  "yes": "Yes",
+  "no": "No",
+  "delete_content_quest": "Delete content?",
+  "delete_content_msg": "Are you sure you want to delete \"{{value}}\" content?",
+  "submit_for_review_quest": "Submit for review?",
+  "submit_for_review_msg": "Are you sure you want to submit \"{{value}}\" for review?",
+
   "years": "Years",
   "year": "Year",
   "reference": "Reference",
@@ -104,7 +111,6 @@
   "month_9": "October",
   "month_10": "November",
   "month_11": "December",
-
 
   "no_content_awaiting_approval_msg": "There are no content submitted for approval, have editors submit a draft content for approval and they will appear here.",
 

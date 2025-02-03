@@ -16,6 +16,7 @@ import {
   DEFAULT_LANG_CODE,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestTableUIState,
+  ISpiritualDailyDigestUIState,
   Language,
 } from '@cccsharonparish/mydailydigest';
 import { MatIconModule } from '@angular/material/icon';
@@ -40,6 +41,7 @@ import { DashboardStore } from '../dashboard.store';
 import { COLLECTION, STORAGE_PATH } from '../../services';
 import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
 import { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
+import { LanguageResourceService } from '@cccsharonparish/angular';
 
 export interface IDialogData {
   language: Language;
@@ -89,6 +91,7 @@ export class NewContentComponent implements OnDestroy {
   readonly orderDirection = signal<-1 | 1>(-1);
   searchQuery = '';
   data?: Signal<ISpiritualDailyDigestTableUIState[]> = signal([]);
+  private readonly languageResourceService = inject(LanguageResourceService);
 
   constructor() {
     this.title = computed(() => {
@@ -108,19 +111,65 @@ export class NewContentComponent implements OnDestroy {
     );
   }
 
-  deleteContent() {
+  deleteContentPrompt(data: ISpiritualDailyDigestUIState) {
     this.alertDialogService
-      .open('', {
-        heading: 'Taiga UI is the best',
-        buttons: ['Absolutely!', 'No way!'],
-      })
+      .open(
+        this.languageResourceService.getStringWithParameter(
+          this.KEY.DELETE_CONTENT_MSG,
+          {
+            value: data.topic,
+          }
+        ),
+        {
+          heading: this.languageResourceService.getString(
+            this.KEY.DELETE_CONTENT_QUEST
+          ),
+          buttons: [
+            this.languageResourceService.getString(this.KEY.YES),
+            this.languageResourceService.getString(this.KEY.NO),
+          ],
+        }
+      )
       .subscribe({
-        next: (data) => {
+        next: (isYes) => {
+          if (isYes) {
+            this.deleteContent(data);
+          }
         },
       });
   }
-  editContent() {}
-  submitForReview() {}
+
+  submitForReviewPrompt(data: ISpiritualDailyDigestUIState) {
+    this.alertDialogService
+      .open(
+        this.languageResourceService.getStringWithParameter(
+          this.KEY.SUBMIT_FOR_REVIEW_MSG,
+          {
+            value: data.topic,
+          }
+        ),
+        {
+          heading: this.languageResourceService.getString(
+            this.KEY.SUBMIT_FOR_REVIEW_QUEST
+          ),
+          buttons: [
+            this.languageResourceService.getString(this.KEY.YES),
+            this.languageResourceService.getString(this.KEY.NO),
+          ],
+        }
+      )
+      .subscribe({
+        next: (isYes) => {
+          if (isYes) {
+            this.submitForReview(data);
+          }
+        },
+      });
+  }
+
+  submitForReview(data: ISpiritualDailyDigestUIState) {}
+  editContent(data: ISpiritualDailyDigestUIState) {}
+  deleteContent(data: ISpiritualDailyDigestUIState) {}
 
   isColumnMatch(value: any): boolean {
     return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);

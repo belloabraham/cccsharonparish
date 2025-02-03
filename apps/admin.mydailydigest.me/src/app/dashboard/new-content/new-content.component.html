@@ -1,4 +1,4 @@
-<div *transloco="let t" class="new-content h-full">
+<div *transloco="let t" class="new-content h-full no-scrollbar">
         <h5 class="page-title">{{title()}}</h5>
 
         @let draftContents = contentStore.draftContents();
@@ -125,18 +125,18 @@
                                                                                 <div class="flex flex-col">
 
                                                                                         <button mat-icon-button
-                                                                                                (click)="submitForReview()">
+                                                                                                (click)="submitForReviewPrompt(item)">
                                                                                                 <mat-icon
                                                                                                         fontIcon="file-upload-outline"></mat-icon>
                                                                                         </button>
 
-                                                                                        <button (click)="editContent()"
+                                                                                        <button (click)="editContent(item)"
                                                                                                 mat-icon-button>
                                                                                                 <mat-icon
                                                                                                         fontIcon="pen-fill"></mat-icon>
                                                                                         </button>
 
-                                                                                        <button (click)="deleteContent()"
+                                                                                        <button (click)="deleteContentPrompt(item)"
                                                                                                 mat-icon-button>
                                                                                                 <mat-icon
                                                                                                         class="text-orange-700"

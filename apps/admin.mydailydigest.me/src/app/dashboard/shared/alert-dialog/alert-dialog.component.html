@@ -1,4 +1,4 @@
-<h2 [id]="context.id">{{ context.heading }}</h2>
+<h2 class="font-bold mb-2" [id]="context.id">{{ context.heading }}</h2>
 <section>
     <ng-container *polymorpheusOutlet="$any(context.content) as text; context: context">
         {{ text }}
