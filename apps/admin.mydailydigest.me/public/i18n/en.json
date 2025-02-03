@@ -91,6 +91,9 @@
   "delete_content_msg": "Are you sure you want to delete \"{{value}}\" content?",
   "submit_for_review_quest": "Submit for review?",
   "submit_for_review_msg": "Are you sure you want to submit \"{{value}}\" for review?",
+  "delete": "Delete",
+  "edit": "Edit",
+  "submit_for_review": "Submit for review",
 
   "years": "Years",
   "year": "Year",

@@ -10,7 +10,10 @@ import {
   signal,
 } from '@angular/core';
 import { SharedModule } from '../../shared';
-import { TUI_DIALOGS, TuiAlertService, TuiTextfield } from '@taiga-ui/core';
+import {
+  TuiAlertService,
+  TuiTextfield,
+} from '@taiga-ui/core';
 import {
   contentsToTableUIState,
   DEFAULT_LANG_CODE,
@@ -42,6 +45,7 @@ import { COLLECTION, STORAGE_PATH } from '../../services';
 import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
 import { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { LanguageResourceService } from '@cccsharonparish/angular';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 export interface IDialogData {
   language: Language;
@@ -59,6 +63,7 @@ export interface IDialogData {
     MatIconModule,
     EmptyStatusComponent,
     NgIf,
+    MatTooltipModule,
     ...TABLE_MODULES,
   ],
   templateUrl: './new-content.component.html',

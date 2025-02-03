@@ -124,19 +124,22 @@
 
                                                                                 <div class="flex flex-col">
 
-                                                                                        <button mat-icon-button
+                                                                                        <button [matTooltip]="t(KEY.SUBMIT_FOR_REVIEW)"
+                                                                                                mat-icon-button
                                                                                                 (click)="submitForReviewPrompt(item)">
                                                                                                 <mat-icon
                                                                                                         fontIcon="file-upload-outline"></mat-icon>
                                                                                         </button>
 
-                                                                                        <button (click)="editContent(item)"
+                                                                                        <button [matTooltip]="t(KEY.EDIT)"
+                                                                                                (click)="editContent(item)"
                                                                                                 mat-icon-button>
                                                                                                 <mat-icon
                                                                                                         fontIcon="pen-fill"></mat-icon>
                                                                                         </button>
 
-                                                                                        <button (click)="deleteContentPrompt(item)"
+                                                                                        <button [matTooltip]="t(KEY.DELETE)"
+                                                                                                (click)="deleteContentPrompt(item)"
                                                                                                 mat-icon-button>
                                                                                                 <mat-icon
                                                                                                         class="text-orange-700"
