@@ -1,16 +1,13 @@
 import { Route, Router } from '@angular/router';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { AuthComponent } from './auth/auth.component';
-import { forkJoin, map } from 'rxjs';
+import { forkJoin} from 'rxjs';
 import { inject } from '@angular/core';
 import { AUTH_TOKEN } from './services';
 import { DashboardService } from './dashboard/dashboard.service';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { getStorage, provideStorage } from '@angular/fire/storage';
-import { getApp } from '@angular/fire/app';
-import { UserDataStore } from './shared';
 import { DashboardStore } from './dashboard/dashboard.store';
-import { ContentService, ContentStore } from './dashboard/shared';
+import { ContentStore } from './dashboard/shared';
 
 export const appRoutes: Route[] = [
   {
@@ -29,7 +26,7 @@ export const appRoutes: Route[] = [
   },
   {
     path: ROUTE.ROOT,
-    providers: [DashboardService, ContentStore, ContentService],
+    providers: [DashboardService, ContentStore],
     resolve: {
       data: () => {
         // const user$ = inject(UserDataStore).getUser();

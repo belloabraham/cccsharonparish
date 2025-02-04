@@ -42,6 +42,7 @@ import {
   REGEX,
 } from '@cccsharonparish/mydailydigest';
 import {
+  COLLECTION,
   HttpRequestProgressIndicatorService,
   STORAGE_PATH,
 } from '../../../services';
@@ -65,6 +66,7 @@ import { environment } from '../../../../environments/environment';
 import { CONTENT_STRING_RESOURCE_KEYS } from './i18n/string-res-keys';
 import { DraftService } from '../../new-content/draft.service';
 import { IDialogData } from '../../new-content/new-content.component';
+import { ContentService } from '../content.service';
 
 @Component({
   selector: 'app-content-form',
@@ -111,7 +113,9 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   readonly uploadedAudioUrl = signal<string | null>(null);
   rootStoragePath = '';
   rootDataPath = '';
+  existingContentUIState?: ISpiritualDailyDigestUIState;
   existingContent?: ISpiritualDailyDigest;
+
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
   > | null = null;
@@ -120,11 +124,12 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   > | null = null;
   readonly languageService = inject(LanguageResourceService);
   readonly draftService = inject(DraftService);
+  private readonly contentService = inject(ContentService);
 
   private readonly MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES = 500 * 1024; //500Kb
   private readonly MAX_ALLOWED_AUDIO_SIZE_IN_BYTES = 10 * 1024 * 1024; //10Mb
 
-  DEFAULT_LANG_COUNTRY_CODE = DEFAULT_LANG_CODE;
+  defaultLangCode = signal('');
 
   readonly imageUploadState = signal<
     'uploading' | 'uploaded' | 'error' | 'none'
@@ -157,48 +162,29 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
+    this.defaultLangCode.set(DEFAULT_LANG_CODE);
     this.initForm();
     const data = this.dialogContext.data;
+    this.existingContentUIState = data.existingContentUIState;
     this.existingContent = data.existingContent;
     this.rootStoragePath = data.rootStoragePath;
     this.rootDataPath = data.rootDataPath;
     this.language.set(data.language);
-    if (this.existingContent) {
-      this.updateFormWithExistingData(this.existingContent);
+    if (this.existingContentUIState) {
+      this.updateFormWithExistingData(this.existingContentUIState);
     }
   }
 
-  private updateFormWithExistingData(existingContent: ISpiritualDailyDigest) {
-    const contentForLanguage = existingContent.content.find(
-      (content) => content.language.code === this.language()?.countryCode
-    )!;
-
-    const textContent = contentForLanguage.text;
-    const bibleVerse = contentForLanguage.text.bibleVerse;
-    const date = new Date(
-      existingContent.year,
-      existingContent.month - 1,
-      existingContent.day
-    );
-
-    const uiState: ISpiritualDailyDigestUIState = {
-      topic: textContent.topic,
-      message: textContent.message,
-      reference: bibleVerse.reference,
-      verses: bibleVerse.verses,
-      keyVerse: bibleVerse.keyVerse,
-      tags: existingContent.tags,
-      date: date,
-      imagePath: existingContent.imagePath,
-      audioUrl: contentForLanguage.audioUrl,
-    };
-    this.setDefaultMediaContent(uiState);
-    this.setFormValue(uiState);
+  private updateFormWithExistingData(
+    existingContent: ISpiritualDailyDigestUIState
+  ) {
+    this.setDefaultMediaContent(existingContent);
+    this.setFormValue(existingContent);
   }
 
   private setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
     if (sddUIiState?.imagePath) {
-      this.defaultImageUrl = `${environment.cdnBaseUrl}/${sddUIiState.imagePath}`;
+    //  this.defaultImageUrl = `${environment.cdnBaseUrl}/${sddUIiState.imagePath}`;
     }
     if (sddUIiState?.audioUrl) {
       this.uploadedAudioUrl.set(sddUIiState.audioUrl);
@@ -206,10 +192,10 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   private setFormValue(sddUIiState: ISpiritualDailyDigestUIState) {
+    this.dateFC.disable();
     this.form.setValue({
       ...sddUIiState,
     });
-    this.dateFC.disable();
   }
 
   ngAfterViewInit(): void {
@@ -364,7 +350,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   onSubmit() {
     if (this.form.valid) {
-      const sddUIState: ISpiritualDailyDigestUIState = {
+      const newContent: ISpiritualDailyDigestUIState = {
         topic: this.topicFC.value!,
         message: this.messageFC.value!,
         reference: this.bibleReferenceFC.value!,
@@ -377,24 +363,24 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       };
 
       if (this.existingContent) {
-        this.updateContent(sddUIState, this.existingContent);
+        this.updateContent(newContent, this.existingContent);
       }
 
       if (!this.existingContent) {
-        this.createContent(sddUIState);
+        this.createDraftContent(newContent);
       }
     }
   }
 
   private updateContent(
-    sddUIState: ISpiritualDailyDigestUIState,
+    newContent: ISpiritualDailyDigestUIState,
     existingContent: ISpiritualDailyDigest
   ) {
-    this.draftService
+    this.contentService
       .updateContent(
-        sddUIState,
-        this.language()!,
+        newContent,
         existingContent,
+        this.language()!,
         this.rootDataPath
       )
       .subscribe({
@@ -431,9 +417,9 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       .subscribe();
   }
 
-  private createContent(sddUIState: ISpiritualDailyDigestUIState) {
+  private createDraftContent(newContent: ISpiritualDailyDigestUIState) {
     this.draftService
-      .createContent(sddUIState, this.language()!, this.rootDataPath)
+      .createContent(newContent, this.language()!, COLLECTION.DRAFT)
       .subscribe({
         next: () => {
           this.showAlertSuccessMessage(

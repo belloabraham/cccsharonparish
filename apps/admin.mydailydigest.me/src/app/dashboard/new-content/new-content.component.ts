@@ -10,11 +10,7 @@ import {
   signal,
 } from '@angular/core';
 import { SharedModule } from '../../shared';
-import {
-  TuiAlertService,
-  TuiNotification,
-  TuiTextfield,
-} from '@taiga-ui/core';
+import { TuiAlertService, TuiNotification, TuiTextfield } from '@taiga-ui/core';
 import {
   contentsToTableUIState,
   DEFAULT_LANG_CODE,
@@ -47,9 +43,11 @@ import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
 import { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { SubSink } from 'subsink';
 
 export interface IDialogData {
   language: Language;
+  existingContentUIState?: ISpiritualDailyDigestUIState;
   existingContent?: ISpiritualDailyDigest;
   rootStoragePath: string;
   rootDataPath: string;
@@ -75,7 +73,7 @@ export class NewContentComponent implements OnDestroy {
   readonly KEY = CONTENT_STRING_RESOURCE_KEYS;
   private dialogService = inject(TuiDialogService);
   private injector = inject(Injector);
-  contentFormDialogSubscription = Subscription.EMPTY;
+  subscriptions = new SubSink();
   contentStore = inject(ContentStore);
   dashboardStore = inject(DashboardStore);
   private readonly alertService = inject(TuiAlertService);
@@ -175,7 +173,14 @@ export class NewContentComponent implements OnDestroy {
   }
 
   submitForReview(data: ISpiritualDailyDigestUIState) {}
-  editContent(data: ISpiritualDailyDigestUIState) {}
+  editContent(
+    existingContentTableUIState: ISpiritualDailyDigestTableUIState,
+    existingContent: ISpiritualDailyDigest
+  ) {
+    const { sn, ...existingContentUIState } = existingContentTableUIState;
+    this.openContentDialog(existingContentUIState, existingContent);
+  }
+
   deleteContent(data: ISpiritualDailyDigestUIState) {}
 
   isColumnMatch(value: any): boolean {
@@ -214,16 +219,20 @@ export class NewContentComponent implements OnDestroy {
     return tableUIState;
   }
 
-  openContentDialog(selectedContent?: ISpiritualDailyDigest) {
+  openContentDialog(
+    existingContentUIState?: ISpiritualDailyDigestUIState,
+    existingContent?: ISpiritualDailyDigest
+  ) {
     const language = this.dashboardStore
       .supportedLanguages()
       .languages.find((lang) => lang.code === this.languageCode());
-    this.contentFormDialogSubscription = this.dialogService
+    this.subscriptions.sink = this.dialogService
       .open<IDialogData | undefined>(
         new PolymorpheusComponent(ContentFormComponent, this.injector),
         {
           data: {
-            existingContent: selectedContent,
+            existingContentUIState: existingContentUIState,
+            existingContent: existingContent,
             language: language,
             rootStoragePath: STORAGE_PATH.DRAFT,
             rootDataPath: COLLECTION.DRAFT,
@@ -236,6 +245,6 @@ export class NewContentComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.contentFormDialogSubscription.unsubscribe();
+    this.subscriptions.unsubscribe();
   }
 }

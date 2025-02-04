@@ -7,18 +7,16 @@ import {
   STORAGE_PATH,
 } from '../../services';
 import {
-  BibleVerseContent,
-  Content,
   dataURLtoFile,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
   Language,
-  TextContent,
 } from '@cccsharonparish/mydailydigest';
 import { limit, orderBy, Timestamp } from '@angular/fire/firestore';
 import { environment } from '../../../../src/environments/environment';
 import { of } from 'rxjs';
 import { DRAFT_CONTENT_MOCK } from './mock/draft-content';
+import { getContentFromUIState } from '../shared';
 
 @Injectable({
   providedIn: 'any',
@@ -39,7 +37,7 @@ export class DraftService {
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
     const day = date.getDate();
-    const content = this.getContent(sddUIState, language);
+    const content = getContentFromUIState(sddUIState, language);
 
     const createdContent: ISpiritualDailyDigest = {
       id: this.getIdFromDate(date),
@@ -59,55 +57,6 @@ export class DraftService {
       createdContent,
       { merge: false }
     );
-  }
-
-  updateContent(
-    sddUIiState: ISpiritualDailyDigestUIState,
-    language: Language,
-    existingSDD: ISpiritualDailyDigest,
-    collection: string
-  ) {
-    const userId = this.auth.getUserId()!;
-    const content = this.getContent(sddUIiState, language);
-    const updatedContent: ISpiritualDailyDigest = {
-      ...existingSDD,
-      imagePath: sddUIiState.imagePath,
-      tags: sddUIiState.tags,
-      isAwaitingApproval: false,
-      content: [content],
-      updatedBy: userId,
-      updatedAt: Timestamp.now(),
-    };
-    return this.remoteData.addADocumentDataTo(
-      collection,
-      [updatedContent.id],
-      updatedContent,
-      { merge: true }
-    );
-  }
-
-  private getContent(
-    sddUIiState: ISpiritualDailyDigestUIState,
-    language: Language
-  ) {
-    const bibleVerse: BibleVerseContent = {
-      reference: sddUIiState.reference,
-      verses: sddUIiState.verses,
-      keyVerse: sddUIiState.keyVerse,
-    };
-
-    const textContent: TextContent = {
-      topic: sddUIiState.topic,
-      message: sddUIiState.message,
-      bibleVerse: bibleVerse,
-    };
-
-    const content: Content = {
-      language: language,
-      text: textContent,
-      audioUrl: sddUIiState.audioUrl,
-    };
-    return content;
   }
 
   private getIdFromDate(date: Date) {

@@ -90,7 +90,7 @@
                                         </thead>
                                         <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody
                                                 [data]="sortedData">
-                                                <tr *ngFor="let item of sortedData" tuiTr>
+                                                <tr *ngFor="let item of sortedData; let i = index" tuiTr>
                                                         <ng-container *ngFor="let key of tableColumns; let i = index">
                                                                 @if (key ==="date") {
                                                                 <td *tuiCell="key" tuiTd> {{ item[key] |
@@ -137,7 +137,7 @@
                                                                                         </button>
 
                                                                                         <button [matTooltip]="t(KEY.EDIT)"
-                                                                                                (click)="editContent(item)"
+                                                                                                (click)="editContent(item, contentStore.draftContents()[i])"
                                                                                                 mat-icon-button>
                                                                                                 <mat-icon
                                                                                                         fontIcon="pen-fill"></mat-icon>
