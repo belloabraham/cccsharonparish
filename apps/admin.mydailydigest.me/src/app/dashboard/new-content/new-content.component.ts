@@ -119,13 +119,13 @@ export class NewContentComponent implements OnDestroy {
     );
   }
 
-  deleteContentPrompt(data: ISpiritualDailyDigestUIState) {
+  deleteContentPrompt(topic: string, id: string) {
     this.alertDialogService
       .open(
         this.languageResourceService.getStringWithParameter(
           this.KEY.DELETE_CONTENT_MSG,
           {
-            value: data.topic,
+            value: topic,
           }
         ),
         {
@@ -141,7 +141,7 @@ export class NewContentComponent implements OnDestroy {
       .subscribe({
         next: (isYes) => {
           if (isYes) {
-            this.deleteContent(data);
+            this.deleteContent(id);
           }
         },
       });
@@ -214,7 +214,33 @@ export class NewContentComponent implements OnDestroy {
     this.openContentDialog(existingContentUIState, existingContent);
   }
 
-  deleteContent(data: ISpiritualDailyDigestUIState) {}
+  deleteContent(draftId: string) {
+    this.subscriptions.sink = this.draftService.deleteDraft(draftId).subscribe({
+      next: () => {
+        const undeletedDrafts = this.contentStore
+          .draftContents()
+          .filter((draft) => draft.id !== draftId);
+        this.contentStore.updateDraftContent(undeletedDrafts);
+        this.alertService
+          .open('Draft content was deleted successfully', {
+            label: 'Deleted',
+            appearance: 'positive',
+          })
+          .subscribe();
+      },
+      error: () => {
+        this.alertService
+          .open(
+            'Unable to delete draft content, check your internet connection and try again.',
+            {
+              label: 'Error',
+              appearance: 'negative',
+            }
+          )
+          .subscribe();
+      },
+    });
+  }
 
   isColumnMatch(value: any): boolean {
     return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);

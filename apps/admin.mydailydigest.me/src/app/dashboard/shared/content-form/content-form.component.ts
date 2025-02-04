@@ -184,7 +184,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   private setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
     if (sddUIiState?.imagePath) {
-    //  this.defaultImageUrl = `${environment.cdnBaseUrl}/${sddUIiState.imagePath}`;
+      //  this.defaultImageUrl = `${environment.cdnBaseUrl}/${sddUIiState.imagePath}`;
     }
     if (sddUIiState?.audioUrl) {
       this.uploadedAudioUrl.set(sddUIiState.audioUrl);
@@ -359,7 +359,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         tags: this.tagsFC.value!,
         date: this.dateFC.value!,
         imagePath: this.imageFullPath,
-        audioUrl: this.uploadedAudioUrl() || undefined,
+        audioUrl: this.uploadedAudioUrl() || null,
       };
 
       if (this.existingContent) {
@@ -428,6 +428,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
           );
         },
         error: (error) => {
+          console.error(error);
           this.showAlertErrorMessage(this.KEY.CONTENT_CREATED_ERROR_MSG);
         },
       });

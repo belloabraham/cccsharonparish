@@ -15,6 +15,10 @@
       small-container-color: var(--mat-sys-tertiary-fixed),
     )
   );
+  mat-icon {
+    display: flex;
+    font-size: 2.5rem;
+  }
 }
 
 .nav {
@@ -27,8 +31,14 @@
   }
 }
 
+.fab-medium {
+  display: none;
+  @include breakpoints.large {
+    display: block;
+  }
+}
+
 .mobile-fab {
-  font-size: 2rem;
   @include breakpoints.large {
     display: none;
   }

@@ -28,11 +28,14 @@
 
         <ng-container *ngIf="!contentIsEmpty">
 
-                <div class="ps-1 mb-4">
-                        <tui-textfield tuiTextfieldSize="m" iconStart="@tui.search">
+                <div class="flex ps-1 mb-4 gap-4 items-center">
+                        <tui-textfield class="flex-1" tuiTextfieldSize="m" iconStart="@tui.search">
                                 <input [(ngModel)]="searchQuery" [placeholder]="t(KEY.SEARCH_PLACEHOLDER)"
                                         tuiTextfield />
                         </tui-textfield>
+                        <button (click)="openContentDialog()" class="fab" mat-fab>
+                                <mat-icon fontIcon="plus-fill"></mat-icon>
+                        </button>
                 </div>
 
                 <tui-scrollbar class="!h-full">
@@ -149,7 +152,7 @@
                                                                                         </button>
 
                                                                                         <button [matTooltip]="t(KEY.DELETE)"
-                                                                                                (click)="deleteContentPrompt(item)"
+                                                                                                (click)="deleteContentPrompt(item.topic, contentForRow.id)"
                                                                                                 mat-icon-button>
                                                                                                 <mat-icon
                                                                                                         fontIcon="trash-can-fill"></mat-icon>

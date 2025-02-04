@@ -33,6 +33,7 @@ export function getContentFromUIState(
   const content: Content = {
     language: language,
     text: textContent,
+    audioUrl: null
   };
   if (sddUIiState.audioUrl) {
     content.audioUrl = sddUIiState.audioUrl;

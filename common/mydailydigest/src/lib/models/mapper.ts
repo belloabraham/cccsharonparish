@@ -29,7 +29,7 @@ export function contentsToTableUIState(
       tags: content.tags,
       date: date,
       imagePath: content.imagePath,
-      audioUrl: contentByLanguage?.audioUrl,
+      audioUrl: contentByLanguage?.audioUrl || null,
     };
     result.push(uiState);
   }

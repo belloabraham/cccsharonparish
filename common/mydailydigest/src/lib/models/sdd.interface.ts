@@ -13,8 +13,8 @@ export interface ISpiritualDailyDigestUIState {
   keyVerse: string;
   tags: string[];
   date: Date;
-  imagePath?: string;
-  audioUrl?: string;
+  imagePath: string | null;
+  audioUrl: string | null;
 }
 
 export interface ISpiritualDailyDigest extends Record<string, any> {
@@ -22,15 +22,15 @@ export interface ISpiritualDailyDigest extends Record<string, any> {
   year: number;
   month: number;
   day: number;
-  imagePath?: string; //
+  imagePath: string | null; //
   tags: string[]; // and date
   content: Content[];
-  isPublished?: boolean;
+  isPublished: boolean;
   isAwaitingApproval: boolean;
   createdBy: string;
-  updatedBy?: string;
+  updatedBy: string | null;
   createdAt: any;
-  updatedAt?: any;
+  updatedAt: any | null;
   // createdAt: Date | Timestamp;
   // updatedAt?: Date | Timestamp;
 }
@@ -38,7 +38,7 @@ export interface ISpiritualDailyDigest extends Record<string, any> {
 export type Content = {
   language: Language;
   text: TextContent;
-  audioUrl?: string;
+  audioUrl: string | null;
 };
 
 export type Language = {
