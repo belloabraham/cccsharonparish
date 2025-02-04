@@ -12,7 +12,11 @@ import {
   ISpiritualDailyDigestUIState,
   Language,
 } from '@cccsharonparish/mydailydigest';
-import { limit, orderBy, Timestamp } from '@angular/fire/firestore';
+import {
+  limit,
+  orderBy,
+  Timestamp,
+} from '@angular/fire/firestore';
 import { environment } from '../../../../src/environments/environment';
 import { of } from 'rxjs';
 import { DRAFT_CONTENT_MOCK } from './mock/draft-content';
@@ -92,5 +96,25 @@ export class DraftService {
       [],
       [orderBy('year', 'desc'), limit(365)]
     );
+  }
+
+  submitForReview(draft: ISpiritualDailyDigest) {
+    return this.remoteData.runTransaction(async (transaction) => {
+
+      const draftDocRef = this.remoteData.getDocRef(COLLECTION.DRAFT, [
+        draft.id,
+      ]);
+      const awaitingApprovalDocRef = this.remoteData.getDocRef(
+        COLLECTION.AWAITING_APPROVAL,
+        [draft.id]
+      );
+      transaction.update(draftDocRef, {
+        isAwaitingApproval: true,
+      });
+      transaction.set(awaitingApprovalDocRef, {
+        ...draft,
+        isAwaitingApproval: true,
+      });
+    });
   }
 }

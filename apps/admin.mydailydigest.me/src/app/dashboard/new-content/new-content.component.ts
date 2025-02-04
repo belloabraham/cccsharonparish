@@ -44,6 +44,7 @@ import { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SubSink } from 'subsink';
+import { DraftService } from './draft.service';
 
 export interface IDialogData {
   language: Language;
@@ -76,6 +77,8 @@ export class NewContentComponent implements OnDestroy {
   subscriptions = new SubSink();
   contentStore = inject(ContentStore);
   dashboardStore = inject(DashboardStore);
+  private readonly draftService = inject(DraftService);
+
   private readonly alertService = inject(TuiAlertService);
   private readonly alertDialogService = inject(AlertDialogService);
 
@@ -144,13 +147,17 @@ export class NewContentComponent implements OnDestroy {
       });
   }
 
-  submitForReviewPrompt(data: ISpiritualDailyDigestUIState) {
+  submitForReviewPrompt(
+    topic: string,
+    existingContent: ISpiritualDailyDigest,
+    index: number
+  ) {
     this.alertDialogService
       .open(
         this.languageResourceService.getStringWithParameter(
           this.KEY.SUBMIT_FOR_REVIEW_MSG,
           {
-            value: data.topic,
+            value: topic,
           }
         ),
         {
@@ -166,13 +173,39 @@ export class NewContentComponent implements OnDestroy {
       .subscribe({
         next: (isYes) => {
           if (isYes) {
-            this.submitForReview(data);
+            this.submitForReview(existingContent, index);
           }
         },
       });
   }
 
-  submitForReview(data: ISpiritualDailyDigestUIState) {}
+  async submitForReview(existingContent: ISpiritualDailyDigest, index: number) {
+    try {
+      await this.draftService.submitForReview(existingContent);
+      this.contentStore.draftContents()[index].isAwaitingApproval = true;
+      this.contentStore.updateDraftContent([
+        ...this.contentStore.draftContents(),
+      ]);
+      this.alertService
+        .open('Content was submitted successfully', {
+          label: 'Submitted for review',
+          appearance: 'positive',
+        })
+        .subscribe();
+    } catch (error) {
+      console.error(error);
+      this.alertService
+        .open(
+          'Unable to submit content for review, check your internet connection and try again.',
+          {
+            label: 'Error',
+            appearance: 'negative',
+          }
+        )
+        .subscribe();
+    }
+  }
+
   editContent(
     existingContentTableUIState: ISpiritualDailyDigestTableUIState,
     existingContent: ISpiritualDailyDigest

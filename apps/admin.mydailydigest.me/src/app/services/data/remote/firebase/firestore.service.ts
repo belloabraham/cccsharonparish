@@ -4,6 +4,8 @@ import {
   Firestore,
   FirestoreError,
   QueryConstraint,
+  Transaction,
+  TransactionOptions,
   collection,
   collectionGroup,
   deleteDoc,
@@ -12,6 +14,7 @@ import {
   getDocs,
   onSnapshot,
   query,
+  runTransaction,
   setDoc,
   updateDoc,
   writeBatch,
@@ -195,6 +198,17 @@ export class FirestoreService implements IRemoteData {
         .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
+  }
+
+  getDocRef(collection: string, pathSegment: string[]) {
+    return doc(this.firestore, collection, ...pathSegment);
+  }
+
+  runTransaction(
+    updateFunction: (transaction: Transaction) => Promise<void>,
+    options?: TransactionOptions
+  ) {
+    return runTransaction(this.firestore, updateFunction, options);
   }
 
   addADocumentDataTo<T extends Record<string, any>>(

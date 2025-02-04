@@ -1,6 +1,10 @@
 import {
+  DocumentData,
+  DocumentReference,
   FieldPath,
   QueryConstraint,
+  Transaction,
+  TransactionOptions,
   Unsubscribe,
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
@@ -24,6 +28,16 @@ export interface IRemoteData {
     onNext: (data: T) => void,
     retryTimeout?: number
   ): () => void;
+
+  getDocRef(
+    collection: string,
+    pathSegment: string[]
+  ): DocumentReference<DocumentData, DocumentData>;
+
+  runTransaction(
+    updateFunction: (transaction: Transaction) => Promise<void>,
+    options?: TransactionOptions
+  ):Promise<void>
 
   /**
    * Retrieves live data from a list of documents based on provided query constraints.
@@ -89,7 +103,10 @@ export interface IRemoteData {
    * @param pathSegment Array of path segments.
    * @returns A observable that resolves to an array of document data.
    */
-  getAListOfDocData<T>(collection: string, pathSegment: string[]): Observable<T[]>;
+  getAListOfDocData<T>(
+    collection: string,
+    pathSegment: string[]
+  ): Observable<T[]>;
 
   /**
    * Retrieves a document's data asynchronously.
@@ -136,7 +153,10 @@ export interface IRemoteData {
    * @param pathSegment Array of path segments.
    * @returns A observable that resolves once the operation is completed.
    */
-  deleteADocumentFrom(collection: string, pathSegment: string[]): Observable<void>;
+  deleteADocumentFrom(
+    collection: string,
+    pathSegment: string[]
+  ): Observable<void>;
 
   /**
    * Updates a document's data in a collection.

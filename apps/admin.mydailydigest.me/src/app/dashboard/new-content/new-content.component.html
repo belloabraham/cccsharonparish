@@ -47,8 +47,7 @@
                                         (tuiSortByChange)="sortColumnBy.set($event!)">
                                         <thead>
                                                 <tr tuiThGroup>
-                                                        <ng-container
-                                                                *ngFor="let column of tableColumns; let i = index">
+                                                        <ng-container *ngFor="let column of tableColumns">
 
                                                                 @if (column === "message") {
                                                                 <th *tuiHead="column" class="message-column" tuiTh
@@ -90,8 +89,9 @@
                                         </thead>
                                         <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody
                                                 [data]="sortedData">
-                                                <tr *ngFor="let item of sortedData; let i = index" tuiTr>
-                                                        <ng-container *ngFor="let key of tableColumns; let i = index">
+                                                <tr *ngFor="let item of sortedData; let dataIndex = index" tuiTr>
+                                                        <ng-container
+                                                                *ngFor="let key of tableColumns; let rowIndex = index">
                                                                 @if (key ==="date") {
                                                                 <td *tuiCell="key" tuiTd> {{ item[key] |
                                                                         date:'fullDate'
@@ -128,16 +128,21 @@
 
                                                                                 <div class="flex flex-col">
 
-                                                                                        <button [matTooltip]="t(KEY.SUBMIT_FOR_REVIEW)"
+                                                                                        @let contentForRow =
+                                                                                        contentStore.draftContents()[dataIndex];
+                                                                                        <button [class.cursor-not-allowed]="contentForRow.isAwaitingApproval"
+                                                                                                [disabled]="contentForRow.isAwaitingApproval"
+                                                                                                [matTooltip]="t(KEY.SUBMIT_FOR_REVIEW)"
                                                                                                 mat-icon-button
-                                                                                                (click)="submitForReviewPrompt(item)">
+                                                                                                (click)="submitForReviewPrompt(item['topic'], contentForRow, dataIndex)">
                                                                                                 <mat-icon
-                                                                                                        class="text-orange-700"
+                                                                                                        [class.text-orange-700]="!contentForRow.isAwaitingApproval"
+                                                                                                        [class.text-gray-400]="contentForRow.isAwaitingApproval"
                                                                                                         fontIcon="file-upload-fill"></mat-icon>
                                                                                         </button>
 
                                                                                         <button [matTooltip]="t(KEY.EDIT)"
-                                                                                                (click)="editContent(item, contentStore.draftContents()[i])"
+                                                                                                (click)="editContent(item, contentForRow)"
                                                                                                 mat-icon-button>
                                                                                                 <mat-icon
                                                                                                         fontIcon="pen-fill"></mat-icon>

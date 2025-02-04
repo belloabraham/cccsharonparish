@@ -1,8 +1,6 @@
 import { signalStore, withState, withMethods, patchState } from '@ngrx/signals';
 import { inject } from '@angular/core';
-import {
-  ISpiritualDailyDigest,
-} from '@cccsharonparish/mydailydigest';
+import { ISpiritualDailyDigest } from '@cccsharonparish/mydailydigest';
 import { ContentService } from './content.service';
 import { retryWhen, tap } from 'rxjs';
 import { firestoreRetryStrategy } from '../../services';
@@ -34,6 +32,12 @@ export const ContentStore = signalStore(
           },
         })
       );
+    },
+    updateDraftContent(updatedDrafts: ISpiritualDailyDigest[]) {
+      patchState(store, (state) => ({
+        ...state,
+        draftContents: updatedDrafts,
+      }));
     },
     getContentsAwaitingApproval() {
       return contentService.getContentsAwaitingApproval().pipe(
