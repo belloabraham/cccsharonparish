@@ -184,7 +184,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   private setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
     if (sddUIiState?.imagePath) {
-      //  this.defaultImageUrl = `${environment.cdnBaseUrl}/${sddUIiState.imagePath}`;
+       this.defaultImageUrl = `${environment.cdnBaseUrl}/${sddUIiState.imagePath}`;
     }
     if (sddUIiState?.audioUrl) {
       this.uploadedAudioUrl.set(sddUIiState.audioUrl);
@@ -193,8 +193,9 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   private setFormValue(sddUIiState: ISpiritualDailyDigestUIState) {
     this.dateFC.disable();
+    const { imagePath, audioUrl, ...formData } = sddUIiState;
     this.form.setValue({
-      ...sddUIiState,
+      ...formData,
     });
   }
 
