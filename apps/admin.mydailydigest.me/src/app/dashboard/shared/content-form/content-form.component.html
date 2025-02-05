@@ -65,16 +65,17 @@
     <mat-form-field class="tags">
         <mat-label>{{t(KEY.TAGS)}} <span class="lowercase">({{t(KEY.OPTIONAL)}})</span> </mat-label>
         <mat-chip-grid #reactiveChipGrid formControlName="tags">
-            @for (keyword of tags(); track keyword) {
-            <mat-chip-row (removed)="removeATag(keyword)">
-                {{keyword}}
+            @for (tag of tags(); track tags) {
+            <mat-chip-row (removed)="removeATag(tag)">
+                {{tag}}
                 <button matChipRemove>
                     <mat-icon fontIcon="close-fill"></mat-icon>
                 </button>
             </mat-chip-row>
             }
         </mat-chip-grid>
-        <input [placeholder]="t(KEY.TAG_PLACEHOLDER)" [matChipInputFor]="reactiveChipGrid"
+        <input [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+            [placeholder]="t(KEY.TAG_PLACEHOLDER)" [matChipInputFor]="reactiveChipGrid"
             (matChipInputTokenEnd)="addATag($event)" />
     </mat-form-field>
 

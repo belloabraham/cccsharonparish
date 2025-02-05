@@ -1,7 +1,7 @@
 import { Route, Router } from '@angular/router';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
 import { AuthComponent } from './auth/auth.component';
-import { forkJoin, map} from 'rxjs';
+import { filter, first, forkJoin, map, switchMap } from 'rxjs';
 import { inject } from '@angular/core';
 import { AUTH_TOKEN } from './services';
 import { DashboardService } from './dashboard/dashboard.service';
@@ -17,22 +17,30 @@ export const appRoutes: Route[] = [
     canMatch: [
       //Match route if authenticated user does not exist
       () =>
-      inject(AUTH_TOKEN)
-        .getAuthSate$()
-        .pipe(
-          map((userIsAuthenticated) => (userIsAuthenticated ? false : true))
-        ),
+        inject(AUTH_TOKEN)
+          .getAuthSate$()
+          .pipe(
+            map((userIsAuthenticated) => (userIsAuthenticated ? false : true))
+          ),
     ],
     component: AuthComponent,
   },
   {
     path: ROUTE.ROOT,
-    providers: [DashboardService, ContentStore],
+    providers: [DashboardService],
     resolve: {
       data: () => {
-        const user$ = inject(UserDataStore).getUser();
+        const dataStore = inject(UserDataStore);
         const languages$ = inject(DashboardStore).getSupportedLanguages();
-        return forkJoin([user$, languages$]);
+        return inject(AUTH_TOKEN)
+          .getAuthSate$()
+          .pipe(
+            filter((user) => user !== null),
+            first(),
+            switchMap((user) => {
+              return forkJoin([dataStore.getUser(user.uid), languages$]);
+            })
+          );
       },
     },
     canMatch: [

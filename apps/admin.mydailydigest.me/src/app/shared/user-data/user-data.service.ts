@@ -49,8 +49,7 @@ export class UserDataService {
     });
   }
 
-  getUser() {
-    const userId = this.auth.getUserId()!;
+  getUser(userId:string) {
     return this.remoteData.getADocumentData<IUser>(COLLECTION.EDITORS, [
       userId,
     ]);

@@ -23,8 +23,8 @@ export const UserDataStore = signalStore(
   { providedIn: 'root' },
   withState(initialState),
   withMethods((store, userDataService = inject(UserDataService)) => ({
-    getUser() {
-      return userDataService.getUser().pipe(
+    getUser(userId:string) {
+      return userDataService.getUser(userId).pipe(
         retryWhen(firestoreRetryStrategy(Infinity)),
         tap({
           next: (data) => {

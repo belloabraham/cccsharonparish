@@ -68,6 +68,7 @@ import { DraftService } from '../../new-content/draft.service';
 import { IDialogData } from '../../new-content/new-content.component';
 import { ContentService } from '../content.service';
 import { ContentStore } from '../content.store';
+import { COMMA, ENTER, SPACE } from '@angular/cdk/keycodes';
 
 @Component({
   selector: 'app-content-form',
@@ -100,6 +101,8 @@ import { ContentStore } from '../content.store';
 })
 export class ContentFormComponent implements OnInit, AfterViewInit {
   KEY = CONTENT_STRING_RESOURCE_KEYS;
+  readonly separatorKeysCodes = [ENTER, COMMA, SPACE] as const;
+
   form!: FormGroup<ContentForm>;
   httpRequestProgressIndicatorService = inject(
     HttpRequestProgressIndicatorService
@@ -200,6 +203,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     this.form.setValue({
       ...formData,
     });
+    this.tags.set(formData.tags);
   }
 
   ngAfterViewInit(): void {
@@ -314,11 +318,6 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         }
       )
     );
-  }
-
-  getEnglishContentForTranslation() {
-    if (this.language()?.code !== DEFAULT_LANG_CODE) {
-    }
   }
 
   closeDialog() {
