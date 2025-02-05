@@ -13,6 +13,7 @@ import {
 } from '@cccsharonparish/mydailydigest';
 import { Timestamp } from '@angular/fire/firestore';
 import { AUTH_TOKEN, REMOTE_DATA_TOKEN } from '../../services';
+import { map } from 'rxjs';
 
 export function getContentFromUIState(
   sddUIiState: ISpiritualDailyDigestUIState,
@@ -33,7 +34,7 @@ export function getContentFromUIState(
   const content: Content = {
     language: language,
     text: textContent,
-    audioUrl: null
+    audioUrl: null,
   };
   if (sddUIiState.audioUrl) {
     content.audioUrl = sddUIiState.audioUrl;
@@ -73,11 +74,14 @@ export class ContentService {
       imagePath: newContent.imagePath || existingContent.imagePath,
     };
 
-    return this.remoteData.updateADocumentDataIn(
-      collection,
-      [existingContent.id],
-      updatedContent
-    );
+    const responseUpdatedContent: ISpiritualDailyDigest = {
+      ...existingContent,
+      ...updatedContent,
+    };
+
+    return this.remoteData
+      .updateADocumentDataIn(collection, [existingContent.id], updatedContent)
+      .pipe(map(() => responseUpdatedContent));
   }
 
   getDraftContents() {

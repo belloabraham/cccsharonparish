@@ -388,11 +388,12 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         this.rootDataPath
       )
       .subscribe({
-        next: () => {
+        next: (data) => {
           this.showAlertSuccessMessage(
             this.KEY.CONTENT_UPDATED_SUCCESS_MSG,
             this.KEY.UPDATED
           );
+          this.updateCurrentTableUI(this.rootDataPath, data);
           this.httpRequestProgressIndicatorService.hideLoader();
           this.closeDialog();
         },
@@ -401,6 +402,49 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
           this.showAlertErrorMessage(this.KEY.CONTENT_UPDATED_ERROR_MSG);
         },
       });
+  }
+
+  updateCurrentTableUI(
+    rootDataPath: string,
+    updatedContent: ISpiritualDailyDigest
+  ) {
+    const currentTableContents = this.getCurrentTableContents(
+      this.rootDataPath
+    );
+
+    for (let index = 0; index < currentTableContents.length; index++) {
+      const element = currentTableContents[index];
+      if (element.id === updatedContent.id) {
+        currentTableContents[index] = updatedContent;
+      }
+    }
+    if (rootDataPath === COLLECTION.DRAFT) {
+      return this.contentStore.updateDraftContents([...currentTableContents]);
+    }
+
+    if (rootDataPath === COLLECTION.APPROVED) {
+      return this.contentStore.updateApprovedContents([
+        ...currentTableContents,
+      ]);
+    }
+
+    if (rootDataPath === COLLECTION.AWAITING_APPROVAL) {
+      return this.contentStore.updateAwaitingApprovalContents([
+        ...currentTableContents,
+      ]);
+    }
+  }
+
+  getCurrentTableContents(rootDataPath: string) {
+    if (rootDataPath === COLLECTION.DRAFT) {
+      return this.contentStore.draftContents();
+    }
+
+    if (rootDataPath === COLLECTION.APPROVED) {
+      return this.contentStore.approvedContent();
+    }
+
+    return this.contentStore.contentAwaitingApproval();
   }
 
   showAlertErrorMessage(messageKey: string) {
@@ -434,7 +478,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
             this.KEY.CONTENT_CREATED_SUCCESS_MSG,
             this.KEY.CREATED
           );
-          this.contentStore.updateDraftContent([
+          this.contentStore.updateDraftContents([
             ...this.contentStore.draftContents(),
             data,
           ]);

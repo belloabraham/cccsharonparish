@@ -182,7 +182,7 @@ export class NewContentComponent implements OnDestroy {
     try {
       await this.draftService.submitForReview(existingContent);
       this.contentStore.draftContents()[index].isAwaitingApproval = true;
-      this.contentStore.updateDraftContent([
+      this.contentStore.updateDraftContents([
         ...this.contentStore.draftContents(),
       ]);
       this.alertService
@@ -219,7 +219,7 @@ export class NewContentComponent implements OnDestroy {
         const undeletedDrafts = this.contentStore
           .draftContents()
           .filter((draft) => draft.id !== draftId);
-        this.contentStore.updateDraftContent(undeletedDrafts);
+        this.contentStore.updateDraftContents(undeletedDrafts);
         this.alertService
           .open('Draft content was deleted successfully', {
             label: 'Deleted',

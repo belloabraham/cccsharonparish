@@ -34,7 +34,7 @@ export const ContentStore = signalStore(
         })
       );
     },
-    updateDraftContent(updatedDrafts: ISpiritualDailyDigest[]) {
+    updateDraftContents(updatedDrafts: ISpiritualDailyDigest[]) {
       patchState(store, (state) => ({
         ...state,
         draftContents: updatedDrafts,
@@ -53,6 +53,12 @@ export const ContentStore = signalStore(
         })
       );
     },
+    updateAwaitingApprovalContents(updatedContents: ISpiritualDailyDigest[]) {
+      patchState(store, (state) => ({
+        ...state,
+        contentAwaitingApproval: updatedContents,
+      }));
+    },
     getApprovedContents() {
       return contentService.getApprovedContents().pipe(
         retryWhen(firestoreRetryStrategy(Infinity)),
@@ -65,6 +71,12 @@ export const ContentStore = signalStore(
           },
         })
       );
+    },
+    updateApprovedContents(updatedContents: ISpiritualDailyDigest[]) {
+      patchState(store, (state) => ({
+        ...state,
+        approvedContent: updatedContents,
+      }));
     },
   }))
 );
