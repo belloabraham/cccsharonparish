@@ -29,7 +29,7 @@ export class AuthService implements IAuth {
   }
 
   getUserId() {
-    return this.firebaseAuth.getUser()?.uid;
+    return this.firebaseAuth.getUser()?.uid || null;
   }
 
   updateCurrentUser(user: User) {
