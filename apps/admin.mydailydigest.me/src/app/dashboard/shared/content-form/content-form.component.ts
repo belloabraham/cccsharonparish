@@ -67,6 +67,7 @@ import { CONTENT_STRING_RESOURCE_KEYS } from './i18n/string-res-keys';
 import { DraftService } from '../../new-content/draft.service';
 import { IDialogData } from '../../new-content/new-content.component';
 import { ContentService } from '../content.service';
+import { ContentStore } from '../content.store';
 
 @Component({
   selector: 'app-content-form',
@@ -124,6 +125,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   > | null = null;
   readonly languageService = inject(LanguageResourceService);
   readonly draftService = inject(DraftService);
+  readonly contentStore = inject(ContentStore);
+
   private readonly contentService = inject(ContentService);
 
   private readonly MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES = 500 * 1024; //500Kb
@@ -184,7 +187,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   private setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
     if (sddUIiState?.imagePath) {
-       this.defaultImageUrl = `${environment.cdnBaseUrl}/${sddUIiState.imagePath}`;
+      this.defaultImageUrl = `${environment.cdnBaseUrl}/${sddUIiState.imagePath}`;
     }
     if (sddUIiState?.audioUrl) {
       this.uploadedAudioUrl.set(sddUIiState.audioUrl);
@@ -377,6 +380,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     newContent: ISpiritualDailyDigestUIState,
     existingContent: ISpiritualDailyDigest
   ) {
+    this.httpRequestProgressIndicatorService.showLoader();
     this.contentService
       .updateContent(
         newContent,
@@ -390,8 +394,11 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
             this.KEY.CONTENT_UPDATED_SUCCESS_MSG,
             this.KEY.UPDATED
           );
+          this.httpRequestProgressIndicatorService.hideLoader();
+          this.closeDialog();
         },
         error: (error) => {
+          this.httpRequestProgressIndicatorService.hideLoader();
           this.showAlertErrorMessage(this.KEY.CONTENT_UPDATED_ERROR_MSG);
         },
       });
@@ -419,17 +426,24 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   private createDraftContent(newContent: ISpiritualDailyDigestUIState) {
+    this.httpRequestProgressIndicatorService.showLoader();
     this.draftService
       .createContent(newContent, this.language()!, COLLECTION.DRAFT)
       .subscribe({
-        next: () => {
+        next: (data) => {
           this.showAlertSuccessMessage(
             this.KEY.CONTENT_CREATED_SUCCESS_MSG,
             this.KEY.CREATED
           );
+          this.contentStore.updateDraftContent([
+            ...this.contentStore.draftContents(),
+            data,
+          ]);
+          this.httpRequestProgressIndicatorService.hideLoader();
+          this.closeDialog();
         },
         error: (error) => {
-          console.error(error);
+          this.httpRequestProgressIndicatorService.hideLoader();
           this.showAlertErrorMessage(this.KEY.CONTENT_CREATED_ERROR_MSG);
         },
       });

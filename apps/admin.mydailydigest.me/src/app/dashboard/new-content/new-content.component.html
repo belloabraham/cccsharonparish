@@ -108,9 +108,14 @@
                                                                 <td *tuiCell="key" tuiTd>
                                                                         <a [href]="item[key]" target="_blank"
                                                                                 rel="noopener noreferrer">
-                                                                                <img width="50" height="50"
-                                                                                        class="header-image"
+                                                                                <img *ngIf="item[key]" width="50"
+                                                                                        height="50" class="header-image"
                                                                                         ngSrc="{{item[key]}}"
+                                                                                        alt="Header Image">
+
+                                                                                <img *ngIf="!item[key]" width="50"
+                                                                                        height="50" class="header-image"
+                                                                                        src="{{item[key]}}"
                                                                                         alt="Header Image">
                                                                         </a>
                                                                 </td>

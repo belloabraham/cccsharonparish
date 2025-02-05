@@ -18,6 +18,7 @@ const initialState: ContentState = {
 };
 
 export const ContentStore = signalStore(
+  { providedIn: 'root' },
   withState(initialState),
   withMethods((store, contentService = inject(ContentService)) => ({
     getDraftContents() {
