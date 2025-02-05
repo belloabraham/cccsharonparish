@@ -1,6 +1,6 @@
 import { inject, Injectable, InjectionToken } from '@angular/core';
 import { IAuth } from './auth.interface';
-import { FirebaseAuthService } from './firebase/firebase-auth.service';
+import { AuthUserProfile, FirebaseAuthService } from './firebase/firebase-auth.service';
 import { User, UserCredential } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -32,8 +32,8 @@ export class AuthService implements IAuth {
     return this.firebaseAuth.getUser()?.uid || null;
   }
 
-  updateCurrentUser(user: User) {
-    return this.firebaseAuth.updateCurrentUser(user);
+  updateProfile(profile: AuthUserProfile) {
+    return this.firebaseAuth.updateProfile(profile);
   }
 
   emailIsAuthorized(email: string) {

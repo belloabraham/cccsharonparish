@@ -50,14 +50,17 @@ export class SignUpComponent extends CommonComponent implements OnDestroy {
       lastName: JSON.escapeSpecialChars(value.lastName!),
       phone: value.phone!,
     };
-    this.subscriptions.sink = this.userDataStore.createUser(user).subscribe({
-      next: (response) => {
-        this.router.navigate([ROUTE.ROOT]);
-      },
-      error: (error) => {
-        this.showCreateUserFailedErrorAlert();
-      },
-    });
+    this.subscriptions.sink = this.userDataStore
+      .createUser(user)
+      .subscribe({
+        next: (response) => {
+          this.router.navigate([ROUTE.ROOT]);
+        },
+        error: (error) => {
+          console.error(error);
+          this.showCreateUserFailedErrorAlert();
+        },
+      });
   }
 
   private showCreateUserFailedErrorAlert() {

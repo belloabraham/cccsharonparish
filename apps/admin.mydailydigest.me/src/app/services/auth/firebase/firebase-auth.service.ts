@@ -8,11 +8,16 @@ import {
   sendSignInLinkToEmail,
   signInWithEmailLink,
   signOut,
-  updateCurrentUser,
+  updateProfile,
 } from '@angular/fire/auth';
 import { environment as env } from '../../../../environments/environment';
 import { Observable } from 'rxjs';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
+
+export interface AuthUserProfile {
+  displayName?: string | null;
+  photoURL?: string | null;
+}
 
 @Injectable({
   providedIn: 'root',
@@ -37,10 +42,10 @@ export class FirebaseAuthService {
     return this.auth.currentUser;
   }
 
-  updateCurrentUser(user: User): Observable<User> {
+  updateProfile(profile: AuthUserProfile): Observable<AuthUserProfile> {
     return new Observable((observer) => {
-      updateCurrentUser(this.auth, user)
-        .then(() => observer.next(user))
+      updateProfile(this.auth.currentUser!, profile)
+        .then(() => observer.next(profile))
         .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });

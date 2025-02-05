@@ -37,12 +37,9 @@ export class UserDataService {
         authUser?.metadata?.creationTime || new Date().toISOString()
       );
     }
-
     return forkJoin({
-      authUser: this.auth.updateCurrentUser({
-        ...authUser,
+      authUser: this.auth.updateProfile({
         displayName: `${userUIState.firstName}#${userUIState.lastName}`,
-        phoneNumber: userUIState.phone,
       }),
       userData: this.remoteData.addADocumentDataTo(
         COLLECTION.EDITORS,
@@ -52,8 +49,10 @@ export class UserDataService {
     });
   }
 
-  getUser(){
-    const userId = this.auth.getUserId()!
-    return this.remoteData.getADocumentData<IUser>(COLLECTION.EDITORS, [userId]);
+  getUser() {
+    const userId = this.auth.getUserId()!;
+    return this.remoteData.getADocumentData<IUser>(COLLECTION.EDITORS, [
+      userId,
+    ]);
   }
 }

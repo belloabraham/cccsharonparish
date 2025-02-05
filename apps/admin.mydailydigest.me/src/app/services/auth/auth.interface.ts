@@ -1,5 +1,6 @@
 import { User, UserCredential } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
+import { AuthUserProfile } from './firebase/firebase-auth.service';
 
 export interface IAuth {
   getAuthSate$: () => Observable<User | null>;
@@ -12,5 +13,5 @@ export interface IAuth {
     email: string,
     emailLink: string
   ) => Observable<UserCredential>;
-  updateCurrentUser: (user: User) => Observable<User>;
+  updateProfile: (profile: AuthUserProfile) => Observable<AuthUserProfile>;
 }

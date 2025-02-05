@@ -60,6 +60,9 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
 
   constructor() {
     super();
+    if (this.signInMail) {
+      this.verifyEmail(this.signInMail);
+    }
     this.onAuthStateChanged();
     effect(() => {
       if (this.appStore.language().loaded) {
@@ -72,10 +75,6 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
     this.form = new FormGroup({
       email: this.emailFC,
     });
-
-    if (this.signInMail) {
-      this.verifyEmail(this.signInMail);
-    }
   }
 
   onAuthStateChanged() {
