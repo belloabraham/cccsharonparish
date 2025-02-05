@@ -44,9 +44,9 @@ form {
 
 .no-scrollbar {
   &::-webkit-scrollbar {
-    width: 0.2rem;
+    width: 0 !important;
 
-    height: 0.2rem !important;
+    height: 0 !important;
   }
 
   &::-webkit-scrollbar-track {
@@ -61,11 +61,11 @@ form {
 
   &:hover {
     &::-webkit-scrollbar-track {
-      background: colors.$neutral-300;
+      background: transparent !important;
     }
 
     &::-webkit-scrollbar-thumb {
-      background: colors.$neutral-400;
+      background: transparent !important;
     }
   }
 }

@@ -34,7 +34,6 @@ import {
   TABLE_MODULES,
 } from '../shared';
 import { TuiDialogService } from '@taiga-ui/core';
-import { Subscription } from 'rxjs';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
 import { NgIf } from '@angular/common';
 import { DashboardStore } from '../dashboard.store';
