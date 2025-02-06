@@ -29,7 +29,7 @@
 @let isAdmin = userDataStore.user()?.userType === 'Admin';
 @let isPublisher = isAdmin || userDataStore.user()?.userType === 'Publisher';
 @let thereIsContentAwaitingApproval = contentStore.contentAwaitingApproval().length > 0;
-@let thereIsApprovedContents = contentStore.approvedContent().length > 0;
+@let thereAreApprovedContents = contentStore.approvedContent().length > 0;
 
 <!-- Top Navigation -->
 <ng-template #topNavigation>
@@ -133,7 +133,7 @@
                 {{t(KEY.AWAITING_APPROVAL)}}
             </a>
 
-            <ng-container *ngIf="nonEnglishSupportedLanguages().length > 0 && thereIsApprovedContents">
+            <ng-container *ngIf="nonEnglishSupportedLanguages().length > 0 && thereAreApprovedContents">
                 <button (click)="expandMobileDropdown.set(!expandMobileDropdown())"
                     class="nav-item mb-2 !pb-2 !items-center justify-between" matRipple>
                     <span class="flex items-center gap-4">
@@ -156,7 +156,7 @@
 
             </ng-container>
 
-            <a *ngIf="thereIsApprovedContents" [routerLink]="[ROUTE.APPROVED]" routerLinkActive="link-active"
+            <a *ngIf="thereAreApprovedContents" [routerLink]="[ROUTE.APPROVED]" routerLinkActive="link-active"
                 class="nav-item" matRipple>
                 <mat-icon fontIcon="check-box-outline"></mat-icon>
                 {{t(KEY.APPROVED)}}
@@ -203,7 +203,7 @@
             {{t(KEY.AWAITING_APPROVAL)}}
         </a>
 
-        <tui-aside-group *ngIf="nonEnglishSupportedLanguages().length > 0 && thereIsApprovedContents">
+        <tui-aside-group *ngIf="nonEnglishSupportedLanguages().length > 0 && thereAreApprovedContents">
             <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].countryCode]"
                 automation-id="setting" tuiAsideItem tuiChevron matRipple type="button">
                 <mat-icon fontIcon="translate-outline"></mat-icon>
@@ -220,7 +220,7 @@
             </button>
         </tui-aside-group>
 
-        <a *ngIf="thereIsApprovedContents" [routerLink]="[ROUTE.APPROVED]" tuiAsideItem matRipple>
+        <a *ngIf="thereAreApprovedContents" [routerLink]="[ROUTE.APPROVED]" tuiAsideItem matRipple>
             <mat-icon fontIcon="check-box-outline"></mat-icon>
             {{t(KEY.APPROVED)}}
         </a>

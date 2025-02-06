@@ -34,6 +34,7 @@ export const appRoutes: Route[] = [
         const languages$ = inject(DashboardStore).getSupportedLanguages();
         const contentAwaitingApproval$ =
           inject(ContentStore).getContentsAwaitingApproval();
+        const approvedContents$ = inject(ContentStore).getApprovedContents();
         return inject(AUTH_TOKEN)
           .getAuthSate$()
           .pipe(
@@ -44,6 +45,7 @@ export const appRoutes: Route[] = [
                 dataStore.getUser(user.uid),
                 languages$,
                 contentAwaitingApproval$,
+                approvedContents$,
               ]);
             })
           );
