@@ -106,7 +106,8 @@
                                                                 </td>
                                                                 }@else if (key === "imagePath"){
                                                                 <td *tuiCell="key" tuiTd>
-                                                                        <a [href]="item[key]" target="_blank"
+                                                                        <a href="{{CDN_BASE_URL}}/{{item[key]}}"
+                                                                                target="_blank"
                                                                                 rel="noopener noreferrer">
                                                                                 <img *ngIf="item[key]" width="50"
                                                                                         height="50" class="header-image"

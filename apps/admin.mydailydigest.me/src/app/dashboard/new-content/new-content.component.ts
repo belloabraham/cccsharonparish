@@ -44,6 +44,7 @@ import { LanguageResourceService } from '@cccsharonparish/angular';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SubSink } from 'subsink';
 import { DraftService } from './draft.service';
+import { environment } from '../../../environments/environment';
 
 export interface IDialogData {
   language: Language;
@@ -80,6 +81,7 @@ export class NewContentComponent implements OnDestroy {
 
   private readonly alertService = inject(TuiAlertService);
   private readonly alertDialogService = inject(AlertDialogService);
+  CDN_BASE_URL = environment.cdnBaseUrl;
 
   sddForSelectedLanguage = signal<ISpiritualDailyDigest[]>([]);
   @HostBinding('style.height') height = '100%';
@@ -192,7 +194,6 @@ export class NewContentComponent implements OnDestroy {
         })
         .subscribe();
     } catch (error) {
-      console.error(error);
       this.alertService
         .open(
           'Unable to submit content for review, check your internet connection and try again.',
