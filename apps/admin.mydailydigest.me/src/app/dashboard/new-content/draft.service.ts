@@ -78,14 +78,6 @@ export class DraftService {
     );
   }
 
-  uploadAudio(audioFile: File, pathSegment: string[]) {
-    return this.cloudStorage.uploadFileTo(
-      [...pathSegment],
-      audioFile.name,
-      audioFile
-    );
-  }
-
   getDraftContents() {
     if (this.USE_MOCK_DATA) {
       return of(DRAFT_CONTENT_MOCK);

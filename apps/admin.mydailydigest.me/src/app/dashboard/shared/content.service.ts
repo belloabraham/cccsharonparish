@@ -12,8 +12,13 @@ import {
   TextContent,
 } from '@cccsharonparish/mydailydigest';
 import { Timestamp } from '@angular/fire/firestore';
-import { AUTH_TOKEN, REMOTE_DATA_TOKEN } from '../../services';
+import {
+  AUTH_TOKEN,
+  CLOUD_STORAGE_TOKEN,
+  REMOTE_DATA_TOKEN,
+} from '../../services';
 import { map } from 'rxjs';
+import { StorageReference } from '@angular/fire/storage';
 
 export function getContentFromUIState(
   sddUIiState: ISpiritualDailyDigestUIState,
@@ -53,6 +58,7 @@ export class ContentService {
   private readonly awaitingApprovalService = inject(AwaitingApprovalService);
   private readonly remoteData = inject(REMOTE_DATA_TOKEN);
   private readonly auth = inject(AUTH_TOKEN);
+  private readonly cloudStorage = inject(CLOUD_STORAGE_TOKEN);
 
   updateContent(
     newContent: ISpiritualDailyDigestUIState,
@@ -82,6 +88,18 @@ export class ContentService {
     return this.remoteData
       .updateADocumentDataIn(collection, [existingContent.id], updatedContent)
       .pipe(map(() => responseUpdatedContent));
+  }
+
+  uploadAudio(audioFile: File, pathSegment: string[]) {
+    return this.cloudStorage.uploadFileTo(
+      [...pathSegment],
+      audioFile.name,
+      audioFile
+    );
+  }
+
+  getDownloadUrl(storageRef: StorageReference) {
+    return this.cloudStorage.getFileDownloadURL(storageRef);
   }
 
   getDraftContents() {

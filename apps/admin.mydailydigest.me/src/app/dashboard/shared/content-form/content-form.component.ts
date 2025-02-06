@@ -60,7 +60,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import type { TuiFileLike } from '@taiga-ui/kit';
 import { TuiFiles } from '@taiga-ui/kit';
 import type { Observable } from 'rxjs';
-import { of, Subject } from 'rxjs';
+import { of, Subject, switchMap } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { environment } from '../../../../environments/environment';
 import { CONTENT_STRING_RESOURCE_KEYS } from './i18n/string-res-keys';
@@ -510,14 +510,20 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         this.loadingAudioFile$.next(file);
         this.loadedAudioFile$ = of(null);
 
-        this.draftService
+        this.contentService
           .uploadAudio(file, [
             this.rootStoragePath,
             STORAGE_PATH.AUDIO,
             this.language()!.code,
           ])
+          .pipe(
+            switchMap((result) =>
+              this.contentService.getDownloadUrl(result.ref)
+            )
+          )
           .subscribe({
-            next: () => {
+            next: (uploadUrl) => {
+              this.uploadedAudioUrl.set(uploadUrl);
               this.loadingAudioFile$.next(null);
               this.loadedAudioFile$ = of(file);
             },
