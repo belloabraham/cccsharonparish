@@ -32,13 +32,19 @@ export const appRoutes: Route[] = [
       data: () => {
         const dataStore = inject(UserDataStore);
         const languages$ = inject(DashboardStore).getSupportedLanguages();
+        const contentAwaitingApproval$ =
+          inject(ContentStore).getContentsAwaitingApproval();
         return inject(AUTH_TOKEN)
           .getAuthSate$()
           .pipe(
             filter((user) => user !== null),
             first(),
             switchMap((user) => {
-              return forkJoin([dataStore.getUser(user.uid), languages$]);
+              return forkJoin([
+                dataStore.getUser(user.uid),
+                languages$,
+                contentAwaitingApproval$,
+              ]);
             })
           );
       },

@@ -28,7 +28,8 @@
 
 @let isAdmin = userDataStore.user()?.userType === 'Admin';
 @let isPublisher = isAdmin || userDataStore.user()?.userType === 'Publisher';
-
+@let thereIsContentAwaitingApproval = contentStore.contentAwaitingApproval().length > 0;
+@let thereIsApprovedContents = contentStore.approvedContent().length > 0;
 
 <!-- Top Navigation -->
 <ng-template #topNavigation>
@@ -126,13 +127,13 @@
                 {{t(KEY.ADD_NEW)}}
             </a>
 
-            <a *ngIf="contentStore.contentAwaitingApproval.length > 0 && isPublisher"
-                [routerLink]="[ROUTE.AWAITING_APPROVAL]" routerLinkActive="link-active" class="nav-item" matRipple>
+            <a *ngIf="thereIsContentAwaitingApproval && isPublisher" [routerLink]="[ROUTE.AWAITING_APPROVAL]"
+                routerLinkActive="link-active" class="nav-item" matRipple>
                 <mat-icon fontIcon="reload-time-outline"></mat-icon>
                 {{t(KEY.AWAITING_APPROVAL)}}
             </a>
 
-            <ng-container *ngIf="nonEnglishSupportedLanguages().length > 0 && contentStore.approvedContent.length > 0">
+            <ng-container *ngIf="nonEnglishSupportedLanguages().length > 0 && thereIsApprovedContents">
                 <button (click)="expandMobileDropdown.set(!expandMobileDropdown())"
                     class="nav-item mb-2 !pb-2 !items-center justify-between" matRipple>
                     <span class="flex items-center gap-4">
@@ -155,8 +156,8 @@
 
             </ng-container>
 
-            <a *ngIf="contentStore.approvedContent.length > 0" [routerLink]="[ROUTE.APPROVED]"
-                routerLinkActive="link-active" class="nav-item" matRipple>
+            <a *ngIf="thereIsApprovedContents" [routerLink]="[ROUTE.APPROVED]" routerLinkActive="link-active"
+                class="nav-item" matRipple>
                 <mat-icon fontIcon="check-box-outline"></mat-icon>
                 {{t(KEY.APPROVED)}}
             </a>
@@ -196,13 +197,13 @@
             {{t(KEY.ADD_NEW)}}
         </a>
 
-        <a *ngIf="contentStore.contentAwaitingApproval.length > 0 && isPublisher"
-            [routerLink]="[ROUTE.AWAITING_APPROVAL]" tuiAsideItem matRipple>
+        <a *ngIf="thereIsContentAwaitingApproval && isPublisher" [routerLink]="[ROUTE.AWAITING_APPROVAL]" tuiAsideItem
+            matRipple>
             <mat-icon fontIcon="reload-time-outline"></mat-icon>
             {{t(KEY.AWAITING_APPROVAL)}}
         </a>
 
-        <tui-aside-group *ngIf="nonEnglishSupportedLanguages().length > 0 && contentStore.approvedContent.length > 0">
+        <tui-aside-group *ngIf="nonEnglishSupportedLanguages().length > 0 && thereIsApprovedContents">
             <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].countryCode]"
                 automation-id="setting" tuiAsideItem tuiChevron matRipple type="button">
                 <mat-icon fontIcon="translate-outline"></mat-icon>
@@ -219,7 +220,7 @@
             </button>
         </tui-aside-group>
 
-        <a *ngIf="contentStore.approvedContent.length > 0" [routerLink]="[ROUTE.APPROVED]" tuiAsideItem matRipple>
+        <a *ngIf="thereIsApprovedContents" [routerLink]="[ROUTE.APPROVED]" tuiAsideItem matRipple>
             <mat-icon fontIcon="check-box-outline"></mat-icon>
             {{t(KEY.APPROVED)}}
         </a>

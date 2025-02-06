@@ -34,9 +34,6 @@ export const DASHBOARD_ROUTES: Routes = [
       },
       {
         path: ROUTE.AWAITING_APPROVAL,
-        resolve: {
-          data: () => inject(ContentStore).getContentsAwaitingApproval(),
-        },
         data: {
           breadcrumb: KEY.AWAITING_APPROVAL,
         },
