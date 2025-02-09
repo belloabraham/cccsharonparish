@@ -61,6 +61,7 @@ import { ThemeType } from '@cccsharonparish/angular';
 import { distinctUntilChanged, filter } from 'rxjs';
 import { DashboardStore } from './dashboard.store';
 import { ContentStore } from './shared';
+import { EditorsStore } from './editors/editors.store';
 
 @Component({
   selector: 'app-dashboard',
@@ -117,6 +118,7 @@ export class DashboardComponent extends CommonComponent {
   readonly dashboardStore = inject(DashboardStore);
   readonly userDataStore = inject(UserDataStore);
   readonly contentStore = inject(ContentStore);
+  readonly editorsStore = inject(EditorsStore);
 
   nonEnglishSupportedLanguages!: Signal<Language[]>;
 
@@ -127,11 +129,46 @@ export class DashboardComponent extends CommonComponent {
   private activatedRoute = inject(ActivatedRoute);
   DEFAULT_LANG_CODE = DEFAULT_LANG_CODE;
 
+  // const approvedContents$ = inject(ContentStore).getApprovedContents();
+
   constructor() {
     super();
     this.onNavigationStart();
     this.onNavigationEnd();
 
+    this.updateNonEnglishLanguages();
+
+    effect(() => {
+      if (this.appStore.language().loaded) {
+        this.setBreadCrumb();
+      }
+    });
+
+    if (this.isPublisher()) {
+      this.loadContentsAwaitingApproval();
+      this.loadEditors();
+    }
+    this.loadApprovedContents();
+  }
+
+  loadEditors() {
+    this.editorsStore.getEditors().subscribe();
+  }
+
+  loadContentsAwaitingApproval() {
+    this.contentStore.getContentsAwaitingApproval().subscribe();
+  }
+
+  loadApprovedContents() {
+    this.contentStore.getApprovedContents().subscribe();
+  }
+
+  isPublisher() {
+    const userType = this.userDataStore.user()?.userType;
+    return userType === 'Publisher' || userType === 'Admin';
+  }
+
+  updateNonEnglishLanguages() {
     this.nonEnglishSupportedLanguages = computed(() => {
       const supportedLanguages =
         this.dashboardStore.supportedLanguages().languages;
@@ -139,12 +176,6 @@ export class DashboardComponent extends CommonComponent {
         (lang) => lang.code !== DEFAULT_LANG_CODE
       );
       return nonEnglishLanguages;
-    });
-
-    effect(() => {
-      if (this.appStore.language().loaded) {
-        this.setBreadCrumb();
-      }
     });
   }
 

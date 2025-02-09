@@ -7,8 +7,8 @@ import { AUTH_TOKEN } from './services';
 import { DashboardService } from './dashboard/dashboard.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { DashboardStore } from './dashboard/dashboard.store';
-import { ContentStore } from './dashboard/shared';
 import { UserDataStore } from './shared';
+import { EditorsStore } from './dashboard/editors/editors.store';
 
 export const appRoutes: Route[] = [
   {
@@ -27,14 +27,11 @@ export const appRoutes: Route[] = [
   },
   {
     path: ROUTE.ROOT,
-    providers: [DashboardService],
+    providers: [DashboardService, EditorsStore],
     resolve: {
       data: () => {
         const dataStore = inject(UserDataStore);
         const languages$ = inject(DashboardStore).getSupportedLanguages();
-        const contentAwaitingApproval$ =
-          inject(ContentStore).getContentsAwaitingApproval();
-        const approvedContents$ = inject(ContentStore).getApprovedContents();
         return inject(AUTH_TOKEN)
           .getAuthSate$()
           .pipe(
@@ -44,8 +41,6 @@ export const appRoutes: Route[] = [
               return forkJoin([
                 dataStore.getUser(user.uid),
                 languages$,
-                contentAwaitingApproval$,
-                approvedContents$,
               ]);
             })
           );

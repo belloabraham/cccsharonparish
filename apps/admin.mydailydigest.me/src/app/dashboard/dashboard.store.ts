@@ -28,16 +28,6 @@ export const DashboardStore = signalStore(
   withState(initialState),
   withMethods((store, dashboardService = inject(DashboardService)) => ({
     getSupportedLanguages() {
-      patchState(store, (state) => ({
-        ...state,
-        supportedLanguages: {
-          languages: [],
-          isLoading: true,
-          error: null,
-          loaded: false,
-        },
-      }));
-
       return dashboardService.getSupportedLanguages().pipe(
         retryWhen(firestoreRetryStrategy(Infinity)),
         tap({

@@ -14,9 +14,6 @@ export class EditorsService {
   readonly USE_MOCK_DATA = environment.useMockData;
 
   getEditors() {
-    if (this.USE_MOCK_DATA) {
-      return of(AWAITING_APPROVAL_CONTENT_MOCK);
-    }
     return this.remoteData.getListOfDocumentDataWithQueryAsync<IUser>(
       COLLECTION.EDITORS,
       [],
