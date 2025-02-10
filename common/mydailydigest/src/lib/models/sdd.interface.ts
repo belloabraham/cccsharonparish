@@ -5,6 +5,12 @@ export type ISpiritualDailyDigestTableUIState = ISpiritualDailyDigestUIState & {
   sn: number;
 };
 
+export type IAwaitingApprovalContentTableUIState = ISpiritualDailyDigestUIState & {
+  sn: number;
+  createdBy: string;
+  updatedBy: string | null;
+};
+
 export interface ISpiritualDailyDigestUIState {
   topic: string;
   message: string;

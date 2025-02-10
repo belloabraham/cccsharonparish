@@ -1,5 +1,7 @@
+import { TABLE_STRING_RESOURCE_KEYS } from "../../shared";
+
 export const CONTENT_STRING_RESOURCE_KEYS = {
-  SEARCH_PLACEHOLDER: 'search_placeholder',
+  ...TABLE_STRING_RESOURCE_KEYS,
   NO_ADDED_CONTENT_MSG: 'no_added_content_msg',
   YES: 'yes',
   NO: 'no',
@@ -8,7 +10,6 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   SUBMIT_FOR_REVIEW_MSG: 'submit_for_review_msg',
   SUBMIT_FOR_REVIEW_QUEST: 'submit_for_review_quest',
   DELETE: 'delete',
-  EDIT: 'edit',
   SUBMIT_FOR_REVIEW: 'submit_for_review',
   SUBMIT_FOR_REVIEW_WARN_MSG: 'submit_for_review_warn_msg',
 };

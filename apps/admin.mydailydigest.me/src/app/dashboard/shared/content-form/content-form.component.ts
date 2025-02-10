@@ -65,10 +65,10 @@ import { AsyncPipe } from '@angular/common';
 import { environment } from '../../../../environments/environment';
 import { CONTENT_STRING_RESOURCE_KEYS } from './i18n/string-res-keys';
 import { DraftService } from '../../new-content/draft.service';
-import { IDialogData } from '../../new-content/new-content.component';
 import { ContentService } from '../content.service';
 import { ContentStore } from '../content.store';
 import { COMMA, ENTER, SPACE } from '@angular/cdk/keycodes';
+import { IDialogData } from '../content-dialog';
 
 @Component({
   selector: 'app-content-form',

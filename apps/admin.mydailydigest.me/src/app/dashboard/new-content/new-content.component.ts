@@ -35,7 +35,6 @@ import {
 } from '../shared';
 import { TuiDialogService } from '@taiga-ui/core';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
-import { NgIf } from '@angular/common';
 import { DashboardStore } from '../dashboard.store';
 import { COLLECTION, STORAGE_PATH } from '../../services';
 import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
@@ -45,14 +44,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { SubSink } from 'subsink';
 import { DraftService } from './draft.service';
 import { environment } from '../../../environments/environment';
-
-export interface IDialogData {
-  language: Language;
-  existingContentUIState?: ISpiritualDailyDigestUIState;
-  existingContent?: ISpiritualDailyDigest;
-  rootStoragePath: string;
-  rootDataPath: string;
-}
+import { IDialogData } from '../shared/content-dialog';
 
 @Component({
   selector: 'app-new-content',
@@ -62,7 +54,6 @@ export interface IDialogData {
     MatButtonModule,
     MatIconModule,
     EmptyStatusComponent,
-    NgIf,
     TuiNotification,
     MatTooltipModule,
     ...TABLE_MODULES,
@@ -266,13 +257,13 @@ export class NewContentComponent implements OnDestroy {
   }
 
   getTableUIState(start: number, end: number) {
-    const publishedContent = this.contentStore
+    const draftContents = this.contentStore
       .draftContents()
       .filter((data, index) => {
         return index >= start && index < end;
       });
     const tableUIState = contentsToTableUIState(
-      publishedContent,
+      draftContents,
       DEFAULT_LANG_CODE
     );
     return tableUIState;

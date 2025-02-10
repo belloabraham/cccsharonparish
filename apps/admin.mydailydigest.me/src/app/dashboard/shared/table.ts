@@ -6,6 +6,7 @@ import { DatePipe, NgFor, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatRippleModule } from '@angular/material/core';
 import { NgAudioPlayerComponent } from '@cccsharonparish/angular';
 import {
+  IAwaitingApprovalContentTableUIState,
   ISpiritualDailyDigestTableUIState,
   ISpiritualDailyDigestUIState,
 } from '@cccsharonparish/mydailydigest';
@@ -20,6 +21,11 @@ import { TuiBadgedContent } from '@taiga-ui/kit';
 import { SharedModule } from '../../shared';
 import { FormsModule } from '@angular/forms';
 import { TuiScrollable, TuiScrollbar } from '@taiga-ui/core';
+
+export const TABLE_STRING_RESOURCE_KEYS = {
+  SEARCH_PLACEHOLDER: 'search_placeholder',
+  EDIT: 'edit',
+};
 
 export const AVERAGE_TABLE_PAGE_SIZE = 31;
 
@@ -62,6 +68,29 @@ const newContentTableStateKeys = {
 export const NEW_CONTENT_TABLE_COLUMNS = Object.keys(
   newContentTableStateKeys
 ) as (keyof (ISpiritualDailyDigestUIState & { sn: number }))[];
+
+const contentAwaitingApprovalTableStateKeys = {
+  sn: 0,
+  date: new Date(),
+  topic: '',
+  message: '',
+  reference: '',
+  verses: '',
+  keyVerse: '',
+  imagePath: '',
+  audioUrl: '',
+  tags: [],
+  createdBy: '',
+  updatedBy: '',
+};
+
+export const CONTENT_AWAITING_APPROVE_TABLE_COLUMNS = Object.keys(
+  contentAwaitingApprovalTableStateKeys
+) as (keyof (IAwaitingApprovalContentTableUIState & {
+  sn: number;
+  createdBy: string;
+  updatedBy: string | null;
+}))[];
 
 export const TABLE_MODULES = [
   SharedModule,

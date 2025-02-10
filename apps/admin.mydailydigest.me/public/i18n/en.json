@@ -119,6 +119,8 @@
 
   "no_content_awaiting_approval_msg": "There are no content submitted for approval, have editors submit a draft content for approval and they will appear here.",
 
+  "content_gets_approved_msg": "Once a content gets approved they become available for translation",
+
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",
   "whats_app": "WhatsApp",
