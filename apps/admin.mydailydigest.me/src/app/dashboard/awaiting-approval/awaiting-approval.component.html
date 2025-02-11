@@ -1,8 +1,9 @@
 <div *transloco="let t" class="draft">
-    <h5 class="page-title">{{t(KEY.AWAITING_APPROVAL)}}</h5>
 
     @let contentsAwaitingApproval = contentStore.contentAwaitingApproval();
     @let contentIsEmpty = contentsAwaitingApproval.length === 0;
+    <h5 class="page-title" [class.!mb-0]="!contentIsEmpty">{{t(KEY.AWAITING_APPROVAL)}}</h5>
+
 
     <tui-notification *ngIf="!contentIsEmpty" size="s" appearance="warning" class="mb-12">
         <p [innerHTML]="t(KEY.CONTENT_GETS_APPROVED_MSG)"></p>
@@ -14,9 +15,6 @@
             <tui-textfield class="flex-1" tuiTextfieldSize="m" iconStart="@tui.search">
                 <input [(ngModel)]="searchQuery" [placeholder]="t(KEY.SEARCH_PLACEHOLDER)" tuiTextfield />
             </tui-textfield>
-            <button (click)="openContentDialog()" class="fab" mat-fab>
-                <mat-icon fontIcon="plus-fill"></mat-icon>
-            </button>
         </div>
 
         <tui-scrollbar class="!h-full">

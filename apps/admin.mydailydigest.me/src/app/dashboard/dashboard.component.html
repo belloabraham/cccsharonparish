@@ -1,4 +1,4 @@
-<div *transloco="let t" class="dashboard-root no-scrollbar">
+<div *transloco="let t" class="dashboard-root">
 
     <!-- Header -->
     <ng-container *ngTemplateOutlet="header"></ng-container>
@@ -12,12 +12,12 @@
         }
 
         <main tuiNavigationMain [ngClass]="{'nav-expand': expandSideNav(), 'nav-collapse': !expandSideNav()}"
-            class="!block !border-none no-scrollbar">
+            class="!block !border-none">
             <!-- Top Navigation -->
             <ng-container *ngTemplateOutlet="topNavigation"></ng-container>
 
             <!-- Main Routes -->
-            <div class="route no-scrollbar h-full">
+            <div class="route h-full">
                 <router-outlet></router-outlet>
             </div>
         </main>

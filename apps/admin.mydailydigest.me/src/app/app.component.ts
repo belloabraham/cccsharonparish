@@ -24,15 +24,7 @@ import { filter, map, merge } from 'rxjs';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  providers: [
-    ConnectionStateUtil,
-    {
-      provide: TUI_SCROLLBAR_OPTIONS,
-      useValue: {
-        mode: 'native',
-      },
-    },
-  ],
+  providers: [ConnectionStateUtil],
 })
 export class AppComponent
   extends BaseAppComponent
