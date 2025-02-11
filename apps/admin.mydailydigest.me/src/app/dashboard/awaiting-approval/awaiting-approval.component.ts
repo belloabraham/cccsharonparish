@@ -5,11 +5,12 @@ import {
   inject,
   Injector,
   input,
+  OnDestroy,
   Signal,
   signal,
 } from '@angular/core';
-import { SharedModule } from '../../shared';
-import {  TuiNotification, TuiTextfield } from '@taiga-ui/core';
+import { SharedModule, UserDataStore } from '../../shared';
+import { TuiNotification, TuiTextfield } from '@taiga-ui/core';
 import {
   contentsToAwaitingApprovalTableUIState,
   DEFAULT_LANG_CODE,
@@ -21,6 +22,7 @@ import {
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {
+  AlertDialogService,
   ascDescSortCompare,
   AVERAGE_TABLE_PAGE_SIZE,
   ColumnKeys,
@@ -41,7 +43,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { SubSink } from 'subsink';
 import { environment } from '../../../environments/environment';
 import { DRAFT_STRING_RESOURCE_KEY } from '../awaiting-approval/i18n/string-res-keys';
-import { AwaitingApprovalService } from './awaiting-approval.service';
+import { EditorsStore } from '../editors/editors.store';
 
 @Component({
   selector: 'app-awaiting-approval',
@@ -57,10 +59,12 @@ import { AwaitingApprovalService } from './awaiting-approval.service';
   templateUrl: './awaiting-approval.component.html',
   styleUrl: './awaiting-approval.component.scss',
 })
-export class AwaitingApprovalComponent {
+export class AwaitingApprovalComponent implements OnDestroy {
   readonly KEY = DRAFT_STRING_RESOURCE_KEY;
 
   private dialogService = inject(TuiDialogService);
+  private readonly alertDialogService = inject(AlertDialogService);
+
   private injector = inject(Injector);
   subscriptions = new SubSink();
   contentStore = inject(ContentStore);
@@ -84,6 +88,8 @@ export class AwaitingApprovalComponent {
   readonly orderDirection = signal<-1 | 1>(-1);
   searchQuery = '';
   data?: Signal<IAwaitingApprovalContentTableUIState[]> = signal([]);
+  private readonly editorsStore = inject(EditorsStore);
+  private readonly userDataStore = inject(UserDataStore);
   private readonly languageResourceService = inject(LanguageResourceService);
 
   constructor() {
@@ -105,12 +111,36 @@ export class AwaitingApprovalComponent {
   }
 
   editContent(
-    existingContentTableUIState: ISpiritualDailyDigestTableUIState,
+    existingContentTableUIState: IAwaitingApprovalContentTableUIState,
     existingContent: ISpiritualDailyDigest
   ) {
     const { sn, ...existingContentUIState } = existingContentTableUIState;
     this.openContentDialog(existingContentUIState, existingContent);
   }
+
+  markAsApprovedPrompt(
+    topic: string,
+    existingContentTableUIState: IAwaitingApprovalContentTableUIState,
+    existingContent: ISpiritualDailyDigest
+  ) {
+    this.alertDialogService
+      .open('Are you sure you want to approve ' + topic + '?', {
+        heading: 'Approve content?',
+        buttons: [
+          this.languageResourceService.getString(this.KEY.YES),
+          this.languageResourceService.getString(this.KEY.NO),
+        ],
+      })
+      .subscribe({
+        next: (isYes) => {
+          if (isYes) {
+            this.markAsApproved();
+          }
+        },
+      });
+  }
+
+  markAsApproved() {}
 
   isColumnMatch(value: any): boolean {
     return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);
@@ -171,6 +201,12 @@ export class AwaitingApprovalComponent {
         }
       )
       .subscribe();
+  }
+
+  getUserById(userId: string) {
+    return (this.editorsStore
+      .editors()
+      .find((editor) => editor.id === userId) || this.userDataStore.user())!;
   }
 
   ngOnDestroy(): void {

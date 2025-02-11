@@ -1,4 +1,4 @@
-<div *transloco="let t" class="draft">
+<div *transloco="let t" class="draft h-full">
 
     @let contentsAwaitingApproval = contentStore.contentAwaitingApproval();
     @let contentIsEmpty = contentsAwaitingApproval.length === 0;
@@ -101,15 +101,31 @@
 
                                             @let contentForRow = contentStore.contentAwaitingApproval()[dataIndex];
 
+                                            <button [matTooltip]="t(KEY.APPROVE)"
+                                                (click)="markAsApprovedPrompt(item.topic, item, contentForRow)"
+                                                mat-icon-button>
+                                                <mat-icon fontIcon="check-box-outline"></mat-icon>
+                                            </button>
+
                                             <button [matTooltip]="t(KEY.EDIT)"
                                                 (click)="editContent(item, contentForRow)" mat-icon-button>
                                                 <mat-icon fontIcon="pen-fill"></mat-icon>
                                             </button>
 
+
                                         </div>
                                     </div>
                                 </td>
-                                }@else {
+                                }@else if (key === "updatedBy" || key === "createdBy"){
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
+                                    <ng-container *ngIf="item[key]">
+                                        @let updatedBy = getUserById(item[key]!);
+                                        <p>{{ updatedBy?.lastName }} {{ updatedBy?.firstName }}</p>
+                                        <a class="underline" href="tel:+{{updatedBy?.phone}}">{{updatedBy?.phone}}</a>
+                                    </ng-container>
+                                </td>
+                                }
+                                @else {
                                 <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{
                                     item[key]}}
                                 </td>

@@ -25,6 +25,8 @@ import { TuiScrollable, TuiScrollbar } from '@taiga-ui/core';
 export const TABLE_STRING_RESOURCE_KEYS = {
   SEARCH_PLACEHOLDER: 'search_placeholder',
   EDIT: 'edit',
+  YES: 'yes',
+  NO: 'no',
 };
 
 export const AVERAGE_TABLE_PAGE_SIZE = 31;

@@ -120,11 +120,13 @@
   "no_content_awaiting_approval_msg": "There are no content submitted for approval, have editors submit a draft content for approval and they will appear here.",
 
   "content_gets_approved_msg": "Once a content gets approved they become available for translation",
+  "updatedBy": "Updated by",
+  "createdBy": "Created by",
 
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",
   "whats_app": "WhatsApp",
-  "last_name": "Last name",
+  "last_name": "Last name (Surname)",
   "first_name": "First name",
   "phone_number": "Phone number",
   "signup_header": "Hi there 👋🏽, you are new here",
