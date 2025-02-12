@@ -54,7 +54,6 @@ export function getContentFromUIState(
 export class ContentService {
   private readonly draftService = inject(DraftService);
   private readonly approvedService = inject(ApprovedService);
-  private readonly translateService = inject(TranslateService);
   private readonly awaitingApprovalService = inject(AwaitingApprovalService);
   private readonly remoteData = inject(REMOTE_DATA_TOKEN);
   private readonly auth = inject(AUTH_TOKEN);

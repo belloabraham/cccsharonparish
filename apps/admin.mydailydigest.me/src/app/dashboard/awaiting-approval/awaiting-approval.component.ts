@@ -4,7 +4,6 @@ import {
   HostBinding,
   inject,
   Injector,
-  input,
   OnDestroy,
   Signal,
   signal,
@@ -16,8 +15,8 @@ import {
   DEFAULT_LANG_CODE,
   IAwaitingApprovalContentTableUIState,
   ISpiritualDailyDigest,
-  ISpiritualDailyDigestTableUIState,
   ISpiritualDailyDigestUIState,
+  Language,
 } from '@cccsharonparish/mydailydigest';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -75,11 +74,6 @@ export class AwaitingApprovalComponent implements OnDestroy {
   @HostBinding('style.height') height = '100%';
   @HostBinding('style.display') display = 'block';
 
-  languageCode = input.required<string>({
-    alias: 'languageCode',
-  });
-  title!: Signal<string>;
-
   AVERAGE_TABLE_PAGE_SIZE = AVERAGE_TABLE_PAGE_SIZE;
   tableColumns = CONTENT_AWAITING_APPROVE_TABLE_COLUMNS;
   readonly sortColumnBy = signal<any | null>(null);
@@ -93,13 +87,6 @@ export class AwaitingApprovalComponent implements OnDestroy {
   private readonly languageResourceService = inject(LanguageResourceService);
 
   constructor() {
-    this.title = computed(() => {
-      const title = this.dashboardStore
-        .supportedLanguages()
-        .languages.filter((lang) => lang.code === this.languageCode())[0].label;
-      return title;
-    });
-
     this.data = computed(() =>
       this.getData(
         this.sortColumnBy(),
@@ -114,7 +101,8 @@ export class AwaitingApprovalComponent implements OnDestroy {
     existingContentTableUIState: IAwaitingApprovalContentTableUIState,
     existingContent: ISpiritualDailyDigest
   ) {
-    const { sn, ...existingContentUIState } = existingContentTableUIState;
+    const { sn, createdBy, updatedBy, ...existingContentUIState } =
+      existingContentTableUIState;
     this.openContentDialog(existingContentUIState, existingContent);
   }
 
@@ -184,7 +172,7 @@ export class AwaitingApprovalComponent implements OnDestroy {
   ) {
     const language = this.dashboardStore
       .supportedLanguages()
-      .languages.find((lang) => lang.code === this.languageCode());
+      .languages.find((lang) => lang.code === DEFAULT_LANG_CODE);
     this.subscriptions.sink = this.dialogService
       .open<IDialogData | undefined>(
         new PolymorpheusComponent(ContentFormComponent, this.injector),
@@ -193,11 +181,13 @@ export class AwaitingApprovalComponent implements OnDestroy {
             existingContentUIState: existingContentUIState,
             existingContent: existingContent,
             language: language,
-            rootStoragePath: STORAGE_PATH.DRAFT,
-            rootDataPath: COLLECTION.DRAFT,
+            rootStoragePath: STORAGE_PATH.AWAITING_APPROVAL,
+            rootDataPath: COLLECTION.AWAITING_APPROVAL,
           },
           dismissible: false,
-          header: this.title(),
+          header: this.languageResourceService.getString(
+            this.KEY.AWAITING_APPROVAL
+          ),
         }
       )
       .subscribe();
