@@ -102,7 +102,7 @@
                                             @let contentForRow = contentStore.contentAwaitingApproval()[dataIndex];
 
                                             <button [matTooltip]="t(KEY.APPROVE)"
-                                                (click)="markAsApprovedPrompt(item.topic, item, contentForRow)"
+                                                (click)="markAsApprovedPrompt(item.topic, contentForRow)"
                                                 mat-icon-button>
                                                 <mat-icon fontIcon="file-check-fill"></mat-icon>
                                             </button>

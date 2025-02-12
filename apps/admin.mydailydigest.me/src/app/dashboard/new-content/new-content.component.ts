@@ -178,6 +178,7 @@ export class NewContentComponent implements OnDestroy {
       this.contentStore.updateDraftContents([
         ...this.contentStore.draftContents(),
       ]);
+      this.getContentsAwaitingApproval()
       this.alertService
         .open('Content was submitted successfully', {
           label: 'Submitted for review',
@@ -195,6 +196,10 @@ export class NewContentComponent implements OnDestroy {
         )
         .subscribe();
     }
+  }
+
+  private getContentsAwaitingApproval() {
+    this.contentStore.getContentsAwaitingApproval().subscribe();
   }
 
   editContent(

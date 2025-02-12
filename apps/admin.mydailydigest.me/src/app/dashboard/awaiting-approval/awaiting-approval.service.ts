@@ -21,4 +21,23 @@ export class AwaitingApprovalService {
       []
     );
   }
+
+  markAsApproved(contentAwaitingApproval: ISpiritualDailyDigest) {
+    return this.remoteData.runTransaction(async (transaction) => {
+      const awaitingApprovalDocRef = this.remoteData.getDocRef(
+        COLLECTION.AWAITING_APPROVAL,
+        [contentAwaitingApproval.id]
+      );
+
+      const approvedDocRef = this.remoteData.getDocRef(COLLECTION.APPROVED, [
+        contentAwaitingApproval.id,
+      ]);
+
+      transaction.delete(awaitingApprovalDocRef);
+      transaction.set(approvedDocRef, {
+        ...contentAwaitingApproval,
+        isAwaitingApproval: false,
+      });
+    });
+  }
 }

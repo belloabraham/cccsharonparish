@@ -129,8 +129,6 @@ export class DashboardComponent extends CommonComponent {
   private activatedRoute = inject(ActivatedRoute);
   DEFAULT_LANG_CODE = DEFAULT_LANG_CODE;
 
-  // const approvedContents$ = inject(ContentStore).getApprovedContents();
-
   constructor() {
     super();
     this.onNavigationStart();

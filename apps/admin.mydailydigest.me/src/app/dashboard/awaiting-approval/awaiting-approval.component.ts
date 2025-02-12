@@ -9,14 +9,13 @@ import {
   signal,
 } from '@angular/core';
 import { SharedModule, UserDataStore } from '../../shared';
-import { TuiNotification, TuiTextfield } from '@taiga-ui/core';
+import { TuiAlertService, TuiNotification, TuiTextfield } from '@taiga-ui/core';
 import {
   contentsToAwaitingApprovalTableUIState,
   DEFAULT_LANG_CODE,
   IAwaitingApprovalContentTableUIState,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
-  Language,
 } from '@cccsharonparish/mydailydigest';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -43,6 +42,8 @@ import { environment } from '../../../environments/environment';
 import { DRAFT_STRING_RESOURCE_KEY } from '../awaiting-approval/i18n/string-res-keys';
 import { EditorsStore } from '../editors/editors.store';
 import { CONTENT_AWAITING_APPROVE_TABLE_COLUMNS } from './awaiting-approval-table';
+import { AwaitingApprovalService } from './awaiting-approval.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-awaiting-approval',
@@ -61,13 +62,17 @@ import { CONTENT_AWAITING_APPROVE_TABLE_COLUMNS } from './awaiting-approval-tabl
 export class AwaitingApprovalComponent implements OnDestroy {
   readonly KEY = DRAFT_STRING_RESOURCE_KEY;
 
-  private dialogService = inject(TuiDialogService);
+  private readonly dialogService = inject(TuiDialogService);
   private readonly alertDialogService = inject(AlertDialogService);
+  private readonly awaitingApprovalService = inject(AwaitingApprovalService);
+  private readonly alertService = inject(TuiAlertService);
+  private readonly router = inject(Router);
 
   private injector = inject(Injector);
   subscriptions = new SubSink();
   contentStore = inject(ContentStore);
   dashboardStore = inject(DashboardStore);
+
   CDN_BASE_URL = environment.cdnBaseUrl;
 
   sddForSelectedLanguage = signal<ISpiritualDailyDigest[]>([]);
@@ -108,8 +113,7 @@ export class AwaitingApprovalComponent implements OnDestroy {
 
   markAsApprovedPrompt(
     topic: string,
-    existingContentTableUIState: IAwaitingApprovalContentTableUIState,
-    existingContent: ISpiritualDailyDigest
+    contentAwaitingApproval: ISpiritualDailyDigest
   ) {
     this.alertDialogService
       .open('Are you sure you want to approve ' + topic + '?', {
@@ -120,15 +124,53 @@ export class AwaitingApprovalComponent implements OnDestroy {
         ],
       })
       .subscribe({
-        next: (isYes) => {
+        next: async (isYes) => {
           if (isYes) {
-            this.markAsApproved();
+            await this.markAsApproved(topic, contentAwaitingApproval);
           }
         },
       });
   }
 
-  markAsApproved() {}
+  async markAsApproved(
+    topic: string,
+    contentAwaitingApproval: ISpiritualDailyDigest
+  ) {
+    try {
+      await this.awaitingApprovalService.markAsApproved(
+        contentAwaitingApproval
+      );
+      this.getApprovedContents();
+      this.updateUIContent(contentAwaitingApproval.id);
+      this.alertService
+        .open(`${topic} was approved successfully`, {
+          label: 'Approved',
+          appearance: 'positive',
+        })
+        .subscribe();
+    } catch (error) {
+      this.alertService
+        .open(
+          `Unable to approve ${topic}, check your internet connection and try again.`,
+          {
+            label: 'Error',
+            appearance: 'negative',
+          }
+        )
+        .subscribe();
+    }
+  }
+
+  private updateUIContent(id: string) {
+    const contentsAwaitingApproval = this.contentStore
+      .contentAwaitingApproval()
+      .filter((content) => content.id !== id);
+    this.contentStore.updateAwaitingApprovalContents(contentsAwaitingApproval);
+  }
+
+  private getApprovedContents() {
+    this.contentStore.getApprovedContents().subscribe();
+  }
 
   isColumnMatch(value: any): boolean {
     return !!this.searchQuery && TUI_DEFAULT_MATCHER(value, this.searchQuery);
