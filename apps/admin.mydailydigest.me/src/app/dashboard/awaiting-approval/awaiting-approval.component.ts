@@ -26,7 +26,6 @@ import {
   ascDescSortCompare,
   AVERAGE_TABLE_PAGE_SIZE,
   ColumnKeys,
-  CONTENT_AWAITING_APPROVE_TABLE_COLUMNS,
   ContentFormComponent,
   ContentStore,
   IDialogData,
@@ -44,6 +43,7 @@ import { SubSink } from 'subsink';
 import { environment } from '../../../environments/environment';
 import { DRAFT_STRING_RESOURCE_KEY } from '../awaiting-approval/i18n/string-res-keys';
 import { EditorsStore } from '../editors/editors.store';
+import { CONTENT_AWAITING_APPROVE_TABLE_COLUMNS } from './awaiting-approval-table';
 
 @Component({
   selector: 'app-awaiting-approval',

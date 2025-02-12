@@ -30,7 +30,6 @@ import {
   ContentFormComponent,
   ContentStore,
   EmptyStatusComponent,
-  NEW_CONTENT_TABLE_COLUMNS,
   TABLE_MODULES,
 } from '../shared';
 import { TuiDialogService } from '@taiga-ui/core';
@@ -45,6 +44,7 @@ import { SubSink } from 'subsink';
 import { DraftService } from './draft.service';
 import { environment } from '../../../environments/environment';
 import { IDialogData } from '../shared/content-dialog';
+import { NEW_CONTENT_TABLE_COLUMNS } from './draft-table';
 
 @Component({
   selector: 'app-new-content',

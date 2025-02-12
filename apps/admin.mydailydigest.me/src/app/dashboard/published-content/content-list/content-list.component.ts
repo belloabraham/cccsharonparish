@@ -34,9 +34,9 @@ import {
   AVERAGE_TABLE_PAGE_SIZE,
   ColumnKeys,
   getDaysInMonth,
-  PUBLISHED_TABLE_COLUMNS,
   TABLE_MODULES,
 } from '../../shared';
+import { PUBLISHED_TABLE_COLUMNS } from '../published-content-table';
 
 @Component({
   selector: 'app-content-list',
