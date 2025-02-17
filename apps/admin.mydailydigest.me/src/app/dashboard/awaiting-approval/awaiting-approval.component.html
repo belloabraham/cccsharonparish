@@ -65,80 +65,84 @@
                         </tr>
                     </thead>
                     <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
-                        <tr *ngFor="let item of sortedData; let dataIndex = index" tuiTr>
-                            <ng-container *ngFor="let key of tableColumns; let rowIndex = index">
-                                @if (key ==="date") {
-                                <td *tuiCell="key" tuiTd> {{ item[key] |
-                                    date:'fullDate'
-                                    }} </td>
-                                }@else if (key === "message" || key === "verses"){
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{
-                                    item[key]}}
+
+                        <ng-container *ngFor="let item of sortedData; let dataIndex = index">
+
+                            <tr class="table-tools-row">
+                                <td [colSpan]="tableColumns.length" class="border-x-1 border-b border-x px-4">
+                                    @let contentForRow = contentStore.contentAwaitingApproval()[dataIndex];
+
+                                    <button [matTooltip]="t(KEY.APPROVE)" class="text-orange-700"
+                                        (click)="markAsApprovedPrompt(item.topic, contentForRow)" mat-icon-button>
+                                        <mat-icon fontIcon="file-check-fill"></mat-icon>
+                                    </button>
+
+                                    <button [matTooltip]="t(KEY.EDIT)" (click)="editContent(item, contentForRow)"
+                                        mat-icon-button>
+                                        <mat-icon fontIcon="pen-fill"></mat-icon>
+                                    </button>
+
                                 </td>
-                                }@else if (key === "imagePath"){
-                                <td *tuiCell="key" tuiTd>
-                                    <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank" rel="noopener noreferrer">
-                                        <img *ngIf="item[key]" width="50" height="50" class="header-image"
-                                            ngSrc="{{item[key]}}" alt="Header Image">
+                            </tr>
 
-                                        <img *ngIf="!item[key]" width="50" height="50" class="header-image"
-                                            src="{{item[key]}}" alt="Header Image">
-                                    </a>
-                                </td>
-                                }@else if (key === "audioUrl"){
-                                <td *tuiCell="key" tuiTd>
-                                    <ng-audio-player *ngIf="item[key]" [src]="item[key]!" />
-                                </td>
-                                }@else if (key === "sn"){
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
+                            <tr tuiTr>
+                                <ng-container *ngFor="let key of tableColumns; let rowIndex = index">
+                                    @if (key ==="date") {
+                                    <td *tuiCell="key" tuiTd> {{ item[key] |
+                                        date:'fullDate'
+                                        }} </td>
+                                    }@else if (key === "message" || key === "verses"){
+                                    <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{
+                                        item[key]}}
+                                    </td>
+                                    }@else if (key === "imagePath"){
+                                    <td *tuiCell="key" tuiTd>
+                                        <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank"
+                                            rel="noopener noreferrer">
+                                            <img *ngIf="item[key]" width="50" height="50" class="header-image"
+                                                ngSrc="{{item[key]}}" alt="Header Image">
 
-                                    <div class="flex flex-col justify-between items-center h-full gap-4">
-                                        <p>
-                                            {{ item[key]}}
-                                        </p>
+                                            <img *ngIf="!item[key]" width="50" height="50" class="header-image"
+                                                src="{{item[key]}}" alt="Header Image">
+                                        </a>
+                                    </td>
+                                    }@else if (key === "audioUrl"){
+                                    <td *tuiCell="key" tuiTd>
+                                        <ng-audio-player *ngIf="item[key]" [src]="item[key]!" />
+                                    </td>
+                                    }@else if (key === "sn"){
+                                    <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
 
-                                        <div class="flex flex-col">
+                                        {{ item[key]}}
 
-                                            @let contentForRow = contentStore.contentAwaitingApproval()[dataIndex];
+                                    </td>
+                                    }@else if (key === "updatedBy" || key === "createdBy"){
+                                    <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
+                                        <ng-container *ngIf="item[key]">
+                                            @let updatedBy = getUserById(item[key]!);
+                                            <p>{{ updatedBy?.lastName }} {{ updatedBy?.firstName }}</p>
+                                            <a class="underline"
+                                                href="tel:+{{updatedBy?.phone}}">{{updatedBy?.phone}}</a>
+                                        </ng-container>
+                                    </td>
+                                    }
+                                    @else {
+                                    <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{
+                                        item[key]}}
+                                    </td>
+                                    }
 
-                                            <button [matTooltip]="t(KEY.APPROVE)"
-                                                (click)="markAsApprovedPrompt(item.topic, contentForRow)"
-                                                mat-icon-button>
-                                                <mat-icon fontIcon="file-check-fill"></mat-icon>
-                                            </button>
-
-                                            <button [matTooltip]="t(KEY.EDIT)"
-                                                (click)="editContent(item, contentForRow)" mat-icon-button>
-                                                <mat-icon fontIcon="pen-fill"></mat-icon>
-                                            </button>
+                                </ng-container>
+                            </tr>
+                        </ng-container>
 
 
-                                        </div>
-                                    </div>
-                                </td>
-                                }@else if (key === "updatedBy" || key === "createdBy"){
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
-                                    <ng-container *ngIf="item[key]">
-                                        @let updatedBy = getUserById(item[key]!);
-                                        <p>{{ updatedBy?.lastName }} {{ updatedBy?.firstName }}</p>
-                                        <a class="underline" href="tel:+{{updatedBy?.phone}}">{{updatedBy?.phone}}</a>
-                                    </ng-container>
-                                </td>
-                                }
-                                @else {
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{
-                                    item[key]}}
-                                </td>
-                                }
-
-                            </ng-container>
-                        </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td [colSpan]="tableColumns.length/2">
-                                <tui-table-pagination class="mt-2" [size]="AVERAGE_TABLE_PAGE_SIZE"
-                                    [page]="tablePage() || 0" [total]="contentStore.draftContents().length"
+                                <tui-table-pagination class="mt-2" [size]="TABLE_PAGE_SIZE" [page]="tablePage() || 0"
+                                    [total]="contentStore.draftContents().length"
                                     (paginationChange)="onPagination($event)" />
                             </td>
                         </tr>

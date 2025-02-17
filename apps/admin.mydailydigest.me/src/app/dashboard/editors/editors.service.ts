@@ -3,8 +3,8 @@ import { COLLECTION, REMOTE_DATA_TOKEN } from '../../services';
 import { IUser } from '@cccsharonparish/mydailydigest';
 import { where } from '@angular/fire/firestore';
 import { environment } from '../../../environments/environment';
-import { AWAITING_APPROVAL_CONTENT_MOCK } from '../awaiting-approval/mock/awaiting-approval-content';
 import { of } from 'rxjs';
+import { EDITORS_MOCK } from './mock/editors';
 
 @Injectable({
   providedIn: 'any',
@@ -14,6 +14,9 @@ export class EditorsService {
   readonly USE_MOCK_DATA = environment.useMockData;
 
   getEditors() {
+    if (environment.useMockData) {
+      return of(EDITORS_MOCK);
+    }
     return this.remoteData.getListOfDocumentDataWithQueryAsync<IUser>(
       COLLECTION.EDITORS,
       [],

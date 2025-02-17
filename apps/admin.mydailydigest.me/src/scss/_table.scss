@@ -5,6 +5,12 @@
   min-width: 300px;
 }
 
+.table-tools-row {
+  td {
+    border-color: var(--tui-border-normal) !important;
+  }
+}
+
 .verses-column {
   min-width: 200px;
 }

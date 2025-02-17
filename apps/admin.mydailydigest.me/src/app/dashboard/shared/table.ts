@@ -5,9 +5,7 @@ import {
 import { DatePipe, NgFor, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatRippleModule } from '@angular/material/core';
 import { NgAudioPlayerComponent } from '@cccsharonparish/angular';
-import {
-  ISpiritualDailyDigestTableUIState,
-} from '@cccsharonparish/mydailydigest';
+import { ISpiritualDailyDigestTableUIState } from '@cccsharonparish/mydailydigest';
 import {
   TuiComparator,
   TuiTable,
@@ -37,7 +35,6 @@ export function ascDescSortCompare(
 ): TuiComparator<ISpiritualDailyDigestTableUIState> {
   return (a, b) => direction * tuiDefaultSort(a[key], b[key]);
 }
-
 
 export const TABLE_MODULES = [
   SharedModule,

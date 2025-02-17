@@ -22,7 +22,7 @@ export const EDITORS_MOCK: IUser[] = [
     imageUrl: 'https://example.com/image2.jpg',
     createdOn: Timestamp.fromDate(new Date()),
     updatedOn: Timestamp.fromDate(new Date()),
-    userType: 'Editor',
+    userType: 'Publisher',
   },
   {
     id: 'e0Kl45MnOpQrStUvWxYzA',
@@ -75,6 +75,6 @@ export const EDITORS_MOCK: IUser[] = [
     imageUrl: 'https://example.com/image5.jpg',
     createdOn: Timestamp.fromDate(new Date()),
     updatedOn: Timestamp.fromDate(new Date()),
-    userType: 'Editor',
+    userType: 'Publisher',
   },
 ];

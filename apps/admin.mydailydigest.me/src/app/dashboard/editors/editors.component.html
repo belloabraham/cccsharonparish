@@ -1,3 +1,130 @@
-<div *transloco="let t" class="editors">
+<!-- <div *transloco="let t" class="editors">
     <h5 class="page-title">{{t(KEY.EDITORS)}}</h5>
-</div>
+
+        <tui-scrollbar class="!h-full">
+
+            <cdk-virtual-scroll-viewport #viewport appendOnly tuiScrollable class="viewport tui-zero-scrollbar !h-full"
+                [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
+
+                <table *ngIf="data" tuiTable class="table" [columns]="tableColumns" [direction]="orderDirection() || 1"
+                    [tuiSortBy]="sortColumnBy()" (directionChange)="orderDirection.set($event)"
+                    (tuiSortByChange)="sortColumnBy.set($event!)">
+                    <thead>
+                        <tr tuiThGroup>
+                            <ng-container *ngFor="let column of tableColumns">
+
+                                @if (column === "message") {
+                                <th *tuiHead="column" class="message-column" tuiTh [sticky]="true" [tuiSortable]="false"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
+                                }
+                                @else if (column === "verses") {
+                                <th *tuiHead="column" class="verses-column" tuiTh [sticky]="true" [tuiSortable]="false"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
+                                }
+                                @else if (column === "keyVerse") {
+                                <th *tuiHead="column" class="key-verse-column" tuiTh [sticky]="true" [tuiSortable]="false"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
+                                }
+                                @else if (column === "sn" || column ==="reference" ||
+                                column ==="topic") {
+                                <th *tuiHead="column" tuiSortable tuiTh [sticky]="true"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
+                                }@else {
+                                <th *tuiHead="column" [tuiSortable]="false" tuiTh [sticky]="true"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
+                                }
+
+                            </ng-container>
+                        </tr>
+                    </thead>
+                    <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
+                        <tr *ngFor="let item of sortedData; let dataIndex = index" tuiTr>
+                            <ng-container *ngFor="let key of tableColumns; let rowIndex = index">
+                                @if (key ==="date") {
+                                <td *tuiCell="key" tuiTd> {{ item[key] |
+                                    date:'fullDate'
+                                    }} </td>
+                                }@else if (key === "message" || key === "verses"){
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{
+                                    item[key]}}
+                                </td>
+                                }@else if (key === "imagePath"){
+                                <td *tuiCell="key" tuiTd>
+                                    <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank" rel="noopener noreferrer">
+                                        <img *ngIf="item[key]" width="50" height="50" class="header-image" ngSrc="{{item[key]}}"
+                                            alt="Header Image">
+
+                                        <img *ngIf="!item[key]" width="50" height="50" class="header-image" src="{{item[key]}}"
+                                            alt="Header Image">
+                                    </a>
+                                </td>
+                                }@else if (key === "audioUrl"){
+                                <td *tuiCell="key" tuiTd>
+                                    <ng-audio-player *ngIf="item[key]" [src]="item[key]!" />
+                                </td>
+                                }@else if (key === "sn"){
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
+
+                                    <div class="flex flex-col justify-between items-center h-full gap-4">
+                                        <p>
+                                            {{ item[key]}}
+                                        </p>
+
+                                        <div class="flex flex-col">
+
+                                            @let contentForRow =
+                                            contentStore.draftContents()[dataIndex];
+                                            <button [class.cursor-not-allowed]="contentForRow.isAwaitingApproval"
+                                                [disabled]="contentForRow.isAwaitingApproval"
+                                                [matTooltip]="t(KEY.SUBMIT_FOR_REVIEW)" mat-icon-button
+                                                (click)="submitForReviewPrompt(item['topic'], contentForRow, dataIndex)">
+                                                <mat-icon [class.text-orange-700]="!contentForRow.isAwaitingApproval"
+                                                    [class.text-gray-400]="contentForRow.isAwaitingApproval"
+                                                    fontIcon="file-upload-fill"></mat-icon>
+                                            </button>
+
+                                            <button [matTooltip]="t(KEY.EDIT)" (click)="editContent(item, contentForRow)"
+                                                mat-icon-button>
+                                                <mat-icon fontIcon="pen-fill"></mat-icon>
+                                            </button>
+
+                                            <button [matTooltip]="t(KEY.DELETE)"
+                                                (click)="deleteContentPrompt(item.topic, contentForRow.id)" mat-icon-button>
+                                                <mat-icon fontIcon="trash-can-fill"></mat-icon>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </td>
+                                }@else {
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{
+                                    item[key]}}
+                                </td>
+                                }
+
+                            </ng-container>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td [colSpan]="tableColumns.length/2">
+                                <tui-table-pagination class="mt-2" [size]="AVERAGE_TABLE_PAGE_SIZE" [page]="tablePage() || 0"
+                                    [total]="contentStore.draftContents().length" (paginationChange)="onPagination($event)" />
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </cdk-virtual-scroll-viewport>
+        </tui-scrollbar>
+</div> -->

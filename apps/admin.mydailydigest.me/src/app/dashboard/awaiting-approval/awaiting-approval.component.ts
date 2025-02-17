@@ -79,10 +79,10 @@ export class AwaitingApprovalComponent implements OnDestroy {
   @HostBinding('style.height') height = '100%';
   @HostBinding('style.display') display = 'block';
 
-  AVERAGE_TABLE_PAGE_SIZE = AVERAGE_TABLE_PAGE_SIZE;
+  TABLE_PAGE_SIZE = 100;
   tableColumns = CONTENT_AWAITING_APPROVE_TABLE_COLUMNS;
   readonly sortColumnBy = signal<any | null>(null);
-  readonly tablePageSize = signal(AVERAGE_TABLE_PAGE_SIZE);
+  readonly tablePageSize = signal(100);
   readonly tablePage = signal(0);
   readonly orderDirection = signal<-1 | 1>(-1);
   searchQuery = '';
