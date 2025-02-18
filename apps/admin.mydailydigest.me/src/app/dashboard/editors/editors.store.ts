@@ -1,6 +1,6 @@
 import { signalStore, withState, withMethods, patchState } from '@ngrx/signals';
 import { inject } from '@angular/core';
-import { IUser, Language } from '@cccsharonparish/mydailydigest';
+import { IUser } from '@cccsharonparish/mydailydigest';
 import { retryWhen, tap } from 'rxjs';
 import { EditorsService } from './editors.service';
 import { firestoreRetryStrategy } from '../../services';

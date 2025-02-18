@@ -13,17 +13,20 @@ import { EditorsStore } from './editors.store';
 import {
   ascDescSortCompare,
   ColumnKeys,
+  EditorTableUIState as Editor,
   EDITORS_TABLE_COLUMNS,
+  EditorTableUIState,
 } from './editors-table';
 import { IUser } from '@cccsharonparish/mydailydigest';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
 import { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { TABLE_MODULES } from '../shared';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-editors',
-  imports: [SharedModule, ...TABLE_MODULES],
+  imports: [SharedModule, MatButtonModule, ...TABLE_MODULES],
   templateUrl: './editors.component.html',
   styleUrl: './editors.component.scss',
 })
@@ -37,7 +40,7 @@ export class EditorsComponent {
   readonly orderDirection = signal<-1 | 1>(-1);
   tableColumns = EDITORS_TABLE_COLUMNS;
   searchQuery = '';
-  data?: Signal<IUser[]> = signal([]);
+  data?: Signal<EditorTableUIState[]> = signal([]);
   readonly sortColumnBy = signal<any | null>(null);
   private readonly languageResourceService = inject(LanguageResourceService);
   TABLE_PAGE_SIZE = 100;
@@ -68,7 +71,7 @@ export class EditorsComponent {
     direction: -1 | 1,
     page: number,
     size: number
-  ): ReadonlyArray<IUser | null> {
+  ): ReadonlyArray<EditorTableUIState | null> {
     const start = page * size;
     const end = start + size;
     const result = [...this.getTableUIState(start, end)].sort(
@@ -77,10 +80,16 @@ export class EditorsComponent {
     return result;
   }
 
-  getTableUIState(start: number, end: number) {
-    const editorsContent = this.editorsStore.editors().filter((data, index) => {
+  getTableUIState(start: number, end: number): EditorTableUIState[] {
+    const users = this.editorsStore.editors().filter((data, index) => {
       return index >= start && index < end;
     });
-    return editorsContent;
+    return users.map((user, index) => {
+      const editor: EditorTableUIState = {
+        sn: index + 1,
+        ...user,
+      };
+      return editor;
+    });
   }
 }
