@@ -138,7 +138,6 @@
   "user_create_error_message": "Oops! Something went wrong while creating your account. Please check your internet connection and try again. If the issue persists, contact support for assistance.",
   "profile_create_error_message": "Oops! Something went wrong while updating your profile. Please check your internet connection and try again. If the issue persists, contact support for assistance.",
 
-  "userType": "Account Type",
+  "userType": "User Type",
   "phone": "Phone"
-
 }

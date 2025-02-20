@@ -17,16 +17,26 @@ import {
   EDITORS_TABLE_COLUMNS,
   EditorTableUIState,
 } from './editors-table';
-import { IUser } from '@cccsharonparish/mydailydigest';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
 import { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { TABLE_MODULES } from '../shared';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { UserType } from '@cccsharonparish/mydailydigest';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-editors',
-  imports: [SharedModule, MatButtonModule, ...TABLE_MODULES],
+  imports: [
+    SharedModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTooltipModule,
+    MatMenuModule,
+    ...TABLE_MODULES,
+  ],
   templateUrl: './editors.component.html',
   styleUrl: './editors.component.scss',
 })
@@ -56,6 +66,8 @@ export class EditorsComponent {
       ).filter(tuiIsPresent)
     );
   }
+
+  changeUserType(userType: UserType) {}
 
   onPagination({ page, size }: TuiTablePaginationEvent): void {
     this.tablePage.set(page);

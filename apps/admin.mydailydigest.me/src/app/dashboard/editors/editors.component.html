@@ -24,10 +24,17 @@
                         <tr tuiThGroup>
                             <ng-container *ngFor="let column of tableColumns">
 
+                                @if(column === "sn" || column === "firstName" || column === "lastName"){
+                                <th *tuiHead="column" [tuiSortable]="true" tuiTh [sticky]="true"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
+                                }@else {
                                 <th *tuiHead="column" [tuiSortable]="false" tuiTh [sticky]="true"
                                     [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                     {{ t(column)}}
                                 </th>
+                                }
 
                             </ng-container>
                         </tr>
@@ -36,17 +43,6 @@
 
                         <ng-container *ngFor="let item of sortedData; let dataIndex = index">
 
-                            <!-- <tr class="table-tools-row">
-                            <td [colSpan]="tableColumns.length" class="border-x-1 border-b border-x px-4">
-                                @let contentForRow = editorsStore.editors()[dataIndex];
-
-                                <button *ngIf="contentForRow.userType === 'Publisher'" mat-button></button>
-
-                                <button *ngIf="contentForRow.userType === 'Editor'" mat-button></button>
-
-                            </td>
-                        </tr> -->
-
                             <tr tuiTr>
                                 <ng-container *ngFor="let key of tableColumns; let rowIndex = index">
 
@@ -54,11 +50,32 @@
                                     <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
                                         <a class="underline" href="tel:+{{item[key]}}">{{item[key]}}</a>
                                     </td>
+                                    }@else if(key === "userType"){
+                                    <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
+                                        <div class="flex justify-between items-center">
+                                            <span>
+                                                {{item[key]}}
+                                            </span>
+
+                                            <button [matTooltip]="'Change User Type'" [matMenuTriggerFor]="menu">
+                                                <mat-icon style="font-size: 1.5rem;" fontIcon="dots-vertical-fill"
+                                                    class="text-orange-700"></mat-icon>
+                                            </button>
+
+                                            <mat-menu #menu="matMenu">
+                                                <button (click)="changeUserType(item[key])" mat-menu-item>Make
+                                                    {{item[key]
+                                                    === "Editor" ? 'a Publisher':'an Editor'}}
+                                                </button>
+                                            </mat-menu>
+                                        </div>
+
+
+                                    </td>
                                     }@else {
                                     <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{item[key]}}
                                     </td>
                                     }
-
 
                                 </ng-container>
                             </tr>

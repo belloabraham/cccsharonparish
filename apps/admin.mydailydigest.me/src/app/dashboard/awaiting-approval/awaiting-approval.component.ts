@@ -22,7 +22,6 @@ import { MatButtonModule } from '@angular/material/button';
 import {
   AlertDialogService,
   ascDescSortCompare,
-  AVERAGE_TABLE_PAGE_SIZE,
   ColumnKeys,
   ContentFormComponent,
   ContentStore,

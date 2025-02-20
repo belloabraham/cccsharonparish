@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.dots-vertical-fill:before {
+  content: '\e921';
+}
 .file-check-fill:before {
   content: '\e920';
 }
