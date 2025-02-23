@@ -3,17 +3,16 @@ import {
   computed,
   HostBinding,
   inject,
+  OnDestroy,
   Signal,
   signal,
 } from '@angular/core';
 import { SharedModule } from '../../shared';
 import { EDITORS_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
-import { TuiDialogService } from '@taiga-ui/core';
 import { EditorsStore } from './editors.store';
 import {
   ascDescSortCompare,
   ColumnKeys,
-  EditorTableUIState as Editor,
   EDITORS_TABLE_COLUMNS,
   EditorTableUIState,
 } from './editors-table';
@@ -25,6 +24,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
+import { EditorsService } from './editors.service';
+import { SubSink } from 'subsink';
+import { TuiAlertService } from '@taiga-ui/core';
+import { UserType } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-editors',
@@ -39,10 +42,11 @@ import { MatMenuModule } from '@angular/material/menu';
   templateUrl: './editors.component.html',
   styleUrl: './editors.component.scss',
 })
-export class EditorsComponent {
+export class EditorsComponent implements OnDestroy {
   KEY = EDITORS_STRING_RESOURCE_KEY;
   private readonly alertDialogService = inject(AlertDialogService);
   readonly editorsStore = inject(EditorsStore);
+  private readonly editorService = inject(EditorsService);
   @HostBinding('style.height') height = '100%';
   @HostBinding('style.display') display = 'block';
   readonly tablePage = signal(0);
@@ -54,6 +58,8 @@ export class EditorsComponent {
   private readonly languageResourceService = inject(LanguageResourceService);
   TABLE_PAGE_SIZE = 100;
   readonly tablePageSize = signal(100);
+  subscriptions = new SubSink();
+  private readonly alertService = inject(TuiAlertService);
 
   constructor() {
     this.data = computed(() =>
@@ -66,32 +72,57 @@ export class EditorsComponent {
     );
   }
 
-  changeUserType(editorTableUIState: EditorTableUIState) {
+  changeUserTypePrompt(editorTableUIState: EditorTableUIState) {
     const editorTypeMessage = `Are you sure you want to limit ${editorTableUIState.firstName} ${editorTableUIState.lastName} to writing content only?`;
     const publisherTypeMessage = `Are you sure you want to grant ${editorTableUIState.firstName} ${editorTableUIState.lastName} the permission to write, approve and publish content?`;
-
+    const userType = editorTableUIState.userType;
     this.alertDialogService
-      .open(
-        editorTableUIState.userType === 'Editor'
-          ? publisherTypeMessage
-          : editorTypeMessage,
-        {
-          heading: `Make ${
-            editorTableUIState.userType === 'Editor'
-              ? 'a Publisher'
-              : 'an Editor'
-          }?`,
-          buttons: [
-            this.languageResourceService.getString(this.KEY.YES),
-            this.languageResourceService.getString(this.KEY.NO),
-          ],
-        }
-      )
+      .open(userType === 'Editor' ? publisherTypeMessage : editorTypeMessage, {
+        heading: `Make ${userType === 'Editor' ? 'a Publisher' : 'an Editor'}?`,
+        buttons: [
+          this.languageResourceService.getString(this.KEY.YES),
+          this.languageResourceService.getString(this.KEY.NO),
+        ],
+      })
       .subscribe({
         next: async (isYes) => {
           if (isYes) {
-
+            this.changeUserType(editorTableUIState);
           }
+        },
+      });
+  }
+
+  changeUserType(editorTableUIState: EditorTableUIState) {
+    const updatedUserType: UserType =
+      editorTableUIState.userType === 'Editor' ? 'Publisher' : 'Editor';
+    this.subscriptions.sink = this.editorService
+      .changeUserType(editorTableUIState.id, { userType: updatedUserType })
+      .subscribe({
+        next: () => {
+          const editors = this.editorsStore.editors();
+          editors.find(
+            (editor) => editor.id === editorTableUIState.id
+          )!.userType = updatedUserType;
+          this.editorsStore.updateEditors([...editors]);
+          this.alertService
+            .open('User type was updated successfully', {
+              label: 'Update was successful',
+              appearance: 'positive',
+            })
+            .subscribe();
+        },
+        error: (error) => {
+          console.error(error);
+          this.alertService
+            .open(
+              'Unable to update user type, check your internet connection and try again',
+              {
+                label: 'Error',
+                appearance: 'negative',
+              }
+            )
+            .subscribe();
         },
       });
   }
@@ -130,5 +161,9 @@ export class EditorsComponent {
       };
       return editor;
     });
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
   }
 }

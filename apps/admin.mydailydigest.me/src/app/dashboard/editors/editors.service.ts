@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { COLLECTION, REMOTE_DATA_TOKEN } from '../../services';
-import { IUser } from '@cccsharonparish/mydailydigest';
+import { IUser, UserType } from '@cccsharonparish/mydailydigest';
 import { where } from '@angular/fire/firestore';
 import { environment } from '../../../environments/environment';
 import { of } from 'rxjs';
@@ -12,6 +12,14 @@ import { EDITORS_MOCK } from './mock/editors';
 export class EditorsService {
   private readonly remoteData = inject(REMOTE_DATA_TOKEN);
   readonly USE_MOCK_DATA = environment.useMockData;
+
+  changeUserType(id: string, userType: { userType: UserType }) {
+    return this.remoteData.updateADocumentDataIn(
+      COLLECTION.EDITORS,
+      [id],
+      userType
+    );
+  }
 
   getEditors() {
     if (environment.useMockData) {
