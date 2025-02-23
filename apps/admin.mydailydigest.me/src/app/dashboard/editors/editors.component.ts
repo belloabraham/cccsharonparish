@@ -20,11 +20,10 @@ import {
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
 import { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
-import { TABLE_MODULES } from '../shared';
+import { AlertDialogService, TABLE_MODULES } from '../shared';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { UserType } from '@cccsharonparish/mydailydigest';
 import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
@@ -42,7 +41,7 @@ import { MatMenuModule } from '@angular/material/menu';
 })
 export class EditorsComponent {
   KEY = EDITORS_STRING_RESOURCE_KEY;
-  private dialogService = inject(TuiDialogService);
+  private readonly alertDialogService = inject(AlertDialogService);
   readonly editorsStore = inject(EditorsStore);
   @HostBinding('style.height') height = '100%';
   @HostBinding('style.display') display = 'block';
@@ -67,7 +66,35 @@ export class EditorsComponent {
     );
   }
 
-  changeUserType(userType: UserType) {}
+  changeUserType(editorTableUIState: EditorTableUIState) {
+    const editorTypeMessage = `Are you sure you want to limit ${editorTableUIState.firstName} ${editorTableUIState.lastName} to writing content only?`;
+    const publisherTypeMessage = `Are you sure you want to grant ${editorTableUIState.firstName} ${editorTableUIState.lastName} the permission to write, approve and publish content?`;
+
+    this.alertDialogService
+      .open(
+        editorTableUIState.userType === 'Editor'
+          ? publisherTypeMessage
+          : editorTypeMessage,
+        {
+          heading: `Make ${
+            editorTableUIState.userType === 'Editor'
+              ? 'a Publisher'
+              : 'an Editor'
+          }?`,
+          buttons: [
+            this.languageResourceService.getString(this.KEY.YES),
+            this.languageResourceService.getString(this.KEY.NO),
+          ],
+        }
+      )
+      .subscribe({
+        next: async (isYes) => {
+          if (isYes) {
+
+          }
+        },
+      });
+  }
 
   onPagination({ page, size }: TuiTablePaginationEvent): void {
     this.tablePage.set(page);

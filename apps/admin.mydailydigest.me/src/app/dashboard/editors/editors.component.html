@@ -52,7 +52,7 @@
                                     </td>
                                     }@else if(key === "userType"){
                                     <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
-                                        <div class="flex justify-between items-center">
+                                        <div class="flex justify-between gap-4 items-center">
                                             <span>
                                                 {{item[key]}}
                                             </span>
@@ -63,7 +63,7 @@
                                             </button>
 
                                             <mat-menu #menu="matMenu">
-                                                <button (click)="changeUserType(item[key])" mat-menu-item>Make
+                                                <button (click)="changeUserType(item)" mat-menu-item>Make
                                                     {{item[key]
                                                     === "Editor" ? 'a Publisher':'an Editor'}}
                                                 </button>

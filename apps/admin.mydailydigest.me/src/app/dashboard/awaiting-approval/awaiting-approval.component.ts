@@ -115,7 +115,7 @@ export class AwaitingApprovalComponent implements OnDestroy {
     contentAwaitingApproval: ISpiritualDailyDigest
   ) {
     this.alertDialogService
-      .open('Are you sure you want to approve ' + topic + '?', {
+      .open(`Are you sure you want to approve ${topic}?`, {
         heading: 'Approve content?',
         buttons: [
           this.languageResourceService.getString(this.KEY.YES),
