@@ -93,13 +93,7 @@ export class NewContentComponent implements OnDestroy {
   private readonly languageResourceService = inject(LanguageResourceService);
 
   constructor() {
-    this.title = computed(() => {
-      const title = this.dashboardStore
-        .supportedLanguages()
-        .languages.filter((lang) => lang.code === this.languageCode())[0].label;
-      return title;
-    });
-
+    this.getPageTitle();
     this.data = computed(() =>
       this.getData(
         this.sortColumnBy(),
@@ -108,6 +102,16 @@ export class NewContentComponent implements OnDestroy {
         this.tablePageSize()
       ).filter(tuiIsPresent)
     );
+  }
+
+  getPageTitle() {
+    this.title = computed(() => {
+      this.dashboardStore.supportedLanguages();
+      const title = this.dashboardStore
+        .supportedLanguages()
+        .languages.filter((lang) => lang.code === this.languageCode())[0].label;
+      return title;
+    });
   }
 
   deleteContentPrompt(topic: string, id: string) {

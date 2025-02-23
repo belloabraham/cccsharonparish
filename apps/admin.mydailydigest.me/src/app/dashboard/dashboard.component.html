@@ -147,7 +147,7 @@
                     <ng-template tuiExpandContent>
                         <div class="ps-10">
                             <a *ngFor="let language of nonEnglishSupportedLanguages()"
-                                [routerLink]="[ROUTE.TRANSLATE, language.countryCode]" routerLinkActive="link-active"
+                                [routerLink]="[ROUTE.TRANSLATE, language.code]" routerLinkActive="link-active"
                                 class="nav-item !items-center !p-3" matRipple>
                                 {{language.label}}
                             </a>
@@ -212,7 +212,7 @@
                 <ng-template>
 
                     <a *ngFor="let language of nonEnglishSupportedLanguages()"
-                        [routerLink]="[ROUTE.TRANSLATE, language.countryCode]" tuiAsideItem matRipple type="button"
+                        [routerLink]="[ROUTE.TRANSLATE, language.code]" tuiAsideItem matRipple type="button"
                         class="content">
                         {{language.label}}
                     </a>
