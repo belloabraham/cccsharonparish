@@ -38,10 +38,7 @@ export const appRoutes: Route[] = [
             filter((user) => user !== null),
             first(),
             switchMap((user) => {
-              return forkJoin([
-                dataStore.getUser(user.uid),
-                languages$,
-              ]);
+              return forkJoin([dataStore.getUser(user.uid), languages$]);
             })
           );
       },
@@ -83,7 +80,7 @@ export const appRoutes: Route[] = [
     canMatch: [
       (router: Router) => {
         const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
-        if (user === null || user?.displayName === null) {
+        if (!user || user?.displayName) {
           return router.createUrlTree([ROUTE.ROOT]);
         }
         return true;

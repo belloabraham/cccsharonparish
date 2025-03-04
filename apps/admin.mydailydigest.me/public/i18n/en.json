@@ -35,6 +35,7 @@
   "dashboard": "Dashboard",
   "translate": "Translate",
   "approved": "Approved",
+  "approve": "Approve",
   "awaiting_approval": "Awaiting Approval",
 
   "profile": "Profile",
@@ -99,7 +100,7 @@
   "submit_for_review_msg": "Are you sure you want to submit \"{{value}}\" for review?",
   "delete": "Delete",
   "edit": "Edit",
-  "submit_for_review": "Submit for review",
+  "submit_for_review": "Submit for Review",
   "submit_for_review_warn_msg": "Once you are done writing any content, remember to submit it for review by clicking the arrow up button in the <strong>SN</strong>  column.",
 
   "years": "Years",

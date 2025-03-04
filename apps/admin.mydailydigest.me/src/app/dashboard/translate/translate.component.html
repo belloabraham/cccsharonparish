@@ -10,9 +10,9 @@
         <cdk-virtual-scroll-viewport #viewport appendOnly tuiScrollable class="viewport tui-zero-scrollbar !h-full"
             [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
 
-            <table *ngIf="data" tuiTable class="table" [columns]="translateTableColumns" [direction]="orderDirection() || 1"
-                [tuiSortBy]="sortColumnBy()" (directionChange)="orderDirection.set($event)"
-                (tuiSortByChange)="sortColumnBy.set($event!)">
+            <table *ngIf="translateData" tuiTable class="table" [columns]="translateTableColumns"
+                [direction]="orderDirection() || 1" [tuiSortBy]="sortColumnBy()"
+                (directionChange)="orderDirection.set($event)" (tuiSortByChange)="sortColumnBy.set($event!)">
                 <thead>
                     <tr tuiThGroup>
                         <ng-container *ngFor="let column of translateTableColumns">
@@ -51,7 +51,7 @@
                         </ng-container>
                     </tr>
                 </thead>
-                <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
+                <tbody *tuiLet="translateData() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
 
                     <ng-container *ngFor="let item of sortedData; let dataIndex = index">
 
@@ -60,24 +60,9 @@
                                 @let contentForRow =
                                 contentStore.draftContents()[dataIndex];
 
-                                <button [class.cursor-not-allowed]="contentForRow.isAwaitingApproval"
-                                    [disabled]="contentForRow.isAwaitingApproval"
-                                    [matTooltip]="t(KEY.SUBMIT_FOR_REVIEW)" mat-icon-button
-                                    (click)="submitForReviewPrompt(item['topic'], contentForRow, dataIndex)">
-                                    <mat-icon [class.text-orange-700]="!contentForRow.isAwaitingApproval"
-                                        [class.text-gray-400]="contentForRow.isAwaitingApproval"
-                                        fontIcon="file-upload-fill"></mat-icon>
-                                </button>
-
-                                <button [matTooltip]="t(KEY.EDIT)" (click)="editContent(item, contentForRow)"
-                                    mat-icon-button>
-                                    <mat-icon fontIcon="pen-fill"></mat-icon>
-                                </button>
-
-                                <button [matTooltip]="t(KEY.DELETE)"
-                                    (click)="deleteContentPrompt(item.topic, contentForRow.id)" mat-icon-button>
-                                    <mat-icon fontIcon="trash-can-fill"></mat-icon>
-                                </button>
+                                <button (click)="editContent(item, contentForRow)" mat-button> <mat-icon
+                                        fontIcon="translate-outline"></mat-icon>
+                                    {{t(KEY.TRANSLATE)}}</button>
                             </td>
                         </tr>
                         <tr tuiTr>

@@ -1,7 +1,6 @@
 import {
   Component,
   computed,
-  HostBinding,
   inject,
   Injector,
   input,

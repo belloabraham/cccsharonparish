@@ -104,28 +104,21 @@
 
                                                                         <button [class.cursor-not-allowed]="contentForRow.isAwaitingApproval"
                                                                                 [disabled]="contentForRow.isAwaitingApproval"
-                                                                                [matTooltip]="t(KEY.SUBMIT_FOR_REVIEW)"
-                                                                                mat-icon-button
-                                                                                (click)="submitForReviewPrompt(item['topic'], contentForRow, dataIndex)">
-                                                                                <mat-icon
-                                                                                        [class.text-orange-700]="!contentForRow.isAwaitingApproval"
-                                                                                        [class.text-gray-400]="contentForRow.isAwaitingApproval"
+                                                                                (click)="submitForReviewPrompt(item['topic'], contentForRow, dataIndex)"
+                                                                                mat-button> <mat-icon
                                                                                         fontIcon="file-upload-fill"></mat-icon>
-                                                                        </button>
+                                                                                {{t(KEY.SUBMIT_FOR_REVIEW)}}</button>
 
-                                                                        <button [matTooltip]="t(KEY.EDIT)"
-                                                                                (click)="editContent(item, contentForRow)"
-                                                                                mat-icon-button>
-                                                                                <mat-icon
-                                                                                        fontIcon="pen-fill"></mat-icon>
-                                                                        </button>
-
-                                                                        <button [matTooltip]="t(KEY.DELETE)"
-                                                                                (click)="deleteContentPrompt(item.topic, contentForRow.id)"
-                                                                                mat-icon-button>
-                                                                                <mat-icon
+                                                                        <button (click)="deleteContentPrompt(item.topic, contentForRow.id)"
+                                                                                mat-button> <mat-icon
                                                                                         fontIcon="trash-can-fill"></mat-icon>
-                                                                        </button>
+                                                                                {{t(KEY.DELETE)}}</button>
+
+                                                                        <button (click)="editContent(item, contentForRow)"
+                                                                                mat-button> <mat-icon
+                                                                                        fontIcon="pen-fill"></mat-icon>
+                                                                                {{t(KEY.EDIT)}}</button>
+
                                                                 </td>
                                                         </tr>
                                                         <tr tuiTr>
