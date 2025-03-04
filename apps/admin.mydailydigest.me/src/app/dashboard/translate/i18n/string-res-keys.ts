@@ -1,0 +1,3 @@
+export const TRANSLATE_STRING_RESOURCE_KEYS = {
+  //   ...TABLE_STRING_RESOURCE_KEYS,
+};

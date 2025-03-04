@@ -7,6 +7,9 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   VERSES: 'verses',
   KEY_VERSE: 'key_verse',
   MESSAGE: 'message',
+  SUPPLICATION: 'supplication',
+  REFLECTION: 'reflection',
+
   TAGS: 'tags',
   TAG_PLACEHOLDER: 'tag_placeholder',
   OPTIONAL: 'optional',
@@ -17,6 +20,9 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   REFERENCE_KEY_VERSE_REQ_MSG: 'ref_key_verse_req_msg',
   BIBLE_REF_KEY_VERSE_REQ_MSG: 'bible_ref_req_msg',
   CONTENT_MSG_REQ_MSG: 'content_msg_req_msg',
+  CONTENT_SUPPLICATION_REQ_MSG: 'content_supplication_req_msg',
+  CONTENT_REFLECTION_REQ_MSG: 'content_reflection_req_msg',
+
   SAVE: 'save',
   DATE_REQ_MSG: 'date_reg_msg',
   MAX_IMAGE_SIZE_EXCEEDED_MSG: 'max_image_size_exceeded_mgs',

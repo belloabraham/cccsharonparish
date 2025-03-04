@@ -59,8 +59,6 @@ import { PUBLISHED_TABLE_COLUMNS } from '../published-content-table';
   styleUrl: './content-list.component.scss',
 })
 export class ContentListComponent {
-  @HostBinding('style.height') height = '100%';
-  @HostBinding('style.display') display = 'block';
 
   contentYear = input.required<string>({
     alias: 'contentYear',

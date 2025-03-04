@@ -34,6 +34,8 @@ export function getContentFromUIState(
     topic: sddUIiState.topic,
     message: sddUIiState.message,
     bibleVerse: bibleVerse,
+    supplication: sddUIiState.supplication,
+    reflection: sddUIiState.reflection,
   };
 
   const content: Content = {

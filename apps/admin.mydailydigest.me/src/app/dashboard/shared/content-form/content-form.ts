@@ -8,4 +8,6 @@ export type ContentForm = {
   keyVerse: FormControl<string | null>;
   tags: FormControl<string[] | null>;
   date: FormControl<Date | null>;
+  supplication: FormControl<string | null>;
+  reflection: FormControl<string | null>;
 };

@@ -31,6 +31,8 @@ export function contentsToTableUIState(
       date: date,
       imagePath: content.imagePath,
       audioUrl: contentByLanguage?.audioUrl || null,
+      supplication: contentText?.supplication || '',
+      reflection: contentText?.reflection || '',
     };
     result.push(uiState);
   }
@@ -67,6 +69,8 @@ export function contentsToAwaitingApprovalTableUIState(
       audioUrl: contentByLanguage?.audioUrl || null,
       createdBy: content.createdBy,
       updatedBy: content.updatedBy,
+      supplication: contentText?.supplication || '',
+      reflection: contentText?.reflection || '',
     };
     result.push(uiState);
   }

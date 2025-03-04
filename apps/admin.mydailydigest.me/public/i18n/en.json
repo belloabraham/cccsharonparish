@@ -67,6 +67,11 @@
   "ref_key_verse_req_msg": "Bible reference key verse is required",
   "ref_verses_req_msg": "Bible reference verses is required",
   "content_msg_req_msg": "Content message is required",
+  "content_supplication_req_msg": "Content supplication is required",
+  "content_reflection_req_msg": "Content reflection is required",
+  "supplication": "Supplication",
+  "reflection": "Reflection",
+
   "save": "Save",
   "date_reg_msg": "Enter a valid date",
   "max_image_size_exceeded_mgs": "Maximum allowed image size  was exceeded, upload an image that is less than {{value}}",

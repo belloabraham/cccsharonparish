@@ -6,10 +6,12 @@ const publishedTableStateKeys = {
   topic: '',
   message: '',
   reference: '',
+  supplication: '',
+  reflection: '',
   imagePath: '',
   audioUrl: '',
 };
 
 export const PUBLISHED_TABLE_COLUMNS = Object.keys(
   publishedTableStateKeys
-) as (keyof ISpiritualDailyDigestUIState)[];
+) as (keyof (ISpiritualDailyDigestUIState & { sn: number }))[];

@@ -43,77 +43,70 @@
                 <thead>
                     <tr tuiThGroup>
 
-                        <th *tuiHead="tableColumns[0]" tuiSortable tuiTh [sticky]="true"
-                            [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                            {{ t(tableColumns[0])}}
-                        </th>
+                        <ng-container *ngFor="let column of tableColumns">
+                            @if (column === "message") {
+                            <th *tuiHead="column" class="message-column" tuiTh [sticky]="true" [tuiSortable]="false"
+                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                {{ t(column)}}
+                            </th>
+                            }
+                            @else if (column === "verses" || column ===
+                            "supplication" || column === "reflection") {
+                            <th *tuiHead="column" class="verses-column" tuiTh [sticky]="true" [tuiSortable]="false"
+                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                {{ t(column)}}
+                            </th>
+                            }
+                            @else if (column === "keyVerse") {
+                            <th *tuiHead="column" class="key-verse-column" tuiTh [sticky]="true" [tuiSortable]="false"
+                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                {{ t(column)}}
+                            </th>
+                            }
+                            @else if (column === "sn" || column ==="reference" ||
+                            column ==="topic") {
+                            <th *tuiHead="column" tuiSortable tuiTh [sticky]="true"
+                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                {{ t(column)}}
+                            </th>
+                            }@else {
+                            <th *tuiHead="column" [tuiSortable]="false" tuiTh [sticky]="true"
+                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                {{ t(column)}}
+                            </th>
+                            }
 
-                        <th *tuiHead="tableColumns[1]" [tuiSortable]="false" tuiTh [sticky]="true"
-                            [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                            {{t(tableColumns[1])}}
-                        </th>
+                        </ng-container>
 
-                        <th *tuiHead="tableColumns[2]" tuiSortable tuiTh [sticky]="true"
-                            [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                            {{t(tableColumns[2])}}
-                        </th>
-
-                        <th *tuiHead="tableColumns[3]" [tuiSortable]="false" class="message-column" tuiTh
-                            [sticky]="true" [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                            {{t(tableColumns[3])}}
-                        </th>
-
-                        <th *tuiHead="tableColumns[4]" tuiSortable tuiTh [sticky]="true"
-                            [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                            {{t(tableColumns[4])}}
-                        </th>
-
-                        <th *tuiHead="tableColumns[5]" tuiSortable="false" tuiTh [sticky]="true"
-                            [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                            {{t(tableColumns[5])}}
-                        </th>
-
-                        <th *tuiHead="tableColumns[6]" tuiSortable="false" tuiTh [sticky]="true"
-                            [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                            {{t(tableColumns[6])}}
-                        </th>
                     </tr>
                 </thead>
                 <tbody *tuiLet="data() | tuiTableSort as sortedData" tuiTbody [heading]="t(KEY.MONTH_+tablePage())"
                     [data]="sortedData">
+
+
                     <tr *ngFor="let item of sortedData" tuiTr>
                         <ng-container *ngFor="let key of tableColumns; let i = index">
-                            @switch (i) {
-                            @case (1) {
-                            <!-- isDate -->
+                            @if (key ==="date") {
                             <td *tuiCell="key" tuiTd> {{ item['date'] |
                                 date:'fullDate'
                                 }} </td>
-                            }
-                            @case (3) {
-                            <!-- isMessage -->
+                            }@else if(key ==="message"){
                             <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{ item[key]}}
                             </td>
-                            }
-                            @case (5) {
-                            <!-- isImage -->
+                            }@else if(key ==="imagePath"){
                             <td *tuiCell="key" tuiTd>
                                 <a [href]="item[key]" target="_blank" rel="noopener noreferrer">
                                     <img width="50" height="50" class="header-image" ngSrc="{{item[key]}}"
                                         alt="Header Image">
                                 </a>
                             </td>
-                            }
-                            @case (6) {
-                            <!-- isAudio -->
+                            }@else if(key ==="audioUrl"){
                             <td *tuiCell="key" tuiTd>
                                 <ng-audio-player *ngIf="item[key]" src="{{item[key]}}" />
                             </td>
-                            }
-                            @default {
+                            }@else{
                             <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{ item[key]}}
                             </td>
-                            }
                             }
 
                         </ng-container>

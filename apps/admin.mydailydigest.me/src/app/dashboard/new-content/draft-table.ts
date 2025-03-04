@@ -8,6 +8,8 @@ const newContentTableStateKeys = {
   reference: '',
   verses: '',
   keyVerse: '',
+  supplication: '',
+  reflection: '',
   imagePath: '',
   audioUrl: '',
   tags: [],

@@ -21,15 +21,17 @@ export interface ISpiritualDailyDigestUIState {
   date: Date;
   imagePath: string | null;
   audioUrl: string | null;
+  supplication: string;
+  reflection: string;
 }
 
 export interface ISpiritualDailyDigest extends Record<string, any> {
-  id: string; //'day-month-year'; //TODO allow create only security rule
+  id: string;
   year: number;
   month: number;
   day: number;
-  imagePath: string | null; //
-  tags: string[]; // and date
+  imagePath: string | null;
+  tags: string[];
   content: Content[];
   isPublished: boolean;
   isAwaitingApproval: boolean;
@@ -57,6 +59,8 @@ export type TextContent = {
   topic: string; //
   message: string; //
   bibleVerse: BibleVerseContent;
+  supplication: string;
+  reflection: string;
 };
 
 export type BibleVerseContent = {

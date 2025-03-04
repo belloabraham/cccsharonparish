@@ -3,10 +3,6 @@
     <tui-notification size="s" appearance="warning">{{t(KEY.UNIQUE_CONTENT_DATE_MESSAGE)}}. <br>
         {{t(KEY.REQUIRED_FIELD_MESSAGE)}}</tui-notification>
 
-    <!-- <div *ngIf="englishContent()" class="text-end">
-        <button mat-button [cdkCopyToClipboard]="englishContent()!">{{t(KEY.COPY_ENG_VERSION_MSG)}}</button>
-    </div> -->
-
     <mat-form-field class="topic">
         <mat-label>{{t(KEY.TOPIC)}}*</mat-label>
         <input formControlName="topic" matInput>
@@ -58,6 +54,24 @@
         <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" formControlName="message"
             matInput></textarea>
         @if (this.messageFC.invalid) {
+        <mat-error>{{t(KEY.CONTENT_MSG_REQ_MSG)}}</mat-error>
+        }
+    </mat-form-field>
+
+    <mat-form-field class="textarea">
+        <mat-label>{{t(KEY.MESSAGE)}}*</mat-label>
+        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" formControlName="supplication"
+            matInput></textarea>
+        @if (this.supplicationFC.invalid) {
+        <mat-error>{{t(KEY.CONTENT_MSG_REQ_MSG)}}</mat-error>
+        }
+    </mat-form-field>
+
+    <mat-form-field class="textarea">
+        <mat-label>{{t(KEY.MESSAGE)}}*</mat-label>
+        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" formControlName="reflection"
+            matInput></textarea>
+        @if (this.reflectionFC.invalid) {
         <mat-error>{{t(KEY.CONTENT_MSG_REQ_MSG)}}</mat-error>
         }
     </mat-form-field>

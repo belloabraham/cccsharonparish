@@ -74,8 +74,6 @@ export class NewContentComponent implements OnDestroy {
   CDN_BASE_URL = environment.cdnBaseUrl;
 
   sddForSelectedLanguage = signal<ISpiritualDailyDigest[]>([]);
-  @HostBinding('style.height') height = '100%';
-  @HostBinding('style.display') display = 'block';
 
   languageCode = input.required<string>({
     alias: 'languageCode',

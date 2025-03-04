@@ -150,6 +150,9 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   readonly referenceVersesFC = this.getNewStringFC();
   readonly referenceKeyVersesFC = this.getNewStringFC();
   readonly messageFC = this.getNewStringFC();
+  readonly supplicationFC = this.getNewStringFC();
+  readonly reflectionFC = this.getNewStringFC();
+
   readonly tagsFC = new FormControl<string[] | null>([]);
   readonly dateFC = new FormControl<Date | null>(null, {
     validators: [Validators.required],
@@ -237,6 +240,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       keyVerse: this.referenceKeyVersesFC,
       tags: this.tagsFC,
       date: this.dateFC,
+      supplication: this.supplicationFC,
+      reflection: this.reflectionFC,
     });
   }
 
@@ -363,6 +368,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         date: this.dateFC.value!,
         imagePath: this.imageFullPath,
         audioUrl: this.uploadedAudioUrl() || null,
+        supplication: '',
+        reflection: '',
       };
 
       if (this.existingContent) {

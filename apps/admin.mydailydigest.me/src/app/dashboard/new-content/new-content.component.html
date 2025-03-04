@@ -33,7 +33,7 @@
                                 <input [(ngModel)]="searchQuery" [placeholder]="t(KEY.SEARCH_PLACEHOLDER)"
                                         tuiTextfield />
                         </tui-textfield>
-                        <button (click)="openContentDialog()" class="fab" mat-fab>
+                        <button (click)="openContentDialog()" class="fab" mat-mini-fab>
                                 <mat-icon fontIcon="plus-fill"></mat-icon>
                         </button>
                 </div>
@@ -59,7 +59,8 @@
                                                                         {{ t(column)}}
                                                                 </th>
                                                                 }
-                                                                @else if (column === "verses") {
+                                                                @else if (column === "verses" || column ===
+                                                                "supplication" || column === "reflection") {
                                                                 <th *tuiHead="column" class="verses-column" tuiTh
                                                                         [sticky]="true" [tuiSortable]="false"
                                                                         [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">

@@ -8,6 +8,8 @@ const contentAwaitingApprovalTableStateKeys = {
   reference: '',
   verses: '',
   keyVerse: '',
+  supplication: '',
+  reflection: '',
   imagePath: '',
   audioUrl: '',
   tags: [],
