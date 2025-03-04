@@ -3,7 +3,7 @@ import { NewContentComponent } from '../new-content/new-content.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../../shared';
-import { TuiNotification, TuiTextfield } from '@taiga-ui/core';
+import {  TuiTextfield } from '@taiga-ui/core';
 import { ascDescSortCompare, ColumnKeys, TABLE_MODULES } from '../shared';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TRANSLATE_CONTENT_TABLE_COLUMNS } from './translate-table';
@@ -21,7 +21,6 @@ import { tuiIsPresent } from '@taiga-ui/cdk';
     TuiTextfield,
     MatButtonModule,
     MatIconModule,
-    TuiNotification,
     MatTooltipModule,
     ...TABLE_MODULES,
   ],

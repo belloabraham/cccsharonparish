@@ -102,6 +102,11 @@
                                                                         @let contentForRow =
                                                                         contentStore.draftContents()[dataIndex];
 
+                                                                        <button (click)="editContent(item, contentForRow)"
+                                                                                mat-button> <mat-icon
+                                                                                        fontIcon="pen-fill"></mat-icon>
+                                                                                {{t(KEY.EDIT)}}</button>
+
                                                                         <button [class.cursor-not-allowed]="contentForRow.isAwaitingApproval"
                                                                                 [disabled]="contentForRow.isAwaitingApproval"
                                                                                 (click)="submitForReviewPrompt(item['topic'], contentForRow, dataIndex)"
@@ -113,11 +118,6 @@
                                                                                 mat-button> <mat-icon
                                                                                         fontIcon="trash-can-fill"></mat-icon>
                                                                                 {{t(KEY.DELETE)}}</button>
-
-                                                                        <button (click)="editContent(item, contentForRow)"
-                                                                                mat-button> <mat-icon
-                                                                                        fontIcon="pen-fill"></mat-icon>
-                                                                                {{t(KEY.EDIT)}}</button>
 
                                                                 </td>
                                                         </tr>
