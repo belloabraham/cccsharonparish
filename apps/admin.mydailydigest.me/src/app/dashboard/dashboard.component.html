@@ -205,7 +205,7 @@
         </a>
 
         <tui-aside-group *ngIf="nonEnglishSupportedLanguages().length > 0 && thereAreApprovedContents">
-            <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].countryCode]"
+            <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].code]"
                 automation-id="setting" tuiAsideItem tuiChevron matRipple type="button">
                 <mat-icon fontIcon="translate-outline"></mat-icon>
                 {{t(KEY.TRANSLATE)}}

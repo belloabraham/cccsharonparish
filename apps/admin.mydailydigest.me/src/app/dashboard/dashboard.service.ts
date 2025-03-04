@@ -9,6 +9,8 @@ import { environment } from '../../environments/environment';
 import { Language, Settings } from '@cccsharonparish/mydailydigest';
 import { AUTH_TOKEN, COLLECTION, REMOTE_DATA_TOKEN } from '../services';
 import { ActivatedRoute } from '@angular/router';
+import { LANGUAGES_MOCK } from './mock/languages-mock';
+import { of } from 'rxjs';
 export interface IBreadCrumb {
   label: string;
   url: string;
@@ -24,7 +26,7 @@ export class DashboardService {
   private readonly BREADCRUMB_ROUTE_DATA_KEY = 'breadcrumb';
   private readonly languageService = inject(LanguageResourceService);
   private readonly remoteData = inject(REMOTE_DATA_TOKEN);
-
+  private readonly USE_MOCK_DATA = environment.useMockData;
   logout() {
     return this.authService.signOut();
   }
@@ -122,6 +124,9 @@ export class DashboardService {
   }
 
   getSupportedLanguages() {
+    if (this.USE_MOCK_DATA) {
+      return of(LANGUAGES_MOCK);
+    }
     return this.remoteData.getAListOfDocData<Language>(
       COLLECTION.LANGUAGES,
       []

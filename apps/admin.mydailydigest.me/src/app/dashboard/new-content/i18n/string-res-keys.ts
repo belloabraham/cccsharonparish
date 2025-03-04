@@ -8,6 +8,7 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   SUBMIT_FOR_REVIEW_MSG: 'submit_for_review_msg',
   SUBMIT_FOR_REVIEW_QUEST: 'submit_for_review_quest',
   DELETE: 'delete',
+  TRANSLATE: 'translate',
   SUBMIT_FOR_REVIEW: 'submit_for_review',
   SUBMIT_FOR_REVIEW_WARN_MSG: 'submit_for_review_warn_msg',
 };

@@ -104,7 +104,6 @@ export class NewContentComponent implements OnDestroy {
 
   getPageTitle() {
     this.title = computed(() => {
-      this.dashboardStore.supportedLanguages();
       const title = this.dashboardStore
         .supportedLanguages()
         .languages.filter((lang) => lang.code === this.languageCode())[0].label;
