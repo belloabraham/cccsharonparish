@@ -1,10 +1,6 @@
 <div *transloco="let t" class="translate-content h-full">
     <h5 class="page-title">Translate to {{title()}}</h5>
 
-    <!-- <tui-notification size="s" appearance="warning" class="mb-12">
-        <p [innerHTML]="t(KEY.SUBMIT_FOR_REVIEW_WARN_MSG)"></p>
-    </tui-notification> -->
-
     <tui-scrollbar class="!h-full">
 
         <cdk-virtual-scroll-viewport #viewport appendOnly tuiScrollable class="viewport tui-zero-scrollbar !h-full"
