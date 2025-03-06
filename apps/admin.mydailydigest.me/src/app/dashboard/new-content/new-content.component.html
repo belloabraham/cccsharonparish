@@ -99,22 +99,20 @@
                                                         <tr class="table-tools-row">
                                                                 <td [colSpan]="tableColumns.length"
                                                                         class="border-x-1 border-b border-x px-4">
-                                                                        @let contentForRow =
-                                                                        contentStore.draftContents()[dataIndex];
 
-                                                                        <button (click)="editContent(item, contentForRow)"
+                                                                        <button (click)="editContent(item, item.id)"
                                                                                 mat-button> <mat-icon
                                                                                         fontIcon="pen-fill"></mat-icon>
                                                                                 {{t(KEY.EDIT)}}</button>
 
-                                                                        <button [class.cursor-not-allowed]="contentForRow.isAwaitingApproval"
-                                                                                [disabled]="contentForRow.isAwaitingApproval"
-                                                                                (click)="submitForReviewPrompt(item['topic'], contentForRow, dataIndex)"
+                                                                        <button [class.cursor-not-allowed]="item.isAwaitingApproval"
+                                                                                [disabled]="item.isAwaitingApproval"
+                                                                                (click)="submitForReviewPrompt(item['topic'], item.id, dataIndex)"
                                                                                 mat-button> <mat-icon
                                                                                         fontIcon="file-upload-fill"></mat-icon>
                                                                                 {{t(KEY.SUBMIT_FOR_REVIEW)}}</button>
 
-                                                                        <button (click)="deleteContentPrompt(item.topic, contentForRow.id)"
+                                                                        <button (click)="deleteContentPrompt(item.topic, item.id)"
                                                                                 mat-button> <mat-icon
                                                                                         fontIcon="trash-can-fill"></mat-icon>
                                                                                 {{t(KEY.DELETE)}}</button>

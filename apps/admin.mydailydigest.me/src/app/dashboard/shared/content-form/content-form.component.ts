@@ -185,10 +185,10 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   private updateFormWithExistingData(
-    existingContent: ISpiritualDailyDigestUIState
+    existingContentUIState: ISpiritualDailyDigestUIState
   ) {
-    this.setDefaultMediaContent(existingContent);
-    this.setFormValue(existingContent);
+    this.setDefaultMediaContent(existingContentUIState);
+    this.setFormValue(existingContentUIState);
   }
 
   private setDefaultMediaContent(sddUIiState?: ISpiritualDailyDigestUIState) {
@@ -359,6 +359,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   onSubmit() {
     if (this.form.valid) {
       const newContent: ISpiritualDailyDigestUIState = {
+        id: '',
+        isAwaitingApproval: false,
         topic: this.topicFC.value!,
         message: this.messageFC.value!,
         reference: this.bibleReferenceFC.value!,
@@ -368,8 +370,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         date: this.dateFC.value!,
         imagePath: this.imageFullPath,
         audioUrl: this.uploadedAudioUrl() || null,
-        supplication: '',
-        reflection: '',
+        supplication: this.supplicationFC.value!,
+        reflection: this.reflectionFC.value!,
       };
 
       if (this.existingContent) {

@@ -53,10 +53,8 @@
 
                         <tr class="table-tools-row">
                             <td [colSpan]="translateTableColumns.length" class="border-x-1 border-b border-x px-4">
-                                @let contentForRow =
-                                contentStore.draftContents()[dataIndex];
 
-                                <button (click)="editContent(item, contentForRow)" mat-button> <mat-icon
+                                <button (click)="editContent(item, item.id)" mat-button> <mat-icon
                                         fontIcon="translate-fill"></mat-icon>
                                     {{t(KEY.TRANSLATE)}}</button>
                             </td>

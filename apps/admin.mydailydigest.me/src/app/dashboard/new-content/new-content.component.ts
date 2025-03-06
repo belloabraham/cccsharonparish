@@ -138,11 +138,7 @@ export class NewContentComponent implements OnDestroy {
       });
   }
 
-  submitForReviewPrompt(
-    topic: string,
-    existingContent: ISpiritualDailyDigest,
-    index: number
-  ) {
+  submitForReviewPrompt(topic: string, id: string, index: number) {
     this.alertDialogService
       .open(
         this.languageResourceService.getStringWithParameter(
@@ -164,10 +160,17 @@ export class NewContentComponent implements OnDestroy {
       .subscribe({
         next: (isYes) => {
           if (isYes) {
+            const existingContent = this.getExistingContent(id);
             this.submitForReview(existingContent, index);
           }
         },
       });
+  }
+
+  getExistingContent(id: string) {
+    return this.contentStore
+      .draftContents()
+      .find((content) => content.id === id)!;
   }
 
   async submitForReview(existingContent: ISpiritualDailyDigest, index: number) {
@@ -203,8 +206,9 @@ export class NewContentComponent implements OnDestroy {
 
   editContent(
     existingContentTableUIState: ISpiritualDailyDigestTableUIState,
-    existingContent: ISpiritualDailyDigest
+    id: string
   ) {
+    const existingContent = this.getExistingContent(id);
     const { sn, ...existingContentUIState } = existingContentTableUIState;
     this.openContentDialog(existingContentUIState, existingContent);
   }

@@ -21,6 +21,7 @@ export function contentsToTableUIState(
     const date = new Date(content.year, content.month - 1, content.day);
 
     const uiState: ISpiritualDailyDigestTableUIState = {
+      id: content.id,
       sn: index + 1,
       topic: contentText?.topic || '',
       message: contentText?.message || '',
@@ -33,6 +34,7 @@ export function contentsToTableUIState(
       audioUrl: contentByLanguage?.audioUrl || null,
       supplication: contentText?.supplication || '',
       reflection: contentText?.reflection || '',
+      isAwaitingApproval: content.isAwaitingApproval,
     };
     result.push(uiState);
   }
@@ -57,6 +59,7 @@ export function contentsToAwaitingApprovalTableUIState(
     const date = new Date(content.year, content.month - 1, content.day);
 
     const uiState: IAwaitingApprovalContentTableUIState = {
+      id: content.id,
       sn: index + 1,
       topic: contentText?.topic || '',
       message: contentText?.message || '',
@@ -71,6 +74,7 @@ export function contentsToAwaitingApprovalTableUIState(
       updatedBy: content.updatedBy,
       supplication: contentText?.supplication || '',
       reflection: contentText?.reflection || '',
+      isAwaitingApproval: content.isAwaitingApproval,
     };
     result.push(uiState);
   }

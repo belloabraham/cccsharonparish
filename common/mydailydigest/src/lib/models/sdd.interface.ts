@@ -5,13 +5,15 @@ export type ISpiritualDailyDigestTableUIState = ISpiritualDailyDigestUIState & {
   sn: number;
 };
 
-export type IAwaitingApprovalContentTableUIState = ISpiritualDailyDigestUIState & {
-  sn: number;
-  createdBy: string;
-  updatedBy: string | null;
-};
+export type IAwaitingApprovalContentTableUIState =
+  ISpiritualDailyDigestUIState & {
+    sn: number;
+    createdBy: string;
+    updatedBy: string | null;
+  };
 
 export interface ISpiritualDailyDigestUIState {
+  id: string;
   topic: string;
   message: string;
   reference: string;
@@ -23,6 +25,7 @@ export interface ISpiritualDailyDigestUIState {
   audioUrl: string | null;
   supplication: string;
   reflection: string;
+  isAwaitingApproval: boolean;
 }
 
 export interface ISpiritualDailyDigest extends Record<string, any> {
