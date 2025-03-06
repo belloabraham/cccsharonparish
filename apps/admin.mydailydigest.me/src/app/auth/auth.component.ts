@@ -64,6 +64,10 @@ export class AuthComponent extends CommonComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.initForm();
+  }
+
+  private initForm() {
     this.form = new FormGroup({
       email: this.emailFC,
     });

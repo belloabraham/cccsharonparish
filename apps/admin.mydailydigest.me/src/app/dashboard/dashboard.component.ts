@@ -133,16 +133,14 @@ export class DashboardComponent extends CommonComponent {
     super();
     this.onNavigationStart();
     this.onNavigationEnd();
-
     this.updateNonEnglishLanguages();
-
     effect(() => {
       if (this.appStore.language().loaded) {
         this.setBreadCrumb();
       }
     });
 
-    if (this.isPublisher()) {
+    if (this.userIsAPublisher()) {
       this.loadContentsAwaitingApproval();
       this.loadEditors();
     }
@@ -161,7 +159,7 @@ export class DashboardComponent extends CommonComponent {
     this.contentStore.getApprovedContents().subscribe();
   }
 
-  isPublisher() {
+  userIsAPublisher() {
     const userType = this.userDataStore.user()?.userType;
     return userType === 'Publisher' || userType === 'Admin';
   }
