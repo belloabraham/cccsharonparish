@@ -101,7 +101,7 @@
   "delete": "Delete",
   "edit": "Edit",
   "submit_for_review": "Submit for Review",
-  "submit_for_review_warn_msg": "Once you are done writing any content, remember to submit it for review by clicking the arrow up button in the <strong>SN</strong>  column.",
+  "submit_for_review_warn_msg": "Once you are done writing any content, remember to submit it for review by clicking the <strong>Submit for Review</strong> button.",
 
   "years": "Years",
   "year": "Year",
@@ -125,7 +125,7 @@
 
   "no_content_awaiting_approval_msg": "There are no content submitted for approval, have editors submit a draft content for approval and they will appear here.",
 
-  "content_gets_approved_msg": "Once a content gets approved they become available for translation",
+  "content_gets_approved_msg": "Once a content gets approved, the content will become available for translation",
   "updatedBy": "Updated by",
   "createdBy": "Created by",
 
