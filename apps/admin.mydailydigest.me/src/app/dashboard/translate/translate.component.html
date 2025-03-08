@@ -51,49 +51,89 @@
 
                     <ng-container *ngFor="let item of sortedData; let dataIndex = index">
 
+                        @let englishContent = item.englishContent;
+                        @let languageContent = item.languageContent;
+
                         <tr class="table-tools-row">
                             <td [colSpan]="translateTableColumns.length" class="border-x-1 border-b border-x px-4">
 
-                                <button (click)="editContent(item, item.id)" mat-button> <mat-icon
+                                <!-- <button (click)="editContent(item, item.id)" mat-button> <mat-icon
                                         fontIcon="translate-fill"></mat-icon>
-                                    {{t(KEY.TRANSLATE)}}</button>
+                                    {{t(KEY.TRANSLATE)}}</button> -->
                             </td>
                         </tr>
+
                         <tr tuiTr>
                             <ng-container *ngFor="let key of translateTableColumns; let rowIndex = index">
-                                @if (key ==="date") {
-                                <td *tuiCell="key" tuiTd> {{ item[key] |
-                                    date:'fullDate'
-                                    }} </td>
-                                }@else if (key === "message" || key ===
-                                "verses"){
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
-                                    {{
-                                    item[key]}}
+                                @if (key === "date") {
+                                <td *tuiCell="key" tuiTd>
+                                    {{ item[key] | date:'fullDate' }}
                                 </td>
-                                }@else if (key === "imagePath"){
+                                } @else if (key === "message" || key === "verses") {
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(englishContent[key])">
+                                    {{ englishContent[key] }}
+                                </td>
+                                } @else if (key === "imagePath") {
                                 <td *tuiCell="key" tuiTd>
                                     <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank" rel="noopener noreferrer">
                                         <img *ngIf="item[key]" width="50" height="50" class="header-image"
                                             ngSrc="{{item[key]}}" alt="Header Image">
-
                                         <img *ngIf="!item[key]" width="50" height="50" class="header-image"
                                             src="{{item[key]}}" alt="Header Image">
                                     </a>
                                 </td>
-                                }@else if (key === "audioUrl"){
+                                } @else if (key === "audioUrl") {
                                 <td *tuiCell="key" tuiTd>
-                                    <ng-audio-player *ngIf="item[key]" [src]="item[key]!" />
+                                    <ng-audio-player *ngIf="englishContent[key]" [src]="englishContent[key]!" />
                                 </td>
-                                }@else {
+                                }@else if (key === "tags" || key === "sn"){
                                 <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
-                                    {{
-                                    item[key]}}
+                                    {{ item[key]}}
+                                </td>
+                                } @else {
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(englishContent[key])">
+                                    {{ englishContent[key] }}
                                 </td>
                                 }
-
                             </ng-container>
                         </tr>
+
+                        @if (languageContent) {
+                        <tr tuiTr>
+                            <ng-container *ngFor="let key of translateTableColumns; let rowIndex = index">
+                                @if (key === "date") {
+                                <td *tuiCell="key" tuiTd>
+                                    {{ item[key] | date:'fullDate' }}
+                                </td>
+                                } @else if (key === "message" || key === "verses") {
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(languageContent[key])">
+                                    {{ languageContent[key] }}
+                                </td>
+                                } @else if (key === "imagePath") {
+                                <td *tuiCell="key" tuiTd>
+                                    <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank" rel="noopener noreferrer">
+                                        <img *ngIf="item[key]" width="50" height="50" class="header-image"
+                                            ngSrc="{{item[key]}}" alt="Header Image">
+                                        <img *ngIf="!item[key]" width="50" height="50" class="header-image"
+                                            src="{{item[key]}}" alt="Header Image">
+                                    </a>
+                                </td>
+                                } @else if (key === "audioUrl") {
+                                <td *tuiCell="key" tuiTd>
+                                    <ng-audio-player *ngIf="languageContent[key]" [src]="languageContent[key]!" />
+                                </td>
+                                }@else if (key === "tags" || key === "sn"){
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
+                                    {{ item[key]}}
+                                </td>
+                                } @else {
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(languageContent[key])">
+                                    {{ languageContent[key] }}
+                                </td>
+                                }
+                            </ng-container>
+                        </tr>
+                        }
 
                     </ng-container>
 

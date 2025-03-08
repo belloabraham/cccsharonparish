@@ -31,7 +31,6 @@ export interface ISpiritualDailyDigestUIState {
 export interface ISpiritualDailyDigestTranslateUIState {
   sn: number;
   id: string;
-  isAwaitingApproval: boolean;
   imagePath: string | null;
   date: Date;
   tags: string[];

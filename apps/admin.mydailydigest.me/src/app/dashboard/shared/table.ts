@@ -29,10 +29,10 @@ export const AVERAGE_TABLE_PAGE_SIZE = 31;
 
 export type ColumnKeys = keyof ISpiritualDailyDigestTableUIState;
 
-export function ascDescSortCompare(
-  key: ColumnKeys,
+export function ascDescSortCompare<T>(
+  key: keyof T,
   direction: -1 | 1
-): TuiComparator<ISpiritualDailyDigestTableUIState> {
+): TuiComparator<T> {
   return (a, b) => direction * tuiDefaultSort(a[key], b[key]);
 }
 

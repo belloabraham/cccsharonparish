@@ -8,11 +8,11 @@ import { ascDescSortCompare, ColumnKeys, TABLE_MODULES } from '../shared';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TRANSLATE_CONTENT_TABLE_COLUMNS } from './translate-table';
 import {
-  contentsToTableUIState,
-  ENGLISH_LANG_CODE,
-  ISpiritualDailyDigestTableUIState,
+  contentsToTranslateTableUIState,
+  ISpiritualDailyDigestTranslateUIState,
 } from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-translate',
@@ -22,6 +22,7 @@ import { tuiIsPresent } from '@taiga-ui/cdk';
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
+    CommonModule,
     ...TABLE_MODULES,
   ],
   templateUrl: './translate.component.html',
@@ -30,7 +31,7 @@ import { tuiIsPresent } from '@taiga-ui/cdk';
 export class TranslateComponent extends NewContentComponent {
   TRANSLATE_KEY = TRANSLATE_CONTENT_TABLE_COLUMNS;
   translateTableColumns = TRANSLATE_CONTENT_TABLE_COLUMNS;
-  translateData?: Signal<ISpiritualDailyDigestTableUIState[]> = signal([]);
+  translateData?: Signal<ISpiritualDailyDigestTranslateUIState[]> = signal([]);
 
   constructor() {
     super();
@@ -44,12 +45,16 @@ export class TranslateComponent extends NewContentComponent {
     );
   }
 
+  updateTranslate(){
+
+  }
+
   private _getData(
-    key: ColumnKeys,
+    key: keyof ISpiritualDailyDigestTranslateUIState,
     direction: -1 | 1,
     page: number,
     size: number
-  ): ReadonlyArray<ISpiritualDailyDigestTableUIState | null> {
+  ): ReadonlyArray<ISpiritualDailyDigestTranslateUIState | null> {
     const start = page * size;
     const end = start + size;
     const result = [...this._getTableUIState(start, end)].sort(
@@ -64,9 +69,9 @@ export class TranslateComponent extends NewContentComponent {
       .filter((data, index) => {
         return index >= start && index < end;
       });
-    const tableUIState = contentsToTableUIState(
+    const tableUIState = contentsToTranslateTableUIState(
       approvedContent,
-      ENGLISH_LANG_CODE
+      this.languageCode()
     );
     return tableUIState;
   }

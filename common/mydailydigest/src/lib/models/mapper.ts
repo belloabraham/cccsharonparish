@@ -107,12 +107,11 @@ export function contentsToTranslateTableUIState(
     const uiState: ISpiritualDailyDigestTranslateUIState = {
       id: content.id,
       sn: index + 1,
-      isAwaitingApproval: content.isAwaitingApproval,
       tags: content.tags,
       date: date,
       imagePath: content.imagePath,
       languageContent: getLanguageContent(languageContent),
-      englishContent: getLanguageContent(englishContent),
+      englishContent: getLanguageContent(englishContent)!,
     };
     result.push(uiState);
   }
@@ -120,8 +119,11 @@ export function contentsToTranslateTableUIState(
   return result;
 }
 
-export function getLanguageContent(content?:Content): LanguageContent {
+export function getLanguageContent(content?: Content): LanguageContent | null {
   const textContent = content?.text;
+  if (!content) {
+    return null;
+  }
   return {
     topic: textContent?.topic || '',
     message: textContent?.message || '',
