@@ -3,13 +3,13 @@ import { NewContentComponent } from '../new-content/new-content.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../../shared';
-import {  TuiTextfield } from '@taiga-ui/core';
+import { TuiTextfield } from '@taiga-ui/core';
 import { ascDescSortCompare, ColumnKeys, TABLE_MODULES } from '../shared';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TRANSLATE_CONTENT_TABLE_COLUMNS } from './translate-table';
 import {
   contentsToTableUIState,
-  DEFAULT_LANG_CODE,
+  ENGLISH_LANG_CODE,
   ISpiritualDailyDigestTableUIState,
 } from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
@@ -66,7 +66,7 @@ export class TranslateComponent extends NewContentComponent {
       });
     const tableUIState = contentsToTableUIState(
       approvedContent,
-      DEFAULT_LANG_CODE
+      ENGLISH_LANG_CODE
     );
     return tableUIState;
   }

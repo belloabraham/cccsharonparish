@@ -51,7 +51,7 @@ import {
 } from '@taiga-ui/core';
 import { MatRippleModule } from '@angular/material/core';
 import {
-  DEFAULT_LANG_CODE,
+  ENGLISH_LANG_CODE,
   Language,
   ROUTE,
 } from '@cccsharonparish/mydailydigest';
@@ -127,7 +127,7 @@ export class DashboardComponent extends CommonComponent {
   ROUTE = ROUTE;
   themes: any[] = [this.KEY.LIGHT, this.KEY.DARK, this.KEY.DEVICE];
   private activatedRoute = inject(ActivatedRoute);
-  DEFAULT_LANG_CODE = DEFAULT_LANG_CODE;
+  DEFAULT_LANG_CODE = ENGLISH_LANG_CODE;
 
   constructor() {
     super();
@@ -169,7 +169,7 @@ export class DashboardComponent extends CommonComponent {
       const supportedLanguages =
         this.dashboardStore.supportedLanguages().languages;
       const nonEnglishLanguages = supportedLanguages.filter(
-        (lang) => lang.code !== DEFAULT_LANG_CODE
+        (lang) => lang.code !== ENGLISH_LANG_CODE
       );
       return nonEnglishLanguages;
     });

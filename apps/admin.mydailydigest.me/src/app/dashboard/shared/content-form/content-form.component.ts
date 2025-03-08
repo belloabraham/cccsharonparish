@@ -35,7 +35,7 @@ import {
   LanguageResourceService,
 } from '@cccsharonparish/angular';
 import {
-  DEFAULT_LANG_CODE,
+  ENGLISH_LANG_CODE,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
   Language,
@@ -171,7 +171,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    this.defaultLangCode.set(DEFAULT_LANG_CODE);
+    this.defaultLangCode.set(ENGLISH_LANG_CODE);
     this.initForm();
     const data = this.dialogContext.data;
     this.existingContentUIState = data.existingContentUIState;
@@ -210,7 +210,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    if (this.language()?.code === DEFAULT_LANG_CODE) {
+    if (this.language()?.code === ENGLISH_LANG_CODE) {
       this.initCropper();
       setTimeout(() => {
         this.cropper.disable();

@@ -25,7 +25,7 @@ import { DashboardStore } from '../../dashboard.store';
 import { PublishedContentStore } from '../published-content-store';
 import {
   contentsToTableUIState,
-  DEFAULT_LANG_CODE,
+  ENGLISH_LANG_CODE,
   ISpiritualDailyDigestTableUIState,
   Language,
 } from '@cccsharonparish/mydailydigest';
@@ -59,7 +59,6 @@ import { PUBLISHED_TABLE_COLUMNS } from '../published-content-table';
   styleUrl: './content-list.component.scss',
 })
 export class ContentListComponent {
-
   contentYear = input.required<string>({
     alias: 'contentYear',
   });
@@ -79,7 +78,7 @@ export class ContentListComponent {
   readonly sortColumnBy = signal<any | null>(null);
   readonly tablePageSize = signal(getDaysInMonth(0));
   readonly tablePage = signal(0);
-  private readonly languageCode = signal(DEFAULT_LANG_CODE);
+  private readonly languageCode = signal(ENGLISH_LANG_CODE);
   readonly orderDirection = signal<-1 | 1>(-1);
 
   data?: Signal<ISpiritualDailyDigestTableUIState[]> = signal([]);

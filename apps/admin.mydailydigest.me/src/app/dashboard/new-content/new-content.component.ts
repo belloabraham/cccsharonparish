@@ -12,7 +12,7 @@ import { SharedModule } from '../../shared';
 import { TuiAlertService, TuiNotification, TuiTextfield } from '@taiga-ui/core';
 import {
   contentsToTableUIState,
-  DEFAULT_LANG_CODE,
+  ENGLISH_LANG_CODE,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestTableUIState,
   ISpiritualDailyDigestUIState,
@@ -272,7 +272,7 @@ export class NewContentComponent implements OnDestroy {
       });
     const tableUIState = contentsToTableUIState(
       draftContents,
-      DEFAULT_LANG_CODE
+      ENGLISH_LANG_CODE
     );
     return tableUIState;
   }

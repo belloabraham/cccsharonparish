@@ -1,6 +1,6 @@
 import { Timestamp } from '@angular/fire/firestore';
 
-export const DEFAULT_LANG_CODE = 'en';
+export const ENGLISH_LANG_CODE = 'en';
 export type ISpiritualDailyDigestTableUIState = ISpiritualDailyDigestUIState & {
   sn: number;
 };
@@ -26,6 +26,28 @@ export interface ISpiritualDailyDigestUIState {
   supplication: string;
   reflection: string;
   isAwaitingApproval: boolean;
+}
+
+export interface ISpiritualDailyDigestTranslateUIState {
+  sn: number;
+  id: string;
+  isAwaitingApproval: boolean;
+  imagePath: string | null;
+  date: Date;
+  tags: string[];
+  englishContent: LanguageContent;
+  languageContent: LanguageContent | null;
+}
+
+export interface LanguageContent {
+  topic: string;
+  message: string;
+  reference: string;
+  verses: string;
+  keyVerse: string;
+  audioUrl: string | null;
+  supplication: string;
+  reflection: string;
 }
 
 export interface ISpiritualDailyDigest extends Record<string, any> {

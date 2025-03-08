@@ -12,7 +12,7 @@ import { SharedModule, UserDataStore } from '../../shared';
 import { TuiAlertService, TuiNotification, TuiTextfield } from '@taiga-ui/core';
 import {
   contentsToAwaitingApprovalTableUIState,
-  DEFAULT_LANG_CODE,
+  ENGLISH_LANG_CODE,
   IAwaitingApprovalContentTableUIState,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
@@ -202,7 +202,7 @@ export class AwaitingApprovalComponent implements OnDestroy {
       });
     const tableUIState = contentsToAwaitingApprovalTableUIState(
       contentAwaitingApproval,
-      DEFAULT_LANG_CODE
+      ENGLISH_LANG_CODE
     );
     return tableUIState;
   }
@@ -213,7 +213,7 @@ export class AwaitingApprovalComponent implements OnDestroy {
   ) {
     const language = this.dashboardStore
       .supportedLanguages()
-      .languages.find((lang) => lang.code === DEFAULT_LANG_CODE);
+      .languages.find((lang) => lang.code === ENGLISH_LANG_CODE);
     this.subscriptions.sink = this.dialogService
       .open<IDialogData | undefined>(
         new PolymorpheusComponent(ContentFormComponent, this.injector),

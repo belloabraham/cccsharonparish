@@ -1,5 +1,5 @@
 import {
-  DEFAULT_LANG_CODE,
+  ENGLISH_LANG_CODE,
   ISpiritualDailyDigest,
 } from '@cccsharonparish/mydailydigest';
 import { CONTENT_MOCK } from '../../mock/mock';
@@ -11,7 +11,7 @@ export const DRAFT_CONTENT_MOCK = MOCK.map((content) => {
     ...content,
     isPublished: false,
     content: [
-      content.content.find((c) => c.language.code === DEFAULT_LANG_CODE)!,
+      content.content.find((c) => c.language.code === ENGLISH_LANG_CODE)!,
     ],
   };
 });

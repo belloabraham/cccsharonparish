@@ -10,7 +10,7 @@ import { NewContentComponent } from '../new-content/new-content.component';
 import { TRANSLATE_CONTENT_TABLE_COLUMNS } from '../translate/translate-table';
 import {
   contentsToTableUIState,
-  DEFAULT_LANG_CODE,
+  ENGLISH_LANG_CODE,
   ISpiritualDailyDigestTableUIState,
 } from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
@@ -67,7 +67,7 @@ export class ApprovedComponent extends NewContentComponent {
       });
     const tableUIState = contentsToTableUIState(
       approvedContent,
-      DEFAULT_LANG_CODE
+      ENGLISH_LANG_CODE
     );
     return tableUIState;
   }

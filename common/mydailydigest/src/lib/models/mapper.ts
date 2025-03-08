@@ -1,7 +1,11 @@
 import {
+  Content,
+  ENGLISH_LANG_CODE,
   IAwaitingApprovalContentTableUIState,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestTableUIState,
+  ISpiritualDailyDigestTranslateUIState,
+  LanguageContent,
 } from './sdd.interface';
 
 export function contentsToTableUIState(
@@ -80,4 +84,52 @@ export function contentsToAwaitingApprovalTableUIState(
   }
 
   return result;
+}
+
+export function contentsToTranslateTableUIState(
+  contents: ISpiritualDailyDigest[],
+  languageCode: string
+) {
+  if (contents.length === 0) {
+    return [];
+  }
+  const result: ISpiritualDailyDigestTranslateUIState[] = [];
+  for (let index = 0; index < contents.length; index++) {
+    const content = contents[index];
+    const languageContent = content.content.find(
+      (c) => c.language.code === languageCode
+    );
+    const englishContent = content.content.find(
+      (c) => c.language.code === ENGLISH_LANG_CODE
+    );
+
+    const date = new Date(content.year, content.month - 1, content.day);
+    const uiState: ISpiritualDailyDigestTranslateUIState = {
+      id: content.id,
+      sn: index + 1,
+      isAwaitingApproval: content.isAwaitingApproval,
+      tags: content.tags,
+      date: date,
+      imagePath: content.imagePath,
+      languageContent: getLanguageContent(languageContent),
+      englishContent: getLanguageContent(englishContent),
+    };
+    result.push(uiState);
+  }
+
+  return result;
+}
+
+export function getLanguageContent(content?:Content): LanguageContent {
+  const textContent = content?.text;
+  return {
+    topic: textContent?.topic || '',
+    message: textContent?.message || '',
+    reference: textContent?.bibleVerse?.reference || '',
+    verses: textContent?.bibleVerse?.verses || '',
+    keyVerse: textContent?.bibleVerse?.keyVerse || '',
+    audioUrl: content?.audioUrl || null,
+    supplication: textContent?.supplication || '',
+    reflection: textContent?.reflection || '',
+  };
 }
