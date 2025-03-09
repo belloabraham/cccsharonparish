@@ -45,9 +45,11 @@ export class TranslateComponent extends NewContentComponent {
     );
   }
 
-  updateTranslate(){
+  updateTranslation() {}
 
-  }
+  translate() {}
+
+  copyEngVersion() {}
 
   private _getData(
     key: keyof ISpiritualDailyDigestTranslateUIState,

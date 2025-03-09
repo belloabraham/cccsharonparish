@@ -37,6 +37,8 @@
   "approved": "Approved",
   "approve": "Approve",
   "awaiting_approval": "Awaiting Approval",
+  "update_translation": "Update Translation",
+  "copy_eng_version":"Copy English Version",
 
   "profile": "Profile",
   "drop_it": "Drop it",

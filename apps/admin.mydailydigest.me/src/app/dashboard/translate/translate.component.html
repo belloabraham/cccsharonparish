@@ -57,9 +57,20 @@
                         <tr class="table-tools-row">
                             <td [colSpan]="translateTableColumns.length" class="border-x-1 border-b border-x px-4">
 
-                                <!-- <button (click)="editContent(item, item.id)" mat-button> <mat-icon
+                                @if (languageContent) {
+                                <button (click)="updateTranslation()" mat-button> <mat-icon
                                         fontIcon="translate-fill"></mat-icon>
-                                    {{t(KEY.TRANSLATE)}}</button> -->
+                                    {{t(KEY.UPDATE_TRANSLATION)}}</button>
+                                }@else {
+                                <button (click)="translate()" mat-button> <mat-icon
+                                        fontIcon="translate-fill"></mat-icon>
+                                    {{t(KEY.TRANSLATE)}}</button>
+                                }
+
+                                <button (click)="copyEngVersion()" mat-button> <mat-icon
+                                        fontIcon="copy-note-fill"></mat-icon>
+                                    {{t(KEY.COPY_ENG_VERSION)}}</button>
+
                             </td>
                         </tr>
 
