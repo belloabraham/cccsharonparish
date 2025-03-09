@@ -10,6 +10,7 @@ import { TRANSLATE_CONTENT_TABLE_COLUMNS } from './translate-table';
 import {
   contentsToTranslateTableUIState,
   ISpiritualDailyDigestTranslateUIState,
+  LanguageContent,
 } from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
 import { CommonModule } from '@angular/common';
@@ -49,7 +50,7 @@ export class TranslateComponent extends NewContentComponent {
 
   translate() {}
 
-  copyEngVersion() {}
+  copyEngVersion(englishContent: LanguageContent) {}
 
   private _getData(
     key: keyof ISpiritualDailyDigestTranslateUIState,
