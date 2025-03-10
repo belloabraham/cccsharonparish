@@ -44,14 +44,18 @@
                     <tr tuiThGroup>
 
                         <ng-container *ngFor="let column of tableColumns">
+                            @let columnsWithMinWidth = column === "verses" || column
+                            === "supplication" || column === "reflection";
+                            @let isSortableColumns = column === "sn" || column === "reference" || column ===
+                            "topic";
+
                             @if (column === "message") {
                             <th *tuiHead="column" class="message-column" tuiTh [sticky]="true" [tuiSortable]="false"
                                 [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                 {{ t(column)}}
                             </th>
                             }
-                            @else if (column === "verses" || column ===
-                            "supplication" || column === "reflection") {
+                            @else if (columnsWithMinWidth) {
                             <th *tuiHead="column" class="verses-column" tuiTh [sticky]="true" [tuiSortable]="false"
                                 [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                 {{ t(column)}}
@@ -63,8 +67,7 @@
                                 {{ t(column)}}
                             </th>
                             }
-                            @else if (column === "sn" || column ==="reference" ||
-                            column ==="topic") {
+                            @else if (isSortableColumns) {
                             <th *tuiHead="column" tuiSortable tuiTh [sticky]="true"
                                 [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                 {{ t(column)}}

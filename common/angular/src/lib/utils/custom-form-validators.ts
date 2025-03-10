@@ -34,7 +34,8 @@ export class CustomValidators {
     return (control: AbstractControl): ValidationErrors | null => {
       const file = control.value instanceof File ? control.value : null;
 
-      if (file && file.size > maxSizeInBytes) {
+      const exceededMaxFileSize = file && file.size > maxSizeInBytes;
+      if (exceededMaxFileSize) {
         return error;
       }
       return null;

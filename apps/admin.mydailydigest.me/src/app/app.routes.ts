@@ -49,7 +49,8 @@ export const appRoutes: Route[] = [
         if (user === null) {
           return router.createUrlTree([ROUTE.ROOT]);
         }
-        if (user?.displayName === null) {
+        const userDataDoesNotExist = user?.displayName === null
+        if (userDataDoesNotExist) {
           return router.createUrlTree([ROUTE.SIGN_UP]);
         }
         return true;
@@ -80,7 +81,8 @@ export const appRoutes: Route[] = [
     canMatch: [
       (router: Router) => {
         const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
-        if (!user || user?.displayName) {
+        const userDataDoesNotExist = !user || user?.displayName;
+        if (userDataDoesNotExist) {
           return router.createUrlTree([ROUTE.ROOT]);
         }
         return true;

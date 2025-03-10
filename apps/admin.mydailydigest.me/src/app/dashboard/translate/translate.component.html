@@ -13,6 +13,9 @@
                     <tr tuiThGroup>
                         <ng-container *ngFor="let column of translateTableColumns">
 
+                            @let isSortableColumns = column === "sn" || column ==="reference" ||
+                            column ==="topic";
+
                             @if (column === "message") {
                             <th *tuiHead="column" class="message-column" tuiTh [sticky]="true" [tuiSortable]="false"
                                 [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
@@ -31,8 +34,7 @@
                                 {{ t(column)}}
                             </th>
                             }
-                            @else if (column === "sn" || column ==="reference" ||
-                            column ==="topic") {
+                            @else if (isSortableColumns) {
                             <th *tuiHead="column" tuiSortable tuiTh [sticky]="true"
                                 [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                 {{ t(column)}}
@@ -80,10 +82,6 @@
                                 <td *tuiCell="key" tuiTd>
                                     {{ item[key] | date:'fullDate' }}
                                 </td>
-                                } @else if (key === "message" || key === "verses") {
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(englishContent[key])">
-                                    {{ englishContent[key] }}
-                                </td>
                                 } @else if (key === "imagePath") {
                                 <td *tuiCell="key" tuiTd>
                                     <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank" rel="noopener noreferrer">
@@ -115,10 +113,6 @@
                                 @if (key === "date") {
                                 <td *tuiCell="key" tuiTd>
                                     {{ item[key] | date:'fullDate' }}
-                                </td>
-                                } @else if (key === "message" || key === "verses") {
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(languageContent[key])">
-                                    {{ languageContent[key] }}
                                 </td>
                                 } @else if (key === "imagePath") {
                                 <td *tuiCell="key" tuiTd>

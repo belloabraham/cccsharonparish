@@ -51,12 +51,12 @@ export class DashboardService {
     supportedLanguages: Language[]
   ) {
     if (languageCode) {
-      const lang = supportedLanguages.find(
+      const language = supportedLanguages.find(
         (lang) => lang.code === languageCode
       );
 
-      if (lang) {
-        return lang.label;
+      if (language) {
+        return language.label;
       }
     }
     return languageCode;

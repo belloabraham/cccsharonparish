@@ -296,10 +296,13 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   onImageFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
     this.maxImageSizeExceededError = null;
-    if (input.files && input.files[0]) {
-      const file = input.files[0];
+    const aFileWasSelected = input.files && input.files[0];
+    if (aFileWasSelected) {
+      const file = input.files![0];
       this.contentHeaderImageFileNameWithExt = file.name;
-      if (file.size > this.MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES) {
+      const exceededMaxAllowedFileSize =
+        file.size > this.MAX_ALLOWED_HEADER_IMAGE_SIZE_IN_BYTES;
+      if (exceededMaxAllowedFileSize) {
         this.showMaximumSizeExceededError();
       } else {
         const reader = new FileReader();
@@ -422,8 +425,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     );
 
     for (let index = 0; index < currentTableContents.length; index++) {
-      const element = currentTableContents[index];
-      if (element.id === updatedContent.id) {
+      const currentTableContent = currentTableContents[index];
+      if (currentTableContent.id === updatedContent.id) {
         currentTableContents[index] = updatedContent;
       }
     }
@@ -509,9 +512,12 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   uploadAudio(event: Event) {
     this.maxAudioSizeExceededError = null;
     const input = event.target as HTMLInputElement;
-    if (input.files && input.files[0]) {
+    const anAudioFileWasUploaded = input.files && input.files[0];
+    if (anAudioFileWasUploaded) {
       const file = input.files![0];
-      if (file.size > this.MAX_ALLOWED_AUDIO_SIZE_IN_BYTES) {
+      const exceededMaxAllowedFileSize =
+        file.size > this.MAX_ALLOWED_AUDIO_SIZE_IN_BYTES;
+      if (exceededMaxAllowedFileSize) {
         this.failedAudioFile$.next(file);
         this.showMaximumAudioSizeExceededError();
       } else {

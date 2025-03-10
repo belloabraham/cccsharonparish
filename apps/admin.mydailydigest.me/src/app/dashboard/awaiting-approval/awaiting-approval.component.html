@@ -28,6 +28,8 @@
                     <thead>
                         <tr tuiThGroup>
                             <ng-container *ngFor="let column of tableColumns">
+                                @let isSortableColumns = column === "sn" || column === "reference" || column ===
+                                "topic";
 
                                 @if (column === "message") {
                                 <th *tuiHead="column" class="message-column" tuiTh [sticky]="true" [tuiSortable]="false"
@@ -48,8 +50,7 @@
                                     {{ t(column)}}
                                 </th>
                                 }
-                                @else if (column === "sn" || column ==="reference" ||
-                                column ==="topic") {
+                                @else if (isSortableColumns) {
                                 <th *tuiHead="column" tuiSortable tuiTh [sticky]="true"
                                     [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                     {{ t(column) }}
@@ -82,16 +83,14 @@
                                 </td>
                             </tr>
 
+
                             <tr tuiTr>
                                 <ng-container *ngFor="let key of tableColumns; let rowIndex = index">
+
                                     @if (key ==="date") {
                                     <td *tuiCell="key" tuiTd> {{ item[key] |
                                         date:'fullDate'
                                         }} </td>
-                                    }@else if (key === "message" || key === "verses"){
-                                    <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])"> {{
-                                        item[key]}}
-                                    </td>
                                     }@else if (key === "imagePath"){
                                     <td *tuiCell="key" tuiTd>
                                         <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank"
@@ -106,12 +105,6 @@
                                     }@else if (key === "audioUrl"){
                                     <td *tuiCell="key" tuiTd>
                                         <ng-audio-player *ngIf="item[key]" [src]="item[key]!" />
-                                    </td>
-                                    }@else if (key === "sn"){
-                                    <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
-
-                                        {{ item[key]}}
-
                                     </td>
                                     }@else if (key === "updatedBy" || key === "createdBy"){
                                     <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">

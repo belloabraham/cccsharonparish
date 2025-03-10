@@ -24,7 +24,9 @@
                         <tr tuiThGroup>
                             <ng-container *ngFor="let column of tableColumns">
 
-                                @if(column === "sn" || column === "firstName" || column === "lastName"){
+                                @let isSortableColumns = column === "sn" || column === "firstName" || column ===
+                                "lastName";
+                                @if(isSortableColumns){
                                 <th *tuiHead="column" [tuiSortable]="true" tuiTh [sticky]="true"
                                     [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                     {{ t(column)}}
