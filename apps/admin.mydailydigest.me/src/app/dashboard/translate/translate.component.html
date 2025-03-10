@@ -59,15 +59,9 @@
                         <tr class="table-tools-row">
                             <td [colSpan]="translateTableColumns.length" class="border-x-1 border-b border-x px-4">
 
-                                @if (languageContent) {
-                                <button (click)="updateTranslation()" mat-button> <mat-icon
+                                <button (click)="translate(item, languageContent)" mat-button> <mat-icon
                                         fontIcon="translate-fill"></mat-icon>
-                                    {{t(KEY.UPDATE_TRANSLATION)}}</button>
-                                }@else {
-                                <button (click)="translate()" mat-button> <mat-icon
-                                        fontIcon="translate-fill"></mat-icon>
-                                    {{t(KEY.TRANSLATE)}}</button>
-                                }
+                                    {{ t( KEY.TRANSLATE)}} "{{languageContent.topic}}"</button>
 
                                 <button (click)="copyEngVersion(englishContent)" mat-button> <mat-icon
                                         fontIcon="copy-note-fill"></mat-icon>
@@ -107,7 +101,7 @@
                             </ng-container>
                         </tr>
 
-                        @if (languageContent) {
+                        @if (languageContent.topic) {
                         <tr tuiTr>
                             <ng-container *ngFor="let key of translateTableColumns; let rowIndex = index">
                                 @if (key === "date") {

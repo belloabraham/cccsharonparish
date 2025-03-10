@@ -10,10 +10,12 @@ import { TRANSLATE_CONTENT_TABLE_COLUMNS } from './translate-table';
 import {
   contentsToTranslateTableUIState,
   ISpiritualDailyDigestTranslateUIState,
+  ISpiritualDailyDigestUIState,
   LanguageContent,
 } from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
 import { CommonModule } from '@angular/common';
+import { COLLECTION, STORAGE_PATH } from '../../services';
 
 @Component({
   selector: 'app-translate',
@@ -46,9 +48,34 @@ export class TranslateComponent extends NewContentComponent {
     );
   }
 
-  updateTranslation() {}
-
-  translate() {}
+  translate(
+    existingContentTranslateUIState: ISpiritualDailyDigestTranslateUIState,
+    languageContent: LanguageContent
+  ) {
+    const id = existingContentTranslateUIState.id;
+    const existingSDDContent = this.getExistingContent(id);
+    const existingContentUIState: ISpiritualDailyDigestUIState = {
+      id: id,
+      topic: languageContent.topic,
+      message: languageContent.message,
+      reference: languageContent.reference,
+      verses: languageContent.verses,
+      keyVerse: languageContent.keyVerse,
+      tags: existingContentTranslateUIState.tags,
+      date: existingContentTranslateUIState.date,
+      imagePath: existingContentTranslateUIState.imagePath,
+      audioUrl: languageContent.audioUrl,
+      supplication: languageContent.topic,
+      reflection: languageContent.topic,
+      isAwaitingApproval: false,
+    };
+    this.openContentDialog(
+      existingContentUIState,
+      existingSDDContent,
+      STORAGE_PATH.APPROVED,
+      COLLECTION.APPROVED
+    );
+  }
 
   copyEngVersion(englishContent: LanguageContent) {}
 
@@ -60,13 +87,13 @@ export class TranslateComponent extends NewContentComponent {
   ): ReadonlyArray<ISpiritualDailyDigestTranslateUIState | null> {
     const start = page * size;
     const end = start + size;
-    const result = [...this._getTableUIState(start, end)].sort(
+    const result = [...this.getTableUIState(start, end)].sort(
       ascDescSortCompare(key, direction)
     );
     return result;
   }
 
-  _getTableUIState(start: number, end: number) {
+  getTableUIState(start: number, end: number) {
     const approvedContent = this.contentStore
       .approvedContent()
       .filter((data, index) => {

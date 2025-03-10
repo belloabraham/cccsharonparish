@@ -35,7 +35,7 @@ export interface ISpiritualDailyDigestTranslateUIState {
   date: Date;
   tags: string[];
   englishContent: LanguageContent;
-  languageContent: LanguageContent | null;
+  languageContent: LanguageContent;
 }
 
 export interface LanguageContent {

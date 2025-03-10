@@ -53,13 +53,13 @@ export class ApprovedComponent extends NewContentComponent {
   ): ReadonlyArray<ISpiritualDailyDigestTableUIState | null> {
     const start = page * size;
     const end = start + size;
-    const result = [...this._getTableUIState(start, end)].sort(
+    const result = [...this.getTableUIState(start, end)].sort(
       ascDescSortCompare(key, direction)
     );
     return result;
   }
 
-  _getTableUIState(start: number, end: number) {
+  getTableUIState(start: number, end: number) {
     const approvedContent = this.contentStore
       .approvedContent()
       .filter((data, index) => {

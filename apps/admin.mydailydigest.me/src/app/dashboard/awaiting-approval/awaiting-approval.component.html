@@ -71,12 +71,12 @@
 
                             <tr class="table-tools-row">
                                 <td [colSpan]="tableColumns.length" class="border-x-1 border-b border-x px-4">
-                                    @let contentForRow = contentStore.contentAwaitingApproval()[dataIndex];
-                                    <button (click)="markAsApprovedPrompt(item.topic, contentForRow)" mat-button>
+                                    <!-- @let contentForRow = contentStore.contentAwaitingApproval()[dataIndex]; -->
+                                    <button (click)="markAsApprovedPrompt(item)" mat-button>
                                         <mat-icon fontIcon="file-check-fill"></mat-icon>
                                         {{t(KEY.APPROVE)}}</button>
 
-                                    <button (click)="editContent(item, contentForRow)" mat-button>
+                                    <button (click)="editContent(item)" mat-button>
                                         <mat-icon fontIcon="pen-fill"></mat-icon>
                                         {{t(KEY.EDIT)}}</button>
 

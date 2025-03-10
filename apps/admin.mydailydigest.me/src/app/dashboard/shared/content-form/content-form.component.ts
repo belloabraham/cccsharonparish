@@ -180,11 +180,11 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     this.rootDataPath = data.rootDataPath;
     this.language.set(data.language);
     if (this.existingContentUIState) {
-      this.updateFormWithExistingData(this.existingContentUIState);
+      this.updateFormWithExistingContentUIState(this.existingContentUIState);
     }
   }
 
-  private updateFormWithExistingData(
+  private updateFormWithExistingContentUIState(
     existingContentUIState: ISpiritualDailyDigestUIState
   ) {
     this.setDefaultMediaContent(existingContentUIState);
@@ -202,8 +202,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   private setFormValue(sddUIiState: ISpiritualDailyDigestUIState) {
     this.dateFC.disable();
-    const { imagePath, audioUrl, ...formData } = sddUIiState;
-    this.form.setValue({
+    const { imagePath, id, audioUrl, isAwaitingApproval, ...formData } = sddUIiState;
+    this.form.patchValue({
       ...formData,
     });
     this.tags.set(formData.tags);

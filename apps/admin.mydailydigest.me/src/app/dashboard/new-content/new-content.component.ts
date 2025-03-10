@@ -61,8 +61,8 @@ import { NEW_CONTENT_TABLE_COLUMNS } from './draft-table';
 })
 export class NewContentComponent implements OnDestroy {
   readonly KEY = CONTENT_STRING_RESOURCE_KEYS;
-  private dialogService = inject(TuiDialogService);
-  private injector = inject(Injector);
+  protected readonly dialogService = inject(TuiDialogService);
+  protected readonly injector = inject(Injector);
   subscriptions = new SubSink();
   contentStore = inject(ContentStore);
   dashboardStore = inject(DashboardStore);
@@ -204,13 +204,12 @@ export class NewContentComponent implements OnDestroy {
     this.contentStore.getContentsAwaitingApproval().subscribe();
   }
 
-  editContent(
-    existingContentTableUIState: ISpiritualDailyDigestTableUIState,
-    id: string
-  ) {
-    const existingContent = this.getExistingContent(id);
+  editContent(existingContentTableUIState: ISpiritualDailyDigestTableUIState) {
+    const existingSDDContent = this.getExistingContent(
+      existingContentTableUIState.id
+    );
     const { sn, ...existingContentUIState } = existingContentTableUIState;
-    this.openContentDialog(existingContentUIState, existingContent);
+    this.openContentDialog(existingContentUIState, existingSDDContent);
   }
 
   deleteContent(draftId: string) {
@@ -258,13 +257,13 @@ export class NewContentComponent implements OnDestroy {
   ): ReadonlyArray<ISpiritualDailyDigestTableUIState | null> {
     const start = page * size;
     const end = start + size;
-    const result = [...this.getTableUIState(start, end)].sort(
+    const result = [...this._getTableUIState(start, end)].sort(
       ascDescSortCompare(key, direction)
     );
     return result;
   }
 
-  getTableUIState(start: number, end: number) {
+  _getTableUIState(start: number, end: number) {
     const draftContents = this.contentStore
       .draftContents()
       .filter((data, index) => {
@@ -279,7 +278,9 @@ export class NewContentComponent implements OnDestroy {
 
   openContentDialog(
     existingContentUIState?: ISpiritualDailyDigestUIState,
-    existingContent?: ISpiritualDailyDigest
+    existingContent?: ISpiritualDailyDigest,
+    rootStoragePath: string = STORAGE_PATH.DRAFT,
+    rootDataPath: string = COLLECTION.DRAFT
   ) {
     const language = this.dashboardStore
       .supportedLanguages()
@@ -292,8 +293,8 @@ export class NewContentComponent implements OnDestroy {
             existingContentUIState: existingContentUIState,
             existingContent: existingContent,
             language: language,
-            rootStoragePath: STORAGE_PATH.DRAFT,
-            rootDataPath: COLLECTION.DRAFT,
+            rootStoragePath: rootStoragePath,
+            rootDataPath: rootDataPath,
           },
           dismissible: false,
           header: this.title(),

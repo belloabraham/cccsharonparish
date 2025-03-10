@@ -119,11 +119,8 @@ export function contentsToTranslateTableUIState(
   return result;
 }
 
-export function getLanguageContent(content?: Content): LanguageContent | null {
+export function getLanguageContent(content?: Content): LanguageContent {
   const textContent = content?.text;
-  if (!content) {
-    return null;
-  }
   return {
     topic: textContent?.topic || '',
     message: textContent?.message || '',

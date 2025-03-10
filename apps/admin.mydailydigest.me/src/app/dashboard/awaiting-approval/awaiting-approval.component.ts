@@ -102,18 +102,19 @@ export class AwaitingApprovalComponent implements OnDestroy {
   }
 
   editContent(
-    existingContentTableUIState: IAwaitingApprovalContentTableUIState,
-    existingContent: ISpiritualDailyDigest
+    existingContentTableUIState: IAwaitingApprovalContentTableUIState
   ) {
+    const existingContent = this.getExistingContent(
+      existingContentTableUIState.id
+    );
     const { sn, createdBy, updatedBy, ...existingContentUIState } =
       existingContentTableUIState;
     this.openContentDialog(existingContentUIState, existingContent);
   }
 
-  markAsApprovedPrompt(
-    topic: string,
-    contentAwaitingApproval: ISpiritualDailyDigest
-  ) {
+  markAsApprovedPrompt(item: IAwaitingApprovalContentTableUIState) {
+    const topic = item.topic;
+    const contentAwaitingApproval = this.getExistingContent(item.id);
     this.alertDialogService
       .open(`Are you sure you want to approve ${topic}?`, {
         heading: 'Approve content?',
@@ -129,6 +130,12 @@ export class AwaitingApprovalComponent implements OnDestroy {
           }
         },
       });
+  }
+
+  getExistingContent(id: string) {
+    return this.contentStore
+      .contentAwaitingApproval()
+      .find((content) => content.id === id)!;
   }
 
   async markAsApproved(
