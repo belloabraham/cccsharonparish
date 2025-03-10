@@ -59,20 +59,20 @@
     </mat-form-field>
 
     <mat-form-field class="textarea">
-        <mat-label>{{t(KEY.MESSAGE)}}*</mat-label>
+        <mat-label>{{t(KEY.SUPPLICATION)}}*</mat-label>
         <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" formControlName="supplication"
             matInput></textarea>
         @if (this.supplicationFC.invalid) {
-        <mat-error>{{t(KEY.CONTENT_MSG_REQ_MSG)}}</mat-error>
+        <mat-error>{{t(KEY.CONTENT_SUPPLICATION_REQ_MSG)}}</mat-error>
         }
     </mat-form-field>
 
     <mat-form-field class="textarea">
-        <mat-label>{{t(KEY.MESSAGE)}}*</mat-label>
+        <mat-label>{{t(KEY.REFLECTION)}}*</mat-label>
         <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" formControlName="reflection"
             matInput></textarea>
         @if (this.reflectionFC.invalid) {
-        <mat-error>{{t(KEY.CONTENT_MSG_REQ_MSG)}}</mat-error>
+        <mat-error>{{t(KEY.CONTENT_REFLECTION_REQ_MSG)}}</mat-error>
         }
     </mat-form-field>
 
@@ -88,9 +88,8 @@
             </mat-chip-row>
             }
         </mat-chip-grid>
-        <input [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-            [placeholder]="t(KEY.TAG_PLACEHOLDER)" [matChipInputFor]="reactiveChipGrid"
-            (matChipInputTokenEnd)="addATag($event)" />
+        <input [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [placeholder]="t(KEY.TAG_PLACEHOLDER)"
+            [matChipInputFor]="reactiveChipGrid" (matChipInputTokenEnd)="addATag($event)" />
     </mat-form-field>
 
     <input #imageUpload type="file" (change)="onImageFileSelected($event)" accept="image/*" hidden />
