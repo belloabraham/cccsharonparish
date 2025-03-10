@@ -22,6 +22,8 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   CONTENT_MSG_REQ_MSG: 'content_msg_req_msg',
   CONTENT_SUPPLICATION_REQ_MSG: 'content_supplication_req_msg',
   CONTENT_REFLECTION_REQ_MSG: 'content_reflection_req_msg',
+  COPY_ENG_VERSION: 'copy_eng_version',
+  PASTE_TRANSLATION: 'paste_translation',
 
   SAVE: 'save',
   DATE_REQ_MSG: 'date_reg_msg',
@@ -30,7 +32,6 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   HEADER_IMAGE: 'header_image',
   CANCEL: 'cancel',
   UPLOAD: 'upload',
-  COPY_ENG_VERSION_MSG: 'copy_eng_version_msg',
   AUDIO: 'audio',
   DROP_IT: 'drop_it',
   REPLACE: 'replace',

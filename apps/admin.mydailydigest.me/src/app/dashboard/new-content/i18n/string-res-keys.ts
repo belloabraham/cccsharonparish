@@ -10,7 +10,6 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   DELETE: 'delete',
   TRANSLATE: 'translate',
   UPDATE_TRANSLATION: 'update_translation',
-  COPY_ENG_VERSION: 'copy_eng_version',
   SUBMIT_FOR_REVIEW: 'submit_for_review',
   SUBMIT_FOR_REVIEW_WARN_MSG: 'submit_for_review_warn_msg',
 };

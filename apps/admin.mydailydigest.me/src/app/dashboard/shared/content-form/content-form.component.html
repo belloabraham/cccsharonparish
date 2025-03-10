@@ -1,8 +1,18 @@
-<form *transloco="let t" [formGroup]="form" class="content-form flex flex-col gap-4">
+<form *transloco="let t" [formGroup]="form" class="flex flex-col gap-4">
 
     <tui-notification *ngIf="!existingContentUIState" size="s"
         appearance="warning">{{t(KEY.UNIQUE_CONTENT_DATE_MESSAGE)}}. <br>
         {{t(KEY.REQUIRED_FIELD_MESSAGE)}}</tui-notification>
+
+    <div class="flex gap-4" *ngIf="englishVersion">
+        <button (click)="copyEngVersion(englishVersion)" mat-button> <mat-icon fontIcon="copy-note-fill"></mat-icon>
+            {{t(KEY.COPY_ENG_VERSION)}}</button>
+
+        <button *ngIf="showPasteTranslation()" class="!capitalize" (click)="pasteTranslation()" mat-button>
+            <mat-icon fontIcon="water-drop-fill"></mat-icon>
+            {{t(KEY.PASTE_TRANSLATION)}}</button>
+    </div>
+
 
     <mat-form-field class="topic">
         <mat-label>{{t(KEY.TOPIC)}}*</mat-label>

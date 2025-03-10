@@ -116,9 +116,11 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   imageFullPath = '';
   readonly uploadedAudioUrl = signal<string | null>(null);
   rootStoragePath = '';
+  englishVersion?: string;
   rootDataPath = '';
   existingContentUIState?: ISpiritualDailyDigestUIState;
   existingContent?: ISpiritualDailyDigest;
+  showPasteTranslation = signal(false);
 
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
@@ -178,11 +180,17 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     this.existingContent = data.existingContent;
     this.rootStoragePath = data.rootStoragePath;
     this.rootDataPath = data.rootDataPath;
+    this.englishVersion = data.englishVersion;
     this.language.set(data.language);
     if (this.existingContentUIState) {
       this.updateFormWithExistingContentUIState(this.existingContentUIState);
     }
   }
+
+  copyEngVersion(englishVersion: string) {
+    this.showPasteTranslation.set(true);
+  }
+  pasteTranslation() {}
 
   private updateFormWithExistingContentUIState(
     existingContentUIState: ISpiritualDailyDigestUIState
@@ -202,7 +210,8 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   private setFormValue(sddUIiState: ISpiritualDailyDigestUIState) {
     this.dateFC.disable();
-    const { imagePath, id, audioUrl, isAwaitingApproval, ...formData } = sddUIiState;
+    const { imagePath, id, audioUrl, isAwaitingApproval, ...formData } =
+      sddUIiState;
     this.form.patchValue({
       ...formData,
     });

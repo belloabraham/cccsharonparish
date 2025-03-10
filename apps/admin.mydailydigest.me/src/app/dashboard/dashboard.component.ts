@@ -70,7 +70,6 @@ import { EditorsStore } from './editors/editors.store';
     TuiNavigation,
     AsyncPipe,
     TuiPopup,
-    NgIf,
     MatButtonModule,
     MatIconModule,
     NgOptimizedImage,

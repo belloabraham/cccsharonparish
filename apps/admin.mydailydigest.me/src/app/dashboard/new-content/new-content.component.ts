@@ -279,6 +279,7 @@ export class NewContentComponent implements OnDestroy {
   openContentDialog(
     existingContentUIState?: ISpiritualDailyDigestUIState,
     existingContent?: ISpiritualDailyDigest,
+    englishVersion?:string,
     rootStoragePath: string = STORAGE_PATH.DRAFT,
     rootDataPath: string = COLLECTION.DRAFT
   ) {
@@ -295,6 +296,7 @@ export class NewContentComponent implements OnDestroy {
             language: language,
             rootStoragePath: rootStoragePath,
             rootDataPath: rootDataPath,
+            englishVersion:englishVersion
           },
           dismissible: false,
           header: this.title(),
