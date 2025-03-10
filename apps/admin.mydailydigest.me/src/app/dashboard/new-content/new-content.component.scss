@@ -34,7 +34,7 @@
 .fab-medium {
   display: none;
   @include breakpoints.large {
-    display: block;
+    display: inline-flex;
   }
 }
 

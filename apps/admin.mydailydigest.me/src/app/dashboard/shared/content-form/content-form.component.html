@@ -1,6 +1,7 @@
 <form *transloco="let t" [formGroup]="form" class="content-form flex flex-col gap-4">
 
-    <tui-notification size="s" appearance="warning">{{t(KEY.UNIQUE_CONTENT_DATE_MESSAGE)}}. <br>
+    <tui-notification *ngIf="!existingContentUIState" size="s"
+        appearance="warning">{{t(KEY.UNIQUE_CONTENT_DATE_MESSAGE)}}. <br>
         {{t(KEY.REQUIRED_FIELD_MESSAGE)}}</tui-notification>
 
     <mat-form-field class="topic">
