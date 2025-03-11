@@ -2,8 +2,7 @@
 
     @let contentsAwaitingApproval = contentStore.contentAwaitingApproval();
     @let contentIsEmpty = contentsAwaitingApproval.length === 0;
-    <h5 class="page-title" [class.!mb-0]="!contentIsEmpty">{{t(KEY.AWAITING_APPROVAL)}}</h5>
-
+    <h5 class="page-title capitalize" [class.!mb-0]="!contentIsEmpty">{{t(KEY.AWAITING_APPROVAL)}}</h5>
 
     <tui-notification *ngIf="!contentIsEmpty" size="s" appearance="warning" class="mb-12">
         <p [innerHTML]="t(KEY.CONTENT_GETS_APPROVED_MSG)"></p>
@@ -71,7 +70,6 @@
 
                             <tr class="table-tools-row">
                                 <td [colSpan]="tableColumns.length" class="border-x-1 border-b border-x px-4">
-                                    <!-- @let contentForRow = contentStore.contentAwaitingApproval()[dataIndex]; -->
                                     <button (click)="markAsApprovedPrompt(item)" mat-button>
                                         <mat-icon fontIcon="file-check-fill"></mat-icon>
                                         {{t(KEY.APPROVE)}}</button>

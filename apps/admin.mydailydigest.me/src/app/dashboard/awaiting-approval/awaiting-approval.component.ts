@@ -16,6 +16,7 @@ import {
   IAwaitingApprovalContentTableUIState,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
+  ROUTE,
 } from '@cccsharonparish/mydailydigest';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -146,8 +147,8 @@ export class AwaitingApprovalComponent implements OnDestroy {
       await this.awaitingApprovalService.markAsApproved(
         contentAwaitingApproval
       );
-      this.getApprovedContents();
       this.updateUIContent(contentAwaitingApproval.id);
+      this.loadApprovedContents();
       this.alertService
         .open(`${topic} was approved successfully`, {
           label: 'Approved',
@@ -174,8 +175,24 @@ export class AwaitingApprovalComponent implements OnDestroy {
     this.contentStore.updateAwaitingApprovalContents(contentsAwaitingApproval);
   }
 
-  private getApprovedContents() {
-    this.contentStore.getApprovedContents().subscribe();
+  private loadApprovedContents() {
+    this.contentStore.getApprovedContents().subscribe({
+      next: () => {
+        if (this.contentStore.contentAwaitingApproval().length === 0) {
+          const translateRouteLanguages = this.getTranslateRouteLanguages();
+          this.router.navigate([ROUTE.TRANSLATE, translateRouteLanguages[0]]);
+        }
+      },
+    });
+  }
+
+  getTranslateRouteLanguages() {
+    const supportedLanguages =
+      this.dashboardStore.supportedLanguages().languages;
+    const nonEnglishLanguages = supportedLanguages.filter(
+      (lang) => lang.code !== ENGLISH_LANG_CODE
+    );
+    return nonEnglishLanguages;
   }
 
   isColumnMatch(value: any): boolean {
