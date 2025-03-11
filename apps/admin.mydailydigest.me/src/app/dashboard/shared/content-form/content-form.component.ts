@@ -188,13 +188,14 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:keydown', ['$event'])
   async handlePasteShortcut(event: KeyboardEvent) {
-    if ((event.ctrlKey || event.metaKey) && event.key === 'v') {
+    if (event.ctrlKey || event.metaKey) {
       event.preventDefault();
-      await this.pasteTranslation();
-    }
-    if ((event.ctrlKey || event.metaKey) && event.key === 'c') {
-      event.preventDefault();
-      await this.copyEngVersion();
+      if (event.key === 'v') {
+        await this.pasteTranslation();
+      }
+      if (event.key === 'c') {
+        await this.copyEngVersion();
+      }
     }
   }
 
