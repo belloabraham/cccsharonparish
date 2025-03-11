@@ -78,7 +78,8 @@ export class TranslateComponent extends NewContentComponent {
     );
   }
 
-  private getEnglishVersion(englishContent: LanguageContent) {
+  private getEnglishVersion(languageContent: LanguageContent) {
+    const { audioUrl, ...englishContent } = languageContent;
     const englishVersion = Object.values(englishContent).join('\n\n');
     return englishVersion;
   }

@@ -55,7 +55,7 @@ import { POLYMORPHEUS_CONTEXT } from '@taiga-ui/polymorpheus';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltip } from '@angular/material/tooltip';
-import { ClipboardModule } from '@angular/cdk/clipboard';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 import type { TuiFileLike } from '@taiga-ui/kit';
 import { TuiFiles } from '@taiga-ui/kit';
@@ -88,7 +88,6 @@ import { IDialogData } from '../content-dialog';
     MatProgressBarModule,
     MatExpansionModule,
     MatTooltip,
-    ClipboardModule,
     AsyncPipe,
     NgIf,
     ReactiveFormsModule,
@@ -121,6 +120,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   existingContentUIState?: ISpiritualDailyDigestUIState;
   existingContent?: ISpiritualDailyDigest;
   showPasteTranslation = signal(false);
+  private clipboard = inject(Clipboard);
 
   protected maxImageSizeExceededError: TuiValidationError<
     Record<string, unknown>
@@ -189,7 +189,9 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
 
   copyEngVersion(englishVersion: string) {
     this.showPasteTranslation.set(true);
+    this.clipboard.copy(englishVersion);
   }
+
   pasteTranslation() {}
 
   private updateFormWithExistingContentUIState(
