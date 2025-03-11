@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   Inject,
   inject,
   OnInit,
@@ -39,7 +40,7 @@ import {
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
   Language,
-  REGEX,
+  LanguageContent,
 } from '@cccsharonparish/mydailydigest';
 import {
   COLLECTION,
@@ -115,7 +116,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   imageFullPath = '';
   readonly uploadedAudioUrl = signal<string | null>(null);
   rootStoragePath = '';
-  englishVersion?: string;
+  englishVersion?: LanguageContent;
   rootDataPath = '';
   existingContentUIState?: ISpiritualDailyDigestUIState;
   existingContent?: ISpiritualDailyDigest;
@@ -146,9 +147,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   readonly tags = signal<string[]>([]);
 
   readonly topicFC = this.getNewStringFC();
-  readonly bibleReferenceFC = this.getNewStringFC([
-    Validators.pattern(REGEX.BIBLE_REFERENCE),
-  ]);
+  readonly bibleReferenceFC = this.getNewStringFC();
   readonly referenceVersesFC = this.getNewStringFC();
   readonly referenceKeyVersesFC = this.getNewStringFC();
   readonly messageFC = this.getNewStringFC();
@@ -187,12 +186,76 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     }
   }
 
-  copyEngVersion(englishVersion: string) {
-    this.showPasteTranslation.set(true);
-    this.clipboard.copy(englishVersion);
+  @HostListener('window:keydown', ['$event'])
+  async handlePasteShortcut(event: KeyboardEvent) {
+    if ((event.ctrlKey || event.metaKey) && event.key === 'v') {
+      event.preventDefault();
+      await this.pasteTranslation();
+    }
+    if ((event.ctrlKey || event.metaKey) && event.key === 'c') {
+      event.preventDefault();
+      await this.copyEngVersion();
+    }
   }
 
-  pasteTranslation() {}
+  copyEngVersion() {
+    this.showPasteTranslation.set(true);
+    this.clipboard.copy(this.getTextEnglishVersion(this.englishVersion!));
+    this.alertService
+      .open('Copied', {
+        label: 'English version was copied successfully',
+        appearance: 'positive',
+      })
+      .subscribe();
+  }
+
+  private getTextEnglishVersion(languageContent: LanguageContent) {
+    const { audioUrl, ...englishContent } = languageContent;
+    const englishVersion = Object.values(englishContent).join('\n\n');
+    return englishVersion;
+  }
+
+  async pasteTranslation() {
+    try {
+      const SEPARATOR = '#';
+      const clipBoardText = await navigator.clipboard.readText();
+      const languageContentKeys = Object.keys(this.englishVersion!);
+      const possibleTranslation = clipBoardText
+        .replace(/\n+/g, SEPARATOR)
+        .split(SEPARATOR);
+      const isValidTranslation =
+        possibleTranslation.length === languageContentKeys.length - 1;
+      if (isValidTranslation) {
+        this.updateFormWithTranslations(possibleTranslation);
+      } else {
+        this.translationPasteErrorAlert();
+      }
+    } catch (error) {
+      this.translationPasteErrorAlert();
+    }
+  }
+
+  translationPasteErrorAlert() {
+    this.alertService
+      .open('Error', {
+        label:
+          'Unable to paste translation, try entering the translations manually',
+        appearance: 'negative',
+      })
+      .subscribe();
+  }
+
+  private updateFormWithTranslations(translations: string[]) {
+    this.form.patchValue({
+      topic: translations[0],
+      reference: translations[1],
+      verses: translations[2],
+      keyVerse: translations[3],
+      message: translations[4],
+      supplication: translations[5],
+      reflection: translations[6],
+    });
+  }
 
   private updateFormWithExistingContentUIState(
     existingContentUIState: ISpiritualDailyDigestUIState

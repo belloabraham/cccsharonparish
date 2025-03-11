@@ -123,10 +123,10 @@ export function getLanguageContent(content?: Content): LanguageContent {
   const textContent = content?.text;
   return {
     topic: textContent?.topic || '',
-    message: textContent?.message || '',
     reference: textContent?.bibleVerse?.reference || '',
     verses: textContent?.bibleVerse?.verses || '',
     keyVerse: textContent?.bibleVerse?.keyVerse || '',
+    message: textContent?.message || '',
     audioUrl: content?.audioUrl || null,
     supplication: textContent?.supplication || '',
     reflection: textContent?.reflection || '',

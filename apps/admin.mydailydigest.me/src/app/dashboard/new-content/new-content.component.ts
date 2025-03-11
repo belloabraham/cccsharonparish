@@ -16,6 +16,7 @@ import {
   ISpiritualDailyDigest,
   ISpiritualDailyDigestTableUIState,
   ISpiritualDailyDigestUIState,
+  LanguageContent,
 } from '@cccsharonparish/mydailydigest';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -279,7 +280,7 @@ export class NewContentComponent implements OnDestroy {
   openContentDialog(
     existingContentUIState?: ISpiritualDailyDigestUIState,
     existingContent?: ISpiritualDailyDigest,
-    englishVersion?:string,
+    englishVersion?:LanguageContent,
     rootStoragePath: string = STORAGE_PATH.DRAFT,
     rootDataPath: string = COLLECTION.DRAFT
   ) {

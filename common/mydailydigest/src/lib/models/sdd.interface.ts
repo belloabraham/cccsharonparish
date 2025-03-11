@@ -40,10 +40,10 @@ export interface ISpiritualDailyDigestTranslateUIState {
 
 export interface LanguageContent {
   topic: string;
-  message: string;
   reference: string;
   verses: string;
   keyVerse: string;
+  message: string;
   audioUrl: string | null;
   supplication: string;
   reflection: string;

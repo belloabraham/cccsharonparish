@@ -72,17 +72,13 @@ export class TranslateComponent extends NewContentComponent {
     this.openContentDialog(
       existingContentUIState,
       existingSDDContent,
-      this.getEnglishVersion(existingContentTranslateUIState.englishContent),
+      existingContentTranslateUIState.englishContent,
       STORAGE_PATH.APPROVED,
       COLLECTION.APPROVED
     );
   }
 
-  private getEnglishVersion(languageContent: LanguageContent) {
-    const { audioUrl, ...englishContent } = languageContent;
-    const englishVersion = Object.values(englishContent).join('\n\n');
-    return englishVersion;
-  }
+ 
 
   private _getData(
     key: keyof ISpiritualDailyDigestTranslateUIState,
