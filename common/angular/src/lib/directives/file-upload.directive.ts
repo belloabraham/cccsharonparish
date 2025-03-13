@@ -41,7 +41,7 @@ export class MDDFileUploadDirective implements ControlValueAccessor {
     this.onTouched();
   }
 
-  writeValue(value: null): void {
+  writeValue(_: any): void {
     const inputElement = this.getHostElement();
     if (inputElement) {
       inputElement.value = '';

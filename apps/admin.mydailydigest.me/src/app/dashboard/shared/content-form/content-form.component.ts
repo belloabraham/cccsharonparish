@@ -39,7 +39,6 @@ import {
   ENGLISH_LANG_CODE,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
-  JSON,
   Language,
   LanguageContent,
 } from '@cccsharonparish/mydailydigest';
@@ -71,6 +70,7 @@ import { ContentService } from '../content.service';
 import { ContentStore } from '../content.store';
 import { COMMA, ENTER, SPACE } from '@angular/cdk/keycodes';
 import { IDialogData } from '../content-dialog';
+import { JSON } from '@cccsharonparish/core';
 
 @Component({
   selector: 'app-content-form',

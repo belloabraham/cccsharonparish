@@ -20,9 +20,9 @@ export class ConnectionStateUtil {
 
   observeDeviceInternetConnectionState(
     pingDomain: string,
-    maxRetries: number = 3,
-    retryIntervalInSec: number = 2000,
-    defaultState: boolean = true
+    maxRetries = 3,
+    retryIntervalInSec = 2000,
+    defaultState = true
   ) {
     window.addEventListener(CONNECTION_STATE.ONLINE, async () => {
       this.pingMyDomain(pingDomain)

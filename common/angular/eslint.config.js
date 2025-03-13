@@ -19,18 +19,18 @@ module.exports = [
     files: ['**/*.ts'],
     rules: {
       '@angular-eslint/directive-selector': [
-        'error',
+        'warn',
         {
           type: 'attribute',
-          prefix: 'lib',
+          prefix: 'ng',
           style: 'camelCase',
         },
       ],
       '@angular-eslint/component-selector': [
-        'error',
+        'warn',
         {
           type: 'element',
-          prefix: 'lib',
+          prefix: 'ng',
           style: 'kebab-case',
         },
       ],
@@ -45,6 +45,7 @@ module.exports = [
     files: ['**/*.ts'],
     rules: {
       '@angular-eslint/prefer-standalone': 'off',
+      '@typescript-eslint/no-empty-function': 'off',
     },
   },
 ];

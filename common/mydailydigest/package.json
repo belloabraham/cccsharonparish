@@ -3,7 +3,15 @@
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^19.1.0",
-    "@angular/core": "^19.1.0"
+    "@angular/core": "^19.1.0",
+    "subsink": "^1.0.2",
+    "@angular/fire": "19.0.0",
+    "@angular/platform-browser": "19.2.1",
+    "@angular/material": "~19.1.0",
+    "@jsverse/transloco": "^7.5.0",
+    "@angular/router": "19.2.1",
+    "@ngrx/signals": "^18.1.1",
+    "@cccsharonparish/angular": "*.*.*"
   },
   "sideEffects": false
 }

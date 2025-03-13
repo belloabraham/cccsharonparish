@@ -25,10 +25,11 @@ import {
   LanguageResourceService,
    MDDFileUploadDirective,
 } from '@cccsharonparish/angular';
-import { IUserUIState, JSON } from '@cccsharonparish/mydailydigest';
+import { IUserUIState } from '@cccsharonparish/mydailydigest';
 import { SubSink } from 'subsink';
 import { ProfileService } from './profile.service';
 import { environment } from '../../../environments/environment';
+import { JSON } from '@cccsharonparish/core';
 
 @Component({
   selector: 'app-profile',

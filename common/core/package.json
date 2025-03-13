@@ -2,6 +2,9 @@
   "name": "@cccsharonparish/core",
   "version": "0.0.1",
   "dependencies": {},
+  "peerDependencies": {
+    "rxjs": "~7.8.0"
+  },
   "type": "commonjs",
   "main": "./index.cjs"
 }

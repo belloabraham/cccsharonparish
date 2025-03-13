@@ -9,13 +9,14 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { NgOptimizedImage } from '@angular/common';
 import { AUTH_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
-import { REGEX, Settings } from '@cccsharonparish/mydailydigest';
+import { Settings } from '@cccsharonparish/mydailydigest';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { AUTH_TOKEN, AuthError } from '../services';
 import { TuiAlertService } from '@taiga-ui/core';
 import { environment } from '../../environments/environment';
+import { REGEX } from '@cccsharonparish/core';
 
 @Component({
   selector: 'app-auth',

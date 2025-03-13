@@ -11,10 +11,11 @@ import { NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { FormGroup } from '@angular/forms';
 import { UserDataForm } from '../shared/user-data/user-data-form';
-import { IUserUIState, JSON, ROUTE } from '@cccsharonparish/mydailydigest';
+import { IUserUIState, ROUTE } from '@cccsharonparish/mydailydigest';
 import { Router } from '@angular/router';
 import { TuiAlertService } from '@taiga-ui/core';
 import { LanguageResourceService } from '@cccsharonparish/angular';
+import { JSON } from '@cccsharonparish/core';
 
 @Component({
   selector: 'app-sign-up',
@@ -53,11 +54,10 @@ export class SignUpComponent extends CommonComponent implements OnDestroy {
     this.subscriptions.sink = this.userDataStore
       .createUser(user)
       .subscribe({
-        next: (_) => {
+        next: (response) => {
           this.router.navigate([ROUTE.ROOT]);
         },
         error: (error) => {
-          console.error(error);
           this.showCreateUserFailedErrorAlert();
         },
       });

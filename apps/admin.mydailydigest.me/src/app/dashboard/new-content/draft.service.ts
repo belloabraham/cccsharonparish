@@ -7,7 +7,6 @@ import {
   STORAGE_PATH,
 } from '../../services';
 import {
-  dataURLtoFile,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
   Language,
@@ -17,6 +16,7 @@ import { environment } from '../../../../src/environments/environment';
 import { of } from 'rxjs';
 import { DRAFT_CONTENT_MOCK } from './mock/draft-content';
 import { getContentFromUIState } from '../shared';
+import { dataURLtoFile } from '@cccsharonparish/core';
 
 @Injectable({
   providedIn: 'any',

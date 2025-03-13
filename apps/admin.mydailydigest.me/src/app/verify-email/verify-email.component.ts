@@ -12,11 +12,12 @@ import {
   Validators,
 } from '@angular/forms';
 import { AUTH_TOKEN, AuthError } from '../services';
-import { REGEX, ROUTE, Settings } from '@cccsharonparish/mydailydigest';
+import { ROUTE, Settings } from '@cccsharonparish/mydailydigest';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { TuiAlertService } from '@taiga-ui/core';
 import { NgOptimizedImage } from '@angular/common';
+import { REGEX } from '@cccsharonparish/core';
 @Component({
   selector: 'app-verify-email',
   imports: [

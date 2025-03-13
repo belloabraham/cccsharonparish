@@ -2,7 +2,7 @@
   "name": "common-angular",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "common/angular/src",
-  "prefix": "lib",
+  "prefix": "ng",
   "projectType": "library",
   "tags": [],
   "targets": {

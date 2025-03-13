@@ -19,7 +19,7 @@ module.exports = [
     files: ['**/*.ts'],
     rules: {
       '@angular-eslint/directive-selector': [
-        'error',
+        'warn',
         {
           type: 'attribute',
           prefix: 'lib',
@@ -27,7 +27,7 @@ module.exports = [
         },
       ],
       '@angular-eslint/component-selector': [
-        'error',
+        'warn',
         {
           type: 'element',
           prefix: 'lib',

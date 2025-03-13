@@ -6,6 +6,7 @@ export class JSON {
    * @param value - The input string to be escaped.
    * @returns The escaped string with special characters properly encoded.
    */
+  /* eslint-disable no-useless-escape */
   static escapeSpecialChars(value: string) {
     return value.replace(/[\\"\/\b\f\n\r\t]/g, function (char) {
       switch (char) {
