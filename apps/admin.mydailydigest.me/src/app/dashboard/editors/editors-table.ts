@@ -2,7 +2,7 @@ import { IUser } from '@cccsharonparish/mydailydigest';
 import { TuiComparator } from '@taiga-ui/addon-table';
 import { tuiDefaultSort } from '@taiga-ui/cdk';
 
-const editorsTableUIState = {
+export const editorsTableUIState = {
   sn: 0,
   firstName: '',
   lastName: '',

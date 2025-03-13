@@ -2,7 +2,7 @@ import {
   LanguageContent,
 } from '@cccsharonparish/mydailydigest';
 
-const translateContentTableStateKeys = {
+export const translateContentTableStateKeys = {
   sn: 0,
   topic: '',
   message: '',

@@ -1,6 +1,6 @@
 import { IAwaitingApprovalContentTableUIState } from "@cccsharonparish/mydailydigest";
 
-const contentAwaitingApprovalTableStateKeys = {
+export const contentAwaitingApprovalTableStateKeys = {
   sn: 0,
   date: new Date(),
   topic: '',
