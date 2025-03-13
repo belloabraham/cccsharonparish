@@ -1,0 +1,49 @@
+import { SIGNUP_STRING_RESOURCE_KEY } from "./string-res-keys";
+
+describe('SIGNUP_STRING_RESOURCE_KEY', () => {
+  it('should have the correct keys and values', () => {
+    expect(SIGNUP_STRING_RESOURCE_KEY).toEqual({
+      PAGE_TITLE: 'sign_up_title',
+      SIGN_UP: 'sign_up',
+      SIGN_UP_HEADER: 'signup_header',
+      TELL_US_ABOUT: 'tell_us_about_u',
+      SUBMIT: 'submit',
+      USER_CREATE_ERROR_MSG: 'user_create_error_message',
+    });
+  });
+
+  it('should contain specific keys', () => {
+    expect(SIGNUP_STRING_RESOURCE_KEY).toHaveProperty(
+      'PAGE_TITLE',
+      'sign_up_title'
+    );
+    expect(SIGNUP_STRING_RESOURCE_KEY).toHaveProperty('SIGN_UP', 'sign_up');
+    expect(SIGNUP_STRING_RESOURCE_KEY).toHaveProperty(
+      'SIGN_UP_HEADER',
+      'signup_header'
+    );
+    expect(SIGNUP_STRING_RESOURCE_KEY).toHaveProperty(
+      'TELL_US_ABOUT',
+      'tell_us_about_u'
+    );
+    expect(SIGNUP_STRING_RESOURCE_KEY).toHaveProperty('SUBMIT', 'submit');
+    expect(SIGNUP_STRING_RESOURCE_KEY).toHaveProperty(
+      'USER_CREATE_ERROR_MSG',
+      'user_create_error_message'
+    );
+  });
+
+  it('should not contain unexpected keys', () => {
+    const allowedKeys = [
+      'PAGE_TITLE',
+      'SIGN_UP',
+      'SIGN_UP_HEADER',
+      'TELL_US_ABOUT',
+      'SUBMIT',
+      'USER_CREATE_ERROR_MSG',
+    ];
+    const actualKeys = Object.keys(SIGNUP_STRING_RESOURCE_KEY);
+
+    expect(actualKeys.every((key) => allowedKeys.includes(key))).toBe(true);
+  });
+});
