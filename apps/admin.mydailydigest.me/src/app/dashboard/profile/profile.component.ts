@@ -28,7 +28,7 @@ import {
 import { IUserUIState, JSON } from '@cccsharonparish/mydailydigest';
 import { SubSink } from 'subsink';
 import { ProfileService } from './profile.service';
-import { environment } from 'apps/admin.mydailydigest.me/src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-profile',

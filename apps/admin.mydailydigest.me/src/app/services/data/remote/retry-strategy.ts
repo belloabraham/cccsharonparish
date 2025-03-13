@@ -3,8 +3,8 @@ import { FIRESTORE_ERROR_CODES } from './firebase/error-codes';
 
 export const firestoreRetryStrategy =
   (
-    maxRetryAttempts: number = 3,
-    scalingDuration: number = 1000,
+    maxRetryAttempts = 3,
+    scalingDuration = 1000,
     excludedStatusCodes: string[] = [
       FIRESTORE_ERROR_CODES.UNAUTHENTICATED,
       FIRESTORE_ERROR_CODES.PERMISSION_DENIED,

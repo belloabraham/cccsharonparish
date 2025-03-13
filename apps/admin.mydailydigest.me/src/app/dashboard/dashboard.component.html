@@ -60,13 +60,12 @@
             <button (click)="openSideDrawer.set(true)" class="!text-white" mat-icon-button>
                 <mat-icon fontIcon="hamburger-fill"></mat-icon>
             </button>
-            <button class="w-8 h-8" disabled></button>
         </div>
 
 
         <a [routerLink]="ROUTE.ROOT" class="dashboard-title">
             <div class="logo flex justify-center items-center">
-                <img width="80" height="75" ngSrc="/images/global/logo.png" priority>
+                <img width="80" height="75" ngSrc="/images/global/logo.png" priority alt="Logo">
             </div>
             <h4 class="hidden lg:block">{{appName}}</h4>
         </a>

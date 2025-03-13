@@ -59,9 +59,7 @@ import { PUBLISHED_TABLE_COLUMNS } from '../published-content-table';
   styleUrl: './content-list.component.scss',
 })
 export class ContentListComponent {
-  contentYear = input.required<string>({
-    alias: 'contentYear',
-  });
+  contentYear = input.required<string>();
 
   KEY = PUBLISHED_CONTENT_LIST_STRING_RESOURCE_KEY;
   dashboardStore = inject(DashboardStore);

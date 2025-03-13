@@ -35,7 +35,7 @@ export class FirestoreService implements IRemoteData {
     path: string,
     pathSegment: string[],
     onNext: (data: T) => void,
-    retryTimeout: number = 2000
+    retryTimeout = 2000
   ) {
     const ref = doc(this.firestore, path, ...pathSegment);
     const unsubscribe = onSnapshot(ref, {

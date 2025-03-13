@@ -29,7 +29,10 @@ module.exports = [
   {
     files: ['**/*.html'],
     // Override or add rules here
-    rules: {},
+    rules: {
+      '@angular-eslint/template/click-events-have-key-events': 'off',
+      'jsx-a11y/click-events-have-key-events': 'off',
+    },
   },
   {
     files: ['**/*.ts'],

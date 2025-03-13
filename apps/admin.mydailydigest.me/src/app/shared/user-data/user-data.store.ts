@@ -28,7 +28,7 @@ export const UserDataStore = signalStore(
         retryWhen(firestoreRetryStrategy(Infinity)),
         tap({
           next: (data) => {
-            patchState(store, (state) => ({
+            patchState(store, (_) => ({
               loaded: true,
               isLoading: false,
               error: null,
@@ -42,7 +42,7 @@ export const UserDataStore = signalStore(
       return userDataService.createUser(userUIState, userType).pipe(
         tap({
           next: (data) => {
-            patchState(store, (state) => ({
+            patchState(store, (_) => ({
               loaded: true,
               isLoading: false,
               error: null,

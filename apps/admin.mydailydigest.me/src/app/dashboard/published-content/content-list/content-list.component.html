@@ -14,7 +14,7 @@
         <tui-badged-content>
 
             <img alt="" size="s" tuiBadge tuiSlot="bottom"
-                [src]="languageFC.value ?? ''|| languageSwitcher.language | tuiFlag" />
+                [src]="languageFC.value ?? ''|| languageSwitcher.language | tuiFlag" alt="Language Switch" />
 
             <button appearance="outline-grayscale" matRipple size="m" tuiButtonSelect tuiIconButton type="button"
                 [formControl]="languageFC" [iconStart]="'@tui.languages'" class="!rounded-xl">
@@ -23,7 +23,7 @@
                     <tui-opt-group>
                         <button class="flex gap-2" *ngFor="let lang of languages" tuiOption type="button"
                             [value]="lang.countryCode" (click)="setLang(lang)">
-                            <img class="t-flag" [src]="lang.countryCode | tuiFlag" />
+                            <img class="t-flag" [src]="lang.countryCode | tuiFlag"  alt="Flag"/>
                             {{ lang.label }}
                         </button>
                     </tui-opt-group>

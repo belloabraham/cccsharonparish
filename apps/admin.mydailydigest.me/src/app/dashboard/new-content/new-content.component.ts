@@ -75,9 +75,7 @@ export class NewContentComponent implements OnDestroy {
 
   sddForSelectedLanguage = signal<ISpiritualDailyDigest[]>([]);
 
-  languageCode = input.required<string>({
-    alias: 'languageCode',
-  });
+  languageCode = input.required<string>();
   title!: Signal<string>;
 
   AVERAGE_TABLE_PAGE_SIZE = AVERAGE_TABLE_PAGE_SIZE;

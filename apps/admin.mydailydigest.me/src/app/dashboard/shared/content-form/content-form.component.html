@@ -120,7 +120,7 @@
                 <mat-progress-bar *ngIf="imageUploadState() === 'uploading'" mode="indeterminate"></mat-progress-bar>
 
                 <div class="block" (click)="attachImage(imageUpload)">
-                    <img class="cover" [src]="defaultImageUrl" #cover>
+                    <img class="cover" [src]="defaultImageUrl" #cover alt="Content Image">
                 </div>
                 <div *ngIf="imageUploadState() !== 'uploading'" class="flex justify-end gap-2 image-controls">
 
