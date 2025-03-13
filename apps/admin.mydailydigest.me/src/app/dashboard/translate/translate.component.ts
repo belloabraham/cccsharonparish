@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../../shared';
 import { TuiTextfield } from '@taiga-ui/core';
-import { ascDescSortCompare, ColumnKeys, TABLE_MODULES } from '../shared';
+import { ascDescSortCompare, TABLE_MODULES } from '../shared';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TRANSLATE_CONTENT_TABLE_COLUMNS } from './translate-table';
 import {
@@ -39,7 +39,7 @@ export class TranslateComponent extends NewContentComponent {
   constructor() {
     super();
     this.translateData = computed(() =>
-      this._getData(
+      this.getData(
         this.sortColumnBy(),
         this.orderDirection(),
         this.tablePage(),
@@ -78,9 +78,9 @@ export class TranslateComponent extends NewContentComponent {
     );
   }
 
- 
 
-  private _getData(
+
+  private getData(
     key: keyof ISpiritualDailyDigestTranslateUIState,
     direction: -1 | 1,
     page: number,

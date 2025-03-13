@@ -93,7 +93,7 @@ export class NewContentComponent implements OnDestroy {
   constructor() {
     this.getPageTitle();
     this.data = computed(() =>
-      this.getData(
+      this._getData(
         this.sortColumnBy(),
         this.orderDirection(),
         this.tablePage(),
@@ -250,7 +250,7 @@ export class NewContentComponent implements OnDestroy {
     this.tablePageSize.set(size);
   }
 
-  private getData(
+  private _getData(
     key: ColumnKeys,
     direction: -1 | 1,
     page: number,

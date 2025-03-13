@@ -36,7 +36,7 @@ export class ApprovedComponent extends NewContentComponent {
   constructor() {
     super();
     this.translateData = computed(() =>
-      this._getData(
+      this.getData(
         this.sortColumnBy(),
         this.orderDirection(),
         this.tablePage(),
@@ -45,7 +45,7 @@ export class ApprovedComponent extends NewContentComponent {
     );
   }
 
-  private _getData(
+  private getData(
     key: ColumnKeys,
     direction: -1 | 1,
     page: number,
