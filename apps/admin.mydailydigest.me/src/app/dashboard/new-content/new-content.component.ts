@@ -29,7 +29,7 @@ import {
   ContentFormComponent,
   ContentStore,
   EmptyStatusComponent,
-  TABLE_MODULES,
+  MODULES_FOR_COMPONENTS_USING_TABLES,
 } from '../shared';
 import { TuiDialogService } from '@taiga-ui/core';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
@@ -55,7 +55,7 @@ import { NEW_CONTENT_TABLE_COLUMNS } from './draft-table';
     EmptyStatusComponent,
     TuiNotification,
     MatTooltipModule,
-    ...TABLE_MODULES,
+    ...MODULES_FOR_COMPONENTS_USING_TABLES,
   ],
   templateUrl: './new-content.component.html',
   styleUrl: './new-content.component.scss',
@@ -280,7 +280,7 @@ export class NewContentComponent implements OnDestroy {
   openContentDialog(
     existingContentUIState?: ISpiritualDailyDigestUIState,
     existingContent?: ISpiritualDailyDigest,
-    englishVersion?:LanguageContent,
+    englishVersion?: LanguageContent,
     rootStoragePath: string = STORAGE_PATH.DRAFT,
     rootDataPath: string = COLLECTION.DRAFT
   ) {
@@ -297,7 +297,7 @@ export class NewContentComponent implements OnDestroy {
             language: language,
             rootStoragePath: rootStoragePath,
             rootDataPath: rootDataPath,
-            englishVersion:englishVersion
+            englishVersion: englishVersion,
           },
           dismissible: false,
           header: this.title(),

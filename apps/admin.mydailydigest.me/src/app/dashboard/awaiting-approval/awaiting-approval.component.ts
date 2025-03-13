@@ -27,7 +27,7 @@ import {
   ContentFormComponent,
   ContentStore,
   IDialogData,
-  TABLE_MODULES,
+  MODULES_FOR_COMPONENTS_USING_TABLES,
 } from '../shared';
 import { TuiDialogService } from '@taiga-ui/core';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
@@ -54,7 +54,7 @@ import { Router } from '@angular/router';
     MatIconModule,
     TuiNotification,
     MatTooltipModule,
-    ...TABLE_MODULES,
+    ...MODULES_FOR_COMPONENTS_USING_TABLES,
   ],
   templateUrl: './awaiting-approval.component.html',
   styleUrl: './awaiting-approval.component.scss',

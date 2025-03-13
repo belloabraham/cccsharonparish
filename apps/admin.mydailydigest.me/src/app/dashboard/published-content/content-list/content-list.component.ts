@@ -34,7 +34,7 @@ import {
   AVERAGE_TABLE_PAGE_SIZE,
   ColumnKeys,
   getDaysInMonth,
-  TABLE_MODULES,
+  MODULES_FOR_COMPONENTS_USING_TABLES,
 } from '../../shared';
 import { PUBLISHED_TABLE_COLUMNS } from '../published-content-table';
 
@@ -53,7 +53,7 @@ import { PUBLISHED_TABLE_COLUMNS } from '../published-content-table';
     ReactiveFormsModule,
     TuiButton,
     NgOptimizedImage,
-    ...TABLE_MODULES,
+    ...MODULES_FOR_COMPONENTS_USING_TABLES,
   ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss',

@@ -1,4 +1,4 @@
-import { TUI_SCROLLBAR_OPTIONS, TuiRoot } from '@taiga-ui/core';
+import { TuiRoot } from '@taiga-ui/core';
 import { Component, inject, OnDestroy, OnInit, Signal } from '@angular/core';
 import {
   NavigationCancel,

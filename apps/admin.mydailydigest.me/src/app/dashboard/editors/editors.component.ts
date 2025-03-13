@@ -19,7 +19,10 @@ import {
 import { LanguageResourceService } from '@cccsharonparish/angular';
 import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
 import { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
-import { AlertDialogService, TABLE_MODULES } from '../shared';
+import {
+  AlertDialogService,
+  MODULES_FOR_COMPONENTS_USING_TABLES,
+} from '../shared';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -37,7 +40,7 @@ import { UserType } from '@cccsharonparish/mydailydigest';
     MatIconModule,
     MatTooltipModule,
     MatMenuModule,
-    ...TABLE_MODULES,
+    ...MODULES_FOR_COMPONENTS_USING_TABLES,
   ],
   templateUrl: './editors.component.html',
   styleUrl: './editors.component.scss',

@@ -36,7 +36,7 @@ export function ascDescSortCompare<T>(
   return (a, b) => direction * tuiDefaultSort(a[key], b[key]);
 }
 
-export const TABLE_MODULES = [
+export const MODULES_FOR_COMPONENTS_USING_TABLES = [
   SharedModule,
   TuiTextfield,
   CdkFixedSizeVirtualScroll,

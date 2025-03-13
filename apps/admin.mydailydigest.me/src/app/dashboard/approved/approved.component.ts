@@ -4,7 +4,11 @@ import { APPROVED_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { TuiTextfield } from '@taiga-ui/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { ascDescSortCompare, ColumnKeys, TABLE_MODULES } from '../shared';
+import {
+  ascDescSortCompare,
+  ColumnKeys,
+  MODULES_FOR_COMPONENTS_USING_TABLES,
+} from '../shared';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NewContentComponent } from '../new-content/new-content.component';
 import { TRANSLATE_CONTENT_TABLE_COLUMNS } from '../translate/translate-table';
@@ -23,7 +27,7 @@ import { tuiIsPresent } from '@taiga-ui/cdk';
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
-    ...TABLE_MODULES,
+    ...MODULES_FOR_COMPONENTS_USING_TABLES,
   ],
   templateUrl: './approved.component.html',
   styleUrl: './approved.component.scss',
