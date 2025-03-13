@@ -7,7 +7,7 @@
         <div class="file">
             <div (click)="fileInput.click()" class="image-upload relative rounded-full"
                 [class.border-red-600]="profileImageFC.hasError('maxFileSize')">
-                <input #fileInput sddFileUpload accept="image/*" type="file" hidden [formControl]="profileImageFC" />
+                <input #fileInput mddFileUpload accept="image/*" type="file" hidden [formControl]="profileImageFC" />
                 <div class="badge">
                     @if (imageUrl()) {
                     <img width="50" height="50" alt="Profile Image" class="rounded-full object-cover"

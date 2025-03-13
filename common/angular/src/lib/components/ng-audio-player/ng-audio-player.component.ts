@@ -12,7 +12,6 @@ import { CommonModule } from '@angular/common';
   selector: 'ng-audio-player',
   imports: [CommonModule],
   templateUrl: './ng-audio-player.component.html',
-  styleUrl: './ng-audio-player.component.scss',
 })
 export class NgAudioPlayerComponent implements OnInit, AfterViewInit {
   private observer?: IntersectionObserver;
@@ -25,7 +24,7 @@ export class NgAudioPlayerComponent implements OnInit, AfterViewInit {
   @Input() pauseWhenNotInView = true;
   @Input() intersectionRatio = 0.3;
   audioType = '';
-  
+
   ngOnInit(): void {
     this.audioType = `audio/${this.type}`;
   }

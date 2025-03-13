@@ -33,10 +33,10 @@ export class DashboardService {
 
   setTheme(themeType: ThemeType) {
     this.setThemeType(themeType);
-    const theme = this.themeService.isAppTheme(themeType)
+    const theme = this.themeService.isAppThemeType(themeType)
       ? themeType
       : this.themeService.getDeviceTheme();
-    this.themeService.setTheme(theme);
+    this.themeService.setAppTheme(theme);
   }
 
   private setThemeType(themeType: ThemeType) {

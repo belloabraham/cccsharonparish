@@ -39,6 +39,7 @@ import {
   ENGLISH_LANG_CODE,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
+  JSON,
   Language,
   LanguageContent,
 } from '@cccsharonparish/mydailydigest';
@@ -60,7 +61,7 @@ import { Clipboard } from '@angular/cdk/clipboard';
 
 import type { TuiFileLike } from '@taiga-ui/kit';
 import { TuiFiles } from '@taiga-ui/kit';
-import type { Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { of, Subject, switchMap } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { environment } from '../../../../environments/environment';
@@ -439,17 +440,17 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       const newContent: ISpiritualDailyDigestUIState = {
         id: '',
         isAwaitingApproval: false,
-        topic: this.topicFC.value!,
-        message: this.messageFC.value!,
-        reference: this.bibleReferenceFC.value!,
-        verses: this.referenceVersesFC.value!,
-        keyVerse: this.referenceKeyVersesFC.value!,
-        tags: this.tagsFC.value!,
+        topic: JSON.escapeSpecialChars(this.topicFC.value!),
+        message: JSON.escapeSpecialChars(this.messageFC.value!),
+        reference: JSON.escapeSpecialChars(this.bibleReferenceFC.value!),
+        verses: JSON.escapeSpecialChars(this.referenceVersesFC.value!),
+        keyVerse: JSON.escapeSpecialChars(this.referenceKeyVersesFC.value!),
+        tags: this.escapeJSONSpecialCharsForTags(this.tagsFC.value!),
         date: this.dateFC.value!,
         imagePath: this.imageFullPath,
         audioUrl: this.uploadedAudioUrl() || null,
-        supplication: this.supplicationFC.value!,
-        reflection: this.reflectionFC.value!,
+        supplication: JSON.escapeSpecialChars(this.supplicationFC.value!),
+        reflection: JSON.escapeSpecialChars(this.reflectionFC.value!),
       };
 
       if (this.existingContent) {
@@ -460,6 +461,15 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         this.createDraftContent(newContent);
       }
     }
+  }
+
+  escapeJSONSpecialCharsForTags(tags: string[]) {
+    const cleanTags: string[] = [];
+    for (let index = 0; index < tags.length; index++) {
+      const cleanTag = JSON.escapeSpecialChars(tags[index]);
+      cleanTags.push(cleanTag);
+    }
+    return cleanTags;
   }
 
   private updateContent(

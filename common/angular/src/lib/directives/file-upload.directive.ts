@@ -9,18 +9,18 @@ import {
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Directive({
-  selector: 'input[sddFileUpload][sddFileUpload]',
+  selector: 'input[mddFileUpload][mddFileUpload]',
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => SDDFileUploadDirective),
+      useExisting: forwardRef(() => MDDFileUploadDirective),
       multi: true,
     },
   ],
 })
-export class SDDFileUploadDirective implements ControlValueAccessor {
-  multiple = input(false);
-  el = inject(ElementRef);
+export class MDDFileUploadDirective implements ControlValueAccessor {
+  acceptMultiple = input(false);
+  element = inject(ElementRef);
 
   private onChange: (value: File | File[] | null) => void = () => {};
   private onTouched: () => void = () => {};
@@ -28,7 +28,7 @@ export class SDDFileUploadDirective implements ControlValueAccessor {
   @HostListener('change', ['$event.target.files']) handleFileInput(
     fileList: FileList
   ): void {
-    if (this.multiple()) {
+    if (this.acceptMultiple()) {
       const files = Array.from(fileList);
       this.onChange(files);
     } else {
@@ -64,7 +64,7 @@ export class SDDFileUploadDirective implements ControlValueAccessor {
   }
 
   private getHostElement(): HTMLInputElement | null {
-    const el = this.el.nativeElement;
+    const el = this.element.nativeElement;
     return el instanceof HTMLInputElement ? el : null;
   }
 }

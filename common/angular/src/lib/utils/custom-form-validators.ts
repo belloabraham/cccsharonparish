@@ -1,7 +1,15 @@
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import parsePhoneNumber from 'libphonenumber-js';
 
+/**
+ * CustomValidators provides a set of custom validation functions for Angular forms.
+ */
 export class CustomValidators {
+  /**
+   * Validates that a string input is not empty or only whitespace.
+   * @param error - The validation error message to return if the validation fails.
+   * @returns A ValidatorFn that checks if the input string contains non-whitespace characters.
+   */
   static requiredString(
     error: Record<string, string> = { error: 'Enter a valid value' }
   ): ValidatorFn {
@@ -11,6 +19,11 @@ export class CustomValidators {
     };
   }
 
+  /**
+   * Validates whether a given phone number is valid.
+   * @param error - The validation error message to return if the validation fails.
+   * @returns A ValidatorFn that checks if the input is a valid phone number.
+   */
   static validPhoneNumber(error: Record<string, string>): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       const value = control.value;
@@ -27,6 +40,12 @@ export class CustomValidators {
     };
   }
 
+  /**
+   * Validates that a selected file does not exceed a maximum allowed size.
+   * @param maxSizeInBytes - The maximum allowed file size in bytes.
+   * @param error - The validation error message to return if the validation fails.
+   * @returns A ValidatorFn that checks if the file size is within the allowed limit.
+   */
   static maxFileSize(
     maxSizeInBytes: number,
     error: Record<string, string> = { error: 'Enter a valid value' }

@@ -1,7 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { ApprovedService } from '../approved/approved.service';
 import { DraftService } from '../new-content/draft.service';
-import { TranslateService } from '../translate/translate.service';
 import { AwaitingApprovalService } from '../awaiting-approval/awaiting-approval.service';
 import {
   BibleVerseContent,

@@ -10,22 +10,36 @@ export type ThemeType = Theme | 'device';
 export class ThemeService {
   isDarkMode = signal(false);
 
-  setTheme(theme: Theme) {
+  /**
+   * Sets the application theme.
+   * @param theme - The theme to set ('light' or 'dark').
+   */
+  setAppTheme(theme: Theme) {
     const isDarkMode = theme === 'light' ? false : true;
     document.documentElement.setAttribute('data-theme', theme);
     this.isDarkMode.set(isDarkMode);
   }
 
-  isAppTheme(themeType: ThemeType | null) {
+  isAppThemeType(themeType: ThemeType | null) {
     return themeType === 'light' || themeType === 'dark';
   }
 
+  /**
+   * Retrieves the saved theme type from local storage.
+   * @param key - The local storage key to retrieve the theme from.
+   * @returns The stored theme type or null if not found.
+   */
   getDeviceTheme(): Theme {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : 'light';
   }
 
+  /**
+   * Stores the selected theme type in local storage.
+   * @param key - The local storage key.
+   * @param theme - The theme type to store.
+   */
   getThemeType(key: string) {
     const theme = localStorage.getItem(key);
     if (theme) {

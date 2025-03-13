@@ -23,7 +23,7 @@ import { HttpRequestProgressIndicatorService } from '../../services';
 import {
   CustomValidators,
   LanguageResourceService,
-  SDDFileUploadDirective,
+   MDDFileUploadDirective,
 } from '@cccsharonparish/angular';
 import { IUserUIState, JSON } from '@cccsharonparish/mydailydigest';
 import { SubSink } from 'subsink';
@@ -42,7 +42,7 @@ import { environment } from 'apps/admin.mydailydigest.me/src/environments/enviro
     NgOptimizedImage,
     MatIconModule,
     TuiLoader,
-    SDDFileUploadDirective,
+    MDDFileUploadDirective,
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',

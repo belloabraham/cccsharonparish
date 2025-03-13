@@ -10,7 +10,7 @@ import { Settings } from './data';
 })
 export class BaseAppComponent implements OnInit, OnDestroy {
   readonly showPreloader = signal(true);
-   readonly router = inject(Router);
+  readonly router = inject(Router);
   private readonly matIconRegistry = inject(MatIconRegistry);
   subscriptions = new SubSink();
   readonly themeService = inject(ThemeService);
@@ -30,10 +30,10 @@ export class BaseAppComponent implements OnInit, OnDestroy {
   setAppTheme(domain: string) {
     const themeType = this.themeService.getThemeType(Settings.themeKey(domain));
 
-    const theme = this.themeService.isAppTheme(themeType)
+    const theme = this.themeService.isAppThemeType(themeType)
       ? themeType
       : this.themeService.getDeviceTheme();
-    this.themeService.setTheme(theme);
+    this.themeService.setAppTheme(theme);
   }
 
   onDeviceThemeChanged(domain: string) {
@@ -44,8 +44,8 @@ export class BaseAppComponent implements OnInit, OnDestroy {
           const themeType = this.themeService.getThemeType(
             Settings.themeKey(domain)
           );
-          if (!this.themeService.isAppTheme(themeType)) {
-            this.themeService.setTheme(this.themeService.getDeviceTheme());
+          if (!this.themeService.isAppThemeType(themeType)) {
+            this.themeService.setAppTheme(this.themeService.getDeviceTheme());
           }
         },
       });
