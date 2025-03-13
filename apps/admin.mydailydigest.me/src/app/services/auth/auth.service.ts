@@ -1,4 +1,4 @@
-import { inject, Injectable, InjectionToken } from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 import { IAuth } from './auth.interface';
 import { AuthUserProfile, FirebaseAuthService } from './firebase/firebase-auth.service';
 import { User, UserCredential } from '@angular/fire/auth';

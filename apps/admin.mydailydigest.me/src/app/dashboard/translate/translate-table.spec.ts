@@ -1,4 +1,3 @@
-import { LanguageContent } from '@cccsharonparish/mydailydigest';
 import {
   TRANSLATE_CONTENT_TABLE_COLUMNS,
   translateContentTableStateKeys,

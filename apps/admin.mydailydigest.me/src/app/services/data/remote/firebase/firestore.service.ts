@@ -289,7 +289,7 @@ export class FirestoreService implements IRemoteData {
     });
   }
 
-  updateAllDocumentDataIn<T>(
+  updateAllDocumentDataIn(
     collection: string,
     pathSegment: string[],
     field: string | FieldPath,

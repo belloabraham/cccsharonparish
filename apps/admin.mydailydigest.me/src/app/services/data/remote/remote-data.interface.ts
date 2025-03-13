@@ -195,7 +195,7 @@ export interface IRemoteData {
    * @param docIds Array of document IDs to be updated.
    * @returns A observable that resolves once the operation is completed.
    */
-  updateAllDocumentDataIn<T>(
+  updateAllDocumentDataIn(
     collection: string,
     pathSegment: string[],
     field: string | FieldPath,

@@ -186,7 +186,7 @@ export class NewContentComponent implements OnDestroy {
           appearance: 'positive',
         })
         .subscribe();
-    } catch (error) {
+    } catch (_) {
       this.alertService
         .open(
           'Unable to submit content for review, check your internet connection and try again.',

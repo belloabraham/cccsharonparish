@@ -232,7 +232,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       } else {
         this.translationPasteErrorAlert();
       }
-    } catch (error) {
+    } catch (err) {
       this.translationPasteErrorAlert();
     }
   }
@@ -353,10 +353,10 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
           cropper.clear();
         }
       },
-      cropmove(event) {
+      cropmove() {
         cropperState.set('touched');
       },
-      zoom(event) {
+      zoom() {
         cropperState.set('touched');
       },
     });
@@ -494,7 +494,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
           this.httpRequestProgressIndicatorService.hideLoader();
           this.closeDialog();
         },
-        error: (error) => {
+        error: () => {
           this.httpRequestProgressIndicatorService.hideLoader();
           this.showAlertErrorMessage(this.KEY.CONTENT_UPDATED_ERROR_MSG);
         },
@@ -582,7 +582,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
           this.httpRequestProgressIndicatorService.hideLoader();
           this.closeDialog();
         },
-        error: (error) => {
+        error: () => {
           this.httpRequestProgressIndicatorService.hideLoader();
           this.showAlertErrorMessage(this.KEY.CONTENT_CREATED_ERROR_MSG);
         },

@@ -6,7 +6,7 @@ declare const window: any;
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
   window.trustedTypes.createPolicy('default', {
-    createHTML: (input: any, sink: any) => {
+    createHTML: (input: any, _:any) => {
       return DOMPurify.sanitize(input, {
         RETURN_TRUSTED_TYPE: true,
       }) as any;

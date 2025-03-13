@@ -1,7 +1,6 @@
 import {
   Component,
   computed,
-  HostBinding,
   inject,
   input,
   Signal,
@@ -19,7 +18,7 @@ import { TuiButtonSelect } from '@taiga-ui/kit/directives/button-select';
 import { NgForOf, NgOptimizedImage } from '@angular/common';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import type { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
-import { TUI_DEFAULT_MATCHER, tuiIsPresent, TuiLet } from '@taiga-ui/cdk';
+import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
 import { TuiButton, TuiTextfield } from '@taiga-ui/core';
 import { DashboardStore } from '../../dashboard.store';
 import { PublishedContentStore } from '../published-content-store';

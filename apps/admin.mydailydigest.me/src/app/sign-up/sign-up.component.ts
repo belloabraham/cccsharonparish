@@ -53,7 +53,7 @@ export class SignUpComponent extends CommonComponent implements OnDestroy {
     this.subscriptions.sink = this.userDataStore
       .createUser(user)
       .subscribe({
-        next: (response) => {
+        next: (_) => {
           this.router.navigate([ROUTE.ROOT]);
         },
         error: (error) => {

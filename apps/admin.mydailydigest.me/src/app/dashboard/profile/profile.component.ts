@@ -120,10 +120,10 @@ export class ProfileComponent implements OnInit, AfterViewInit {
       imageUrl: this.imageUrl(),
     };
     this.subscriptions.sink = this.userDataStore.updateUser(user).subscribe({
-      next: (response) => {
+      next: () => {
         this.showUserUpdateSuccessAlert();
       },
-      error: (error) => {
+      error: () => {
         this.showFailedUserUpdateAlert();
       },
     });

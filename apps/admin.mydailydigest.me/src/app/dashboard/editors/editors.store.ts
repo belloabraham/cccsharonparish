@@ -17,7 +17,7 @@ export const EditorsStore = signalStore(
   withState(initialState),
   withMethods((store, editorsService = inject(EditorsService)) => ({
     updateEditors(data: IUser[]) {
-      patchState(store, (state) => ({
+      patchState(store, () => ({
         editors: data,
       }));
     },
@@ -26,7 +26,7 @@ export const EditorsStore = signalStore(
         retryWhen(firestoreRetryStrategy(Infinity)),
         tap({
           next: (data) => {
-            patchState(store, (state) => ({
+            patchState(store, () => ({
               editors: data,
             }));
           },
