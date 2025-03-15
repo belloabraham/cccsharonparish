@@ -1,4 +1,4 @@
-describe('MyComponent E2E Test', () => {
+describe('404 E2E Test', () => {
   const CHAR_LENGTH = 10;
 
   it('should have the correct page title', () => {
@@ -13,28 +13,27 @@ describe('MyComponent E2E Test', () => {
     // Visit the page containing the component
     cy.visit(`/${cy.generateRandomString(CHAR_LENGTH)}`);
 
-    // Check if the logo image is present and has the correct attributes
-    cy.get('img.scale')
-      .should('have.attr', 'alt', 'Logo')
-      .and('have.attr', 'src', 'assets/images/logo.png')
-      .and('have.attr', 'width', '50')
-      .and('have.attr', 'height', '50');
+    // Check for the logo
+    cy.get('.logo img')
+      .should('be.visible')
+      .and('have.attr', 'src', 'images/global/logo.png');
 
-    // Check if the title elements have the correct text content
-    cy.get('h1.title').should('have.text', '44');
-    cy.get('h1.title-0').should('have.text', '0');
+    // Check the 404 page structure (candle and numbers)
+    cy.get('.title').should('have.length', 2);
+    cy.get('.title').first().should('contain', '4');
+    cy.get('.title-0').should('contain', '0');
 
-    // Check if the "page_not_found_message" text is present
-    cy.get('h4.subtitle').should(
-      'have.text',
+    // Verify the "Oops" message is present
+    cy.get('.description .subtitle').should(
+      'contain.text',
       'Oops the page you are looking for does not exist.'
     );
 
-    // Check if the "go_home" button is present and has the correct text
-    cy.get('.home-btn.btn.btn-primary.btn-lg')
-      .should('have.text', 'Go Home')
-      .should('have.attr', 'href', '/'); // Replace with the correct href value
+    // Verify the "Go Home" button exists
+    cy.get('.home-btn').should('be.visible').and('contain.text', 'Go Home');
 
-    // You can add more assertions if needed
+    // Test the redirection when the "Go Home" button is clicked
+    cy.get('.home-btn').click();
+    cy.url().should('eq', Cypress.config().baseUrl + '/');
   });
 });
