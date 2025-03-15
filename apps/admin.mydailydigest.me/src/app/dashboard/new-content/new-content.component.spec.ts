@@ -7,7 +7,6 @@ import {
   REMOTE_DATA_TOKEN,
 } from '../../services';
 import {
-  getTranslocoTestingModule,
   MockAuthService,
   mockDashboardStore,
   MockFirebaseStorageService,
@@ -19,6 +18,7 @@ import {
   Storage,
 } from '@angular/fire/storage';
 import { DashboardStore } from '../dashboard.store';
+import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
 describe('NewContentComponent', () => {
   let component: NewContentComponent;

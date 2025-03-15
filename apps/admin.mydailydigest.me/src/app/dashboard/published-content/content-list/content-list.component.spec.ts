@@ -3,7 +3,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ContentListComponent } from './content-list.component';
 import { AUTH_TOKEN, REMOTE_DATA_TOKEN } from '../../../services';
 import {
-  getTranslocoTestingModule,
   MockAuthService,
   mockDashboardStore,
   MockFirestoreService,
@@ -13,6 +12,7 @@ import { PublishedContentStore } from '../published-content-store';
 import { DashboardStore } from '../../dashboard.store';
 import { ContentStore } from '../../shared';
 import { ComponentRef } from '@angular/core';
+import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
 describe('ContentListComponent', () => {
   let component: ContentListComponent;

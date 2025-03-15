@@ -7,7 +7,6 @@ import {
   REMOTE_DATA_TOKEN,
 } from '../services';
 import {
-  getTranslocoTestingModule,
   MockAuthService,
   mockContentStore,
   mockEditorsStore,
@@ -19,6 +18,7 @@ import { EditorsStore } from './editors/editors.store';
 import { UserDataStore } from '../shared';
 import { ContentStore } from './shared';
 import { RouterTestingModule } from '@angular/router/testing';
+import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;

@@ -2,8 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContentOptionComponent } from './content-option.component';
 import { PublishedContentStore } from '../published-content-store';
-import { getTranslocoTestingModule, mockContentStore, mockPublishedContentStore } from '../../../testing';
+import {  mockPublishedContentStore } from '../../../testing';
 import { ContentStore } from '../../shared';
+import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
 describe('ContentOptionComponent', () => {
   let component: ContentOptionComponent;

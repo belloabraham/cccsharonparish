@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommonComponent } from './common.component';
-import { getTranslocoTestingModule } from '../../testing';
 import { PAGE_TITLE_KEY } from '../injection.token';
+import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
 describe('CommonComponent', () => {
   let component: CommonComponent;

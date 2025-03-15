@@ -1,9 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuthComponent } from './auth.component';
-import { getTranslocoTestingModule, MockAuthService } from '../testing';
+import {  MockAuthService } from '../testing';
 import { AUTH_TOKEN } from '../services';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
 describe('AuthComponent', () => {
   let component: AuthComponent;

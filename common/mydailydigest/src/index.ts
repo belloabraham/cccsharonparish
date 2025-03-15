@@ -4,3 +4,5 @@ export * from './lib/app.component';
 export * from './lib/environments';
 export * from './lib/models';
 export * from './lib/app.config';
+export * from './lib/testing';
+

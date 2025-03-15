@@ -1,8 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotFoundComponent } from './not-found.component';
-import { MDDNotFoundComponent } from '@cccsharonparish/mydailydigest';
-import { getTranslocoTestingModule } from '../testing';
+import {
+  MDDNotFoundComponent,
+  getTranslocoTestingModule,
+} from '@cccsharonparish/mydailydigest';
 
 describe('NotFoundComponent', () => {
   let component: NotFoundComponent;

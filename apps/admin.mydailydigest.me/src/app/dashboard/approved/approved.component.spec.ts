@@ -7,7 +7,6 @@ import {
   REMOTE_DATA_TOKEN,
 } from '../../services';
 import {
-  getTranslocoTestingModule,
   MockAuthService,
   mockDashboardStore,
   MockFirebaseStorageService,
@@ -16,6 +15,7 @@ import {
 import { ComponentRef } from '@angular/core';
 import { DashboardStore } from '../dashboard.store';
 import { Storage } from '@angular/fire/storage';
+import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
 describe('ApprovedComponent', () => {
   let component: ApprovedComponent;

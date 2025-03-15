@@ -2,8 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfileComponent } from './profile.component';
 import { AUTH_TOKEN, CLOUD_STORAGE_TOKEN, REMOTE_DATA_TOKEN } from '../../services';
-import { getTranslocoTestingModule, MockAuthService, MockFirebaseStorageService, MockFirestoreService } from '../../testing';
+import {  MockAuthService, MockFirebaseStorageService, MockFirestoreService } from '../../testing';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
 describe('ProfileComponent', () => {
   let component: ProfileComponent;

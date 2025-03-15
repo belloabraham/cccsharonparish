@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TranslateComponent } from './translate.component';
 import {
-  getTranslocoTestingModule,
   MockAuthService,
   mockDashboardStore,
   MockFirebaseStorageService,
@@ -15,6 +14,7 @@ import {
 import { Storage } from '@angular/fire/storage';
 import { DashboardStore } from '../dashboard.store';
 import { ComponentRef } from '@angular/core';
+import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
 describe('TranslateComponent', () => {
   let component: TranslateComponent;

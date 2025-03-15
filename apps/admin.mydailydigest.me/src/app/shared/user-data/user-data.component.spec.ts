@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserDataComponent } from './user-data.component';
-import { getTranslocoTestingModule } from '../../testing';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
 describe('UserDataComponent', () => {
   let component: UserDataComponent;

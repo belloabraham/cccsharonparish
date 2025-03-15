@@ -1,16 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { NotFoundComponent } from './not-found.component';
+import { MDDNotFoundComponent } from './not-found.component';
+import { getTranslocoTestingModule } from '../testing/transloco-testing-module';
+
 
 describe('NotFoundComponent', () => {
-  let component: NotFoundComponent;
-  let fixture: ComponentFixture<NotFoundComponent>;
+  let component: MDDNotFoundComponent;
+  let fixture: ComponentFixture<MDDNotFoundComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NotFoundComponent],
+      imports: [MDDNotFoundComponent, getTranslocoTestingModule()],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(NotFoundComponent);
+    fixture = TestBed.createComponent(MDDNotFoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
