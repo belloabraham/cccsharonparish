@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditorsComponent } from './editors.component';
+import { EditorsStore } from './editors.store';
+import { getTranslocoTestingModule, mockEditorsStore, MockFirestoreService } from '../../testing';
+import { REMOTE_DATA_TOKEN } from '../../services';
 
 describe('EditorsComponent', () => {
   let component: EditorsComponent;
@@ -8,9 +11,12 @@ describe('EditorsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EditorsComponent]
-    })
-    .compileComponents();
+      imports: [EditorsComponent, getTranslocoTestingModule()],
+      providers: [
+        { provide: REMOTE_DATA_TOKEN, useClass: MockFirestoreService },
+        { provide: EditorsStore, useValue: mockEditorsStore },
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(EditorsComponent);
     component = fixture.componentInstance;
