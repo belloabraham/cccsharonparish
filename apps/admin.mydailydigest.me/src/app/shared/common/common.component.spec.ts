@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommonComponent } from './common.component';
+import { getTranslocoTestingModule } from '../../testing';
+import { PAGE_TITLE_KEY } from '../injection.token';
 
 describe('CommonComponent', () => {
   let component: CommonComponent;
@@ -8,9 +10,14 @@ describe('CommonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CommonComponent]
-    })
-    .compileComponents();
+      imports: [CommonComponent, getTranslocoTestingModule()],
+      providers: [
+        {
+          provide: PAGE_TITLE_KEY,
+          useValue: '',
+        },
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CommonComponent);
     component = fixture.componentInstance;

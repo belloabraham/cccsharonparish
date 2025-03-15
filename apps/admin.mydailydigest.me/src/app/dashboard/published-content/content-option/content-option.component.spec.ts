@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContentOptionComponent } from './content-option.component';
 import { PublishedContentStore } from '../published-content-store';
-import { getTranslocoTestingModule, mockContentStore } from '../../../testing';
+import { getTranslocoTestingModule, mockContentStore, mockPublishedContentStore } from '../../../testing';
 import { ContentStore } from '../../shared';
 
 describe('ContentOptionComponent', () => {
@@ -13,8 +13,7 @@ describe('ContentOptionComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ContentOptionComponent, getTranslocoTestingModule()],
       providers: [
-        { provide: PublishedContentStore, useValue: {} },
-        { provide: ContentStore, useValue: mockContentStore },
+        { provide: PublishedContentStore, useValue: mockPublishedContentStore },
       ],
     }).compileComponents();
 

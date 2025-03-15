@@ -11,6 +11,10 @@ export const mockContentStore = {
   publishedContentYears: jest.fn(() => []),
 };
 
+export const mockPublishedContentStore = {
+  publishedContentYears: jest.fn(() => []),
+};
+
 export const mockEditorsStore = {
   getEditors: jest.fn(() => of([])),
   editors: jest.fn(() => []),
