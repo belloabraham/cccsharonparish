@@ -12,6 +12,7 @@ import { Observable, of } from 'rxjs';
 import { IRemoteData } from '../../services';
 
 @Injectable()
+/* eslint-disable */
 export class MockFirestoreService implements IRemoteData {
   private mockDatabase: Record<string, any> = {};
 
