@@ -13,6 +13,7 @@ export const mockContentStore = {
 
 export const mockPublishedContentStore = {
   publishedContentYears: jest.fn(() => []),
+  publishedContentsByAYear: jest.fn(() => []),
 };
 
 export const mockEditorsStore = {

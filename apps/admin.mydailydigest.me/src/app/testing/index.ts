@@ -3,4 +3,6 @@ export * from './mock/auth.service';
 export * from './mock/firestore.service';
 export * from './mock/storage.service';
 export * from './mock/store';
+export * from './mock/language-resource.service';
+
 

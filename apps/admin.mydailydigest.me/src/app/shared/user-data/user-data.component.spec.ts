@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserDataComponent } from './user-data.component';
+import { getTranslocoTestingModule } from '../../testing';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 describe('UserDataComponent', () => {
   let component: UserDataComponent;
@@ -8,7 +10,8 @@ describe('UserDataComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UserDataComponent]
+      imports: [UserDataComponent, getTranslocoTestingModule()],
+      providers:[provideAnimationsAsync()]
     })
     .compileComponents();
 
