@@ -89,6 +89,19 @@ export class DraftService {
     );
   }
 
+  getLiveDraftContents<T>(
+    onNext: (data: T[], arrayOfDocIds: string[]) => void,
+    onError: (errorCode: string) => void
+  ) {
+    return this.remoteData.getLiveListOfDocumentDataWithQuery<T>(
+      COLLECTION.DRAFT,
+      [],
+      [orderBy('year', 'desc'), limit(365)],
+      onNext,
+      onError
+    );
+  }
+
   deleteDraft(draftId: string) {
     return this.remoteData.deleteADocumentFrom(COLLECTION.DRAFT, [draftId]);
   }

@@ -43,6 +43,7 @@ export const CONTENT_STRING_RESOURCE_KEYS = {
   CONTENT_CREATED_SUCCESS_MSG: 'content_created_success_msg',
   CONTENT_UPDATED_ERROR_MSG: 'content_updated_error_msg',
   CONTENT_CREATED_ERROR_MSG: 'content_created_error_msg',
+  CONTENT_ALREADY_EXIST_ERROR_MSG: 'content_already_exist_error_msg',
 
   UPDATED: 'updated',
   CREATED: 'created',

@@ -3,6 +3,8 @@ import {
   computed,
   effect,
   inject,
+  OnDestroy,
+  OnInit,
   Signal,
   signal,
 } from '@angular/core';
@@ -52,6 +54,7 @@ import {
 import { MatRippleModule } from '@angular/material/core';
 import {
   ENGLISH_LANG_CODE,
+  ISpiritualDailyDigest,
   Language,
   ROUTE,
 } from '@cccsharonparish/mydailydigest';
@@ -62,6 +65,8 @@ import { distinctUntilChanged, filter } from 'rxjs';
 import { DashboardStore } from './dashboard.store';
 import { ContentStore } from './shared';
 import { EditorsStore } from './editors/editors.store';
+import { DraftService } from './new-content/draft.service';
+import { Unsubscribe } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-dashboard',
@@ -107,8 +112,12 @@ import { EditorsStore } from './editors/editors.store';
     },
   ],
 })
-export class DashboardComponent extends CommonComponent {
+export class DashboardComponent
+  extends CommonComponent
+  implements OnInit, OnDestroy
+{
   readonly dashboardService = inject(DashboardService);
+  readonly draftService = inject(DraftService);
   readonly router = inject(Router);
   breadcrumbs = signal<IBreadCrumb[]>([]);
   expandSideNav = signal(true);
@@ -118,6 +127,7 @@ export class DashboardComponent extends CommonComponent {
   readonly userDataStore = inject(UserDataStore);
   readonly contentStore = inject(ContentStore);
   readonly editorsStore = inject(EditorsStore);
+  liveDraftUnsubscribe: Unsubscribe | null = null;
 
   nonEnglishSupportedLanguages!: Signal<Language[]>;
 
@@ -144,6 +154,18 @@ export class DashboardComponent extends CommonComponent {
       this.loadEditors();
     }
     this.loadApprovedContents();
+  }
+
+  ngOnInit(): void {
+    this.liveDraftUnsubscribe =
+      this.draftService.getLiveDraftContents<ISpiritualDailyDigest>(
+        (data, _) => {
+          this.contentStore.updateDraftContents(data);
+        },
+        (errorCode: string) => {
+          console.error(errorCode);
+        }
+      );
   }
 
   loadEditors() {
@@ -216,5 +238,9 @@ export class DashboardComponent extends CommonComponent {
 
   setTheme(themeType: ThemeType) {
     this.dashboardService.setTheme(themeType);
+  }
+
+  ngOnDestroy(): void {
+    this.liveDraftUnsubscribe!();
   }
 }

@@ -91,6 +91,7 @@
   "content_created_success_msg": "Created content successfully",
   "content_updated_error_msg": "Unable to update content, check your internet connection and try again.",
   "content_created_error_msg": "Unable to create content, check your internet connection and try again.",
+  "content_already_exist_error_msg": "Unable to create content, because content already exist for the selected date.",
   "created": "Created",
 
   "yes": "Yes",

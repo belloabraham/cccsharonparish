@@ -44,6 +44,7 @@ import {
 } from '@cccsharonparish/mydailydigest';
 import {
   COLLECTION,
+  FIRESTORE_ERROR_CODES,
   HttpRequestProgressIndicatorService,
   STORAGE_PATH,
 } from '../../../services';
@@ -582,9 +583,13 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
           this.httpRequestProgressIndicatorService.hideLoader();
           this.closeDialog();
         },
-        error: () => {
+        error: (error) => {
           this.httpRequestProgressIndicatorService.hideLoader();
-          this.showAlertErrorMessage(this.KEY.CONTENT_CREATED_ERROR_MSG);
+          const messageKey =
+            error.code === FIRESTORE_ERROR_CODES.ALREADY_EXIST
+              ? this.KEY.CONTENT_ALREADY_EXIST_ERROR_MSG
+              : this.KEY.CONTENT_CREATED_ERROR_MSG;
+          this.showAlertErrorMessage(messageKey);
         },
       });
   }
