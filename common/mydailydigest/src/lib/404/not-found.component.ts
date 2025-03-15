@@ -10,13 +10,13 @@ import { Title } from '@angular/platform-browser';
 import { AppStore } from '../app.store';
 
 @Component({
-  selector: 'sdd-not-found',
+  selector: 'mdd-not-found',
   standalone: true,
   imports: [RouterLink, NgOptimizedImage, TranslocoModule, MatButtonModule],
   templateUrl: './not-found.component.html',
   styleUrl: './not-found.component.scss',
 })
-export class NotFoundComponent {
+export class MDDNotFoundComponent {
   KEY = STRING_RESOURCE_KEY;
   ROOT = ROUTE.ROOT;
 
