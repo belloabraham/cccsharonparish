@@ -25,6 +25,22 @@ export const mockDashboardStore = {
   getEditors: jest.fn(() => of([])),
   editors: jest.fn(() => []),
   supportedLanguages: jest.fn(() => ({
-    languages: [{ countryCode: 'US', name: 'English' }],
+    languages: [
+      {
+        countryCode: 'GB',
+        code: 'en',
+        label: 'English',
+      },
+      {
+        countryCode: 'NG',
+        code: 'yo',
+        label: 'Yoruba',
+      },
+      {
+        countryCode: 'FR',
+        code: 'fr',
+        label: 'French',
+      },
+    ],
   })),
 };

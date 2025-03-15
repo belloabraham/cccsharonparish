@@ -16,9 +16,8 @@ jest.mock('@angular/fire/auth', () => ({
   authState: jest.fn(() => of(null)), // Mock observable
 }));
 
-
 // Mock Firestore APIs
-export const FirestoreMock:any = {
+export const FirestoreMock: any = {
   doc: jest.fn(() => ({
     set: jest.fn(() => Promise.resolve()),
     update: jest.fn(() => Promise.resolve()),
@@ -111,7 +110,9 @@ export const FirebaseStorageMock = {
     Promise.resolve('https://mockurl.com/file.jpg')
   ),
 };
+
 jest.mock('@angular/fire/storage', () => ({
+  Storage: jest.fn(() => ({})),
   ref: FirebaseStorageMock.ref,
   deleteObject: FirebaseStorageMock.deleteObject,
   uploadBytes: FirebaseStorageMock.uploadBytes,
@@ -121,11 +122,11 @@ jest.mock('@angular/fire/storage', () => ({
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
-    matches: false, // Default to light mode
+    matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // Deprecated
-    removeListener: jest.fn(), // Deprecated
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
