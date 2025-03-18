@@ -1,4 +1,5 @@
 import {
+  afterRender,
   ApplicationConfig,
   isDevMode,
   provideAppInitializer,
@@ -13,6 +14,7 @@ import { provideTransloco } from '@jsverse/transloco';
 import { setDNSPreConnectLink } from '@cccsharonparish/mydailydigest';
 import { environment } from '../environments/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideImgixLoader } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -22,11 +24,13 @@ export const appConfig: ApplicationConfig = {
     provideExperimentalZonelessChangeDetection(),
 
     provideAppInitializer(() => {
-      setDNSPreConnectLink(environment.cdnBaseUrl);
+      afterRender(() => {
+        setDNSPreConnectLink(environment.cdnBaseUrl);
+      });
     }),
 
     //NgOptimize
-    // provideImgixLoader(environment.cdnBaseUrl),
+    provideImgixLoader(environment.cdnBaseUrl),
 
     //Transloco
     provideHttpClient(),

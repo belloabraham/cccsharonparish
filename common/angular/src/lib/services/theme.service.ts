@@ -1,4 +1,10 @@
-import { Injectable, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import {
+  inject,
+  Injectable,
+  PLATFORM_ID,
+  signal,
+} from '@angular/core';
 import { Observable } from 'rxjs';
 
 export type Theme = 'light' | 'dark';
@@ -9,15 +15,18 @@ export type ThemeType = Theme | 'device';
 })
 export class ThemeService {
   isDarkMode = signal(false);
+  platformId = inject(PLATFORM_ID);
 
   /**
    * Sets the application theme.
    * @param theme - The theme to set ('light' or 'dark').
    */
   setAppTheme(theme: Theme) {
-    const isDarkMode = theme === 'light' ? false : true;
-    document.documentElement.setAttribute('data-theme', theme);
-    this.isDarkMode.set(isDarkMode);
+    if (isPlatformBrowser(this.platformId)) {
+      const isDarkMode = theme === 'light' ? false : true;
+      document.documentElement.setAttribute('data-theme', theme);
+      this.isDarkMode.set(isDarkMode);
+    }
   }
 
   isAppThemeType(themeType: ThemeType | null) {
@@ -30,9 +39,13 @@ export class ThemeService {
    * @returns The stored theme type or null if not found.
    */
   getDeviceTheme(): Theme {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
+    if (isPlatformBrowser(this.platformId)) {
+      const theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+      return theme;
+    }
+    return 'light';
   }
 
   /**
@@ -41,24 +54,30 @@ export class ThemeService {
    * @param theme - The theme type to store.
    */
   getThemeType(key: string) {
-    const theme = localStorage.getItem(key);
-    if (theme) {
-      return theme as ThemeType;
+    if (isPlatformBrowser(this.platformId)) {
+      const theme = localStorage.getItem(key);
+      if (theme) {
+        return theme as ThemeType;
+      }
     }
     return null;
   }
 
   setThemeType(key: string, theme: ThemeType) {
-    return localStorage.setItem(key, theme);
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem(key, theme);
+    }
   }
 
   onDeviceThemeChanged(): Observable<void> {
     return new Observable((observer) => {
-      window
-        .matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener('change', (event) => {
-          observer.next();
-        });
+      if (isPlatformBrowser(this.platformId)) {
+        window
+          .matchMedia('(prefers-color-scheme: dark)')
+          .addEventListener('change', (event) => {
+            observer.next();
+          });
+      }
     });
   }
 }

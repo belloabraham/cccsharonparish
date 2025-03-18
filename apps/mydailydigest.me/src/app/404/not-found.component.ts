@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { NotFoundComponent as SDDNotFoundComponent } from '@cccsharonparish/mydailydigest';
+import {MDDNotFoundComponent } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-not-found',
-  imports: [SDDNotFoundComponent],
+  imports: [MDDNotFoundComponent],
   templateUrl: './not-found.component.html',
 })
-export class NotFoundComponent {
-}
+export class NotFoundComponent {}

@@ -39,7 +39,7 @@ export const appConfig: ApplicationConfig = {
     provideStorage(() => getStorage(getApp())),
 
     //NgOptimize
-    // provideImgixLoader(environment.cdnBaseUrl),
+    provideImgixLoader(environment.cdnBaseUrl),
 
     //Transloco
     provideHttpClient(),
