@@ -1,5 +1,5 @@
 import {
-  afterRender,
+  afterNextRender,
   ApplicationConfig,
   isDevMode,
   provideAppInitializer,
@@ -24,7 +24,7 @@ export const appConfig: ApplicationConfig = {
     provideExperimentalZonelessChangeDetection(),
 
     provideAppInitializer(() => {
-      afterRender(() => {
+      afterNextRender(() => {
         setDNSPreConnectLink(environment.cdnBaseUrl);
       });
     }),
