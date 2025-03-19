@@ -30,13 +30,15 @@
                                 @let isSortableColumns = column === "sn" || column === "reference" || column ===
                                 "topic";
 
+                                @let columnsWithMinWidth = column === "verses" || column === "supplication" || column === "reflection";
+
                                 @if (column === "message") {
                                 <th *tuiHead="column" class="message-column" tuiTh [sticky]="true" [tuiSortable]="false"
                                     [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                     {{ t(column)}}
                                 </th>
                                 }
-                                @else if (column === "verses") {
+                                @else if (columnsWithMinWidth) {
                                 <th *tuiHead="column" class="verses-column" tuiTh [sticky]="true" [tuiSortable]="false"
                                     [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                     {{ t(column)}}

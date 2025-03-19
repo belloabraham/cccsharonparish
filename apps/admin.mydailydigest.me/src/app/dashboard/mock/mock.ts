@@ -8,7 +8,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-1.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -84,7 +84,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-1.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -160,7 +160,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-1.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -239,7 +239,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-1.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -318,7 +318,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-1.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -397,7 +397,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-1.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -470,7 +470,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-1.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -546,7 +546,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-1.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -619,7 +619,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-1.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -695,7 +695,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-1.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -774,7 +774,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-1.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -853,7 +853,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-1.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -929,7 +929,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-1.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1002,7 +1002,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-1.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1078,7 +1078,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-1.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1154,7 +1154,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-1.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1230,7 +1230,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-1.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1309,7 +1309,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-1.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1385,7 +1385,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-1.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1464,7 +1464,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-1.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1540,7 +1540,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-1.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1613,7 +1613,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-1.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1692,7 +1692,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-1.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1771,7 +1771,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-1.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1850,7 +1850,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-1.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -1926,7 +1926,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-1.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2002,7 +2002,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-1.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2078,7 +2078,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-1.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2157,7 +2157,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-1.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2236,7 +2236,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-1.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2312,7 +2312,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 31,
     imagePath: '/images/daily-digest-31-1.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2388,7 +2388,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-2.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2467,7 +2467,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-2.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2546,7 +2546,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-2.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2625,7 +2625,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-2.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2701,7 +2701,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-2.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2780,7 +2780,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-2.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2856,7 +2856,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-2.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -2932,7 +2932,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-2.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3011,7 +3011,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-2.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3087,7 +3087,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-2.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3166,7 +3166,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-2.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3242,7 +3242,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-2.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3318,7 +3318,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-2.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3394,7 +3394,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-2.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3470,7 +3470,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-2.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3546,7 +3546,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-2.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3622,7 +3622,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-2.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3701,7 +3701,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-2.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3777,7 +3777,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-2.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3856,7 +3856,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-2.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -3932,7 +3932,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-2.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4011,7 +4011,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-2.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4087,7 +4087,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-2.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4163,7 +4163,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-2.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4242,7 +4242,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-2.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4318,7 +4318,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-2.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4397,7 +4397,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-2.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4473,7 +4473,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-2.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4549,7 +4549,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-3.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4628,7 +4628,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-3.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4701,7 +4701,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-3.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4777,7 +4777,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-3.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4853,7 +4853,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-3.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -4929,7 +4929,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-3.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5005,7 +5005,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-3.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5084,7 +5084,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-3.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5157,7 +5157,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-3.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5233,7 +5233,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-3.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5309,7 +5309,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-3.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5385,7 +5385,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-3.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5461,7 +5461,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-3.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5537,7 +5537,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-3.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5610,7 +5610,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-3.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5686,7 +5686,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-3.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5762,7 +5762,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-3.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5838,7 +5838,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-3.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5917,7 +5917,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-3.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -5993,7 +5993,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-3.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6069,7 +6069,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-3.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6145,7 +6145,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-3.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6224,7 +6224,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-3.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6303,7 +6303,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-3.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6376,7 +6376,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-3.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6452,7 +6452,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-3.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6531,7 +6531,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-3.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6610,7 +6610,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-3.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6686,7 +6686,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-3.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6765,7 +6765,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-3.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6841,7 +6841,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 31,
     imagePath: '/images/daily-digest-31-3.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6917,7 +6917,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-4.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -6993,7 +6993,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-4.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7069,7 +7069,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-4.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7145,7 +7145,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-4.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7221,7 +7221,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-4.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7297,7 +7297,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-4.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7376,7 +7376,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-4.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7455,7 +7455,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-4.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7531,7 +7531,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-4.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7607,7 +7607,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-4.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7686,7 +7686,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-4.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7759,7 +7759,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-4.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7838,7 +7838,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-4.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7914,7 +7914,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-4.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -7990,7 +7990,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-4.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8066,7 +8066,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-4.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8142,7 +8142,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-4.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8218,7 +8218,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-4.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8294,7 +8294,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-4.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8367,7 +8367,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-4.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8443,7 +8443,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-4.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8519,7 +8519,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-4.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8595,7 +8595,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-4.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8674,7 +8674,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-4.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8753,7 +8753,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-4.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8832,7 +8832,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-4.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8911,7 +8911,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-4.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -8987,7 +8987,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-4.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9063,7 +9063,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-4.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9139,7 +9139,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-4.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9215,7 +9215,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-5.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9291,7 +9291,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-5.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9367,7 +9367,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-5.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9443,7 +9443,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-5.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9516,7 +9516,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-5.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9592,7 +9592,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-5.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9668,7 +9668,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-5.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9747,7 +9747,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-5.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9823,7 +9823,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-5.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9899,7 +9899,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-5.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -9972,7 +9972,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-5.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10051,7 +10051,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-5.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10127,7 +10127,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-5.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10203,7 +10203,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-5.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10279,7 +10279,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-5.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10355,7 +10355,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-5.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10431,7 +10431,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-5.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10507,7 +10507,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-5.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10586,7 +10586,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-5.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10662,7 +10662,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-5.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10738,7 +10738,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-5.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10814,7 +10814,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-5.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10890,7 +10890,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-5.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -10966,7 +10966,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-5.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11039,7 +11039,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-5.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11115,7 +11115,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-5.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11188,7 +11188,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-5.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11264,7 +11264,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-5.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11343,7 +11343,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-5.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11422,7 +11422,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-5.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11498,7 +11498,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 31,
     imagePath: '/images/daily-digest-31-5.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11574,7 +11574,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-6.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11647,7 +11647,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-6.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11723,7 +11723,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-6.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11802,7 +11802,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-6.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11875,7 +11875,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-6.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -11951,7 +11951,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-6.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12024,7 +12024,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-6.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12100,7 +12100,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-6.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12176,7 +12176,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-6.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12255,7 +12255,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-6.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12334,7 +12334,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-6.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12413,7 +12413,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-6.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12489,7 +12489,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-6.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12565,7 +12565,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-6.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12644,7 +12644,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-6.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12723,7 +12723,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-6.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12802,7 +12802,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-6.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12881,7 +12881,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-6.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -12960,7 +12960,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-6.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13036,7 +13036,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-6.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13115,7 +13115,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-6.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13194,7 +13194,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-6.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13267,7 +13267,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-6.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13346,7 +13346,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-6.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13425,7 +13425,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-6.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13501,7 +13501,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-6.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13580,7 +13580,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-6.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13659,7 +13659,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-6.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13735,7 +13735,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-6.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13808,7 +13808,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-6.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13884,7 +13884,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-7.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -13960,7 +13960,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-7.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14036,7 +14036,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-7.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14112,7 +14112,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-7.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14191,7 +14191,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-7.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14270,7 +14270,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-7.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14346,7 +14346,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-7.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14425,7 +14425,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-7.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14504,7 +14504,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-7.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14583,7 +14583,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-7.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14659,7 +14659,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-7.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14735,7 +14735,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-7.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14808,7 +14808,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-7.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14887,7 +14887,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-7.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -14960,7 +14960,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-7.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15033,7 +15033,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-7.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15112,7 +15112,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-7.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15188,7 +15188,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-7.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15261,7 +15261,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-7.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15340,7 +15340,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-7.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15416,7 +15416,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-7.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15495,7 +15495,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-7.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15574,7 +15574,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-7.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15653,7 +15653,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-7.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15729,7 +15729,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-7.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15805,7 +15805,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-7.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15884,7 +15884,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-7.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -15963,7 +15963,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-7.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16039,7 +16039,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-7.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16112,7 +16112,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-7.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16188,7 +16188,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 31,
     imagePath: '/images/daily-digest-31-7.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16264,7 +16264,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-8.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16343,7 +16343,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-8.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16419,7 +16419,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-8.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16495,7 +16495,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-8.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16571,7 +16571,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-8.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16647,7 +16647,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-8.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16723,7 +16723,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-8.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16796,7 +16796,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-8.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16875,7 +16875,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-8.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -16954,7 +16954,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-8.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17033,7 +17033,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-8.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17109,7 +17109,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-8.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17185,7 +17185,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-8.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17261,7 +17261,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-8.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17337,7 +17337,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-8.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17416,7 +17416,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-8.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17489,7 +17489,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-8.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17565,7 +17565,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-8.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17641,7 +17641,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-8.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17717,7 +17717,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-8.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17793,7 +17793,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-8.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17872,7 +17872,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-8.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -17951,7 +17951,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-8.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18027,7 +18027,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-8.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18103,7 +18103,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-8.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18176,7 +18176,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-8.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18252,7 +18252,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-8.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18331,7 +18331,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-8.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18407,7 +18407,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-8.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18483,7 +18483,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-8.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18556,7 +18556,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 31,
     imagePath: '/images/daily-digest-31-8.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18632,7 +18632,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-9.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18711,7 +18711,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-9.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18787,7 +18787,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-9.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18866,7 +18866,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-9.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -18945,7 +18945,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-9.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19024,7 +19024,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-9.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19103,7 +19103,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-9.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19179,7 +19179,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-9.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19255,7 +19255,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-9.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19331,7 +19331,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-9.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19407,7 +19407,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-9.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19480,7 +19480,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-9.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19559,7 +19559,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-9.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19632,7 +19632,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-9.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19711,7 +19711,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-9.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19790,7 +19790,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-9.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19869,7 +19869,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-9.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -19945,7 +19945,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-9.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20021,7 +20021,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-9.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20094,7 +20094,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-9.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20170,7 +20170,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-9.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20243,7 +20243,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-9.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20322,7 +20322,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-9.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20398,7 +20398,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-9.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20474,7 +20474,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-9.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20553,7 +20553,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-9.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20632,7 +20632,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-9.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20711,7 +20711,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-9.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20787,7 +20787,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-9.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20863,7 +20863,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-9.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -20942,7 +20942,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-10.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21018,7 +21018,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-10.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21094,7 +21094,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-10.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21170,7 +21170,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-10.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21246,7 +21246,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-10.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21322,7 +21322,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-10.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21398,7 +21398,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-10.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21471,7 +21471,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-10.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21550,7 +21550,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-10.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21629,7 +21629,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-10.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21705,7 +21705,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-10.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21781,7 +21781,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-10.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21854,7 +21854,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-10.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -21933,7 +21933,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-10.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22009,7 +22009,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-10.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22088,7 +22088,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-10.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22164,7 +22164,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-10.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22240,7 +22240,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-10.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22319,7 +22319,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-10.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22398,7 +22398,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-10.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22474,7 +22474,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-10.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22550,7 +22550,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-10.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22629,7 +22629,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-10.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22705,7 +22705,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-10.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22784,7 +22784,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-10.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22857,7 +22857,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-10.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -22930,7 +22930,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-10.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23006,7 +23006,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-10.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23082,7 +23082,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-10.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23161,7 +23161,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-10.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23237,7 +23237,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 31,
     imagePath: '/images/daily-digest-31-10.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23313,7 +23313,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-11.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23389,7 +23389,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-11.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23465,7 +23465,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-11.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23541,7 +23541,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-11.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23614,7 +23614,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-11.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23690,7 +23690,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-11.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23769,7 +23769,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-11.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23848,7 +23848,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-11.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -23924,7 +23924,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-11.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24000,7 +24000,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-11.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24079,7 +24079,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-11.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24158,7 +24158,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-11.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24231,7 +24231,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-11.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24304,7 +24304,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-11.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24380,7 +24380,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-11.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24456,7 +24456,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-11.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24535,7 +24535,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-11.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24611,7 +24611,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-11.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24687,7 +24687,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-11.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24763,7 +24763,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-11.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24839,7 +24839,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-11.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24918,7 +24918,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-11.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -24997,7 +24997,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-11.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25073,7 +25073,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-11.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25149,7 +25149,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-11.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25225,7 +25225,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-11.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25304,7 +25304,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-11.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25380,7 +25380,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-11.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25456,7 +25456,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-11.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25535,7 +25535,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-11.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25608,7 +25608,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 1,
     imagePath: '/images/daily-digest-1-12.jpg',
     tags: ['gratitude'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25687,7 +25687,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 2,
     imagePath: '/images/daily-digest-2-12.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25763,7 +25763,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 3,
     imagePath: '/images/daily-digest-3-12.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25839,7 +25839,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 4,
     imagePath: '/images/daily-digest-4-12.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25918,7 +25918,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 5,
     imagePath: '/images/daily-digest-5-12.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -25994,7 +25994,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 6,
     imagePath: '/images/daily-digest-6-12.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26073,7 +26073,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 7,
     imagePath: '/images/daily-digest-7-12.jpg',
     tags: ['hope-in-god'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26149,7 +26149,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 8,
     imagePath: '/images/daily-digest-8-12.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26228,7 +26228,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 9,
     imagePath: '/images/daily-digest-9-12.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26307,7 +26307,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 10,
     imagePath: '/images/daily-digest-10-12.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26386,7 +26386,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 11,
     imagePath: '/images/daily-digest-11-12.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26462,7 +26462,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 12,
     imagePath: '/images/daily-digest-12-12.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26538,7 +26538,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 13,
     imagePath: '/images/daily-digest-13-12.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26614,7 +26614,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 14,
     imagePath: '/images/daily-digest-14-12.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26690,7 +26690,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 15,
     imagePath: '/images/daily-digest-15-12.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26769,7 +26769,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 16,
     imagePath: '/images/daily-digest-16-12.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26848,7 +26848,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 17,
     imagePath: '/images/daily-digest-17-12.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -26924,7 +26924,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 18,
     imagePath: '/images/daily-digest-18-12.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27000,7 +27000,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 19,
     imagePath: '/images/daily-digest-19-12.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27079,7 +27079,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 20,
     imagePath: '/images/daily-digest-20-12.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27158,7 +27158,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 21,
     imagePath: '/images/daily-digest-21-12.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27234,7 +27234,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 22,
     imagePath: '/images/daily-digest-22-12.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27307,7 +27307,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 23,
     imagePath: '/images/daily-digest-23-12.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27383,7 +27383,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 24,
     imagePath: '/images/daily-digest-24-12.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27456,7 +27456,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 25,
     imagePath: '/images/daily-digest-25-12.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27535,7 +27535,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 26,
     imagePath: '/images/daily-digest-26-12.jpg',
     tags: ['prayer'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27611,7 +27611,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 27,
     imagePath: '/images/daily-digest-27-12.jpg',
     tags: ['faith-in-adversity'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27687,7 +27687,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 28,
     imagePath: '/images/daily-digest-28-12.jpg',
     tags: ['wisdom'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27763,7 +27763,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 29,
     imagePath: '/images/daily-digest-29-12.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27839,7 +27839,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 30,
     imagePath: '/images/daily-digest-30-12.jpg',
     tags: ['love-your-neighbor'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',
@@ -27918,7 +27918,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     day: 31,
     imagePath: '/images/daily-digest-31-12.jpg',
     tags: ['forgiveness'],
-    content: [
+    contents: [
       {
         language: {
           countryCode: 'GB',

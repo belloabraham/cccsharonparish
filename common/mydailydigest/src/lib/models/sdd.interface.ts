@@ -56,7 +56,7 @@ export interface ISpiritualDailyDigest extends Record<string, any> {
   day: number;
   imagePath: string | null;
   tags: string[];
-  content: Content[];
+  contents: Content[];
   isPublished: boolean;
   isAwaitingApproval: boolean;
   createdBy: string;

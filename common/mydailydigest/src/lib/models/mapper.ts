@@ -18,7 +18,7 @@ export function contentsToTableUIState(
   const result: ISpiritualDailyDigestTableUIState[] = [];
   for (let index = 0; index < contents.length; index++) {
     const content = contents[index];
-    const contentByLanguage = content.content.find(
+    const contentByLanguage = content.contents.find(
       (c) => c.language.code === languageCode
     );
     const contentText = contentByLanguage?.text;
@@ -56,7 +56,7 @@ export function contentsToAwaitingApprovalTableUIState(
   const result: IAwaitingApprovalContentTableUIState[] = [];
   for (let index = 0; index < contents.length; index++) {
     const content = contents[index];
-    const contentByLanguage = content.content.find(
+    const contentByLanguage = content.contents.find(
       (c) => c.language.code === languageCode
     );
     const contentText = contentByLanguage?.text;
@@ -96,10 +96,10 @@ export function contentsToTranslateTableUIState(
   const result: ISpiritualDailyDigestTranslateUIState[] = [];
   for (let index = 0; index < contents.length; index++) {
     const content = contents[index];
-    const languageContent = content.content.find(
+    const languageContent = content.contents.find(
       (c) => c.language.code === languageCode
     );
-    const englishContent = content.content.find(
+    const englishContent = content.contents.find(
       (c) => c.language.code === ENGLISH_LANG_CODE
     );
 

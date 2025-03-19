@@ -15,7 +15,7 @@ import { TRANSLATE_CONTENT_TABLE_COLUMNS } from '../translate/translate-table';
 import {
   contentsToTableUIState,
   ENGLISH_LANG_CODE,
-  ISpiritualDailyDigestTableUIState,
+  ISpiritualDailyDigest,
 } from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
 
@@ -35,7 +35,7 @@ import { tuiIsPresent } from '@taiga-ui/cdk';
 export class ApprovedComponent extends NewContentComponent {
   APPROVED_KEY = APPROVED_STRING_RESOURCE_KEY;
   translateTableColumns = TRANSLATE_CONTENT_TABLE_COLUMNS;
-  translateData?: Signal<ISpiritualDailyDigestTableUIState[]> = signal([]);
+  translateData?: Signal<ISpiritualDailyDigest[]> = signal([]);
 
   constructor() {
     super();
@@ -54,7 +54,7 @@ export class ApprovedComponent extends NewContentComponent {
     direction: -1 | 1,
     page: number,
     size: number
-  ): ReadonlyArray<ISpiritualDailyDigestTableUIState | null> {
+  ): ReadonlyArray<ISpiritualDailyDigest | null> {
     const start = page * size;
     const end = start + size;
     const result = [...this.getTableUIState(start, end)].sort(
@@ -69,10 +69,10 @@ export class ApprovedComponent extends NewContentComponent {
       .filter((data, index) => {
         return index >= start && index < end;
       });
-    const tableUIState = contentsToTableUIState(
-      approvedContent,
-      ENGLISH_LANG_CODE
-    );
-    return tableUIState;
+    // const tableUIState = contentsToTableUIState(
+    //   approvedContent,
+    //   ENGLISH_LANG_CODE
+    // );
+    return approvedContent;
   }
 }

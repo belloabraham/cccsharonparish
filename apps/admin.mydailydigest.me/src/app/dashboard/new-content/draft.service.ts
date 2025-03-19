@@ -46,7 +46,7 @@ export class DraftService {
       day: day,
       imagePath: sddUIState.imagePath,
       tags: sddUIState.tags,
-      content: [content],
+      contents: [content],
       isAwaitingApproval: false,
       createdBy: userId,
       createdAt: Timestamp.now(),

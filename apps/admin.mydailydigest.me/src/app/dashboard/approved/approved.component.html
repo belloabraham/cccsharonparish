@@ -12,6 +12,8 @@
                 <thead>
                     <tr tuiThGroup>
                         <ng-container *ngFor="let column of translateTableColumns">
+                            @let columnsWithMinWidth = column === "verses" || column === "supplication" || column ===
+                            "reflection";
 
                             @if (column === "message") {
                             <th *tuiHead="column" class="message-column" tuiTh [sticky]="true" [tuiSortable]="false"
@@ -19,7 +21,7 @@
                                 {{ t(column)}}
                             </th>
                             }
-                            @else if (column === "verses") {
+                            @else if (columnsWithMinWidth) {
                             <th *tuiHead="column" class="verses-column" tuiTh [sticky]="true" [tuiSortable]="false"
                                 [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                 {{ t(column)}}
@@ -49,48 +51,59 @@
                 </thead>
                 <tbody *tuiLet="translateData() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
 
-                    <ng-container *ngFor="let item of sortedData; let dataIndex = index">
+                    <ng-container *ngFor="let data of sortedData; let dataIndex = index">
 
                         <tr class="table-tools-row">
                             <td [colSpan]="translateTableColumns.length" class="border-x-1 border-b border-x px-4">
 
-                                <button (click)="editContent(item)" mat-button> <mat-icon
-                                        fontIcon="translate-fill"></mat-icon>
+                                <button mat-button> <mat-icon fontIcon="translate-fill"></mat-icon>
                                     {{t(KEY.TRANSLATE)}}</button>
                             </td>
                         </tr>
-                        <tr tuiTr>
+                        @let contents = data.contents;
+                        <tr tuiTr *ngFor="let item of contents">
+                            @let textContent = item.text;
+                            @let bibleVerse = item.text.bibleVerse;
+
                             <ng-container *ngFor="let key of translateTableColumns; let rowIndex = index">
                                 @if (key ==="date") {
-                                <td *tuiCell="key" tuiTd> {{ item[key] |
+                                <td *tuiCell="key" tuiTd> {{ data[key] |
                                     date:'fullDate'
                                     }} </td>
-                                }@else if (key === "message" || key ===
-                                "verses"){
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
-                                    {{
-                                    item[key]}}
+                                }@else if (key === "verses" || key === "reference" || key === "keyVerse"){
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(bibleVerse[key])">
+                                    {{bibleVerse[key]}}
                                 </td>
-                                }@else if (key === "imagePath"){
+                                }@else if (key === "message" || key === "reflection" || key === "supplication" || key
+                                === "topic"){
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(textContent[key])">
+                                    {{textContent[key]}}
+                                </td>
+                                }@else if (key === "tags" || key === "sn"){
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(data[key])">
+                                    {{data[key]}}
+                                </td>
+                                }
+                                @else if (key === "imagePath"){
                                 <td *tuiCell="key" tuiTd>
-                                    <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank" rel="noopener noreferrer">
-                                        <img *ngIf="item[key]" width="50" height="50" class="header-image"
-                                            ngSrc="{{item[key]}}" alt="Header Image">
+                                    <a href="{{CDN_BASE_URL}}/{{data[key]}}" target="_blank" rel="noopener noreferrer">
+                                        <img *ngIf="data[key]" width="50" height="50" class="header-image"
+                                            ngSrc="{{data[key]}}" alt="Header Image">
 
-                                        <img *ngIf="!item[key]" width="50" height="50" class="header-image"
-                                            src="{{item[key]}}" alt="Header Image">
+                                        <img *ngIf="!data[key]" width="50" height="50" class="header-image"
+                                            src="{{data[key]}}" alt="Header Image">
                                     </a>
                                 </td>
                                 }@else if (key === "audioUrl"){
                                 <td *tuiCell="key" tuiTd>
                                     <ng-audio-player *ngIf="item[key]" [src]="item[key]!" />
                                 </td>
-                                }@else {
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
-                                    {{
-                                    item[key]}}
-                                </td>
                                 }
+                                <!-- @else {
+                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
+                                    {{ item[key]}}
+                                </td>
+                                } -->
 
                             </ng-container>
                         </tr>

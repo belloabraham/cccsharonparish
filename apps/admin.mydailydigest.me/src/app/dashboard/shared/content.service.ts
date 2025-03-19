@@ -68,13 +68,13 @@ export class ContentService {
   ) {
     const userId = this.auth.getUserId()!;
     const content = getContentFromUIState(newContent, language);
-    const contents = existingContent.content.filter(
+    const contents = existingContent.contents.filter(
       (content) => content.language.code !== language.code
     );
     const updatedContent: Partial<ISpiritualDailyDigest> = {
       tags: newContent.tags,
       isAwaitingApproval: false,
-      content: [content, ...contents],
+      contents: [content, ...contents],
       updatedBy: userId,
       updatedAt: Timestamp.now(),
       imagePath: newContent.imagePath || existingContent.imagePath,
