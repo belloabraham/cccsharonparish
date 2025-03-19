@@ -12,11 +12,7 @@ import {
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NewContentComponent } from '../new-content/new-content.component';
 import { TRANSLATE_CONTENT_TABLE_COLUMNS } from '../translate/translate-table';
-import {
-  contentsToTableUIState,
-  ENGLISH_LANG_CODE,
-  ISpiritualDailyDigest,
-} from '@cccsharonparish/mydailydigest';
+import { IApprovedTableUIState } from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
 
 @Component({
@@ -35,7 +31,7 @@ import { tuiIsPresent } from '@taiga-ui/cdk';
 export class ApprovedComponent extends NewContentComponent {
   APPROVED_KEY = APPROVED_STRING_RESOURCE_KEY;
   translateTableColumns = TRANSLATE_CONTENT_TABLE_COLUMNS;
-  translateData?: Signal<ISpiritualDailyDigest[]> = signal([]);
+  translateData?: Signal<IApprovedTableUIState[]> = signal([]);
 
   constructor() {
     super();
@@ -54,7 +50,7 @@ export class ApprovedComponent extends NewContentComponent {
     direction: -1 | 1,
     page: number,
     size: number
-  ): ReadonlyArray<ISpiritualDailyDigest | null> {
+  ): ReadonlyArray<IApprovedTableUIState | null> {
     const start = page * size;
     const end = start + size;
     const result = [...this.getTableUIState(start, end)].sort(
@@ -64,15 +60,26 @@ export class ApprovedComponent extends NewContentComponent {
   }
 
   getTableUIState(start: number, end: number) {
-    const approvedContent = this.contentStore
+    const approvedContents = this.contentStore
       .approvedContent()
       .filter((data, index) => {
         return index >= start && index < end;
       });
-    // const tableUIState = contentsToTableUIState(
-    //   approvedContent,
-    //   ENGLISH_LANG_CODE
-    // );
-    return approvedContent;
+
+    const approvedContentUIStates: IApprovedTableUIState[] = [];
+    for (let index = 0; index < approvedContents.length; index++) {
+      const approvedContent = approvedContents[index];
+      const date = new Date(
+        approvedContent.year,
+        approvedContent.month - 1,
+        approvedContent.day
+      );
+      approvedContentUIStates.push({
+        sn: index + 1,
+        date: date,
+        ...approvedContent,
+      });
+    }
+    return approvedContentUIStates;
   }
 }

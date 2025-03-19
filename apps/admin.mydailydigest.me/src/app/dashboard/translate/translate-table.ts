@@ -1,9 +1,8 @@
-import {
-  LanguageContent,
-} from '@cccsharonparish/mydailydigest';
+import { LanguageContent } from '@cccsharonparish/mydailydigest';
 
 export const translateContentTableStateKeys = {
   sn: 0,
+  date: '',
   topic: '',
   message: '',
   reference: '',
@@ -11,6 +10,7 @@ export const translateContentTableStateKeys = {
   keyVerse: '',
   supplication: '',
   reflection: '',
+  tags: [],
   audioUrl: '',
 };
 

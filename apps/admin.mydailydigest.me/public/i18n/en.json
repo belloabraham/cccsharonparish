@@ -131,6 +131,9 @@
   "updatedBy": "Updated by",
   "createdBy": "Created by",
 
+  "publish": "Publish",
+  "publish_all": "Publish all",
+
   "sign_up_title": "Sign Up - {{value}}",
   "sign_up": "Sign up",
   "whats_app": "WhatsApp",

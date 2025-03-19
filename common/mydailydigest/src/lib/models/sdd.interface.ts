@@ -12,6 +12,8 @@ export type IAwaitingApprovalContentTableUIState =
     updatedBy: string | null;
   };
 
+export type IApprovedTableUIState = ISpiritualDailyDigest & { sn: number, date:Date };
+
 export interface ISpiritualDailyDigestUIState {
   id: string;
   topic: string;
