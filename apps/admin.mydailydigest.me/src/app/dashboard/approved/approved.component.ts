@@ -12,7 +12,11 @@ import {
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NewContentComponent } from '../new-content/new-content.component';
 import { TRANSLATE_CONTENT_TABLE_COLUMNS } from '../translate/translate-table';
-import { IApprovedTableUIState } from '@cccsharonparish/mydailydigest';
+import {
+  ENGLISH_LANG_CODE,
+  IApprovedTableUIState,
+  ISpiritualDailyDigest,
+} from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
 
 @Component({
@@ -44,6 +48,53 @@ export class ApprovedComponent extends NewContentComponent {
       ).filter(tuiIsPresent)
     );
   }
+
+  publishPrompt(item: IApprovedTableUIState) {
+    const englishContent = this.getEnglishContent(item);
+    this.alertDialogService
+      .open(`Are you sure you want to publish ${englishContent.text.topic}?`, {
+        heading: 'Publish content?',
+        buttons: [
+          this.languageResourceService.getString(this.KEY.YES),
+          this.languageResourceService.getString(this.KEY.NO),
+        ],
+      })
+      .subscribe({
+        next: async (isYes) => {
+          if (isYes) {
+            this.publish(item);
+          }
+        },
+      });
+  }
+
+  publish(item: ISpiritualDailyDigest) {}
+
+  getEnglishContent(value: ISpiritualDailyDigest) {
+    const englishContent = value.contents.find(
+      (content) => content.language.code === ENGLISH_LANG_CODE
+    );
+    return englishContent!;
+  }
+
+  publishAllPrompt() {
+    this.alertDialogService
+      .open(`Are you sure you want to publish all approved content?`, {
+        heading: 'Publish all?',
+        buttons: [
+          this.languageResourceService.getString(this.KEY.YES),
+          this.languageResourceService.getString(this.KEY.NO),
+        ],
+      })
+      .subscribe({
+        next: async (isYes) => {
+          if (isYes) {
+          }
+        },
+      });
+  }
+
+  publishAll() {}
 
   private getData(
     key: ColumnKeys,

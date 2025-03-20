@@ -70,7 +70,7 @@ export class NewContentComponent implements OnDestroy {
   private readonly draftService = inject(DraftService);
 
   private readonly alertService = inject(TuiAlertService);
-  private readonly alertDialogService = inject(AlertDialogService);
+  protected readonly alertDialogService = inject(AlertDialogService);
   CDN_BASE_URL = environment.cdnBaseUrl;
 
   sddForSelectedLanguage = signal<ISpiritualDailyDigest[]>([]);
@@ -86,7 +86,7 @@ export class NewContentComponent implements OnDestroy {
   readonly orderDirection = signal<-1 | 1>(-1);
   searchQuery = '';
   data?: Signal<ISpiritualDailyDigestTableUIState[]> = signal([]);
-  private readonly languageResourceService = inject(LanguageResourceService);
+  protected readonly languageResourceService = inject(LanguageResourceService);
 
   constructor() {
     this.getPageTitle();

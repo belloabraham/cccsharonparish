@@ -2,7 +2,7 @@ import { ISpiritualDailyDigestUIState } from "@cccsharonparish/mydailydigest";
 
 export const newContentTableStateKeys = {
   sn: 0,
-  date: new Date(),
+  date: '',
   topic: '',
   message: '',
   reference: '',

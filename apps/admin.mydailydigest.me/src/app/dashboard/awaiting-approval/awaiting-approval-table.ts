@@ -2,7 +2,7 @@ import { IAwaitingApprovalContentTableUIState } from "@cccsharonparish/mydailydi
 
 export const contentAwaitingApprovalTableStateKeys = {
   sn: 0,
-  date: new Date(),
+  date: '',
   topic: '',
   message: '',
   reference: '',

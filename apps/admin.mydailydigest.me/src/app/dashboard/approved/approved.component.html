@@ -1,127 +1,132 @@
-<div *transloco="let t" class="draft h-full">
-    <h5 class="page-title">{{t(APPROVED_KEY.APPROVED)}}</h5>
+<ng-container *transloco="let t">
+    <div class="draft h-full">
+        <h5 class="page-title">{{t(APPROVED_KEY.APPROVED)}}</h5>
 
-    <tui-scrollbar class="!h-full">
+        <tui-scrollbar class="!h-full">
 
-        <cdk-virtual-scroll-viewport #viewport appendOnly tuiScrollable class="viewport tui-zero-scrollbar !h-full"
-            [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
-            <button mat-button class="!uppercase"> <mat-icon fontIcon="upload-cloud-outline"></mat-icon>
-                {{t(APPROVED_KEY.PUBLISH_ALL)}}</button>
-            <table *ngIf="translateData" tuiTable class="table" [columns]="translateTableColumns"
-                [direction]="orderDirection() || 1" [tuiSortBy]="sortColumnBy()"
-                (directionChange)="orderDirection.set($event)" (tuiSortByChange)="sortColumnBy.set($event!)">
-                <thead>
-                    <tr tuiThGroup>
-                        <ng-container *ngFor="let column of translateTableColumns">
-                            @let columnsWithMinWidth = column === "verses" || column === "supplication" || column ===
-                            "reflection";
+            <cdk-virtual-scroll-viewport #viewport appendOnly tuiScrollable class="viewport tui-zero-scrollbar !h-full"
+                [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
+                <table *ngIf="translateData" tuiTable class="table" [columns]="translateTableColumns"
+                    [direction]="orderDirection() || 1" [tuiSortBy]="sortColumnBy()"
+                    (directionChange)="orderDirection.set($event)" (tuiSortByChange)="sortColumnBy.set($event!)">
+                    <thead>
+                        <tr tuiThGroup>
+                            <ng-container *ngFor="let column of translateTableColumns">
+                                @let columnsWithMinWidth = column === "verses" || column === "supplication" || column
+                                ===
+                                "reflection";
 
-                            @if (column === "message") {
-                            <th *tuiHead="column" class="message-column" tuiTh [sticky]="true" [tuiSortable]="false"
-                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                                {{ t(column)}}
-                            </th>
-                            }
-                            @else if (columnsWithMinWidth) {
-                            <th *tuiHead="column" class="verses-column" tuiTh [sticky]="true" [tuiSortable]="false"
-                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                                {{ t(column)}}
-                            </th>
-                            }
-                            @else if (column === "keyVerse") {
-                            <th *tuiHead="column" class="key-verse-column" tuiTh [sticky]="true" [tuiSortable]="false"
-                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                                {{ t(column)}}
-                            </th>
-                            }
-                            @else if (column === "sn" || column ==="reference" ||
-                            column ==="topic") {
-                            <th *tuiHead="column" tuiSortable tuiTh [sticky]="true"
-                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                                {{ t(column)}}
-                            </th>
-                            }@else {
-                            <th *tuiHead="column" [tuiSortable]="false" tuiTh [sticky]="true"
-                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
-                                {{ t(column)}}
-                            </th>
-                            }
-
-                        </ng-container>
-                    </tr>
-                </thead>
-                <tbody *tuiLet="translateData() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
-
-                    <ng-container *ngFor="let data of sortedData; let dataIndex = index">
-
-                        <tr class="table-tools-row">
-                            <td [colSpan]="translateTableColumns.length" class="border-x-1 border-b border-x px-4">
-
-                                <button mat-button> <mat-icon fontIcon="upload-cloud-outline"></mat-icon>
-                                    {{t(APPROVED_KEY.PUBLISH)}}</button>
-                            </td>
-                        </tr>
-                        @let contents = data.contents;
-                        <tr tuiTr *ngFor="let item of contents">
-                            @let textContent = item.text;
-                            @let bibleVerse = item.text.bibleVerse;
-
-                            <ng-container *ngFor="let key of translateTableColumns; let rowIndex = index">
-                                @if (key ==="date") {
-                                <td *tuiCell="key" tuiTd> {{ data[key] | date:'fullDate' }} </td>
-                                }@else if (key === "verses" || key === "reference" || key === "keyVerse"){
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(bibleVerse[key])">
-                                    {{bibleVerse[key]}}
-                                </td>
-                                }@else if (key === "message" || key === "reflection" || key === "supplication" || key
-                                === "topic"){
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(textContent[key])">
-                                    {{textContent[key]}}
-                                </td>
-                                }@else if (key === "tags" || key === "sn"){
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(data[key])">
-                                    {{data[key]}}
-                                </td>
+                                @if (column === "message") {
+                                <th *tuiHead="column" class="message-column" tuiTh [sticky]="true" [tuiSortable]="false"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
                                 }
-                                @else if (key === "imagePath"){
-                                <td *tuiCell="key" tuiTd>
-                                    <a href="{{CDN_BASE_URL}}/{{data[key]}}" target="_blank" rel="noopener noreferrer">
-                                        <img *ngIf="data[key]" width="50" height="50" class="header-image"
-                                            ngSrc="{{data[key]}}" alt="Header Image">
-
-                                        <img *ngIf="!data[key]" width="50" height="50" class="header-image"
-                                            src="{{data[key]}}" alt="Header Image">
-                                    </a>
-                                </td>
-                                }@else if (key === "audioUrl"){
-                                <td *tuiCell="key" tuiTd>
-                                    <ng-audio-player *ngIf="item[key]" [src]="item[key]!" />
-                                </td>
+                                @else if (columnsWithMinWidth) {
+                                <th *tuiHead="column" class="verses-column" tuiTh [sticky]="true" [tuiSortable]="false"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
                                 }
-                                <!-- @else {
-                                <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
-                                    {{ item[key]}}
-                                </td>
-                                } -->
+                                @else if (column === "keyVerse") {
+                                <th *tuiHead="column" class="key-verse-column" tuiTh [sticky]="true"
+                                    [tuiSortable]="false"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
+                                }
+                                @else if (column === "sn" || column ==="reference" ||
+                                column ==="topic") {
+                                <th *tuiHead="column" tuiSortable tuiTh [sticky]="true"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
+                                }@else {
+                                <th *tuiHead="column" [tuiSortable]="false" tuiTh [sticky]="true"
+                                    [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                    {{ t(column)}}
+                                </th>
+                                }
 
                             </ng-container>
                         </tr>
+                    </thead>
+                    <tbody *tuiLet="translateData() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
 
-                    </ng-container>
+                        <ng-container *ngFor="let data of sortedData; let dataIndex = index">
 
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td [colSpan]="translateTableColumns.length/2">
-                            <tui-table-pagination class="mt-2" [size]="AVERAGE_TABLE_PAGE_SIZE"
-                                [page]="tablePage() || 0" [total]="contentStore.draftContents().length"
-                                (paginationChange)="onPagination($event)" />
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+                            <tr class="table-tools-row">
+                                <td [colSpan]="translateTableColumns.length" class="border-x-1 border-b border-x px-4">
 
-        </cdk-virtual-scroll-viewport>
-    </tui-scrollbar>
+                                    <button (click)="publishPrompt(data)" mat-button> <mat-icon
+                                            fontIcon="upload-cloud-outline"></mat-icon>
+                                        {{t(APPROVED_KEY.PUBLISH)}}</button>
+                                </td>
+                            </tr>
+                            @let contents = data.contents;
+                            <tr tuiTr *ngFor="let item of contents">
+                                @let textContent = item.text;
+                                @let bibleVerse = item.text.bibleVerse;
 
-</div>
+                                <ng-container *ngFor="let key of translateTableColumns; let rowIndex = index">
+                                    @if (key ==="date") {
+                                    <td *tuiCell="key" tuiTd> {{ data[key] | date:'fullDate' }} </td>
+                                    }@else if (key === "verses" || key === "reference" || key === "keyVerse"){
+                                    <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(bibleVerse[key])">
+                                        {{bibleVerse[key]}}
+                                    </td>
+                                    }@else if (key === "message" || key === "reflection" || key === "supplication" ||
+                                    key
+                                    === "topic"){
+                                    <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(textContent[key])">
+                                        {{textContent[key]}}
+                                    </td>
+                                    }@else if (key === "tags" || key === "sn"){
+                                    <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(data[key])">
+                                        {{data[key]}}
+                                    </td>
+                                    }
+                                    @else if (key === "imagePath"){
+                                    <td *tuiCell="key" tuiTd>
+                                        <a href="{{CDN_BASE_URL}}/{{data[key]}}" target="_blank"
+                                            rel="noopener noreferrer">
+                                            <img *ngIf="data[key]" width="50" height="50" class="header-image"
+                                                ngSrc="{{data[key]}}" alt="Header Image">
+
+                                            <img *ngIf="!data[key]" width="50" height="50" class="header-image"
+                                                src="{{data[key]}}" alt="Header Image">
+                                        </a>
+                                    </td>
+                                    }@else if (key === "audioUrl"){
+                                    <td *tuiCell="key" tuiTd>
+                                        <ng-audio-player *ngIf="item[key]" [src]="item[key]!" />
+                                    </td>
+                                    }
+
+                                </ng-container>
+                            </tr>
+
+                        </ng-container>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td [colSpan]="translateTableColumns.length/2">
+                                <tui-table-pagination class="mt-2" [size]="AVERAGE_TABLE_PAGE_SIZE"
+                                    [page]="tablePage() || 0" [total]="contentStore.draftContents().length"
+                                    (paginationChange)="onPagination($event)" />
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </cdk-virtual-scroll-viewport>
+        </tui-scrollbar>
+
+    </div>
+
+    <button (click)="publishAllPrompt()" class="!fixed right-4 bottom-4" mat-fab extended>
+        <mat-icon fontIcon="upload-cloud-outline"></mat-icon>
+        {{t(APPROVED_KEY.PUBLISH_ALL)}}
+    </button>
+</ng-container>
