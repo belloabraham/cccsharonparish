@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import {  COLLECTION, REMOTE_DATA_TOKEN } from '../../services';
+import { COLLECTION, REMOTE_DATA_TOKEN } from '../../services';
 import { of } from 'rxjs';
 import { ISpiritualDailyDigest } from '@cccsharonparish/mydailydigest';
 import { environment } from '../../../environments/environment';
@@ -20,5 +20,46 @@ export class ApprovedService {
       COLLECTION.APPROVED,
       []
     );
+  }
+
+  publishAll(approvedContents: ISpiritualDailyDigest[]) {
+    return this.remoteData.runTransaction(async (transaction) => {
+      for (let index = 0; index < approvedContents.length; index++) {
+        const approvedContent = approvedContents[index];
+
+        const approvedDocRef = this.remoteData.getDocRef(COLLECTION.APPROVED, [
+          approvedContent.id,
+        ]);
+
+        const publishedDocRef = this.remoteData.getDocRef(
+          COLLECTION.PUBLISHED,
+          [approvedContent.id]
+        );
+        transaction.delete(approvedDocRef);
+        transaction.set(publishedDocRef, {
+          ...approvedContent,
+          isPublished: true,
+          isAwaitingApproval: false,
+        });
+      }
+    });
+  }
+
+  publish(approvedContent: ISpiritualDailyDigest) {
+    return this.remoteData.runTransaction(async (transaction) => {
+      const approvedDocRef = this.remoteData.getDocRef(COLLECTION.APPROVED, [
+        approvedContent.id,
+      ]);
+
+      const publishedDocRef = this.remoteData.getDocRef(COLLECTION.PUBLISHED, [
+        approvedContent.id,
+      ]);
+      transaction.delete(approvedDocRef);
+      transaction.set(publishedDocRef, {
+        ...approvedContent,
+        isPublished: true,
+        isAwaitingApproval: false,
+      });
+    });
   }
 }

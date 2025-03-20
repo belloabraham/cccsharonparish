@@ -6,7 +6,7 @@
 
             <cdk-virtual-scroll-viewport #viewport appendOnly tuiScrollable class="viewport tui-zero-scrollbar !h-full"
                 [itemSize]="45" [maxBufferPx]="500" [minBufferPx]="400">
-                <table *ngIf="translateData" tuiTable class="table" [columns]="translateTableColumns"
+                <table *ngIf="approvedContentData" tuiTable class="table" [columns]="translateTableColumns"
                     [direction]="orderDirection() || 1" [tuiSortBy]="sortColumnBy()"
                     (directionChange)="orderDirection.set($event)" (tuiSortByChange)="sortColumnBy.set($event!)">
                     <thead>
@@ -51,7 +51,7 @@
                             </ng-container>
                         </tr>
                     </thead>
-                    <tbody *tuiLet="translateData() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
+                    <tbody *tuiLet="approvedContentData() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
 
                         <ng-container *ngFor="let data of sortedData; let dataIndex = index">
 
@@ -125,7 +125,8 @@
 
     </div>
 
-    <button (click)="publishAllPrompt()" class="!fixed right-4 bottom-4" mat-fab extended>
+    <button *ngIf="approvedContentData && approvedContentData().length>1" (click)="publishAllPrompt()"
+        class="!fixed right-4 bottom-4" mat-fab extended>
         <mat-icon fontIcon="upload-cloud-outline"></mat-icon>
         {{t(APPROVED_KEY.PUBLISH_ALL)}}
     </button>

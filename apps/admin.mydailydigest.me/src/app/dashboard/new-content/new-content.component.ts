@@ -69,7 +69,7 @@ export class NewContentComponent implements OnDestroy {
   dashboardStore = inject(DashboardStore);
   private readonly draftService = inject(DraftService);
 
-  private readonly alertService = inject(TuiAlertService);
+  protected readonly alertService = inject(TuiAlertService);
   protected readonly alertDialogService = inject(AlertDialogService);
   CDN_BASE_URL = environment.cdnBaseUrl;
 

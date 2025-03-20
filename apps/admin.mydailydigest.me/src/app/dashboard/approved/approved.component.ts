@@ -1,4 +1,4 @@
-import { Component, computed, signal, Signal } from '@angular/core';
+import { Component, computed, inject, signal, Signal } from '@angular/core';
 import { SharedModule } from '../../shared';
 import { APPROVED_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { TuiTextfield } from '@taiga-ui/core';
@@ -18,6 +18,7 @@ import {
   ISpiritualDailyDigest,
 } from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
+import { ApprovedService } from './approved.service';
 
 @Component({
   selector: 'app-approved',
@@ -35,11 +36,12 @@ import { tuiIsPresent } from '@taiga-ui/cdk';
 export class ApprovedComponent extends NewContentComponent {
   APPROVED_KEY = APPROVED_STRING_RESOURCE_KEY;
   translateTableColumns = TRANSLATE_CONTENT_TABLE_COLUMNS;
-  translateData?: Signal<IApprovedTableUIState[]> = signal([]);
+  approvedContentData?: Signal<IApprovedTableUIState[]> = signal([]);
+  approvedService = inject(ApprovedService);
 
   constructor() {
     super();
-    this.translateData = computed(() =>
+    this.approvedContentData = computed(() =>
       this.getData(
         this.sortColumnBy(),
         this.orderDirection(),
@@ -50,9 +52,9 @@ export class ApprovedComponent extends NewContentComponent {
   }
 
   publishPrompt(item: IApprovedTableUIState) {
-    const englishContent = this.getEnglishContent(item);
+    const topic = this.getEnglishContent(item).text.topic;
     this.alertDialogService
-      .open(`Are you sure you want to publish ${englishContent.text.topic}?`, {
+      .open(`Are you sure you want to publish "${topic}?"`, {
         heading: 'Publish content?',
         buttons: [
           this.languageResourceService.getString(this.KEY.YES),
@@ -62,13 +64,55 @@ export class ApprovedComponent extends NewContentComponent {
       .subscribe({
         next: async (isYes) => {
           if (isYes) {
-            this.publish(item);
+            await this.publish(item, topic);
           }
         },
       });
   }
 
-  publish(item: ISpiritualDailyDigest) {}
+  async publish(approvedContent: ISpiritualDailyDigest, topic: string) {
+    try {
+      await this.approvedService.publish(approvedContent);
+      this.alertService
+        .open(`${topic} was successfully published`, {
+          label: 'Published',
+          appearance: 'positive',
+        })
+        .subscribe();
+    } catch (error) {
+      this.alertService
+        .open(
+          `Unable to publish ${topic}, check your internet connection and try again.`,
+          {
+            label: 'Error',
+            appearance: 'negative',
+          }
+        )
+        .subscribe();
+    }
+  }
+
+  async publishAll() {
+    try {
+      await this.approvedService.publishAll(this.approvedContentData!());
+      this.alertService
+        .open(`All approved content was published successfully`, {
+          label: 'Published',
+          appearance: 'positive',
+        })
+        .subscribe();
+    } catch (error) {
+      this.alertService
+        .open(
+          `Unable to publish approved contents, check your internet connection and try again.`,
+          {
+            label: 'Error',
+            appearance: 'negative',
+          }
+        )
+        .subscribe();
+    }
+  }
 
   getEnglishContent(value: ISpiritualDailyDigest) {
     const englishContent = value.contents.find(
@@ -89,12 +133,11 @@ export class ApprovedComponent extends NewContentComponent {
       .subscribe({
         next: async (isYes) => {
           if (isYes) {
+            await this.publishAll();
           }
         },
       });
   }
-
-  publishAll() {}
 
   private getData(
     key: ColumnKeys,
