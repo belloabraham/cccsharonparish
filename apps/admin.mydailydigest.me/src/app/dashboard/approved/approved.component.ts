@@ -16,9 +16,11 @@ import {
   ENGLISH_LANG_CODE,
   IApprovedTableUIState,
   ISpiritualDailyDigest,
+  ROUTE,
 } from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
 import { ApprovedService } from './approved.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-approved',
@@ -38,6 +40,7 @@ export class ApprovedComponent extends NewContentComponent {
   translateTableColumns = TRANSLATE_CONTENT_TABLE_COLUMNS;
   approvedContentData?: Signal<IApprovedTableUIState[]> = signal([]);
   approvedService = inject(ApprovedService);
+  private readonly router = inject(Router);
 
   constructor() {
     super();
@@ -79,6 +82,13 @@ export class ApprovedComponent extends NewContentComponent {
           appearance: 'positive',
         })
         .subscribe();
+      const remainingApprovedContent = this.contentStore
+        .approvedContent()
+        .filter((content) => content.id !== approvedContent.id);
+      this.contentStore.updateApprovedContents(remainingApprovedContent);
+      if (remainingApprovedContent.length === 0) {
+        this.router.navigate([ROUTE.PUBLISHED]);
+      }
     } catch (error) {
       this.alertService
         .open(
@@ -101,6 +111,8 @@ export class ApprovedComponent extends NewContentComponent {
           appearance: 'positive',
         })
         .subscribe();
+      this.contentStore.updateApprovedContents([]);
+      this.router.navigate([ROUTE.PUBLISHED]);
     } catch (error) {
       this.alertService
         .open(

@@ -1,7 +1,10 @@
 import { inject, Injectable } from '@angular/core';
 import { COLLECTION, REMOTE_DATA_TOKEN } from '../../services';
 import { of } from 'rxjs';
-import { ISpiritualDailyDigest } from '@cccsharonparish/mydailydigest';
+import {
+  IPublishedContentYear,
+  ISpiritualDailyDigest,
+} from '@cccsharonparish/mydailydigest';
 import { environment } from '../../../environments/environment';
 import { APPROVED_CONTENT_MOCK } from './mock/approved-content';
 
@@ -35,6 +38,15 @@ export class ApprovedService {
           COLLECTION.PUBLISHED,
           [approvedContent.id]
         );
+
+        const publishedContentYearsDocRef = this.remoteData.getDocRef(
+          COLLECTION.PUBLISHED_CONTENT_YEARS,
+          [`${approvedContent.year}`]
+        );
+        const publishedContentYear: IPublishedContentYear = {
+          year: approvedContent.year,
+        };
+        transaction.set(publishedContentYearsDocRef, publishedContentYear);
         transaction.delete(approvedDocRef);
         transaction.set(publishedDocRef, {
           ...approvedContent,
@@ -54,6 +66,14 @@ export class ApprovedService {
       const publishedDocRef = this.remoteData.getDocRef(COLLECTION.PUBLISHED, [
         approvedContent.id,
       ]);
+      const publishedContentYearsDocRef = this.remoteData.getDocRef(
+        COLLECTION.PUBLISHED_CONTENT_YEARS,
+        [`${approvedContent.year}`]
+      );
+      const publishedContentYear: IPublishedContentYear = {
+        year: approvedContent.year,
+      };
+      transaction.set(publishedContentYearsDocRef, publishedContentYear);
       transaction.delete(approvedDocRef);
       transaction.set(publishedDocRef, {
         ...approvedContent,
