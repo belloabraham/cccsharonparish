@@ -17,6 +17,7 @@ import { environment } from '../environments/environment';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HttpRequestProgressIndicatorService } from './services';
 import { filter, map, merge } from 'rxjs';
+import { MatIconRegistry } from '@angular/material/icon';
 
 @Component({
   standalone: true,
@@ -37,6 +38,7 @@ export class AppComponent
 
   deviceIsConnected: Signal<boolean | undefined>;
   isLoading = this.httpRequestLoadingIndicatorService.isLoading;
+  private readonly matIconRegistry = inject(MatIconRegistry);
 
   KEY = APP_STRING_RESOURCE_KEY;
   isDarkMode = this.themeService.isDarkMode;
@@ -45,6 +47,7 @@ export class AppComponent
 
   constructor() {
     super();
+    this.matIconRegistry.setDefaultFontSetClass('mdd-admin-icons');
     const domain = environment.domain;
     this.setAppTheme(domain);
     this.onDeviceThemeChanged(domain);

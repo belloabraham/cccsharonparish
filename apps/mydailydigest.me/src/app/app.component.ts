@@ -2,9 +2,8 @@ import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
-import { BaseAppComponent, Settings } from '@cccsharonparish/mydailydigest';
-import { ThemeService } from '@cccsharonparish/angular';
-import { Subscription } from 'rxjs';
+import { BaseAppComponent } from '@cccsharonparish/mydailydigest';
+import { MatIconRegistry } from '@angular/material/icon';
 import { environment } from '../environments/environment';
 
 @Component({
@@ -18,9 +17,12 @@ export class AppComponent
   extends BaseAppComponent
   implements OnDestroy, OnInit
 {
+  private readonly matIconRegistry = inject(MatIconRegistry);
+
   constructor() {
     super();
-    const domain = environment.domain
+    this.matIconRegistry.setDefaultFontSetClass('mdd-icons');
+    const domain = environment.domain;
     this.setAppTheme(domain);
     this.onDeviceThemeChanged(domain);
   }

@@ -1,6 +1,5 @@
 import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { MatIconRegistry } from '@angular/material/icon';
 import { SubSink } from 'subsink';
 import { ThemeService } from '@cccsharonparish/angular';
 import { Settings } from './data';
@@ -11,13 +10,8 @@ import { Settings } from './data';
 export class BaseAppComponent implements OnInit, OnDestroy {
   readonly showPreloader = signal(true);
   readonly router = inject(Router);
-  private readonly matIconRegistry = inject(MatIconRegistry);
   subscriptions = new SubSink();
   readonly themeService = inject(ThemeService);
-
-  constructor() {
-    this.matIconRegistry.setDefaultFontSetClass('sdd-icons');
-  }
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {

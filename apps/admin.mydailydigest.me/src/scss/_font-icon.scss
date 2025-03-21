@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'mdd-admin-icons';
+  src: url('/fonts/mdd-admin-icons.ttf?pzrz7a') format('truetype'),
+    url('/fonts/mdd-admin-icons.woff?pzrz7a') format('woff'),
+    url('/fonts/mdd-admin-icons.svg?pzrz7a#mdd-admin-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.mdd-admin-icons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  &::before {
+    font-family: 'mdd-admin-icons' !important;
+  }
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.upload-cloud-fill:before {
+  content: "\e925";
+}
+.copy-note-fill:before {
+  content: '\e924';
+}
+.copy-note-outline:before {
+  content: '\e923';
+}
+
+.pen-fill:before {
+  content: '\e91d';
+}
+.translate-fill:before {
+  content: '\e922';
+}
+.dots-vertical-fill:before {
+  content: '\e921';
+}
+.file-check-fill:before {
+  content: '\e920';
+}
+.file-upload-fill:before {
+  content: '\e91f';
+}
+.file-upload-outline:before {
+  content: '\e91c';
+}
+.trash-can-fill:before {
+  content: '\e91e';
+}
+.reload-time-outline:before {
+  content: '\e91b';
+}
+.document-clock-outline:before {
+  content: '\e91b';
+}
+.check-box-outline:before {
+  content: '\e919';
+}
+.translate-outline:before {
+  content: '\e91a';
+}
+.track-upload-outline:before {
+  content: '\e917';
+}
+.water-drop-fill:before {
+  content: '\e918';
+}
+.upload-fill:before {
+  content: '\e913';
+}
+.photo-plus-circle-fill:before {
+  content: '\e916';
+}
+.upload-cloud-outline:before {
+  content: '\e915';
+}
+.reset-left-outline:before {
+  content: '\e914';
+}
+.plus-fill:before {
+  content: '\e912';
+}
+.user-circle-outline:before {
+  content: '\e911';
+}
+.chevron-down-fill:before {
+  content: '\e90f';
+}
+.chevron-up-fill:before {
+  content: '\e910';
+}
+.chevron-left-fill:before {
+  content: '\e90c';
+}
+.chevron-right-fill:before {
+  content: '\e90d';
+}
+.spark-user-outline:before {
+  content: '\e90e';
+}
+.pages-outline:before {
+  content: '\e906';
+}
+.writing-outline:before {
+  content: '\e907';
+}
+.note-outline:before {
+  content: '\e906';
+}
+.settings-outline:before {
+  content: '\e908';
+}
+.close-fill:before {
+  content: '\e909';
+}
+.bookshelf-fill:before {
+  content: '\e90a';
+}
+.add-note-outline:before {
+  content: '\e90b';
+}
+.hamburger-fill:before {
+  content: '\e905';
+}
+.dark-mode-fill:before {
+  content: '\e900';
+}
+.facebook-fill:before {
+  content: '\e900';
+}
+.instagram-fill:before {
+  content: '\e901';
+}
+.twitter-fill:before {
+  content: '\e902';
+}
+.youtube-fill:before {
+  content: '\e903';
+}

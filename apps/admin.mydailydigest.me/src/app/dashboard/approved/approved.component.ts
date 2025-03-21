@@ -76,12 +76,7 @@ export class ApprovedComponent extends NewContentComponent {
   async publish(approvedContent: ISpiritualDailyDigest, topic: string) {
     try {
       await this.approvedService.publish(approvedContent);
-      this.alertService
-        .open(`${topic} was successfully published`, {
-          label: 'Published',
-          appearance: 'positive',
-        })
-        .subscribe();
+      this.showPublishSuccessAlert(`${topic} was successfully published`);
       const remainingApprovedContent = this.contentStore
         .approvedContent()
         .filter((content) => content.id !== approvedContent.id);
@@ -90,40 +85,43 @@ export class ApprovedComponent extends NewContentComponent {
         this.router.navigate([ROUTE.PUBLISHED]);
       }
     } catch (error) {
-      this.alertService
-        .open(
-          `Unable to publish ${topic}, check your internet connection and try again.`,
-          {
-            label: 'Error',
-            appearance: 'negative',
-          }
-        )
-        .subscribe();
+      this.showPublishFailedAlert(
+        `Unable to publish ${topic}, check your internet connection and try again.`
+      );
     }
   }
 
   async publishAll() {
     try {
       await this.approvedService.publishAll(this.approvedContentData!());
-      this.alertService
-        .open(`All approved content was published successfully`, {
-          label: 'Published',
-          appearance: 'positive',
-        })
-        .subscribe();
+      this.showPublishSuccessAlert(
+        `All approved content was published successfully`
+      );
       this.contentStore.updateApprovedContents([]);
       this.router.navigate([ROUTE.PUBLISHED]);
     } catch (error) {
-      this.alertService
-        .open(
-          `Unable to publish approved contents, check your internet connection and try again.`,
-          {
-            label: 'Error',
-            appearance: 'negative',
-          }
-        )
-        .subscribe();
+      this.showPublishFailedAlert(
+        'Unable to publish approved contents, check your internet connection and try again.'
+      );
     }
+  }
+
+  showPublishSuccessAlert(message: string) {
+    this.alertService
+      .open(message, {
+        label: 'Published',
+        appearance: 'positive',
+      })
+      .subscribe();
+  }
+
+  showPublishFailedAlert(message: string) {
+    this.alertService
+      .open(message, {
+        label: 'Error',
+        appearance: 'negative',
+      })
+      .subscribe();
   }
 
   getEnglishContent(value: ISpiritualDailyDigest) {
