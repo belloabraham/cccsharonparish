@@ -59,7 +59,7 @@
                                 <td [colSpan]="translateTableColumns.length" class="border-x-1 border-b border-x px-4">
 
                                     <button (click)="publishPrompt(data)" mat-button> <mat-icon
-                                            fontIcon="upload-cloud-outline"></mat-icon>
+                                            fontIcon="upload-cloud-fill"></mat-icon>
                                         {{t(APPROVED_KEY.PUBLISH)}}</button>
                                 </td>
                             </tr>
@@ -126,8 +126,8 @@
     </div>
 
     <button *ngIf="approvedContentData && approvedContentData().length>1" (click)="publishAllPrompt()"
-        class="!fixed right-4 bottom-4" mat-fab extended>
-        <mat-icon fontIcon="upload-cloud-outline"></mat-icon>
+        class="!fixed right-4 bottom-4 fab" mat-fab extended>
+        <mat-icon class="fab-icon" fontIcon="upload-cloud-fill"></mat-icon>
         {{t(APPROVED_KEY.PUBLISH_ALL)}}
     </button>
 </ng-container>

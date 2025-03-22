@@ -47,8 +47,8 @@ Thumbs.db
 apps/admin.mydailydigest.me/src/environments/
 apps/mydailydigest.me/src/environments/
 
-apps/admin.mydailydigest.me/public/images/global/
-apps/mydailydigest.me/public/images/global/
+apps/admin.mydailydigest.me/public/global/
+apps/mydailydigest.me/public/global/
 apps/mydailydigest.me/public/favicon.ico
 apps/admin.mydailydigest.me/public/favicon.ico
 
