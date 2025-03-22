@@ -5,7 +5,6 @@ import { filter, first, forkJoin, map, switchMap } from 'rxjs';
 import { inject } from '@angular/core';
 import { AUTH_TOKEN } from './services';
 import { DashboardService } from './dashboard/dashboard.service';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { DashboardStore } from './dashboard/dashboard.store';
 import { UserDataStore } from './shared';
 import { EditorsStore } from './dashboard/editors/editors.store';
@@ -43,17 +42,24 @@ export const appRoutes: Route[] = [
           );
       },
     },
-    canMatch: [
-      (router: Router) => {
-        const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
-        if (user === null) {
-          return router.createUrlTree([ROUTE.ROOT]);
-        }
-        const userDataDoesNotExist = user?.displayName === null
-        if (userDataDoesNotExist) {
-          return router.createUrlTree([ROUTE.SIGN_UP]);
-        }
-        return true;
+    canActivate: [
+      () => {
+        const router = inject(Router);
+        return inject(AUTH_TOKEN)
+          .getAuthSate$()
+          .pipe(
+            map((user) => {
+              const userDoesNotExist = user === null;
+              if (userDoesNotExist) {
+                return router.createUrlTree([ROUTE.ROOT]);
+              }
+              const userDataDoesNotExist = user?.displayName === null;
+              if (userDataDoesNotExist) {
+                return router.createUrlTree([ROUTE.SIGN_UP]);
+              }
+              return true;
+            })
+          );
       },
     ],
     loadChildren: () =>
@@ -64,11 +70,19 @@ export const appRoutes: Route[] = [
   {
     path: ROUTE.VERIFY_EMAIL,
     canMatch: [
-      (router: Router) => {
-        const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
-        return user?.emailVerified === true
-          ? router.createUrlTree([ROUTE.ROOT])
-          : true;
+      () => {
+        const router = inject(Router);
+        return inject(AUTH_TOKEN)
+          .getAuthSate$()
+          .pipe(
+            map((user) => {
+              const userEmailIsVerified = user?.emailVerified === true;
+              if (userEmailIsVerified) {
+                return router.createUrlTree([ROUTE.ROOT]);
+              }
+              return true;
+            })
+          );
       },
     ],
     loadComponent: () =>
@@ -79,13 +93,20 @@ export const appRoutes: Route[] = [
   {
     path: ROUTE.SIGN_UP,
     canMatch: [
-      (router: Router) => {
-        const user = toSignal(inject(AUTH_TOKEN).getAuthSate$())();
-        const userDataDoesNotExist = !user || user?.displayName;
-        if (userDataDoesNotExist) {
-          return router.createUrlTree([ROUTE.ROOT]);
-        }
-        return true;
+      () => {
+        const router = inject(Router);
+        return inject(AUTH_TOKEN)
+          .getAuthSate$()
+          .pipe(
+            map((user) => {
+              const userDoesNotExist = !user;
+              const userDataExist = user?.displayName;
+              if (userDoesNotExist || userDataExist) {
+                return router.createUrlTree([ROUTE.ROOT]);
+              }
+              return true;
+            })
+          );
       },
     ],
     loadComponent: () =>
