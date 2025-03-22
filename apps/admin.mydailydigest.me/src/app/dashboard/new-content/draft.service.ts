@@ -26,6 +26,7 @@ export class DraftService {
   private readonly auth = inject(AUTH_TOKEN);
   private readonly cloudStorage = inject(CLOUD_STORAGE_TOKEN);
   readonly USE_MOCK_DATA = environment.useMockData;
+  readonly MAX_NO_OF_DAYS_IN_A_YEAR = 366;
 
   createContent(
     sddUIState: ISpiritualDailyDigestUIState,
@@ -85,7 +86,7 @@ export class DraftService {
     return this.remoteData.getListOfDocumentDataWithQueryAsync<ISpiritualDailyDigest>(
       COLLECTION.DRAFT,
       [],
-      [orderBy('year', 'desc'), limit(365)]
+      [orderBy('year', 'desc'), limit(this.MAX_NO_OF_DAYS_IN_A_YEAR)]
     );
   }
 
@@ -96,7 +97,7 @@ export class DraftService {
     return this.remoteData.getLiveListOfDocumentDataWithQuery<T>(
       COLLECTION.DRAFT,
       [],
-      [orderBy('year', 'desc'), limit(365)],
+      [orderBy('year', 'desc'), limit(this.MAX_NO_OF_DAYS_IN_A_YEAR)],
       onNext,
       onError
     );

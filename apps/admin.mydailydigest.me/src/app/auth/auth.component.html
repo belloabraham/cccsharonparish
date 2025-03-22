@@ -9,7 +9,7 @@
 
         <mat-form-field>
             <mat-label>{{t(KEY.EMAIL)}}</mat-label>
-            <input matInput formControlName="email" placeholder="name@example.com">
+            <input matInput formControlName="email" placeholder="name@example.com" type="email" autocomplete="on">
             @if (this.emailFC.invalid) {
             <mat-error>{{t(KEY.INVALID_EMAIL_MGS)}}</mat-error>
             }

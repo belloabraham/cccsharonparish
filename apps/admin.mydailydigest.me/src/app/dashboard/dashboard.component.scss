@@ -10,6 +10,10 @@ nav {
   background: var(--mat-sys-surface-container-low);
 }
 
+.tui-avatar::before {
+  cursor: pointer !important;
+}
+
 .route {
   margin-top: 5rem;
 }

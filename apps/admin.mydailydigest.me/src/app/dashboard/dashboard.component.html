@@ -86,7 +86,7 @@
 
             <div>
                 <div [matMenuTriggerFor]="accountMenu" matRipple>
-                    <tui-avatar size="s"
+                    <tui-avatar size="s" class="tui-avatar"
                         [src]="(userDataStore.user()?.imageUrl || '')  | tuiFallbackSrc: '@tui.user' | async" />
                 </div>
 
