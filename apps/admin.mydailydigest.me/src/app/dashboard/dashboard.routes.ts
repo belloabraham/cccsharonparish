@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
-import { ROUTE } from '@cccsharonparish/mydailydigest';
+import { ENGLISH_LANG_CODE, ROUTE } from '@cccsharonparish/mydailydigest';
 import { DASHBOARD_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { inject } from '@angular/core';
 import { PublishedContentStore } from './published-content/published-content-store';
@@ -19,11 +19,11 @@ export const DASHBOARD_ROUTES: Routes = [
       {
         path: ROUTE.ROOT,
         pathMatch: 'full',
-        redirectTo: ROUTE.PUBLISHED,
+        redirectTo: `${ROUTE.NEW}/${ENGLISH_LANG_CODE}`,
       },
       {
         path: ROUTE.PUBLISHED,
-        providers:[PublishedContentStore],
+        providers: [PublishedContentStore],
         data: {
           breadcrumb: KEY.PUBLISHED,
         },
@@ -45,7 +45,7 @@ export const DASHBOARD_ROUTES: Routes = [
       {
         path: `${ROUTE.NEW}/:${ROUTE.PARAMS.LANGUAGE_CODE}`,
         resolve: {
-          data: () =>  inject(ContentStore).getDraftContents(),
+          data: () => inject(ContentStore).getDraftContents(),
         },
         data: {
           breadcrumb: KEY.DRAFT,

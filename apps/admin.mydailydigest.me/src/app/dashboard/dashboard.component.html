@@ -117,14 +117,14 @@
                 </button>
             </header>
 
-            <a class="nav-item" matRipple [routerLink]="[ROUTE.PUBLISHED]" routerLinkActive="link-active">
-                <mat-icon fontIcon="bookshelf-fill"></mat-icon>
-                {{t(KEY.PUBLISHED)}}
-            </a>
-
             <a [routerLink]="[ROUTE.NEW, DEFAULT_LANG_CODE]" routerLinkActive="link-active" class="nav-item" matRipple>
                 <mat-icon fontIcon="add-note-outline"></mat-icon>
                 {{t(KEY.ADD_NEW)}}
+            </a>
+
+            <a class="nav-item" matRipple [routerLink]="[ROUTE.PUBLISHED]" routerLinkActive="link-active">
+                <mat-icon fontIcon="bookshelf-fill"></mat-icon>
+                {{t(KEY.PUBLISHED)}}
             </a>
 
             <a *ngIf="thereIsContentAwaitingApproval && isPublisher" [routerLink]="[ROUTE.AWAITING_APPROVAL]"
@@ -164,8 +164,8 @@
 
             <footer class="flex flex-col">
 
-                <a *ngIf="isAdmin && thereAreEditors" [routerLink]="[ROUTE.EDITORS]" routerLinkActive="link-active-light" class="nav-item"
-                    matRipple type="button">
+                <a *ngIf="isAdmin && thereAreEditors" [routerLink]="[ROUTE.EDITORS]"
+                    routerLinkActive="link-active-light" class="nav-item" matRipple type="button">
                     <mat-icon fontIcon="spark-user-outline"></mat-icon>
                     {{t(KEY.EDITORS)}}
                 </a>
@@ -187,14 +187,14 @@
     <aside (click)="closeSideDrawer()" *transloco="let t" class="!pt-8 !pb-4 aside"
         [tuiNavigationAside]="expandSideNav()">
 
-        <a tuiAsideItem matRipple [routerLink]="[ROUTE.PUBLISHED]">
-            <mat-icon fontIcon="bookshelf-fill"></mat-icon>
-            {{t(KEY.PUBLISHED)}}
-        </a>
-
         <a [routerLink]="[ROUTE.NEW, DEFAULT_LANG_CODE]" tuiAsideItem matRipple>
             <mat-icon fontIcon="add-note-outline"></mat-icon>
             {{t(KEY.ADD_NEW)}}
+        </a>
+
+        <a tuiAsideItem matRipple [routerLink]="[ROUTE.PUBLISHED]">
+            <mat-icon fontIcon="bookshelf-fill"></mat-icon>
+            {{t(KEY.PUBLISHED)}}
         </a>
 
         <a *ngIf="thereIsContentAwaitingApproval && isPublisher" [routerLink]="[ROUTE.AWAITING_APPROVAL]" tuiAsideItem
@@ -204,8 +204,8 @@
         </a>
 
         <tui-aside-group *ngIf="nonEnglishSupportedLanguages().length > 0 && thereAreApprovedContents">
-            <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].code]"
-                automation-id="setting" tuiAsideItem tuiChevron matRipple type="button">
+            <button [routerLink]="[ROUTE.TRANSLATE, nonEnglishSupportedLanguages()[0].code]" automation-id="setting"
+                tuiAsideItem tuiChevron matRipple type="button">
                 <mat-icon fontIcon="translate-outline"></mat-icon>
                 {{t(KEY.TRANSLATE)}}
                 <ng-template>
