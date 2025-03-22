@@ -31,6 +31,7 @@ import { EditorsService } from './editors.service';
 import { SubSink } from 'subsink';
 import { TuiAlertService } from '@taiga-ui/core';
 import { UserType } from '@cccsharonparish/mydailydigest';
+import { HttpRequestProgressIndicatorService } from '../../services';
 
 @Component({
   selector: 'app-editors',
@@ -63,6 +64,9 @@ export class EditorsComponent implements OnDestroy {
   readonly tablePageSize = signal(100);
   subscriptions = new SubSink();
   private readonly alertService = inject(TuiAlertService);
+  private readonly httpRequestProgressIndicatorService = inject(
+    HttpRequestProgressIndicatorService
+  );
 
   constructor() {
     this.data = computed(() =>
@@ -99,10 +103,12 @@ export class EditorsComponent implements OnDestroy {
   changeUserType(editorTableUIState: EditorTableUIState) {
     const updatedUserType: UserType =
       editorTableUIState.userType === 'Editor' ? 'Publisher' : 'Editor';
+    this.httpRequestProgressIndicatorService.showLoader();
     this.subscriptions.sink = this.editorService
       .changeUserType(editorTableUIState.id, { userType: updatedUserType })
       .subscribe({
         next: () => {
+          this.httpRequestProgressIndicatorService.hideLoader();
           const editors = this.editorsStore.editors();
           editors.find(
             (editor) => editor.id === editorTableUIState.id
@@ -116,7 +122,7 @@ export class EditorsComponent implements OnDestroy {
             .subscribe();
         },
         error: (error) => {
-          console.error(error);
+          this.httpRequestProgressIndicatorService.hideLoader();
           this.alertService
             .open(
               'Unable to update user type, check your internet connection and try again',

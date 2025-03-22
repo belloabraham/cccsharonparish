@@ -100,12 +100,17 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
   }
 
   private verifyEmail(email: string, onError?: (error: any) => void) {
+    this.httpRequestProgressIndicatorService.showLoader();
     this.auth.signInWithEmailLink(email, location.href).subscribe({
       next: () => {
+        this.httpRequestProgressIndicatorService.hideLoader();
         localStorage.removeItem(Settings.loginEmailKey(environment.domain));
         this.router.navigate([ROUTE.ROOT]);
       },
-      error: onError,
+      error: (error) => {
+        this.httpRequestProgressIndicatorService.hideLoader();
+        onError?.(error);
+      },
     });
   }
 

@@ -487,12 +487,12 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       )
       .subscribe({
         next: (data) => {
+          this.httpRequestProgressIndicatorService.hideLoader();
           this.showAlertSuccessMessage(
             this.KEY.CONTENT_UPDATED_SUCCESS_MSG,
             this.KEY.UPDATED
           );
           this.updateCurrentTableUI(this.rootDataPath, data);
-          this.httpRequestProgressIndicatorService.hideLoader();
           this.closeDialog();
         },
         error: () => {
@@ -572,6 +572,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
       .createContent(newContent, this.language()!, COLLECTION.DRAFT)
       .subscribe({
         next: (data) => {
+          this.httpRequestProgressIndicatorService.hideLoader();
           this.showAlertSuccessMessage(
             this.KEY.CONTENT_CREATED_SUCCESS_MSG,
             this.KEY.CREATED
@@ -580,7 +581,6 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
             ...this.contentStore.draftContents(),
             data,
           ]);
-          this.httpRequestProgressIndicatorService.hideLoader();
           this.closeDialog();
         },
         error: (error) => {
@@ -614,7 +614,6 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
         this.failedAudioFile$.next(null);
         this.loadingAudioFile$.next(file);
         this.loadedAudioFile$ = of(null);
-
         this.contentService
           .uploadAudio(file, [
             this.rootStoragePath,

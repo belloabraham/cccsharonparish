@@ -75,6 +75,7 @@ export class ApprovedComponent extends NewContentComponent {
 
   async publish(approvedContent: ISpiritualDailyDigest, topic: string) {
     try {
+      this.httpRequestProgressIndicatorService.showLoader();
       await this.approvedService.publish(approvedContent);
       this.showPublishSuccessAlert(`${topic} was successfully published`);
       const remainingApprovedContent = this.contentStore
@@ -88,11 +89,14 @@ export class ApprovedComponent extends NewContentComponent {
       this.showPublishFailedAlert(
         `Unable to publish ${topic}, check your internet connection and try again.`
       );
+    } finally {
+      this.httpRequestProgressIndicatorService.hideLoader();
     }
   }
 
   async publishAll() {
     try {
+      this.httpRequestProgressIndicatorService.showLoader();
       await this.approvedService.publishAll(this.approvedContentData!());
       this.showPublishSuccessAlert(
         `All approved content was published successfully`
@@ -103,6 +107,8 @@ export class ApprovedComponent extends NewContentComponent {
       this.showPublishFailedAlert(
         'Unable to publish approved contents, check your internet connection and try again.'
       );
+    } finally {
+      this.httpRequestProgressIndicatorService.hideLoader();
     }
   }
 

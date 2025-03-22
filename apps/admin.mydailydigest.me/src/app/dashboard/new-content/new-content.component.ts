@@ -34,7 +34,11 @@ import {
 import { TuiDialogService } from '@taiga-ui/core';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
 import { DashboardStore } from '../dashboard.store';
-import { COLLECTION, STORAGE_PATH } from '../../services';
+import {
+  COLLECTION,
+  HttpRequestProgressIndicatorService,
+  STORAGE_PATH,
+} from '../../services';
 import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
 import { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { LanguageResourceService } from '@cccsharonparish/angular';
@@ -68,6 +72,9 @@ export class NewContentComponent implements OnDestroy {
   contentStore = inject(ContentStore);
   dashboardStore = inject(DashboardStore);
   private readonly draftService = inject(DraftService);
+  readonly httpRequestProgressIndicatorService = inject(
+    HttpRequestProgressIndicatorService
+  );
 
   protected readonly alertService = inject(TuiAlertService);
   protected readonly alertDialogService = inject(AlertDialogService);
@@ -174,6 +181,7 @@ export class NewContentComponent implements OnDestroy {
 
   async submitForReview(existingContent: ISpiritualDailyDigest, index: number) {
     try {
+      this.httpRequestProgressIndicatorService.showLoader();
       await this.draftService.submitForReview(existingContent);
       this.contentStore.draftContents()[index].isAwaitingApproval = true;
       this.contentStore.updateDraftContents([
@@ -196,6 +204,8 @@ export class NewContentComponent implements OnDestroy {
           }
         )
         .subscribe();
+    } finally {
+      this.httpRequestProgressIndicatorService.hideLoader();
     }
   }
 
@@ -212,8 +222,10 @@ export class NewContentComponent implements OnDestroy {
   }
 
   deleteContent(draftId: string) {
+    this.httpRequestProgressIndicatorService.showLoader();
     this.subscriptions.sink = this.draftService.deleteDraft(draftId).subscribe({
       next: () => {
+        this.httpRequestProgressIndicatorService.hideLoader();
         const undeletedDrafts = this.contentStore
           .draftContents()
           .filter((draft) => draft.id !== draftId);
@@ -226,6 +238,7 @@ export class NewContentComponent implements OnDestroy {
           .subscribe();
       },
       error: () => {
+        this.httpRequestProgressIndicatorService.hideLoader();
         this.alertService
           .open(
             'Unable to delete draft content, check your internet connection and try again.',

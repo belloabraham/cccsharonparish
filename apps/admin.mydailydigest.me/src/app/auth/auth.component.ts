@@ -112,12 +112,15 @@ export class AuthComponent extends CommonComponent implements OnInit {
   }
 
   sendSignInLinkTo(email: string) {
+    this.httpRequestProgressIndicatorService.showLoader();
     this.auth.sendSignInLinkTo(email).subscribe({
       next: () => {
         localStorage.setItem(Settings.loginEmailKey(environment.domain), email);
         this.showMailSentSuccessAlert(email);
+        this.httpRequestProgressIndicatorService.hideLoader();
       },
       error: (error) => {
+        this.httpRequestProgressIndicatorService.hideLoader();
         const message = AuthError.message(error.code);
         this.alertService
           .open(message, {

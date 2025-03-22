@@ -23,7 +23,7 @@ import { HttpRequestProgressIndicatorService } from '../../services';
 import {
   CustomValidators,
   LanguageResourceService,
-   MDDFileUploadDirective,
+  MDDFileUploadDirective,
 } from '@cccsharonparish/angular';
 import { IUserUIState } from '@cccsharonparish/mydailydigest';
 import { SubSink } from 'subsink';
@@ -92,14 +92,17 @@ export class ProfileComponent implements OnInit, AfterViewInit {
 
   uploadProfileImage(file: File) {
     this.uploadingProfileImage.set(true);
+    this.httpRequestProgressIndicatorService.showLoader();
     this.profileService.uploadProfileImage(file).subscribe({
       next: (uploadResult) => {
+        this.httpRequestProgressIndicatorService.hideLoader();
         this.imageUrl.set(
           `${environment.cdnBaseUrl}/${uploadResult.metadata.fullPath}`
         );
         this.uploadingProfileImage.set(false);
       },
       error: () => {
+        this.httpRequestProgressIndicatorService.hideLoader();
         this.uploadingProfileImage.set(false);
       },
     });
@@ -120,11 +123,14 @@ export class ProfileComponent implements OnInit, AfterViewInit {
       phone: value.phone!,
       imageUrl: this.imageUrl(),
     };
+    this.httpRequestProgressIndicatorService.showLoader();
     this.subscriptions.sink = this.userDataStore.updateUser(user).subscribe({
       next: () => {
+        this.httpRequestProgressIndicatorService.hideLoader();
         this.showUserUpdateSuccessAlert();
       },
       error: () => {
+        this.httpRequestProgressIndicatorService.hideLoader();
         this.showFailedUserUpdateAlert();
       },
     });

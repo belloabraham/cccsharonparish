@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import {
   HttpEvent,
   HttpHandler,
@@ -11,16 +11,15 @@ import { HttpRequestProgressIndicatorService } from '../services';
 
 @Injectable()
 export class HttpProgressInterceptorService implements HttpInterceptor {
-  constructor(
-    private httpRequestLoadingIndicatorService: HttpRequestProgressIndicatorService
-  ) {}
+  private httpRequestLoadingIndicatorService = inject(
+    HttpRequestProgressIndicatorService
+  );
 
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     this.httpRequestLoadingIndicatorService.showLoader();
-
     return next.handle(req).pipe(
       finalize(() => {
         this.httpRequestLoadingIndicatorService.hideLoader();

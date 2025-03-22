@@ -32,7 +32,11 @@ import {
 import { TuiDialogService } from '@taiga-ui/core';
 import { PolymorpheusComponent } from '@taiga-ui/polymorpheus';
 import { DashboardStore } from '../dashboard.store';
-import { COLLECTION, STORAGE_PATH } from '../../services';
+import {
+  COLLECTION,
+  HttpRequestProgressIndicatorService,
+  STORAGE_PATH,
+} from '../../services';
 import { TUI_DEFAULT_MATCHER, tuiIsPresent } from '@taiga-ui/cdk';
 import { TuiTablePaginationEvent } from '@taiga-ui/addon-table';
 import { LanguageResourceService } from '@cccsharonparish/angular';
@@ -67,6 +71,9 @@ export class AwaitingApprovalComponent implements OnDestroy {
   private readonly awaitingApprovalService = inject(AwaitingApprovalService);
   private readonly alertService = inject(TuiAlertService);
   private readonly router = inject(Router);
+  private readonly httpRequestProgressIndicatorService = inject(
+    HttpRequestProgressIndicatorService
+  );
 
   private injector = inject(Injector);
   subscriptions = new SubSink();
@@ -144,6 +151,7 @@ export class AwaitingApprovalComponent implements OnDestroy {
     contentAwaitingApproval: ISpiritualDailyDigest
   ) {
     try {
+      this.httpRequestProgressIndicatorService.showLoader();
       await this.awaitingApprovalService.markAsApproved(
         contentAwaitingApproval
       );
@@ -165,6 +173,8 @@ export class AwaitingApprovalComponent implements OnDestroy {
           }
         )
         .subscribe();
+    } finally {
+      this.httpRequestProgressIndicatorService.hideLoader();
     }
   }
 
