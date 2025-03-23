@@ -1,7 +1,7 @@
 <div *transloco="let t">
     <h5 class="page-title">{{t(KEY.PUBLISHED)}}</h5>
 
-    @let publishedContentYears = contentStore.publishedContentYears();
+    @let publishedContentYears = publishedContentStore.publishedContentYears();
     @let contentIsEmpty = publishedContentYears.length === 0;
 
     @if (!contentIsEmpty) {

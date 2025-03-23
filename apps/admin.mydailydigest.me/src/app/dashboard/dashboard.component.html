@@ -156,7 +156,7 @@
 
             </ng-container>
 
-            <a *ngIf="thereAreApprovedContents" [routerLink]="[ROUTE.APPROVED]" routerLinkActive="link-active"
+            <a *ngIf="thereAreApprovedContents && isPublisher" [routerLink]="[ROUTE.APPROVED]" routerLinkActive="link-active"
                 class="nav-item" matRipple>
                 <mat-icon fontIcon="check-box-outline"></mat-icon>
                 {{t(KEY.APPROVED)}}
@@ -220,7 +220,7 @@
             </button>
         </tui-aside-group>
 
-        <a *ngIf="thereAreApprovedContents" [routerLink]="[ROUTE.APPROVED]" tuiAsideItem matRipple>
+        <a *ngIf="thereAreApprovedContents && isPublisher" [routerLink]="[ROUTE.APPROVED]" tuiAsideItem matRipple>
             <mat-icon fontIcon="check-box-outline"></mat-icon>
             {{t(KEY.APPROVED)}}
         </a>

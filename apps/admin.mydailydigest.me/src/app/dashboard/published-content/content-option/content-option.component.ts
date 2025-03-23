@@ -23,6 +23,6 @@ import { ROUTE } from '@cccsharonparish/mydailydigest';
 })
 export class ContentOptionComponent {
   readonly KEY = PUBLISHED_CONTENT_OPTION_STRING_RESOURCE_KEY;
-  readonly contentStore = inject(PublishedContentStore);
+  readonly publishedContentStore = inject(PublishedContentStore);
   ROUTE = ROUTE;
 }
