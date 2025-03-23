@@ -115,8 +115,8 @@ export class EditorsComponent implements OnDestroy {
           )!.userType = updatedUserType;
           this.editorsStore.updateEditors([...editors]);
           this.alertService
-            .open('User type was updated successfully', {
-              label: 'Update was successful',
+            .open('Update was successful', {
+              label: 'User type was updated successfully',
               appearance: 'positive',
             })
             .subscribe();
@@ -124,13 +124,11 @@ export class EditorsComponent implements OnDestroy {
         error: (error) => {
           this.httpRequestProgressIndicatorService.hideLoader();
           this.alertService
-            .open(
-              'Unable to update user type, check your internet connection and try again',
-              {
-                label: 'Error',
-                appearance: 'negative',
-              }
-            )
+            .open('Error', {
+              label:
+                'Unable to update user type, check your internet connection and try again',
+              appearance: 'negative',
+            })
             .subscribe();
         },
       });

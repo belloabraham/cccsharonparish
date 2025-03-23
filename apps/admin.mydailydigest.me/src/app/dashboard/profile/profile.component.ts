@@ -150,8 +150,8 @@ export class ProfileComponent implements OnInit, AfterViewInit {
       this.KEY.PROFILE_UPDATE_ERR_MSG
     );
     this.alertService
-      .open(message, {
-        label: 'Error',
+      .open('Error', {
+        label: message,
         appearance: 'negative',
       })
       .subscribe();
@@ -163,8 +163,8 @@ export class ProfileComponent implements OnInit, AfterViewInit {
     );
     const title = this.languageResourceService.getString(this.KEY.UPDATED);
     this.alertService
-      .open(message, {
-        label: title,
+      .open(title, {
+        label: message,
         appearance: 'positive',
       })
       .subscribe();

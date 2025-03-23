@@ -114,8 +114,8 @@ export class ApprovedComponent extends NewContentComponent {
 
   showPublishSuccessAlert(message: string) {
     this.alertService
-      .open(message, {
-        label: 'Published',
+      .open('Published', {
+        label: message,
         appearance: 'positive',
       })
       .subscribe();
@@ -123,8 +123,8 @@ export class ApprovedComponent extends NewContentComponent {
 
   showPublishFailedAlert(message: string) {
     this.alertService
-      .open(message, {
-        label: 'Error',
+      .open('Error', {
+        label: message,
         appearance: 'negative',
       })
       .subscribe();

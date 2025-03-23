@@ -158,20 +158,17 @@ export class AwaitingApprovalComponent implements OnDestroy {
       this.updateUIContent(contentAwaitingApproval.id);
       this.loadApprovedContents();
       this.alertService
-        .open(`${topic} was approved successfully`, {
-          label: 'Approved',
+        .open('Approved', {
+          label: `${topic} was approved successfully`,
           appearance: 'positive',
         })
         .subscribe();
     } catch (error) {
       this.alertService
-        .open(
-          `Unable to approve ${topic}, check your internet connection and try again.`,
-          {
-            label: 'Error',
-            appearance: 'negative',
-          }
-        )
+        .open('Error', {
+          label: `Unable to approve ${topic}, check your internet connection and try again.`,
+          appearance: 'negative',
+        })
         .subscribe();
     } finally {
       this.httpRequestProgressIndicatorService.hideLoader();
@@ -190,7 +187,10 @@ export class AwaitingApprovalComponent implements OnDestroy {
       next: () => {
         if (this.contentStore.contentAwaitingApproval().length === 0) {
           const translateRouteLanguages = this.getTranslateRouteLanguages();
-          this.router.navigate([ROUTE.TRANSLATE, translateRouteLanguages[0].code]);
+          this.router.navigate([
+            ROUTE.TRANSLATE,
+            translateRouteLanguages[0].code,
+          ]);
         }
       },
     });

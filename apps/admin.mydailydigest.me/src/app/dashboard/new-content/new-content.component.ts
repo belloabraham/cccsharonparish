@@ -189,20 +189,18 @@ export class NewContentComponent implements OnDestroy {
       ]);
       this.getContentsAwaitingApproval();
       this.alertService
-        .open('Content was submitted successfully', {
-          label: 'Submitted for review',
+        .open('Submitted for review', {
+          label: 'Content was submitted successfully',
           appearance: 'positive',
         })
         .subscribe();
     } catch (_) {
       this.alertService
-        .open(
-          'Unable to submit content for review, check your internet connection and try again.',
-          {
-            label: 'Error',
-            appearance: 'negative',
-          }
-        )
+        .open('Error', {
+          label:
+            'Unable to submit content for review, check your internet connection and try again.',
+          appearance: 'negative',
+        })
         .subscribe();
     } finally {
       this.httpRequestProgressIndicatorService.hideLoader();
@@ -231,8 +229,8 @@ export class NewContentComponent implements OnDestroy {
           .filter((draft) => draft.id !== draftId);
         this.contentStore.updateDraftContents(undeletedDrafts);
         this.alertService
-          .open('Draft content was deleted successfully', {
-            label: 'Deleted',
+          .open('Deleted', {
+            label: 'Draft content was deleted successfully',
             appearance: 'positive',
           })
           .subscribe();
