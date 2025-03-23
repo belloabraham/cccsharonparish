@@ -1,4 +1,11 @@
-import { Component, computed, inject, OnInit, Signal, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  inject,
+  OnInit,
+  Signal,
+  signal,
+} from '@angular/core';
 import { NewContentComponent } from '../new-content/new-content.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,7 +28,7 @@ import {
 import { tuiIsPresent } from '@taiga-ui/cdk';
 import { CommonModule } from '@angular/common';
 import { COLLECTION, STORAGE_PATH } from '../../services';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-translate',
@@ -60,6 +67,12 @@ export class TranslateComponent extends NewContentComponent implements OnInit {
     if (thereAreNoContents) {
       this.router.navigate([ROUTE.NEW, ENGLISH_LANG_CODE]);
     }
+  }
+
+  getExistingContent(id: string) {
+    return this.contentStore
+      .approvedContent()
+      .find((content) => content.id === id)!;
   }
 
   translate(

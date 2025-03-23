@@ -166,14 +166,14 @@ export class NewContentComponent implements OnDestroy {
       .subscribe({
         next: (isYes) => {
           if (isYes) {
-            const existingContent = this.getExistingContent(id);
+            const existingContent = this._getExistingContent(id);
             this.submitForReview(existingContent, index);
           }
         },
       });
   }
 
-  getExistingContent(id: string) {
+  _getExistingContent(id: string) {
     return this.contentStore
       .draftContents()
       .find((content) => content.id === id)!;
@@ -212,7 +212,7 @@ export class NewContentComponent implements OnDestroy {
   }
 
   editContent(existingContentTableUIState: ISpiritualDailyDigestTableUIState) {
-    const existingSDDContent = this.getExistingContent(
+    const existingSDDContent = this._getExistingContent(
       existingContentTableUIState.id
     );
     const { sn, ...existingContentUIState } = existingContentTableUIState;

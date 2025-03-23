@@ -34,7 +34,12 @@
                                 {{ t(column)}}
                             </th>
                             }
-                            @else if (isSortableColumns) {
+                            @else if (column === "reflection" || column === "supplication") {
+                            <th *tuiHead="column" class="message-column" [tuiSortable]="false" tuiTh [sticky]="true"
+                                [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
+                                {{ t(column)}}
+                            </th>
+                            }@else if (isSortableColumns) {
                             <th *tuiHead="column" tuiSortable tuiTh [sticky]="true"
                                 [style.top.px]="-(viewport.getOffsetToRenderedContentStart() || 0)">
                                 {{ t(column)}}
@@ -61,7 +66,7 @@
 
                                 <button (click)="translate(item, languageContent)" mat-button> <mat-icon
                                         fontIcon="translate-fill"></mat-icon>
-                                    {{ t( KEY.TRANSLATE)}} "{{languageContent.topic}}"</button>
+                                    {{ t( KEY.TRANSLATE)}} "{{englishContent.topic}}"</button>
 
                             </td>
                         </tr>

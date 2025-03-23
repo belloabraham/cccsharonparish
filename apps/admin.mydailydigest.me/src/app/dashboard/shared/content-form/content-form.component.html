@@ -5,10 +5,10 @@
         {{t(KEY.REQUIRED_FIELD_MESSAGE)}}</tui-notification>
 
     <div class="flex gap-4" *ngIf="englishVersion">
-        <button (click)="copyEngVersion()" mat-button> <mat-icon fontIcon="copy-note-fill"></mat-icon>
+        <button type="button" (click)="copyEngVersion()" mat-button> <mat-icon fontIcon="copy-note-fill"></mat-icon>
             {{t(KEY.COPY_ENG_VERSION)}}</button>
 
-        <button class="!capitalize" (click)="pasteTranslation()" mat-button>
+        <button type="button" class="!capitalize" (click)="pasteTranslation()" mat-button>
             <mat-icon fontIcon="water-drop-fill"></mat-icon>
             {{t(KEY.PASTE_TRANSLATION)}}</button>
     </div>
@@ -98,7 +98,7 @@ As a Christian, you are likely to encounter difficulties even after acknowledgin
             @for (tag of tags(); track tags) {
             <mat-chip-row (removed)="removeATag(tag)">
                 {{tag}}
-                <button matChipRemove>
+                <button matChipRemove type="button">
                     <mat-icon fontIcon="close-fill"></mat-icon>
                 </button>
             </mat-chip-row>
@@ -129,12 +129,12 @@ As a Christian, you are likely to encounter difficulties even after acknowledgin
                 </div>
                 <div *ngIf="imageUploadState() !== 'uploading'" class="flex justify-end gap-2 image-controls">
 
-                    <button *ngIf="imageAttached()" [matTooltip]="t(KEY.CROP_AND_UPLOAD_IMG)" (click)="uploadImage()"
+                    <button type="button" *ngIf="imageAttached()" [matTooltip]="t(KEY.CROP_AND_UPLOAD_IMG)" (click)="uploadImage()"
                         type="button" mat-icon-button>
                         <mat-icon fontIcon="upload-fill" class="upload-icon"></mat-icon>
                     </button>
 
-                    <button [matTooltip]="t(KEY.RESET_CROP_CHANGES)"
+                    <button  [matTooltip]="t(KEY.RESET_CROP_CHANGES)"
                         *ngIf="imageAttached() && cropperState()==='touched'" (click)="resetCropper()" type="button"
                         mat-icon-button>
                         <mat-icon fontIcon="reset-left-outline"></mat-icon>
