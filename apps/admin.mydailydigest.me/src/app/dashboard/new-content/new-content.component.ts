@@ -283,6 +283,7 @@ export class NewContentComponent implements OnDestroy {
       draftContents,
       ENGLISH_LANG_CODE
     );
+
     return tableUIState;
   }
 

@@ -10,24 +10,18 @@
 
         <div *ngIf="contentIsEmpty" class="card inline-block !p-0">
                 <nav class="nav px-4 py-2 flex gap-4 items-center justify-between">
-
                         <span></span>
-
                         <button (click)="openContentDialog()" class="fab" mat-mini-fab>
                                 <mat-icon fontIcon="plus-fill"></mat-icon>
                         </button>
                 </nav>
-
                 <hr>
-
                 <div class="p-4">
                         <app-empty-status [description]="t(KEY.NO_ADDED_CONTENT_MSG)" />
-
                 </div>
         </div>
 
         <ng-container *ngIf="!contentIsEmpty">
-
                 <div class="flex ps-1 mb-4 gap-4 items-center">
                         <tui-textfield class="flex-1" tuiTextfieldSize="m" iconStart="@tui.search">
                                 <input [(ngModel)]="searchQuery" [placeholder]="t(KEY.SEARCH_PLACEHOLDER)"
@@ -54,7 +48,7 @@
 
                                                                 @let columnsWithMinWidth = column === "verses" || column
                                                                 === "supplication" || column === "reflection";
-                                                                
+
                                                                 @let isSortableColumns = column === "sn" || column ===
                                                                 "reference" || column ===
                                                                 "topic";
@@ -105,16 +99,16 @@
                                                                 <td [colSpan]="tableColumns.length"
                                                                         class="border-x-1 border-b border-x px-4">
 
-                                                                        <button (click)="editContent(item)"
-                                                                                mat-button> <mat-icon
+                                                                        <button (click)="editContent(item)" mat-button>
+                                                                                <mat-icon
                                                                                         fontIcon="pen-fill"></mat-icon>
                                                                                 {{t(KEY.EDIT)}}</button>
 
                                                                         <button [class.cursor-not-allowed]="item.isAwaitingApproval"
                                                                                 [disabled]="item.isAwaitingApproval"
                                                                                 (click)="submitForReviewPrompt(item['topic'], item.id, dataIndex)"
-                                                                                mat-button> <mat-icon
-                                                                                        fontIcon="file-upload-fill"></mat-icon>
+                                                                                mat-button>
+                                                                                <mat-icon fontIcon="file-upload-fill"></mat-icon>
                                                                                 {{t(KEY.SUBMIT_FOR_REVIEW)}}</button>
 
                                                                         <button (click)="deleteContentPrompt(item.topic, item.id)"
@@ -157,8 +151,7 @@
                                                                         }@else {
                                                                         <td *tuiCell="key" tuiTd
                                                                                 [class.match]="isColumnMatch(item[key])">
-                                                                                {{
-                                                                                item[key]}}
+                                                                                {{ item[key]}}
                                                                         </td>
                                                                         }
 

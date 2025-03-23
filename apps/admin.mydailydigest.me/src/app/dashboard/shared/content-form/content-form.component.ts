@@ -568,10 +568,10 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
             this.KEY.CONTENT_CREATED_SUCCESS_MSG,
             this.KEY.CREATED
           );
-          this.contentStore.updateDraftContents([
-            ...this.contentStore.draftContents(),
-            data,
-          ]);
+          const otherContents = this.contentStore
+            .draftContents()
+            .filter((content) => content.id !== data.id);
+          this.contentStore.updateDraftContents([...otherContents, data]);
           this.closeDialog();
         },
         error: (error) => {
