@@ -1,4 +1,10 @@
-import { Component, inject, OnDestroy } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  inject,
+  OnDestroy,
+  viewChild,
+} from '@angular/core';
 import {
   CommonComponent,
   PAGE_TITLE_KEY,
@@ -36,6 +42,14 @@ export class SignUpComponent extends CommonComponent implements OnDestroy {
   private readonly alertService = inject(TuiAlertService);
   private readonly languageResourceService = inject(LanguageResourceService);
   private readonly userDataStore = inject(UserDataStore);
+  userDataForm = viewChild.required<UserDataComponent>('userDataForm');
+
+  @HostListener('window:keydown', ['$event'])
+  async handlePasteShortcut(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.onSubmit(this.userDataForm().form);
+    }
+  }
 
   onSubmit(form: FormGroup<UserDataForm>) {
     form.markAllAsTouched();

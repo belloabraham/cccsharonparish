@@ -8,7 +8,7 @@
         <button (click)="copyEngVersion()" mat-button> <mat-icon fontIcon="copy-note-fill"></mat-icon>
             {{t(KEY.COPY_ENG_VERSION)}}</button>
 
-        <button *ngIf="showPasteTranslation()" class="!capitalize" (click)="pasteTranslation()" mat-button>
+        <button class="!capitalize" (click)="pasteTranslation()" mat-button>
             <mat-icon fontIcon="water-drop-fill"></mat-icon>
             {{t(KEY.PASTE_TRANSLATION)}}</button>
     </div>

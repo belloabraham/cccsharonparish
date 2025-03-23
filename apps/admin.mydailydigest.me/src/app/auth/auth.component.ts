@@ -1,4 +1,4 @@
-import { Component, effect, inject, OnInit } from '@angular/core';
+import { Component, effect, HostListener, inject, OnInit } from '@angular/core';
 import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
 import {
   FormControl,
@@ -44,9 +44,7 @@ export class AuthComponent extends CommonComponent implements OnInit {
   private readonly languageResourceService = inject(LanguageResourceService);
   private readonly auth = inject(AUTH_TOKEN);
   private readonly alertService = inject(TuiAlertService);
-
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
-
   stringResources!: {
     login_error_title: string;
     login_error_message: string;
@@ -54,6 +52,13 @@ export class AuthComponent extends CommonComponent implements OnInit {
     link_sent_title: string;
     link_sent_message?: string;
   };
+
+  @HostListener('window:keydown', ['$event'])
+  async handlePasteShortcut(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.onSubmit();
+    }
+  }
 
   constructor() {
     super();

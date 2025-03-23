@@ -1,4 +1,4 @@
-import { Component, effect, inject, OnInit } from '@angular/core';
+import { Component, effect, HostListener, inject, OnInit } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { LanguageResourceService } from '@cccsharonparish/angular';
@@ -50,14 +50,19 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
   private readonly alertService = inject(TuiAlertService);
   private readonly languageResourceService = inject(LanguageResourceService);
   isLoading = this.httpRequestProgressIndicatorService.isLoading;
-
   private signInMail = localStorage.getItem(
     Settings.loginEmailKey(environment.domain)
   );
-
   stringResources!: {
     login_error_title: string;
   };
+
+  @HostListener('window:keydown', ['$event'])
+  async handlePasteShortcut(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.onSubmit();
+    }
+  }
 
   constructor() {
     super();

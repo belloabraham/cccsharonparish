@@ -1,6 +1,7 @@
 import {
   AfterViewInit,
   Component,
+  HostListener,
   inject,
   OnInit,
   signal,
@@ -71,6 +72,14 @@ export class ProfileComponent implements OnInit, AfterViewInit {
   private readonly profileService = inject(ProfileService);
   private readonly languageResourceService = inject(LanguageResourceService);
   private readonly alertService = inject(TuiAlertService);
+  userDataForm = viewChild.required<UserDataComponent>('userDataForm');
+
+  @HostListener('window:keydown', ['$event'])
+  async handlePasteShortcut(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.onSubmit(this.userDataForm().form);
+    }
+  }
 
   ngOnInit(): void {
     this.profileImageFC.valueChanges.subscribe({

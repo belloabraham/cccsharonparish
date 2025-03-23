@@ -58,7 +58,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltip } from '@angular/material/tooltip';
 import { Clipboard } from '@angular/cdk/clipboard';
-
 import type { TuiFileLike } from '@taiga-ui/kit';
 import { TuiFiles } from '@taiga-ui/kit';
 import { Observable } from 'rxjs';
@@ -122,7 +121,6 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   rootDataPath = '';
   existingContentUIState?: ISpiritualDailyDigestUIState;
   existingContent?: ISpiritualDailyDigest;
-  showPasteTranslation = signal(false);
   private clipboard = inject(Clipboard);
 
   protected maxImageSizeExceededError: TuiValidationError<
@@ -168,6 +166,13 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   private readonly alertService = inject(TuiAlertService);
   private readonly languageResourceService = inject(LanguageResourceService);
 
+  @HostListener('window:keydown', ['$event'])
+  async handlePasteShortcut(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.onSubmit();
+    }
+  }
+
   constructor(
     @Inject(POLYMORPHEUS_CONTEXT)
     private readonly dialogContext: TuiDialogContext<IDialogData, IDialogData>
@@ -188,21 +193,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
     }
   }
 
-  @HostListener('window:keydown', ['$event'])
-  async handlePasteShortcut(event: KeyboardEvent) {
-    if (event.ctrlKey || event.metaKey) {
-      event.preventDefault();
-      if (event.key === 'v') {
-        await this.pasteTranslation();
-      }
-      if (event.key === 'c') {
-        await this.copyEngVersion();
-      }
-    }
-  }
-
   copyEngVersion() {
-    this.showPasteTranslation.set(true);
     this.clipboard.copy(this.getTextEnglishVersion(this.englishVersion!));
     this.alertService
       .open('Copied', {
