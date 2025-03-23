@@ -11,12 +11,10 @@ import {
   mockDashboardStore,
   MockFirebaseStorageService,
   MockFirestoreService,
-} from '../../testing';
+} from '../../test';
 import { DraftService } from './draft.service';
 import { ComponentRef } from '@angular/core';
-import {
-  Storage,
-} from '@angular/fire/storage';
+import { Storage } from '@angular/fire/storage';
 import { DashboardStore } from '../dashboard.store';
 import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 

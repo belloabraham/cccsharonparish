@@ -13,7 +13,7 @@ import {
   MockFirebaseStorageService,
   MockFirestoreService,
   mockUserDataStore,
-} from '../testing';
+} from '../test';
 import { EditorsStore } from './editors/editors.store';
 import { UserDataStore } from '../shared';
 import { ContentStore } from './shared';

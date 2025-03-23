@@ -1,8 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AwaitingApprovalComponent } from './awaiting-approval.component';
-import { AUTH_TOKEN, CLOUD_STORAGE_TOKEN, REMOTE_DATA_TOKEN } from '../../services';
-import {  MockAuthService, mockEditorsStore, MockFirebaseStorageService, MockFirestoreService, mockUserDataStore } from '../../testing';
+import {
+  AUTH_TOKEN,
+  CLOUD_STORAGE_TOKEN,
+  REMOTE_DATA_TOKEN,
+} from '../../services';
+import {
+  MockAuthService,
+  mockEditorsStore,
+  MockFirebaseStorageService,
+  MockFirestoreService,
+  mockUserDataStore,
+} from '../../test';
 import { EditorsStore } from '../editors/editors.store';
 import { UserDataStore } from '../../shared';
 import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';

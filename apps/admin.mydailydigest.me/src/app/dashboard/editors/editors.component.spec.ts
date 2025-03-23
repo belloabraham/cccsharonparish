@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditorsComponent } from './editors.component';
 import { EditorsStore } from './editors.store';
-import { mockEditorsStore, MockFirestoreService } from '../../testing';
+import { mockEditorsStore, MockFirestoreService } from '../../test';
 import { REMOTE_DATA_TOKEN } from '../../services';
 import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 

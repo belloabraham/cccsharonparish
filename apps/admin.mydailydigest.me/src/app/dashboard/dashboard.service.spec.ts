@@ -2,7 +2,11 @@ import { TestBed } from '@angular/core/testing';
 
 import { DashboardService } from './dashboard.service';
 import { AUTH_TOKEN, REMOTE_DATA_TOKEN } from '../services';
-import { MockAuthService, MockFirestoreService, MockLanguageResourceService } from '../testing';
+import {
+  MockAuthService,
+  MockFirestoreService,
+  MockLanguageResourceService,
+} from '../test';
 import { LanguageResourceService } from '@cccsharonparish/angular';
 
 describe('DashboardService', () => {

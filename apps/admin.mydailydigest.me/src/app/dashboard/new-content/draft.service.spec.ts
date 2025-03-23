@@ -1,8 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
 import { DraftService } from './draft.service';
-import { AUTH_TOKEN, CLOUD_STORAGE_TOKEN, REMOTE_DATA_TOKEN } from '../../services';
-import { MockAuthService, MockFirebaseStorageService, MockFirestoreService } from '../../testing';
+import {
+  AUTH_TOKEN,
+  CLOUD_STORAGE_TOKEN,
+  REMOTE_DATA_TOKEN,
+} from '../../services';
+import {
+  MockAuthService,
+  MockFirebaseStorageService,
+  MockFirestoreService,
+} from '../../test';
 
 describe('DraftService', () => {
   let service: DraftService;

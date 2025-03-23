@@ -190,7 +190,7 @@ export class AwaitingApprovalComponent implements OnDestroy {
       next: () => {
         if (this.contentStore.contentAwaitingApproval().length === 0) {
           const translateRouteLanguages = this.getTranslateRouteLanguages();
-          this.router.navigate([ROUTE.TRANSLATE, translateRouteLanguages[0]]);
+          this.router.navigate([ROUTE.TRANSLATE, translateRouteLanguages[0].code]);
         }
       },
     });

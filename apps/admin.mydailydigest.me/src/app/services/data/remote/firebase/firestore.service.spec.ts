@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { FirestoreService } from './firestore.service';
-import { MockFirestoreService } from '../../../../testing';
+import { MockFirestoreService } from '../../../../test';
 
 describe('FirestoreService', () => {
   let service: FirestoreService;

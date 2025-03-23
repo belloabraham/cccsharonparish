@@ -5,7 +5,7 @@ import {
   mockDashboardStore,
   MockFirebaseStorageService,
   MockFirestoreService,
-} from '../../testing';
+} from '../../test';
 import {
   AUTH_TOKEN,
   CLOUD_STORAGE_TOKEN,

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { FirebaseAuthService } from './firebase-auth.service';
-import { MockAuthService } from '../../../testing';
+import { MockAuthService } from '../../../test';
 
 describe('FirebaseAuthService', () => {
   let service: FirebaseAuthService;
@@ -11,7 +11,7 @@ describe('FirebaseAuthService', () => {
       providers: [
         {
           provide: FirebaseAuthService,
-          useClass:MockAuthService
+          useClass: MockAuthService,
         },
       ],
     });

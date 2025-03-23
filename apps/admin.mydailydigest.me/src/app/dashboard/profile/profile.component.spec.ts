@@ -1,8 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfileComponent } from './profile.component';
-import { AUTH_TOKEN, CLOUD_STORAGE_TOKEN, REMOTE_DATA_TOKEN } from '../../services';
-import {  MockAuthService, MockFirebaseStorageService, MockFirestoreService } from '../../testing';
+import {
+  AUTH_TOKEN,
+  CLOUD_STORAGE_TOKEN,
+  REMOTE_DATA_TOKEN,
+} from '../../services';
+import {
+  MockAuthService,
+  MockFirebaseStorageService,
+  MockFirestoreService,
+} from '../../test';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 
@@ -17,7 +25,7 @@ describe('ProfileComponent', () => {
         { provide: REMOTE_DATA_TOKEN, useClass: MockFirestoreService },
         { provide: AUTH_TOKEN, useClass: MockAuthService },
         { provide: CLOUD_STORAGE_TOKEN, useClass: MockFirebaseStorageService },
-        provideAnimationsAsync()
+        provideAnimationsAsync(),
       ],
     }).compileComponents();
 

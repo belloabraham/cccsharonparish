@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuthComponent } from './auth.component';
-import {  MockAuthService } from '../testing';
+import { MockAuthService } from '../test';
 import { AUTH_TOKEN } from '../services';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';

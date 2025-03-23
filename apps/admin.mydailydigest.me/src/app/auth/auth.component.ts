@@ -108,8 +108,8 @@ export class AuthComponent extends CommonComponent implements OnInit {
 
     if (!this.auth.emailIsAuthorized(email)) {
       this.alertService
-        .open(this.stringResources.login_error_message, {
-          label: this.stringResources.login_error_title,
+        .open(this.stringResources.login_error_title, {
+          label: this.stringResources.login_error_message,
           appearance: 'negative',
         })
         .subscribe();
@@ -128,8 +128,8 @@ export class AuthComponent extends CommonComponent implements OnInit {
         this.httpRequestProgressIndicatorService.hideLoader();
         const message = AuthError.message(error.code);
         this.alertService
-          .open(message, {
-            label: this.stringResources.login_error_title,
+          .open(this.stringResources.login_error_title, {
+            label: message,
             appearance: 'negative',
           })
           .subscribe();
@@ -151,8 +151,8 @@ export class AuthComponent extends CommonComponent implements OnInit {
     };
 
     this.alertService
-      .open(this.stringResources.link_sent_message, {
-        label: this.stringResources.link_sent_title,
+      .open(this.stringResources.link_sent_title, {
+        label: this.stringResources.link_sent_message,
         appearance: 'positive',
         autoClose: 6000,
       })

@@ -7,7 +7,7 @@ import {
   mockDashboardStore,
   MockFirestoreService,
   mockPublishedContentStore,
-} from '../../../testing';
+} from '../../../test';
 import { PublishedContentStore } from '../published-content-store';
 import { DashboardStore } from '../../dashboard.store';
 import { ContentStore } from '../../shared';
@@ -27,7 +27,6 @@ describe('ContentListComponent', () => {
         { provide: REMOTE_DATA_TOKEN, useClass: MockFirestoreService },
         { provide: PublishedContentStore, useValue: mockPublishedContentStore },
         { provide: DashboardStore, useValue: mockDashboardStore },
-
       ],
     }).compileComponents();
 

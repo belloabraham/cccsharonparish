@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { TranslateService } from './translate.service';
 import { REMOTE_DATA_TOKEN } from '../../services';
-import { MockFirestoreService } from '../../testing';
+import { MockFirestoreService } from '../../test';
 
 describe('TranslateService', () => {
   let service: TranslateService;

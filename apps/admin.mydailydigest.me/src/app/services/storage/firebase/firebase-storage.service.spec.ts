@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { FirebaseStorageService } from './firebase-storage.service';
-import { MockFirebaseStorageService } from '../../../testing';
+import { MockFirebaseStorageService } from '../../../test';
 
 describe('FirebaseStorageService', () => {
   let service: FirebaseStorageService;

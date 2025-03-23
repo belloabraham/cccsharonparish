@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { AwaitingApprovalService } from './awaiting-approval.service';
 import { AUTH_TOKEN, REMOTE_DATA_TOKEN } from '../../services';
-import { MockAuthService, MockFirestoreService } from '../../testing';
+import { MockAuthService, MockFirestoreService } from '../../test';
 
 describe('AwaitingApprovalService', () => {
   let service: AwaitingApprovalService;

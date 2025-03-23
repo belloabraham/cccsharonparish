@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { ProfileService } from './profile.service';
 import { AUTH_TOKEN, CLOUD_STORAGE_TOKEN } from '../../services';
-import { MockAuthService, MockFirebaseStorageService } from '../../testing';
+import { MockAuthService, MockFirebaseStorageService } from '../../test';
 
 describe('ProfileService', () => {
   let service: ProfileService;

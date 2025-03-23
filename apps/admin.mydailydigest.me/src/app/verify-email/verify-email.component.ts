@@ -125,8 +125,8 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
       this.verifyEmail(email, (error) => {
         const message = AuthError.message(error.code);
         this.alertService
-          .open(message, {
-            label: this.stringResources.login_error_title,
+          .open(this.stringResources.login_error_title, {
+            label: message,
             appearance: 'negative',
           })
           .subscribe();

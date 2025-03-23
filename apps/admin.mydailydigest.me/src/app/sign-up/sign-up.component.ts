@@ -83,8 +83,8 @@ export class SignUpComponent extends CommonComponent implements OnDestroy {
       this.KEY.USER_CREATE_ERROR_MSG
     );
     this.alertService
-      .open(message, {
-        label: 'Error',
+      .open('Error', {
+        label: message,
         appearance: 'negative',
       })
       .subscribe();

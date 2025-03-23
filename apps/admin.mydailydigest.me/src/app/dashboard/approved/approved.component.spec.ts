@@ -11,7 +11,7 @@ import {
   mockDashboardStore,
   MockFirebaseStorageService,
   MockFirestoreService,
-} from '../../testing';
+} from '../../test';
 import { ComponentRef } from '@angular/core';
 import { DashboardStore } from '../dashboard.store';
 import { Storage } from '@angular/fire/storage';

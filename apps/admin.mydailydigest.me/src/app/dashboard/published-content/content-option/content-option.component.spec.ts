@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContentOptionComponent } from './content-option.component';
 import { PublishedContentStore } from '../published-content-store';
-import {  mockPublishedContentStore } from '../../../testing';
+import { mockPublishedContentStore } from '../../../test';
 import { ContentStore } from '../../shared';
 import { getTranslocoTestingModule } from '@cccsharonparish/mydailydigest';
 

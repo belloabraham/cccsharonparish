@@ -157,7 +157,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   readonly tagsFC = new FormControl<string[] | null>([]);
   readonly dateFC = new FormControl<Date | null>(null, {
     validators: [Validators.required],
-    updateOn: 'blur',
+    // updateOn: 'blur',
   });
   protected readonly audioFileFC = new FormControl<TuiFileLike | null>(null);
   protected readonly failedAudioFile$ = new Subject<TuiFileLike | null>();
@@ -295,7 +295,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   private getNewStringFC(validators: ValidatorFn[] = []) {
     return new FormControl<string | null>(null, {
       validators: [CustomValidators.requiredString(), ...validators],
-      updateOn: 'blur',
+      // updateOn: 'blur',
     });
   }
 
