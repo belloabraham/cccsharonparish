@@ -60,7 +60,7 @@
   "unique_content_date_msg": "Ensure each content has a unique date. If two different content share the same date, the second content will replace the first",
   "required_field_msg": "All fields marked with * are required",
   "content_date": "Content Date",
-  "key_verse": "Reference key verse",
+  "key_verse": "Key verse",
   "bible_reference": "Bible reference",
   "message": "Message",
   "tag_placeholder": "e.g Faith, Salvation, Holy Spirit",

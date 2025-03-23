@@ -16,7 +16,7 @@
 
     <mat-form-field class="topic">
         <mat-label>{{t(KEY.TOPIC)}}*</mat-label>
-        <input formControlName="topic" matInput>
+        <input formControlName="topic" matInput placeholder="E.g Take His yoke 1">
         @if (this.topicFC.invalid) {
         <mat-error>{{t(KEY.CONTENT_REQ_MSG, {value: t(KEY.TOPIC)})}}</mat-error>
         }
@@ -25,7 +25,8 @@
     <div class="flex gap-4 flex-col lg:flex-row items-start">
         <mat-form-field class="input">
             <mat-label>{{t(KEY.CONTENT_DATE)}}</mat-label>
-            <input matInput [matDatepicker]="picker" formControlName="date">
+            <input matInput [matDatepicker]="picker" formControlName="date" placeholder="Click here 👉🏽"
+                [matTooltip]="'Click the icon to the right'">
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
             @if (this.dateFC.invalid) {
@@ -35,7 +36,7 @@
 
         <mat-form-field class="input">
             <mat-label>{{t(KEY.BIBLE_REFERENCE)}}*</mat-label>
-            <input formControlName="reference" matInput>
+            <input formControlName="reference" matInput placeholder="E.g Matthew 11:27-29">
             @if (this.bibleReferenceFC.invalid) {
             <mat-error>{{t(KEY.BIBLE_REF_KEY_VERSE_REQ_MSG)}}</mat-error>
             }
@@ -44,8 +45,8 @@
 
     <mat-form-field class="textarea">
         <mat-label>{{t(KEY.VERSES)}}*</mat-label>
-        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="3" formControlName="verses"
-            matInput></textarea>
+        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="3" formControlName="verses" matInput
+            placeholder="E.g All things are delivered unto me of my Father: and no man knoweth the Son, but the Father; neither knoweth any man the Father, save the Son, and he to whomsoever the Son will reveal him. Come unto me, all ye that labour and are heavy laden, and I will give you rest. Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls."></textarea>
         @if (this.referenceVersesFC.invalid) {
         <mat-error>{{t(KEY.REFERENCE_VERSES_REQ_MSG)}}</mat-error>
         }
@@ -53,7 +54,8 @@
 
     <mat-form-field class="textarea">
         <mat-label>{{t(KEY.KEY_VERSE)}}*</mat-label>
-        <textarea formControlName="keyVerse" matInput></textarea>
+        <textarea formControlName="keyVerse" matInput
+            placeholder="E.g Take my yoke upon you, and learn of me; for I am meek and lowly in heart: and ye shall find rest unto your souls. V.29"></textarea>
         @if (this.referenceKeyVersesFC.invalid) {
         <mat-error>{{t(KEY.REFERENCE_KEY_VERSE_REQ_MSG)}}</mat-error>
         }
@@ -62,8 +64,10 @@
 
     <mat-form-field class="textarea">
         <mat-label>{{t(KEY.MESSAGE)}}*</mat-label>
-        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" formControlName="message"
-            matInput></textarea>
+        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" formControlName="message" matInput
+            placeholder="E.g Many acclaimed Christians often tend to overlook or lack a profound understanding of all the teachings of our Lord, Jesus Christ. Some individuals may be familiar with the teachings but do not grasp their meaning, while others easily forget His words. Although, this is not entirely surprising, yet it is certainly a matter of concern. Why are self-professed Christians turning away from the truth and choosing to pursue falsehoods? We cannot ignore that many heresies are circulating, and numerous Christians are accepting these lies without studying the Scriptures to verify the truth.
+From the biblical passage, Jesus indicates that to follow Him, we must be prepared to accept His yoke and carry His burden. In doing so, we will find rest for our souls. Jesus was very explicit, consistently teaching people about righteous living and eternal life. Although He delivered His messages in parables, His disciples often needed to approach Him after the crowds dispersed to seek clarification on His teachings, and He would provide further explanation.
+As a Christian, you are likely to encounter difficulties even after acknowledging Jesus Christ as your Lord and Savior, and you may face persecution because Jesus Christ Himself was persecuted. However, one thing is certain: if you remain in Him, you will emerge victorious, experience everlasting peace, and your soul will find rest"></textarea>
         @if (this.messageFC.invalid) {
         <mat-error>{{t(KEY.CONTENT_MSG_REQ_MSG)}}</mat-error>
         }
@@ -72,7 +76,8 @@
     <mat-form-field class="textarea">
         <mat-label>{{t(KEY.SUPPLICATION)}}*</mat-label>
         <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" formControlName="supplication"
-            matInput></textarea>
+            matInput
+            placeholder="E.g Lord Jesus, I'm ready to take up your yoke, please grant me power to hold on to you now and forever more, in Jesus name. Amen."></textarea>
         @if (this.supplicationFC.invalid) {
         <mat-error>{{t(KEY.CONTENT_SUPPLICATION_REQ_MSG)}}</mat-error>
         }
@@ -81,7 +86,7 @@
     <mat-form-field class="textarea">
         <mat-label>{{t(KEY.REFLECTION)}}*</mat-label>
         <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="5" formControlName="reflection"
-            matInput></textarea>
+            matInput placeholder="E.g For my yoke is easy, and my burden is light. Matthew 11:30"></textarea>
         @if (this.reflectionFC.invalid) {
         <mat-error>{{t(KEY.CONTENT_REFLECTION_REQ_MSG)}}</mat-error>
         }
