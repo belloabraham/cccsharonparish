@@ -1,4 +1,4 @@
-import { Component, computed, Signal, signal } from '@angular/core';
+import { Component, computed, inject, OnInit, Signal, signal } from '@angular/core';
 import { NewContentComponent } from '../new-content/new-content.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -12,13 +12,16 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { TRANSLATE_CONTENT_TABLE_COLUMNS } from './translate-table';
 import {
   contentsToTranslateTableUIState,
+  ENGLISH_LANG_CODE,
   ISpiritualDailyDigestTranslateUIState,
   ISpiritualDailyDigestUIState,
   LanguageContent,
+  ROUTE,
 } from '@cccsharonparish/mydailydigest';
 import { tuiIsPresent } from '@taiga-ui/cdk';
 import { CommonModule } from '@angular/common';
 import { COLLECTION, STORAGE_PATH } from '../../services';
+import { Router } from 'express';
 
 @Component({
   selector: 'app-translate',
@@ -34,10 +37,11 @@ import { COLLECTION, STORAGE_PATH } from '../../services';
   templateUrl: './translate.component.html',
   styleUrl: './translate.component.scss',
 })
-export class TranslateComponent extends NewContentComponent {
+export class TranslateComponent extends NewContentComponent implements OnInit {
   TRANSLATE_KEY = TRANSLATE_CONTENT_TABLE_COLUMNS;
   translateTableColumns = TRANSLATE_CONTENT_TABLE_COLUMNS;
   translateData?: Signal<ISpiritualDailyDigestTranslateUIState[]> = signal([]);
+  private readonly router = inject(Router);
 
   constructor() {
     super();
@@ -49,6 +53,13 @@ export class TranslateComponent extends NewContentComponent {
         this.tablePageSize()
       ).filter(tuiIsPresent)
     );
+  }
+
+  ngOnInit(): void {
+    const thereAreNoContents = this.contentStore.approvedContent().length === 0;
+    if (thereAreNoContents) {
+      this.router.navigate([ROUTE.NEW, ENGLISH_LANG_CODE]);
+    }
   }
 
   translate(

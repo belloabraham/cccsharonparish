@@ -5,6 +5,7 @@ import {
   inject,
   Injector,
   OnDestroy,
+  OnInit,
   Signal,
   signal,
 } from '@angular/core';
@@ -63,7 +64,7 @@ import { Router } from '@angular/router';
   templateUrl: './awaiting-approval.component.html',
   styleUrl: './awaiting-approval.component.scss',
 })
-export class AwaitingApprovalComponent implements OnDestroy {
+export class AwaitingApprovalComponent implements OnInit, OnDestroy {
   readonly KEY = DRAFT_STRING_RESOURCE_KEY;
 
   private readonly dialogService = inject(TuiDialogService);
@@ -107,6 +108,14 @@ export class AwaitingApprovalComponent implements OnDestroy {
         this.tablePageSize()
       ).filter(tuiIsPresent)
     );
+  }
+  
+  ngOnInit(): void {
+    const thereAreNoContents =
+      this.contentStore.contentAwaitingApproval().length === 0;
+    if (thereAreNoContents) {
+      this.router.navigate([ROUTE.NEW, ENGLISH_LANG_CODE]);
+    }
   }
 
   editContent(

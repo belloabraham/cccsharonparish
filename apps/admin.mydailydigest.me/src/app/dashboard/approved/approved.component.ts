@@ -1,4 +1,11 @@
-import { Component, computed, inject, signal, Signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  inject,
+  OnInit,
+  signal,
+  Signal,
+} from '@angular/core';
 import { SharedModule } from '../../shared';
 import { APPROVED_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { TuiTextfield } from '@taiga-ui/core';
@@ -35,7 +42,7 @@ import { Router } from '@angular/router';
   templateUrl: './approved.component.html',
   styleUrl: './approved.component.scss',
 })
-export class ApprovedComponent extends NewContentComponent {
+export class ApprovedComponent extends NewContentComponent implements OnInit {
   APPROVED_KEY = APPROVED_STRING_RESOURCE_KEY;
   translateTableColumns = TRANSLATE_CONTENT_TABLE_COLUMNS;
   approvedContentData?: Signal<IApprovedTableUIState[]> = signal([]);
@@ -52,6 +59,14 @@ export class ApprovedComponent extends NewContentComponent {
         this.tablePageSize()
       ).filter(tuiIsPresent)
     );
+  }
+
+  ngOnInit(): void {
+    const thereAreNoContents =
+      this.contentStore.approvedContent().length === 0;
+    if (thereAreNoContents) {
+      this.router.navigate([ROUTE.NEW, ENGLISH_LANG_CODE]);
+    }
   }
 
   publishPrompt(item: IApprovedTableUIState) {
