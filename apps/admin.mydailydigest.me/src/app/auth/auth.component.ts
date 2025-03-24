@@ -36,6 +36,7 @@ import { REGEX } from '@cccsharonparish/core';
 })
 export class AuthComponent extends CommonComponent implements OnInit {
   KEY = AUTH_STRING_RESOURCE_KEY;
+  appName = environment.appName;
   emailFC = new FormControl<string | null>(null, {
     validators: [Validators.required, Validators.pattern(REGEX.EMAIL)],
     updateOn: 'blur',
