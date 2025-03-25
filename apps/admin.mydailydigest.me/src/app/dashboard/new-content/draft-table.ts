@@ -1,7 +1,8 @@
-import { ISpiritualDailyDigestUIState } from "@cccsharonparish/mydailydigest";
+import { ISpiritualDailyDigestUIState } from '@cccsharonparish/mydailydigest';
 
 export const newContentTableStateKeys = {
   sn: 0,
+  createdBy: '',
   date: '',
   topic: '',
   message: '',
@@ -17,4 +18,7 @@ export const newContentTableStateKeys = {
 
 export const NEW_CONTENT_TABLE_COLUMNS = Object.keys(
   newContentTableStateKeys
-) as (keyof (ISpiritualDailyDigestUIState & { sn: number }))[];
+) as (keyof (ISpiritualDailyDigestUIState & {
+  sn: number;
+  createdBy: string;
+}))[];

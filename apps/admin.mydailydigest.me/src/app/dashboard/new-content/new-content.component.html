@@ -47,7 +47,8 @@
                                                         <ng-container *ngFor="let column of tableColumns">
 
                                                                 @let columnsWithMinWidth = column === "verses" || column
-                                                                === "supplication" || column === "reflection";
+                                                                === "supplication" || column === "reflection" || column
+                                                                === "createdBy";
 
                                                                 @let isSortableColumns = column === "sn" || column ===
                                                                 "reference" || column ===
@@ -108,7 +109,8 @@
                                                                                 [disabled]="item.isAwaitingApproval"
                                                                                 (click)="submitForReviewPrompt(item['topic'], item.id, dataIndex)"
                                                                                 mat-button>
-                                                                                <mat-icon fontIcon="file-upload-fill"></mat-icon>
+                                                                                <mat-icon
+                                                                                        fontIcon="file-upload-fill"></mat-icon>
                                                                                 {{t(KEY.SUBMIT_FOR_REVIEW)}}</button>
 
                                                                         <button (click)="deleteContentPrompt(item.topic, item.id)"
@@ -147,6 +149,28 @@
                                                                         <td *tuiCell="key" tuiTd>
                                                                                 <ng-audio-player *ngIf="item[key]"
                                                                                         [src]="item[key]!" />
+                                                                        </td>
+                                                                        }@else if (key === "createdBy"){
+                                                                        <td *tuiCell="key" tuiTd
+                                                                                [class.match]="isColumnMatch(item[key])">
+                                                                                <ng-container *ngIf="item[key]">
+                                                                                        @let createdBy =
+                                                                                        getUserById(item[key]!);
+                                                                                        <p>{{ createdBy?.lastName }} {{
+                                                                                                createdBy?.firstName }}
+                                                                                        </p>
+
+                                                                                        <a class="underline"
+                                                                                                target="_blank"
+                                                                                                href="https://wa.me/{{createdBy?.phone}}">
+                                                                                                <p
+                                                                                                        class="flex items-center">
+                                                                                                        <mat-icon
+                                                                                                                fontIcon="whatsapp-outline"></mat-icon>
+                                                                                                        {{createdBy?.phone}}
+                                                                                                </p>
+                                                                                        </a>
+                                                                                </ng-container>
                                                                         </td>
                                                                         }@else {
                                                                         <td *tuiCell="key" tuiTd

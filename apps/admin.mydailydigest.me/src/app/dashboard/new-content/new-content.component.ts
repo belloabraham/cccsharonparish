@@ -8,7 +8,7 @@ import {
   Signal,
   signal,
 } from '@angular/core';
-import { SharedModule } from '../../shared';
+import { SharedModule, UserDataStore } from '../../shared';
 import { TuiAlertService, TuiNotification, TuiTextfield } from '@taiga-ui/core';
 import {
   contentsToTableUIState,
@@ -48,6 +48,7 @@ import { DraftService } from './draft.service';
 import { environment } from '../../../environments/environment';
 import { IDialogData } from '../shared/content-dialog';
 import { NEW_CONTENT_TABLE_COLUMNS } from './draft-table';
+import { EditorsStore } from '../editors/editors.store';
 
 @Component({
   selector: 'app-new-content',
@@ -94,6 +95,8 @@ export class NewContentComponent implements OnDestroy {
   searchQuery = '';
   data?: Signal<ISpiritualDailyDigestTableUIState[]> = signal([]);
   protected readonly languageResourceService = inject(LanguageResourceService);
+  private readonly editorsStore = inject(EditorsStore);
+  private readonly userDataStore = inject(UserDataStore);
 
   constructor() {
     this.getPageTitle();
@@ -257,6 +260,12 @@ export class NewContentComponent implements OnDestroy {
   onPagination({ page, size }: TuiTablePaginationEvent): void {
     this.tablePage.set(page);
     this.tablePageSize.set(size);
+  }
+
+  getUserById(userId: string) {
+    return (this.editorsStore
+      .editors()
+      .find((editor) => editor.id === userId) || this.userDataStore.user())!;
   }
 
   private _getData(

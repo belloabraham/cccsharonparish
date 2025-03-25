@@ -30,7 +30,8 @@
                                 @let isSortableColumns = column === "sn" || column === "reference" || column ===
                                 "topic";
 
-                                @let columnsWithMinWidth = column === "verses" || column === "supplication" || column === "reflection";
+                                @let columnsWithMinWidth = column === "verses" || column === "supplication" || column
+                                === "reflection";
 
                                 @if (column === "message") {
                                 <th *tuiHead="column" class="message-column" tuiTh [sticky]="true" [tuiSortable]="false"
@@ -109,10 +110,15 @@
                                     }@else if (key === "updatedBy" || key === "createdBy"){
                                     <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
                                         <ng-container *ngIf="item[key]">
-                                            @let updatedBy = getUserById(item[key]!);
-                                            <p>{{ updatedBy?.lastName }} {{ updatedBy?.firstName }}</p>
-                                            <a class="underline"
-                                                href="tel:+{{updatedBy?.phone}}">{{updatedBy?.phone}}</a>
+                                            @let updatedOrCreatedBy = getUserById(item[key]!);
+                                            <p>{{ updatedOrCreatedBy?.lastName }} {{ updatedOrCreatedBy?.firstName }}</p>
+                                            <a class="underline" target="_blank"
+                                                href="https://wa.me/{{updatedOrCreatedBy?.phone}}">
+                                                <p class="flex items-center">
+                                                    <mat-icon fontIcon="whatsapp-outline"></mat-icon>
+                                                    {{updatedOrCreatedBy?.phone}}
+                                                </p>
+                                            </a>
                                         </ng-container>
                                     </td>
                                     }

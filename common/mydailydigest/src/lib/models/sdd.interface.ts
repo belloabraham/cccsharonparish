@@ -1,8 +1,8 @@
-import { Timestamp } from '@angular/fire/firestore';
 
 export const ENGLISH_LANG_CODE = 'en';
 export type ISpiritualDailyDigestTableUIState = ISpiritualDailyDigestUIState & {
   sn: number;
+  createdBy: string;
 };
 
 export type IAwaitingApprovalContentTableUIState =
@@ -65,8 +65,6 @@ export interface ISpiritualDailyDigest extends Record<string, any> {
   updatedBy: string | null;
   createdAt: any;
   updatedAt: any | null;
-  // createdAt: Date | Timestamp;
-  // updatedAt?: Date | Timestamp;
 }
 
 export type Content = {
@@ -82,8 +80,8 @@ export type Language = {
 };
 
 export type TextContent = {
-  topic: string; //
-  message: string; //
+  topic: string;
+  message: string;
   bibleVerse: BibleVerseContent;
   supplication: string;
   reflection: string;

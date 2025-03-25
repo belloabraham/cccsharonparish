@@ -39,6 +39,7 @@ export function contentsToTableUIState(
       supplication: contentText?.supplication || '',
       reflection: contentText?.reflection || '',
       isAwaitingApproval: content.isAwaitingApproval,
+      createdBy: content.createdBy
     };
     result.push(uiState);
   }
