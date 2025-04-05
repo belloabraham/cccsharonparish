@@ -14,8 +14,11 @@ export const ROUTE = {
   PROFILE: 'profile',
   PRIVACY: 'privacy',
   TERMS: 'terms',
+  DOWNLOAD: 'download',
+  LINK: 'link',
   PARAMS: {
     LANGUAGE_CODE: 'languageCode',
     CONTENT_YEAR: 'contentYear',
+    CONTENT_ID: 'contentId',
   },
 };
