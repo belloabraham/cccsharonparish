@@ -1,3 +1,4 @@
-export * from './regex'
+export * from './regex';
 export * from './json';
 export * from './file';
+export * from './device';
