@@ -10,7 +10,6 @@ export const appRoutes: Route[] = [
   },
   {
     path: ROUTE.DOWNLOAD,
-    canMatch: [() => {}],
     loadComponent: () =>
       import('./download/download.component').then(
         (mod) => mod.DownloadComponent
@@ -18,7 +17,6 @@ export const appRoutes: Route[] = [
   },
   {
     path: `${ROUTE.LINK}/:${ROUTE.PARAMS.CONTENT_ID}`,
-    canMatch: [() => {}],
     loadComponent: () =>
       import('./download/download.component').then(
         (mod) => mod.DownloadComponent
