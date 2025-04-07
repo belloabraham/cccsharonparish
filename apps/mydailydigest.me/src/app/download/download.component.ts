@@ -1,4 +1,5 @@
 import {
+  AfterViewInit,
   Component,
   ElementRef,
   input,
@@ -13,9 +14,9 @@ import { Device } from '@cccsharonparish/core';
 @Component({
   selector: 'app-download',
   imports: [CommonModule],
-  template: ``,
+  template: `<a #link [href]="url()" hidden></a>`,
 })
-export class DownloadComponent implements OnInit {
+export class DownloadComponent implements OnInit, AfterViewInit {
   contentId = input<string>();
   url = signal('');
   link = viewChild<ElementRef<HTMLAnchorElement>>('link');
@@ -25,23 +26,27 @@ export class DownloadComponent implements OnInit {
     const iOSAppId = environment.iOSAppId;
     const deviceType = Device.type();
     this.url.set(`${environment.scheme}${environment.domain}`);
-    const encodedRef = encodeURIComponent(`${this.contentId()}`);
+    // const encodedRef = encodeURIComponent(`${this.contentId()}`);
 
     if (deviceType === 'Android') {
       this.url.set(
-        `https://play.google.com/store/apps/details?id=${androidAppId}`
+        `intent://details?id=${androidAppId}#Intent;scheme=market;package=com.android.vending;end;`
       );
       if (this.contentId()) {
-        this.url.update((url) => `${url}&referrer=${encodedRef}`);
+        this.url.set(
+          `intent://details?id=${androidAppId}&referrer=${this.contentId()}#Intent;scheme=market;package=com.android.vending;end;`
+        );
       }
     }
 
     if (deviceType === 'iOS') {
       this.url.set(`https://apps.apple.com/app/id${iOSAppId}`);
-      if (this.contentId()) {
+     /*  if (this.contentId()) {
         this.url.update((url) => `${url}&ref=${encodedRef}`);
-      }
+      } */
     }
-    window.location.href = this.url();
+  }
+  ngAfterViewInit(): void {
+    this.link()?.nativeElement.click();
   }
 }
