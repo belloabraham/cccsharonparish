@@ -9,14 +9,13 @@ import {
   signal,
   viewChild,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { environment } from '../../environments/environment';
 import { Device } from '@cccsharonparish/core';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-download',
-  imports: [CommonModule],
+  imports: [],
   template: `<a #link [href]="url()" hidden></a>`,
 })
 export class DownloadComponent implements OnInit, AfterViewInit {
