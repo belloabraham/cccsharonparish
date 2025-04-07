@@ -7,6 +7,7 @@
 
   "email": "Email",
   "login": "Login",
+  "send_login_link":"Send login link",
   "login_link_sent_msg": "A login link has been sent to {{value}}, click on it to login",
   "login_link_sent_title": "Login link sent",
   "login_error_title": "Error - Unable to login",
