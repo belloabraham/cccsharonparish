@@ -26,7 +26,6 @@ export class DownloadComponent implements OnInit, AfterViewInit {
     const iOSAppId = environment.iOSAppId;
     const deviceType = Device.type();
     this.url.set(`${environment.scheme}${environment.domain}`);
-    // const encodedRef = encodeURIComponent(`${this.contentId()}`);
 
     if (deviceType === 'Android') {
       this.url.set(
@@ -41,9 +40,6 @@ export class DownloadComponent implements OnInit, AfterViewInit {
 
     if (deviceType === 'iOS') {
       this.url.set(`https://apps.apple.com/app/id${iOSAppId}`);
-     /*  if (this.contentId()) {
-        this.url.update((url) => `${url}&ref=${encodedRef}`);
-      } */
     }
   }
   ngAfterViewInit(): void {
