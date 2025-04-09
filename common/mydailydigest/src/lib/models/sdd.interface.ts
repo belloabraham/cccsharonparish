@@ -74,6 +74,7 @@ export type Content = {
 };
 
 export type Language = {
+  id:string,
   countryCode: string;
   code: string;
   label: string;

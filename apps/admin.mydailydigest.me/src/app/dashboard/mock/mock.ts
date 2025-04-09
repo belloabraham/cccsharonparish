@@ -11,6 +11,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -31,6 +32,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -51,6 +53,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -87,6 +90,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -107,6 +111,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -127,6 +132,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -163,6 +169,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -184,6 +191,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -205,6 +213,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -242,6 +251,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -263,6 +273,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -284,6 +295,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -321,6 +333,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -342,6 +355,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -363,6 +377,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -400,6 +415,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -419,6 +435,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -438,6 +455,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -473,6 +491,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -493,6 +512,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -513,6 +533,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -549,6 +570,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -568,6 +590,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -587,6 +610,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -622,6 +646,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -642,6 +667,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -662,6 +688,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -698,6 +725,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -719,6 +747,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -740,6 +769,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -777,6 +807,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -798,6 +829,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -819,6 +851,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -856,6 +889,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -876,6 +910,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -896,6 +931,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -932,6 +968,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -951,6 +988,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -970,6 +1008,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1005,6 +1044,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1025,6 +1065,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1045,6 +1086,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1081,6 +1123,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1101,6 +1144,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1121,6 +1165,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1157,6 +1202,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1177,6 +1223,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1197,6 +1244,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1233,6 +1281,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1254,6 +1303,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1275,6 +1325,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1312,6 +1363,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1332,6 +1384,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1352,6 +1405,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1388,6 +1442,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1409,6 +1464,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1430,6 +1486,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1467,6 +1524,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1487,6 +1545,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1507,6 +1566,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1543,6 +1603,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1562,6 +1623,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1581,6 +1643,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1616,6 +1679,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1637,6 +1701,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1658,6 +1723,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1695,6 +1761,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1716,6 +1783,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1737,6 +1805,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1774,6 +1843,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1795,6 +1865,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1816,6 +1887,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1853,6 +1925,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1873,6 +1946,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1893,6 +1967,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -1929,6 +2004,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -1949,6 +2025,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -1969,6 +2046,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2005,6 +2083,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2025,6 +2104,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2045,6 +2125,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2081,6 +2162,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2102,6 +2184,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2123,6 +2206,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2160,6 +2244,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2181,6 +2266,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2202,6 +2288,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2239,6 +2326,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2259,6 +2347,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2279,6 +2368,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2315,6 +2405,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2335,6 +2426,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2355,6 +2447,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2391,6 +2484,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2412,6 +2506,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2433,6 +2528,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2470,6 +2566,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2491,6 +2588,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2512,6 +2610,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2549,6 +2648,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2570,6 +2670,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2591,6 +2692,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2628,6 +2730,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2648,6 +2751,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2668,6 +2772,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2704,6 +2809,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2725,6 +2831,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2746,6 +2853,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2783,6 +2891,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2803,6 +2912,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2823,6 +2933,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2859,6 +2970,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2879,6 +2991,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2899,6 +3012,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -2935,6 +3049,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -2956,6 +3071,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -2977,6 +3093,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3014,6 +3131,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3034,6 +3152,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3054,6 +3173,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3090,6 +3210,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3111,6 +3232,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3132,6 +3254,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3169,6 +3292,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3189,6 +3313,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3209,6 +3334,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3245,6 +3371,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3265,6 +3392,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3285,6 +3413,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3321,6 +3450,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3341,6 +3471,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3361,6 +3492,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3397,6 +3529,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3417,6 +3550,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3437,6 +3571,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3473,6 +3608,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3493,6 +3629,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3513,6 +3650,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3549,6 +3687,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3569,6 +3708,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3589,6 +3729,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3625,6 +3766,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3646,6 +3788,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3667,6 +3810,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3704,6 +3848,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3724,6 +3869,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3744,6 +3890,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3780,6 +3927,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3801,6 +3949,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3822,6 +3971,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3859,6 +4009,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3879,6 +4030,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3899,6 +4051,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -3935,6 +4088,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -3956,6 +4110,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -3977,6 +4132,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4014,6 +4170,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4034,6 +4191,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4054,6 +4212,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4090,6 +4249,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4110,6 +4270,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4130,6 +4291,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4166,6 +4328,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4187,6 +4350,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4208,6 +4372,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4245,6 +4410,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4265,6 +4431,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4285,6 +4452,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4321,6 +4489,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4342,6 +4511,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4363,6 +4533,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4400,6 +4571,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4420,6 +4592,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4440,6 +4613,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4476,6 +4650,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4496,6 +4671,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4516,6 +4692,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4552,6 +4729,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4573,6 +4751,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4594,6 +4773,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4631,6 +4811,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4650,6 +4831,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4669,6 +4851,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4704,6 +4887,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4724,6 +4908,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4744,6 +4929,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4780,6 +4966,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4800,6 +4987,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4820,6 +5008,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4856,6 +5045,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4876,6 +5066,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4896,6 +5087,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -4932,6 +5124,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -4952,6 +5145,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -4972,6 +5166,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5008,6 +5203,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5029,6 +5225,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5050,6 +5247,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5087,6 +5285,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5106,6 +5305,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5125,6 +5325,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5160,6 +5361,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5180,6 +5382,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5200,6 +5403,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5236,6 +5440,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5256,6 +5461,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5276,6 +5482,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5312,6 +5519,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5332,6 +5540,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5352,6 +5561,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5388,6 +5598,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5408,6 +5619,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5428,6 +5640,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5464,6 +5677,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5484,6 +5698,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5504,6 +5719,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5540,6 +5756,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5559,6 +5776,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5578,6 +5796,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5613,6 +5832,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5633,6 +5853,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5653,6 +5874,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5689,6 +5911,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5709,6 +5932,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5729,6 +5953,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5765,6 +5990,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5785,6 +6011,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5805,6 +6032,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5841,6 +6069,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5862,6 +6091,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5883,6 +6113,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5920,6 +6151,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -5940,6 +6172,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -5960,6 +6193,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -5996,6 +6230,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6016,6 +6251,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6036,6 +6272,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6072,6 +6309,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6092,6 +6330,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6112,6 +6351,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6148,6 +6388,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6169,6 +6410,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6190,6 +6432,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6227,6 +6470,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6248,6 +6492,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6269,6 +6514,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6306,6 +6552,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6325,6 +6572,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6344,6 +6592,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6379,6 +6628,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6399,6 +6649,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6419,6 +6670,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6455,6 +6707,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6476,6 +6729,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6497,6 +6751,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6534,6 +6789,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6555,6 +6811,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6576,6 +6833,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6613,6 +6871,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6633,6 +6892,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6653,6 +6913,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6689,6 +6950,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6710,6 +6972,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6731,6 +6994,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6768,6 +7032,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6788,6 +7053,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6808,6 +7074,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6844,6 +7111,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6864,6 +7132,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6884,6 +7153,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6920,6 +7190,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -6940,6 +7211,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -6960,6 +7232,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -6996,6 +7269,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7016,6 +7290,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7036,6 +7311,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7072,6 +7348,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7092,6 +7369,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7112,6 +7390,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7148,6 +7427,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7168,6 +7448,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7188,6 +7469,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7224,6 +7506,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7244,6 +7527,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7264,6 +7548,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7300,6 +7585,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7321,6 +7607,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7342,6 +7629,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7379,6 +7667,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7400,6 +7689,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7421,6 +7711,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7458,6 +7749,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7478,6 +7770,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7498,6 +7791,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7534,6 +7828,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7554,6 +7849,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7574,6 +7870,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7610,6 +7907,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7631,6 +7929,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7652,6 +7951,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7689,6 +7989,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7708,6 +8009,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7727,6 +8029,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7762,6 +8065,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7783,6 +8087,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7804,6 +8109,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7841,6 +8147,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7861,6 +8168,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7881,6 +8189,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7917,6 +8226,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -7937,6 +8247,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -7957,6 +8268,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -7993,6 +8305,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8013,6 +8326,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8033,6 +8347,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8069,6 +8384,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8089,6 +8405,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8109,6 +8426,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8145,6 +8463,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8165,6 +8484,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8185,6 +8505,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8221,6 +8542,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8241,6 +8563,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8261,6 +8584,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8297,6 +8621,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8316,6 +8641,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8335,6 +8661,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8370,6 +8697,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8390,6 +8718,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8410,6 +8739,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8446,6 +8776,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8466,6 +8797,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8486,6 +8818,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8522,6 +8855,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8542,6 +8876,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8562,6 +8897,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8598,6 +8934,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8619,6 +8956,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8640,6 +8978,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8677,6 +9016,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8698,6 +9038,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8719,6 +9060,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8756,6 +9098,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8777,6 +9120,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8798,6 +9142,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8835,6 +9180,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8856,6 +9202,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8877,6 +9224,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8914,6 +9262,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -8934,6 +9283,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -8954,6 +9304,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -8990,6 +9341,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9010,6 +9362,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9030,6 +9383,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9066,6 +9420,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9086,6 +9441,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9106,6 +9462,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9142,6 +9499,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9162,6 +9520,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9182,6 +9541,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9218,6 +9578,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9238,6 +9599,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9258,6 +9620,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9294,6 +9657,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9314,6 +9678,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9334,6 +9699,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9370,6 +9736,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9390,6 +9757,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9410,6 +9778,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9446,6 +9815,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9465,6 +9835,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9484,6 +9855,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9519,6 +9891,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9539,6 +9912,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9559,6 +9933,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9595,6 +9970,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9615,6 +9991,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9635,6 +10012,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9671,6 +10049,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9692,6 +10071,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9713,6 +10093,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9750,6 +10131,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9770,6 +10152,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9790,6 +10173,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9826,6 +10210,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9846,6 +10231,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9866,6 +10252,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9902,6 +10289,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9921,6 +10309,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -9940,6 +10329,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -9975,6 +10365,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -9996,6 +10387,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10017,6 +10409,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10054,6 +10447,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10074,6 +10468,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10094,6 +10489,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10130,6 +10526,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10150,6 +10547,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10170,6 +10568,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10206,6 +10605,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10226,6 +10626,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10246,6 +10647,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10282,6 +10684,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10302,6 +10705,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10322,6 +10726,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10358,6 +10763,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10378,6 +10784,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10398,6 +10805,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10434,6 +10842,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10454,6 +10863,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10474,6 +10884,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10510,6 +10921,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10531,6 +10943,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10552,6 +10965,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10589,6 +11003,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10609,6 +11024,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10629,6 +11045,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10665,6 +11082,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10685,6 +11103,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10705,6 +11124,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10741,6 +11161,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10761,6 +11182,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10781,6 +11203,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10817,6 +11240,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10837,6 +11261,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10857,6 +11282,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10893,6 +11319,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10913,6 +11340,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -10933,6 +11361,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -10969,6 +11398,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -10988,6 +11418,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11007,6 +11438,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11042,6 +11474,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11062,6 +11495,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11082,6 +11516,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11118,6 +11553,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11137,6 +11573,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11156,6 +11593,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11191,6 +11629,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11211,6 +11650,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11231,6 +11671,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11267,6 +11708,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11288,6 +11730,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11309,6 +11752,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11346,6 +11790,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11367,6 +11812,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11388,6 +11834,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11425,6 +11872,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11445,6 +11893,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11465,6 +11914,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11501,6 +11951,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11521,6 +11972,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11541,6 +11993,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11577,6 +12030,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11596,6 +12050,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11615,6 +12070,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11650,6 +12106,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11670,6 +12127,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11690,6 +12148,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11726,6 +12185,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11747,6 +12207,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11768,6 +12229,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11805,6 +12267,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11824,6 +12287,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11843,6 +12307,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11878,6 +12343,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11898,6 +12364,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11918,6 +12385,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -11954,6 +12422,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -11973,6 +12442,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -11992,6 +12462,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12027,6 +12498,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12047,6 +12519,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12067,6 +12540,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12103,6 +12577,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12123,6 +12598,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12143,6 +12619,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12179,6 +12656,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12200,6 +12678,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12221,6 +12700,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12258,6 +12738,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12279,6 +12760,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12300,6 +12782,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12337,6 +12820,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12358,6 +12842,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12379,6 +12864,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12416,6 +12902,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12436,6 +12923,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12456,6 +12944,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12492,6 +12981,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12512,6 +13002,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12532,6 +13023,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12568,6 +13060,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12589,6 +13082,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12610,6 +13104,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12647,6 +13142,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12668,6 +13164,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12689,6 +13186,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12726,6 +13224,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12747,6 +13246,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12768,6 +13268,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12805,6 +13306,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12826,6 +13328,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12847,6 +13350,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12884,6 +13388,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12905,6 +13410,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -12926,6 +13432,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -12963,6 +13470,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -12983,6 +13491,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13003,6 +13512,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13039,6 +13549,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13060,6 +13571,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13081,6 +13593,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13118,6 +13631,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13139,6 +13653,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13160,6 +13675,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13197,6 +13713,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13216,6 +13733,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13235,6 +13753,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13270,6 +13789,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13291,6 +13811,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13312,6 +13833,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13349,6 +13871,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13370,6 +13893,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13391,6 +13915,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13428,6 +13953,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13448,6 +13974,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13468,6 +13995,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13504,6 +14032,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13525,6 +14054,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13546,6 +14076,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13583,6 +14114,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13604,6 +14136,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13625,6 +14158,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13662,6 +14196,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13682,6 +14217,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13702,6 +14238,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13738,6 +14275,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13757,6 +14295,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13776,6 +14315,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13811,6 +14351,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13831,6 +14372,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13851,6 +14393,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13887,6 +14430,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13907,6 +14451,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -13927,6 +14472,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -13963,6 +14509,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -13983,6 +14530,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14003,6 +14551,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14039,6 +14588,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14059,6 +14609,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14079,6 +14630,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14115,6 +14667,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14136,6 +14689,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14157,6 +14711,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14194,6 +14749,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14215,6 +14771,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14236,6 +14793,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14273,6 +14831,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14293,6 +14852,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14313,6 +14873,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14349,6 +14910,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14370,6 +14932,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14391,6 +14954,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14428,6 +14992,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14449,6 +15014,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14470,6 +15036,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14507,6 +15074,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14528,6 +15096,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14549,6 +15118,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14586,6 +15156,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14606,6 +15177,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14626,6 +15198,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14662,6 +15235,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14682,6 +15256,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14702,6 +15277,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14738,6 +15314,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14757,6 +15334,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14776,6 +15354,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14811,6 +15390,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14832,6 +15412,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14853,6 +15434,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14890,6 +15472,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14909,6 +15492,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -14928,6 +15512,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -14963,6 +15548,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -14982,6 +15568,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15001,6 +15588,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15036,6 +15624,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15057,6 +15646,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15078,6 +15668,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15115,6 +15706,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15135,6 +15727,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15155,6 +15748,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15191,6 +15785,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15210,6 +15805,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15229,6 +15825,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15264,6 +15861,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15285,6 +15883,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15306,6 +15905,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15343,6 +15943,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15363,6 +15964,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15383,6 +15985,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15419,6 +16022,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15440,6 +16044,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15461,6 +16066,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15498,6 +16104,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15519,6 +16126,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15540,6 +16148,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15577,6 +16186,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15598,6 +16208,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15619,6 +16230,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15656,6 +16268,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15676,6 +16289,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15696,6 +16310,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15732,6 +16347,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15752,6 +16368,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15772,6 +16389,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15808,6 +16426,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15829,6 +16448,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15850,6 +16470,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15887,6 +16508,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15908,6 +16530,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -15929,6 +16552,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -15966,6 +16590,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -15986,6 +16611,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16006,6 +16632,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16042,6 +16669,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16061,6 +16689,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16080,6 +16709,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16115,6 +16745,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16135,6 +16766,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16155,6 +16787,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16191,6 +16824,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16211,6 +16845,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16231,6 +16866,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16267,6 +16903,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16288,6 +16925,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16309,6 +16947,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16346,6 +16985,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16366,6 +17006,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16386,6 +17027,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16422,6 +17064,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16442,6 +17085,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16462,6 +17106,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16498,6 +17143,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16518,6 +17164,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16538,6 +17185,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16574,6 +17222,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16594,6 +17243,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16614,6 +17264,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16650,6 +17301,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16670,6 +17322,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16690,6 +17343,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16726,6 +17380,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16745,6 +17400,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16764,6 +17420,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16799,6 +17456,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16820,6 +17478,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16841,6 +17500,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16878,6 +17538,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16899,6 +17560,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16920,6 +17582,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -16957,6 +17620,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -16978,6 +17642,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -16999,6 +17664,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17036,6 +17702,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17056,6 +17723,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17076,6 +17744,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17112,6 +17781,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17132,6 +17802,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17152,6 +17823,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17188,6 +17860,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17208,6 +17881,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17228,6 +17902,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17264,6 +17939,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17284,6 +17960,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17304,6 +17981,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17340,6 +18018,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17361,6 +18040,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17382,6 +18062,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17419,6 +18100,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17438,6 +18120,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17457,6 +18140,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17492,6 +18176,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17512,6 +18197,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17532,6 +18218,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17568,6 +18255,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17588,6 +18276,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17608,6 +18297,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17644,6 +18334,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17664,6 +18355,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17684,6 +18376,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17720,6 +18413,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17740,6 +18434,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17760,6 +18455,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17796,6 +18492,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17817,6 +18514,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17838,6 +18536,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17875,6 +18574,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17896,6 +18596,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17917,6 +18618,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -17954,6 +18656,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -17974,6 +18677,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -17994,6 +18698,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18030,6 +18735,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18050,6 +18756,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18070,6 +18777,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18106,6 +18814,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18125,6 +18834,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18144,6 +18854,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18179,6 +18890,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18199,6 +18911,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18219,6 +18932,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18255,6 +18969,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18276,6 +18991,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18297,6 +19013,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18334,6 +19051,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18354,6 +19072,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18374,6 +19093,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18410,6 +19130,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18430,6 +19151,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18450,6 +19172,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18486,6 +19209,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18505,6 +19229,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18524,6 +19249,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18559,6 +19285,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18579,6 +19306,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18599,6 +19327,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18635,6 +19364,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18656,6 +19386,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18677,6 +19408,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18714,6 +19446,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18734,6 +19467,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18754,6 +19488,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18790,6 +19525,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18811,6 +19547,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18832,6 +19569,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18869,6 +19607,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18890,6 +19629,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18911,6 +19651,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -18948,6 +19689,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -18969,6 +19711,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -18990,6 +19733,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19027,6 +19771,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19048,6 +19793,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19069,6 +19815,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19106,6 +19853,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19126,6 +19874,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19146,6 +19895,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19182,6 +19932,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19202,6 +19953,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19222,6 +19974,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19258,6 +20011,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19278,6 +20032,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19298,6 +20053,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19334,6 +20090,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19354,6 +20111,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19374,6 +20132,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19410,6 +20169,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19429,6 +20189,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19448,6 +20209,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19483,6 +20245,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19504,6 +20267,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19525,6 +20289,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19562,6 +20327,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19581,6 +20347,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19600,6 +20367,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19635,6 +20403,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19656,6 +20425,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19677,6 +20447,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19714,6 +20485,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19735,6 +20507,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19756,6 +20529,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19793,6 +20567,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19814,6 +20589,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19835,6 +20611,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19872,6 +20649,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19892,6 +20670,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19912,6 +20691,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -19948,6 +20728,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -19968,6 +20749,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -19988,6 +20770,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20024,6 +20807,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20043,6 +20827,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20062,6 +20847,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20097,6 +20883,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20117,6 +20904,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20137,6 +20925,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20173,6 +20962,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20192,6 +20982,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20211,6 +21002,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20246,6 +21038,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20267,6 +21060,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20288,6 +21082,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20325,6 +21120,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20345,6 +21141,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20365,6 +21162,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20401,6 +21199,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20421,6 +21220,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20441,6 +21241,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20477,6 +21278,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20498,6 +21300,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20519,6 +21322,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20556,6 +21360,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20577,6 +21382,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20598,6 +21404,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20635,6 +21442,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20656,6 +21464,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20677,6 +21486,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20714,6 +21524,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20734,6 +21545,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20754,6 +21566,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20790,6 +21603,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20810,6 +21624,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20830,6 +21645,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20866,6 +21682,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20887,6 +21704,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20908,6 +21726,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -20945,6 +21764,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -20965,6 +21785,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -20985,6 +21806,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21021,6 +21843,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21041,6 +21864,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21061,6 +21885,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21097,6 +21922,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21117,6 +21943,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21137,6 +21964,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21173,6 +22001,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21193,6 +22022,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21213,6 +22043,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21249,6 +22080,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21269,6 +22101,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21289,6 +22122,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21325,6 +22159,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21345,6 +22180,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21365,6 +22201,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21401,6 +22238,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21420,6 +22258,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21439,6 +22278,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21474,6 +22314,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21495,6 +22336,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21516,6 +22358,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21553,6 +22396,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21574,6 +22418,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21595,6 +22440,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21632,6 +22478,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21652,6 +22499,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21672,6 +22520,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21708,6 +22557,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21728,6 +22578,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21748,6 +22599,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21784,6 +22636,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21803,6 +22656,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21822,6 +22676,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21857,6 +22712,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21878,6 +22734,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21899,6 +22756,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -21936,6 +22794,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -21956,6 +22815,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -21976,6 +22836,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22012,6 +22873,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22033,6 +22895,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22054,6 +22917,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22091,6 +22955,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22111,6 +22976,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22131,6 +22997,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22167,6 +23034,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22187,6 +23055,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22207,6 +23076,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22243,6 +23113,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22264,6 +23135,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22285,6 +23157,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22322,6 +23195,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22343,6 +23217,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22364,6 +23239,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22401,6 +23277,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22421,6 +23298,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22441,6 +23319,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22477,6 +23356,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22497,6 +23377,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22517,6 +23398,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22553,6 +23435,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22574,6 +23457,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22595,6 +23479,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22632,6 +23517,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22652,6 +23538,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22672,6 +23559,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22708,6 +23596,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22729,6 +23618,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22750,6 +23640,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22787,6 +23678,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22806,6 +23698,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22825,6 +23718,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22860,6 +23754,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22879,6 +23774,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22898,6 +23794,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -22933,6 +23830,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -22953,6 +23851,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -22973,6 +23872,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23009,6 +23909,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23029,6 +23930,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23049,6 +23951,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23085,6 +23988,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23106,6 +24010,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23127,6 +24032,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23164,6 +24070,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23184,6 +24091,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23204,6 +24112,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23240,6 +24149,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23260,6 +24170,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23280,6 +24191,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23316,6 +24228,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23336,6 +24249,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23356,6 +24270,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23392,6 +24307,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23412,6 +24328,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23432,6 +24349,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23468,6 +24386,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23488,6 +24407,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23508,6 +24428,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23544,6 +24465,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23563,6 +24485,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23582,6 +24505,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23617,6 +24541,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23637,6 +24562,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23657,6 +24583,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23693,6 +24620,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23714,6 +24642,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23735,6 +24664,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23772,6 +24702,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23793,6 +24724,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23814,6 +24746,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23851,6 +24784,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23871,6 +24805,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23891,6 +24826,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -23927,6 +24863,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -23947,6 +24884,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -23967,6 +24905,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24003,6 +24942,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24024,6 +24964,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24045,6 +24986,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24082,6 +25024,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24103,6 +25046,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24124,6 +25068,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24161,6 +25106,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24180,6 +25126,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24199,6 +25146,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24234,6 +25182,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24253,6 +25202,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24272,6 +25222,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24307,6 +25258,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24327,6 +25279,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24347,6 +25300,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24383,6 +25337,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24403,6 +25358,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24423,6 +25379,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24459,6 +25416,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24480,6 +25438,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24501,6 +25460,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24538,6 +25498,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24558,6 +25519,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24578,6 +25540,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24614,6 +25577,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24634,6 +25598,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24654,6 +25619,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24690,6 +25656,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24710,6 +25677,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24730,6 +25698,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24766,6 +25735,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24786,6 +25756,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24806,6 +25777,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24842,6 +25814,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24863,6 +25836,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24884,6 +25858,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -24921,6 +25896,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -24942,6 +25918,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -24963,6 +25940,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25000,6 +25978,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25020,6 +25999,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25040,6 +26020,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25076,6 +26057,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25096,6 +26078,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25116,6 +26099,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25152,6 +26136,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25172,6 +26157,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25192,6 +26178,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25228,6 +26215,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25249,6 +26237,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25270,6 +26259,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25307,6 +26297,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25327,6 +26318,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25347,6 +26339,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25383,6 +26376,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25403,6 +26397,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25423,6 +26418,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25459,6 +26455,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25480,6 +26477,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25501,6 +26499,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25538,6 +26537,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25557,6 +26557,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25576,6 +26577,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25611,6 +26613,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25632,6 +26635,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25653,6 +26657,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25690,6 +26695,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25710,6 +26716,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25730,6 +26737,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25766,6 +26774,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25786,6 +26795,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25806,6 +26816,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25842,6 +26853,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25863,6 +26875,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25884,6 +26897,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25921,6 +26935,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -25941,6 +26956,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -25961,6 +26977,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -25997,6 +27014,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26018,6 +27036,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26039,6 +27058,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26076,6 +27096,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26096,6 +27117,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26116,6 +27138,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26152,6 +27175,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26173,6 +27197,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26194,6 +27219,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26231,6 +27257,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26252,6 +27279,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26273,6 +27301,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26310,6 +27339,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26331,6 +27361,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26352,6 +27383,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26389,6 +27421,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26409,6 +27442,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26429,6 +27463,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26465,6 +27500,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26485,6 +27521,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26505,6 +27542,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26541,6 +27579,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26561,6 +27600,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26581,6 +27621,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26617,6 +27658,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26637,6 +27679,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26657,6 +27700,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26693,6 +27737,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26714,6 +27759,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26735,6 +27781,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26772,6 +27819,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26793,6 +27841,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26814,6 +27863,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26851,6 +27901,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26871,6 +27922,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26891,6 +27943,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -26927,6 +27980,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -26947,6 +28001,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -26967,6 +28022,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27003,6 +28059,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27024,6 +28081,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27045,6 +28103,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27082,6 +28141,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27103,6 +28163,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27124,6 +28185,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27161,6 +28223,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27181,6 +28244,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27201,6 +28265,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27237,6 +28302,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27256,6 +28322,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27275,6 +28342,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27310,6 +28378,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27330,6 +28399,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27350,6 +28420,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27386,6 +28457,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27405,6 +28477,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27424,6 +28497,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27459,6 +28533,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27480,6 +28555,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27501,6 +28577,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27538,6 +28615,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27558,6 +28636,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27578,6 +28657,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27614,6 +28694,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27634,6 +28715,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27654,6 +28736,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27690,6 +28773,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27710,6 +28794,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27730,6 +28815,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27766,6 +28852,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27786,6 +28873,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27806,6 +28894,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27842,6 +28931,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27863,6 +28953,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27884,6 +28975,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
@@ -27921,6 +29013,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
     contents: [
       {
         language: {
+          id: '',
           countryCode: 'GB',
           code: 'en',
           label: 'English',
@@ -27940,6 +29033,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'NG',
           code: 'yo',
           label: 'Yoruba',
@@ -27959,6 +29053,7 @@ export const CONTENT_MOCK: ISpiritualDailyDigest[] = [
       },
       {
         language: {
+          id: '',
           countryCode: 'FR',
           code: 'fr',
           label: 'French',
