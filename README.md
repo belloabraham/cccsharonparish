@@ -1,6 +1,51 @@
-# CccsharonparishOrg
+# My Daily Digest Content Management System
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+This project is a content management system (CMS) for My Daily Digest, built as a monorepo managed by Nx. It allows efficient development, sharing, and management of code across related projects within the CMS ecosystem.
+
+## Overview
+
+The project leverages Nx, a powerful toolkit designed for managing monorepos. This structure enables:
+
+-   **Code Sharing:** Easily share code between the admin and user-facing applications using common libraries.
+-   **Consistent Tooling:** Maintain consistent tooling, configurations, and build processes across the project.
+-   **Dependency Management:** Efficiently manage dependencies for all applications and libraries within the monorepo.
+-   **Streamlined Build and Test:** Easily run builds and tests for individual project parts or the entire project.
+
+## Applications
+
+This monorepo contains two main applications:
+
+1.  **admin.mydailydigest.me:** This is the administrative panel for the My Daily Digest content management system. It's designed for:
+    -   **Content Management:** Creating, editing, publishing, and organizing content.
+    -   **Editor Management:** Managing the team of editors responsible for creating and curating content.
+    -   **User Management:** Overseeing user accounts and their access to the platform.
+    
+    -   **dev version:** [http://dev-admin.mydailydigest.me](http://dev-admin.mydailydigest.me)
+    -   **prod version:** [http://admin.mydailydigest.me](http://admin.mydailydigest.me)
+2.  **mydailydigest.me:** This is the end-user platform where readers can access and consume the content managed by the admin application. It focuses on providing a seamless reading experience.
+
+    -   **Live version of the project website:** [mydailydigest.me](mydailydigest.me)
+
+## Libraries
+
+The project includes three common libraries that facilitate code reuse and maintainability:
+
+1.  **angular:** This library houses Angular-specific UI components, directives, and pipes. It's built to ensure a consistent user interface and experience across the applications.
+2.  **core:** This library contains core utilities, models, and non-UI-related code. It's a collection of generic and reusable functions and data structures that can be used throughout the project.
+3.  **mydailydigest:** This library encapsulates code specific to the My Daily Digest content domain. It includes shared code related to content structures, content processing, and other domain-specific features.
+
+## Screenshots
+
+### Admin Application
+
+#### Translate Screen
+![Translate Screen](apps/admin.mydailydigest.me/public/images/translate.png)
+
+#### Draft Screen
+![Draft Screen](apps/admin.mydailydigest.me/public/images/draft.png)
+
+#### Mobile Draft Screen
+![Mobile Draft Screen](apps/admin.mydailydigest.me/public/images/draft-mobile.png)
 
 ✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
 

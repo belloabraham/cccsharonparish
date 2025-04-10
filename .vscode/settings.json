@@ -1,3 +1,7 @@
 {
-  "cSpell.words": ["mydailydigest"]
+  "cSpell.words": [
+    "mydailydigest"
+  ],
+  "IDX.aI.enableInlineCompletion": true,
+  "IDX.aI.enableCodebaseIndexing": true
 }
