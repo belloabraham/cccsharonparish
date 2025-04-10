@@ -6,25 +6,27 @@ This project is a content management system (CMS) for My Daily Digest, built as 
 
 The project leverages Nx, a powerful toolkit designed for managing monorepos. This structure enables:
 
--   **Code Sharing:** Easily share code between the admin and user-facing applications using common libraries.
--   **Consistent Tooling:** Maintain consistent tooling, configurations, and build processes across the project.
--   **Dependency Management:** Efficiently manage dependencies for all applications and libraries within the monorepo.
--   **Streamlined Build and Test:** Easily run builds and tests for individual project parts or the entire project.
+- **Code Sharing:** Easily share code between the admin and user-facing applications using common libraries.
+- **Consistent Tooling:** Maintain consistent tooling, configurations, and build processes across the project.
+- **Dependency Management:** Efficiently manage dependencies for all applications and libraries within the monorepo.
+- **Streamlined Build and Test:** Easily run builds and tests for individual project parts or the entire project.
 
 ## Applications
 
 This monorepo contains two main applications:
 
 1.  **admin.mydailydigest.me:** This is the administrative panel for the My Daily Digest content management system. It's designed for:
-    -   **Content Management:** Creating, editing, publishing, and organizing content.
-    -   **Editor Management:** Managing the team of editors responsible for creating and curating content.
-    -   **User Management:** Overseeing user accounts and their access to the platform.
-    
-    -   **dev version:** [http://dev-admin.mydailydigest.me](http://dev-admin.mydailydigest.me)
-    -   **prod version:** [http://admin.mydailydigest.me](http://admin.mydailydigest.me)
+
+    - **Content Management:** Creating, editing, publishing, and organizing content.
+    - **Editor Management:** Managing the team of editors responsible for creating and curating content.
+    - **User Management:** Overseeing user accounts and their access to the platform.
+
+    - **dev version:** [http://dev-admin.mydailydigest.me](http://dev-admin.mydailydigest.me)
+    - **prod version:** [http://admin.mydailydigest.me](http://admin.mydailydigest.me)
+
 2.  **mydailydigest.me:** This is the end-user platform where readers can access and consume the content managed by the admin application. It focuses on providing a seamless reading experience.
 
-    -   **Live version of the project website:** [mydailydigest.me](mydailydigest.me)
+    - **Live version of the project website:** [mydailydigest.me](mydailydigest.me)
 
 ## Libraries
 
@@ -39,17 +41,20 @@ The project includes three common libraries that facilitate code reuse and maint
 ### Admin Application
 
 #### Translate Screen
-![Translate Screen](apps/admin.mydailydigest.me/public/images/translate.png)
+
+![Translate Screen](./screenshots/draft.jpeg)
 
 #### Draft Screen
-![Draft Screen](apps/admin.mydailydigest.me/public/images/draft.png)
+
+![Draft Screen](./screenshots/translate.jpeg)
 
 #### Mobile Draft Screen
-![Mobile Draft Screen](apps/admin.mydailydigest.me/public/images/draft-mobile.png)
+
+![Mobile Draft Screen](./screenshots/draft-mobile.jpeg)
 
 ✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
 
 ## Run tasks
 
@@ -70,7 +75,7 @@ To see all available targets to run for a project, run:
 ```sh
 npx nx show project mydailydigest.me
 ```
-        
+
 These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
 
 [More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
@@ -134,12 +139,13 @@ Nx Console is an editor extension that enriches your developer experience. It le
 
 Learn more:
 
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
+- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 - [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
 And join the Nx community:
+
 - [Discord](https://go.nx.dev/community)
 - [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
 - [Our Youtube channel](https://www.youtube.com/@nxdevtools)
