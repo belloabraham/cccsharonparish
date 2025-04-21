@@ -12,7 +12,7 @@ import {
   Language,
 } from '@cccsharonparish/mydailydigest';
 import { limit, orderBy, Timestamp } from '@angular/fire/firestore';
-import { environment } from '../../../../src/environments/environment';
+import { environment } from '../../../environments/environment';
 import { of } from 'rxjs';
 import { DRAFT_CONTENT_MOCK } from './mock/draft-content';
 import { getContentFromUIState } from '../shared';

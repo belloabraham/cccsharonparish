@@ -7,11 +7,11 @@ export default defineConfig({
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
       webServerCommands: {
-        default: 'pnpm exec nx run admin.mydailydigest.me:serve',
-        production: 'pnpm exec nx run admin.mydailydigest.me:serve-static',
+        default: 'pnpm exec nx run writers.mydailydigest.me:serve',
+        production: 'pnpm exec nx run writers.mydailydigest.me:serve-static',
       },
       ciWebServerCommand:
-        'pnpm exec nx run admin.mydailydigest.me:serve-static',
+        'pnpm exec nx run writers.mydailydigest.me:serve-static',
       ciBaseUrl: 'http://localhost:4300',
     }),
     baseUrl: 'http://localhost:4300',

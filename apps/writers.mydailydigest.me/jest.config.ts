@@ -1,8 +1,8 @@
 export default {
-  displayName: 'admin.mydailydigest.me',
+  displayName: 'writers.mydailydigest.me',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/admin.mydailydigest.me',
+  coverageDirectory: '../../coverage/apps/writers.mydailydigest.me',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

@@ -5,7 +5,7 @@ import {
   ISpiritualDailyDigest,
 } from '@cccsharonparish/mydailydigest';
 import { where } from '@angular/fire/firestore';
-import { environment } from '../../../../src/environments/environment';
+import { environment } from '../../../environments/environment';
 import { CONTENT_YEARS_MOCK } from './mock/content-years';
 import { of } from 'rxjs';
 import { PUBLISHED_CONTENTS_MOCK } from './mock/published-content';

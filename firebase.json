@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/apps/admin.mydailydigest.me/browser",
+    "public": "dist/apps/writers.mydailydigest.me/browser",
     "ignore": [
       "firebase.json",
       "**/.*",

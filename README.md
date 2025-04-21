@@ -6,7 +6,7 @@ This project is a content management system (CMS) for My Daily Digest, built as 
 
 The project leverages Nx, a powerful toolkit designed for managing monorepos. This structure enables:
 
-- **Code Sharing:** Easily share code between the admin and user-facing applications using common libraries.
+- **Code Sharing:** Easily share code between the writers and user-facing applications using common libraries.
 - **Consistent Tooling:** Maintain consistent tooling, configurations, and build processes across the project.
 - **Dependency Management:** Efficiently manage dependencies for all applications and libraries within the monorepo.
 - **Streamlined Build and Test:** Easily run builds and tests for individual project parts or the entire project.
@@ -15,16 +15,16 @@ The project leverages Nx, a powerful toolkit designed for managing monorepos. Th
 
 This monorepo contains two main applications:
 
-1.  **admin.mydailydigest.me:** This is the administrative panel for the My Daily Digest content management system. It's designed for:
+1.  **writers.mydailydigest.me:** This is the writersistrative panel for the My Daily Digest content management system. It's designed for:
 
     - **Content Management:** Creating, editing, publishing, and organizing content.
     - **Editor Management:** Managing the team of editors responsible for creating and curating content.
     - **User Management:** Overseeing user accounts and their access to the platform.
 
-    - **dev version:** [http://dev-admin.mydailydigest.me](http://dev-admin.mydailydigest.me)
-    - **prod version:** [http://admin.mydailydigest.me](http://admin.mydailydigest.me)
+    - **dev version:** [http://dev-writers.mydailydigest.me](http://dev-writers.mydailydigest.me)
+    - **prod version:** [http://writers.mydailydigest.me](http://writers.mydailydigest.me)
 
-2.  **mydailydigest.me:** This is the end-user platform where readers can access and consume the content managed by the admin application. It focuses on providing a seamless reading experience.
+2.  **mydailydigest.me:** This is the end-user platform where readers can access and consume the content managed by the writers application. It focuses on providing a seamless reading experience.
 
     - **Live version of the project website:** [mydailydigest.me](mydailydigest.me)
 
@@ -38,7 +38,7 @@ The project includes three common libraries that facilitate code reuse and maint
 
 ## Screenshots
 
-### Admin Application
+### writers Application
 
 #### Translate Screen
 

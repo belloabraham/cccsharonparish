@@ -44,7 +44,7 @@ import { LanguageResourceService } from '@cccsharonparish/angular';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { SubSink } from 'subsink';
 import { environment } from '../../../environments/environment';
-import { DRAFT_STRING_RESOURCE_KEY } from '../awaiting-approval/i18n/string-res-keys';
+import { DRAFT_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
 import { EditorsStore } from '../editors/editors.store';
 import { CONTENT_AWAITING_APPROVE_TABLE_COLUMNS } from './awaiting-approval-table';
 import { AwaitingApprovalService } from './awaiting-approval.service';
@@ -109,7 +109,7 @@ export class AwaitingApprovalComponent implements OnInit, OnDestroy {
       ).filter(tuiIsPresent)
     );
   }
-  
+
   ngOnInit(): void {
     const thereAreNoContents =
       this.contentStore.contentAwaitingApproval().length === 0;
