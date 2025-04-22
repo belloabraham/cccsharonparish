@@ -7,6 +7,7 @@ import {
   STORAGE_PATH,
 } from '../../services';
 import {
+  ENGLISH_LANG_CODE,
   ISpiritualDailyDigest,
   ISpiritualDailyDigestUIState,
   Language,
@@ -107,8 +108,57 @@ export class DraftService {
     return this.remoteData.deleteADocumentFrom(COLLECTION.DRAFT, [draftId]);
   }
 
-  submitForReview(draft: ISpiritualDailyDigest) {
-    return this.remoteData.runTransaction(async (transaction) => {
+  async copyImageHeaderFileToAwaitingApproval(
+    oldPathToImageFile: string | null
+  ) {
+    let newPathToImageFile: string | null = null;
+    if (oldPathToImageFile) {
+      newPathToImageFile = oldPathToImageFile.replace(
+        /^[^/]+/,
+        STORAGE_PATH.AWAITING_APPROVAL
+      );
+      await this.cloudStorage.copyFileTo(
+        oldPathToImageFile,
+        newPathToImageFile
+      );
+      return newPathToImageFile;
+    }
+    return newPathToImageFile;
+  }
+
+  async copyAudioFileForDraftContent(
+    url: string | null,
+    newPathToFile: string
+  ) {
+    if (url) {
+      const uploadResult = await this.cloudStorage.copyFileFromUrlTo(
+        url,
+        newPathToFile
+      );
+      const newUrl = await this.cloudStorage.getFileDownloadURLAsync(
+        uploadResult.ref
+      );
+      return newUrl;
+    }
+    return url;
+  }
+
+  async submitForReview(draft: ISpiritualDailyDigest) {
+    const existingHeaderImagePath = draft.imagePath;
+    const newHeaderImagePath = await this.copyImageHeaderFileToAwaitingApproval(
+      existingHeaderImagePath
+    );
+    const draftContentAudioUrl = draft.contents[0].audioUrl;
+    const newDraftContentAudioUrl = await this.copyAudioFileForDraftContent(
+      draftContentAudioUrl,
+      [
+        STORAGE_PATH.AWAITING_APPROVAL,
+        STORAGE_PATH.AUDIO,
+        ENGLISH_LANG_CODE,
+      ].join('/')
+    );
+
+    await this.remoteData.runTransaction(async (transaction) => {
       const draftDocRef = this.remoteData.getDocRef(COLLECTION.DRAFT, [
         draft.id,
       ]);
@@ -121,7 +171,14 @@ export class DraftService {
       });
       transaction.set(awaitingApprovalDocRef, {
         ...draft,
+        contents: [
+          {
+            ...draft.contents[0],
+            audioUrl: newDraftContentAudioUrl,
+          },
+        ],
         isAwaitingApproval: true,
+        imagePath: newHeaderImagePath,
       });
     });
   }

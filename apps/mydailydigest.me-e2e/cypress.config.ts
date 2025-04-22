@@ -11,8 +11,8 @@ export default defineConfig({
         production: 'pnpm exec nx run mydailydigest.me:serve-static',
       },
       ciWebServerCommand: 'pnpm exec nx run mydailydigest.me:serve-static',
-      ciBaseUrl: 'http://localhost:4400',
+      ciBaseUrl: 'http://localhost:4200',
     }),
-    baseUrl: 'http://localhost:4400',
+    baseUrl: 'http://localhost:4200',
   },
 });

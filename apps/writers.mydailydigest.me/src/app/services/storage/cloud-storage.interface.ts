@@ -24,4 +24,13 @@ export interface ICloudStorage {
   ): Observable<UploadResult>;
 
   getFileDownloadURL(storageRef: StorageReference): Observable<string>;
+
+  getFileDownloadURLAsync(storageRef: StorageReference): Promise<string>;
+
+  copyFileTo(
+    oldPathToFile: string,
+    newPathToFile: string
+  ): Promise<UploadResult>;
+
+  copyFileFromUrlTo(url: string, newPathToFile: string): Promise<UploadResult>;
 }

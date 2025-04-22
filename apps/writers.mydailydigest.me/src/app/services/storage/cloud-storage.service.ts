@@ -39,6 +39,10 @@ export class CloudStorageService implements ICloudStorage {
     });
   }
 
+  getFileDownloadURLAsync(storageRef: StorageReference) {
+    return this.firebaseStorage.getFileDownloadURL(storageRef);
+  }
+
   uploadFileTo(
     pathSegment: string[],
     fileNameWithExt: string,
@@ -46,10 +50,21 @@ export class CloudStorageService implements ICloudStorage {
   ): Observable<UploadResult> {
     return new Observable((observer) => {
       this.firebaseStorage
-        .uploadFileTo(pathSegment, fileNameWithExt, file)
+        .uploadFileTo(file, [...pathSegment, fileNameWithExt])
         .then((uploadResult) => observer.next(uploadResult))
         .catch((error) => observer.error(error))
         .finally(() => observer.complete());
     });
+  }
+
+  copyFileTo(
+    oldPathToFile: string,
+    newPathToFile: string
+  ): Promise<UploadResult> {
+    return this.firebaseStorage.copyFileTo(oldPathToFile, newPathToFile);
+  }
+
+  copyFileFromUrlTo(url: string, newPathToFile: string): Promise<UploadResult> {
+    return this.firebaseStorage.copyFileFromUrlTo(url, newPathToFile);
   }
 }
