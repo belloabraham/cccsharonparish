@@ -10,7 +10,7 @@ describe('Auth Page', () => {
     // Check for the logo
     cy.get('.logo img')
       .should('be.visible')
-      .and('have.attr', 'src', '/images/global/logo.png');
+      .and('have.attr', 'src', '/global/images/logo.png');
 
     // Check the translated login message
     cy.get('.title').should('not.be.empty');

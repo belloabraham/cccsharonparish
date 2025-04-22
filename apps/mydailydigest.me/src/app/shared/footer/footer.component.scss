@@ -1,0 +1,92 @@
+.footer {
+  background-color: #3d1310;
+  font-weight: 300;
+  padding-top: 2rem !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section {
+  padding-bottom: 1rem;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
+
+.download-buttons {
+  img {
+    width: 7rem;
+    height: auto;
+  }
+  padding-bottom: 1rem;
+}
+
+.app-name {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+.logo {
+  border-radius: 1.4rem;
+  width: 4rem;
+  height: 4rem;
+  img {
+    width: 3.5rem;
+    height: auto;
+  }
+}
+
+.copyright {
+  background-color: #140605;
+  font-size: 0.9rem;
+}
+
+.social {
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 0 !important;
+    list-style: none;
+    gap: 1.5rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    mat-icon {
+      font-size: 2rem;
+      transition: all ease-in-out 0.5s;
+      transform: scale(1);
+    }
+
+    a:hover {
+      mat-icon {
+        transition: all ease-in-out 0.1s;
+        color: #ffa270;
+        transform: scale(1.5);
+      }
+    }
+  }
+}
+
+a {
+  font-size: 0.9rem;
+  color: #ffa270;
+
+  &:hover {
+    color: #ffc8a8;
+    text-decoration: underline;
+  }
+}
+
+ul {
+  padding: 0;
+  li {
+    padding-bottom: 1rem;
+    list-style: none;
+  }
+}
