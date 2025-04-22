@@ -96,10 +96,10 @@
                                     <td *tuiCell="key" tuiTd>
                                         <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank"
                                             rel="noopener noreferrer">
-                                            <img *ngIf="item[key]" width="50" height="50" class="header-image"
+                                            <img *ngIf="item[key]" width="50" height="37" class="header-image"
                                                 ngSrc="{{item[key]}}" alt="Header Image">
 
-                                            <img *ngIf="!item[key]" width="50" height="50" class="header-image"
+                                            <img *ngIf="!item[key]" width="50" height="37" class="header-image"
                                                 src="{{item[key]}}" alt="Header Image">
                                         </a>
                                     </td>
@@ -111,7 +111,8 @@
                                     <td *tuiCell="key" tuiTd [class.match]="isColumnMatch(item[key])">
                                         <ng-container *ngIf="item[key]">
                                             @let updatedOrCreatedBy = getUserById(item[key]!);
-                                            <p>{{ updatedOrCreatedBy?.lastName }} {{ updatedOrCreatedBy?.firstName }}</p>
+                                            <p>{{ updatedOrCreatedBy?.lastName }} {{ updatedOrCreatedBy?.firstName }}
+                                            </p>
                                             <a class="underline" target="_blank"
                                                 href="https://wa.me/{{updatedOrCreatedBy?.phone}}">
                                                 <p class="flex items-center">

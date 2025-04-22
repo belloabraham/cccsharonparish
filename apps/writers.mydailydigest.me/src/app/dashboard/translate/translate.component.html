@@ -54,6 +54,7 @@
                         </ng-container>
                     </tr>
                 </thead>
+                
                 <tbody *tuiLet="translateData() | tuiTableSort as sortedData" tuiTbody [data]="sortedData">
 
                     <ng-container *ngFor="let item of sortedData; let dataIndex = index">
@@ -80,9 +81,9 @@
                                 } @else if (key === "imagePath") {
                                 <td *tuiCell="key" tuiTd>
                                     <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank" rel="noopener noreferrer">
-                                        <img *ngIf="item[key]" width="50" height="50" class="header-image"
+                                        <img *ngIf="item[key]" width="50" height="37" class="header-image"
                                             ngSrc="{{item[key]}}" alt="Header Image">
-                                        <img *ngIf="!item[key]" width="50" height="50" class="header-image"
+                                        <img *ngIf="!item[key]" width="50" height="37" class="header-image"
                                             src="{{item[key]}}" alt="Header Image">
                                     </a>
                                 </td>
@@ -112,9 +113,9 @@
                                 } @else if (key === "imagePath") {
                                 <td *tuiCell="key" tuiTd>
                                     <a href="{{CDN_BASE_URL}}/{{item[key]}}" target="_blank" rel="noopener noreferrer">
-                                        <img *ngIf="item[key]" width="50" height="50" class="header-image"
+                                        <img *ngIf="item[key]" width="50" height="37" class="header-image"
                                             ngSrc="{{item[key]}}" alt="Header Image">
-                                        <img *ngIf="!item[key]" width="50" height="50" class="header-image"
+                                        <img *ngIf="!item[key]" width="50" height="37" class="header-image"
                                             src="{{item[key]}}" alt="Header Image">
                                     </a>
                                 </td>
