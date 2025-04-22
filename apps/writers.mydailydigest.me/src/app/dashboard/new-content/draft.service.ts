@@ -126,14 +126,17 @@ export class DraftService {
     return newPathToImageFile;
   }
 
-  async copyAudioFileForDraftContent(
-    url: string | null,
-    newPathToFile: string
+  async copyAudioFileToAwaitingApproval(
+    url: string | null
   ) {
     if (url) {
       const uploadResult = await this.cloudStorage.copyFileFromUrlTo(
         url,
-        newPathToFile
+        [
+          STORAGE_PATH.AWAITING_APPROVAL,
+          STORAGE_PATH.AUDIO,
+          ENGLISH_LANG_CODE,
+        ].join('/')
       );
       const newUrl = await this.cloudStorage.getFileDownloadURLAsync(
         uploadResult.ref
@@ -149,13 +152,8 @@ export class DraftService {
       existingHeaderImagePath
     );
     const draftContentAudioUrl = draft.contents[0].audioUrl;
-    const newDraftContentAudioUrl = await this.copyAudioFileForDraftContent(
-      draftContentAudioUrl,
-      [
-        STORAGE_PATH.AWAITING_APPROVAL,
-        STORAGE_PATH.AUDIO,
-        ENGLISH_LANG_CODE,
-      ].join('/')
+    const newDraftContentAudioUrl = await this.copyAudioFileToAwaitingApproval(
+      draftContentAudioUrl
     );
 
     await this.remoteData.runTransaction(async (transaction) => {

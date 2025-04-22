@@ -100,7 +100,7 @@ export class TranslateComponent extends NewContentComponent implements OnInit {
       existingContentUIState,
       existingSDDContent,
       existingContentTranslateUIState.englishContent,
-      STORAGE_PATH.APPROVED,
+      STORAGE_PATH.PUBLISHED,
       COLLECTION.APPROVED
     );
   }
