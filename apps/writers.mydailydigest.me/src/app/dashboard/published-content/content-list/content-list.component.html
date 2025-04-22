@@ -23,7 +23,7 @@
                     <tui-opt-group>
                         <button class="flex gap-2" *ngFor="let lang of languages" tuiOption type="button"
                             [value]="lang.countryCode" (click)="setLang(lang)">
-                            <img class="t-flag" [src]="lang.countryCode | tuiFlag"  alt="Flag"/>
+                            <img class="t-flag" [src]="lang.countryCode | tuiFlag" alt="Flag" />
                             {{ lang.label }}
                         </button>
                     </tui-opt-group>
@@ -99,8 +99,11 @@
                             }@else if(key ==="imagePath"){
                             <td *tuiCell="key" tuiTd>
                                 <a [href]="item[key]" target="_blank" rel="noopener noreferrer">
-                                    <img width="50" height="37" class="header-image" ngSrc="{{item[key]}}"
-                                        alt="Header Image">
+                                    <img *ngIf="item[key]" width="50" height="37" class="header-image"
+                                        ngSrc="{{item[key]}}" alt="Header Image">
+
+                                    <img *ngIf="!item[key]" width="50" height="37" class="header-image"
+                                        src="{{item[key]}}" alt="Header Image">
                                 </a>
                             </td>
                             }@else if(key ==="audioUrl"){
