@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { SharedModule } from '../shared';
 
 @Component({
   selector: 'app-terms',
-  imports: [],
+  imports: [SharedModule],
   templateUrl: './terms.component.html',
-  styleUrl: './terms.component.scss'
+  styleUrl: './terms.component.scss',
 })
-export class TermsComponent {
-
-}
+export class TermsComponent {}
