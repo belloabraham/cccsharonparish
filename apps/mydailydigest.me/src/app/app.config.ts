@@ -30,7 +30,7 @@ export const appConfig: ApplicationConfig = {
     }),
 
     //NgOptimize
-    provideImgixLoader(environment.cdnBaseUrl),
+    // provideImgixLoader(environment.cdnBaseUrl),
 
     //Transloco
     provideHttpClient(),

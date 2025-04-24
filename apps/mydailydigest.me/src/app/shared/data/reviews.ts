@@ -1,4 +1,3 @@
-
 export interface AppReview {
   avater: string;
   username: string;
@@ -7,64 +6,84 @@ export interface AppReview {
 
 export const APP_REVIEWS: AppReview[] = [
   {
-    avater: 'assets/images/avaters/adetona.webp',
-    username: 'Adetona Temitope Abosede',
+    avater: 'images/reviewers/benjamin.webp',
+    username: 'Thomas Benjamin',
     review:
-      'It is easy to access and understandable. Having the Bible verses attached to it makes it more incredible.😍',
+      'I love how this app sends me a daily dose of inspiration.😍 It’s like having a mini church service in my pocket',
   },
   {
-    avater: 'assets/images/avaters/victoria-oyero.webp',
+    avater: 'images/reviewers/victoria-oyero.webp',
     username: 'Victoria Oyero',
     review:
-      "This app makes me happy everytime in church. Searching for him is easy, the lyrics are on point. It's a great app.",
+      'The notifications are just the right length, and I can easily reflect on the verse or prayer it shares. It’s helped me stay grounded and start my day with God’s word.',
   },
   {
-    avater: 'assets/images/avaters/anuoluwapo.webp',
-    username: 'Anuoluwapo Rebecca Ohiorenoya',
+    avater: 'images/reviewers/rebecca.png',
+    username: 'Rebecca David Ohiorenoya',
     review:
-      'Hmmmmmmmmm This is better than the other one because of the complete stanza and it helped me as a chorister The Bible reference are the best It helps you to understand the meaning of a particular verse or line',
+      'Hmmmmmmmmm I’ve been using this app for a few weeks now, and it has truly helped me stay focused on my faith throughout the day. The daily messages are uplifting',
   },
   {
-    avater: 'assets/images/avaters/iluyomade.webp',
-    username: 'Iluyomade Nelson',
-    review: 'The app is good and easy to use. May God bless your handwork.',
-  },
-  {
-    avater: 'assets/images/avaters/mokolade.webp',
-    username: 'Mo Kolade Ogunade-Hughes',
+    avater: 'images/reviewers/lissa.jpg',
+    username: 'Lissa David',
     review:
-      'This is the best CCC hymnal app for real. Easy to use, just the best.',
+      'Every day feels like a new opportunity for growth thanks to this app. The devotionals are short but impactful. ',
   },
   {
-    avater: 'assets/images/avaters/samuel.webp',
-    username: 'Samuel akos',
+    avater: 'images/reviewers/mathew.jpg',
+    username: 'Matthew Andrew',
+    review:
+      'I appreciate how easy it is to access the content, and the app is super user-friendly. It’s a blessing to have this on my phone!',
+  },
+  {
+    avater: 'images/reviewers/samuel.webp',
+    username: 'Joseph Samuel',
     review:
       "If there's any app that should have a five star rating, it is this one. I love the app.",
   },
   {
-    avater: 'assets/images/avaters/holaiya.webp',
+    avater: 'images/reviewers/holaiya.webp',
     username: 'Holaiya Holaemi',
     review:
       "Oh wow 😲😳😳 it's so adorable 😍🥰🥰 and amazing 😍🤩 I'm so glad 😊😊😊",
   },
   {
-    avater: 'assets/images/avaters/olatunji.webp',
+    avater: 'images/reviewers/olatunji.jpg',
     username: 'Olatunji Taiwo',
-    review: 'Very swift and spiffy',
+    review:
+      'I find comfort in the daily messages this app provides. It’s like a little reminder from God each day, and I look forward to it',
   },
   {
-    avater: 'assets/images/avaters/olatunji.webp',
+    avater: 'images/reviewers/mayowa.jpg',
     username: 'Mayowa mobolaji',
     review: 'Wish I can give more then 5 🌟',
   },
   {
-    avater: 'assets/images/avaters/bukola.webp',
+    avater: 'images/reviewers/olivia.png',
+    username: 'Olivia Faith',
+    review:
+      'I absolutely love receiving my daily spiritual content through this app. It’s my go-to source of inspiration every morning"',
+  },
+  {
+    avater: 'images/reviewers/bukola.jpg',
     username: 'Bukola Usman',
     review: 'Simply the best',
   },
   {
-    avater: 'assets/images/avaters/ayodele.webp',
+    avater: 'images/reviewers/ayodele.webp',
     username: 'Ayodele ebenezer',
+    review:
+      'As a busy person, I often don’t have time to sit down with my Bible as much as I’d like. This app is a great way to get my daily dose of Scripture and encouragement. It’s easy to use, and the messages are always relevant',
+  },
+  {
+    avater: 'images/reviewers/emily.jpg',
+    username: 'Emily Rose',
     review: 'In one word "Wonderful"',
+  },
+  {
+    avater: 'images/reviewers/hanna.jpg',
+    username: 'Hannah Elizabeth',
+    review:
+      'I’ve been using this app for a few months, and I’m always amazed at how relevant the content is to my daily life. It encourages me, uplifts my spirit, and helps me stay on track with my faith. Definitely worth downloading!',
   },
 ];
