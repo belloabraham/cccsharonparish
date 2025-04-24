@@ -13,8 +13,7 @@ import { CONSTANT, environment, ROUTE } from '@cccsharonparish/mydailydigest';
 export class FooterComponent {
   year = new Date().getFullYear();
   CONSTANT = CONSTANT;
-  route = ROUTE;
+  ROUTE = ROUTE;
   APP_NAME = environment.appName;
-  EMAIL = CONSTANT.CONTACT.EMAIL
-
+  EMAIL = CONSTANT.CONTACT.EMAIL;
 }
