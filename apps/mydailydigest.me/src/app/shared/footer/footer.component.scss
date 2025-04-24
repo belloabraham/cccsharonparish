@@ -1,5 +1,5 @@
 .footer {
-  background-color: #3d1310;
+  background-color: #250b0a;
   font-weight: 300;
   padding-top: 2rem !important;
   padding-left: 1rem;
@@ -17,6 +17,8 @@ h6 {
 }
 
 .download-buttons {
+  display: flex;
+  gap: 1rem;
   img {
     width: 7rem;
     height: auto;
