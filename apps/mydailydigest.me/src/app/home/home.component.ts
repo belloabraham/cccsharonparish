@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from '../shared/footer/footer.component';
+import { SharedModule } from '../shared';
 
 @Component({
   selector: 'app-home',
-  imports: [FooterComponent],
+  imports: [SharedModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
