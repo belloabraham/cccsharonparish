@@ -1,6 +1,6 @@
 .main {
   min-height: 500px;
-  color: #250b0a;
+  color: var(--text-color);
 
   background-image: radial-gradient(
     circle farthest-corner at 10% 20%,

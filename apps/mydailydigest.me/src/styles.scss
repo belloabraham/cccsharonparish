@@ -5,3 +5,9 @@
 @use 'common/font';
 @use 'common/reset';
 @use 'tailwind';
+
+:root {
+  --text-color: #250b0a;
+  --section-title-size: 1.5rem;
+  --section-title-weight: 500;
+}

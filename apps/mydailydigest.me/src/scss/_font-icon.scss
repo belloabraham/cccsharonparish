@@ -24,18 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.star-fill:before {
+  content: '\e905';
+}
 .dark-mode-fill:before {
-  content: "\e900";
+  content: '\e900';
 }
 .facebook-fill:before {
-  content: "\e901";
+  content: '\e901';
 }
 .instagram-fill:before {
-  content: "\e902";
+  content: '\e902';
 }
 .twitter-fill:before {
-  content: "\e903";
+  content: '\e903';
 }
 .youtube-fill:before {
-  content: "\e904";
+  content: '\e904';
 }
