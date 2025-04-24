@@ -1,10 +1,11 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component, HostBinding } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ROUTE } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [RouterLink, NgOptimizedImage],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
