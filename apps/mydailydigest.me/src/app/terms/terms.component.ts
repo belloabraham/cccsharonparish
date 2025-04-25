@@ -15,4 +15,5 @@ export class TermsComponent {
   EMAIL = CONSTANT.CONTACT.EMAIL;
   ROUTE = ROUTE;
   PAGE_TRANSLATION = `https://translate.google.com/?sl=en&tl=fr&text=https%3A%2F%2Fmydailydigets.me%2Fterms&op=translate`;
+  CCC_SHARON_PARISH = CONSTANT.CCC_SHARON_PARISH;
 }
