@@ -5,36 +5,13 @@ $box_shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12);
 
-@keyframes changeBackground {
-  0% {
-    background-image: url('/images/features/splash-screen.png');
-  }
-  20% {
-    background-image: url('/images/features/introduction.png');
-  }
-  40% {
-    background-image: url('/images/features/audio.png');
-  }
-  60% {
-    background-image: url('/images/features/notification.png');
-  }
-  80% {
-    background-image: url('/images/features/multilingual.png');
-  }
-  100% {
-    background-image: url('/images/features/bookmarks.png');
-  }
-}
-
 .outside-border {
-  animation: changeBackground 8s ease-in-out infinite;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   width: 17.225rem;
   height: 35.5875rem;
-  border: 0.6px solid white;
+  border: 0.6px solid #ffffff;
   border-radius: 35px;
+  overflow: hidden;
   @include breakpoints.medium {
     width: 13.78rem;
     height: 28.47rem;
