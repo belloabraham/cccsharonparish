@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../shared';
-import { environment } from '@cccsharonparish/mydailydigest';
+import { CONSTANT, environment } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-privacy',
@@ -10,4 +10,5 @@ import { environment } from '@cccsharonparish/mydailydigest';
 })
 export class PrivacyComponent {
   APP_NAME = environment.appName;
+  EMAIL = CONSTANT.CONTACT.EMAIL;
 }

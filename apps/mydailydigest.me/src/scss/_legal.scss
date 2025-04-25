@@ -9,5 +9,31 @@
 
   .last-updated {
     padding: 1rem;
+    padding-right: 2rem;
   }
+}
+
+.legal-content {
+  padding: 2rem !important;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.17rem;
+}
+
+header {
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.404rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin: 0.5rem 0;
+  }
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.17rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
 }
