@@ -1,4 +1,5 @@
 @use 'phone';
+@use 'breakpoints';
 
 .main {
   color: var(--text-color);
@@ -18,6 +19,9 @@ h1 {
 }
 .description {
   font-size: 1.1rem;
+  @include breakpoints.lsMedium {
+    color: #160504;
+  }
 }
 .download {
   img {
