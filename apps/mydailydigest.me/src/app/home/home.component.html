@@ -2,7 +2,7 @@
     <app-header />
 
     <div class="grid grid-cols-1 md:grid-cols-2 main-content gap-4">
-        <div class="content order-2 md:order-1 flex flex-col gap-4">
+        <div class="content order-2 md:order-1 flex flex-col gap-4 pt-4 md:p-6 lg:p-12">
 
             <h1>
                 {{APP_NAME}}
@@ -26,11 +26,39 @@
 
         </div>
 
-        <div class="features order-1 md:order-2">
-            features Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore aliquam pariatur
-            porro soluta
-            est, in eaque quos recusandae impedit incidunt, a eius quas quo velit laudantium molestiae ducimus
-            voluptatum.
+        <div class="flex justify-center order-1 md:order-2">
+
+            <div class="outside-border">
+                <div class="silencer"></div>
+                <div class="volume-up"></div>
+                <div class="volume-down"></div>
+                <div class="button-on"></div>
+                <div class="inside-border">
+
+                    <!-- Camera -->
+
+                    <div class="camera">
+                        <div class="camera-dot">
+                            <div class="camera-dot-2"></div>
+                            <div class="camera-dot-3"></div>
+                        </div>
+                        <div class="camera-speaker">
+                        </div>
+                    </div>
+
+                    <!-- Battery and Signal -->
+
+                    <div class="t-r-info">
+                        <div class="dots">...</div>
+                        <div class="battery">
+                            <div class="bar"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </div>
 
