@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../shared';
+import { environment } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-terms',
@@ -7,4 +8,6 @@ import { SharedModule } from '../shared';
   templateUrl: './terms.component.html',
   styleUrl: './terms.component.scss',
 })
-export class TermsComponent {}
+export class TermsComponent {
+  APP_NAME = environment.appName;
+}
