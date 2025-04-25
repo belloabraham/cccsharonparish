@@ -134,11 +134,6 @@
         <h5>
             Cookies and other similar technologies.
         </h5>
-        <p>
-            Importantly, we do NOT use cookies or similar technologies to facilitate interest-based ads for third-party
-            goods or
-            services.
-        </p>
 
         <p>We use cookies to recognize you and/or your device(s) on, off, and across the different applications of
             {{APP_NAME}}. Cookies help to facilitate the best possible user experience of {{APP_NAME}} as they allow us
@@ -210,7 +205,7 @@
         </p>
 
         <h5>Attribution providers.</h5>
-        <p>We advertise {{APP_NAME}} on third party sites such as Facebook and Google and use
+        <p>We promote {{APP_NAME}} on third party sites such as Facebook, Google or other Social Media platforms and use
             third-party software
             development kits
             (“SDKs”) to attribute a download of {{APP_NAME}} to the advertisement placed on the
@@ -273,21 +268,24 @@
             information as
             follows:
         </p>
-        To provide, support, and personalize {{APP_NAME}} and the {{APP_NAME}}
-        functionality you request;
-        To create, maintain, customize, and secure your {{APP_NAME}} account, if any;
-        To process your requests and respond to your inquiries;
-        To provide information on other products or services;
-        To maintain the safety, security, and integrity of {{APP_NAME}} and the infrastructure that
-        facilitates use of
-        {{APP_NAME}};
-        For development and internal analysis;
-        To fulfill any other purpose for which you provide it;
-        To carry out our obligations and enforce our rights, including those under this Privacy Policy and our Terms of
-        Use;
-        As described in this Privacy Policy;
-        In any other way we may describe when you provide the information; and
-        For any other purpose with your consent.
+        <p>
+            To provide, support, and personalize {{APP_NAME}} and the {{APP_NAME}}
+            functionality you request;
+            To create, maintain, customize, and secure your {{APP_NAME}} account, if any;
+            To process your requests and respond to your inquiries;
+            To provide information on other products or services;
+            To maintain the safety, security, and integrity of {{APP_NAME}} and the infrastructure that
+            facilitates use of
+            {{APP_NAME}};
+            For development and internal analysis;
+            To fulfill any other purpose for which you provide it;
+            To carry out our obligations and enforce our rights, including those under this Privacy Policy and our <a
+                [routerLink]="[ROUTE.ROOT, ROUTE.TERMS]" target="_blank" rel="noopener noreferrer">Terms of Use</a>;
+            As described in this Privacy Policy;
+            In any other way we may describe when you provide the information; and
+            For any other purpose with your consent.
+        </p>
+
         <h5>Analytics and performance.
         </h5>
         <p>We internally analyze the personal data available to us and the use of {{APP_NAME}}
@@ -413,7 +411,9 @@
         <h5>Disclosure on your behalf.</h5>
         <p>We may disclose personal information that we collect or you provide as described in this Privacy Policy to
             fulfill our
-            obligations under our Terms of Use, to accomplish the purpose for which you provide it, for any other
+            obligations under our <a [routerLink]="[ROUTE.ROOT, ROUTE.TERMS]" target="_blank"
+                rel="noopener noreferrer">Terms of Use</a>, to accomplish the purpose for which you provide it, for any
+            other
             purpose
             you
             request when you provide the information, or for any other purpose for which we have your consent.</p>
@@ -762,7 +762,8 @@
         </header>
         <p>To ask questions or comment about this Privacy Policy and our privacy practices, you may contact us at to
             {{APP_NAME}},
-            <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
+            <a href="mailto:{{EMAIL}}">{{EMAIL}}</a>
+        </p>
     </section>
 
 </div>
