@@ -5,23 +5,25 @@ $box_shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12);
 
-/* Define keyframes for changing background colors */
 @keyframes changeBackground {
-  //   0% {
-  //     background-image: url('../assets/images/splash-screen.png');
-  //   }
-  //   25% {
-  //     background-image: url('../assets/images/audio-hymns-screen.png');
-  //   }
-  //   50% {
-  //     background-image: url('../assets/images/bible-references-screen.png');
-  //   }
-  //   75% {
-  //     background-image: url('../assets/images/tonic-solfa-screen.png');
-  //   }
-  //   100% {
-  //     background-image: url('../assets/images/multilingual-screen.png');
-  //   }
+  0% {
+    background-image: url('/images/features/splash-screen.png');
+  }
+  20% {
+    background-image: url('/images/features/introduction.png');
+  }
+  40% {
+    background-image: url('/images/features/audio.png');
+  }
+  60% {
+    background-image: url('/images/features/notification.png');
+  }
+  80% {
+    background-image: url('/images/features/multilingual.png');
+  }
+  100% {
+    background-image: url('/images/features/bookmarks.png');
+  }
 }
 
 .outside-border {
@@ -32,9 +34,6 @@ $box_shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   width: 17.225rem;
   height: 35.5875rem;
   border: 0.6px solid white;
-  //   margin-left: -9px;
-  //   margin-bottom: 4rem;
-  //   margin-top: 4rem;
   border-radius: 35px;
   @include breakpoints.medium {
     width: 13.78rem;
