@@ -8,7 +8,9 @@ export class Device {
     }
     if (
       navigator.userAgent.match(/iPhone/i) ||
-      navigator.userAgent.match(/iPod/i)
+      navigator.userAgent.match(/iPod/i) ||
+      navigator.userAgent.match(/macintosh|mac os x/i) ||
+      navigator.userAgent.match(/iPad/i)
     ) {
       return 'iOS';
     }
