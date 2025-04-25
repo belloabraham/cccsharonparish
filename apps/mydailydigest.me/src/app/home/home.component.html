@@ -1,6 +1,38 @@
 <main class="main">
     <app-header />
 
+    <div class="grid grid-cols-1 md:grid-cols-2 main-content gap-4">
+        <div class="content order-2 md:order-1 flex flex-col gap-4">
+
+            <h1>
+                {{APP_NAME}}
+            </h1>
+
+            <p class="description">
+                Begin your path to enlightenment with the Spiritual Daily Digest. Embrace spirituality in the palm of
+                your hand.
+            </p>
+
+            <div class="flex gap-4 download">
+                <a [href]="ROUTE.DOWNLOAD">
+                    <img class="scale" width="183.35" height="54.4" alt="Apple App Store"
+                        ngSrc="images/apple-store-light.svg">
+                </a>
+                <a [href]="ROUTE.DOWNLOAD"><img class="scale" width="183.35" height="54.4" alt="Google Play Store"
+                        ngSrc="images/google-store-light.svg">
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="features order-1 md:order-2">
+            features Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore aliquam pariatur
+            porro soluta
+            est, in eaque quos recusandae impedit incidunt, a eius quas quo velit laudantium molestiae ducimus
+            voluptatum.
+        </div>
+    </div>
 
 </main>
 <app-user-reviews />

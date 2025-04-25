@@ -1,5 +1,4 @@
 .main {
-  min-height: 500px;
   color: var(--text-color);
 
   background-image: radial-gradient(
@@ -8,4 +7,20 @@
     #b8dde3 51.2%,
     #138da0 80.1%
   );
+}
+.main-content {
+  padding: 4rem 1rem;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.description {
+  font-size: 1.1rem;
+}
+.download {
+  img {
+    width: 11rem;
+    height: auto;
+  }
 }
