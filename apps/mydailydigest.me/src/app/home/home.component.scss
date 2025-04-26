@@ -43,36 +43,6 @@ h1 {
   animation: fadeBackground 24s ease infinite;
 }
 
-.bg1 {
-  background-image: url('/images/features/splash-screen.png');
-  animation-delay: 0s;
-}
-
-.bg2 {
-  background-image: url('/images/features/introduction.png');
-  animation-delay: 4s;
-}
-
-.bg3 {
-  background-image: url('/images/features/audio.png');
-  animation-delay: 8s;
-}
-
-.bg4 {
-  background-image: url('/images/features/notification.png');
-  animation-delay: 12s;
-}
-
-.bg5 {
-  background-image: url('/images/features/multilingual.png');
-  animation-delay: 16s;
-}
-
-.bg6 {
-  background-image: url('/images/features/bookmarks.png');
-  animation-delay: 20s;
-}
-
 @keyframes fadeBackground {
   0%,
   12.5% {

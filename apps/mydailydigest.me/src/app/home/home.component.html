@@ -30,12 +30,8 @@
 
             <div class="outside-border">
 
-                <div class="background bg1"></div>
-                <div class="background bg2"></div>
-                <div class="background bg3"></div>
-                <div class="background bg4"></div>
-                <div class="background bg5"></div>
-                <div class="background bg6"></div>
+                <div *ngFor="let item of imageUrls; let i = index" style="background-image: url({{item}});"
+                    [style.animation-delay]="`${i * 4}s`" class="background"></div>
 
                 <div class="silencer"></div>
                 <div class="volume-up"></div>
