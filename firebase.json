@@ -7,6 +7,18 @@
       "cleanUrls": true
     },
     {
+      "target": "spiritualdailydigest-prod",
+      "public": "dist/apps/writers.mydailydigest.me/browser",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "spiritualdailydigest-dev",
       "public": "dist/apps/writers.mydailydigest.me/browser",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "rewrites": [
