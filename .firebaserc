@@ -1,5 +1,24 @@
 {
   "projects": {
-    "default": "spiritualdailydigest-dev"
+    "default": "spiritualdailydigest-prod"
+  },
+  "targets": {
+    "spiritualdailydigest-prod": {
+      "hosting": {
+        "spiritualdailydigest-prod": [
+          "spiritualdailydigest-prod"
+        ],
+        "mydailydigest-me": [
+          "mydailydigest-me"
+        ]
+      }
+    },
+    "spiritualdailydigest-dev": {
+      "hosting": {
+        "spiritualdailydigest-dev": [
+          "spiritualdailydigest-dev"
+        ]
+      }
+    }
   }
 }
