@@ -120,6 +120,7 @@ export class VerifyEmailComponent extends CommonComponent implements OnInit {
   }
 
   onSubmit() {
+    this.form.markAllAsTouched();
     if (this.emailFC.valid) {
       const email = this.emailFC.value!.trim();
       this.verifyEmail(email, (error) => {

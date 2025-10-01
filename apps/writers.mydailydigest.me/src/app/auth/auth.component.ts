@@ -96,6 +96,7 @@ export class AuthComponent extends CommonComponent implements OnInit {
   }
 
   onSubmit() {
+    this.form.markAllAsTouched()
     if (this.emailFC.valid) {
       const email = this.emailFC.value?.trim();
       this.sendLoginLinkTo(email!);

@@ -428,6 +428,7 @@ export class ContentFormComponent implements OnInit, AfterViewInit {
   }
 
   onSubmit() {
+    this.form.markAllAsTouched();
     if (this.form.valid) {
       const newContent: ISpiritualDailyDigestUIState = {
         id: '',
