@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { SharedModule } from '../../../shared';
 import { EmptyStatusComponent } from '../../shared';
 import { PUBLISHED_CONTENT_OPTION_STRING_RESOURCE_KEY } from './i18n/string-res-keys';
@@ -20,6 +20,7 @@ import { ROUTE } from '@cccsharonparish/mydailydigest';
   ],
   templateUrl: './content-option.component.html',
   styleUrl: './content-option.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
 })
 export class ContentOptionComponent {
   readonly KEY = PUBLISHED_CONTENT_OPTION_STRING_RESOURCE_KEY;

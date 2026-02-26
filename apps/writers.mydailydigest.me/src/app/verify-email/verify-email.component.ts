@@ -1,4 +1,4 @@
-import { Component, effect, HostListener, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, HostListener, inject, OnInit } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { LanguageResourceService } from '@cccsharonparish/angular';
@@ -30,6 +30,7 @@ import { REGEX } from '@cccsharonparish/core';
   ],
   templateUrl: './verify-email.component.html',
   styleUrl: './verify-email.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: PAGE_TITLE_KEY,

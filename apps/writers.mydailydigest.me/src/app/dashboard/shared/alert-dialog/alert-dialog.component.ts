@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import type { TuiPopover } from '@taiga-ui/cdk';
 import { TuiDialogCloseService } from '@taiga-ui/core';
@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [PolymorpheusOutlet, MatButtonModule],
   templateUrl: './alert-dialog.component.html',
   styleUrls: ['./alert-dialog.component.scss'],
+  changeDetection:ChangeDetectionStrategy.OnPush,
   providers: [TuiDialogCloseService],
 })
 export class AlertDialogComponent {

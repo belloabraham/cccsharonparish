@@ -1,4 +1,4 @@
-import { Component, effect, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
 import { SharedModule } from '../shared.module';
 import { TuiInputPhoneInternational } from '@taiga-ui/experimental';
 import { TuiDropdownMobile } from '@taiga-ui/addon-mobile';
@@ -48,6 +48,7 @@ import { AppStore } from 'common/mydailydigest/src/lib/app.store';
   ],
   templateUrl: './user-data.component.html',
   styleUrl: './user-data.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
   providers: [
     tuiInputPhoneInternationalOptionsProvider({
       metadata: defer(async () =>

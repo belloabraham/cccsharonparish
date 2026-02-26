@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   computed,
   inject,
@@ -56,6 +57,7 @@ import { PUBLISHED_TABLE_COLUMNS } from '../published-content-table';
   ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
 })
 export class ContentListComponent {
   contentYear = input.required<string>();

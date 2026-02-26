@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   computed,
   inject,
@@ -64,6 +65,7 @@ import { EditorsStore } from '../editors/editors.store';
   ],
   templateUrl: './new-content.component.html',
   styleUrl: './new-content.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
 })
 export class NewContentComponent implements OnDestroy {
   readonly KEY = CONTENT_STRING_RESOURCE_KEYS;

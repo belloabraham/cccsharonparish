@@ -1,4 +1,4 @@
-import { Component, effect, HostListener, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, HostListener, inject, OnInit } from '@angular/core';
 import { CommonComponent, PAGE_TITLE_KEY, SharedModule } from '../shared';
 import {
   FormControl,
@@ -30,6 +30,7 @@ import { REGEX } from '@cccsharonparish/core';
   ],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
   providers: [
     { provide: PAGE_TITLE_KEY, useValue: AUTH_STRING_RESOURCE_KEY.PAGE_TITLE },
   ],

@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   computed,
   inject,
@@ -43,6 +44,7 @@ import { Router } from '@angular/router';
   ],
   templateUrl: './translate.component.html',
   styleUrl: './translate.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
 })
 export class TranslateComponent extends NewContentComponent implements OnInit {
   TRANSLATE_KEY = TRANSLATE_CONTENT_TABLE_COLUMNS;

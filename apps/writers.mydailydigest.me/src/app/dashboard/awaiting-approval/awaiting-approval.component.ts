@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   computed,
   HostBinding,
@@ -63,6 +64,7 @@ import { Router } from '@angular/router';
   ],
   templateUrl: './awaiting-approval.component.html',
   styleUrl: './awaiting-approval.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
 })
 export class AwaitingApprovalComponent implements OnInit, OnDestroy {
   readonly KEY = DRAFT_STRING_RESOURCE_KEY;

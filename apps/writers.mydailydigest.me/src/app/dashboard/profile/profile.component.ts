@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   HostListener,
   inject,
@@ -48,6 +49,7 @@ import { JSON } from '@cccsharonparish/core';
   ],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
 })
 export class ProfileComponent implements OnInit, AfterViewInit {
   KEY = PROFILE_STRING_RESOURCE_KEY;

@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   computed,
   inject,
@@ -41,6 +42,7 @@ import { Router } from '@angular/router';
   ],
   templateUrl: './approved.component.html',
   styleUrl: './approved.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
 })
 export class ApprovedComponent extends NewContentComponent implements OnInit {
   APPROVED_KEY = APPROVED_STRING_RESOURCE_KEY;

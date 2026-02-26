@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   HostListener,
   inject,
@@ -28,6 +29,7 @@ import { JSON } from '@cccsharonparish/core';
   imports: [SharedModule, NgOptimizedImage, MatButtonModule, UserDataComponent],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: PAGE_TITLE_KEY,

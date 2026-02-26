@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   computed,
   effect,
@@ -99,6 +100,7 @@ import { Unsubscribe } from '@angular/fire/firestore';
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: PAGE_TITLE_KEY,

@@ -1,5 +1,6 @@
 import {
   AfterViewInit,
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   HostListener,
@@ -99,6 +100,7 @@ import { JSON } from '@cccsharonparish/core';
   providers: [provideNativeDateAdapter()],
   templateUrl: './content-form.component.html',
   styleUrl: './content-form.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class ContentFormComponent implements OnInit, AfterViewInit {
   KEY = CONTENT_STRING_RESOURCE_KEYS;

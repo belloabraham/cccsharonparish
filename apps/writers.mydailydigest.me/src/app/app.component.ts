@@ -1,5 +1,5 @@
 import { TuiRoot } from '@taiga-ui/core';
-import { Component, inject, OnDestroy, OnInit, Signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnDestroy, OnInit, Signal } from '@angular/core';
 import {
   NavigationCancel,
   NavigationEnd,
@@ -25,6 +25,7 @@ import { MatIconRegistry } from '@angular/material/icon';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
   providers: [ConnectionStateUtil],
 })
 export class AppComponent

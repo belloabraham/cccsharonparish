@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   computed,
   HostBinding,
@@ -45,6 +46,7 @@ import { HttpRequestProgressIndicatorService } from '../../services';
   ],
   templateUrl: './editors.component.html',
   styleUrl: './editors.component.scss',
+  changeDetection:ChangeDetectionStrategy.OnPush,
 })
 export class EditorsComponent implements OnDestroy {
   KEY = EDITORS_STRING_RESOURCE_KEY;
