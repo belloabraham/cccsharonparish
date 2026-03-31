@@ -11,6 +11,9 @@ section.section {
 // Review card
 .card {
   flex: 0 0 16rem;
+  width: 16rem;
+  margin-inline-start: 4rem;
+  box-sizing: border-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 8px;
 }
@@ -38,11 +41,23 @@ section.section {
   );
 }
 $animationSpeed: 50s;
-@keyframes scroll {
+@-webkit-keyframes scroll {
   0% {
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
   100% {
+    -webkit-transform: translate3d(var(--scroll-distance), 0, 0);
+    transform: translate3d(var(--scroll-distance), 0, 0);
+  }
+}
+@keyframes scroll {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(var(--scroll-distance), 0, 0);
     transform: translate3d(var(--scroll-distance), 0, 0);
   }
 }
@@ -76,20 +91,22 @@ $animationSpeed: 50s;
   }
 
   .slide-track {
+    -webkit-animation: scroll $animationSpeed linear infinite;
     animation: scroll $animationSpeed linear infinite;
-    display: flex;
-    gap: var(--review-card-gap);
+    display: inline-flex;
     align-items: center;
-    width: max-content;
-    will-change: transform;
-    backface-visibility: hidden;
+    width: -webkit-fit-content;
+    width: fit-content;
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
   }
 
   .slide-group {
     display: flex;
     flex-shrink: 0;
     align-items: center;
-    gap: var(--review-card-gap);
   }
 }
