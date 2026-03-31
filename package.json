@@ -6,8 +6,8 @@
     "preinstall": "npx only-allow pnpm",
     "delete:mdd.me:global-assets": "rimraf apps/mydailydigest.me/public/global/*",
     "delete:writers.mdd.me:global-assets": "rimraf apps/writers.mydailydigest.me/public/global/*",
-    "copy:mdd.me:assets": "rsync -a --ignore-existing common/mydailydigest/public/global/ apps/mydailydigest.me/public/global/",
-    "copy:writers.mdd.me:assets": "rsync -a --ignore-existing common/mydailydigest/public/global/ apps/writers.mydailydigest.me/public/global/",
+    "copy:mdd.me:assets": "node scripts/copy-assets.mjs common/mydailydigest/public/global apps/mydailydigest.me/public/global",
+    "copy:writers.mdd.me:assets": "node scripts/copy-assets.mjs common/mydailydigest/public/global apps/writers.mydailydigest.me/public/global",
     "copy:mdd:global:assets": "pnpm run delete:mdd.me:global-assets && pnpm run delete:writers.mdd.me:global-assets && pnpm run copy:mdd.me:assets && pnpm run copy:writers.mdd.me:assets",
     "serve:mdd.me": "pnpm run copy:mdd:global:assets && nx run mydailydigest.me:serve:development --port=4400",
     "serve:writers.mdd.me": "pnpm run copy:writers.mdd.me:assets && nx run writers.mydailydigest.me:serve:development --port=4300",
@@ -26,6 +26,7 @@
     "build:mdd.me": "nx build mydailydigest.me",
     "build:mdd": "pnpm run build:mdd.me && pnpm run build:writers.mdd.me",
     "build:writers.mdd.me:prod": "nx build writers.mydailydigest.me --configuration=production",
+    "build:writers.mdd.me:dev": "nx build writers.mydailydigest.me --configuration=development",
     "build:mdd.me:prod": "nx build mydailydigest.me --configuration=production",
     "build:mdd:prod": "pnpm run build:mdd.me:prod && pnpm run build:writers.mdd.me:prod",
     "build:writers.mdd.me:staging": "nx build writers.mydailydigest.me --configuration=staging",
@@ -36,7 +37,12 @@
     "test:core": "nx test common-core",
     "test:mdd": "nx test common-mydailydigest",
     "test:angular": "nx test common-angular",
-    "test:all": "pnpm run test:core && pnpm run test:angular && pnpm run test:common && pnpm run test:mdd.me && pnpm run test:writers.mdd.me"
+    "test:all": "pnpm run test:core && pnpm run test:angular && pnpm run test:common && pnpm run test:mdd.me && pnpm run test:writers.mdd.me",
+    "add:firebase-tools": "pnpm add -D firebase-tools",
+    "setup:firebase": "pnpm run add:firebase-tools && pnpm exec firebase login",
+    "deploy:prod:mdd.me:firebase": "npx nx reset && pnpm run setup:firebase && pnpm run copy:mdd.me:assets && pnpm run build:mdd.me:prod && firebase deploy --only hosting:mydailydigest-me --project=spiritualdailydigest-prod",
+    "deploy:dev:writers.mdd.me:firebase": "npx nx reset && pnpm run setup:firebase && pnpm run copy:writers.mdd.me:assets && pnpm run build:writers.mdd.me:dev && firebase deploy --only hosting:spiritualdailydigest-dev --project=spiritualdailydigest-dev",
+    "deploy:prod:writers.mdd.me:firebase": "npx nx reset && pnpm run setup:firebase && pnpm run copy:writers.mdd.me:assets && pnpm run build:writers.mdd.me:prod && firebase deploy --only hosting:spiritualdailydigest-prod --project=spiritualdailydigest-prod"
   },
   "private": true,
   "dependencies": {
