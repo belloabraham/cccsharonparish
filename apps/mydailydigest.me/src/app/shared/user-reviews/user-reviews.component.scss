@@ -10,9 +10,7 @@ section.section {
 
 // Review card
 .card {
-  width: 16rem;
-  margin-left: 4rem;
-  margin-left: 4rem;
+  flex: 0 0 16rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 8px;
 }
@@ -42,13 +40,14 @@ section.section {
 $animationSpeed: 50s;
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translate3d(var(--scroll-distance), 0, 0);
   }
 }
 .slider {
+  --review-card-gap: 4rem;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -79,7 +78,18 @@ $animationSpeed: 50s;
   .slide-track {
     animation: scroll $animationSpeed linear infinite;
     display: flex;
+    gap: var(--review-card-gap);
     align-items: center;
-    width: calc(24rem * 12);
+    width: max-content;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .slide-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: var(--review-card-gap);
   }
 }

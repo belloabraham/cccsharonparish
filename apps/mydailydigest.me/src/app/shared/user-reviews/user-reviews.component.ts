@@ -11,4 +11,5 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class UserReviewsComponent {
   appReviews = APP_REVIEWS;
+  readonly scrollDistance = `-${APP_REVIEWS.length * 20}rem`;
 }

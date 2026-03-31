@@ -30,8 +30,8 @@
 
             <div class="outside-border">
 
-                <div *ngFor="let item of imageUrls; let i = index" style="background-image: url({{item}});"
-                    [style.animation-delay]="`${i * 4}s`" class="background"></div>
+                <img *ngFor="let item of imageUrls; let i = index" [src]="item" alt="" aria-hidden="true"
+                    [style.animation-delay]="`${i * 4}s`" class="background">
 
                 <div class="silencer"></div>
                 <div class="volume-up"></div>

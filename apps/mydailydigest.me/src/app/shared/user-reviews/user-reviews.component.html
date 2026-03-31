@@ -6,21 +6,44 @@
     </div>
 
     <div class="slider container">
-        <div class="slide-track">
-            <div *ngFor="let review of appReviews;" class="card slide">
-                <div class="px-2 pt-2">
-                    <span class="review">
-                        {{review.review}}
-                    </span>
-                    <div class="flex pt-3 gap-3">
-                        <div>
-                            <img alt="review" [ngSrc]="review.avater" width="50" height="50" class="rounded-full" />
+        <div class="slide-track" [style.--scroll-distance]="scrollDistance">
+            <div class="slide-group">
+                <div *ngFor="let review of appReviews;" class="card slide">
+                    <div class="px-2 pt-2">
+                        <span class="review">
+                            {{review.review}}
+                        </span>
+                        <div class="flex pt-3 gap-3">
+                            <div>
+                                <img alt="review" [ngSrc]="review.avatar" width="50" height="50" class="rounded-full" />
+                            </div>
+                            <div class="ml-2">
+                                <span class="name">{{review.username}}</span>
+                                <p class="rating">
+                                    <mat-icon *ngFor="let item of [1,2,3,4,5]" fontIcon="star-fill"></mat-icon>
+                                </p>
+                            </div>
                         </div>
-                        <div class="ml-2">
-                            <span class="name">{{review.username}}</span>
-                            <p class="rating">
-                                <mat-icon *ngFor="let item of [1,2,3,4,5]" fontIcon="star-fill"></mat-icon>
-                            </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-group" aria-hidden="true">
+                <div *ngFor="let review of appReviews;" class="card slide">
+                    <div class="px-2 pt-2">
+                        <span class="review">
+                            {{review.review}}
+                        </span>
+                        <div class="flex pt-3 gap-3">
+                            <div>
+                                <img alt="" [ngSrc]="review.avatar" width="50" height="50" class="rounded-full" />
+                            </div>
+                            <div class="ml-2">
+                                <span class="name">{{review.username}}</span>
+                                <p class="rating">
+                                    <mat-icon *ngFor="let item of [1,2,3,4,5]" fontIcon="star-fill"></mat-icon>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
