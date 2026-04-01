@@ -11,15 +11,18 @@ import { NgFor, NgOptimizedImage } from '@angular/common';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  APP_NAME = environment.appName;
-  ROUTE = ROUTE;
-  cdnBaseUrl = environment.cdnBaseUrl;
-  imageUrls = [
+  readonly APP_NAME = environment.appName;
+  readonly ROUTE = ROUTE;
+  readonly cdnBaseUrl = environment.cdnBaseUrl;
+  readonly slideDurationSeconds = 4;
+  readonly imageUrls = [
     `${this.cdnBaseUrl}/images/features/splash-screen.png`,
     `${this.cdnBaseUrl}/images/features/introduction.png`,
     `${this.cdnBaseUrl}/images/features/audio.png`,
+    `${this.cdnBaseUrl}/images/features/bookmarks.png`,
     `${this.cdnBaseUrl}/images/features/notification.png`,
     `${this.cdnBaseUrl}/images/features/multilingual.png`,
-    `${this.cdnBaseUrl}/images/features/bookmarks.png`,
   ];
+  readonly slideshowDurationSeconds =
+    this.imageUrls.length * this.slideDurationSeconds;
 }

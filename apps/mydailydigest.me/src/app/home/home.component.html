@@ -28,10 +28,10 @@
 
         <div class="flex justify-center order-1 md:order-2">
 
-            <div class="outside-border">
+            <div class="outside-border" [style.--slideshow-duration]="`${slideshowDurationSeconds}s`">
 
                 <img *ngFor="let item of imageUrls; let i = index" [src]="item" alt="" aria-hidden="true"
-                    [style.animation-delay]="`${i * 4}s`" class="background">
+                    [style.--slide-delay]="`${i * slideDurationSeconds}s`" class="background">
 
                 <div class="silencer"></div>
                 <div class="volume-up"></div>
