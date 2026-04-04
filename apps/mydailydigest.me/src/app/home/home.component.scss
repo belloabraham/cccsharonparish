@@ -48,44 +48,7 @@ h1 {
   object-fit: contain;
   object-position: center;
   opacity: 0;
-  -webkit-animation-name: fadeBackground;
-  animation-name: fadeBackground;
-  -webkit-animation-duration: var(--slideshow-duration, 24s);
-  animation-duration: var(--slideshow-duration, 24s);
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-delay: var(--slide-delay, 0s);
-  animation-delay: var(--slide-delay, 0s);
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: none;
-  animation-fill-mode: none;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  will-change: opacity;
+  transform: translateX(100%);
+  will-change: transform, opacity;
   pointer-events: none;
-}
-
-@-webkit-keyframes fadeBackground {
-  0%,
-  12.5% {
-    opacity: 1;
-  }
-  16.666%,
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeBackground {
-  0%,
-  12.5% {
-    opacity: 1;
-  }
-  16.666%,
-  100% {
-    opacity: 0;
-  }
 }
