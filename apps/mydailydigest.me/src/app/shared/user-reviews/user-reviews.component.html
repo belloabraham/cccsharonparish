@@ -6,8 +6,8 @@
     </div>
 
     <div class="slider container">
-        <div class="slide-track" [style.--scroll-distance]="scrollDistance">
-            <div class="slide-group">
+        <div #slideTrack class="slide-track">
+            <div #slideGroup class="slide-group">
                 <div *ngFor="let review of appReviews;" class="card slide">
                     <div class="px-2 pt-2">
                         <span class="review">
@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <div class="slide-group" aria-hidden="true">
+            <div #slideGroup class="slide-group" aria-hidden="true">
                 <div *ngFor="let review of appReviews;" class="card slide">
                     <div class="px-2 pt-2">
                         <span class="review">
