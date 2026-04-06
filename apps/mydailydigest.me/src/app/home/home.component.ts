@@ -14,7 +14,7 @@ import { isPlatformBrowser, NgFor, NgOptimizedImage } from '@angular/common';
 import type { AnimationOptions, AnimationPlaybackControlsWithThen } from 'motion';
 
 const SLIDE_DURATION_SECONDS = 0.4;
-const SLIDE_DELAY_MS = 2000;
+const SLIDE_DELAY_MS = 5000;
 const SLIDE_EASE: NonNullable<AnimationOptions['ease']> = [0.16, 1, 0.3, 1];
 
 @Component({
