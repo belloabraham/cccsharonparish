@@ -1,14 +1,16 @@
 <main class="main">
     <app-header />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 main-content gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 main-content gap-4 justify-items-center">
         <div class="content order-2 md:order-1 flex flex-col gap-4 pt-4 md:p-6 lg:p-12">
 
-            <h1>
-                {{APP_NAME}}
+            <h1 class="hero-title">
+                <span class="title-word-wrap" *ngFor="let word of titleWords">
+                    <span #titleWord class="title-word">{{ word }}</span>
+                </span>
             </h1>
 
-            <p class="description">
+            <p #description class="description">
                 Begin your path to enlightenment with the {{APP_NAME}}. Embrace spirituality in the palm of
                 your hand.
             </p>

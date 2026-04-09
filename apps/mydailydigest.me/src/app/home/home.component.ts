@@ -5,6 +5,7 @@ import {
   inject,
   OnDestroy,
   PLATFORM_ID,
+  viewChild,
   viewChildren,
 } from '@angular/core';
 import { SharedModule } from '../shared';
@@ -15,7 +16,11 @@ import type { AnimationOptions, AnimationPlaybackControlsWithThen } from 'motion
 
 const SLIDE_DURATION_SECONDS = 0.4;
 const SLIDE_DELAY_MS = 5000;
+const TITLE_REVEAL_DURATION_SECONDS = 0.8;
+const TITLE_REVEAL_STAGGER_SECONDS = 0.08;
+const DESCRIPTION_REVEAL_DURATION_SECONDS = 0.7;
 const SLIDE_EASE: NonNullable<AnimationOptions['ease']> = [0.16, 1, 0.3, 1];
+type MotionAnimate = (typeof import('motion'))['animate'];
 
 @Component({
   selector: 'app-home',
@@ -27,6 +32,11 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   readonly APP_NAME = environment.appName;
   readonly ROUTE = ROUTE;
   readonly cdnBaseUrl = environment.cdnBaseUrl;
+  readonly titleWords = this.APP_NAME.split(' ');
+  readonly descriptionElement =
+    viewChild<ElementRef<HTMLParagraphElement>>('description');
+  readonly titleWordElements =
+    viewChildren<ElementRef<HTMLSpanElement>>('titleWord');
   readonly slideImages = viewChildren<ElementRef<HTMLImageElement>>('slideImage');
   readonly imageUrls = [
     `${this.cdnBaseUrl}/images/features/splash-screen.png`,
@@ -38,7 +48,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   ];
   private readonly platformId = inject(PLATFORM_ID);
   private isAnimationActive = false;
-  private activeAnimations: AnimationPlaybackControlsWithThen[] = [];
+  private activeAnimations = new Set<AnimationPlaybackControlsWithThen>();
   private pendingWaitTimeoutId: number | null = null;
   private pendingWaitResolver: (() => void) | null = null;
 
@@ -47,13 +57,8 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       return;
     }
 
-    const slides = this.slideImages().map((slide) => slide.nativeElement);
-    if (!slides.length) {
-      return;
-    }
-
     this.isAnimationActive = true;
-    void this.startSlideshow(slides).catch(() => {
+    void this.initializeAnimations().catch(() => {
       this.isAnimationActive = false;
     });
   }
@@ -64,8 +69,81 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     this.resolvePendingWait();
   }
 
-  private async startSlideshow(slides: HTMLImageElement[]): Promise<void> {
+  private async initializeAnimations(): Promise<void> {
     const { animate } = await import('motion');
+    if (!this.isAnimationActive) {
+      return;
+    }
+
+    const titleWords = this.titleWordElements().map((word) => word.nativeElement);
+    if (titleWords.length) {
+      void this.revealTitle(titleWords, animate);
+    }
+
+    const description = this.descriptionElement()?.nativeElement;
+    if (description) {
+      void this.revealDescription(description, titleWords.length, animate);
+    }
+
+    const slides = this.slideImages().map((slide) => slide.nativeElement);
+    if (!slides.length) {
+      return;
+    }
+
+    void this.startSlideshow(slides, animate).catch(() => {
+      this.isAnimationActive = false;
+    });
+  }
+
+  private async revealTitle(
+    titleWords: HTMLSpanElement[],
+    animate: MotionAnimate
+  ): Promise<void> {
+    await this.runAnimations(
+      titleWords.map((word, index) =>
+        animate(
+          word,
+          { y: ['110%', '0%'], opacity: [0, 1] },
+          {
+            duration: TITLE_REVEAL_DURATION_SECONDS,
+            delay: index * TITLE_REVEAL_STAGGER_SECONDS,
+            ease: SLIDE_EASE,
+          }
+        )
+      )
+    );
+  }
+
+  private async revealDescription(
+    description: HTMLParagraphElement,
+    titleWordCount: number,
+    animate: MotionAnimate
+  ): Promise<void> {
+    const descriptionDelay = Math.min(
+      0.26,
+      Math.max(
+        TITLE_REVEAL_STAGGER_SECONDS,
+        (titleWordCount - 1) * TITLE_REVEAL_STAGGER_SECONDS * 0.6 + 0.08
+      )
+    );
+
+    await this.runAnimations([
+      animate(
+        description,
+        { y: [24, 0], opacity: [0, 1] },
+        {
+          duration: DESCRIPTION_REVEAL_DURATION_SECONDS,
+          delay: descriptionDelay,
+          ease: SLIDE_EASE,
+        }
+      ),
+    ]);
+  }
+
+  private async startSlideshow(
+    slides: HTMLImageElement[],
+    animate: MotionAnimate
+  ): Promise<void> {
     if (!this.isAnimationActive) {
       return;
     }
@@ -133,18 +211,16 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   private async runAnimations(
     animations: AnimationPlaybackControlsWithThen[]
   ): Promise<void> {
-    this.activeAnimations = animations;
-    await Promise.allSettled(
-      animations.map((animation) => animation.finished)
-    );
-    if (this.activeAnimations === animations) {
-      this.activeAnimations = [];
-    }
+    animations.forEach((animation) => this.activeAnimations.add(animation));
+    await Promise.allSettled(animations.map((animation) => animation.finished));
+    animations.forEach((animation) => {
+      this.activeAnimations.delete(animation);
+    });
   }
 
   private stopActiveAnimations(): void {
     this.activeAnimations.forEach((animation) => animation.cancel());
-    this.activeAnimations = [];
+    this.activeAnimations.clear();
   }
 
   private wait(durationMs: number): Promise<void> {

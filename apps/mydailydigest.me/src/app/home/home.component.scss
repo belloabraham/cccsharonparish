@@ -17,8 +17,31 @@ h1 {
   font-size: 2rem;
   font-weight: 500;
 }
+
+.hero-title {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.2em;
+  row-gap: 0.05em;
+}
+
+.title-word-wrap {
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.title-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(110%);
+  will-change: transform, opacity;
+}
+
 .description {
   font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(1.5rem);
+  will-change: transform, opacity;
   @include breakpoints.lsMedium {
     color: #160504;
   }
