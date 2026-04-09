@@ -35,7 +35,10 @@
                 <img
                     *ngFor="let item of imageUrls"
                     #slideImage
-                    [src]="item"
+                    [ngSrc]="item"
+                    priority
+                    width="208"
+                    height="448"
                     alt=""
                     class="background">
 

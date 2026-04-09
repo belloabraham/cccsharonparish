@@ -39,12 +39,11 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     viewChildren<ElementRef<HTMLSpanElement>>('titleWord');
   readonly slideImages = viewChildren<ElementRef<HTMLImageElement>>('slideImage');
   readonly imageUrls = [
-    `${this.cdnBaseUrl}/images/features/splash-screen.png`,
-    `${this.cdnBaseUrl}/images/features/introduction.png`,
-    `${this.cdnBaseUrl}/images/features/audio.png`,
-    `${this.cdnBaseUrl}/images/features/bookmarks.png`,
-    `${this.cdnBaseUrl}/images/features/notification.png`,
-    `${this.cdnBaseUrl}/images/features/multilingual.png`,
+    `/images/features/introduction.png`,
+    `/images/features/audio.png`,
+    `/images/features/bookmarks.png`,
+    `/images/features/notification.png`,
+    `/images/features/multilingual.png`,
   ];
   private readonly platformId = inject(PLATFORM_ID);
   private isAnimationActive = false;

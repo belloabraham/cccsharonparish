@@ -16,7 +16,7 @@ describe('404 E2E Test', () => {
     // Check for the logo
     cy.get('.logo img')
       .should('be.visible')
-      .and('have.attr', 'src', 'global/images/logo.png');
+      .and('have.attr', 'src', 'shared/images/logo.png');
 
     // Check the 404 page structure (candle and numbers)
     cy.get('.title').should('have.length', 2);
