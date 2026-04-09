@@ -2,7 +2,7 @@ import { NG_EVENT_PLUGINS } from '@taiga-ui/event-plugins';
 import {
   ApplicationConfig,
   isDevMode,
-  provideAppInitializer,
+  // provideAppInitializer,
   provideExperimentalZonelessChangeDetection,
 } from '@angular/core';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
@@ -17,10 +17,10 @@ import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { HttpProgressInterceptorService } from './interceptors/http-progress-interceptors.service';
-import { provideImgixLoader } from '@angular/common';
+// import { provideImgixLoader } from '@angular/common';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { getStorage, provideStorage } from '@angular/fire/storage';
-import { setDNSPreConnectLink } from '@cccsharonparish/mydailydigest';
+// import { setDNSPreConnectLink } from '@cccsharonparish/mydailydigest';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -28,9 +28,9 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideExperimentalZonelessChangeDetection(),
 
-    provideAppInitializer(() => {
-      setDNSPreConnectLink(environment.cdnBaseUrl);
-    }),
+    // provideAppInitializer(() => {
+    //   setDNSPreConnectLink(environment.cdnBaseUrl);
+    // }),
 
     //Firebase
     provideFirebaseApp(() => initializeApp({ ...environment.firebase })),
@@ -39,7 +39,7 @@ export const appConfig: ApplicationConfig = {
     provideStorage(() => getStorage(getApp())),
 
     //NgOptimize
-    provideImgixLoader(environment.cdnBaseUrl),
+    // provideImgixLoader(environment.cdnBaseUrl),
 
     //Transloco
     provideHttpClient(),

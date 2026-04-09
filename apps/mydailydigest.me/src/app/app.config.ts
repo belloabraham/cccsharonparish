@@ -10,7 +10,7 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { setDNSPreConnectLink } from '@cccsharonparish/mydailydigest';
 import { environment } from '../environments/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideImgixLoader } from '@angular/common';
+// import { provideImgixLoader } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -26,6 +26,6 @@ export const appConfig: ApplicationConfig = {
     }),
 
     //NgOptimize
-    provideImgixLoader(environment.cdnBaseUrl),
+    // provideImgixLoader(environment.cdnBaseUrl),
   ],
 };
