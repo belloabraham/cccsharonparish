@@ -40,9 +40,9 @@
     "test:all": "pnpm run test:core && pnpm run test:angular && pnpm run test:common && pnpm run test:mdd.me && pnpm run test:writers.mdd.me",
     "add:firebase-tools": "pnpm add -D firebase-tools",
     "setup:firebase": "pnpm run add:firebase-tools && pnpm exec firebase login",
-    "deploy:prod:mdd.me:firebase": "npx nx reset && pnpm run setup:firebase && pnpm run copy:mdd.me:assets && pnpm run build:mdd.me:prod && firebase deploy --only hosting:mydailydigest-me --project=spiritualdailydigest-prod",
-    "deploy:dev:writers.mdd.me:firebase": "npx nx reset && pnpm run setup:firebase && pnpm run copy:writers.mdd.me:assets && pnpm run build:writers.mdd.me:dev && firebase deploy --only hosting:spiritualdailydigest-dev --project=spiritualdailydigest-dev",
-    "deploy:prod:writers.mdd.me:firebase": "npx nx reset && pnpm run setup:firebase && pnpm run copy:writers.mdd.me:assets && pnpm run build:writers.mdd.me:prod && firebase deploy --only hosting:spiritualdailydigest-prod --project=spiritualdailydigest-prod"
+    "deploy:prod:mdd.me:firebase": "npx nx reset && pnpm run copy:mdd.me:assets && pnpm run build:mdd.me:prod && firebase deploy --only hosting:mydailydigest-me --project=spiritualdailydigest-prod",
+    "deploy:dev:writers.mdd.me:firebase": "npx nx reset && pnpm run copy:writers.mdd.me:assets && pnpm run build:writers.mdd.me:dev && firebase deploy --only hosting:spiritualdailydigest-dev --project=spiritualdailydigest-dev",
+    "deploy:prod:writers.mdd.me:firebase": "npx nx reset && pnpm run copy:writers.mdd.me:assets && pnpm run build:writers.mdd.me:prod && firebase deploy --only hosting:spiritualdailydigest-prod --project=spiritualdailydigest-prod"
   },
   "private": true,
   "dependencies": {
