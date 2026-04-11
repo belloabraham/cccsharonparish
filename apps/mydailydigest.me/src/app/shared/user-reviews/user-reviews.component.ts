@@ -18,6 +18,7 @@ const REVIEW_SCROLL_SPEED_PX_PER_SECOND = 90;
 
 @Component({
   selector: 'app-user-reviews',
+  host: { style: 'display: block;' },
   imports: [NgOptimizedImage, NgFor, MatIconModule],
   templateUrl: './user-reviews.component.html',
   styleUrl: './user-reviews.component.scss',

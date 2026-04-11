@@ -15,6 +15,7 @@ import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-download',
+  host: { style: 'display: block;' },
   imports: [],
   template: `<a #link [href]="url()" hidden></a>`,
 })

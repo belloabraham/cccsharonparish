@@ -36,6 +36,7 @@ import { HttpRequestProgressIndicatorService } from '../../services';
 
 @Component({
   selector: 'app-editors',
+  host: { style: 'display: block;' },
   imports: [
     SharedModule,
     MatButtonModule,

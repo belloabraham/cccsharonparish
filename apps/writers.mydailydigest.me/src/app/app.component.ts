@@ -23,6 +23,7 @@ import { MatIconRegistry } from '@angular/material/icon';
   standalone: true,
   imports: [RouterModule, NgIf, TranslocoModule, TuiRoot, MatProgressBarModule],
   selector: 'app-root',
+  host: { style: 'display: block;' },
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   changeDetection:ChangeDetectionStrategy.OnPush,

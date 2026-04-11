@@ -8,6 +8,7 @@ import { HttpRequestProgressIndicatorService } from '../../services';
 import { SubSink } from 'subsink';
 
 @Component({
+  host: { style: 'display: block;' },
   template: ``,
 })
 export class CommonComponent {

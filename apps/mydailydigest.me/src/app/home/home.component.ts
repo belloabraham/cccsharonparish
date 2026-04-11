@@ -24,6 +24,7 @@ type MotionAnimate = (typeof import('motion'))['animate'];
 
 @Component({
   selector: 'app-home',
+  host: { style: 'display: block;' },
   imports: [SharedModule, UserReviewsComponent, NgOptimizedImage, NgFor],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

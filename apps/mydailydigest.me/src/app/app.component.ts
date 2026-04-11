@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
   standalone: true,
   imports: [RouterModule, NgIf, TranslocoModule],
   selector: 'app-root',
+  host: { style: 'display: block;' },
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

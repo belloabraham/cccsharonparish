@@ -40,6 +40,7 @@ import { PUBLISHED_TABLE_COLUMNS } from '../published-content-table';
 
 @Component({
   selector: 'app-content-list',
+  host: { style: 'display: block;' },
   imports: [
     TuiTextfield,
     TuiBadge,

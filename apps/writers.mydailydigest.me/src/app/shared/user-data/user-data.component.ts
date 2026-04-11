@@ -30,6 +30,7 @@ import { AppStore } from 'common/mydailydigest/src/lib/app.store';
 
 @Component({
   selector: 'app-user-data',
+  host: { style: 'display: block;' },
   imports: [
     SharedModule,
     TuiInputPhoneInternational,

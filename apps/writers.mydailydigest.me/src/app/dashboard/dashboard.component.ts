@@ -71,6 +71,7 @@ import { Unsubscribe } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-dashboard',
+  host: { style: 'display: block;' },
   imports: [
     RouterOutlet,
     TuiNavigation,

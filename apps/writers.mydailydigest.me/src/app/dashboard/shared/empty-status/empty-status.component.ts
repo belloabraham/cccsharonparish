@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-empty-status',
+  host: { style: 'display: block;' },
   imports: [],
   templateUrl: './empty-status.component.html',
   styleUrl: './empty-status.component.scss',

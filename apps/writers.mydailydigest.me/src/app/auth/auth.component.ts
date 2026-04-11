@@ -20,6 +20,7 @@ import { REGEX } from '@cccsharonparish/core';
 
 @Component({
   selector: 'app-auth',
+  host: { style: 'display: block;' },
   imports: [
     SharedModule,
     ReactiveFormsModule,

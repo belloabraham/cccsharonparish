@@ -6,6 +6,7 @@ import { CONSTANT, environment, ROUTE } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-footer',
+  host: { style: 'display: block;' },
   imports: [RouterLink, MatIconModule, NgOptimizedImage],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',

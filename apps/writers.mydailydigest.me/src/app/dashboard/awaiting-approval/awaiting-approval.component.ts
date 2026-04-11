@@ -53,6 +53,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-awaiting-approval',
+  host: { style: 'display: block;' },
   imports: [
     SharedModule,
     TuiTextfield,

@@ -5,6 +5,7 @@ import { ROUTE } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-header',
+  host: { style: 'display: block;' },
   imports: [RouterLink, NgOptimizedImage],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

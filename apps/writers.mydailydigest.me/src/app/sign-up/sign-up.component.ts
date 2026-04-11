@@ -26,6 +26,7 @@ import { JSON } from '@cccsharonparish/core';
 
 @Component({
   selector: 'app-sign-up',
+  host: { style: 'display: block;' },
   imports: [SharedModule, NgOptimizedImage, MatButtonModule, UserDataComponent],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss',

@@ -32,6 +32,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-approved',
+  host: { style: 'display: block;' },
   imports: [
     SharedModule,
     TuiTextfield,

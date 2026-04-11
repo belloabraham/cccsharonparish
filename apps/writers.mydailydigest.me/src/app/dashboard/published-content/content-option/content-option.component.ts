@@ -10,6 +10,7 @@ import { ROUTE } from '@cccsharonparish/mydailydigest';
 
 @Component({
   selector: 'app-content-option',
+  host: { style: 'display: block;' },
   imports: [
     SharedModule,
     EmptyStatusComponent,

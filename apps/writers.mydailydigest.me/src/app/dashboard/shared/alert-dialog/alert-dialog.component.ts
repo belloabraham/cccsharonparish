@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   standalone: true,
   selector: 'app-alert-dialog',
+  host: { style: 'display: block;' },
   imports: [PolymorpheusOutlet, MatButtonModule],
   templateUrl: './alert-dialog.component.html',
   styleUrls: ['./alert-dialog.component.scss'],

@@ -35,6 +35,7 @@ import { JSON } from '@cccsharonparish/core';
 
 @Component({
   selector: 'app-profile',
+  host: { style: 'display: block;' },
   imports: [
     SharedModule,
     UserDataComponent,

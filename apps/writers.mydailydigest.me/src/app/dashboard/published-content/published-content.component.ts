@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-published-content',
+  host: { style: 'display: block;' },
   imports: [RouterOutlet],
   templateUrl: './published-content.component.html',
   styleUrl: './published-content.component.scss',

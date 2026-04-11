@@ -33,6 +33,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-translate',
+  host: { style: 'display: block;' },
   imports: [
     SharedModule,
     TuiTextfield,

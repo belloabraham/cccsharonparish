@@ -6,6 +6,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-terms',
+  host: { style: 'display: block;' },
   imports: [SharedModule, UpperCasePipe, RouterLink],
   templateUrl: './terms.component.html',
   styleUrl: './terms.component.scss',

@@ -20,6 +20,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { REGEX } from '@cccsharonparish/core';
 @Component({
   selector: 'app-verify-email',
+  host: { style: 'display: block;' },
   imports: [
     ReactiveFormsModule,
     MatFormFieldModule,

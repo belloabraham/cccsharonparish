@@ -53,6 +53,7 @@ import { EditorsStore } from '../editors/editors.store';
 
 @Component({
   selector: 'app-new-content',
+  host: { style: 'display: block;' },
   imports: [
     SharedModule,
     TuiTextfield,

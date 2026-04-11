@@ -75,6 +75,7 @@ import { JSON } from '@cccsharonparish/core';
 
 @Component({
   selector: 'app-content-form',
+  host: { style: 'display: block;' },
   imports: [
     ReactiveFormsModule,
     MatButtonModule,
